@@ -1,10 +1,11 @@
-import './assets/main.css'
+import './assets/main.scss'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import { Quasar } from 'quasar'
 import quasarIconSet from 'quasar/icon-set/eva-icons'
+import { Dark } from 'quasar'
 
 // Import icon libraries
 import '@quasar/extras/roboto-font/roboto-font.css'
@@ -18,7 +19,7 @@ import '@quasar/extras/eva-icons/eva-icons.css'
 import 'quasar/src/css/index.sass'
 
 import App from './App.vue'
-import router from './router'
+// import router from './router'
 
 const app = createApp(App)
 
@@ -26,8 +27,9 @@ app.use(Quasar, {
   plugins: {}, // import Quasar plugins and add here
   iconSet: quasarIconSet,
 })
-
 app.use(createPinia())
-app.use(router)
+// app.use(router)
 
 app.mount('#app')
+
+Dark.set(true)
