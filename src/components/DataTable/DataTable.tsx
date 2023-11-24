@@ -4,8 +4,7 @@ import { range } from '../../helpers/range';
 import Tag, { TagInfo } from '../Tag';
 import Pagination from './Pagination';
 import * as classes from './Table.module.css';
-
-
+import { ArrowUpDown, ArrowDownAz, ArrowUpAZ } from 'lucide-react';
 
 interface Props {
   rows: Array<any>
@@ -20,8 +19,10 @@ export interface TableColumn {
   align?: 'left' | 'right' | 'center',
   format?: (val) => string,
   sortable?: boolean
+  handleSort?: (valA, valB, sort) => number,
   type?: 'tag' | 'link'
   tagList?: TagInfo[]
+  sort?: 'desc' | 'asc'
 }
 
 function DataTable({
@@ -33,10 +34,75 @@ function DataTable({
 }: Props) {
   const [currentPage, setCurrentPage] = React.useState(initialPage);
   const [size, setSize] = React.useState(pageSize);
-  const [lastPage, setLastPage] = React.useState(() => Math.ceil(rows.length / size));
+
+  const [data, setData] = React.useState([...rows]);
+  const [columnsInfo, setColumnsInfo] = React.useState(columns);
+
+  const [lastPage, setLastPage] = React.useState(() => Math.ceil(data.length / size));
 
   function handleChangePage(value: number | string) {
     if (value) setCurrentPage(Number(value))
+  }
+
+  function sortRows(headerInfo: TableColumn, index: number) {
+    const { field, format, handleSort } = headerInfo;
+
+
+    let sort: 'desc' | 'asc' | undefined;
+    if (columnsInfo[index].sort === 'asc') {
+      sort = 'desc';
+    } else if (columnsInfo[index].sort === 'desc') {
+      sort = undefined
+    } else { sort = 'asc'; }
+
+    const newColumns = [...columnsInfo]
+    newColumns[index].sort = sort
+    setColumnsInfo(newColumns);
+
+    if (!sort) {
+      setData([...rows]);
+      return
+    };
+
+    const newData = [...data]
+    if (!field) {
+      if (format) {
+        newData.sort((a, b) => {
+          const fa = Number(format(a));
+          const fb = Number(format(b));
+
+          if (fa < fb) {
+            return sort === 'asc' ? -1 : 1;
+          }
+          if (fa > fb) {
+            return sort === 'asc' ? 1 : -1;
+          }
+          return 0;
+        });
+        setData(newData)
+      }
+      return
+    }
+    if (handleSort) {
+      newData.sort((a, b) => handleSort(a[field], b[field], sort));
+
+      setData(newData)
+      return;
+    }
+    newData.sort((a, b) => {
+      const fa = a[field].toString().toLowerCase();
+      const fb = b[field].toString().toLowerCase();
+
+      if (fa < fb) {
+        return sort === 'asc' ? -1 : 1;
+      }
+      if (fa > fb) {
+        return sort === 'asc' ? 1 : -1;
+      }
+      return 0;
+    });
+
+    setData(newData)
   }
 
   return (
@@ -44,9 +110,9 @@ function DataTable({
       <table className={classes.table}>
         <thead>
           <tr>
-            {columns.map(({ headerLabel }, index) => (
-              <th key={`${headerLabel}${index}`}>
-                {headerLabel}
+            {columnsInfo.map((headerInfo, index) => (
+              <th key={`${headerInfo.headerLabel}${index}`}>
+                <TableHeader headerInfo={headerInfo} sortRows={() => sortRows(headerInfo, index)} />
               </th>
             ))}
           </tr>
@@ -57,15 +123,15 @@ function DataTable({
           <TableRow
             currentPage={currentPage}
             pageSize={size}
-            rows={rows}
-            columns={columns}
+            rows={data}
+            columns={columnsInfo}
           />
         </tbody>
       </table>
 
       <div>
         <p>
-          Exibindo {currentPage * pageSize} - {(currentPage + 1) * pageSize} de {rows.length}
+          Exibindo {currentPage * pageSize} - {(currentPage + 1) * pageSize} de {data.length}
         </p>
 
         <Pagination
@@ -114,7 +180,7 @@ function TableColumn({ column, columnInfo }: {
   if (format) return <React.Fragment>{format(column)}</React.Fragment>
 
   if (field) {
-    if (type && type === 'link') return (<a href={column[field]} target="_blank">link</a>)
+    if (type && type === 'link' && column[field]) return (<a href={column[field]} target="_blank">link</a>)
     if (type && type === 'tag' && tagList) return (<Tag value={column[field]} tagInfo={tagList} />)
 
     return <React.Fragment>{column[field]}</React.Fragment>
@@ -122,6 +188,24 @@ function TableColumn({ column, columnInfo }: {
 
 
   return <React.Fragment></React.Fragment>
+}
+
+function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumn, sortRows: (string) => void }) {
+  const { sortable, headerLabel, sort } = headerInfo
+
+  if (sortable) {
+    return <React.Fragment>
+      {sortable && <button onClick={sortRows} className={classes.sortBtn}>
+        {!sort && <ArrowUpDown size={15} />}
+        {sort === 'asc' && <ArrowUpAZ size={15} />}
+        {sort === 'desc' && <ArrowDownAz size={15} />}
+        {headerLabel}
+      </button>}
+    </React.Fragment>
+  }
+
+
+  return (<React.Fragment> {headerLabel}</React.Fragment>)
 }
 
 export default DataTable;

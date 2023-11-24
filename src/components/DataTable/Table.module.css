@@ -33,6 +33,29 @@
 
 .table td {
   text-transform: capitalize;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.sortBtn {
+  background-color: transparent;
+  padding: 0px;
+  vertical-align: middle;
+  border: 0px;
+  outline: 0px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 100%
+}
+
+.sortBtn:hover {
+  color: rgb(107, 107, 107);
+}
+
+.sortBtnActive {
+  color: rgb(148, 148, 148);
 }
 
 .paginationItem {
