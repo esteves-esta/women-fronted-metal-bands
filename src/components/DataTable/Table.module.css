@@ -1,0 +1,55 @@
+.table {
+  width: 100%;
+  font-family: sans-serif;
+  border-collapse: collapse;
+  vertical-align: middle;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #888;
+  border-right: 1px solid #888;
+  padding: 15px 5px 15px 5px;
+  min-width: 50px;
+  max-width: 100px;
+  text-align: center;
+}
+
+.table th {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #444;
+  /* text-align: left; */
+}
+
+.table td {
+  text-transform: capitalize;
+}
+
+.paginationItem {
+  font-family: sans-serif;
+  color: #444;
+  display: flex;
+  vertical-align: middle;
+}
+
+.paginationItem button {
+  font-size: 16px;
+  min-height: 30px;
+  padding: 0px 10px;
+  border: 0.1px solid #fff;
+  outline: none;
+}
+
+.paginationItemActive {
+  background: #ddd
+}
