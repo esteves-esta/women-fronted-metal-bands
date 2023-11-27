@@ -1,12 +1,16 @@
 import * as React from 'react';
+import BandsProvider from './components/BandsProvider';
 import Home from './components/Home'
 
 function App() {
-  return (<main>
-    <h1>Teste</h1>
-    <Home />
-    
-  </main>);
+  return (
+    <BandsProvider>
+      <div>
+        <Home />
+      </div>
+
+    </BandsProvider>
+  );
 }
 
 export default App;

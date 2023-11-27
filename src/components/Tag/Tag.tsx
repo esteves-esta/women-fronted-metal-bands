@@ -1,10 +1,12 @@
 import * as React from 'react';
 import * as classes from './Tag.module.css';
 
+type Notification = 'success' | 'info' | 'danger' | 'warning'
+type Deep = 'deep-1' | 'deep-2' | 'deep-3' | 'deep-4'
 export interface TagInfo {
   value: any;
   text: string;
-  type: 'success' | 'info' | 'danger' | 'warning';
+  type: Notification | Deep;
 }
 
 function Tag({

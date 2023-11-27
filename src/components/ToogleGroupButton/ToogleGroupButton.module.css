@@ -1,0 +1,16 @@
+.group {
+  gap: 1em;
+  display: flex;
+}
+
+.groupItem {
+  background: #1c1b1fc9;
+  padding: 6px 8;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.groupItemActive {
+  background: rgba(246, 134, 30, 0.6);
+}

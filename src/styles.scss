@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik:wght@900&display=swap');
+
+// @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Theme and global variables
+*/
+html {
+  overflow-y: scroll;
+
+  --game-spacing: 32px;
+  --header-height: 4rem;
+
+  --color-success: hsl(150deg 70% 30%);
+  --color-warning: hsl(50deg 100% 30%);
+  --color-error: hsl(0deg 70% 45%);
+  --color-gray-100: hsl(0deg 0% 10%);
+  --color-gray-300: hsl(0deg 0% 25%);
+  --color-gray-500: hsl(0deg 0% 50%);
+  --color-gray-700: hsl(0deg 0% 75%);
+  --color-gray-900: hsl(0deg 0% 90%);
+}
+
+/*
+  Custom styles
+*/
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  /*   // color: var(--color-text);
+  // background: var(--color-background);
+  // transition: color 0.5s, background-color 0.5s; */
+  line-height: 1.6;
+  font-family: Roboto, Oxygen, sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin-bottom: 0.6em;
+  line-height: 1.4em;
+}
+
+.title1 {
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.title2 {
+  font-family: 'Rubik Glitch', cursive;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2rem;
+  // margin-top: -20px;
+}
+
+button {
+  outline: none;
+  border: none;
+}
