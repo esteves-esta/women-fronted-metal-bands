@@ -17,6 +17,7 @@ interface Props {
 }
 
 export interface TableColumn {
+  key?: string,
   field?: string,
   headerLabel: string,
   align?: 'left' | 'right' | 'center',
@@ -44,7 +45,13 @@ function DataTable({
   const [currentPage, setCurrentPage] = React.useState(initialPage);
   const [size, setSize] = React.useState(pageSize);
 
-  const [columnsInfo, setColumnsInfo] = React.useState(columns);
+  const [columnsInfo, setColumnsInfo] = React.useState(() => {
+    const newColumns = [...columns];
+    return newColumns.map(col => {
+      if (col.key == undefined) col.key = crypto.randomUUID();
+      return col;
+    })
+  });
 
   const [lastPage, setLastPage] = React.useState(() => Math.ceil(rows.length / size));
 
@@ -104,7 +111,7 @@ function DataTable({
         fb = format(b);
       }
 
-      if (typeof fa === 'number' && typeof fb === 'number') {
+      if (Number(fa) !== NaN && Number(fb) !== NaN) {
         fa = Number(fa)
         fb = Number(fb)
       } else {
@@ -139,17 +146,30 @@ function DataTable({
     }
   }, [isFiltered])
 
-  const handleFilter = React.useCallback((value: string, col: string) => {
+  const handleFilter = React.useCallback((searchValue: string, colKey: string) => {
     let newRows = [...rows];
-    if (value) {
+    if (searchValue) {
 
+      console.log({ colKey })
       const filtered = newRows.filter(
         row => {
-          if (col) {
-            return row[col].toLowerCase().includes(value.toLowerCase())
+          if (colKey !== 'all') {
+            const col = columnsInfo.find(col => col.key === colKey)
+            if (col) {
+              let colValue;
+              if (col.format)
+                colValue = col.format(row)
+              if (col.field)
+                colValue = row[col.field]
+
+              if (Number(colValue) !== NaN)
+                return colValue == Number(searchValue)
+              else
+                return colValue.toString().toLowerCase().includes(searchValue.toString().toLowerCase())
+            }
           }
           const valuesNotBoolean = Object.values(row).filter(item => typeof item !== 'boolean')
-          return valuesNotBoolean.join(' ').toLowerCase().includes(value.toLowerCase())
+          return valuesNotBoolean.join(' ').toLowerCase().includes(searchValue.toLowerCase())
           // return Object.values(row).join(' ').toLowerCase().includes(value.toLowerCase())
         }
       )
@@ -167,7 +187,7 @@ function DataTable({
     <React.Fragment>
       <div className='flex items-center gap-5 flex-row mt-5 mb-5'>
         <div className='flex-col grow'>
-          <TableFilter onChange={handleFilter} columns={columns} />
+          <TableFilter onChange={handleFilter} columns={columnsInfo} />
         </div>
         <div className='flex-col'>
           <p className='mb-0 mt-4'>
@@ -179,7 +199,7 @@ function DataTable({
         <thead>
           <tr>
             {columnsInfo.map((headerInfo, index) => (
-              <th key={`${headerInfo.headerLabel}${index}`}>
+              <th key={headerInfo.key}>
                 <TableHeader headerInfo={headerInfo} sortRows={() => handleSortRows(headerInfo, index)} />
               </th>
             ))}
@@ -215,7 +235,7 @@ function DataTable({
 
 function TableFilter({ onChange, columns }) {
   const [search, setSearch] = React.useState('');
-  const [searchType, setSearchType] = React.useState('');
+  const [searchType, setSearchType] = React.useState('all');
   const id = React.useId();
 
   const searchId = `${id}-search`;
@@ -238,9 +258,9 @@ function TableFilter({ onChange, columns }) {
             setSearchType(event.target.value)
             handleOnChange(search, event.target.value)
           }}>
-          <option value=''>All</option>
+          <option value='all'>All</option>
           {columns.map(col => (
-            <option key={col.headerLabel.replace(/\s/g, '')} value={col.field}>{col.headerLabel}</option>
+            <option key={col.key} value={col.key}> {col.headerLabel}</option>
           ))}
         </select>
       </div>
@@ -281,7 +301,7 @@ function TableColumns({ columns, rowIndex, rows }: {
   const column = rows[rowIndex]
   return <React.Fragment>
     {columns.map((columnInfo, index) => (
-      <td key={`${columnInfo.field}${index}`}>
+      <td key={`${columnInfo.key}${index}`}>
         <TableColumn column={column} columnInfo={columnInfo} />
       </td>
     ))}
