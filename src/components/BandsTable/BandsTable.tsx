@@ -2,6 +2,8 @@ import * as React from 'react';
 import DataTable, { TableColumn } from '../DataTable'
 import { BandContext } from '../BandsProvider';
 import { booleanTagList, growTagList } from '../../constants';
+import ToogleGroupButton from '../ToogleGroupButton/ToogleGroupButton';
+import { Filter, ExternalLink } from 'lucide-react';
 
 function BandsTable() {
   const { bands, setBands } = React.useContext(BandContext)
@@ -26,7 +28,22 @@ function BandsTable() {
   }, []);
 
   const columns: TableColumn[] = [
-    { field: 'Band', headerLabel: 'Band', sortable: true },
+    {
+      field: 'Band', formatElement: (column) => {
+        if (!column.Links) return column.Band;
+        return (
+          <React.Fragment>
+            <span className='flex items-center justify-center gap-3'>
+              {column.Band}
+              <a href={column.Links} target="_blank">
+                <ExternalLink size={12} />
+              </a>
+
+            </span>
+          </React.Fragment>
+        )
+      }, headerLabel: 'Band', sortable: true
+    },
     { field: 'Growling', headerLabel: 'Growling', sortable: true, tagList: growTagList, type: 'tag', sort: 'desc' },
     { field: 'LGBTQ', headerLabel: 'LGBTQ', type: 'tag', tagList: booleanTagList, sortable: true, handleSort: handleSortBoolean },
     { field: 'Black Women', headerLabel: 'Black Women', type: 'tag', tagList: booleanTagList, sortable: true, handleSort: handleSortBoolean },
@@ -41,12 +58,36 @@ function BandsTable() {
       },
       headerLabel: 'Years active',
     },
-    { field: 'Recomendation', headerLabel: 'Recomendation', },
-    { field: 'Links', headerLabel: 'Official site', type: 'link' },
+    // { field: 'Recomendation', headerLabel: 'Recomendation', },
+    // { field: 'Links', headerLabel: 'Official site', type: 'link' },
   ]
 
+  const growFilterOptions = [...growTagList, {
+    value: 'todos', text: 'Todos'
+  }]
+  const [growlFilter, setGrowlFilter] = React.useState('todos')
+  const { filterByGrow } = React.useContext(BandContext)
+
+
+  const handleGrowlFilter = React.useCallback((val) => {
+    if (growFilterOptions.find(filter => filter.value.toString() === val)) {
+      setGrowlFilter(val)
+      filterByGrow(val)
+    }
+  }, []);
+
   return <div>
-    <DataTable rows={bands} columns={columns} pageSize={10} handleRowChange={setBands} />
+    <div className='flex flex-row items-center mb-5'>
+      <Filter size={17} />
+      <span className='mr-3'>
+
+        Growling intensity
+      </span>
+      <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
+        onChange={handleGrowlFilter} />
+    </div>
+
+    <DataTable isFiltered={growlFilter !== 'todos'} rows={bands} columns={columns} pageSize={10} handleRowChange={setBands} />
   </div>;
 }
 

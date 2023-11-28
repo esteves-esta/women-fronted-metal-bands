@@ -5,7 +5,7 @@ import * as classes from './Table.module.css';
 import { ChevronRight, ChevronLeft, ChevronsRight, ChevronsLeft } from 'lucide-react';
 import * as ToggleGroup from '@radix-ui/react-toggle-group';
 
-function Pagination({ currentPage, lastPage, onChange }) {
+function Pagination({ currentPage, lastPage, onChange, className }) {
   const RangeStart = React.useMemo(() => {
     const start = currentPage - 2
     if (start < 1) return 0
@@ -20,7 +20,7 @@ function Pagination({ currentPage, lastPage, onChange }) {
   }, [currentPage, lastPage, RangeStart])
 
   return (
-    <ToggleGroup.Root className={classes.paginationItem} type="single" defaultValue={currentPage.toString()} onValueChange={onChange}>
+    <ToggleGroup.Root className={`${classes.paginationItem} ${className}`} type="single" defaultValue={currentPage.toString()} onValueChange={onChange}>
       <ToggleGroup.Item className="ToggleGroupItem" disabled={currentPage === 0} value="0" aria-label="First page">
         <ChevronsLeft size={16} />
       </ToggleGroup.Item>

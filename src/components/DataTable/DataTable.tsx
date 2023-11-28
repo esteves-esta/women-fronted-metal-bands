@@ -6,12 +6,14 @@ import Pagination from './Pagination';
 import * as classes from './Table.module.css';
 import { ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
 
+
 interface Props {
   rows: Array<any>
   initialPage?: number
   pageSize: number
   columns: TableColumn[]
   handleRowChange: (val) => void
+  isFiltered: boolean
 }
 
 export interface TableColumn {
@@ -19,6 +21,7 @@ export interface TableColumn {
   headerLabel: string,
   align?: 'left' | 'right' | 'center',
   format?: (val) => string,
+  formatElement?: (val) => React.ReactNode,
   sortable?: boolean
   handleSort?: (valA, valB, sort) => number,
   type?: 'tag' | 'link'
@@ -32,8 +35,12 @@ function DataTable({
   pageSize,
   columns,
   handleRowChange,
+  isFiltered,
   ...delegated
 }: Props) {
+
+  const [initialRow] = React.useState([...rows]);
+
   const [currentPage, setCurrentPage] = React.useState(initialPage);
   const [size, setSize] = React.useState(pageSize);
 
@@ -73,12 +80,12 @@ function DataTable({
     newColumns[index].sort = sort
     setColumnsInfo(newColumns);
     if (!sort) {
-      handleRowChange([...rows]);
+      handleRowChange([...initialRow]);
       return
     };
-    
+
     const newData = [...rows]
-    
+
     if (handleSort && field) {
       newData.sort((a, b) => handleSort(a[field], b[field], sort));
 
@@ -117,15 +124,57 @@ function DataTable({
   }
 
   React.useEffect(() => {
-    const colSort = columns.findIndex(col => col.sort != undefined)
+    const colSort = columnsInfo.findIndex(col => col.sort != undefined)
     if (colSort >= 0) {
-      sortRows(columns[colSort], colSort, columns[colSort].sort)
+      sortRows(columnsInfo[colSort], colSort, columnsInfo[colSort].sort)
     }
-  }, [rows])
+  }, [])
+
+  React.useEffect(() => {
+    const colSort = columnsInfo.findIndex(col => col.sort != undefined)
+    if (colSort >= 0 && isFiltered) {
+      const newCols = [...columnsInfo]
+      newCols[colSort].sort = undefined
+      setColumnsInfo(newCols)
+    }
+  }, [isFiltered])
+
+  const handleFilter = React.useCallback((value: string, col: string) => {
+    let newRows = [...rows];
+    if (value) {
+
+      const filtered = newRows.filter(
+        row => {
+          if (col) {
+            return row[col].toLowerCase().includes(value.toLowerCase())
+          }
+          const valuesNotBoolean = Object.values(row).filter(item => typeof item !== 'boolean')
+          return valuesNotBoolean.join(' ').toLowerCase().includes(value.toLowerCase())
+          // return Object.values(row).join(' ').toLowerCase().includes(value.toLowerCase())
+        }
+      )
+
+      newRows = [...filtered]
+    } else {
+      newRows = [...initialRow];
+    }
+    setCurrentPage(0);
+    handleRowChange(newRows);
+    setLastPage(Math.ceil(newRows.length / size))
+  }, [])
 
   return (
     <React.Fragment>
-
+      <div className='flex items-center gap-5 flex-row mt-5 mb-5'>
+        <div className='flex-col grow'>
+          <TableFilter onChange={handleFilter} columns={columns} />
+        </div>
+        <div className='flex-col'>
+          <p className='mb-0 mt-4'>
+            {rows.length} items
+          </p>
+        </div>
+      </div>
       <table className={classes.table}>
         <thead>
           <tr>
@@ -148,18 +197,66 @@ function DataTable({
         </tbody>
       </table>
 
-      <div>
-        <p>
-          Exibindo {currentPage * pageSize} - {(currentPage + 1) * pageSize} de {rows.length}
+      <div className='flex flex-row justify-between mt-5 mb-5'>
+        <p className='flex-col'>
+          Showing {currentPage * pageSize} - {(currentPage + 1) * pageSize} of {rows.length} items
         </p>
 
-        <Pagination
-          currentPage={currentPage}
-          lastPage={lastPage}
-          onChange={handleChangePage}
-        />
+        <div className="flex-col">
+          <Pagination
+            currentPage={currentPage}
+            lastPage={lastPage}
+            onChange={handleChangePage}
+          />
+        </div>
       </div>
     </React.Fragment>);
+}
+
+function TableFilter({ onChange, columns }) {
+  const [search, setSearch] = React.useState('');
+  const [searchType, setSearchType] = React.useState('');
+  const id = React.useId();
+
+  const searchId = `${id}-search`;
+  const searchTypeId = `${id}-seachType`;
+
+  const handleOnChange = (search, searchType) => {
+
+    const intervalId = window.setTimeout(() => {
+      onChange(search, searchType);
+    }, 1000);
+    return () => window.clearTimeout(intervalId)
+  };
+
+  return (
+    <div className='flex flex-row'>
+      <div className='flex flex-col'>
+        <label className={classes.label} htmlFor={searchTypeId}>Search</label>
+        <select className={classes.search} id={searchTypeId} value={searchType} placeholder="Filter by column"
+          onChange={event => {
+            setSearchType(event.target.value)
+            handleOnChange(search, event.target.value)
+          }}>
+          <option value=''>All</option>
+          {columns.map(col => (
+            <option key={col.headerLabel.replace(/\s/g, '')} value={col.field}>{col.headerLabel}</option>
+          ))}
+        </select>
+      </div>
+
+      <div className='flex flex-col grow'>
+        <label className={classes.label} htmlFor={searchId}>Search</label>
+        <input className={classes.search} id={searchId} type="text" placeholder="Search for.."
+          value={search}
+          onChange={(event) => {
+            setSearch(event.target.value);
+            handleOnChange(event.target.value, searchType)
+          }}
+        />
+      </div>
+    </div >
+  )
 }
 
 function TableRow({ currentPage, pageSize, rows, columns }) {
@@ -194,9 +291,15 @@ function TableColumns({ columns, rowIndex, rows }: {
 function TableColumn({ column, columnInfo }: {
   column: any, columnInfo: TableColumn
 }) {
-  const { field, type, align, format, sortable, tagList } = columnInfo
+  const { field, type, formatElement, format, sortable, tagList } = columnInfo
 
   if (format) return <React.Fragment>{format(column)}</React.Fragment>
+
+  if (formatElement) {
+    return (<React.Fragment>
+      {formatElement(column)}
+    </React.Fragment>)
+  }
 
   if (field) {
     if (type && type === 'link' && column[field]) return (<a href={column[field]} target="_blank">link</a>)

@@ -10,17 +10,22 @@
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: #eee;
+  background-color: #f3f3f3;
 }
 
 .table th,
 .table td {
-  border-bottom: 1px solid #888;
+  /* border-bottom: 1px solid #888; */
   border-right: 1px solid #888;
   padding: 15px 5px 15px 5px;
   min-width: 50px;
-  max-width: 100px;
+  /* max-width: 100px; */
   text-align: center;
+}
+
+.table th:last-child,
+.table td:last-child {
+  border-right: none;
 }
 
 .table th {
@@ -28,13 +33,14 @@
   text-transform: uppercase;
   letter-spacing: .04em;
   color: #444;
+  word-wrap: break-word;
   /* text-align: left; */
 }
 
 .table td {
   text-transform: capitalize;
   word-wrap: break-word;
-  word-break: break-all;
+  /* word-break: break-all; */
 }
 
 .sortBtn {
@@ -75,4 +81,29 @@
 
 .paginationItemActive {
   background: #ddd
+}
+
+/*  search */
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #444;
+}
+
+.search {
+  border: 0.3px solid #ddd;
+  height: 48px;
+  padding: 5px 10px;
+}
+
+select.search {
+  border-right: none;
+  background-color: #fcfcfc;
+}
+
+input.search {
+  border-left: none;
 }
