@@ -1,4 +1,3 @@
-import { Table } from 'lucide-react';
 import * as React from 'react';
 import { range } from '../../helpers/range';
 import Tag, { TagInfo } from '../Tag';
@@ -13,7 +12,8 @@ interface Props {
   pageSize: number
   columns: TableColumn[]
   handleRowChange: (val) => void
-  isFiltered: boolean
+  isFiltered: boolean,
+  children?: React.ReactNode
 }
 
 export interface TableColumn {
@@ -37,6 +37,7 @@ function DataTable({
   columns,
   handleRowChange,
   isFiltered,
+  children,
   ...delegated
 }: Props) {
 
@@ -185,16 +186,20 @@ function DataTable({
 
   return (
     <React.Fragment>
-      <div className='flex items-center gap-5 flex-row mt-5 mb-5'>
-        <div className='flex-col grow'>
+      {/* <div className='flex items-center gap-5 flex-row mt-5 mb-5'>
+        <div className='flex-col grow'> */}
           <TableFilter onChange={handleFilter} columns={columnsInfo} />
-        </div>
+        {/* </div>
         <div className='flex-col'>
           <p className='mb-0 mt-4'>
             {rows.length} items
           </p>
         </div>
-      </div>
+      </div> */}
+
+      {children}
+
+
       <table className={classes.table}>
         <thead>
           <tr>
@@ -250,15 +255,15 @@ function TableFilter({ onChange, columns }) {
   };
 
   return (
-    <div className='flex flex-row'>
+    <div className='flex flex-row my-5'>
       <div className='flex flex-col'>
-        <label className={classes.label} htmlFor={searchTypeId}>Search</label>
-        <select className={classes.search} id={searchTypeId} value={searchType} placeholder="Filter by column"
+        <label className={classes.label} htmlFor={searchTypeId}>Search by</label>
+        <select className={classes.search} id={searchTypeId} value={searchType} placeholder="Search by"
           onChange={event => {
             setSearchType(event.target.value)
             handleOnChange(search, event.target.value)
           }}>
-          <option value='all'>View all</option>
+          <option value='all'>All columns</option>
           {columns.map(col => (
             <option key={col.key} value={col.key}> {col.headerLabel}</option>
           ))}
@@ -267,7 +272,7 @@ function TableFilter({ onChange, columns }) {
 
       <div className='flex flex-col grow'>
         <label className={classes.label} htmlFor={searchId}>Search</label>
-        <input className={classes.search} id={searchId} type="text" placeholder="Search for.."
+        <input className={classes.search} id={searchId} type="text" placeholder="Search for..."
           value={search}
           onChange={(event) => {
             setSearch(event.target.value);

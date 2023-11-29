@@ -6,7 +6,7 @@ import ToogleGroupButton from '../ToogleGroupButton/ToogleGroupButton';
 import { Filter, ExternalLink } from 'lucide-react';
 
 function BandsTable() {
-  const { bands, setBands } = React.useContext(BandContext)
+  const { bands, initialBandList, setBands } = React.useContext(BandContext)
 
   const handleSortBoolean = React.useCallback((valA, valB, sort: 'asc' | 'desc') => {
     if (sort === 'asc') return (valA === valB) ? 0 : valA ? -1 : 1;
@@ -76,19 +76,40 @@ function BandsTable() {
     }
   }, []);
 
-  return <div>
-    <div className='flex flex-row items-center mb-5'>
-      <Filter size={17} />
-      <span className='mr-3'>
+  return < section >
+    <div className='flex flex-row gap-4 items-center'>
 
-        Growling intensity
-      </span>
-      <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
-        onChange={handleGrowlFilter} />
+      <h1 className="title1">
+        The List
+      </h1>
+
+      <h2 className='title2'>
+        {initialBandList.length} bands
+      </h2>
+      {initialBandList.length !== bands.length && (<small className='title2'>
+        (filtered: {bands.length} bands)
+      </small>)}
     </div>
 
-    <DataTable isFiltered={growlFilter !== 'viewAll'} rows={bands} columns={columns} pageSize={10} handleRowChange={setBands} />
-  </div>;
+    <DataTable isFiltered={growlFilter !== 'viewAll'} rows={bands} columns={columns} pageSize={10} handleRowChange={setBands}>
+      <div className='flex flex-row items-center mb-16 justify-between'>
+        <div className='flex flex-row items-center '>
+          <Filter size={17} />
+          <span className='mr-3'>
+
+            Growling intensity
+          </span>
+          <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
+            onChange={handleGrowlFilter} />
+        </div>
+        <div className='flex flex-row items-center gap-2'>
+          <button>Download list</button>
+          <button>Dowload filtered result</button>
+        </div>
+      </div>
+
+    </DataTable>
+  </section>;
 }
 
 export default BandsTable;

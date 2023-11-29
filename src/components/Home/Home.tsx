@@ -1,9 +1,7 @@
 import * as React from 'react';
 import BandsTable from '../BandsTable';
-import { List } from 'lucide-react';
 
 function Home() {
-
 
   return <article>
     <section className='mb-20'>
@@ -25,16 +23,7 @@ function Home() {
       </div>
     </section>
 
-    <section>
-
-      <h2 className="title1">
-        The List
-      </h2>
-
-
-
-      <BandsTable />
-    </section>
+    <BandsTable />
   </article >;
 }
 
