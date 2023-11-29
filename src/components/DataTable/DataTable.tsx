@@ -4,7 +4,7 @@ import Tag, { TagInfo } from '../Tag';
 import Pagination from './Pagination';
 import * as classes from './Table.module.css';
 import { ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
-
+import TableFilter from './TableFilter';
 
 interface Props {
   rows: Array<any>
@@ -18,16 +18,15 @@ interface Props {
 
 export interface TableColumn {
   key?: string,
-  field?: string,
   headerLabel: string,
-  align?: 'left' | 'right' | 'center',
+
+  field?: string,
   format?: (val) => string,
   formatElement?: (val) => React.ReactNode,
+
   sortable?: boolean
-  handleSort?: (valA, valB, sort) => number,
-  type?: 'tag' | 'link'
-  tagList?: TagInfo[]
   sort?: 'desc' | 'asc'
+  handleSort?: (valA, valB, sort) => number,
 }
 
 function DataTable({
@@ -56,6 +55,23 @@ function DataTable({
 
   const [lastPage, setLastPage] = React.useState(() => Math.ceil(rows.length / size));
 
+  React.useEffect(() => {
+    const colSort = columnsInfo.findIndex(col => col.sort != undefined)
+    if (colSort >= 0) {
+      sortRows(columnsInfo[colSort], colSort, columnsInfo[colSort].sort)
+    }
+  }, [])
+
+  React.useEffect(() => {
+    const colSort = columnsInfo.findIndex(col => col.sort != undefined)
+    if (colSort >= 0 && isFiltered) {
+      const newCols = [...columnsInfo]
+      newCols[colSort].sort = undefined
+      setColumnsInfo(newCols)
+    }
+  }, [isFiltered])
+
+
   function handleChangePage(value: number | string) {
     if (value) setCurrentPage(Number(value))
   }
@@ -81,8 +97,8 @@ function DataTable({
     sortRows(headerInfo, colIndex, sort);
   }
 
-  function sortRows(headerInfo: TableColumn, index: number, sort: 'asc' | 'desc' | undefined) {
-    const { field, format, handleSort } = headerInfo;
+  function sortRows(columnInfo: TableColumn, index: number, sort: 'asc' | 'desc' | undefined) {
+    const { field, handleSort } = columnInfo;
 
     const newColumns = [...columnsInfo]
     newColumns[index].sort = sort
@@ -92,60 +108,33 @@ function DataTable({
       return
     };
 
-    const newData = [...rows]
-
+    const sortedData = [...rows]
+    
     if (handleSort && field) {
-      newData.sort((a, b) => handleSort(a[field], b[field], sort));
+      sortedData.sort((a, b) => handleSort(
+        getColumnDataFromRow(columnInfo, a),
+        getColumnDataFromRow(columnInfo, b), sort
+      ));
 
-      handleRowChange(newData)
+      handleRowChange(sortedData)
       return;
     }
-    newData.sort((a, b) => {
-      let fa;
-      let fb;
-      if (field) {
-        fa = a[field];
-        fb = b[field];
-      }
-      if (format) {
-        fa = format(a);
-        fb = format(b);
-      }
 
-      if (Number(fa) !== NaN && Number(fb) !== NaN) {
-        fa = Number(fa)
-        fb = Number(fb)
-      } else {
-        fa = fa.toString().toLowerCase()
-        fb = fb.toString().toLowerCase()
-      }
+    sortedData.sort((a, b) => {
+      let formattedA = getColumnDataFromRow(columnInfo, a);
+      let formattedB = getColumnDataFromRow(columnInfo, b);
 
-      if (fa < fb) {
+      if (formattedA < formattedB) {
         return sort === 'asc' ? -1 : 1;
       }
-      if (fa > fb) {
+      if (formattedA > formattedB) {
         return sort === 'asc' ? 1 : -1;
       }
       return 0;
     });
-    handleRowChange(newData)
+
+    handleRowChange(sortedData)
   }
-
-  React.useEffect(() => {
-    const colSort = columnsInfo.findIndex(col => col.sort != undefined)
-    if (colSort >= 0) {
-      sortRows(columnsInfo[colSort], colSort, columnsInfo[colSort].sort)
-    }
-  }, [])
-
-  React.useEffect(() => {
-    const colSort = columnsInfo.findIndex(col => col.sort != undefined)
-    if (colSort >= 0 && isFiltered) {
-      const newCols = [...columnsInfo]
-      newCols[colSort].sort = undefined
-      setColumnsInfo(newCols)
-    }
-  }, [isFiltered])
 
   const handleFilter = React.useCallback((searchValue: string, colKey: string) => {
     let newRows = [...rows];
@@ -157,21 +146,16 @@ function DataTable({
           if (colKey !== 'all') {
             const col = columnsInfo.find(col => col.key === colKey)
             if (col) {
-              let colValue;
-              if (col.format)
-                colValue = col.format(row)
-              if (col.field)
-                colValue = row[col.field]
 
-              if (Number(colValue) !== NaN)
+              let colValue = getColumnDataFromRow(col, row)
+              if (colValue !== NaN)
                 return colValue == Number(searchValue)
               else
-                return colValue.toString().toLowerCase().includes(searchValue.toString().toLowerCase())
+                return colValue.includes(searchValue.toLowerCase())
             }
           }
           const valuesNotBoolean = Object.values(row).filter(item => typeof item !== 'boolean')
           return valuesNotBoolean.join(' ').toLowerCase().includes(searchValue.toLowerCase())
-          // return Object.values(row).join(' ').toLowerCase().includes(value.toLowerCase())
         }
       )
 
@@ -184,21 +168,23 @@ function DataTable({
     setLastPage(Math.ceil(newRows.length / size))
   }, [])
 
+  function getColumnDataFromRow(columnInfo: TableColumn, row: any) {
+    const { field, format } = columnInfo;
+    let colValue;
+    if (field) colValue = row[field];
+    if (format) colValue = format(row);
+
+    if (!!Number(colValue))
+      return Number(colValue)
+    else
+      return colValue.toString().toLowerCase();
+  }
+
   return (
     <React.Fragment>
-      {/* <div className='flex items-center gap-5 flex-row mt-5 mb-5'>
-        <div className='flex-col grow'> */}
-          <TableFilter onChange={handleFilter} columns={columnsInfo} />
-        {/* </div>
-        <div className='flex-col'>
-          <p className='mb-0 mt-4'>
-            {rows.length} items
-          </p>
-        </div>
-      </div> */}
+      <TableFilter onChange={handleFilter} columns={columnsInfo} />
 
       {children}
-
 
       <table className={classes.table}>
         <thead>
@@ -212,7 +198,6 @@ function DataTable({
         </thead>
 
         <tbody>
-
           <TableRow
             currentPage={currentPage}
             pageSize={size}
@@ -238,51 +223,7 @@ function DataTable({
     </React.Fragment>);
 }
 
-function TableFilter({ onChange, columns }) {
-  const [search, setSearch] = React.useState('');
-  const [searchType, setSearchType] = React.useState('all');
-  const id = React.useId();
 
-  const searchId = `${id}-search`;
-  const searchTypeId = `${id}-seachType`;
-
-  const handleOnChange = (search, searchType) => {
-
-    const intervalId = window.setTimeout(() => {
-      onChange(search, searchType);
-    }, 1000);
-    return () => window.clearTimeout(intervalId)
-  };
-
-  return (
-    <div className='flex flex-row my-5'>
-      <div className='flex flex-col'>
-        <label className={classes.label} htmlFor={searchTypeId}>Search by</label>
-        <select className={classes.search} id={searchTypeId} value={searchType} placeholder="Search by"
-          onChange={event => {
-            setSearchType(event.target.value)
-            handleOnChange(search, event.target.value)
-          }}>
-          <option value='all'>All columns</option>
-          {columns.map(col => (
-            <option key={col.key} value={col.key}> {col.headerLabel}</option>
-          ))}
-        </select>
-      </div>
-
-      <div className='flex flex-col grow'>
-        <label className={classes.label} htmlFor={searchId}>Search</label>
-        <input className={classes.search} id={searchId} type="text" placeholder="Search for..."
-          value={search}
-          onChange={(event) => {
-            setSearch(event.target.value);
-            handleOnChange(event.target.value, searchType)
-          }}
-        />
-      </div>
-    </div >
-  )
-}
 
 function TableRow({ currentPage, pageSize, rows, columns }) {
   return (
@@ -316,7 +257,7 @@ function TableColumns({ columns, rowIndex, rows }: {
 function TableColumn({ column, columnInfo }: {
   column: any, columnInfo: TableColumn
 }) {
-  const { field, type, formatElement, format, sortable, tagList } = columnInfo
+  const { field, formatElement, format, sortable } = columnInfo
 
   if (format) return <React.Fragment>{format(column)}</React.Fragment>
 
@@ -326,13 +267,7 @@ function TableColumn({ column, columnInfo }: {
     </React.Fragment>)
   }
 
-  if (field) {
-    if (type && type === 'link' && column[field]) return (<a href={column[field]} target="_blank">link</a>)
-    if (type && type === 'tag' && tagList) return (<Tag value={column[field]} tagInfo={tagList} />)
-
-    return <React.Fragment>{column[field]}</React.Fragment>
-  }
-
+  if (field) return <React.Fragment>{column[field]}</React.Fragment>
 
   return <React.Fragment></React.Fragment>
 }
@@ -350,7 +285,6 @@ function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumn, sortRo
       </button>}
     </React.Fragment>
   }
-
 
   return (<React.Fragment>{headerLabel}</React.Fragment>)
 }
