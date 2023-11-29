@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Lexend+Peta:wght@900&display=swap');
 
 // @tailwind base;
 @tailwind components;
@@ -56,14 +57,17 @@ p {
 }
 
 .title1 {
-  font-family: 'Rubik', sans-serif;
-  text-transform: uppercase;
+  // font-family: 'Rubik', sans-serif;
+  font-family: 'Cinzel', serif;
+  text-transform: titlecase;
   font-weight: 500;
 }
 
 .title2 {
-  font-family: 'Rubik Glitch', cursive;
+  // font-family: 'Rubik Glitch', cursive;
+  font-family: 'Lexend Peta', sans-serif;
   text-transform: uppercase;
+  letter-spacing: 0.3em;
 }
 
 h1 {
@@ -71,7 +75,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.3rem;
   // margin-top: -20px;
 }
 

@@ -63,9 +63,9 @@ function BandsTable() {
   ]
 
   const growFilterOptions = [...growTagList, {
-    value: 'todos', text: 'Todos'
+    value: 'viewAll', text: 'View All'
   }]
-  const [growlFilter, setGrowlFilter] = React.useState('todos')
+  const [growlFilter, setGrowlFilter] = React.useState('viewAll')
   const { filterByGrow } = React.useContext(BandContext)
 
 
@@ -87,7 +87,7 @@ function BandsTable() {
         onChange={handleGrowlFilter} />
     </div>
 
-    <DataTable isFiltered={growlFilter !== 'todos'} rows={bands} columns={columns} pageSize={10} handleRowChange={setBands} />
+    <DataTable isFiltered={growlFilter !== 'viewAll'} rows={bands} columns={columns} pageSize={10} handleRowChange={setBands} />
   </div>;
 }
 

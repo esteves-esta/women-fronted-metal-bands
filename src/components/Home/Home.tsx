@@ -2,22 +2,12 @@ import * as React from 'react';
 import BandsTable from '../BandsTable';
 import { List } from 'lucide-react';
 
-import Image from '../../assets/jinjer.png';
-
 function Home() {
 
 
-  return <main className="mx-24 my-16">
-    <section className='flex flex-row gap-x-6 p-5 mb-20'>
-      <div className="flex-col">
-        <img
-          src={Image}
-          alt="Tatiana Shmailyuk (from ucranian band Jinjer)"
-        />
-        <p className="text-xs">Image: Tatiana Shmailyuk (Jinjer)</p>
-      </div>
-
-      <div className="flex-col grow text-justify">
+  return <article>
+    <section className='mb-20'>
+      <div className="text-justify">
         <h1 className="title1">Women frontend </h1>
         <h2 className="title2 -mt-3">metal bands</h2>
 
@@ -36,18 +26,16 @@ function Home() {
     </section>
 
     <section>
-      <div className='flex flex-row items-center mb-5'>
-        <List size={32} />
-        <h2 className="title1 ml-3">
-          List of
-          <span className="title2 pl-3">bands</span>
-        </h2>
-      </div>
 
-     
+      <h2 className="title1">
+        The List
+      </h2>
+
+
+
       <BandsTable />
     </section>
-  </main >;
+  </article >;
 }
 
 export default Home;
