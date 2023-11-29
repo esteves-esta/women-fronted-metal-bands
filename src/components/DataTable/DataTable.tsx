@@ -4,7 +4,6 @@ import Tag, { TagInfo } from '../Tag';
 import Pagination from './Pagination';
 import * as classes from './Table.module.css';
 import { ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
-import TableFilter from './TableFilter';
 
 interface Props {
   rows: Array<any>
@@ -12,8 +11,7 @@ interface Props {
   pageSize: number
   columns: TableColumn[]
   handleRowChange: (val) => void
-  isFiltered: boolean,
-  children?: React.ReactNode
+  isFiltered: string | null,
 }
 
 export interface TableColumn {
@@ -29,6 +27,18 @@ export interface TableColumn {
   handleSort?: (valA, valB, sort) => number,
 }
 
+export function getColumnDataFromRow(columnInfo: TableColumn, row: any) {
+  const { field, format } = columnInfo;
+  let colValue;
+  if (field) colValue = row[field];
+  if (format) colValue = format(row);
+
+  if (!!Number(colValue))
+    return Number(colValue)
+  else
+    return colValue.toString().toLowerCase();
+}
+
 function DataTable({
   rows,
   initialPage = 0,
@@ -36,7 +46,6 @@ function DataTable({
   columns,
   handleRowChange,
   isFiltered,
-  children,
   ...delegated
 }: Props) {
 
@@ -69,6 +78,9 @@ function DataTable({
       newCols[colSort].sort = undefined
       setColumnsInfo(newCols)
     }
+
+    setCurrentPage(0);
+    setLastPage(Math.ceil(rows.length / size))
   }, [isFiltered])
 
 
@@ -109,7 +121,7 @@ function DataTable({
     };
 
     const sortedData = [...rows]
-    
+
     if (handleSort && field) {
       sortedData.sort((a, b) => handleSort(
         getColumnDataFromRow(columnInfo, a),
@@ -121,6 +133,7 @@ function DataTable({
     }
 
     sortedData.sort((a, b) => {
+      // console.log({ field })
       let formattedA = getColumnDataFromRow(columnInfo, a);
       let formattedB = getColumnDataFromRow(columnInfo, b);
 
@@ -136,56 +149,9 @@ function DataTable({
     handleRowChange(sortedData)
   }
 
-  const handleFilter = React.useCallback((searchValue: string, colKey: string) => {
-    let newRows = [...rows];
-    if (searchValue) {
-
-      console.log({ colKey })
-      const filtered = newRows.filter(
-        row => {
-          if (colKey !== 'all') {
-            const col = columnsInfo.find(col => col.key === colKey)
-            if (col) {
-
-              let colValue = getColumnDataFromRow(col, row)
-              if (colValue !== NaN)
-                return colValue == Number(searchValue)
-              else
-                return colValue.includes(searchValue.toLowerCase())
-            }
-          }
-          const valuesNotBoolean = Object.values(row).filter(item => typeof item !== 'boolean')
-          return valuesNotBoolean.join(' ').toLowerCase().includes(searchValue.toLowerCase())
-        }
-      )
-
-      newRows = [...filtered]
-    } else {
-      newRows = [...initialRow];
-    }
-    setCurrentPage(0);
-    handleRowChange(newRows);
-    setLastPage(Math.ceil(newRows.length / size))
-  }, [])
-
-  function getColumnDataFromRow(columnInfo: TableColumn, row: any) {
-    const { field, format } = columnInfo;
-    let colValue;
-    if (field) colValue = row[field];
-    if (format) colValue = format(row);
-
-    if (!!Number(colValue))
-      return Number(colValue)
-    else
-      return colValue.toString().toLowerCase();
-  }
 
   return (
     <React.Fragment>
-      <TableFilter onChange={handleFilter} columns={columnsInfo} />
-
-      {children}
-
       <table className={classes.table}>
         <thead>
           <tr>

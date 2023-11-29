@@ -1,7 +1,7 @@
 import * as React from 'react';
-import * as classes from './Table.module.css';
+import * as classes from './BandsTable.module.css';
 
-function TableFilter({ onChange, columns }) {
+function BandFilter({ onChange, columns }) {
   const [search, setSearch] = React.useState('');
   const [searchType, setSearchType] = React.useState('all');
   const id = React.useId();
@@ -47,4 +47,4 @@ function TableFilter({ onChange, columns }) {
   )
 }
 
-export default TableFilter
+export default BandFilter
