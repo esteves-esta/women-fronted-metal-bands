@@ -13,7 +13,8 @@
     "YearStarted": 1993,
     "YearEnded": null,
     "Recomendation": "Beyond Vision",
-    "Links": "https://www.acidking.com/about/"
+    "Links": "https://www.acidking.com/about/",
+    "Sister": false
   },
   {
     "Band": "Ad Infinitum",
@@ -29,7 +30,8 @@
     "YearStarted": 2018,
     "YearEnded": null,
     "Recomendation": "Eternal Rains",
-    "Links": "https://adinfinitumofficial.com/bio/"
+    "Links": "https://adinfinitumofficial.com/bio/",
+    "Sister": false
   },
   {
     "Band": "Avatarium",
@@ -45,7 +47,8 @@
     "YearStarted": 2012,
     "YearEnded": null,
     "Recomendation": "God Is Silent",
-    "Links": "https://bandmaid.tokyo/"
+    "Links": "https://bandmaid.tokyo/",
+    "Sister": false
   },
   {
     "Band": "BABYMETAL",
@@ -56,12 +59,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "SU-METAL, MOAMETAL, MOMOMETAL,",
+    "Vocalists": "Su-Metal, Moametal, Momometal,",
     "Country": "Japan",
     "YearStarted": 2010,
     "YearEnded": null,
     "Recomendation": "Mirror Mirror",
-    "Links": "https://ffm.to/fairymetal"
+    "Links": "https://ffm.to/fairymetal",
+    "Sister": false
   },
   {
     "Band": "BAND-MAID",
@@ -72,12 +76,13 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 1,
-    "Vocalists": "SAIKI",
+    "Vocalists": "Saiki",
     "Country": "Japan",
     "YearStarted": 2013,
     "YearEnded": null,
     "Recomendation": "Unleash!!!!!",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Castle",
@@ -93,7 +98,8 @@
     "YearStarted": 2019,
     "YearEnded": null,
     "Recomendation": "Red Phantom",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Cinnamon Babe",
@@ -109,7 +115,8 @@
     "YearStarted": 2022,
     "YearEnded": null,
     "Recomendation": "Loose",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Dead Sara",
@@ -125,7 +132,8 @@
     "YearStarted": 2002,
     "YearEnded": null,
     "Recomendation": "Weatherman",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Eva Under Fire",
@@ -141,7 +149,8 @@
     "YearStarted": 2015,
     "YearEnded": null,
     "Recomendation": "Death of Me",
-    "Links": "https://www.infectedrain.com/about-us/"
+    "Links": "https://www.infectedrain.com/about-us/",
+    "Sister": false
   },
   {
     "Band": "EYES SET TO KILL",
@@ -157,7 +166,8 @@
     "YearStarted": 2003,
     "YearEnded": null,
     "Recomendation": "Infected",
-    "Links": "https://www.youtube.com/@KtheScreamerOfficial"
+    "Links": "https://www.youtube.com/@KtheScreamerOfficial",
+    "Sister": false
   },
   {
     "Band": "GRAI",
@@ -173,7 +183,8 @@
     "YearStarted": 2007,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Halestorm",
@@ -189,7 +200,8 @@
     "YearStarted": 1997,
     "YearEnded": null,
     "Recomendation": "Freak Like Me",
-    "Links": "https://www.lacunacoil.com/bio/"
+    "Links": "https://www.lacunacoil.com/bio/",
+    "Sister": false
   },
   {
     "Band": "Kandia",
@@ -205,7 +217,8 @@
     "YearStarted": 2007,
     "YearEnded": null,
     "Recomendation": "Deathwish",
-    "Links": "https://novatwins.co.uk/"
+    "Links": "https://novatwins.co.uk/",
+    "Sister": false
   },
   {
     "Band": "King Woman",
@@ -221,7 +234,8 @@
     "YearStarted": 2009,
     "YearEnded": null,
     "Recomendation": "Boghz",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Kittie",
@@ -237,7 +251,8 @@
     "YearStarted": 1996,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Lacuna Coil",
@@ -253,7 +268,8 @@
     "YearStarted": 1997,
     "YearEnded": null,
     "Recomendation": "Under the Surface",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Lauren Babic",
@@ -269,7 +285,8 @@
     "YearStarted": 2008,
     "YearEnded": null,
     "Recomendation": "Toxic",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "League of Distortion",
@@ -285,7 +302,8 @@
     "YearStarted": 2020,
     "YearEnded": null,
     "Recomendation": "My Revenge",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "LohArano",
@@ -301,7 +319,8 @@
     "YearStarted": null,
     "YearEnded": null,
     "Recomendation": "Koaitra",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Marmozets",
@@ -312,12 +331,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Becca MacIntyre",
+    "Vocalists": "Becca Macintyre",
     "Country": "UK",
     "YearStarted": 2007,
     "YearEnded": null,
     "Recomendation": "Born Young and Free",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "mildrage",
@@ -328,12 +348,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "MEG",
+    "Vocalists": "Meg",
     "Country": "Japan",
     "YearStarted": 2002,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "NOCTURNAL",
@@ -349,7 +370,8 @@
     "YearStarted": 2000,
     "YearEnded": null,
     "Recomendation": "Rising Demons",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Nova Twins",
@@ -360,7 +382,8 @@
     "Black Women": true,
     "All women band": true,
     "Growling": 1,
-    "Vocalists": "Amy Love, Georgia South (sisters)",
+    "Vocalists": "Amy Love, Georgia South",
+    "Sister": true,
     "Country": "UK",
     "YearStarted": 2014,
     "YearEnded": null,
@@ -381,7 +404,8 @@
     "YearStarted": 2011,
     "YearEnded": null,
     "Recomendation": "Pray for Fire",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "ODC",
@@ -397,7 +421,8 @@
     "YearStarted": null,
     "YearEnded": null,
     "Recomendation": "The Lie",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Rico Nasty",
@@ -413,7 +438,8 @@
     "YearStarted": 2014,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Sister Sin",
@@ -429,7 +455,8 @@
     "YearStarted": 2002,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "The world over",
@@ -445,7 +472,8 @@
     "YearStarted": 2014,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Tristania",
@@ -461,7 +489,8 @@
     "YearStarted": 1996,
     "YearEnded": 2002,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Violet Orlandi",
@@ -477,7 +506,8 @@
     "YearStarted": 2012,
     "YearEnded": null,
     "Recomendation": "Dance Macabre",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Warlock",
@@ -493,7 +523,8 @@
     "YearStarted": 1982,
     "YearEnded": 1989,
     "Recomendation": "Hellbound",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Within Temptation",
@@ -504,12 +535,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Sharon den Adel",
+    "Vocalists": "Sharon Den Adel",
     "Country": "Netherlands",
     "YearStarted": 1996,
     "YearEnded": null,
     "Recomendation": "The Fire Within",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "agrimonia",
@@ -525,7 +557,8 @@
     "YearStarted": 2015,
     "YearEnded": null,
     "Recomendation": "talion",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "ALT BLK ERA",
@@ -536,7 +569,8 @@
     "Black Women": true,
     "All women band": true,
     "Growling": 3,
-    "Vocalists": "Nyrobi and Chaya (sisters)",
+    "Vocalists": "Nyrobi, Chaya",
+    "Sister": true,
     "Country": "UK",
     "YearStarted": 2022,
     "YearEnded": null,
@@ -552,12 +586,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "ALISSA WHITE-GLUZ",
+    "Vocalists": "Alissa White-Gluz",
     "Country": "Sweden",
     "YearStarted": 1995,
     "YearEnded": null,
     "Recomendation": "The World Is Yours",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Arkona (Аркона)",
@@ -573,7 +608,8 @@
     "YearStarted": 2002,
     "YearEnded": null,
     "Recomendation": "Goi; Rode; Goi!",
-    "Links": "http://www.arkona-russia.com/"
+    "Links": "http://www.arkona-russia.com/",
+    "Sister": false
   },
   {
     "Band": "As Everything Unfolds",
@@ -589,7 +625,8 @@
     "YearStarted": 2013,
     "YearEnded": null,
     "Recomendation": "Stranger In The Mirror",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Aspect Iris",
@@ -605,7 +642,8 @@
     "YearStarted": null,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": "https://babymetal.com/mob/index.php?site=TO&ima=2417"
+    "Links": "https://babymetal.com/mob/index.php?site=TO&ima=2417",
+    "Sister": false
   },
   {
     "Band": "Banshee",
@@ -621,7 +659,8 @@
     "YearStarted": 2020,
     "YearEnded": null,
     "Recomendation": "FAIRY METAL",
-    "Links": "https://beyond-the-black.com/"
+    "Links": "https://beyond-the-black.com/",
+    "Sister": false
   },
   {
     "Band": "Black September",
@@ -637,7 +676,8 @@
     "YearStarted": 2006,
     "YearEnded": 2013,
     "Recomendation": "Unleashed",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Bloodlined Calligraphy",
@@ -653,7 +693,8 @@
     "YearStarted": 1999,
     "YearEnded": 2004,
     "Recomendation": "It Can't Rain All The Time",
-    "Links": "https://butcherbabies.com/"
+    "Links": "https://butcherbabies.com/",
+    "Sister": false
   },
   {
     "Band": "Burning Witches",
@@ -669,7 +710,8 @@
     "YearStarted": 2015,
     "YearEnded": null,
     "Recomendation": "The Circle of Five",
-    "Links": "https://cinnamonbabe.com/"
+    "Links": "https://cinnamonbabe.com/",
+    "Sister": false
   },
   {
     "Band": "Butcher Babies",
@@ -685,7 +727,8 @@
     "YearStarted": 2009,
     "YearEnded": null,
     "Recomendation": "Best Friend",
-    "Links": "https://conquerdivideofficial.com/"
+    "Links": "https://conquerdivideofficial.com/",
+    "Sister": false
   },
   {
     "Band": "Butcher Babies",
@@ -701,7 +744,8 @@
     "YearStarted": 2009,
     "YearEnded": null,
     "Recomendation": "Red Thunder",
-    "Links": "https://www.deadsara.com/"
+    "Links": "https://www.deadsara.com/",
+    "Sister": false
   },
   {
     "Band": "Caged Existence",
@@ -717,7 +761,8 @@
     "YearStarted": null,
     "YearEnded": null,
     "Recomendation": "The Burden of Purpose",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Cerebral Bore",
@@ -733,7 +778,8 @@
     "YearStarted": 2006,
     "YearEnded": 2014,
     "Recomendation": "The Bald Cadaver",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Cripper",
@@ -749,7 +795,8 @@
     "YearStarted": 2005,
     "YearEnded": 2018,
     "Recomendation": "Animal Of Prey",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Crypta",
@@ -765,7 +812,8 @@
     "YearStarted": 2019,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Defacing God",
@@ -781,7 +829,8 @@
     "YearStarted": 2015,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Drown This City",
@@ -797,7 +846,8 @@
     "YearStarted": 2015,
     "YearEnded": 2022,
     "Recomendation": "In Your Image",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Dying Wish",
@@ -813,7 +863,8 @@
     "YearStarted": 2016,
     "YearEnded": null,
     "Recomendation": "Now You'll Rot",
-    "Links": "https://ignea.band/"
+    "Links": "https://ignea.band/",
+    "Sister": false
   },
   {
     "Band": "Employed To Serve",
@@ -829,7 +880,8 @@
     "YearStarted": 2011,
     "YearEnded": null,
     "Recomendation": "Take Back Control",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Entheos",
@@ -845,7 +897,8 @@
     "YearStarted": 2015,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "HOLY MOSES",
@@ -861,7 +914,8 @@
     "YearStarted": 1980,
     "YearEnded": null,
     "Recomendation": "Cult Of The Machine",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Infected Rain",
@@ -877,7 +931,8 @@
     "YearStarted": 2008,
     "YearEnded": null,
     "Recomendation": "These Walls",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Ithaca",
@@ -893,7 +948,8 @@
     "YearStarted": 2012,
     "YearEnded": null,
     "Recomendation": "They Fear Us",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "iwrestledabearonce",
@@ -904,12 +960,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Krysta Cameron, Courtney LaPlante",
+    "Vocalists": "Krysta Cameron, Courtney Laplante",
     "Country": "US",
     "YearStarted": 2007,
     "YearEnded": 2016,
     "Recomendation": "You Aint No Family",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Jinjer",
@@ -925,7 +982,8 @@
     "YearStarted": 2009,
     "YearEnded": null,
     "Recomendation": "On the Top",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "K Enagonio",
@@ -941,7 +999,8 @@
     "YearStarted": 2011,
     "YearEnded": null,
     "Recomendation": "Wap",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Konvent",
@@ -957,7 +1016,8 @@
     "YearStarted": 2015,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Landmine Marathon",
@@ -973,7 +1033,8 @@
     "YearStarted": 2004,
     "YearEnded": null,
     "Recomendation": "Shadows Fed to Tyrants",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Light This City",
@@ -989,7 +1050,8 @@
     "YearStarted": 2002,
     "YearEnded": null,
     "Recomendation": "Agents of Fate",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Matriarchs",
@@ -1005,7 +1067,8 @@
     "YearStarted": 2012,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Metal Kitchen",
@@ -1021,7 +1084,8 @@
     "YearStarted": 2015,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "NEMOPHILA",
@@ -1037,7 +1101,8 @@
     "YearStarted": 2019,
     "YearEnded": null,
     "Recomendation": "Rise",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Oathbreaker",
@@ -1053,7 +1118,8 @@
     "YearStarted": 2008,
     "YearEnded": null,
     "Recomendation": "Glimpse Of The Unseen",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Once Human",
@@ -1069,7 +1135,8 @@
     "YearStarted": 2014,
     "YearEnded": null,
     "Recomendation": "Scar Weaver",
-    "Links": "http://theyfearus.com/"
+    "Links": "http://theyfearus.com/",
+    "Sister": false
   },
   {
     "Band": "OTEP",
@@ -1085,7 +1152,8 @@
     "YearStarted": 2000,
     "YearEnded": null,
     "Recomendation": "Run For Cover",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "POWERWOLF",
@@ -1101,7 +1169,8 @@
     "YearStarted": 2003,
     "YearEnded": null,
     "Recomendation": "Demons Are A Girl's Best Friend",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Pupil Slicer",
@@ -1117,7 +1186,8 @@
     "YearStarted": 2021,
     "YearEnded": null,
     "Recomendation": "Momentary Actuality",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Reliqa",
@@ -1133,7 +1203,8 @@
     "YearStarted": 2018,
     "YearEnded": null,
     "Recomendation": "The Ritualist",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Rolo Tomassi",
@@ -1149,7 +1220,8 @@
     "YearStarted": 2005,
     "YearEnded": null,
     "Recomendation": "Mutual Ruin",
-    "Links": "https://traitorbsdm.bandcamp.com/"
+    "Links": "https://traitorbsdm.bandcamp.com/",
+    "Sister": false
   },
   {
     "Band": "SeeYouSpaceCowboy",
@@ -1165,7 +1237,8 @@
     "YearStarted": 2016,
     "YearEnded": null,
     "Recomendation": "Misinterpreting Constellations",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Sisters Of Suffocation",
@@ -1181,7 +1254,8 @@
     "YearStarted": 2014,
     "YearEnded": null,
     "Recomendation": "Humans Are Broken",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Spiritbox",
@@ -1192,12 +1266,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Courtney LaPlante",
+    "Vocalists": "Courtney Laplante",
     "Country": "US",
     "YearStarted": 2016,
     "YearEnded": null,
     "Recomendation": "Holy Roller",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Spoil Engine",
@@ -1213,7 +1288,8 @@
     "YearStarted": 2004,
     "YearEnded": null,
     "Recomendation": "Disconnect",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Taylor Destroy",
@@ -1229,7 +1305,8 @@
     "YearStarted": null,
     "YearEnded": null,
     "Recomendation": "BYOB (Cover)",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "The Agonist",
@@ -1245,7 +1322,8 @@
     "YearStarted": 2004,
     "YearEnded": 2023,
     "Recomendation": "Feast on the Living",
-    "Links": "https://www.patreon.com/sicksense"
+    "Links": "https://www.patreon.com/sicksense",
+    "Sister": false
   },
   {
     "Band": "The Anchor",
@@ -1261,7 +1339,8 @@
     "YearStarted": 2016,
     "YearEnded": null,
     "Recomendation": "Miscreation",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "The Charm The Fury",
@@ -1277,7 +1356,8 @@
     "YearStarted": 2010,
     "YearEnded": 2018,
     "Recomendation": "Weaponized",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Three Times Royal",
@@ -1293,7 +1373,8 @@
     "YearStarted": 2021,
     "YearEnded": null,
     "Recomendation": "Do You Know What It’s Like ?",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "TRAITOR",
@@ -1309,7 +1390,8 @@
     "YearStarted": 2013,
     "YearEnded": null,
     "Recomendation": "Betrayal",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Venom Prison",
@@ -1325,7 +1407,8 @@
     "YearStarted": 2014,
     "YearEnded": null,
     "Recomendation": "Uterine Industrialisation",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "VEXED",
@@ -1341,7 +1424,8 @@
     "YearStarted": 2021,
     "YearEnded": null,
     "Recomendation": "Hideous",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Volatile Ways",
@@ -1357,7 +1441,8 @@
     "YearStarted": 2019,
     "YearEnded": null,
     "Recomendation": "Time's Up",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "WALLS OF JERICHO",
@@ -1373,7 +1458,8 @@
     "YearStarted": 1998,
     "YearEnded": null,
     "Recomendation": "Forever Militant",
-    "Links": "https://www.youtube.com/watch?v=xwksxDHNoAE"
+    "Links": "https://www.youtube.com/watch?v=xwksxDHNoAE",
+    "Sister": false
   },
   {
     "Band": "Your Chance To Die",
@@ -1389,7 +1475,8 @@
     "YearStarted": 2007,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "ABNORMALITY",
@@ -1405,7 +1492,8 @@
     "YearStarted": 2005,
     "YearEnded": 2020,
     "Recomendation": "Monarch Omega",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Aephanemer",
@@ -1421,7 +1509,8 @@
     "YearStarted": 2013,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Amaranthe",
@@ -1437,7 +1526,8 @@
     "YearStarted": 2008,
     "YearEnded": null,
     "Recomendation": 365,
-    "Links": "https://ankormusic.com/"
+    "Links": "https://ankormusic.com/",
+    "Sister": false
   },
   {
     "Band": "Ankor",
@@ -1453,7 +1543,8 @@
     "YearStarted": 2003,
     "YearEnded": null,
     "Recomendation": "Holy Wolf, Prisioner",
-    "Links": "https://annavonhausswolffmusic.bandcamp.com/"
+    "Links": "https://annavonhausswolffmusic.bandcamp.com/",
+    "Sister": false
   },
   {
     "Band": "Battle Beast",
@@ -1469,7 +1560,8 @@
     "YearStarted": 2008,
     "YearEnded": null,
     "Recomendation": "Where Angels Fear to Fly",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Black Mirrors",
@@ -1485,7 +1577,8 @@
     "YearStarted": 2017,
     "YearEnded": null,
     "Recomendation": "Burning Warriors",
-    "Links": "https://www.burningwitches.ch/"
+    "Links": "https://www.burningwitches.ch/",
+    "Sister": false
   },
   {
     "Band": "Conquer Divide",
@@ -1501,7 +1594,8 @@
     "YearStarted": 2013,
     "YearEnded": null,
     "Recomendation": "Paralyzed",
-    "Links": "https://devilskin.co.nz/pages/the-band"
+    "Links": "https://devilskin.co.nz/pages/the-band",
+    "Sister": false
   },
   {
     "Band": "Devilskin",
@@ -1517,7 +1611,8 @@
     "YearStarted": 2010,
     "YearEnded": null,
     "Recomendation": "Everybody's High but Me",
-    "Links": "https://gelhc.bandcamp.com/album/only-constant"
+    "Links": "https://gelhc.bandcamp.com/album/only-constant",
+    "Sister": false
   },
   {
     "Band": "Dream State",
@@ -1533,7 +1628,8 @@
     "YearStarted": 2014,
     "YearEnded": null,
     "Recomendation": "Taunt Me",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Fit For Rivals",
@@ -1549,7 +1645,8 @@
     "YearStarted": 2009,
     "YearEnded": null,
     "Recomendation": "Crash",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Gel",
@@ -1565,7 +1662,8 @@
     "YearStarted": 2019,
     "YearEnded": null,
     "Recomendation": "Honed Blade",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "HUNTRESS",
@@ -1581,7 +1679,8 @@
     "YearStarted": 2009,
     "YearEnded": 2018,
     "Recomendation": "Eight Of Swords",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "In This Moment",
@@ -1597,7 +1696,8 @@
     "YearStarted": 1995,
     "YearEnded": null,
     "Recomendation": "The In-Between",
-    "Links": "https://loharano.bandcamp.com/album/loharano-live-at-trans-musicales-of-rennes"
+    "Links": "https://loharano.bandcamp.com/album/loharano-live-at-trans-musicales-of-rennes",
+    "Sister": false
   },
   {
     "Band": "NERVOSA",
@@ -1613,7 +1713,8 @@
     "YearStarted": 2010,
     "YearEnded": null,
     "Recomendation": "Under Ruins",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Obscure Sphinx",
@@ -1629,7 +1730,8 @@
     "YearStarted": 2008,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Red Handed Denial",
@@ -1645,7 +1747,8 @@
     "YearStarted": 2008,
     "YearEnded": null,
     "Recomendation": "Redefine",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Renee Phoenix",
@@ -1661,7 +1764,8 @@
     "YearStarted": 2009,
     "YearEnded": null,
     "Recomendation": "4ever",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "SETYØURSAILS",
@@ -1677,7 +1781,8 @@
     "YearStarted": 2017,
     "YearEnded": null,
     "Recomendation": "Nightfall",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "SICKSENSE",
@@ -1693,7 +1798,8 @@
     "YearStarted": 2022,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Straight Line Stitch",
@@ -1709,7 +1815,8 @@
     "YearStarted": 2000,
     "YearEnded": null,
     "Recomendation": "Conversion",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "THE ORDER OF CHAOS",
@@ -1725,7 +1832,8 @@
     "YearStarted": 2003,
     "YearEnded": null,
     "Recomendation": "Apocalypse Moon",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Unleash The Archers",
@@ -1741,7 +1849,8 @@
     "YearStarted": 2007,
     "YearEnded": null,
     "Recomendation": "Cleanse the Bloodlines",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Witch Mountain",
@@ -1757,7 +1866,8 @@
     "YearStarted": 1997,
     "YearEnded": null,
     "Recomendation": "Shelter",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "ALDIOUS",
@@ -1768,12 +1878,13 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 0,
-    "Vocalists": "Rami, Re:NO",
+    "Vocalists": "Rami, Re:No",
     "Country": "Japan",
     "YearStarted": 2008,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": "https://www.altblkera.com/"
+    "Links": "https://www.altblkera.com/",
+    "Sister": false
   },
   {
     "Band": "Amberian Dawn",
@@ -1789,7 +1900,8 @@
     "YearStarted": 2006,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Anna von Hausswolff",
@@ -1800,12 +1912,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Anna Michaela Ebba Electra von Hausswolff",
+    "Vocalists": "Anna Michaela Ebba Electra Von Hausswolff",
     "Country": "Sweden",
     "YearStarted": 2010,
     "YearEnded": null,
     "Recomendation": "The Mysterious Vanishing of Electra",
-    "Links": "https://archenemy.net/en/"
+    "Links": "https://archenemy.net/en/",
+    "Sister": false
   },
   {
     "Band": "Beyond The Black",
@@ -1821,7 +1934,8 @@
     "YearStarted": 2015,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "BRIDEAR",
@@ -1837,7 +1951,8 @@
     "YearStarted": 2011,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": "https://butcherbabies.com/"
+    "Links": "https://butcherbabies.com/",
+    "Sister": false
   },
   {
     "Band": "Cobra Spell",
@@ -1853,7 +1968,8 @@
     "YearStarted": 2019,
     "YearEnded": 2020,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "CYNTIA",
@@ -1869,7 +1985,8 @@
     "YearStarted": 2011,
     "YearEnded": 2018,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "DEATHLESS LEGACY",
@@ -1880,12 +1997,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "STEVA LA CINGHIALA (ELEONORA VAIANA)",
+    "Vocalists": "Steva La Cinghiala (Eleonora Vaiana)",
     "Country": "Italy",
     "YearStarted": 2005,
     "YearEnded": null,
     "Recomendation": "Ora Pro Nobis",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Delain",
@@ -1901,7 +2019,8 @@
     "YearStarted": 2002,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "ELEGY OF MADNESS",
@@ -1917,7 +2036,8 @@
     "YearStarted": 2006,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Elvellon",
@@ -1933,7 +2053,8 @@
     "YearStarted": 2010,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Epica",
@@ -1949,7 +2070,8 @@
     "YearStarted": 2002,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Evanescence",
@@ -1965,7 +2087,8 @@
     "YearStarted": 1995,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": "http://jinjer-metal.com/"
+    "Links": "http://jinjer-metal.com/",
+    "Sister": false
   },
   {
     "Band": "Exit Eden",
@@ -1981,7 +2104,8 @@
     "YearStarted": 2017,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "FROZEN CROWN",
@@ -1992,12 +2116,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "JADA \"JADE\" ETRO",
+    "Vocalists": "Jada \"Jade\" Etro",
     "Country": "Italy",
     "YearStarted": 2017,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Ignea",
@@ -2013,7 +2138,8 @@
     "YearStarted": 2011,
     "YearEnded": null,
     "Recomendation": "Incurable disease",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Joan Jett & The Blackhearts",
@@ -2029,7 +2155,8 @@
     "YearStarted": 1975,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Lucifer",
@@ -2045,7 +2172,8 @@
     "YearStarted": 2014,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Nightwish",
@@ -2061,7 +2189,8 @@
     "YearStarted": 1996,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Nini Music",
@@ -2072,12 +2201,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "nini",
+    "Vocalists": "Nini",
     "Country": "Taiwan",
     "YearStarted": null,
     "YearEnded": null,
     "Recomendation": "Longma",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Nyttland",
@@ -2093,7 +2223,8 @@
     "YearStarted": 2013,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Phanthom Elite",
@@ -2109,7 +2240,8 @@
     "YearStarted": 2016,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Sate",
@@ -2125,7 +2257,8 @@
     "YearStarted": null,
     "YearEnded": null,
     "Recomendation": "Warrior",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "SEVEN KINGDOMS",
@@ -2141,7 +2274,8 @@
     "YearStarted": 2007,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Sirenia",
@@ -2157,7 +2291,8 @@
     "YearStarted": 2001,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Sleeping Romance",
@@ -2173,7 +2308,8 @@
     "YearStarted": 2013,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "Temperance",
@@ -2184,12 +2320,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "ALESSIA SCOLLETTI",
+    "Vocalists": "Alessia Scolletti",
     "Country": "Italy",
     "YearStarted": 2014,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "The Oath",
@@ -2205,7 +2342,8 @@
     "YearStarted": 2012,
     "YearEnded": 2014,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "The Runaways",
@@ -2221,7 +2359,8 @@
     "YearStarted": 1975,
     "YearEnded": 1979,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "The Warning",
@@ -2232,7 +2371,8 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 0,
-    "Vocalists": "Daniela &  Paulina Villarreal Vélez (sisters)",
+    "Vocalists": "Daniela &  Paulina Villarreal Vélez",
+    "Sister": true,
     "Country": "Mexico",
     "YearStarted": 2013,
     "YearEnded": null,
@@ -2253,7 +2393,8 @@
     "YearStarted": 1980,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   },
   {
     "Band": "XANDRIA",
@@ -2269,6 +2410,7 @@
     "YearStarted": 1994,
     "YearEnded": null,
     "Recomendation": "Reborn",
-    "Links": ""
+    "Links": "",
+    "Sister": false
   }
 ]
