@@ -11,6 +11,10 @@ li .tag {
   padding: 4px 16px;
 }
 
+.dark {
+  background-color: var(--bg-secondary);
+}
+
 .success {
   background-color: var(--color-success);
 }

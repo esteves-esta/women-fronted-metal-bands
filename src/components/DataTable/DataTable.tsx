@@ -37,6 +37,8 @@ function getColumnDataFromRow(columnInfo: TableColumn, row: any) {
   if (field) colValue = row[field];
   if (format) colValue = format(row);
 
+  if (typeof colValue === 'boolean') return colValue
+
   if (!!Number(colValue))
     return Number(colValue)
   else
@@ -221,12 +223,12 @@ function Table({
     };
 
     const sortedData = [...rows]
-
     if (handleSort && field) {
       sortedData.sort((a, b) => handleSort(
         getColumnDataFromRow(columnInfo, a),
         getColumnDataFromRow(columnInfo, b), sort
-      ));
+      )
+      );
 
       handleRowChange(sortedData)
       return;
@@ -320,9 +322,10 @@ function TableColumn({ column, columnInfo }: {
     if (Array.isArray(colValue)) {
       if (colValue.length === 0) return (<React.Fragment>-</React.Fragment>);
 
-      return colValue.map((col, index) => (
-        <p>{col}{colValue.length - 1 > index && ','}</p>
+      const values = colValue.map((col, index) => (
+        <p key={index}>{col}{colValue.length - 1 > index && ','}</p>
       ))
+      return <React.Fragment>{values}</React.Fragment>
     }
     return <React.Fragment>{colValue}</React.Fragment>
   }

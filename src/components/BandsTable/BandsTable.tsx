@@ -24,6 +24,7 @@ function BandsTable() {
   ], [])
 
   const handleSortBoolean = React.useCallback((valA, valB, sort: 'asc' | 'desc') => {
+    
     if (sort === 'asc') return (valA === valB) ? 0 : valA ? -1 : 1;
     else return (valA === valB) ? 0 : valA ? 1 : -1;
   }, [])
@@ -77,9 +78,10 @@ function BandsTable() {
       // { field: 'LGBTQ', headerLabel: 'LGBTQ', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'LGBTQ', booleanTagList) },
       { field: 'Black Women', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'Black Women', booleanTagList) },
       { field: 'All women band', headerLabel: 'All women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'All women band', booleanTagList) },
-      { field: 'CurrentVocalists', headerLabel: 'Vo. Num.', format: (col) => col.CurrentVocalists.length },
+      { field: 'Sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'Sister', booleanTagList) },
+      { field: 'CurrentVocalists', headerLabel: 'Vo. Num.', sortable: true, format: (col) => col.CurrentVocalists.length },
       { field: 'CurrentVocalists', headerLabel: 'Vocalists', },
-      { field: 'PastVocalists', headerLabel: 'Past Vo.', },
+      // { field: 'PastVocalists', headerLabel: 'Past Vo.', },
       { field: 'Country', headerLabel: 'Country', sortable: true },
       { format: formatYearsActive, headerLabel: 'Years', sortable: true },
       { format: formatActiveYears, headerLabel: 'Active for', },

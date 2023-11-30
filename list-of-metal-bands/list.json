@@ -457,12 +457,12 @@
       "Georgia South"
     ],
     "PastVocalists": [],
-    "Sister": true,
     "Country": "UK",
     "YearStarted": 2014,
     "YearEnded": null,
     "Recomendation": "Enemy",
-    "Links": ""
+    "Links": "",
+    "Sister": true
   },
   {
     "Band": "Oceans of Slumber",
@@ -679,12 +679,12 @@
       "Nyrobi",
       "Chaya"
     ],
-    "Sister": true,
     "Country": "UK",
     "YearStarted": 2022,
     "YearEnded": null,
     "Recomendation": "Obsession : SOLAR",
-    "Links": "https://www.amaranthe.se/the-band"
+    "Links": "https://www.amaranthe.se/the-band",
+    "Sister": true
   },
   {
     "Band": "Arch Enemy",
@@ -2814,12 +2814,12 @@
       "Daniela Villarreal Vélez",
       "Paulina Villarreal Vélez"
     ],
-    "Sister": true,
     "Country": "Mexico",
     "YearStarted": 2013,
     "YearEnded": null,
     "Recomendation": "CHOKE",
-    "Links": ""
+    "Links": "",
+    "Sister": true
   },
   {
     "Band": "Vixen",

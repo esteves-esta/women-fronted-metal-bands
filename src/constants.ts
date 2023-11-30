@@ -1,8 +1,8 @@
 import { TagInfo } from "./components/Tag";
 
 export const booleanTagList: TagInfo[] = [
-  { value: true, text: "sim", type: "success" },
-  { value: false, text: "não", type: "danger" }
+  { value: true, text: "Yes", type: "success" },
+  { value: false, text: "No", type: "dark" }
 ];
 
 export const growTagList: TagInfo[] = [

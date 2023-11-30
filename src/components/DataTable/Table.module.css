@@ -15,6 +15,7 @@
 
 .table th,
 .table td {
+  max-width: 50px;
   border-right: 2px solid var(--border-color);
   padding: 15px 5px 15px 5px;
   min-width: 50px;
@@ -215,7 +216,15 @@ input.search {
   text-transform: capitalize;
   margin-bottom: 0px;
   font-size: 14px;
-  flex: 0 0 50%;
+}
+
+.cardBody li p,
+.cardBody li ul {
+  flex: 0 0 60%;
+}
+
+.cardBody li label {
+  flex: 0 0 40%;
 }
 
 .cardBody li label {
