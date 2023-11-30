@@ -45,7 +45,7 @@
 }
 
 .table td {
-  text-transform: titlecase;
+  text-transform: capitalize;
   word-wrap: break-word;
   /* word-break: break-all; */
 }
