@@ -13,9 +13,10 @@ function BandsTable() {
   const [growlFilter, setGrowlFilter] = React.useState('viewAll')
   const [displayMode, setIsDisplayMode] = React.useState('table')
 
-  const growFilterOptions = React.useMemo(() => [...growTagList, {
-    value: 'viewAll', text: 'View All'
-  }], [])
+  const growFilterOptions = React.useMemo(() => [
+    { value: 'viewAll', text: 'View All' },
+    ...growTagList,
+  ], [])
 
   const displayOptions = React.useMemo(() => [
     { value: 'table', text: 'Table', icon: Table2, iconOnly: true },
@@ -123,25 +124,22 @@ function BandsTable() {
   }
 
   return < section >
-    <div className='flex flex-row gap-4 items-center'>
-
-      <h1 className="title1">
+    <div className='flex flex-col gap-8 items-center'>
+      <h2 className="title1">
         The List
-      </h1>
+      </h2>
 
-      <div className='flex flex-col grow'>
-        <h2 className='title2'>
+      <div className='flex flex-col gap-2 text-center'>
+        <p className='title2'>
           {initialBandList.length} bands
-        </h2>
-        {initialBandList.length !== bands.length && (<small className='title2'>
-          (filtered: {bands.length} bands)
-        </small>)}
+        </p>
+        {initialBandList.length !== bands.length && (
+          <small className='title2'>
+            (filtered: {bands.length} bands)
+          </small>
+        )}
       </div>
 
-      <div>
-        <ToogleGroupButton list={displayOptions} currentValue={displayMode}
-          onChange={setIsDisplayMode} />
-      </div>
     </div>
 
     <DataTable
@@ -153,22 +151,29 @@ function BandsTable() {
       gridMode={displayMode === 'grid'}
     >
 
-      <div className='flex flex-row items-center mb-16 justify-between'>
-        <div className='flex flex-row items-center '>
-          <Filter size={17} />
-          <span className='mr-3'>
+      <div className='flex flex-row items-center mb-16'>
+        <Filter size={17} />
+        <span className='mr-3'>
 
-            Growling intensity
-          </span>
-          <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
-            onChange={handleGrowlFilter} />
+          Growling intensity
+        </span>
+        <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
+          onChange={handleGrowlFilter} />
+      </div>
+
+      <div className='flex flex-row items-center mb-8 justify-between'>
+        <div className='flex flex-row items-center '>
+          <span className='mr-3'>Display mode</span>
+          <ToogleGroupButton list={displayOptions} currentValue={displayMode}
+            onChange={setIsDisplayMode} />
         </div>
-        <div className='flex flex-row items-center gap-2'>
-          <button onClick={downloadAll} className="flex gap-2">
+
+        <div className='flex flex-row items-center gap-4'>
+          <button className='button' onClick={downloadAll}>
             <FileSpreadsheet />
             Download list
           </button>
-          <button onClick={downloadFiltered} className="flex gap-2">
+          <button className='button' onClick={downloadFiltered} >
             <FileSpreadsheet /> Dowload filtered result
           </button>
         </div>

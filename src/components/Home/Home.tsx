@@ -4,14 +4,18 @@ import BandsTable from '../BandsTable';
 function Home() {
 
   return <article>
-    <section className='mb-20'>
+    <section className='home mb-20 mx-32'>
       <div className="text-justify">
-        <h1 className="title1">Women frontend </h1>
-        <h2 className="title2 -mt-3">metal bands</h2>
+        <div className='text-center mb-16'>
+          <h1 className="title1">
+            Women Frontend
+          </h1>
+          <h1 className="title2">metal bands</h1>
+          <p className="text-xl mt-5"> This is a tiny project to compile a list of metal / hard rock bands that have women as lead
+            vocalists.</p>
+        </div>
 
-        <p className="text-xl"> This is a tiny project to compile a list of metal / hard rock bands that have women as lead
-          vocalists.</p>
-        <p className="text-base">This project started when I realized that most metal/rock band that I usually listened mostly
+        <p>This project started when I realized that most metal/rock band that I usually listened mostly
           had man as lead vocalist. And I just got interessed in find and looking for band where with women as lead
           vocalist, and specially where said vocalist isn’t just doing the melodic parts but doing lots of growling. </p>
         <p>So I decided to make this page to compile the bands that I found and also pratice my frontend
@@ -19,7 +23,7 @@ function Home() {
           time, so instead of genre you can filter bands by how much growling the singer can / usually do on the songs of
           the band.</p>
 
-        <p className="text-xs">Note: This is an ongoing project, so there probaly is going to be missing some bands.</p>
+        <small className="text-sm">Note: This is an ongoing project.</small>
       </div>
     </section>
 

@@ -19,7 +19,7 @@ function ToogleGroupButton({ list, currentValue, onChange }: {
           aria-label={text}
         >
           {!iconOnly && text}
-          {!!icon && <Icon size={20} />}
+          {!!icon && <Icon size={18} />}
         </ToggleGroup.Item>
       )
     })}

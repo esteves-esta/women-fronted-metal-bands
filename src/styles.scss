@@ -8,19 +8,48 @@
 /*
   Theme and global variables
 */
-html {
-  overflow-y: scroll;
+html,
+body {
+  height: auto;
+  min-height: 100%;
+}
 
+:root {
   --border: 6px;
+  --letter-spacing: 1.2px;
+  --font-family-title: 'Cinzel', serif;
+  --font-family-title2: 'Lexend Peta', sans-serif;
 
-  --color-success: hsl(150deg 70% 30%);
-  --color-warning: hsl(50deg 100% 30%);
-  --color-error: hsl(0deg 70% 45%);
+  --text-color: rgba(255, 255, 255, 0.829);
+  --text-secondary: #CECECE;
+
+  --border-color: #4e4e4e48;
+  --bg-primary: rgba(0, 0, 0, 0.363);
+  --bg-secondary: #1a1a1a91;
+  --gradient-bg1: linear-gradient(180deg, #16011A 8%, rgba(0, 0, 0, 0.99) 18%, rgba(0, 0, 0, 0.911) 100%);
+  --gradient-bg2: linear-gradient(143deg, #000 7.25%, #2C0732 57.22%, rgba(42, 1, 49, 0.91) 89.5%), #FFF;
+
+  --color-primary: hsl(290, 50%, 20%);
+  --color-primary-lighten1: hsl(290, 50%, 40%);
+  --color-primary-lighten2: hsl(290, 50%, 50%);
+  --color-primary-lighten3: hsl(290, 50%, 60%);
+
+  --box-shadow-focus: 0px 0px 3px 1px var(--color-primary-lighten3);
+
+  --color-success: hsl(94, 64%, 33%);
+  --color-warning: hsl(47, 64%, 33%);
+  --color-error: hsl(15, 64%, 33%);
+  --color-info: hsl(183, 64%, 33%);
   --color-gray-100: hsl(0deg 0% 10%);
   --color-gray-300: hsl(0deg 0% 25%);
   --color-gray-500: hsl(0deg 0% 50%);
   --color-gray-700: hsl(0deg 0% 75%);
   --color-gray-900: hsl(0deg 0% 90%);
+
+  --color-deep-1: hsl(241, 27%, 49%);
+  --color-deep-2: hsl(265, 40%, 34%);
+  --color-deep-3: hsl(281, 71%, 20%);
+  --color-deep-4: hsl(265, 60%, 15%);
 }
 
 /*
@@ -38,16 +67,20 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  /*   // color: var(--color-text);
-  // background: var(--color-background);
-  // transition: color 0.5s, background-color 0.5s; */
-  line-height: 1.6;
-  font-family: Roboto, Oxygen, sans-serif;
-  font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  line-height: 1.6;
+  font-family: Roboto, Oxygen, sans-serif;
+  font-size: 15px;
+  color: var(--text-color);
+
+
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-size: 100%;
+  background-image: var(--gradient-bg1);
 }
 
 p {
@@ -58,7 +91,7 @@ p {
 .title1 {
   // font-family: 'Rubik', sans-serif;
   font-family: 'Cinzel', serif;
-  text-transform: titlecase;
+  text-transform: capitalize;
   font-weight: 500;
 }
 
@@ -67,18 +100,85 @@ p {
   font-family: 'Lexend Peta', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.3em;
+  font-size: 2em;
+}
+
+p.title2 {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+small.title2 {
+  font-size: 14px;
+  margin-bottom: 0px;
 }
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 70px;
 }
 
+
 h2 {
-  font-size: 1.3rem;
+  font-size: 50px;
   // margin-top: -20px;
 }
 
 button {
   outline: none;
   border: none;
+}
+
+hr {
+  border-color: var(--border-color);
+}
+
+.home p {
+  margin-bottom: 2em;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px;
+  // line-height: 1.4em;
+}
+
+a {
+  color: var(--color-primary-lighten1);
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+}
+
+small {
+  letter-spacing: var(--letter-spacing);
+}
+
+a:hover {
+  color: var(--color-primary-lighten2)
+}
+
+a:visited {
+  color: var(--color-primary-lighten3)
+}
+
+table th:focus-within {
+  box-shadow: inset 0 0 0 0.15rem var(--color-primary-lighten);
+  outline: 0 none;
+}
+
+.button {
+  background-color: var(--color-primary);
+  padding: 10px 16px;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  border-radius: var(--border);
+}
+
+button:focus,
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: var(--box-shadow-focus);
 }

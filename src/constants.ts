@@ -6,8 +6,8 @@ export const booleanTagList: TagInfo[] = [
 ];
 
 export const growTagList: TagInfo[] = [
-  { value: 0, text: "None", type: "deep-1" },
-  { value: 1, text: "Few", type: "deep-2" },
+  { value: 3, text: "High", type: "deep-4" },
   { value: 2, text: "Medium", type: "deep-3" },
-  { value: 3, text: "High", type: "deep-4" }
+  { value: 1, text: "Few", type: "deep-2" },
+  { value: 0, text: "None", type: "deep-1" },
 ];

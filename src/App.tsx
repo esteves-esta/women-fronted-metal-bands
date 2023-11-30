@@ -17,12 +17,12 @@ function App() {
         <div className='flex flex-row gap-3'>
           <a href='https://github.com/esteves-esta/women-fronted-metal-bands' target='_blank'>
             <Github size={18} />
-          </a>
 
-          <small>
-            designed & developed by esteves-esta ©{' '}
-            {year}
-          </small>
+            <small>
+              designed & developed by esteves-esta ©{' '}
+              {year}
+            </small>
+          </a>
         </div>
         <small>
           built with: React / RadixUI / Parcel / Tailwind / LucideIcons

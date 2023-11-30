@@ -126,6 +126,16 @@ function DataTable({
 
       {children}
 
+      <div className='mt-5 mb-5'>
+
+        <Pagination
+          currentPage={currentPage}
+          lastPage={lastPage}
+          onChange={handleChangePage}
+        />
+
+      </div>
+
       {!gridMode && (
         <Table
           columnsInfo={columnsInfo}
@@ -147,18 +157,16 @@ function DataTable({
         />
       )}
 
-      <div className='flex flex-row justify-between mt-5 mb-5'>
-        <p className='flex-col'>
+      <div className='flex flex-col items-center mt-10 mb-10'>
+        <Pagination
+          currentPage={currentPage}
+          lastPage={lastPage}
+          onChange={handleChangePage}
+        />
+        <p className='mt-5'>
           Showing {currentPage * pageSize} - {(currentPage + 1) * pageSize} of {rows.length} items
         </p>
 
-        <div className="flex-col">
-          <Pagination
-            currentPage={currentPage}
-            lastPage={lastPage}
-            onChange={handleChangePage}
-          />
-        </div>
       </div>
     </React.Fragment>);
 }

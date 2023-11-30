@@ -6,20 +6,20 @@
 }
 
 .table tbody tr:nth-child(odd) {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: #f3f3f3;
+  /* background-color: var(--bg-primary); */
 }
 
 .table th,
 .table td {
-  /* border-bottom: 1px solid #888; */
-  border-right: 1px solid #888;
+  border-right: 2px solid var(--border-color);
   padding: 15px 5px 15px 5px;
   min-width: 50px;
   max-width: 150px;
+  height: 60px;
   text-align: center;
 }
 
@@ -28,17 +28,23 @@
   border-right: none;
 }
 
-.table th {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  color: #444;
+.table th,
+.table th>* {
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
   word-wrap: break-word;
-  /* text-align: left; */
+  color: var(--text-color);
+}
+
+.table th {
+  background-color: var(--bg-secondary);
+  border-bottom: 2px solid var(--border-color);
 }
 
 .table td {
-  text-transform: capitalize;
+  text-transform: titlecase;
   word-wrap: break-word;
   /* word-break: break-all; */
 }
@@ -57,30 +63,41 @@
 }
 
 .sortBtn:hover {
-  color: rgb(107, 107, 107);
+  color: var(--color-primary-lighten1);
 }
 
 .sortBtnActive {
-  color: rgb(148, 148, 148);
+  color: var(--color-primary);
 }
 
-.paginationItem {
-  font-family: sans-serif;
-  color: #444;
+/* PAGINATION */
+
+.pagination {
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
   vertical-align: middle;
 }
 
-.paginationItem button {
+.pagination button {
+  color: var(--text-color);
+  background: var(--bg-primary);
   font-size: 16px;
-  min-height: 30px;
-  padding: 0px 10px;
-  border: 0.1px solid #fff;
+  height: 30px;
+  width: 50px;
   outline: none;
+  /* border: 1px solid var(--border-color); */
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background: var(--bg-secondary);
+  color: var(--color-gray-300)
 }
 
 .paginationItemActive {
-  background: #ddd
+  background: var(--color-primary) !important
 }
 
 /* search filter */
@@ -90,41 +107,44 @@
   letter-spacing: 1px;
   font-weight: 600;
   font-size: 12px;
-  color: #444;
+  color: var(--text-secondary);
 }
 
 .search {
-  border: 0.3px solid #ddd;
+  border: 0.3px solid var(--border-color);
   height: 48px;
   padding: 5px 10px;
 }
 
 select.search {
   border-right: none;
-  background-color: #fcfcfc;
+  background-color: var(--bg-primary);
+  color: var(--text-color);
 }
 
 input.search {
+  background-color: var(--bg-primary);
   border-left: none;
+  color: var(--text-color);
 }
 
 /* grid */
 
 .grid {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
   grid-gap: 20px;
 }
 
 .card {
   width: 100%;
-  border: 1px solid #4444;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
 }
 
 .card:hover {
   transition: all 0.5s ease;
-  border-color: #2C0732;
+  border-color: var(--color-primary-lighten1);
 }
 
 --border {
@@ -175,7 +195,7 @@ input.search {
   justify-content: space-between;
   align-items: center;
   vertical-align: middle;
-  border-bottom: 0.01em dashed #bbb;
+  border-bottom: 0.01em dashed var(--border-color);
 }
 
 .cardBody ul li:last-child {
@@ -197,6 +217,7 @@ input.search {
 }
 
 .cardBody li label {
+  color: var(--text-secondary);
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;

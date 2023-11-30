@@ -20,12 +20,18 @@ function Pagination({ currentPage, lastPage, onChange }) {
   }, [currentPage, lastPage, RangeStart])
 
   return (
-    <ToggleGroup.Root className={`${classes.paginationItem}`} type="single" defaultValue={currentPage.toString()} onValueChange={onChange}>
-      <ToggleGroup.Item className="ToggleGroupItem" disabled={currentPage === 0} value="0" aria-label="First page">
+    <ToggleGroup.Root className={`${classes.pagination}`} type="single" defaultValue={currentPage.toString()} onValueChange={onChange}>
+      <ToggleGroup.Item
+        disabled={currentPage === 0}
+        value="0"
+        aria-label="First page">
         <ChevronsLeft size={16} />
       </ToggleGroup.Item>
 
-      <ToggleGroup.Item className="ToggleGroupItem" disabled={currentPage - 1 < 0} value={(currentPage - 1).toString()} aria-label="First page">
+      <ToggleGroup.Item
+        disabled={currentPage - 1 < 0}
+        value={(currentPage - 1).toString()}
+        aria-label="First page">
         <ChevronLeft size={16} />
       </ToggleGroup.Item>
 
@@ -34,16 +40,23 @@ function Pagination({ currentPage, lastPage, onChange }) {
           className={rowIndex === currentPage ? classes.paginationItemActive : ''}
           key={rowIndex}
           value={rowIndex.toString()}
+
           aria-label={rowIndex.toString()}>
           {rowIndex + 1}
         </ToggleGroup.Item>
       ))}
 
-      <ToggleGroup.Item className="ToggleGroupItem" disabled={currentPage === lastPage - 1} value={(currentPage + 1).toString()} aria-label="Last page">
+      <ToggleGroup.Item
+        disabled={currentPage === lastPage - 1}
+        value={(currentPage + 1).toString()}
+        aria-label="Last page">
         <ChevronRight size={16} />
       </ToggleGroup.Item>
 
-      <ToggleGroup.Item className="ToggleGroupItem" disabled={currentPage === lastPage - 1} value={(lastPage - 1).toString()} aria-label="Last page">
+      <ToggleGroup.Item
+        disabled={currentPage === lastPage - 1}
+        value={(lastPage - 1).toString()}
+        aria-label="Last page">
         <ChevronsRight size={16} />
       </ToggleGroup.Item>
     </ToggleGroup.Root>

@@ -12,32 +12,32 @@ li .tag {
 }
 
 .success {
-  background-color: #4D891E;
+  background-color: var(--color-success);
 }
 
 .info {
-  background-color: #1E8389;
+  background-color: var(--color-info);
 }
 
 .danger {
-  background-color: #89381E;
+  background-color: var(--color-error);
 
 }
 
 .warning {
-  background-color: #89711E;
+  background-color: var(--color-warning);
 }
 
 .deep-1 {
-  background-color: #854ece;
+  background-color: var(--color-deep-1);
 }
 .deep-2 {
-  background-color: #51248b;
+  background-color: var(--color-deep-2);
 }
 .deep-3 {
-  background-color: #35155e;
+  background-color: var(--color-deep-3);
 }
 .deep-4 {
-  background-color: #190b2c;
+  background-color: var(--color-deep-4);
 }
 
