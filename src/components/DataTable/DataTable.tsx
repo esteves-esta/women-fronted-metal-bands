@@ -20,6 +20,7 @@ interface Props {
 export interface TableColumn {
   key?: string,
   headerLabel: string,
+  img?: { source: string, alt: string }
 
   field?: string,
   format?: (val) => string,
@@ -337,21 +338,22 @@ function Grid({ columns, rows, size, currentPage }) {
 
       {range(start, end).map((rowIndex) =>
         rowIndex < rows.length && (
-        <div key={rowIndex} className={classes.card}>
-          <img src='oi.jpg' alt="img" />
+          <div key={rowIndex} className={classes.card}>
+            {rows[rowIndex].img && <img src={rows[rowIndex].img.src} alt={rows[rowIndex].img.alt} />}
+            {!rows[rowIndex].img && <div className={classes.cardImgPlaceholder} />}
 
-          <div className={classes.cardBody}>
-            {/* {rows[rowIndex].Band} */}
-            <ul>
-              <GridList
-                rows={rows}
-                rowIndex={rowIndex}
-                columns={columns}
-              />
-            </ul>
+            <div className={classes.cardBody}>
+              {/* {rows[rowIndex].Band} */}
+              <ul>
+                <GridList
+                  rows={rows}
+                  rowIndex={rowIndex}
+                  columns={columns}
+                />
+              </ul>
+            </div>
           </div>
-        </div>
-      )
+        )
       )}
 
     </div>
