@@ -8,7 +8,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Lori S.",
+    "CurrentVocalists": [
+      "Lori S."
+    ],
+    "PastVocalists": [],
     "Country": "US",
     "YearStarted": 1993,
     "YearEnded": null,
@@ -25,7 +28,10 @@
     "Black Women": true,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Melissa Bonny",
+    "CurrentVocalists": [
+      "Melissa Bonny"
+    ],
+    "PastVocalists": [],
     "Country": "Swiss/German",
     "YearStarted": 2018,
     "YearEnded": null,
@@ -42,7 +48,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Jennie-Ann Smith",
+    "CurrentVocalists": [
+      "Jennie-Ann Smith"
+    ],
+    "PastVocalists": [],
     "Country": "Sweden",
     "YearStarted": 2012,
     "YearEnded": null,
@@ -59,7 +68,12 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Su-Metal, Moametal, Momometal,",
+    "CurrentVocalists": [
+      "Su-Metal",
+      "Moametal",
+      "Momometal"
+    ],
+    "PastVocalists": [],
     "Country": "Japan",
     "YearStarted": 2010,
     "YearEnded": null,
@@ -76,7 +90,10 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 1,
-    "Vocalists": "Saiki",
+    "CurrentVocalists": [
+      "Saiki"
+    ],
+    "PastVocalists": [],
     "Country": "Japan",
     "YearStarted": 2013,
     "YearEnded": null,
@@ -93,7 +110,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Elizabeth Blackwell",
+    "CurrentVocalists": [
+      "Elizabeth Blackwell"
+    ],
+    "PastVocalists": [],
     "Country": "US",
     "YearStarted": 2019,
     "YearEnded": null,
@@ -110,7 +130,10 @@
     "Black Women": true,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Stormy Maya",
+    "CurrentVocalists": [
+      "Stormy Maya"
+    ],
+    "PastVocalists": [],
     "Country": "US",
     "YearStarted": 2022,
     "YearEnded": null,
@@ -127,7 +150,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Emily Armstrong",
+    "CurrentVocalists": [
+      "Emily Armstrong"
+    ],
+    "PastVocalists": [],
     "Country": "US",
     "YearStarted": 2002,
     "YearEnded": null,
@@ -144,7 +170,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Eva Marie",
+    "CurrentVocalists": [
+      "Eva Marie"
+    ],
+    "PastVocalists": [],
     "Country": "US",
     "YearStarted": 2015,
     "YearEnded": null,
@@ -161,7 +190,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Alexia Rodriguez",
+    "CurrentVocalists": [
+      "Alexia Rodriguez"
+    ],
+    "PastVocalists": [],
     "Country": "US",
     "YearStarted": 2003,
     "YearEnded": null,
@@ -178,7 +210,11 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Aliya Leta, Irina Zybina",
+    "CurrentVocalists": [
+      "Aliya Leta",
+      "Irina Zybina"
+    ],
+    "PastVocalists": [],
     "Country": "Russia",
     "YearStarted": 2007,
     "YearEnded": null,
@@ -195,7 +231,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Lzzy Hale",
+    "CurrentVocalists": [
+      "Lzzy Hale"
+    ],
+    "PastVocalists": [],
     "Country": "US",
     "YearStarted": 1997,
     "YearEnded": null,
@@ -212,7 +251,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Nya Campos Cruz",
+    "CurrentVocalists": [
+      "Nya Campos Cruz"
+    ],
+    "PastVocalists": [],
     "Country": "Portugal",
     "YearStarted": 2007,
     "YearEnded": null,
@@ -229,7 +271,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Kristina Esfandiari",
+    "CurrentVocalists": [
+      "Kristina Esfandiari"
+    ],
+    "PastVocalists": [],
     "Country": "US",
     "YearStarted": 2009,
     "YearEnded": null,
@@ -246,7 +291,10 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 1,
-    "Vocalists": "Morgan Lander",
+    "CurrentVocalists": [
+      "Morgan Lander"
+    ],
+    "PastVocalists": [],
     "Country": "Canada",
     "YearStarted": 1996,
     "YearEnded": null,
@@ -263,7 +311,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Lacuna Coil",
+    "CurrentVocalists": [
+      "Lacuna Coil"
+    ],
+    "PastVocalists": [],
     "Country": "Italy",
     "YearStarted": 1997,
     "YearEnded": null,
@@ -280,7 +331,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Lauren Babic",
+    "CurrentVocalists": [
+      "Lauren Babic"
+    ],
+    "PastVocalists": [],
     "Country": "Canada",
     "YearStarted": 2008,
     "YearEnded": null,
@@ -297,7 +351,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Anna Brunner",
+    "CurrentVocalists": [
+      "Anna Brunner"
+    ],
+    "PastVocalists": [],
     "Country": "Germany",
     "YearStarted": 2020,
     "YearEnded": null,
@@ -314,12 +371,15 @@
     "Black Women": true,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Sidina",
+    "CurrentVocalists": [
+      "Sidina"
+    ],
+    "PastVocalists": [],
     "Country": "Africa",
-    "YearStarted": null,
+    "YearStarted": 2020,
     "YearEnded": null,
     "Recomendation": "Koaitra",
-    "Links": "",
+    "Links": "https://loharano.bandcamp.com/album/loharano-live-at-trans-musicales-of-rennes",
     "Sister": false
   },
   {
@@ -331,7 +391,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Becca Macintyre",
+    "CurrentVocalists": [
+      "Becca Macintyre"
+    ],
+    "PastVocalists": [],
     "Country": "UK",
     "YearStarted": 2007,
     "YearEnded": null,
@@ -348,7 +411,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Meg",
+    "CurrentVocalists": [
+      "Meg"
+    ],
+    "PastVocalists": [],
     "Country": "Japan",
     "YearStarted": 2002,
     "YearEnded": null,
@@ -365,7 +431,11 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Grace Darkling, Rehn Stillnight",
+    "CurrentVocalists": [
+      "Grace Darkling",
+      "Rehn Stillnight"
+    ],
+    "PastVocalists": [],
     "Country": "Italy",
     "YearStarted": 2000,
     "YearEnded": null,
@@ -382,7 +452,11 @@
     "Black Women": true,
     "All women band": true,
     "Growling": 1,
-    "Vocalists": "Amy Love, Georgia South",
+    "CurrentVocalists": [
+      "Amy Love",
+      "Georgia South"
+    ],
+    "PastVocalists": [],
     "Sister": true,
     "Country": "UK",
     "YearStarted": 2014,
@@ -399,7 +473,10 @@
     "Black Women": true,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Cammie Gilbert-Beverly",
+    "CurrentVocalists": [
+      "Cammie Gilbert-Beverly"
+    ],
+    "PastVocalists": [],
     "Country": "US",
     "YearStarted": 2011,
     "YearEnded": null,
@@ -416,9 +493,12 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Celia Do",
+    "CurrentVocalists": [
+      "Celia Do"
+    ],
+    "PastVocalists": [],
     "Country": "France",
-    "YearStarted": null,
+    "YearStarted": 2009,
     "YearEnded": null,
     "Recomendation": "The Lie",
     "Links": "",
@@ -433,7 +513,10 @@
     "Black Women": true,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Maria-Cecilia Simone Kelly",
+    "CurrentVocalists": [
+      "Maria-Cecilia Simone Kelly"
+    ],
+    "PastVocalists": [],
     "Country": "US",
     "YearStarted": 2014,
     "YearEnded": null,
@@ -450,7 +533,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Liv Jagrell",
+    "CurrentVocalists": [
+      "Liv Jagrell"
+    ],
+    "PastVocalists": [],
     "Country": "Sweden",
     "YearStarted": 2002,
     "YearEnded": null,
@@ -467,7 +553,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Tiaday Rocke",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Tiaday Rocke"
+    ],
     "Country": "US",
     "YearStarted": 2014,
     "YearEnded": null,
@@ -484,7 +573,11 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Mariangela Demurtas",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Mariangela Demurtas"
+    ],
+    "PastVocalists": [],
     "Country": "Norway",
     "YearStarted": 1996,
     "YearEnded": 2002,
@@ -501,7 +594,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Violet Orlandi",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Violet Orlandi"
+    ],
     "Country": "Brazil",
     "YearStarted": 2012,
     "YearEnded": null,
@@ -518,7 +614,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Doro Pesch",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Doro Pesch"
+    ],
     "Country": "Germany",
     "YearStarted": 1982,
     "YearEnded": 1989,
@@ -535,7 +634,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 1,
-    "Vocalists": "Sharon Den Adel",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Sharon Den Adel"
+    ],
     "Country": "Netherlands",
     "YearStarted": 1996,
     "YearEnded": null,
@@ -552,7 +654,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Christina Blom",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Christina Blom"
+    ],
     "Country": "Sweden",
     "YearStarted": 2015,
     "YearEnded": null,
@@ -569,7 +674,11 @@
     "Black Women": true,
     "All women band": true,
     "Growling": 3,
-    "Vocalists": "Nyrobi, Chaya",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Nyrobi",
+      "Chaya"
+    ],
     "Sister": true,
     "Country": "UK",
     "YearStarted": 2022,
@@ -586,7 +695,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Alissa White-Gluz",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Alissa White-Gluz"
+    ],
     "Country": "Sweden",
     "YearStarted": 1995,
     "YearEnded": null,
@@ -603,7 +715,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Masha Scream",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Masha Scream"
+    ],
     "Country": "Russia",
     "YearStarted": 2002,
     "YearEnded": null,
@@ -620,7 +735,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Charlie Rolfe",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Charlie Rolfe"
+    ],
     "Country": "UK",
     "YearStarted": 2013,
     "YearEnded": null,
@@ -637,12 +755,15 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Taylor Destroy",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Taylor Destroy"
+    ],
     "Country": "US",
-    "YearStarted": null,
+    "YearStarted": 2022,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": "https://babymetal.com/mob/index.php?site=TO&ima=2417",
+    "Links": "",
     "Sister": false
   },
   {
@@ -654,7 +775,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Banshee",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Banshee"
+    ],
     "Country": "US",
     "YearStarted": 2020,
     "YearEnded": null,
@@ -671,7 +795,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Jen Pickett",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Jen Pickett"
+    ],
     "Country": "US",
     "YearStarted": 2006,
     "YearEnded": 2013,
@@ -688,7 +815,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Ally French",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Ally French"
+    ],
     "Country": "US",
     "YearStarted": 1999,
     "YearEnded": 2004,
@@ -705,7 +835,10 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 3,
-    "Vocalists": "Laura Guldemond",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Laura Guldemond"
+    ],
     "Country": "Switzerland",
     "YearStarted": 2015,
     "YearEnded": null,
@@ -722,7 +855,11 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Carla Harvey, Heidi Shepherd",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Carla Harvey",
+      "Heidi Shepherd"
+    ],
     "Country": "US",
     "YearStarted": 2009,
     "YearEnded": null,
@@ -739,7 +876,11 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Carla Harvey, Heidi Shepherd",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Carla Harvey",
+      "Heidi Shepherd"
+    ],
     "Country": "US",
     "YearStarted": 2009,
     "YearEnded": null,
@@ -756,10 +897,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Steffanie",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Steffanie"
+    ],
     "Country": "Australia",
-    "YearStarted": null,
-    "YearEnded": null,
+    "YearStarted": 2018,
+    "YearEnded": 2019,
     "Recomendation": "The Burden of Purpose",
     "Links": "",
     "Sister": false
@@ -773,7 +917,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Simone \"Som\" Pluijmers",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Simone \"Som\" Pluijmers"
+    ],
     "Country": "Scotland",
     "YearStarted": 2006,
     "YearEnded": 2014,
@@ -790,7 +937,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Britta Görtz",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Britta Görtz"
+    ],
     "Country": "Germany",
     "YearStarted": 2005,
     "YearEnded": 2018,
@@ -807,7 +957,10 @@
     "Black Women": true,
     "All women band": true,
     "Growling": 3,
-    "Vocalists": "Fernanda Lira",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Fernanda Lira"
+    ],
     "Country": "Brazil",
     "YearStarted": 2019,
     "YearEnded": null,
@@ -824,7 +977,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Sandie The Lilith",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Sandie The Lilith"
+    ],
     "Country": "Denmark",
     "YearStarted": 2015,
     "YearEnded": null,
@@ -841,7 +997,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Alex Reade",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Alex Reade"
+    ],
     "Country": "Australia",
     "YearStarted": 2015,
     "YearEnded": 2022,
@@ -858,7 +1017,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Emma Boster",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Emma Boster"
+    ],
     "Country": "US",
     "YearStarted": 2016,
     "YearEnded": null,
@@ -875,7 +1037,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Justine Jones",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Justine Jones"
+    ],
     "Country": "UK",
     "YearStarted": 2011,
     "YearEnded": null,
@@ -892,7 +1057,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Chaney Crabb",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Chaney Crabb"
+    ],
     "Country": "US",
     "YearStarted": 2015,
     "YearEnded": null,
@@ -909,7 +1077,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Sabina Classen",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Sabina Classen"
+    ],
     "Country": "Germany",
     "YearStarted": 1980,
     "YearEnded": null,
@@ -926,7 +1097,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Lena",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Lena"
+    ],
     "Country": "Moldova",
     "YearStarted": 2008,
     "YearEnded": null,
@@ -943,7 +1117,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Djamila Boden Azzouz",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Djamila Boden Azzouz"
+    ],
     "Country": "UK",
     "YearStarted": 2012,
     "YearEnded": null,
@@ -960,7 +1137,13 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Krysta Cameron, Courtney Laplante",
+    "CurrentVocalists": [
+      "Courtney Laplante"
+    ],
+    "PastVocalists": [
+      "Krysta Cameron",
+      "Courtney Laplante"
+    ],
     "Country": "US",
     "YearStarted": 2007,
     "YearEnded": 2016,
@@ -977,12 +1160,15 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Tatiana Shmailyuk",
+    "CurrentVocalists": [
+      "Tatiana Shmailyuk"
+    ],
     "Country": "Ukraine",
     "YearStarted": 2009,
     "YearEnded": null,
     "Recomendation": "On the Top",
     "Links": "",
+    "PastVocalists": [],
     "Sister": false
   },
   {
@@ -994,7 +1180,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "K Enagonio",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "K Enagonio"
+    ],
     "Country": "US",
     "YearStarted": 2011,
     "YearEnded": null,
@@ -1011,7 +1200,10 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 3,
-    "Vocalists": "Rikke Emilie List",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Rikke Emilie List"
+    ],
     "Country": "Denmark",
     "YearStarted": 2015,
     "YearEnded": null,
@@ -1028,7 +1220,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Krysta Curry",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Krysta Curry"
+    ],
     "Country": "US",
     "YearStarted": 2004,
     "YearEnded": null,
@@ -1045,7 +1240,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Laura Nichol",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Laura Nichol"
+    ],
     "Country": "US",
     "YearStarted": 2002,
     "YearEnded": null,
@@ -1062,7 +1260,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "K Enagonio",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "K Enagonio"
+    ],
     "Country": "US",
     "YearStarted": 2012,
     "YearEnded": null,
@@ -1079,7 +1280,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Linzey Rae",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Linzey Rae"
+    ],
     "Country": "US",
     "YearStarted": 2015,
     "YearEnded": null,
@@ -1096,7 +1300,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Mayu",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Mayu"
+    ],
     "Country": "Japan",
     "YearStarted": 2019,
     "YearEnded": null,
@@ -1113,7 +1320,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Caro Tanghe",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Caro Tanghe"
+    ],
     "Country": "Belgium",
     "YearStarted": 2008,
     "YearEnded": null,
@@ -1130,7 +1340,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Lauren Hart",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Lauren Hart"
+    ],
     "Country": "US",
     "YearStarted": 2014,
     "YearEnded": null,
@@ -1147,7 +1360,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Otep Shamaya",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Otep Shamaya"
+    ],
     "Country": "US",
     "YearStarted": 2000,
     "YearEnded": null,
@@ -1164,7 +1380,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Alissa White-Gluz",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Alissa White-Gluz"
+    ],
     "Country": "Germany",
     "YearStarted": 2003,
     "YearEnded": null,
@@ -1181,7 +1400,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Katie Davies",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Katie Davies"
+    ],
     "Country": "UK",
     "YearStarted": 2021,
     "YearEnded": null,
@@ -1198,7 +1420,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Monique Pym",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Monique Pym"
+    ],
     "Country": "Australia",
     "YearStarted": 2018,
     "YearEnded": null,
@@ -1215,7 +1440,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Eva Korman",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Eva Korman"
+    ],
     "Country": "UK",
     "YearStarted": 2005,
     "YearEnded": null,
@@ -1232,7 +1460,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Connie Sgarbossa",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Connie Sgarbossa"
+    ],
     "Country": "US",
     "YearStarted": 2016,
     "YearEnded": null,
@@ -1249,7 +1480,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Els Prins",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Els Prins"
+    ],
     "Country": "Netherlands",
     "YearStarted": 2014,
     "YearEnded": null,
@@ -1266,7 +1500,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Courtney Laplante",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Courtney Laplante"
+    ],
     "Country": "US",
     "YearStarted": 2016,
     "YearEnded": null,
@@ -1283,7 +1520,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Iris Goessens",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Iris Goessens"
+    ],
     "Country": "Belgium",
     "YearStarted": 2004,
     "YearEnded": null,
@@ -1300,7 +1540,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Taylor Destroy",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Taylor Destroy"
+    ],
     "Country": "US",
     "YearStarted": null,
     "YearEnded": null,
@@ -1317,7 +1560,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Vicky Psarakis",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Vicky Psarakis"
+    ],
     "Country": "Canada",
     "YearStarted": 2004,
     "YearEnded": 2023,
@@ -1334,7 +1580,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Linzey Rae",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Linzey Rae"
+    ],
     "Country": "US",
     "YearStarted": 2016,
     "YearEnded": null,
@@ -1351,7 +1600,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Caroline Westendorp",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Caroline Westendorp"
+    ],
     "Country": "Netherlands",
     "YearStarted": 2010,
     "YearEnded": 2018,
@@ -1368,7 +1620,10 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 3,
-    "Vocalists": "Iris Goessens",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Iris Goessens"
+    ],
     "Country": "US",
     "YearStarted": 2021,
     "YearEnded": null,
@@ -1385,7 +1640,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Irohana",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Irohana"
+    ],
     "Country": "South Korea",
     "YearStarted": 2013,
     "YearEnded": null,
@@ -1402,7 +1660,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Larissa Stupar",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Larissa Stupar"
+    ],
     "Country": "UK",
     "YearStarted": 2014,
     "YearEnded": null,
@@ -1419,7 +1680,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Megan Targett",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Megan Targett"
+    ],
     "Country": "UK",
     "YearStarted": 2021,
     "YearEnded": null,
@@ -1436,7 +1700,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Emily Beekmans",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Emily Beekmans"
+    ],
     "Country": "Australia",
     "YearStarted": 2019,
     "YearEnded": null,
@@ -1453,7 +1720,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Candace Kucsulain",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Candace Kucsulain"
+    ],
     "Country": "US",
     "YearStarted": 1998,
     "YearEnded": null,
@@ -1470,7 +1740,12 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Missi Avila, Simone \"Som\" Pluijmers",
+    "CurrentVocalists": [
+      "Missi Avila"
+    ],
+    "PastVocalists": [
+      "Simone \"Som\" Pluijmers"
+    ],
     "Country": "US",
     "YearStarted": 2007,
     "YearEnded": null,
@@ -1487,7 +1762,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 3,
-    "Vocalists": "Mallika Sundaramurthy",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Mallika Sundaramurthy"
+    ],
     "Country": "US",
     "YearStarted": 2005,
     "YearEnded": 2020,
@@ -1504,7 +1782,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Marion Bascoul",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Marion Bascoul"
+    ],
     "Country": "France",
     "YearStarted": 2013,
     "YearEnded": null,
@@ -1521,7 +1802,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Elize Ryd",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Elize Ryd"
+    ],
     "Country": "Sweden",
     "YearStarted": 2008,
     "YearEnded": null,
@@ -1538,7 +1822,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Jessie Williams",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Jessie Williams"
+    ],
     "Country": "Spain",
     "YearStarted": 2003,
     "YearEnded": null,
@@ -1555,7 +1842,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Noora Louhimo",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Noora Louhimo"
+    ],
     "Country": "Finland",
     "YearStarted": 2008,
     "YearEnded": null,
@@ -1572,7 +1862,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Marcella Di Troia",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Marcella Di Troia"
+    ],
     "Country": "Belgium",
     "YearStarted": 2017,
     "YearEnded": null,
@@ -1589,7 +1882,10 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 2,
-    "Vocalists": "Kiarely Castillo",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Kiarely Castillo"
+    ],
     "Country": "US",
     "YearStarted": 2013,
     "YearEnded": null,
@@ -1606,7 +1902,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Jennie Skulander",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Jennie Skulander"
+    ],
     "Country": "New Zealand",
     "YearStarted": 2010,
     "YearEnded": null,
@@ -1623,7 +1922,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Jessie Powell",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Jessie Powell"
+    ],
     "Country": "UK",
     "YearStarted": 2014,
     "YearEnded": null,
@@ -1640,7 +1942,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Renee Phoenix",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Renee Phoenix"
+    ],
     "Country": "US",
     "YearStarted": 2009,
     "YearEnded": null,
@@ -1657,7 +1962,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Sami Kaiser",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Sami Kaiser"
+    ],
     "Country": "US",
     "YearStarted": 2019,
     "YearEnded": null,
@@ -1674,7 +1982,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Jill Janus",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Jill Janus"
+    ],
     "Country": "US",
     "YearStarted": 2009,
     "YearEnded": 2018,
@@ -1691,12 +2002,15 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Maria Brink",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Maria Brink"
+    ],
     "Country": "US",
     "YearStarted": 1995,
     "YearEnded": null,
     "Recomendation": "The In-Between",
-    "Links": "https://loharano.bandcamp.com/album/loharano-live-at-trans-musicales-of-rennes",
+    "Links": "",
     "Sister": false
   },
   {
@@ -1708,7 +2022,10 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 2,
-    "Vocalists": "Prika Amaral",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Prika Amaral"
+    ],
     "Country": "Brazil",
     "YearStarted": 2010,
     "YearEnded": null,
@@ -1725,7 +2042,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Zofia \"Wielebna\" Fraś",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Zofia \"Wielebna\" Fraś"
+    ],
     "Country": "Poland",
     "YearStarted": 2008,
     "YearEnded": null,
@@ -1742,7 +2062,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Lauren Babic",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Lauren Babic"
+    ],
     "Country": "Canada",
     "YearStarted": 2008,
     "YearEnded": null,
@@ -1759,7 +2082,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Renee Phoenix",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Renee Phoenix"
+    ],
     "Country": "US",
     "YearStarted": 2009,
     "YearEnded": null,
@@ -1776,7 +2102,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Jules Mitch",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Jules Mitch"
+    ],
     "Country": "Germany",
     "YearStarted": 2017,
     "YearEnded": null,
@@ -1793,7 +2122,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Vicky Psarakis",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Vicky Psarakis"
+    ],
     "Country": "US",
     "YearStarted": 2022,
     "YearEnded": null,
@@ -1810,7 +2142,10 @@
     "Black Women": true,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Alexis Brown",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Alexis Brown"
+    ],
     "Country": "US",
     "YearStarted": 2000,
     "YearEnded": null,
@@ -1827,7 +2162,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Amanda Kiernan",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Amanda Kiernan"
+    ],
     "Country": "Canada",
     "YearStarted": 2003,
     "YearEnded": null,
@@ -1844,7 +2182,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Brittany B. Hayes",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Brittany B. Hayes"
+    ],
     "Country": "Canada",
     "YearStarted": 2007,
     "YearEnded": null,
@@ -1861,7 +2202,10 @@
     "Black Women": true,
     "All women band": false,
     "Growling": 2,
-    "Vocalists": "Kayla Dixon",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Kayla Dixon"
+    ],
     "Country": "US",
     "YearStarted": 1997,
     "YearEnded": null,
@@ -1878,12 +2222,17 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 0,
-    "Vocalists": "Rami, Re:No",
+    "CurrentVocalists": [
+      "Rami"
+    ],
+    "PastVocalists": [
+      "Re:No"
+    ],
     "Country": "Japan",
     "YearStarted": 2008,
     "YearEnded": null,
     "Recomendation": "",
-    "Links": "https://www.altblkera.com/",
+    "Links": "https://aldious.net/",
     "Sister": false
   },
   {
@@ -1895,7 +2244,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Päivi \"Capri\" Virkkunen",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Päivi \"Capri\" Virkkunen"
+    ],
     "Country": "Finland",
     "YearStarted": 2006,
     "YearEnded": null,
@@ -1912,7 +2264,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Anna Michaela Ebba Electra Von Hausswolff",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Anna Michaela Ebba Electra Von Hausswolff"
+    ],
     "Country": "Sweden",
     "YearStarted": 2010,
     "YearEnded": null,
@@ -1929,7 +2284,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Jennifer Haben",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Jennifer Haben"
+    ],
     "Country": "Germany",
     "YearStarted": 2015,
     "YearEnded": null,
@@ -1946,7 +2304,10 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 0,
-    "Vocalists": "Kimi",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Kimi"
+    ],
     "Country": "Japan",
     "YearStarted": 2011,
     "YearEnded": null,
@@ -1963,7 +2324,10 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 0,
-    "Vocalists": "Kristina Vega",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Kristina Vega"
+    ],
     "Country": "Netherlands",
     "YearStarted": 2019,
     "YearEnded": 2020,
@@ -1980,7 +2344,10 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 0,
-    "Vocalists": "Saki",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Saki"
+    ],
     "Country": "Japan",
     "YearStarted": 2011,
     "YearEnded": 2018,
@@ -1997,7 +2364,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Steva La Cinghiala (Eleonora Vaiana)",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Steva La Cinghiala (Eleonora Vaiana)"
+    ],
     "Country": "Italy",
     "YearStarted": 2005,
     "YearEnded": null,
@@ -2014,7 +2384,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Diana Leah",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Diana Leah"
+    ],
     "Country": "Netherlands",
     "YearStarted": 2002,
     "YearEnded": null,
@@ -2031,7 +2404,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Kyrah Aylin",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Kyrah Aylin"
+    ],
     "Country": "Italy",
     "YearStarted": 2006,
     "YearEnded": null,
@@ -2048,7 +2424,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Nele Messerschmidt",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Nele Messerschmidt"
+    ],
     "Country": "Germany",
     "YearStarted": 2010,
     "YearEnded": null,
@@ -2065,7 +2444,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Simone Simons",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Simone Simons"
+    ],
     "Country": "Netherlands",
     "YearStarted": 2002,
     "YearEnded": null,
@@ -2082,7 +2464,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Amy Lee",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Amy Lee"
+    ],
     "Country": "US",
     "YearStarted": 1995,
     "YearEnded": null,
@@ -2099,7 +2484,13 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 0,
-    "Vocalists": "Amanda Somerville, Clémentine Delauney, Marina La Torraca, Anna Brunner",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Amanda Somerville",
+      "Clémentine Delauney",
+      "Marina La Torraca",
+      "Anna Brunner"
+    ],
     "Country": "US",
     "YearStarted": 2017,
     "YearEnded": null,
@@ -2116,7 +2507,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Jada \"Jade\" Etro",
+    "CurrentVocalists": [
+      "Jada \"Jade\" Etro"
+    ],
+    "PastVocalists": [],
     "Country": "Italy",
     "YearStarted": 2017,
     "YearEnded": null,
@@ -2133,7 +2527,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Helle Bohdanova",
+    "CurrentVocalists": [
+      "Helle Bohdanova"
+    ],
+    "PastVocalists": [],
     "Country": "Ukraine",
     "YearStarted": 2011,
     "YearEnded": null,
@@ -2150,7 +2547,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Joan Marie Larkin",
+    "CurrentVocalists": [
+      "Joan Marie Larkin"
+    ],
+    "PastVocalists": [],
     "Country": "US",
     "YearStarted": 1975,
     "YearEnded": null,
@@ -2167,7 +2567,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Johanna Sadonis",
+    "CurrentVocalists": [
+      "Johanna Sadonis"
+    ],
+    "PastVocalists": [],
     "Country": "Germany",
     "YearStarted": 2014,
     "YearEnded": null,
@@ -2184,7 +2587,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Kittie",
+    "CurrentVocalists": [
+      "Kittie"
+    ],
+    "PastVocalists": [],
     "Country": "Finland",
     "YearStarted": 1996,
     "YearEnded": null,
@@ -2201,9 +2607,12 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Nini",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Nini"
+    ],
     "Country": "Taiwan",
-    "YearStarted": null,
+    "YearStarted": 2019,
     "YearEnded": null,
     "Recomendation": "Longma",
     "Links": "",
@@ -2218,7 +2627,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Natasha “Baba Yaga” Pakhalenko",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Natasha “Baba Yaga” Pakhalenko"
+    ],
     "Country": "Russia",
     "YearStarted": 2013,
     "YearEnded": null,
@@ -2235,7 +2647,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Marina La Torraca",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Marina La Torraca"
+    ],
     "Country": "Brazil / Netherlands",
     "YearStarted": 2016,
     "YearEnded": null,
@@ -2252,9 +2667,12 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Saidah Baba Talibah",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Saidah Baba Talibah"
+    ],
     "Country": "Canada",
-    "YearStarted": null,
+    "YearStarted": 2011,
     "YearEnded": null,
     "Recomendation": "Warrior",
     "Links": "",
@@ -2269,7 +2687,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Sabrina Valentine",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Sabrina Valentine"
+    ],
     "Country": "US",
     "YearStarted": 2007,
     "YearEnded": null,
@@ -2286,7 +2707,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Morten Veland",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Morten Veland"
+    ],
     "Country": "Norway",
     "YearStarted": 2001,
     "YearEnded": null,
@@ -2303,7 +2727,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Federica Lanna",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Federica Lanna"
+    ],
     "Country": "Italy",
     "YearStarted": 2013,
     "YearEnded": null,
@@ -2320,7 +2747,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Alessia Scolletti",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Alessia Scolletti"
+    ],
     "Country": "Italy",
     "YearStarted": 2014,
     "YearEnded": null,
@@ -2337,7 +2767,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Johanna Sadonis",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Johanna Sadonis"
+    ],
     "Country": "Germany",
     "YearStarted": 2012,
     "YearEnded": 2014,
@@ -2354,7 +2787,12 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Joan Jett, Cherie Currie, Micki Steele",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Joan Jett",
+      "Cherie Currie",
+      "Micki Steele"
+    ],
     "Country": "US",
     "YearStarted": 1975,
     "YearEnded": 1979,
@@ -2371,7 +2809,11 @@
     "Black Women": false,
     "All women band": true,
     "Growling": 0,
-    "Vocalists": "Daniela &  Paulina Villarreal Vélez",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Daniela Villarreal Vélez",
+      "Paulina Villarreal Vélez"
+    ],
     "Sister": true,
     "Country": "Mexico",
     "YearStarted": 2013,
@@ -2388,7 +2830,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Lorraine Lewis",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Lorraine Lewis"
+    ],
     "Country": "US",
     "YearStarted": 1980,
     "YearEnded": null,
@@ -2405,7 +2850,10 @@
     "Black Women": false,
     "All women band": false,
     "Growling": 0,
-    "Vocalists": "Ambre Vourvahis",
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Ambre Vourvahis"
+    ],
     "Country": "Germany",
     "YearStarted": 1994,
     "YearEnded": null,

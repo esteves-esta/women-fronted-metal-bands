@@ -315,9 +315,19 @@ function TableColumn({ column, columnInfo }: {
     </React.Fragment>)
   }
 
-  if (field) return <React.Fragment>{column[field]}</React.Fragment>
+  if (field) {
+    const colValue = column[field] ? column[field] : '-'
+    if (Array.isArray(colValue)) {
+      if (colValue.length === 0) return (<React.Fragment>-</React.Fragment>);
 
-  return <React.Fragment></React.Fragment>
+      return colValue.map((col, index) => (
+        <p>{col}{colValue.length - 1 > index && ','}</p>
+      ))
+    }
+    return <React.Fragment>{colValue}</React.Fragment>
+  }
+
+  return <React.Fragment>-</React.Fragment>
 }
 
 function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumn, sortRows: (string) => void }) {
@@ -385,10 +395,24 @@ function GridList({ columns, rowIndex, rows }: {
     </li>)
 
     /* todo - tooltip */
-    if (field) return (<li key={`${key}${index}`}>
-      <label> {headerLabel}</label>
-      <p> {column[field]}</p>
-    </li>)
+    if (field) {
+      const colValue = column[field]
+      if (Array.isArray(colValue)) {
+        return (<li key={`${key}${index}`}>
+          <label> {headerLabel}</label>
+          {/* <p> {column[field]}.join()</p> */}
+          <ul>
+            {colValue.map((col, index) => (
+              <p>{col}{colValue.length - 1 > index && ','}</p>
+            ))}
+          </ul>
+        </li>)
+      }
+      return (<li key={`${key}${index}`}>
+        <label> {headerLabel}</label>
+        <p> {colValue}</p>
+      </li>)
+    }
   })
 
   return <React.Fragment>{List}</React.Fragment>
