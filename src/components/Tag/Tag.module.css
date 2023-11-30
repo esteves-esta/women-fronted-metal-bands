@@ -6,6 +6,11 @@
   color: #fff;
 }
 
+li .tag {
+  font-size: 13px;
+  padding: 4px 16px;
+}
+
 .success {
   background-color: #4D891E;
 }

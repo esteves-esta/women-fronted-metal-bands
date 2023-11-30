@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DataTable, { getColumnDataFromRow, TableColumn } from '../DataTable'
+import DataTable, { TableColumn } from '../DataTable'
 import { BandContext } from '../BandsProvider';
 import { booleanTagList, growTagList } from '../../constants';
 import { downloadCsvFile } from '../../helpers/downloadCsvFile'
@@ -7,13 +7,14 @@ import ToogleGroupButton from '../ToogleGroupButton/ToogleGroupButton';
 import { Filter, ExternalLink, Table2, Grid, FileSpreadsheet } from 'lucide-react';
 import Papa from 'papaparse';
 import Tag, { TagInfo } from '../Tag';
-import BandFilter from './BandFilter';
 
 function BandsTable() {
-  const { bands, initialBandList, setBands } = React.useContext(BandContext)
+  const { bands, initialBandList, setBands, filterByGrow } = React.useContext(BandContext)
+  const [growlFilter, setGrowlFilter] = React.useState('viewAll')
+  const [displayMode, setIsDisplayMode] = React.useState('table')
 
   const growFilterOptions = React.useMemo(() => [...growTagList, {
-    value: 'viewAll', text: 'View All', icon: Table2
+    value: 'viewAll', text: 'View All'
   }], [])
 
   const displayOptions = React.useMemo(() => [
@@ -21,17 +22,13 @@ function BandsTable() {
     { value: 'grid', text: 'Grid', icon: Grid, iconOnly: true }
   ], [])
 
-  const [growlFilter, setGrowlFilter] = React.useState('viewAll')
-  const [isFilteredData, setFilteredData] = React.useState<string | null>(null)
-  const [displayMode, setIsDisplayMode] = React.useState('table')
-  const { filterByGrow } = React.useContext(BandContext)
-
   const handleSortBoolean = React.useCallback((valA, valB, sort: 'asc' | 'desc') => {
     if (sort === 'asc') return (valA === valB) ? 0 : valA ? -1 : 1;
     else return (valA === valB) ? 0 : valA ? 1 : -1;
   }, [])
 
   const formatYearsActive = React.useCallback((column: any) => {
+    if (!column) return '';
     const { YearStarted, YearEnded } = column;
 
     const thisYear = new Date().getFullYear()
@@ -46,26 +43,28 @@ function BandsTable() {
   }, []);
 
   const formatTag = React.useCallback((column: any, field: string, tagList: TagInfo[]) => {
+    if (!column) return;
     return (
       <Tag value={column[field]} tagInfo={tagList} />
     )
   }, [])
 
   const formatBandNameLinks = React.useCallback((column) => {
+    if (!column) return;
     if (!column.Links) return column.Band;
     return (
-      <React.Fragment>
-        <span className='flex items-center justify-center gap-3'>
-          {column.Band}
-          <a href={column.Links} target="_blank">
-            <ExternalLink size={12} />
-          </a>
+      <span className='flex items-center justify-center gap-3'>
+        {column.Band}
+        <a href={column.Links} target="_blank">
+          <ExternalLink size={12} />
+        </a>
 
-        </span>
-      </React.Fragment>)
+      </span>
+    )
   }, [])
 
   const formatActiveYears = React.useCallback((column) => {
+    if (!column) return '';
     const end = column.YearEnded ? column.YearEnded : 'now'
     return `${column.YearStarted} - ${end}`
   }, [])
@@ -92,8 +91,6 @@ function BandsTable() {
     if (growFilterOptions.find(filter => filter.value.toString() === val)) {
       setGrowlFilter(val)
       filterByGrow(val)
-      console.log({ val })
-      setFilteredData(val !== 'viewAll' ? val : null)
     }
   }, []);
 
@@ -125,38 +122,6 @@ function BandsTable() {
     downloadCsvFile(content, 'women-frontend-metal-bands filtered-list.csv')
   }
 
-  const handleFilter = React.useCallback((searchValue: string, colKey: string) => {
-    let newRows = [...bands];
-    if (searchValue) {
-
-      const filtered = newRows.filter(
-        row => {
-          if (colKey !== 'all') {
-            const col = columns.find(col => col.key === colKey)
-            if (col) {
-
-              let colValue = getColumnDataFromRow(col, row)
-              if (colValue !== NaN)
-                return colValue == Number(searchValue)
-              else
-                return colValue.includes(searchValue.toLowerCase())
-            }
-          }
-          const valuesNotBoolean = Object.values(row).filter(item => typeof item !== 'boolean')
-          return valuesNotBoolean.join(' ').toLowerCase().includes(searchValue.toLowerCase())
-        }
-      )
-
-      newRows = [...filtered]
-      setFilteredData(searchValue)
-    } else {
-      setFilteredData(null)
-      newRows = [...initialBandList];
-    }
-    setBands(newRows);
-
-  }, [])
-
   return < section >
     <div className='flex flex-row gap-4 items-center'>
 
@@ -179,38 +144,39 @@ function BandsTable() {
       </div>
     </div>
 
-    <BandFilter onChange={handleFilter} columns={columns} />
+    <DataTable
+      isFiltered={growlFilter !== 'viewAll'}
+      rows={bands}
+      columns={columns}
+      pageSize={displayMode === 'grid' ? 12 : 10}
+      handleRowChange={setBands}
+      gridMode={displayMode === 'grid'}
+    >
 
-    <div className='flex flex-row items-center mb-16 justify-between'>
-      <div className='flex flex-row items-center '>
-        <Filter size={17} />
-        <span className='mr-3'>
+      <div className='flex flex-row items-center mb-16 justify-between'>
+        <div className='flex flex-row items-center '>
+          <Filter size={17} />
+          <span className='mr-3'>
 
-          Growling intensity
-        </span>
-        <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
-          onChange={handleGrowlFilter} />
+            Growling intensity
+          </span>
+          <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
+            onChange={handleGrowlFilter} />
+        </div>
+        <div className='flex flex-row items-center gap-2'>
+          <button onClick={downloadAll} className="flex gap-2">
+            <FileSpreadsheet />
+            Download list
+          </button>
+          <button onClick={downloadFiltered} className="flex gap-2">
+            <FileSpreadsheet /> Dowload filtered result
+          </button>
+        </div>
       </div>
-      <div className='flex flex-row items-center gap-2'>
-        <button onClick={downloadAll} className="flex gap-2">
-          <FileSpreadsheet />
-          Download list
-        </button>
-        <button onClick={downloadFiltered} className="flex gap-2">
-          <FileSpreadsheet /> Dowload filtered result
-        </button>
-      </div>
-    </div>
 
-    {displayMode === 'table' &&
-      <DataTable
-        isFiltered={isFilteredData}
-        rows={bands}
-        columns={columns}
-        pageSize={10}
-        handleRowChange={setBands}
-      />
-    }
+
+    </DataTable>
+
   </section >;
 }
 

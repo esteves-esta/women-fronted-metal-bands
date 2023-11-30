@@ -82,3 +82,104 @@
 .paginationItemActive {
   background: #ddd
 }
+
+/* search filter */
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #444;
+}
+
+.search {
+  border: 0.3px solid #ddd;
+  height: 48px;
+  padding: 5px 10px;
+}
+
+select.search {
+  border-right: none;
+  background-color: #fcfcfc;
+}
+
+input.search {
+  border-left: none;
+}
+
+/* grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 20px;
+}
+
+.card {
+  width: 100%;
+  /* border: 1px solid #444; */
+  border-radius: 2px;
+}
+
+.card img {
+  height: 200px;
+  width: 100%;
+  border-radius: 8px;
+
+  object-fit: cover;
+  object-position: 0px 20%;
+
+  background-size: contain;
+  margin-bottom: 10px;
+
+  background: #2C0732;
+  background: linear-gradient(143deg, #000 7.25%, #2C0732 57.22%, rgba(42, 1, 49, 0.91) 89.5%),
+    #FFF;
+}
+
+.cardBody {
+  padding: 10px;
+}
+
+.cardBody ul {
+  padding: 0px;
+}
+
+.cardBody ul li {
+  list-style: none;
+  padding: 12px 0px;
+  /* max-height: 60px; */
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  border-bottom: 0.01em dashed #bbb;
+}
+
+.cardBody ul li:last-child {
+  border-bottom: none;
+}
+
+.cardBody li p:not(:has(>span)) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cardBody li p,
+.cardBody li label {
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  font-size: 14px;
+  flex: 0 0 50%;
+}
+
+.cardBody li label {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}

@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { range } from '../../helpers/range';
-import Tag, { TagInfo } from '../Tag';
 import Pagination from './Pagination';
 import * as classes from './Table.module.css';
 import { ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
+import TableFilter from './TableFilter';
+import imgT from '../../assets/jinjer.png'
 
 interface Props {
   rows: Array<any>
@@ -11,7 +12,9 @@ interface Props {
   pageSize: number
   columns: TableColumn[]
   handleRowChange: (val) => void
-  isFiltered: string | null,
+  isFiltered: boolean | null,
+  gridMode: boolean | null,
+  children?: any
 }
 
 export interface TableColumn {
@@ -27,7 +30,7 @@ export interface TableColumn {
   handleSort?: (valA, valB, sort) => number,
 }
 
-export function getColumnDataFromRow(columnInfo: TableColumn, row: any) {
+function getColumnDataFromRow(columnInfo: TableColumn, row: any) {
   const { field, format } = columnInfo;
   let colValue;
   if (field) colValue = row[field];
@@ -46,14 +49,14 @@ function DataTable({
   columns,
   handleRowChange,
   isFiltered,
+  children,
+  gridMode = false,
   ...delegated
 }: Props) {
 
   const [initialRow] = React.useState([...rows]);
-
   const [currentPage, setCurrentPage] = React.useState(initialPage);
-  const [size, setSize] = React.useState(pageSize);
-
+  const [lastPage, setLastPage] = React.useState(() => Math.ceil(rows.length / pageSize));
   const [columnsInfo, setColumnsInfo] = React.useState(() => {
     const newColumns = [...columns];
     return newColumns.map(col => {
@@ -62,14 +65,9 @@ function DataTable({
     })
   });
 
-  const [lastPage, setLastPage] = React.useState(() => Math.ceil(rows.length / size));
-
   React.useEffect(() => {
-    const colSort = columnsInfo.findIndex(col => col.sort != undefined)
-    if (colSort >= 0) {
-      sortRows(columnsInfo[colSort], colSort, columnsInfo[colSort].sort)
-    }
-  }, [])
+    setLastPage(Math.ceil(rows.length / pageSize))
+  }, [pageSize])
 
   React.useEffect(() => {
     const colSort = columnsInfo.findIndex(col => col.sort != undefined)
@@ -80,13 +78,106 @@ function DataTable({
     }
 
     setCurrentPage(0);
-    setLastPage(Math.ceil(rows.length / size))
+    setLastPage(Math.ceil(rows.length / pageSize))
   }, [isFiltered])
 
-
-  function handleChangePage(value: number | string) {
+  const handleChangePage = React.useCallback((value: number | string) => {
     if (value) setCurrentPage(Number(value))
-  }
+  }, []);
+
+  const handleFilter = React.useCallback((searchValue: string, colKey: string) => {
+    let newRows = [...rows];
+    if (searchValue) {
+
+      const filtered = newRows.filter(
+        row => {
+          if (colKey !== 'all') {
+            const col = columns.find(col => col.key === colKey)
+            if (col) {
+
+              let colValue = getColumnDataFromRow(col, row)
+              if (colValue !== NaN)
+                return colValue == Number(searchValue)
+              else
+                return colValue.includes(searchValue.toLowerCase())
+            }
+          }
+          const columnsVisible = Object.entries(row).filter(item => columns.find(col => col.field === item[0]))
+          const formattedColumns = columns.filter(col => !!col.format);
+          const formattedRow = formattedColumns.map(col => col.format && col.format(row))
+          const valuesNotBoolean = columnsVisible.filter(item => typeof item[1] !== 'boolean').map(item => item[1])
+          return valuesNotBoolean.concat(formattedRow).join(' ').toLowerCase().includes(searchValue.toLowerCase())
+        }
+      )
+
+      newRows = [...filtered]
+    } else {
+      newRows = [...initialRow];
+    }
+    handleRowChange(newRows);
+    setCurrentPage(0);
+    setLastPage(Math.ceil(newRows.length / pageSize))
+  }, [])
+
+  return (
+    <React.Fragment>
+      <TableFilter onChange={handleFilter} columns={columns} />
+
+      {children}
+
+      {!gridMode && (
+        <Table
+          columnsInfo={columnsInfo}
+          size={pageSize}
+          rows={rows}
+          currentPage={currentPage}
+          handleRowChange={handleRowChange}
+          setColumnsInfo={setColumnsInfo}
+          initialRow={initialRow}
+        />
+      )}
+
+      {gridMode && (
+        <Grid
+          columns={columnsInfo}
+          size={pageSize}
+          rows={rows}
+          currentPage={currentPage}
+        />
+      )}
+
+      <div className='flex flex-row justify-between mt-5 mb-5'>
+        <p className='flex-col'>
+          Showing {currentPage * pageSize} - {(currentPage + 1) * pageSize} of {rows.length} items
+        </p>
+
+        <div className="flex-col">
+          <Pagination
+            currentPage={currentPage}
+            lastPage={lastPage}
+            onChange={handleChangePage}
+          />
+        </div>
+      </div>
+    </React.Fragment>);
+}
+
+function Table({
+  columnsInfo,
+  rows,
+  size,
+  currentPage,
+  setColumnsInfo,
+  handleRowChange,
+  initialRow
+}) {
+
+  React.useEffect(() => {
+    const colSort = columnsInfo.findIndex(col => col.sort != undefined)
+    if (colSort >= 0) {
+      sortRows(columnsInfo[colSort], colSort, columnsInfo[colSort].sort)
+    }
+  }, [])
 
   function handleSortRows(headerInfo: TableColumn, colIndex: number) {
     let sort: 'desc' | 'asc' | undefined;
@@ -149,63 +240,45 @@ function DataTable({
     handleRowChange(sortedData)
   }
 
-
   return (
-    <React.Fragment>
-      <table className={classes.table}>
-        <thead>
-          <tr>
-            {columnsInfo.map((headerInfo, index) => (
-              <th key={headerInfo.key}>
-                <TableHeader headerInfo={headerInfo} sortRows={() => handleSortRows(headerInfo, index)} />
-              </th>
-            ))}
-          </tr>
-        </thead>
+    <table className={classes.table}>
+      <thead>
+        <tr>
+          {columnsInfo.map((headerInfo, index) => (
+            <th key={headerInfo.key}>
+              <TableHeader headerInfo={headerInfo} sortRows={() => handleSortRows(headerInfo, index)} />
+            </th>
+          ))}
+        </tr>
+      </thead>
 
-        <tbody>
-          <TableRow
-            currentPage={currentPage}
-            pageSize={size}
-            rows={rows}
-            columns={columnsInfo}
-          />
-        </tbody>
-      </table>
-
-      <div className='flex flex-row justify-between mt-5 mb-5'>
-        <p className='flex-col'>
-          Showing {currentPage * pageSize} - {(currentPage + 1) * pageSize} of {rows.length} items
-        </p>
-
-        <div className="flex-col">
-          <Pagination
-            currentPage={currentPage}
-            lastPage={lastPage}
-            onChange={handleChangePage}
-          />
-        </div>
-      </div>
-    </React.Fragment>);
+      <tbody>
+        <TableRow
+          currentPage={currentPage}
+          size={size}
+          rows={rows}
+          columns={columnsInfo}
+        />
+      </tbody>
+    </table>
+  )
 }
 
+function TableRow({ currentPage, size, rows, columns }) {
+  const start = currentPage * size;
+  const end = size * (currentPage + 1);
 
-
-function TableRow({ currentPage, pageSize, rows, columns }) {
   return (
     <React.Fragment>
-      {range(currentPage * pageSize, pageSize * (currentPage + 1)).map((rowIndex) =>
-        rows.length > rowIndex && (
-          <tr key={rowIndex}>
-            <TableColumns rows={rows} rowIndex={rowIndex} columns={columns} />
-          </tr>
-        )
-      )}
+      {range(start, end).map((rowIndex) => rowIndex < rows.length && (
+        <tr key={rowIndex}>
+          <TableColumns rows={rows} rowIndex={rowIndex} columns={columns} />
+        </tr>
+      ))}
     </React.Fragment>
   )
 
 }
-
 
 function TableColumns({ columns, rowIndex, rows }: {
   columns: TableColumn[], rowIndex: number, rows: Array<any>
@@ -254,5 +327,63 @@ function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumn, sortRo
 
   return (<React.Fragment>{headerLabel}</React.Fragment>)
 }
+
+
+function Grid({ columns, rows, size, currentPage }) {
+  const start = React.useMemo(() => currentPage * size, [size, currentPage]);
+  const end = React.useMemo(() => size * (currentPage + 1), [size, currentPage]);
+  return (
+    <div className={classes.grid}>
+
+      {range(start, end).map((rowIndex) =>
+        rowIndex < rows.length && (
+        <div key={rowIndex} className={classes.card}>
+          <img src='oi.jpg' alt="img" />
+
+          <div className={classes.cardBody}>
+            {/* {rows[rowIndex].Band} */}
+            <ul>
+              <GridList
+                rows={rows}
+                rowIndex={rowIndex}
+                columns={columns}
+              />
+            </ul>
+          </div>
+        </div>
+      )
+      )}
+
+    </div>
+  )
+}
+
+function GridList({ columns, rowIndex, rows }: {
+  columns: TableColumn[], rowIndex: number, rows: Array<any>
+}) {
+  const column = rows[rowIndex]
+  const List = columns.map(({ key, field, headerLabel, formatElement, format }, index) => {
+    /* todo - tooltip */
+    if (format) return (<li key={`${key}${index}`}>
+      <label> {headerLabel}</label>
+      <p> {format(column)}</p>
+    </li>)
+
+    if (formatElement) return (<li key={`${key}${index}`}>
+      <label> {headerLabel}</label>
+      <p> {formatElement(column)}</p>
+    </li>)
+
+    /* todo - tooltip */
+    if (field) return (<li key={`${key}${index}`}>
+      <label> {headerLabel}</label>
+      <p> {column[field]}</p>
+    </li>)
+  })
+
+  return <React.Fragment>{List}</React.Fragment>
+
+}
+
 
 export default DataTable;
