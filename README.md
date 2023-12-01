@@ -22,6 +22,7 @@ I didn’t add genres of the bands as some don’t have it on there websites and
   - [ ] Get image of the band
   - [ ] Be able to listen to a preview of a song on the page
 - [ ] Graphs
+- [ ] Publish on GitHub Pages
 
 ---
 
