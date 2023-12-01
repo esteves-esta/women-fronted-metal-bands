@@ -24,7 +24,7 @@ function BandsTable() {
   ], [])
 
   const handleSortBoolean = React.useCallback((valA, valB, sort: 'asc' | 'desc') => {
-    
+
     if (sort === 'asc') return (valA === valB) ? 0 : valA ? -1 : 1;
     else return (valA === valB) ? 0 : valA ? 1 : -1;
   }, [])
@@ -40,7 +40,6 @@ function BandsTable() {
       activeYears = thisYear - yearStarted
       if (yearEnded) activeYears = yearEnded - yearStarted
     }
-
     return activeYears.toString();
   }, []);
 
@@ -53,7 +52,7 @@ function BandsTable() {
 
   const formatBandNameLinks = React.useCallback((column) => {
     if (!column) return;
-    if (!column.Links) return column.Band;
+    if (!column.Links) return column.band;
     return (
       <span className='flex items-center justify-center gap-3'>
         {column.band}
@@ -65,6 +64,15 @@ function BandsTable() {
     )
   }, [])
 
+  const isActive = React.useCallback((column) => {
+    if (!column) return '';
+    const statusTagList: TagInfo[] = [
+      { value: true, text: "Active", type: "info" },
+      { value: false, text: "Disbanded", type: "dark" }
+    ];
+    return (<Tag value={!column.yearEnded} tagInfo={statusTagList} />);
+  }, []);
+
   const formatActiveYears = React.useCallback((column) => {
     if (!column) return '';
     const end = column.yearEnded ? column.yearEnded : 'now'
@@ -75,16 +83,17 @@ function BandsTable() {
     const cols: TableColumn[] = [
       { field: 'band', formatElement: formatBandNameLinks, headerLabel: 'Band', sortable: true },
       { field: 'growling', headerLabel: 'Growling', sortable: true, formatElement: (cols) => formatTag(cols, 'growling', growTagList), sort: 'desc' },
+      { headerLabel: 'Status', handleSort: handleSortBoolean, sortable: true, formatElement: (cols) => isActive(cols) },
       // { field: 'LGBTQ', headerLabel: 'LGBTQ', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'LGBTQ', booleanTagList) },
-      { field: 'lackWomen', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'blackWomen', booleanTagList) },
+      // { field: 'blackWomen', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'blackWomen', booleanTagList) },
       { field: 'allWomenBand', headerLabel: 'All women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'allWomenBand', booleanTagList) },
-      { field: 'sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'sister', booleanTagList) },
-      { field: 'currentVocalists', headerLabel: 'Vo. Num.', sortable: true, format: (col) => col.currentVocalists.length },
+      // { field: 'sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'sister', booleanTagList) },
+      { field: 'currentVocalists', headerLabel: 'Nº Voc.', sortable: true, format: (col) => col.currentVocalists.length },
       { field: 'currentVocalists', headerLabel: 'vocalists', },
       // { field: 'PastVocalists', headerLabel: 'Past Vo.', },
       { field: 'country', headerLabel: 'country', sortable: true },
-      { format: formatYearsActive, headerLabel: 'Years', sortable: true },
-      { format: formatActiveYears, headerLabel: 'Active for', },
+      { format: formatYearsActive, headerLabel: 'Active for', sortable: true },
+      { format: formatActiveYears, headerLabel: 'Years Active', sortable: true },
     ];
     return cols.map(col => {
       if (col.key == undefined) col.key = crypto.randomUUID();

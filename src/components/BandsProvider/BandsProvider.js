@@ -4,7 +4,7 @@ import list from "../../../list-of-metal-bands/list.json";
 export const BandContext = React.createContext();
 
 function BandsProvider({ children }) {
-  const initialBandList = React.useMemo(() => list)
+  const initialBandList = React.useMemo(() => list, [])
 
   const [bands, setBands] = React.useState(() =>
     initialBandList
@@ -21,7 +21,7 @@ function BandsProvider({ children }) {
     }
   };
 
-  const state = React.useMemo(() => { initialBandList, bands, filterByGrow, setBands });
+  const state = { initialBandList, bands, filterByGrow, setBands };
 
   return <BandContext.Provider value={state}>{children}</BandContext.Provider>;
 }

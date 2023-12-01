@@ -23,7 +23,7 @@ export interface TableColumn {
   img?: { source: string, alt: string }
 
   field?: string,
-  format?: (val) => string,
+  format?: (val) => string | boolean,
   formatElement?: (val) => React.ReactNode,
 
   sortable?: boolean
@@ -32,11 +32,12 @@ export interface TableColumn {
 }
 
 function getColumnDataFromRow(columnInfo: TableColumn, row: any) {
-  const { field, format } = columnInfo;
+  const { field, format, formatElement } = columnInfo;
   let colValue;
   if (field) colValue = row[field];
   if (format) colValue = format(row);
-
+  if (formatElement) colValue = formatElement(row)?.props?.value;
+  console.log({ colValue })
   if (typeof colValue === 'boolean') return colValue
 
   if (!!Number(colValue))

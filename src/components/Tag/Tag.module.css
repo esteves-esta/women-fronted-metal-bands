@@ -1,13 +1,16 @@
 .tag {
-  padding: 5px 18px;
+  padding: 5px 10px;
   border-radius: 15px;
-  text-transform: capitalize;
   font-weight: bold;
   color: #fff;
+  
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
 }
 
 li .tag {
-  font-size: 13px;
+  font-size: 12px;
   padding: 4px 16px;
 }
 
