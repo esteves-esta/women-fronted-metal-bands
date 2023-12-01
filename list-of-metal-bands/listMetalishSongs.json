@@ -1,0 +1,40 @@
+[
+  {
+    "Band": "Rico Nasty",
+    "Feat": false,
+    "LGBTQ": false,
+    "Black Women": true,
+    "All women band": false,
+    "Growling": 1,
+    "CurrentVocalists": [
+      "Maria-Cecilia Simone Kelly"
+    ],
+    "PastVocalists": [],
+    "Country": "US",
+    "YearStarted": 2014,
+    "YearEnded": null,
+    "RecommendationIsCover": false,
+    "Recommendation": "",
+    "Links": "",
+    "Sister": false
+  },
+  {
+    "Band": "Anna Von Hausswolff",
+    "Feat": false,
+    "LGBTQ": false,
+    "Black Women": false,
+    "All women band": false,
+    "Growling": 0,
+    "PastVocalists": [],
+    "CurrentVocalists": [
+      "Anna Michaela Ebba Electra Von Hausswolff"
+    ],
+    "Country": "Sweden",
+    "YearStarted": 2010,
+    "YearEnded": null,
+    "RecommendationIsCover": false,
+    "Recommendation": "The Mysterious Vanishing of Electra",
+    "Links": "https://archenemy.net/en/",
+    "Sister": false
+  }
+]

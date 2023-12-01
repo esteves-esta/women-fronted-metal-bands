@@ -31,14 +31,14 @@ function BandsTable() {
 
   const formatYearsActive = React.useCallback((column: any) => {
     if (!column) return '';
-    const { YearStarted, YearEnded } = column;
+    const { yearStarted, YearEnded: yearEnded } = column;
 
     const thisYear = new Date().getFullYear()
 
     let activeYears = 0
-    if (YearStarted !== null) {
-      activeYears = thisYear - YearStarted
-      if (YearEnded) activeYears = YearEnded - YearStarted
+    if (yearStarted !== null) {
+      activeYears = thisYear - yearStarted
+      if (yearEnded) activeYears = yearEnded - yearStarted
     }
 
     return activeYears.toString();
@@ -56,7 +56,7 @@ function BandsTable() {
     if (!column.Links) return column.Band;
     return (
       <span className='flex items-center justify-center gap-3'>
-        {column.Band}
+        {column.band}
         <a href={column.Links} target="_blank">
           <ExternalLink size={12} />
         </a>
@@ -67,22 +67,22 @@ function BandsTable() {
 
   const formatActiveYears = React.useCallback((column) => {
     if (!column) return '';
-    const end = column.YearEnded ? column.YearEnded : 'now'
-    return `${column.YearStarted} - ${end}`
+    const end = column.yearEnded ? column.yearEnded : 'now'
+    return `${column.yearStarted} - ${end}`
   }, [])
 
   const columns = React.useMemo(() => {
     const cols: TableColumn[] = [
-      { field: 'Band', formatElement: formatBandNameLinks, headerLabel: 'Band', sortable: true },
-      { field: 'Growling', headerLabel: 'Growling', sortable: true, formatElement: (cols) => formatTag(cols, 'Growling', growTagList), sort: 'desc' },
+      { field: 'band', formatElement: formatBandNameLinks, headerLabel: 'Band', sortable: true },
+      { field: 'growling', headerLabel: 'Growling', sortable: true, formatElement: (cols) => formatTag(cols, 'growling', growTagList), sort: 'desc' },
       // { field: 'LGBTQ', headerLabel: 'LGBTQ', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'LGBTQ', booleanTagList) },
-      { field: 'Black Women', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'Black Women', booleanTagList) },
-      { field: 'All women band', headerLabel: 'All women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'All women band', booleanTagList) },
-      { field: 'Sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'Sister', booleanTagList) },
-      { field: 'CurrentVocalists', headerLabel: 'Vo. Num.', sortable: true, format: (col) => col.CurrentVocalists.length },
-      { field: 'CurrentVocalists', headerLabel: 'Vocalists', },
+      { field: 'lackWomen', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'blackWomen', booleanTagList) },
+      { field: 'allWomenBand', headerLabel: 'All women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'allWomenBand', booleanTagList) },
+      { field: 'sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'sister', booleanTagList) },
+      { field: 'currentVocalists', headerLabel: 'Vo. Num.', sortable: true, format: (col) => col.currentVocalists.length },
+      { field: 'currentVocalists', headerLabel: 'vocalists', },
       // { field: 'PastVocalists', headerLabel: 'Past Vo.', },
-      { field: 'Country', headerLabel: 'Country', sortable: true },
+      { field: 'country', headerLabel: 'country', sortable: true },
       { format: formatYearsActive, headerLabel: 'Years', sortable: true },
       { format: formatActiveYears, headerLabel: 'Active for', },
     ];
