@@ -16,7 +16,8 @@
 .table th,
 .table td {
   max-width: 50px;
-  border-right: 2px solid var(--border-color);
+  /* border-right: 2px solid var(--border-color); */
+  border-bottom: 2px solid var(--border-color);
   padding: 15px 5px 15px 10px;
   min-width: 50px;
   max-width: 150px;
@@ -24,9 +25,14 @@
   text-align: center;
 }
 
-.table th:last-child,
+/* .table th:last-child,
 .table td:last-child {
   border-right: none;
+} */
+
+.table th:first-child,
+.table td:first-child {
+  border-right: 2px solid var(--border-color);
 }
 
 .table th,
@@ -74,7 +80,7 @@
 /* PAGINATION */
 
 .pagination {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,11 +89,13 @@
 
 .pagination button {
   color: var(--text-color);
-  background: var(--bg-primary);
+  /* background: var(--bg-primary); */
+  background-color: transparent;
   font-size: 16px;
   height: 30px;
-  width: 50px;
+  width: 40px;
   outline: none;
+  font-weight: 600;
   /* border: 1px solid var(--border-color); */
   cursor: pointer;
 }
@@ -101,20 +109,21 @@
   background: var(--color-primary) !important
 }
 
-/* search filter */
-
-.label {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600;
-  font-size: 12px;
-  color: var(--text-secondary);
+.pageSize {
+  border: 0.3px solid var(--border-color);
+  height: 35px;
+  padding: 5px 10px;
+  background-color: var(--bg-primary);
+  color: var(--text-color);
 }
+
+/* search filter */
 
 .search {
   border: 0.3px solid var(--border-color);
   height: 48px;
   padding: 5px 10px;
+  background-color: var(--bg-primary);
 }
 
 select.search {
@@ -123,10 +132,73 @@ select.search {
   color: var(--text-color);
 }
 
-input.search {
-  background-color: var(--bg-primary);
+.search input {
+  border: none;
+  width: 100%;
+  background-color: transparent;
   border-left: none;
   color: var(--text-color);
+}
+.search input:focus {
+  box-shadow: none ;
+}
+.search:has(input):focus-within {
+  box-shadow: var(--box-shadow-focus);
+}
+
+/* TOOGLE COLUMNS  */
+.dropdownBtn {
+  border: 0.3px solid var(--border-color);
+  height: 48px;
+  padding: 5px 10px;
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  width: 180px;
+}
+
+.dropdownMenuContent {
+  min-width: 180px;
+  max-width: fit-content;
+  background-color: var(--bg-primary-opaque);
+  border-radius: 6px;
+  padding: 5px;
+  overflow-y: scroll;
+  height: 50vh;
+}
+
+.dropdownMenuContent::-webkit-scrollbar {
+  background-color: var(--bg-primary-opaque);
+}
+
+.dropdownMenuContent::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary-lighten1);
+  width: 10px;
+}
+
+.dropdownCheckItem {
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dropdownCheckItem:focus {
+  outline: none;
+  box-shadow: var(--box-shadow-focus);
+}
+
+.dropdownCheckItemActive {
+  color: var(--color-primary-lighten2)
+}
+
+.dropdownCheckItem:last-child {
+  border-bottom: none;
 }
 
 /* grid */

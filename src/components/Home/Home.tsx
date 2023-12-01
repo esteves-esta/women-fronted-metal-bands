@@ -11,7 +11,7 @@ function Home() {
             Women Frontend
           </h1>
           <h1 className="title2">metal bands</h1>
-          <p className="text-xl mt-5"> This is a tiny project to compile a list of metal / hard rock bands that have women as lead
+          <p className="text-xl mt-5"> This is a tiny project to compile a list of metal bands that have women as lead
             vocalists.</p>
         </div>
 

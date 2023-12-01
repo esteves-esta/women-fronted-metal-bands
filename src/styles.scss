@@ -24,6 +24,7 @@ body {
   --text-secondary: #CECECE;
 
   --border-color: #4e4e4e48;
+  --bg-primary-opaque: rgb(0, 0, 0);
   --bg-primary: rgba(0, 0, 0, 0.363);
   --bg-secondary: #1a1a1a91;
   --gradient-bg1: linear-gradient(180deg, #16011A 8%, rgba(0, 0, 0, 0.99) 18%, rgba(0, 0, 0, 0.911) 100%);
@@ -50,6 +51,10 @@ body {
   --color-deep-2: hsl(265, 40%, 34%);
   --color-deep-3: hsl(281, 71%, 20%);
   --color-deep-4: hsl(265, 60%, 15%);
+}
+
+*::selection {
+  background-color: var(--color-primary);
 }
 
 /*
@@ -81,6 +86,10 @@ body {
   // background-attachment: fixed;
   background-size: 100%;
   background-image: var(--gradient-bg1);
+}
+
+select option {
+  background-color: black;
 }
 
 p {
@@ -165,9 +174,20 @@ table th:focus-within {
   outline: 0 none;
 }
 
+.label {
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  // letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
 .button {
+  font-size: 13px;
   background-color: var(--color-primary);
-  padding: 10px 16px;
+  padding: 6px 16px;
   font-weight: bold;
   color: var(--text-color);
   cursor: pointer;

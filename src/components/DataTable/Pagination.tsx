@@ -20,7 +20,7 @@ function Pagination({ currentPage, lastPage, onChange }) {
   }, [currentPage, lastPage, RangeStart])
 
   return (
-    <ToggleGroup.Root className={`${classes.pagination}`} type="single" defaultValue={currentPage.toString()} onValueChange={onChange}>
+    <ToggleGroup.Root className={classes.pagination} type="single" defaultValue={currentPage.toString()} onValueChange={onChange}>
       <ToggleGroup.Item
         disabled={currentPage === 0}
         value="0"

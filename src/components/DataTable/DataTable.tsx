@@ -2,10 +2,9 @@ import * as React from 'react';
 import { range } from '../../helpers/range';
 import Pagination from './Pagination';
 import * as classes from './Table.module.css';
-import { ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
+import { Columns, ChevronDown, Check, ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
 import TableFilter from './TableFilter';
-import imgT from '../../assets/jinjer.png'
-
+import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 interface Props {
   rows: Array<any>
   initialPage?: number
@@ -29,6 +28,7 @@ export interface TableColumn {
   sortable?: boolean
   sort?: 'desc' | 'asc'
   handleSort?: (valA, valB, sort) => number,
+  visible: boolean
 }
 
 function getColumnDataFromRow(columnInfo: TableColumn, row: any) {
@@ -37,7 +37,7 @@ function getColumnDataFromRow(columnInfo: TableColumn, row: any) {
   if (field) colValue = row[field];
   if (format) colValue = format(row);
   if (formatElement) colValue = formatElement(row)?.props?.value;
-  console.log({ colValue })
+
   if (typeof colValue === 'boolean') return colValue
 
   if (!!Number(colValue))
@@ -60,7 +60,9 @@ function DataTable({
 
   const [initialRow] = React.useState([...rows]);
   const [currentPage, setCurrentPage] = React.useState(initialPage);
+  const [size, setSize] = React.useState(pageSize);
   const [lastPage, setLastPage] = React.useState(() => Math.ceil(rows.length / pageSize));
+
   const [columnsInfo, setColumnsInfo] = React.useState(() => {
     const newColumns = [...columns];
     return newColumns.map(col => {
@@ -70,8 +72,8 @@ function DataTable({
   });
 
   React.useEffect(() => {
-    setLastPage(Math.ceil(rows.length / pageSize))
-  }, [pageSize])
+    setLastPage(Math.ceil(rows.length / size))
+  }, [size])
 
   React.useEffect(() => {
     const colSort = columnsInfo.findIndex(col => col.sort != undefined)
@@ -82,7 +84,7 @@ function DataTable({
     }
 
     setCurrentPage(0);
-    setLastPage(Math.ceil(rows.length / pageSize))
+    setLastPage(Math.ceil(rows.length / size))
   }, [isFiltered])
 
   const handleChangePage = React.useCallback((value: number | string) => {
@@ -120,29 +122,71 @@ function DataTable({
     }
     handleRowChange(newRows);
     setCurrentPage(0);
-    setLastPage(Math.ceil(newRows.length / pageSize))
+    setLastPage(Math.ceil(newRows.length / size))
   }, [])
+
+  const handleToogleColumns = React.useCallback((checked: boolean, key: string) => {
+    const newCols = [...columnsInfo]
+    const toggled = newCols.find(col => col.key === key)
+    if (toggled) toggled.visible = checked;
+    setColumnsInfo([...newCols])
+  }, [columnsInfo]);
 
   return (
     <React.Fragment>
-      <TableFilter onChange={handleFilter} columns={columns} />
+      <div className='flex flex-row gap-5 my-8'>
 
+        <TableFilter className="grow" onChange={handleFilter} columns={columns} />
+
+        <div className='flex flex-col self-end'>
+          <DropdownMenu.Root>
+            <DropdownMenu.Trigger asChild>
+              <button className={classes.dropdownBtn} aria-label="Customise options">
+                <Columns size={15} />
+                Toggle columns
+                <ChevronDown size={15} />
+              </button>
+            </DropdownMenu.Trigger>
+
+            <DropdownMenu.Portal>
+              <DropdownMenu.Content className={classes.dropdownMenuContent} sideOffset={5}>
+                {
+                  columnsInfo.map(({ key, headerLabel, visible }) => key && (
+                    <DropdownMenu.CheckboxItem
+                      key={key}
+                      className={`${classes.dropdownCheckItem} ${visible ? classes.dropdownCheckItemActive : ''}`}
+                      checked={visible}
+                      onCheckedChange={(checked) => handleToogleColumns(checked, key)}>
+                      <DropdownMenu.ItemIndicator>
+                        <Check size={15} />
+                      </DropdownMenu.ItemIndicator>
+                      {headerLabel}
+                    </DropdownMenu.CheckboxItem>
+                  ))}
+              </DropdownMenu.Content>
+            </DropdownMenu.Portal>
+          </DropdownMenu.Root>
+
+
+        </div>
+
+      </div>
       {children}
 
       <div className='mt-5 mb-5'>
 
-        <Pagination
+        {/* <Pagination
           currentPage={currentPage}
           lastPage={lastPage}
           onChange={handleChangePage}
-        />
+        /> */}
 
       </div>
 
       {!gridMode && (
         <Table
           columnsInfo={columnsInfo}
-          size={pageSize}
+          size={size}
           rows={rows}
           currentPage={currentPage}
           handleRowChange={handleRowChange}
@@ -154,21 +198,38 @@ function DataTable({
       {gridMode && (
         <Grid
           columns={columnsInfo}
-          size={pageSize}
+          size={size}
           rows={rows}
           currentPage={currentPage}
         />
       )}
 
-      <div className='flex flex-col items-center mt-10 mb-10'>
+      <div className='flex flex-row items-center justify-between mt-10 mb-10'>
+        <div className='flex flex-row gap-5 items-center'>
+          <div className='flex flex-row gap-3 items-center'>
+            <label htmlFor="rowsPerPage" className='label'>Rows per page</label>
+            <select className={classes.pageSize} value={size} onChange={event => {
+              setSize(Number(event.target.value));
+            }} id='rowsPerPage' placeholder="Select">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+            </select>
+          </div>
+          <p className='label mb-0'>
+            Showing <span className='font-black'>{currentPage * size} - {(currentPage + 1) * size}</span> {' '}
+            of {' '}
+            <span className='font-black'>{rows.length}</span> items
+          </p>
+        </div>
         <Pagination
           currentPage={currentPage}
           lastPage={lastPage}
           onChange={handleChangePage}
         />
-        <p className='mt-5'>
-          Showing {currentPage * pageSize} - {(currentPage + 1) * pageSize} of {rows.length} items
-        </p>
+
 
       </div>
     </React.Fragment>);
@@ -256,7 +317,7 @@ function Table({
     <table className={classes.table}>
       <thead>
         <tr>
-          {columnsInfo.map((headerInfo, index) => (
+          {columnsInfo.map((headerInfo, index) => headerInfo.visible && (
             <th key={headerInfo.key}>
               <TableHeader headerInfo={headerInfo} sortRows={() => handleSortRows(headerInfo, index)} />
             </th>
@@ -297,7 +358,7 @@ function TableColumns({ columns, rowIndex, rows }: {
 }) {
   const column = rows[rowIndex]
   return <React.Fragment>
-    {columns.map((columnInfo, index) => (
+    {columns.map((columnInfo, index) => columnInfo.visible && (
       <td key={`${columnInfo.key}${index}`}>
         <TableColumn column={column} columnInfo={columnInfo} />
       </td>

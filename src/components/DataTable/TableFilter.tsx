@@ -1,7 +1,8 @@
 import * as React from 'react';
 import * as classes from './Table.module.css';
+import { Search } from 'lucide-react';
 
-function TableFilter({ onChange, columns }) {
+function TableFilter({ onChange, columns, className }) {
   const [search, setSearch] = React.useState('');
   const [searchType, setSearchType] = React.useState('all');
   const id = React.useId();
@@ -18,9 +19,9 @@ function TableFilter({ onChange, columns }) {
   };
 
   return (
-    <div className='flex flex-row my-5'>
+    <div className={`flex flex-row ${className ? className : ''}`} >
       <div className='flex flex-col'>
-        <label className={classes.label} htmlFor={searchTypeId}>Search by</label>
+        <label className='label' htmlFor={searchTypeId}>Search by</label>
         <select className={classes.search} id={searchTypeId} value={searchType} placeholder="Search by"
           onChange={event => {
             setSearchType(event.target.value)
@@ -34,14 +35,17 @@ function TableFilter({ onChange, columns }) {
       </div>
 
       <div className='flex flex-col grow'>
-        <label className={classes.label} htmlFor={searchId}>Search</label>
-        <input className={classes.search} id={searchId} type="text" placeholder="Search for..."
-          value={search}
-          onChange={(event) => {
-            setSearch(event.target.value);
-            handleOnChange(event.target.value, searchType)
-          }}
-        />
+        <label className='label' htmlFor={searchId}>Search</label>
+        <div className={`flex flex-row items-center ${classes.search}`}>
+          <input id={searchId} type="text" placeholder="Search for..."
+            value={search}
+            onChange={(event) => {
+              setSearch(event.target.value);
+              handleOnChange(event.target.value, searchType)
+            }}
+          />
+          <Search size={15} />
+        </div>
       </div>
     </div >
   )

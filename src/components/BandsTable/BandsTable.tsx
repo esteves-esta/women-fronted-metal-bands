@@ -4,7 +4,7 @@ import { BandContext } from '../BandsProvider';
 import { booleanTagList, growTagList } from '../../constants';
 import { downloadCsvFile } from '../../helpers/downloadCsvFile'
 import ToogleGroupButton from '../ToogleGroupButton/ToogleGroupButton';
-import { Filter, ExternalLink, Table2, Grid, FileSpreadsheet } from 'lucide-react';
+import { Filter, ExternalLink, Table2, Grid, Download } from 'lucide-react';
 import Papa from 'papaparse';
 import Tag, { TagInfo } from '../Tag';
 
@@ -81,19 +81,19 @@ function BandsTable() {
 
   const columns = React.useMemo(() => {
     const cols: TableColumn[] = [
-      { field: 'band', formatElement: formatBandNameLinks, headerLabel: 'Band', sortable: true },
-      { field: 'growling', headerLabel: 'Growling', sortable: true, formatElement: (cols) => formatTag(cols, 'growling', growTagList), sort: 'desc' },
-      { headerLabel: 'Status', handleSort: handleSortBoolean, sortable: true, formatElement: (cols) => isActive(cols) },
-      // { field: 'LGBTQ', headerLabel: 'LGBTQ', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'LGBTQ', booleanTagList) },
-      // { field: 'blackWomen', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'blackWomen', booleanTagList) },
-      { field: 'allWomenBand', headerLabel: 'All women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'allWomenBand', booleanTagList) },
-      // { field: 'sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'sister', booleanTagList) },
-      { field: 'currentVocalists', headerLabel: 'Nº Voc.', sortable: true, format: (col) => col.currentVocalists.length },
-      { field: 'currentVocalists', headerLabel: 'vocalists', },
-      // { field: 'PastVocalists', headerLabel: 'Past Vo.', },
-      { field: 'country', headerLabel: 'country', sortable: true },
-      { format: formatYearsActive, headerLabel: 'Active for', sortable: true },
-      { format: formatActiveYears, headerLabel: 'Years Active', sortable: true },
+      { visible: true, field: 'band', formatElement: formatBandNameLinks, headerLabel: 'Band', sortable: true },
+      { visible: true, field: 'growling', headerLabel: 'Growling', sortable: true, formatElement: (cols) => formatTag(cols, 'growling', growTagList), sort: 'desc' },
+      { visible: true, headerLabel: 'Status', handleSort: handleSortBoolean, sortable: true, formatElement: (cols) => isActive(cols) },
+      { visible: false, field: 'LGBTQ', headerLabel: 'LGBTQ', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'LGBTQ', booleanTagList) },
+      { visible: false, field: 'blackWomen', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'blackWomen', booleanTagList) },
+      { visible: true, field: 'allWomenBand', headerLabel: 'All women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'allWomenBand', booleanTagList) },
+      { visible: false, field: 'sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'sister', booleanTagList) },
+      { visible: false, field: 'currentVocalists', headerLabel: 'Nº Voc.', sortable: true, format: (col) => col.currentVocalists.length },
+      { visible: true, field: 'currentVocalists', headerLabel: 'Vocalists', },
+      { visible: false, field: 'PastVocalists', headerLabel: 'Past Vo.', },
+      { visible: true, field: 'country', headerLabel: 'Country', sortable: true },
+      { visible: true, format: formatYearsActive, headerLabel: 'Active for', sortable: true },
+      { visible: false, format: formatActiveYears, headerLabel: 'Years Active', sortable: true },
     ];
     return cols.map(col => {
       if (col.key == undefined) col.key = crypto.randomUUID();
@@ -153,45 +153,43 @@ function BandsTable() {
         )}
       </div>
 
+      <div className='flex flex-row items-center gap-3'>
+        <Download size={20} />
+        <span className='label'>Download</span>
+        <button className='button' onClick={downloadAll}>
+          List
+        </button>
+        <button className='button' onClick={downloadFiltered} >
+          Filtered list
+        </button>
+      </div>
+
     </div>
 
     <DataTable
       isFiltered={growlFilter !== 'viewAll'}
       rows={bands}
       columns={columns}
-      pageSize={displayMode === 'grid' ? 12 : 10}
+      pageSize={10}
       handleRowChange={setBands}
       gridMode={displayMode === 'grid'}
     >
 
-      <div className='flex flex-row items-center mb-16'>
-        <Filter size={17} />
-        <span className='mr-3'>
+      <div className='flex flex-row items-center mb-16 justify-between'>
+        <div className='flex flex-row items-center gap-3'>
+          <Filter size={20} />
+          <span className='label'>Growling intensity</span>
+          <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
+            onChange={handleGrowlFilter} />
+        </div>
 
-          Growling intensity
-        </span>
-        <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
-          onChange={handleGrowlFilter} />
-      </div>
-
-      <div className='flex flex-row items-center mb-8 justify-between'>
-        <div className='flex flex-row items-center '>
-          <span className='mr-3'>Display mode</span>
+        <div className='flex flex-row items-center gap-3'>
+          <span className='label'>Display mode</span>
           <ToogleGroupButton list={displayOptions} currentValue={displayMode}
             onChange={setIsDisplayMode} />
         </div>
 
-        <div className='flex flex-row items-center gap-4'>
-          <button className='button' onClick={downloadAll}>
-            <FileSpreadsheet />
-            Download list
-          </button>
-          <button className='button' onClick={downloadFiltered} >
-            <FileSpreadsheet /> Dowload filtered result
-          </button>
-        </div>
       </div>
-
 
     </DataTable>
 
