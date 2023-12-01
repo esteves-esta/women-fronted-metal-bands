@@ -5,6 +5,8 @@ import * as classes from './Table.module.css';
 import { Columns, ChevronDown, Check, ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
 import TableFilter from './TableFilter';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+import Tag, { TagInfo } from '../Tag';
+
 interface Props {
   rows: Array<any>
   initialPage?: number
@@ -24,20 +26,25 @@ export interface TableColumn {
   field?: string,
   format?: (val) => string | boolean,
   formatElement?: (val) => React.ReactNode,
-
+  filter: boolean,
   sortable?: boolean
   sort?: 'desc' | 'asc'
   handleSort?: (valA, valB, sort) => number,
   visible: boolean
+  tag?: boolean
+  tagList?: TagInfo[]
 }
 
 function getColumnDataFromRow(columnInfo: TableColumn, row: any) {
-  const { field, format, formatElement } = columnInfo;
+  const { field, format, tag, tagList } = columnInfo;
   let colValue;
-  if (field) colValue = row[field];
+  if (field) { colValue = row[field]; console.log({ colValue }) }
   if (format) colValue = format(row);
-  if (formatElement) colValue = formatElement(row)?.props?.value;
-
+  if (tag && tagList) {
+    if (field) colValue = tagList.find(tag => tag.value === row[field])?.text;
+    if (format) colValue = tagList.find(tag => tag.value === format(row))?.text;
+  }
+  console.log({ colValue })
   if (typeof colValue === 'boolean') return colValue
 
   if (!!Number(colValue))
@@ -93,6 +100,7 @@ function DataTable({
 
   const handleFilter = React.useCallback((searchValue: string, colKey: string) => {
     let newRows = [...rows];
+
     if (searchValue) {
 
       const filtered = newRows.filter(
@@ -102,10 +110,12 @@ function DataTable({
             if (col) {
 
               let colValue = getColumnDataFromRow(col, row)
-              if (colValue !== NaN)
+              console.log({ colValue })
+              if (typeof colValue === 'number')
                 return colValue == Number(searchValue)
               else
                 return colValue.includes(searchValue.toLowerCase())
+
             }
           }
           const columnsVisible = Object.entries(row).filter(item => columns.find(col => col.field === item[0]))
@@ -115,7 +125,6 @@ function DataTable({
           return valuesNotBoolean.concat(formattedRow).join(' ').toLowerCase().includes(searchValue.toLowerCase())
         }
       )
-
       newRows = [...filtered]
     } else {
       newRows = [...initialRow];
@@ -356,31 +365,36 @@ function TableRow({ currentPage, size, rows, columns }) {
 function TableColumns({ columns, rowIndex, rows }: {
   columns: TableColumn[], rowIndex: number, rows: Array<any>
 }) {
-  const column = rows[rowIndex]
+  const row = rows[rowIndex]
   return <React.Fragment>
     {columns.map((columnInfo, index) => columnInfo.visible && (
       <td key={`${columnInfo.key}${index}`}>
-        <TableColumn column={column} columnInfo={columnInfo} />
+        <TableColumn row={row} columnInfo={columnInfo} />
       </td>
     ))}
   </React.Fragment>
 }
 
-function TableColumn({ column, columnInfo }: {
-  column: any, columnInfo: TableColumn
+function TableColumn({ row, columnInfo }: {
+  row: any, columnInfo: TableColumn
 }) {
-  const { field, formatElement, format, sortable } = columnInfo
+  const { field, formatElement, format, tag, tagList } = columnInfo
 
-  if (format) return <React.Fragment>{format(column)}</React.Fragment>
+  if (tag && tagList) {
+    if (field) return (<Tag value={row[field]} tagInfo={tagList} />)
+    if (format) return (<Tag value={format(row)} tagInfo={tagList} />)
+  }
+
+  if (format) return <React.Fragment>{format(row)}</React.Fragment>
 
   if (formatElement) {
     return (<React.Fragment>
-      {formatElement(column)}
+      {formatElement(row)}
     </React.Fragment>)
   }
 
   if (field) {
-    const colValue = column[field] ? column[field] : '-'
+    const colValue = row[field] ? row[field] : '-'
     if (Array.isArray(colValue)) {
       if (colValue.length === 0) return (<React.Fragment>-</React.Fragment>);
 
@@ -446,43 +460,44 @@ function Grid({ columns, rows, size, currentPage }) {
 function GridList({ columns, rowIndex, rows }: {
   columns: TableColumn[], rowIndex: number, rows: Array<any>
 }) {
-  const column = rows[rowIndex]
-  const List = columns.map(({ key, field, headerLabel, formatElement, format }, index) => {
-    /* todo - tooltip */
-    if (format) return (<li key={`${key}${index}`}>
-      <label> {headerLabel}</label>
-      <p> {format(column)}</p>
+  const row = rows[rowIndex]
+  const List = columns.map((column, index) =>
+    column.visible && (<li key={`${column.key}${index}`}>
+      <label> {column.headerLabel}</label>
+      <GridItem row={row} column={column} />
     </li>)
-
-    if (formatElement) return (<li key={`${key}${index}`}>
-      <label> {headerLabel}</label>
-      <p> {formatElement(column)}</p>
-    </li>)
-
-    /* todo - tooltip */
-    if (field) {
-      const colValue = column[field]
-      if (Array.isArray(colValue)) {
-        return (<li key={`${key}${index}`}>
-          <label> {headerLabel}</label>
-          {/* <p> {column[field]}.join()</p> */}
-          <ul>
-            {colValue.map((col, index) => (
-              <p>{col}{colValue.length - 1 > index && ','}</p>
-            ))}
-          </ul>
-        </li>)
-      }
-      return (<li key={`${key}${index}`}>
-        <label> {headerLabel}</label>
-        <p> {colValue}</p>
-      </li>)
-    }
-  })
+  )
 
   return <React.Fragment>{List}</React.Fragment>
-
 }
 
+
+function GridItem({ column, row }:
+  { column: TableColumn, row: any }) {
+  const { tag, field, tagList, formatElement, format } = column;
+
+  if (tag && tagList) {
+    if (field) return (<p><Tag value={row[field]} tagInfo={tagList} /></p>)
+    if (format) return (<p><Tag value={format(row)} tagInfo={tagList} /></p>)
+  }
+
+  if (format) return (<p>{format(row)}</p>)
+
+  if (formatElement) return (<p>{formatElement(row)}</p>)
+
+  if (field) {
+    const colValue = row[field]
+    if (Array.isArray(colValue)) {
+      return (<ul>
+        {colValue.map((col, index) => (
+          <p>{col}{colValue.length - 1 > index && ','}</p>
+        ))}
+      </ul>
+      )
+    }
+    return (<p>{colValue}</p>)
+  }
+  return <React.Fragment>-</React.Fragment>
+}
 
 export default DataTable;

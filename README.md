@@ -15,9 +15,9 @@ I didn’t add genres of the bands as some don’t have it on there websites and
 - [x] Filter data
 - [x] Pagination
 - [x] Download all data and filtered data in .csv format
+- [x] Change page size
+- [x] Show/Hide columns
 ### ✍️ Todo
-- [ ] Change page size
-- [ ] Show/Hide columns
 - [ ] Use spotify / deezer API to:
   - [ ] Get image of the band
   - [ ] Be able to listen to a preview of a song on the page

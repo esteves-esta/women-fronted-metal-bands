@@ -28,7 +28,7 @@ function TableFilter({ onChange, columns, className }) {
             handleOnChange(search, event.target.value)
           }}>
           <option value='all'>All columns</option>
-          {columns.map(col => (
+          {columns.map(col => col.filter && (
             <option key={col.key} value={col.key}> {col.headerLabel}</option>
           ))}
         </select>

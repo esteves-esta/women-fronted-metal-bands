@@ -6,7 +6,7 @@ import { downloadCsvFile } from '../../helpers/downloadCsvFile'
 import ToogleGroupButton from '../ToogleGroupButton/ToogleGroupButton';
 import { Filter, ExternalLink, Table2, Grid, Download } from 'lucide-react';
 import Papa from 'papaparse';
-import Tag, { TagInfo } from '../Tag';
+import { TagInfo } from '../Tag';
 
 function BandsTable() {
   const { bands, initialBandList, setBands, filterByGrow } = React.useContext(BandContext)
@@ -24,7 +24,6 @@ function BandsTable() {
   ], [])
 
   const handleSortBoolean = React.useCallback((valA, valB, sort: 'asc' | 'desc') => {
-
     if (sort === 'asc') return (valA === valB) ? 0 : valA ? -1 : 1;
     else return (valA === valB) ? 0 : valA ? 1 : -1;
   }, [])
@@ -43,20 +42,13 @@ function BandsTable() {
     return activeYears.toString();
   }, []);
 
-  const formatTag = React.useCallback((column: any, field: string, tagList: TagInfo[]) => {
-    if (!column) return;
-    return (
-      <Tag value={column[field]} tagInfo={tagList} />
-    )
-  }, [])
-
   const formatBandNameLinks = React.useCallback((column) => {
     if (!column) return;
-    if (!column.Links) return column.band;
+    if (!column.links) return column.band;
     return (
-      <span className='flex items-center justify-center gap-3'>
+      <span className='flex items-center gap-3'>
         {column.band}
-        <a href={column.Links} target="_blank">
+        <a href={column.links} target="_blank">
           <ExternalLink size={12} />
         </a>
 
@@ -64,14 +56,10 @@ function BandsTable() {
     )
   }, [])
 
-  const isActive = React.useCallback((column) => {
-    if (!column) return '';
-    const statusTagList: TagInfo[] = [
-      { value: true, text: "Active", type: "info" },
-      { value: false, text: "Disbanded", type: "dark" }
-    ];
-    return (<Tag value={!column.yearEnded} tagInfo={statusTagList} />);
-  }, []);
+  const statusTagList: TagInfo[] = React.useMemo(() => [
+    { value: true, text: "Active", type: "info" },
+    { value: false, text: "Disbanded", type: "dark" }
+  ], []);
 
   const formatActiveYears = React.useCallback((column) => {
     if (!column) return '';
@@ -81,19 +69,37 @@ function BandsTable() {
 
   const columns = React.useMemo(() => {
     const cols: TableColumn[] = [
-      { visible: true, field: 'band', formatElement: formatBandNameLinks, headerLabel: 'Band', sortable: true },
-      { visible: true, field: 'growling', headerLabel: 'Growling', sortable: true, formatElement: (cols) => formatTag(cols, 'growling', growTagList), sort: 'desc' },
-      { visible: true, headerLabel: 'Status', handleSort: handleSortBoolean, sortable: true, formatElement: (cols) => isActive(cols) },
-      { visible: false, field: 'LGBTQ', headerLabel: 'LGBTQ', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'LGBTQ', booleanTagList) },
-      { visible: false, field: 'blackWomen', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'blackWomen', booleanTagList) },
-      { visible: true, field: 'allWomenBand', headerLabel: 'All women', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'allWomenBand', booleanTagList) },
-      { visible: false, field: 'sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean, formatElement: (cols) => formatTag(cols, 'sister', booleanTagList) },
-      { visible: false, field: 'currentVocalists', headerLabel: 'Nº Voc.', sortable: true, format: (col) => col.currentVocalists.length },
-      { visible: true, field: 'currentVocalists', headerLabel: 'Vocalists', },
-      { visible: false, field: 'PastVocalists', headerLabel: 'Past Vo.', },
-      { visible: true, field: 'country', headerLabel: 'Country', sortable: true },
-      { visible: true, format: formatYearsActive, headerLabel: 'Active for', sortable: true },
-      { visible: false, format: formatActiveYears, headerLabel: 'Years Active', sortable: true },
+      { filter: true, visible: true, field: 'band', formatElement: formatBandNameLinks, headerLabel: 'Band', sortable: true },
+      {
+        filter: false, visible: true, field: 'growling', headerLabel: 'Growling', sortable: true,
+        tagList: growTagList, tag: true, sort: 'desc',
+      },
+      {
+        filter: false, visible: true, headerLabel: 'Status', handleSort: handleSortBoolean, sortable: true,
+        format: (cols) => !cols.yearEnded, tag: true, tagList: statusTagList
+      },
+      {
+        filter: false, visible: false, field: 'lgbtq', headerLabel: 'LGBTQ', sortable: true, handleSort: handleSortBoolean,
+        tagList: booleanTagList, tag: true
+      },
+      {
+        filter: false, visible: false, field: 'blackWomen', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean,
+        tagList: booleanTagList, tag: true
+      },
+      {
+        filter: false, visible: true, field: 'allWomenBand', headerLabel: 'All women', sortable: true, handleSort: handleSortBoolean,
+        tagList: booleanTagList, tag: true
+      },
+      {
+        filter: false, visible: false, field: 'sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean,
+        tagList: booleanTagList, tag: true
+      },
+      { filter: true, visible: false, field: 'currentVocalists', headerLabel: 'Nº Voc.', sortable: true, format: (col) => col.currentVocalists.length },
+      { filter: true, visible: true, field: 'currentVocalists', headerLabel: 'Vocalists', },
+      { filter: true, visible: false, field: 'PastVocalists', headerLabel: 'Past Vo.', },
+      { filter: true, visible: true, field: 'country', headerLabel: 'Country', sortable: true },
+      { filter: true, visible: true, format: formatYearsActive, headerLabel: 'Active for', sortable: true },
+      { filter: true, visible: false, format: formatActiveYears, headerLabel: 'Years Active', sortable: true },
     ];
     return cols.map(col => {
       if (col.key == undefined) col.key = crypto.randomUUID();
