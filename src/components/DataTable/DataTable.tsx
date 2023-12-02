@@ -65,41 +65,41 @@ function DataTable({
     if (value) setCurrentPage(Number(value))
   }, []);
 
-  const handleFilter = React.useCallback((searchValue: string, colKey: string) => {
+  const handleFilter = React.useCallback(
+    (searchValue: string, colKey: string) => {
+      let newRows;
+      if (searchValue) newRows = filterRows(searchValue, colKey);
+      else newRows = [...initialRow];
+
+      handleRowChange(newRows);
+      setCurrentPage(0);
+      setLastPage(Math.ceil(newRows.length / size))
+    }, [])
+
+  const filterRows = React.useCallback((searchValue: string, colKey: string) => {
     let newRows = [...rows];
-
-    if (searchValue) {
-
-      const filtered = newRows.filter(
-        row => {
-          if (colKey !== 'all') {
-            const col = columns.find(col => col.key === colKey)
-            if (col) {
-
-              let colValue = getValueFromRow(col, row)
-              console.log({ colValue })
-              if (typeof colValue === 'number')
-                return colValue == Number(searchValue)
-              else
-                return colValue.includes(searchValue.toLowerCase())
-
-            }
+    return newRows.filter(
+      row => {
+        if (colKey !== 'all') {
+          const col = columns.find(col => col.key === colKey)
+          if (col) {
+            let colValue = getValueFromRow(col, row)
+            console.log({ colValue })
+            if (typeof colValue === 'number')
+              return colValue == Number(searchValue)
+            else
+              return colValue.includes(searchValue.toLowerCase())
           }
-          const columnsVisible = Object.entries(row).filter(item => columns.find(col => col.field === item[0]))
-          const formattedColumns = columns.filter(col => !!col.format);
-          const formattedRow = formattedColumns.map(col => col.format && col.format(row))
-          const valuesNotBoolean = columnsVisible.filter(item => typeof item[1] !== 'boolean').map(item => item[1])
-          return valuesNotBoolean.concat(formattedRow).join(' ').toLowerCase().includes(searchValue.toLowerCase())
         }
-      )
-      newRows = [...filtered]
-    } else {
-      newRows = [...initialRow];
-    }
-    handleRowChange(newRows);
-    setCurrentPage(0);
-    setLastPage(Math.ceil(newRows.length / size))
-  }, [])
+        const columnsVisible = Object.entries(row).filter(item => columns.find(col => col.field === item[0]))
+        const formattedColumns = columns.filter(col => !!col.format);
+        const formattedRow = formattedColumns.map(col => col.format && col.format(row))
+        const valuesNotBoolean = columnsVisible.filter(item => typeof item[1] !== 'boolean').map(item => item[1])
+        return valuesNotBoolean.concat(formattedRow).join(' ').toLowerCase().includes(searchValue.toLowerCase())
+      }
+    )
+
+  }, []);
 
   const handleToogleColumns = React.useCallback((checked: boolean, key: string) => {
     const newCols = [...columnsInfo]

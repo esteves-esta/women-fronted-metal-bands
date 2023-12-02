@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { range } from '../../helpers/range';
 import * as classes from './Table.module.css';
-import {  ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
+import { ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
 import { TableColumn } from './TableProps';
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 import Tag from '../Tag';
 import { getValueFromRow } from './getValueFromRow';
@@ -109,6 +110,27 @@ function Table({
   )
 }
 
+function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumn, sortRows: (string) => void }) {
+  const { sortable, headerLabel, sort } = headerInfo
+
+  if (sortable) {
+    return <React.Fragment>
+      {sortable && <button onClick={sortRows} className={classes.sortBtn}>
+        {!sort && <ArrowUpDown size={15} />}
+        {sort === 'asc' && <ArrowUpAZ size={15} />}
+        {sort === 'desc' && <ArrowDownAZ size={15} />}
+        <VisuallyHidden.Root>
+          Toggle sorting{' '}
+          {sort || 'off'}
+        </VisuallyHidden.Root>
+        {headerLabel}
+      </button>}
+    </React.Fragment>
+  }
+
+  return (<React.Fragment>{headerLabel}</React.Fragment>)
+}
+
 function TableRow({ currentPage, size, rows, columns }) {
   const start = currentPage * size;
   const end = size * (currentPage + 1);
@@ -172,21 +194,6 @@ function TableColumn({ row, columnInfo }: {
   return <React.Fragment>-</React.Fragment>
 }
 
-function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumn, sortRows: (string) => void }) {
-  const { sortable, headerLabel, sort } = headerInfo
 
-  if (sortable) {
-    return <React.Fragment>
-      {sortable && <button onClick={sortRows} className={classes.sortBtn}>
-        {!sort && <ArrowUpDown size={15} />}
-        {sort === 'asc' && <ArrowUpAZ size={15} />}
-        {sort === 'desc' && <ArrowDownAZ size={15} />}
-        {headerLabel}
-      </button>}
-    </React.Fragment>
-  }
-
-  return (<React.Fragment>{headerLabel}</React.Fragment>)
-}
 
 export default Table;

@@ -4,32 +4,30 @@ import * as classes from './Table.module.css';
 import Tag from '../Tag';
 import { TableColumn } from './TableProps';
 
- function Grid({ columns, rows, size, currentPage }) {
+function Grid({ columns, rows, size, currentPage }) {
   const start = React.useMemo(() => currentPage * size, [size, currentPage]);
   const end = React.useMemo(() => size * (currentPage + 1), [size, currentPage]);
   return (
     <div className={classes.grid}>
+      {range(start, end).map((rowIndex) => rowIndex < rows.length && (
+        <div key={rowIndex} className={classes.card}>
+          
+          {rows[rowIndex].img && <img src={rows[rowIndex].img.src} alt={rows[rowIndex].img.alt} />}
+          
+          {!rows[rowIndex].img && <div className={classes.cardImgPlaceholder} />}
 
-      {range(start, end).map((rowIndex) =>
-        rowIndex < rows.length && (
-          <div key={rowIndex} className={classes.card}>
-            {rows[rowIndex].img && <img src={rows[rowIndex].img.src} alt={rows[rowIndex].img.alt} />}
-            {!rows[rowIndex].img && <div className={classes.cardImgPlaceholder} />}
-
-            <div className={classes.cardBody}>
-              {/* {rows[rowIndex].Band} */}
-              <ul>
-                <GridList
-                  rows={rows}
-                  rowIndex={rowIndex}
-                  columns={columns}
-                />
-              </ul>
-            </div>
+          <div className={classes.cardBody}>
+            <ul>
+              <GridList
+                rows={rows}
+                rowIndex={rowIndex}
+                columns={columns}
+              />
+            </ul>
           </div>
-        )
-      )}
 
+        </div>
+      ))}
     </div>
   )
 }
