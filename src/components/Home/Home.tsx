@@ -1,8 +1,10 @@
 import * as React from 'react';
+import MediaPlayer from '../MediaPlayer'
 import BandsTable from '../BandsTable';
 
 function Home() {
-
+  const PREVIEW_TRACK = "https://cdns-preview-b.dzcdn.net/stream/c-b023c2562a9fde1085d3952e18234fcd-2.mp3";
+  
   return <article>
     <section className='home mb-20 mx-32'>
       <div className="text-justify">
@@ -28,6 +30,8 @@ function Home() {
     </section>
 
     <BandsTable />
+
+    <MediaPlayer src={PREVIEW_TRACK} />
   </article >;
 }
 

@@ -14,5 +14,6 @@ export interface TableColumn {
   handleSort?: (valA, valB, sort) => number,
   visible: boolean
   tag?: boolean
+  sortWithRawValue?: boolean
   tagList?: TagInfo[]
 }

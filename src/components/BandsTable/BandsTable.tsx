@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DataTable, { TableColumn } from '../DataTable'
+import DataTable from '../DataTable'
 import { BandContext } from '../BandsProvider';
 import { booleanTagList, growTagList } from '../../constants';
 import { downloadCsvFile } from '../../helpers/downloadCsvFile'
@@ -7,6 +7,7 @@ import ToogleGroupButton from '../ToogleGroupButton/ToogleGroupButton';
 import { Filter, ExternalLink, Table2, Grid, Download } from 'lucide-react';
 import Papa from 'papaparse';
 import { TagInfo } from '../Tag';
+import { TableColumn } from '../DataTable/TableProps';
 
 function BandsTable() {
   const { bands, initialBandList, setBands, filterByGrow } = React.useContext(BandContext)
@@ -72,7 +73,7 @@ function BandsTable() {
       { filter: true, visible: true, field: 'band', formatElement: formatBandNameLinks, headerLabel: 'Band', sortable: true },
       {
         filter: false, visible: true, field: 'growling', headerLabel: 'Growling', sortable: true,
-        tagList: growTagList, tag: true, sort: 'desc',
+        tagList: growTagList, tag: true, sort: 'desc', sortWithRawValue: true,
       },
       {
         filter: false, visible: true, headerLabel: 'Status', handleSort: handleSortBoolean, sortable: true,
@@ -96,7 +97,7 @@ function BandsTable() {
       },
       { filter: true, visible: false, field: 'currentVocalists', headerLabel: 'Nº Voc.', sortable: true, format: (col) => col.currentVocalists.length },
       { filter: true, visible: true, field: 'currentVocalists', headerLabel: 'Vocalists', },
-      { filter: true, visible: false, field: 'PastVocalists', headerLabel: 'Past Vo.', },
+      { filter: true, visible: false, field: 'pastVocalists', headerLabel: 'Past Vo.', },
       { filter: true, visible: true, field: 'country', headerLabel: 'Country', sortable: true },
       { filter: true, visible: true, format: formatYearsActive, headerLabel: 'Active for', sortable: true },
       { filter: true, visible: false, format: formatActiveYears, headerLabel: 'Years Active', sortable: true },
