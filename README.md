@@ -28,7 +28,10 @@ I didn’t add genres of the bands as some don’t have it on there websites and
 
 ## 🧰 Tech Stack
 // TODO
-
+https://developers.deezer.com/api
+https://api.deezer.com/artist/27
+https://api.deezer.com/search/artist?q=otep&index=0&limit=2
+https://api.deezer.com/track/2012155467
 ---
 
 ## 🚀 How to run locally

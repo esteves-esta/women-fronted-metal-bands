@@ -1,5 +1,6 @@
 [
   {
+    "deezerRecommendationId": null,
     "Band": "Rico Nasty",
     "Feat": false,
     "LGBTQ": false,
@@ -19,6 +20,7 @@
     "Sister": false
   },
   {
+    "deezerRecommendationId": null,
     "Band": "Anna Von Hausswolff",
     "Feat": false,
     "LGBTQ": false,
@@ -36,5 +38,24 @@
     "Recommendation": "The Mysterious Vanishing of Electra",
     "Links": "https://archenemy.net/en/",
     "Sister": false
+  },
+  {
+    "deezerRecommendationId": null,
+    "band": "Powerwolf",
+    "recommendationIsCover": false,
+    "lgbtq": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Alissa White-Gluz"
+    ],
+    "country": "Germany",
+    "yearStarted": 2003,
+    "yearEnded": null,
+    "recommendation": "Demons Are A Girl's Best Friend",
+    "links": "",
+    "sister": false
   }
 ]
