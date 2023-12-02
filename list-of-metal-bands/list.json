@@ -15,7 +15,7 @@
     "country": "US",
     "yearStarted": 1993,
     "yearEnded": null,
-    "recommendation": "Beyond Vision",
+    "recommendation": null,
     "links": "https://www.acidking.com/about/",
     "sister": false
   },
@@ -35,7 +35,7 @@
     "country": "Swiss/German",
     "yearStarted": 2018,
     "yearEnded": null,
-    "recommendation": "Eternal Rains",
+    "recommendation": null,
     "links": "https://adinfinitumofficial.com/bio/",
     "sister": false
   },
@@ -61,7 +61,7 @@
   },
   {
     "deezerId": 7805012,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1095802182,
     "band": "Babymetal",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -77,13 +77,13 @@
     "country": "Japan",
     "yearStarted": 2010,
     "yearEnded": null,
-    "recommendation": "Mirror Mirror",
+    "recommendation": "BxMxC",
     "links": "",
     "sister": false
   },
   {
     "deezerId": 52494612,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1839009147,
     "band": "Band-Maid",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -137,13 +137,13 @@
     "country": "US",
     "yearStarted": 2022,
     "yearEnded": null,
-    "recommendation": "Loose",
+    "recommendation": null,
     "links": "https://cinnamonbabe.com/",
     "sister": false
   },
   {
     "deezerId": 552744,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 63534071,
     "band": "Dead Sara",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -183,7 +183,7 @@
   },
   {
     "deezerId": 383459,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 108598704,
     "band": "Eyes Set To Kill",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -218,7 +218,7 @@
     "country": "Russia",
     "yearStarted": 2007,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -238,7 +238,7 @@
     "country": "US",
     "yearStarted": 1997,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -278,7 +278,7 @@
     "country": "US",
     "yearStarted": 2009,
     "yearEnded": null,
-    "recommendation": "Boghz",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -298,13 +298,13 @@
     "country": "Canada",
     "yearStarted": 1996,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
   {
     "deezerId": 2219,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 713989292,
     "band": "Lacuna Coil",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -324,9 +324,9 @@
   },
   {
     "deezerId": 7816402,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 986466652,
     "band": "Lauren Babic",
-    "recommendationIsCover": false,
+    "recommendationIsCover": true,
     "lgbtq": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -344,7 +344,7 @@
   },
   {
     "deezerId": 174552857,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1882914387,
     "band": "League Of Distortion",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -364,7 +364,7 @@
   },
   {
     "deezerId": 98831722,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 2111810957,
     "band": "Loharano",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -384,7 +384,7 @@
   },
   {
     "deezerId": 459672,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 86122617,
     "band": "Marmozets",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -418,7 +418,7 @@
     "country": "Japan",
     "yearStarted": 2002,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -466,7 +466,7 @@
   },
   {
     "deezerId": 5988096,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1053117942,
     "band": "Oceans Of Slumber",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -486,7 +486,7 @@
   },
   {
     "deezerId": 1330822,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1998701297,
     "band": "Odc",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -521,7 +521,7 @@
     "country": "Sweden",
     "yearStarted": 2002,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -541,7 +541,7 @@
     "country": "US",
     "yearStarted": 2014,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -567,13 +567,13 @@
   },
   {
     "deezerId": 8553,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 2305938,
     "band": "Warlock",
     "recommendationIsCover": false,
     "lgbtq": false,
     "blackWomen": false,
     "allWomenBand": false,
-    "growling": 1,
+    "growling": 2,
     "pastVocalists": [],
     "currentVocalists": [
       "Doro Pesch"
@@ -587,7 +587,7 @@
   },
   {
     "deezerId": 1073,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1993904777,
     "band": "Within Temptation",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -607,7 +607,7 @@
   },
   {
     "deezerId": 577518,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 66412050,
     "band": "Agrimonia",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -627,7 +627,7 @@
   },
   {
     "deezerId": 149783892,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 2295212185,
     "band": "Alt Blk Era",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -648,7 +648,7 @@
   },
   {
     "deezerId": 1392,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 377443421,
     "band": "Arch Enemy",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -688,7 +688,7 @@
   },
   {
     "deezerId": 11646615,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1129221012,
     "band": "As Everything Unfolds",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -748,7 +748,7 @@
   },
   {
     "deezerId": 116966,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 16304691,
     "band": "Black September",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -768,7 +768,7 @@
   },
   {
     "deezerId": 416824,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 11494313,
     "band": "Bloodlined Calligraphy",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -788,7 +788,7 @@
   },
   {
     "deezerId": 12466006,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1246997692,
     "band": "Burning Witches",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -808,7 +808,7 @@
   },
   {
     "deezerId": 667614,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1959455057,
     "band": "Butcher Babies",
     "recommendationIsCover": true,
     "lgbtq": false,
@@ -829,7 +829,7 @@
   },
   {
     "deezerId": 14017145,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 678806862,
     "band": "Caged Existence",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -849,7 +849,7 @@
   },
   {
     "deezerId": 1702013,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 70981758,
     "band": "Cerebral Bore",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -883,7 +883,7 @@
     "country": "Germany",
     "yearStarted": 2005,
     "yearEnded": 2018,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -903,7 +903,7 @@
     "country": "Brazil",
     "yearStarted": 2019,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -923,13 +923,13 @@
     "country": "Denmark",
     "yearStarted": 2015,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
   {
     "deezerId": 10214974,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 684939672,
     "band": "Drown This City",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -949,7 +949,7 @@
   },
   {
     "deezerId": 138915322,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1404437842,
     "band": "Dying Wish",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -969,7 +969,7 @@
   },
   {
     "deezerId": 5550954,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 2113432317,
     "band": "Employed To Serve",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1003,7 +1003,7 @@
     "country": "US",
     "yearStarted": 2015,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -1049,7 +1049,7 @@
   },
   {
     "deezerId": 4335549,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 2096234777,
     "band": "Ithaca",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1069,7 +1069,7 @@
   },
   {
     "deezerId": 285870,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 108651960,
     "band": "Iwrestledabearonce",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1092,7 +1092,7 @@
   },
   {
     "deezerId": 2544561,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 437147042,
     "band": "Jinjer",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1105,14 +1105,14 @@
     "country": "Ukraine",
     "yearStarted": 2009,
     "yearEnded": null,
-    "recommendation": "On the Top",
+    "recommendation": "A Plus or a Minus",
     "links": "http://jinjer-metal.com/",
     "pastVocalists": [],
     "sister": false
   },
   {
     "deezerId": 7992946,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1071387282,
     "band": "K Enagonio",
     "recommendationIsCover": true,
     "lgbtq": false,
@@ -1146,13 +1146,13 @@
     "country": "Denmark",
     "yearStarted": 2015,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
   {
     "deezerId": 391652,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 73429162,
     "band": "Landmine Marathon",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1206,7 +1206,7 @@
     "country": "US",
     "yearStarted": 2012,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -1226,7 +1226,7 @@
     "country": "US",
     "yearStarted": 2015,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -1272,7 +1272,7 @@
   },
   {
     "deezerId": 7994852,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1414741562,
     "band": "Once Human",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1312,7 +1312,7 @@
   },
   {
     "deezerId": 60794272,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 2100480307,
     "band": "Pupil Slicer",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1332,7 +1332,7 @@
   },
   {
     "deezerId": 13870839,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1845370467,
     "band": "Reliqa",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1352,7 +1352,7 @@
   },
   {
     "deezerId": 263460,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1521433882,
     "band": "Rolo Tomassi",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1372,7 +1372,7 @@
   },
   {
     "deezerId": 58941982,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1494231772,
     "band": "Seeyouspacecowboy",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1392,7 +1392,7 @@
   },
   {
     "deezerId": 10969584,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 592824782,
     "band": "Sisters Of Suffocation",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1412,7 +1412,7 @@
   },
   {
     "deezerId": 13321745,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1466543532,
     "band": "Spiritbox",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1492,7 +1492,7 @@
   },
   {
     "deezerId": 1080422,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1706800257,
     "band": "The Anchor",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1512,7 +1512,7 @@
   },
   {
     "deezerId": 2503331,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1004595542,
     "band": "The Charm The Fury",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1552,7 +1552,7 @@
   },
   {
     "deezerId": 113851202,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1146302292,
     "band": "Traitor (트레이터)",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1566,7 +1566,7 @@
     "country": "South Korea",
     "yearStarted": 2013,
     "yearEnded": null,
-    "recommendation": "Betrayal",
+    "recommendation": "The siege",
     "links": "https://traitorbsdm.bandcamp.com/",
     "sister": false
   },
@@ -1612,7 +1612,7 @@
   },
   {
     "deezerId": 81152182,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1043484952,
     "band": "Volatile Ways",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1668,13 +1668,13 @@
     "country": "US",
     "yearStarted": 2007,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
   {
     "deezerId": 4722651,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 640204942,
     "band": "Abnormality",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1688,7 +1688,7 @@
     "country": "US",
     "yearStarted": 2005,
     "yearEnded": 2020,
-    "recommendation": "Monarch Omega",
+    "recommendation": "Monarch Alpha",
     "links": "",
     "sister": false
   },
@@ -1708,7 +1708,7 @@
     "country": "France",
     "yearStarted": 2013,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -1734,7 +1734,7 @@
   },
   {
     "deezerId": 505689,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 2043781867,
     "band": "Ankor",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1748,13 +1748,13 @@
     "country": "Spain",
     "yearStarted": 2003,
     "yearEnded": null,
-    "recommendation": "Holy Wolf, Prisioner",
+    "recommendation": "Prisioner",
     "links": "https://ankormusic.com/",
     "sister": false
   },
   {
     "deezerId": 400967,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1674324307,
     "band": "Battle Beast",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1774,7 +1774,7 @@
   },
   {
     "deezerId": 5895526,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 510177802,
     "band": "Black Mirrors",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1794,7 +1794,7 @@
   },
   {
     "deezerId": 5172291,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 2196075967,
     "band": "Conquer Divide",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1834,7 +1834,7 @@
   },
   {
     "deezerId": 1459813,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1945755727,
     "band": "Dream State",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1874,13 +1874,13 @@
   },
   {
     "deezerId": 207786062,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 2138759137,
     "band": "Gel",
     "recommendationIsCover": false,
     "lgbtq": false,
     "blackWomen": false,
     "allWomenBand": false,
-    "growling": 2,
+    "growling": 3,
     "pastVocalists": [],
     "currentVocalists": [
       "Sami Kaiser"
@@ -1914,13 +1914,13 @@
   },
   {
     "deezerId": 13623,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 912000272,
     "band": "In This Moment",
     "recommendationIsCover": false,
     "lgbtq": false,
     "blackWomen": false,
     "allWomenBand": false,
-    "growling": 2,
+    "growling": 3,
     "pastVocalists": [],
     "currentVocalists": [
       "Maria Brink"
@@ -1934,7 +1934,7 @@
   },
   {
     "deezerId": 1693145,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1099762262,
     "band": "Nervosa",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -1968,7 +1968,7 @@
     "country": "Poland",
     "yearStarted": 2008,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2008,13 +2008,13 @@
     "country": "US",
     "yearStarted": 2009,
     "yearEnded": null,
-    "recommendation": "4ever",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
   {
     "deezerId": 52265132,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1520300922,
     "band": "Setyøursails",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -2048,7 +2048,7 @@
     "country": "US",
     "yearStarted": 2022,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "https://www.patreon.com/sicksense",
     "sister": false
   },
@@ -2114,7 +2114,7 @@
   },
   {
     "deezerId": 416480,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1343778082,
     "band": "Witch Mountain",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -2150,7 +2150,7 @@
     "country": "Japan",
     "yearStarted": 2008,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "https://aldious.net/",
     "sister": false
   },
@@ -2170,7 +2170,7 @@
     "country": "Finland",
     "yearStarted": 2006,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2191,7 +2191,7 @@
     "country": "Germany",
     "yearStarted": 2015,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "https://beyond-the-black.com/",
     "sister": false
   },
@@ -2211,7 +2211,7 @@
     "country": "Japan",
     "yearStarted": 2011,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2231,7 +2231,7 @@
     "country": "Netherlands",
     "yearStarted": 2019,
     "yearEnded": 2020,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2251,13 +2251,13 @@
     "country": "Japan",
     "yearStarted": 2011,
     "yearEnded": 2018,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
   {
     "deezerId":5417809,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1909915937,
     "band": "Deathless Legacy",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -2291,7 +2291,7 @@
     "country": "Netherlands",
     "yearStarted": 2002,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2311,7 +2311,7 @@
     "country": "Italy",
     "yearStarted": 2006,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2331,7 +2331,7 @@
     "country": "Germany",
     "yearStarted": 2010,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2351,7 +2351,7 @@
     "country": "Netherlands",
     "yearStarted": 2002,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2371,7 +2371,7 @@
     "country": "US",
     "yearStarted": 1995,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2394,7 +2394,7 @@
     "country": "US",
     "yearStarted": 2017,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2414,7 +2414,7 @@
     "country": "Italy",
     "yearStarted": 2017,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2434,7 +2434,7 @@
     "country": "Ukraine",
     "yearStarted": 2011,
     "yearEnded": null,
-    "recommendation": "Incurable disease",
+    "recommendation": null,
     "links": "https://ignea.band/",
     "sister": false
   },
@@ -2454,7 +2454,7 @@
     "country": "US",
     "yearStarted": 1975,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2474,7 +2474,7 @@
     "country": "Germany",
     "yearStarted": 2014,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2494,13 +2494,13 @@
     "country": "Finland",
     "yearStarted": 1996,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
   {
     "deezerId": 92145142,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 1647126322,
     "band": "Nini Music",
     "recommendationIsCover": false,
     "lgbtq": false,
@@ -2534,7 +2534,7 @@
     "country": "Russia",
     "yearStarted": 2013,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2554,7 +2554,7 @@
     "country": "Brazil / Netherlands",
     "yearStarted": 2016,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2574,7 +2574,7 @@
     "country": "Canada",
     "yearStarted": 2011,
     "yearEnded": null,
-    "recommendation": "Warrior",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2594,7 +2594,7 @@
     "country": "US",
     "yearStarted": 2007,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2614,7 +2614,7 @@
     "country": "Norway",
     "yearStarted": 2001,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2634,7 +2634,7 @@
     "country": "Italy",
     "yearStarted": 2013,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2654,7 +2654,7 @@
     "country": "Italy",
     "yearStarted": 2014,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2674,7 +2674,7 @@
     "country": "Germany",
     "yearStarted": 2012,
     "yearEnded": 2014,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2696,7 +2696,7 @@
     "country": "US",
     "yearStarted": 1975,
     "yearEnded": 1979,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2737,7 +2737,7 @@
     "country": "US",
     "yearStarted": 1980,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
@@ -2757,7 +2757,7 @@
     "country": "Germany",
     "yearStarted": 1994,
     "yearEnded": null,
-    "recommendation": "",
+    "recommendation": null,
     "links": "",
     "sister": false
   },
