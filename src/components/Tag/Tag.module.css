@@ -15,7 +15,7 @@ li .tag {
 }
 
 .dark {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-tertiary);
 }
 
 .success {

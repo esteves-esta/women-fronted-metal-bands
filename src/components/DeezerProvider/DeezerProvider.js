@@ -8,7 +8,7 @@ export default DeezerProvider;
 
 
 /* 
-
+https://developers.deezer.com/sdk/javascript/init
 https://developers.deezer.com/api
 https://api.deezer.com/artist/27
 https://api.deezer.com/search/artist?q=otep&index=0&limit=2
