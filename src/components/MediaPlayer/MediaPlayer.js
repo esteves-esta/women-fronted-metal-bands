@@ -1,7 +1,7 @@
 //credits: JOSH COMEU - JOY OF REACT
 {/* https://dev.to/lukewduncan/how-to-build-an-audio-player-with-html5-and-the-progress-element-387m */ }
 import React from "react";
-import { Play, Pause, Volume1, Volume2, VolumeX } from "lucide-react";
+import { Play, Pause, Volume1, Volume2, VolumeX, AudioLines  } from "lucide-react";
 import * as classes from './MediaPlayer.module.css';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 function MediaPlayer({ src }) {
@@ -23,7 +23,7 @@ function MediaPlayer({ src }) {
     }
 
     function seek(evt) {
-      if (progressBarRef.current) {
+      if (progressBarRef.current && audioRef.current) {
         var percent = evt.offsetX / progressBarRef.current.offsetWidth;
         audioRef.current.currentTime = percent * audioRef.current.duration;
         setProgressValue(percent);
@@ -82,7 +82,7 @@ function MediaPlayer({ src }) {
   return (
     <div className={classes.mediaPlayer}>
       <div className={classes.info}>
-        asfd
+        <AudioLines /> 
       </div>
 
       <div className={classes.mediaPlayerBody} >

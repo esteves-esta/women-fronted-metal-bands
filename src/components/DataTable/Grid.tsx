@@ -4,7 +4,7 @@ import * as classes from './Table.module.css';
 import Tag from '../Tag';
 import { TableColumn } from './TableProps';
 
-function Grid({ columns, rows, size, currentPage }) {
+function Grid({ columns, rows, size, currentPage, rowIdName }) {
   const start = React.useMemo(() => currentPage * size, [size, currentPage]);
   const end = React.useMemo(() => size * (currentPage + 1), [size, currentPage]);
   return (

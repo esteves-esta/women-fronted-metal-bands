@@ -18,6 +18,7 @@ interface Props {
   isFiltered: boolean | null,
   gridMode: boolean | null,
   children?: any
+  rowIdName: string
 }
 
 function DataTable({
@@ -29,6 +30,7 @@ function DataTable({
   isFiltered,
   children,
   gridMode = false,
+  rowIdName,
   ...delegated
 }: Props) {
 
@@ -159,6 +161,7 @@ function DataTable({
           handleRowChange={handleRowChange}
           setColumnsInfo={setColumnsInfo}
           initialRow={initialRow}
+          rowIdName={rowIdName}
         />
       )}
 
@@ -168,6 +171,7 @@ function DataTable({
           size={size}
           rows={rows}
           currentPage={currentPage}
+          rowIdName={rowIdName}
         />
       )}
 

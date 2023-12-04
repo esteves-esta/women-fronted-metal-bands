@@ -31,6 +31,7 @@ function Home() {
 
     <BandsTable />
 
+{/* consume track from deezerProvider */}
     <MediaPlayer src={PREVIEW_TRACK} />
   </article >;
 }

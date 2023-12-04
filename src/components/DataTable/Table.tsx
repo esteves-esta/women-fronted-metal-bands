@@ -15,7 +15,8 @@ function Table({
   currentPage,
   setColumnsInfo,
   handleRowChange,
-  initialRow
+  initialRow,
+  rowIdName
 }) {
 
   React.useEffect(() => {
@@ -104,6 +105,7 @@ function Table({
           size={size}
           rows={rows}
           columns={columnsInfo}
+          rowIdName={rowIdName}
         />
       </tbody>
     </table>
@@ -131,14 +133,14 @@ function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumn, sortRo
   return (<React.Fragment>{headerLabel}</React.Fragment>)
 }
 
-function TableRow({ currentPage, size, rows, columns }) {
+function TableRow({ currentPage, size, rows, columns, rowIdName }) {
   const start = currentPage * size;
   const end = size * (currentPage + 1);
 
   return (
     <React.Fragment>
       {range(start, end).map((rowIndex) => rowIndex < rows.length && (
-        <tr key={rowIndex}>
+        <tr key={rows[rowIndex][rowIdName]}>
           <TableColumns rows={rows} rowIndex={rowIndex} columns={columns} />
         </tr>
       ))}

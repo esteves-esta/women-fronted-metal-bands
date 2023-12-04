@@ -1,7 +1,39 @@
 import React from 'react';
 
-function DeezerProvider() {
-  return <div></div>;
+const DEEZER_API = 'https://api.deezer.com/'
+const fetcher = async (endpoint) => {
+  const response = await fetch(endpoint);
+  const json = await response.json();
+
+  return json;
+};
+
+
+function DeezerProvider({ children }) {
+  const { data, error, isLoading } = useSWR(trackId ? `track/${trackId}` : null,
+    fetcher
+  );
+
+  const [trackId, setTrackId] = React.useState('2012155467')
+  const [bandId, setBandId] = React.useState('2012155467')
+
+  function getTrackPreview(newTrackId) {
+    if (newTrackId === trackId) {
+      // setPlay((current) => !current)
+      return;
+    }
+    setTrackId(newTrackId)
+    // setPlay(true)
+  }
+  function getBandImage(newBandId) {
+    if (newBandId === bandId) return;
+    setBandId(newBandId)
+  }
+
+  if (error) return "An error has occurred.";
+  if (isLoading) return "Loading...";
+
+  return <div>{children}</div>;
 }
 
 export default DeezerProvider;

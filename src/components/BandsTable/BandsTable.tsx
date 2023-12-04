@@ -4,7 +4,7 @@ import { BandContext } from '../BandsProvider';
 import { booleanTagList, growTagList } from '../../constants';
 import { downloadCsvFile } from '../../helpers/downloadCsvFile'
 import ToogleGroupButton from '../ToogleGroupButton/ToogleGroupButton';
-import { Filter, ExternalLink, Table2, Grid, Download } from 'lucide-react';
+import { Filter, ExternalLink, Table2, Grid, Download, Play } from 'lucide-react';
 import Papa from 'papaparse';
 import { TagInfo } from '../Tag';
 import { TableColumn } from '../DataTable/TableProps';
@@ -68,8 +68,22 @@ function BandsTable() {
     return `${column.yearStarted} - ${end}`
   }, [])
 
+  const playButton = React.useCallback((column) => {
+    if (!column) return;
+    return (
+      <button onClick={() => play(column.deezerId)} className='button'><Play /></button>
+    )
+  }, [])
+
+  function play(id: number) {
+    console.log(id)
+    // setTrackId - from deezerProvider
+  }
+
+
   const columns = React.useMemo(() => {
     const cols: TableColumn[] = [
+      { filter: false, visible: true, formatElement: playButton, headerLabel: 'Play' },
       { filter: true, visible: true, field: 'band', formatElement: formatBandNameLinks, headerLabel: 'Band', sortable: true },
       {
         filter: false, visible: true, field: 'growling', headerLabel: 'Growling', sortable: true,
@@ -78,10 +92,6 @@ function BandsTable() {
       {
         filter: false, visible: true, headerLabel: 'Status', handleSort: handleSortBoolean, sortable: true,
         format: (cols) => !cols.yearEnded, tag: true, tagList: statusTagList
-      },
-      {
-        filter: false, visible: false, field: 'lgbtq', headerLabel: 'LGBTQ', sortable: true, handleSort: handleSortBoolean,
-        tagList: booleanTagList, tag: true
       },
       {
         filter: false, visible: false, field: 'blackWomen', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean,
@@ -180,6 +190,7 @@ function BandsTable() {
       pageSize={10}
       handleRowChange={setBands}
       gridMode={displayMode === 'grid'}
+      rowIdName="deezerId"
     >
 
       <div className='flex flex-row items-center mb-16 justify-between'>
