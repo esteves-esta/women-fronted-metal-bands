@@ -3,8 +3,7 @@ import MediaPlayer from '../MediaPlayer'
 import BandsTable from '../BandsTable';
 
 function Home() {
-  const PREVIEW_TRACK = "https://cdns-preview-b.dzcdn.net/stream/c-b023c2562a9fde1085d3952e18234fcd-2.mp3";
-  
+
   return <article>
     <section className='home mb-20 mx-32'>
       <div className="text-justify">
@@ -17,7 +16,7 @@ function Home() {
             vocalists.</p>
         </div>
 
-        <p>This project started when I realized that most metal/rock band that I usually listened all had men as lead vocalist. 
+        <p>This project started when I realized that most metal/rock band that I usually listened all had men as lead vocalist.
           And this realization lead me to search for bands with women as lead
           vocalists, and specially where said vocalist isn’t just doing the melodic parts but doing lots of growling. </p>
         <p>So I decided to make this page to compile the bands that I found and also pratice my frontend
@@ -31,8 +30,8 @@ function Home() {
 
     <BandsTable />
 
-{/* consume track from deezerProvider */}
-    <MediaPlayer src={PREVIEW_TRACK} />
+
+    <MediaPlayer />
   </article >;
 }
 

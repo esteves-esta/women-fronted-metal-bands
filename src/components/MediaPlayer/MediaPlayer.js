@@ -1,11 +1,14 @@
 //credits: JOSH COMEU - JOY OF REACT
 {/* https://dev.to/lukewduncan/how-to-build-an-audio-player-with-html5-and-the-progress-element-387m */ }
 import React from "react";
-import { Play, Pause, Volume1, Volume2, VolumeX, AudioLines  } from "lucide-react";
+import { Play, Pause, Volume1, Volume2, VolumeX, AudioLines } from "lucide-react";
 import * as classes from './MediaPlayer.module.css';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
-function MediaPlayer({ src }) {
-  const [isPlaying, setIsPlaying] = React.useState(false);
+import { DeezerContext } from '../DeezerProvider';
+
+function MediaPlayer() {
+  const { title, cover, artist, src, bandId, isPlaying, setIsPlaying } = React.useContext(DeezerContext)
+
   const [progressValue, setProgressValue] = React.useState(0);
   const [volume, setVolume] = React.useState(1);
   const [currentTimeFormatted, setCurrentTimeFormatted] = React.useState(0);
@@ -22,6 +25,14 @@ function MediaPlayer({ src }) {
       }
     }
 
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  React.useEffect(() => {
     function seek(evt) {
       if (progressBarRef.current && audioRef.current) {
         var percent = evt.offsetX / progressBarRef.current.offsetWidth;
@@ -30,31 +41,33 @@ function MediaPlayer({ src }) {
       }
     }
 
-    window.addEventListener("keydown", handleKeyDown);
-    progressBarRef.current.addEventListener("click", seek);
-
+    progressBarRef.current?.addEventListener("click", seek);
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-      progressBarRef.current.removeEventListener("click", seek);
+      progressBarRef.current?.removeEventListener("click", seek);
     };
   }, []);
 
   React.useEffect(() => {
     if (isPlaying) {
       audioRef.current.volume = 0.3;
-      audioRef.current.play();
+      audioRef.current?.play();
     } else {
-      audioRef.current.pause();
+      audioRef.current?.pause();
     }
   }, [isPlaying]);
 
   React.useEffect(() => {
-    const time = Math.round(audioRef.current.currentTime)
+    if (audioRef.current?.readyState === 0) setIsPlaying(!isPlaying)
+  }, [src]);
+
+  React.useEffect(() => {
+    const time = Math.round(audioRef.current?.currentTime)
     setCurrentTimeFormatted(time < 10 ? `0${time}` : time)
   }, [audioRef.current?.currentTime]);
 
   function updateProgressBar() {
-    setProgressValue(audioRef.current.currentTime / audioRef.current.duration);
+    if (audioRef.current?.readyState === 4)
+      setProgressValue(audioRef.current.currentTime / audioRef.current.duration);
   }
 
   function changeVolume() {
@@ -79,10 +92,12 @@ function MediaPlayer({ src }) {
 
   }
 
+  if (!src) return <React.Fragment></React.Fragment>
+
   return (
     <div className={classes.mediaPlayer}>
       <div className={classes.info}>
-        <AudioLines /> 
+        <AudioLines />
       </div>
 
       <div className={classes.mediaPlayerBody} >
@@ -90,11 +105,11 @@ function MediaPlayer({ src }) {
           <img
             width={50}
             height={50}
-            src="https://sandpack-bundler.vercel.app/img/take-it-easy.png"
+            src={cover}
           />
           <div className={classes.summary}>
-            <p className="label">Take It Easy</p>
-            <small>Bvrnout ft. Mia Vaile</small>
+            <p className="label">{title}</p>
+            <small>{artist}</small>
           </div>
         </div>
         <div className={classes.controls} >

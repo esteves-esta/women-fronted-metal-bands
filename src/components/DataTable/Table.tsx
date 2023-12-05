@@ -16,7 +16,8 @@ function Table({
   setColumnsInfo,
   handleRowChange,
   initialRow,
-  rowIdName
+  rowIdName,
+  onRowClick
 }) {
 
   React.useEffect(() => {
@@ -106,6 +107,7 @@ function Table({
           rows={rows}
           columns={columnsInfo}
           rowIdName={rowIdName}
+          onRowClick={onRowClick}
         />
       </tbody>
     </table>
@@ -133,17 +135,29 @@ function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumn, sortRo
   return (<React.Fragment>{headerLabel}</React.Fragment>)
 }
 
-function TableRow({ currentPage, size, rows, columns, rowIdName }) {
+function TableRow({ currentPage, size, rows, columns, rowIdName, onRowClick }) {
   const start = currentPage * size;
   const end = size * (currentPage + 1);
+  const [rowSelected, setRowSelected] = React.useState(null);
 
+  function selectRow(row) {
+    setRowSelected(row[rowIdName])
+    onRowClick(row)
+  }
   return (
     <React.Fragment>
-      {range(start, end).map((rowIndex) => rowIndex < rows.length && (
-        <tr key={rows[rowIndex][rowIdName]}>
-          <TableColumns rows={rows} rowIndex={rowIndex} columns={columns} />
-        </tr>
-      ))}
+      {range(start, end).map((rowIndex) => {
+        const row = rows[rowIndex];
+        return rowIndex < rows.length && (
+          <tr
+            className={rowSelected === row[rowIdName] ? classes.rowSelected : ``}
+            key={row[rowIdName]}
+            onClick={() => selectRow(row)}>
+              
+            <TableColumns rows={rows} rowIndex={rowIndex} columns={columns} />
+          </tr>
+        )
+      })}
     </React.Fragment>
   )
 

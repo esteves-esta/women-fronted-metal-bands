@@ -5,6 +5,10 @@
   vertical-align: middle;
 }
 
+.rowSelected {
+  background-color: var(--bg-tertiary) !important;
+}
+
 .table tbody tr:nth-child(odd) {
   background-color: transparent;
 }

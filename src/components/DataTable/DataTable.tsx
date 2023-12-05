@@ -19,6 +19,7 @@ interface Props {
   gridMode: boolean | null,
   children?: any
   rowIdName: string
+  onRowClick?: (row) => void
 }
 
 function DataTable({
@@ -31,6 +32,7 @@ function DataTable({
   children,
   gridMode = false,
   rowIdName,
+  onRowClick,
   ...delegated
 }: Props) {
 
@@ -162,6 +164,7 @@ function DataTable({
           setColumnsInfo={setColumnsInfo}
           initialRow={initialRow}
           rowIdName={rowIdName}
+          onRowClick={onRowClick}
         />
       )}
 
