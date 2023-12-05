@@ -3,6 +3,7 @@
   font-family: sans-serif;
   border-collapse: collapse;
   vertical-align: middle;
+  transition: all 0.5s ease;
 }
 
 .rowSelected {
@@ -143,9 +144,11 @@ select.search {
   border-left: none;
   color: var(--text-color);
 }
+
 .search input:focus {
-  box-shadow: none ;
+  box-shadow: none;
 }
+
 .search:has(input):focus-within {
   box-shadow: var(--box-shadow-focus);
 }
@@ -218,6 +221,11 @@ select.search {
   width: 100%;
   border: 1px solid var(--border-color);
   border-radius: 6px;
+}
+
+.cardSelected {
+  transition: all 0.5s ease;
+  background-color: var(--bg-4) !important;
 }
 
 .card:hover {

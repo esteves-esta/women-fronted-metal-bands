@@ -5,9 +5,10 @@ import { Play, Pause, Volume1, Volume2, VolumeX, AudioLines } from "lucide-react
 import * as classes from './MediaPlayer.module.css';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { DeezerContext } from '../DeezerProvider';
+import LoaderSvg from '../LoaderSvg'
 
 function MediaPlayer() {
-  const { title, cover, artist, src, bandId, isPlaying, setIsPlaying } = React.useContext(DeezerContext)
+  const { title, cover, artist, src, bandId, trackIsLoading, isPlaying, setIsPlaying, playNextTrack } = React.useContext(DeezerContext)
 
   const [progressValue, setProgressValue] = React.useState(0);
   const [volume, setVolume] = React.useState(1);
@@ -49,7 +50,6 @@ function MediaPlayer() {
 
   React.useEffect(() => {
     if (isPlaying) {
-      audioRef.current.volume = 0.3;
       audioRef.current?.play();
     } else {
       audioRef.current?.pause();
@@ -92,24 +92,23 @@ function MediaPlayer() {
 
   }
 
-  if (!src) return <React.Fragment></React.Fragment>
-
   return (
-    <div className={classes.mediaPlayer}>
+    <div className={classes.mediaPlayer} style={{ display: src ? 'block' : 'none' }}>
       <div className={classes.info}>
         <AudioLines />
       </div>
 
       <div className={classes.mediaPlayerBody} >
         <div className="flex flex-row gap-5">
-          <img
+          {!trackIsLoading ? <img
             width={50}
             height={50}
             src={cover}
           />
+            : <LoaderSvg />}
           <div className={classes.summary}>
-            <p className="label">{title}</p>
-            <small>{artist}</small>
+            <p className="label">{trackIsLoading ? 'loading' : title}</p>
+            {!trackIsLoading && <small>{artist}</small>}
           </div>
         </div>
         <div className={classes.controls} >
@@ -135,6 +134,7 @@ function MediaPlayer() {
             src={src}
             onEnded={() => {
               setIsPlaying(false);
+              playNextTrack();
             }}
           />
           <progress ref={progressBarRef} id="seek-obj" value={progressValue} max="1" />
@@ -155,7 +155,7 @@ function MediaPlayer() {
         </div>
 
       </div>
-    </div>
+    </div >
   );
 }
 

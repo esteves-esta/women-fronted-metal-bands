@@ -19,59 +19,96 @@ async function fetcher(endpoint) {
 function DeezerProvider({ children }) {
   const { bands, setBands } = React.useContext(BandContext)
   const [trackId, setTrackId] = React.useState(null);
-  const [currentBandId, setCurrentBandId] = React.useState(null);
+  const [previewTrack, setPreviewTrack] = React.useState(null);
+  const [bandTopTrack, setBandTopTrack] = React.useState(null);
+  const [currentBandId, setCurrentBandId] = React.useState();
   const [isPlaying, setIsPlaying] = React.useState(false);
 
   const { data: trackInfo, error: trackError, isLoading: trackIsLoading } = useSWR(trackId ? `track/${trackId}` : null,
     fetcher
   );
 
-  function getTrackPreview(bandId) {
-    
+  const { data: topTrackInfo, error: topTrackError, isLoading: topTrackIsLoading } = useSWR(bandTopTrack ? `artist/${bandTopTrack}/top?index=0&limit=1` : null,
+    fetcher
+  );
+
+  const getTrackPreview = React.useCallback((bandId) => {
     const foundBand = bands.find(band => band.deezerId === bandId);
     if (!foundBand) return;
+
     if (!foundBand.deezerRecommendationId) {
-      // getBandTopTrack(bandId)
+      setCurrentBandId(bandId)
+      setBandTopTrack(bandId)
+      setIsPlaying(false)
       return;
     }
-    console.log({ bandId })
-    if (currentBandId === foundBand.deezerId && !trackIsLoading) {
-      // setIsPlaying((current) => !current)
+
+    if (currentBandId === foundBand.deezerId) {
+      setIsPlaying(current => !current)
       return;
     }
 
     if (foundBand.deezerTrackInfo) {
-      setPreviewTrack(foundBand.deezerTrackInfo.preview)
+      setPreviewTrack(foundBand.deezerTrackInfo)
+      setCurrentBandId(bandId)
+      setIsPlaying(false)
       return;
     }
 
+    setCurrentBandId(bandId)
     setIsPlaying(false)
     setTrackId(foundBand.deezerRecommendationId)
-    setCurrentBandId(bandId)
-  }
+  }, [currentBandId, trackIsLoading])
 
   React.useEffect(() => {
-    if (!!trackInfo) return;
+    if (trackInfo === undefined) return;
+    setPreviewTrack(trackInfo)
+  }, [trackInfo])
 
+  React.useEffect(() => {
+    if (topTrackInfo === undefined) return;
+    if (topTrackInfo.data.length === 0) return;
+
+    setPreviewTrack(topTrackInfo.data[0])
+  }, [topTrackInfo])
+
+  React.useEffect(() => {
     const bandIndex = bands.findIndex(band => band.deezerId === currentBandId)
     if (bandIndex < 0) return;
 
     const newBands = [...bands]
+    newBands.forEach(band => { band.selected = false })
     newBands[bandIndex].deezerTrackInfo = trackInfo
+    newBands[bandIndex].selected = true
     setBands(newBands)
-  }, [trackInfo, currentBandId])
 
-  const state = {
-    deezerTrackInfo: trackInfo,
-    title: trackInfo ? trackInfo.title : null,
-    cover: trackInfo ? trackInfo.album.cover_small : null,
-    artist: trackInfo ? trackInfo.artist.name : null,
-    src: trackInfo ? trackInfo.preview : null,
-    currentBandId,
-    isPlaying,
-    setIsPlaying,
-    getTrackPreview,
-  };
+  }, [previewTrack])
+
+  const playNextTrack = React.useCallback(() => {
+    const bandIndex = bands.findIndex(band => band.deezerId === currentBandId)
+    if (bandIndex < 0) return;
+
+    let nextIndex = bandIndex + 1;
+    if (nextIndex >= bands.length) nextIndex = 0;
+
+    getTrackPreview(bands[nextIndex].deezerId)
+  }, [currentBandId])
+
+  const state = React.useMemo(() => {
+    return {
+      deezerTrackInfo: previewTrack,
+      title: previewTrack ? previewTrack.title : null,
+      cover: previewTrack ? previewTrack.album.cover_small : null,
+      artist: previewTrack ? previewTrack.artist.name : null,
+      src: previewTrack ? previewTrack.preview : null,
+      currentBandId,
+      trackIsLoading: trackIsLoading || topTrackIsLoading,
+      isPlaying,
+      setIsPlaying,
+      getTrackPreview,
+      playNextTrack
+    }
+  }, [previewTrack, currentBandId, isPlaying, trackIsLoading, topTrackIsLoading]);
 
   return (<DeezerContext.Provider value={state}>{children}</DeezerContext.Provider>);
 }

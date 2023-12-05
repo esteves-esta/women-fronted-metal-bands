@@ -15,7 +15,7 @@ function BandsTable() {
   const [growlFilter, setGrowlFilter] = React.useState('viewAll')
   const [displayMode, setIsDisplayMode] = React.useState('table')
 
-  const { getTrackPreview, isPlaying, bandId } = React.useContext(DeezerContext)
+  const { getTrackPreview, currentBandId, trackIsLoading, isPlaying } = React.useContext(DeezerContext)
 
   const growFilterOptions = React.useMemo(() => [
     { value: 'viewAll', text: 'View All' },
@@ -71,140 +71,140 @@ function BandsTable() {
     return `${column.yearStarted} - ${end}`
   }, [])
 
-  const playRecommendedTrack = React.useCallback((row) => getTrackPreview(row.deezerId), [])
+  const playRecommendedTrack = React.useCallback((row) => getTrackPreview(row.deezerId), [currentBandId, trackIsLoading])
 
-const columns = React.useMemo(() => {
-  const cols: TableColumn[] = [
-    // { filter: false, visible: true, formatElement: playButton, headerLabel: 'Play' },
-    { filter: true, visible: true, field: 'band', formatElement: formatBandNameLinks, headerLabel: 'Band', sortable: true },
-    {
-      filter: false, visible: true, field: 'growling', headerLabel: 'Growling', sortable: true,
-      tagList: growTagList, tag: true, sort: 'desc', sortWithRawValue: true,
-    },
-    {
-      filter: false, visible: true, headerLabel: 'Status', handleSort: handleSortBoolean, sortable: true,
-      format: (cols) => !cols.yearEnded, tag: true, tagList: statusTagList
-    },
-    {
-      filter: false, visible: false, field: 'blackWomen', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean,
-      tagList: booleanTagList, tag: true
-    },
-    {
-      filter: false, visible: true, field: 'allWomenBand', headerLabel: 'All women', sortable: true, handleSort: handleSortBoolean,
-      tagList: booleanTagList, tag: true
-    },
-    {
-      filter: false, visible: false, field: 'sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean,
-      tagList: booleanTagList, tag: true
-    },
-    { filter: true, visible: false, field: 'currentVocalists', headerLabel: 'Nº Voc.', sortable: true, format: (col) => col.currentVocalists.length },
-    { filter: true, visible: true, field: 'currentVocalists', headerLabel: 'Vocalists', },
-    { filter: true, visible: false, field: 'pastVocalists', headerLabel: 'Past Vo.', },
-    { filter: true, visible: true, field: 'country', headerLabel: 'Country', sortable: true },
-    { filter: true, visible: true, format: formatYearsActive, headerLabel: 'Active for', sortable: true },
-    { filter: true, visible: false, format: formatActiveYears, headerLabel: 'Years Active', sortable: true },
-  ];
-  return cols.map(col => {
-    if (col.key == undefined) col.key = crypto.randomUUID();
-    return col;
-  })
-}, [])
 
-const handleGrowlFilter = React.useCallback((val) => {
-  if (growFilterOptions.find(filter => filter.value.toString() === val)) {
-    setGrowlFilter(val)
-    filterByGrow(val)
+  const columns = React.useMemo(() => {
+    const cols: TableColumn[] = [
+      { filter: true, visible: true, field: 'band', formatElement: formatBandNameLinks, headerLabel: 'Band', sortable: true },
+      {
+        filter: false, visible: true, field: 'growling', headerLabel: 'Growling', sortable: true,
+        tagList: growTagList, tag: true, sort: 'desc', sortWithRawValue: true,
+      },
+      {
+        filter: false, visible: true, headerLabel: 'Status', handleSort: handleSortBoolean, sortable: true,
+        format: (cols) => !cols.yearEnded, tag: true, tagList: statusTagList
+      },
+      {
+        filter: false, visible: false, field: 'blackWomen', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean,
+        tagList: booleanTagList, tag: true
+      },
+      {
+        filter: false, visible: true, field: 'allWomenBand', headerLabel: 'All women', sortable: true, handleSort: handleSortBoolean,
+        tagList: booleanTagList, tag: true
+      },
+      {
+        filter: false, visible: false, field: 'sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean,
+        tagList: booleanTagList, tag: true
+      },
+      { filter: true, visible: false, field: 'currentVocalists', headerLabel: 'Nº Voc.', sortable: true, format: (col) => col.currentVocalists.length },
+      { filter: true, visible: true, field: 'currentVocalists', headerLabel: 'Vocalists', },
+      { filter: true, visible: false, field: 'pastVocalists', headerLabel: 'Past Vo.', },
+      { filter: true, visible: true, field: 'country', headerLabel: 'Country', sortable: true },
+      { filter: true, visible: true, format: formatYearsActive, headerLabel: 'Active for', sortable: true },
+      { filter: true, visible: false, format: formatActiveYears, headerLabel: 'Years Active', sortable: true },
+    ];
+    return cols.map(col => {
+      if (col.key == undefined) col.key = crypto.randomUUID();
+      return col;
+    })
+  }, [])
+
+  const handleGrowlFilter = React.useCallback((val) => {
+    if (growFilterOptions.find(filter => filter.value.toString() === val)) {
+      setGrowlFilter(val)
+      filterByGrow(val)
+    }
+  }, []);
+
+  function downloadAll() {
+    const content = Papa.unparse(initialBandList, {
+      quotes: false,
+      delimiter: ",",
+      header: true,
+      newline: "\r\n",
+      skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
+      columns: null //or array of strings
+    }
+    );
+
+    downloadCsvFile(content, 'women-frontend-metal-bands.csv')
   }
-}, []);
 
-function downloadAll() {
-  const content = Papa.unparse(initialBandList, {
-    quotes: false,
-    delimiter: ",",
-    header: true,
-    newline: "\r\n",
-    skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
-    columns: null //or array of strings
+  function downloadFiltered() {
+    const content = Papa.unparse(bands, {
+      quotes: false,
+      delimiter: ",",
+      header: true,
+      newline: "\r\n",
+      skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
+      columns: null //or array of strings
+    }
+    );
+
+    downloadCsvFile(content, 'women-frontend-metal-bands filtered-list.csv')
   }
-  );
 
-  downloadCsvFile(content, 'women-frontend-metal-bands.csv')
-}
+  return < section >
+    <div className='flex flex-col gap-8 items-center'>
+      <h2 className="title1">
+        The List
+      </h2>
 
-function downloadFiltered() {
-  const content = Papa.unparse(bands, {
-    quotes: false,
-    delimiter: ",",
-    header: true,
-    newline: "\r\n",
-    skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
-    columns: null //or array of strings
-  }
-  );
-
-  downloadCsvFile(content, 'women-frontend-metal-bands filtered-list.csv')
-}
-
-return < section >
-  <div className='flex flex-col gap-8 items-center'>
-    <h2 className="title1">
-      The List
-    </h2>
-
-    <div className='flex flex-col gap-2 text-center'>
-      <p className='title2'>
-        {initialBandList.length} bands
-      </p>
-      {initialBandList.length !== bands.length && (
-        <small className='title2'>
-          (filtered: {bands.length} bands)
-        </small>
-      )}
-    </div>
-
-    <div className='flex flex-row items-center gap-3'>
-      <Download size={20} />
-      <span className='label'>Download</span>
-      <button className='button' onClick={downloadAll}>
-        List
-      </button>
-      <button className='button' onClick={downloadFiltered} >
-        Filtered list
-      </button>
-    </div>
-
-  </div>
-
-  <DataTable
-    isFiltered={growlFilter !== 'viewAll'}
-    rows={bands}
-    columns={columns}
-    pageSize={10}
-    handleRowChange={setBands}
-    gridMode={displayMode === 'grid'}
-    rowIdName="deezerId"
-    onRowClick={playRecommendedTrack}
-  >
-
-    <div className='flex flex-row items-center mb-16 justify-between'>
-      <div className='flex flex-row items-center gap-3'>
-        <Filter size={20} />
-        <span className='label'>Growling intensity</span>
-        <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
-          onChange={handleGrowlFilter} />
+      <div className='flex flex-col gap-2 text-center'>
+        <p className='title2'>
+          {initialBandList.length} bands
+        </p>
+        {initialBandList.length !== bands.length && (
+          <small className='title2'>
+            (filtered: {bands.length} bands)
+          </small>
+        )}
       </div>
 
       <div className='flex flex-row items-center gap-3'>
-        <span className='label'>Display mode</span>
-        <ToogleGroupButton list={displayOptions} currentValue={displayMode}
-          onChange={setIsDisplayMode} />
+        <Download size={20} />
+        <span className='label'>Download</span>
+        <button className='button' onClick={downloadAll}>
+          List
+        </button>
+        <button className='button' onClick={downloadFiltered} >
+          Filtered list
+        </button>
       </div>
 
     </div>
 
-  </DataTable>
+    <DataTable
+      isFiltered={growlFilter !== 'viewAll'}
+      rows={bands}
+      columns={columns}
+      pageSize={10}
+      handleRowChange={setBands}
+      gridMode={displayMode === 'grid'}
+      rowIdName="deezerId"
+      onRowClick={playRecommendedTrack}
+    >
 
-</section >;
+      <div className='flex flex-row items-center mb-16 justify-between'>
+        <div className='flex flex-row items-center gap-3'>
+          <Filter size={20} />
+          <span className='label'>Growling intensity</span>
+          <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
+            onChange={handleGrowlFilter} />
+        </div>
+
+        <div className='flex flex-row items-center gap-3'>
+          <span className='label'>Display mode</span>
+          <ToogleGroupButton list={displayOptions} currentValue={displayMode}
+            onChange={setIsDisplayMode} />
+        </div>
+
+      </div>
+
+    </DataTable>
+
+  </section >;
 }
 
 export default BandsTable;

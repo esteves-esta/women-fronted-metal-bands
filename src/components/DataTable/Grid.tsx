@@ -4,30 +4,33 @@ import * as classes from './Table.module.css';
 import Tag from '../Tag';
 import { TableColumn } from './TableProps';
 
-function Grid({ columns, rows, size, currentPage, rowIdName }) {
+function Grid({ columns, rows, size, currentPage, rowIdName, onRowClick }) {
   const start = React.useMemo(() => currentPage * size, [size, currentPage]);
   const end = React.useMemo(() => size * (currentPage + 1), [size, currentPage]);
   return (
     <div className={classes.grid}>
-      {range(start, end).map((rowIndex) => rowIndex < rows.length && (
-        <div key={rowIndex} className={classes.card}>
-          
-          {rows[rowIndex].img && <img src={rows[rowIndex].img.src} alt={rows[rowIndex].img.alt} />}
-          
-          {!rows[rowIndex].img && <div className={classes.cardImgPlaceholder} />}
+      {range(start, end).map((rowIndex) => {
+        const row = rows[rowIndex]
+        return rowIndex < rows.length && (
+          <div key={rowIndex} className={row.selected ? `${classes.cardSelected} ${classes.card}` : classes.card} onClick={() => onRowClick(row)}>
 
-          <div className={classes.cardBody}>
-            <ul>
-              <GridList
-                rows={rows}
-                rowIndex={rowIndex}
-                columns={columns}
-              />
-            </ul>
-          </div>
+            {row.img && <img src={row.img.src} alt={row.img.alt} />}
 
-        </div>
-      ))}
+            {!row.img && <div className={classes.cardImgPlaceholder} />}
+
+            <div className={classes.cardBody}>
+              <ul>
+                <GridList
+                  rows={rows}
+                  rowIndex={rowIndex}
+                  columns={columns}
+                />
+              </ul>
+            </div>
+
+          </div>)
+      }
+      )}
     </div>
   )
 }

@@ -175,6 +175,7 @@ function DataTable({
           rows={rows}
           currentPage={currentPage}
           rowIdName={rowIdName}
+          onRowClick={onRowClick}
         />
       )}
 

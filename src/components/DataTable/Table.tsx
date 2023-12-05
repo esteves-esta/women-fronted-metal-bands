@@ -140,19 +140,19 @@ function TableRow({ currentPage, size, rows, columns, rowIdName, onRowClick }) {
   const end = size * (currentPage + 1);
   const [rowSelected, setRowSelected] = React.useState(null);
 
-  function selectRow(row) {
+  /* function selectRow(row) {
     setRowSelected(row[rowIdName])
     onRowClick(row)
-  }
+  } */
   return (
     <React.Fragment>
       {range(start, end).map((rowIndex) => {
         const row = rows[rowIndex];
         return rowIndex < rows.length && (
           <tr
-            className={rowSelected === row[rowIdName] ? classes.rowSelected : ``}
+            className={row.selected ? classes.rowSelected : ``}
             key={row[rowIdName]}
-            onClick={() => selectRow(row)}>
+            onClick={() => onRowClick(row)}>
               
             <TableColumns rows={rows} rowIndex={rowIndex} columns={columns} />
           </tr>

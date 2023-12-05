@@ -30,6 +30,11 @@
   justify-content: center;
 }
 
+.summary {
+  /* background-color: red; */
+  width: 200px;
+}
+
 .summary small {
   color: var(--text-secondary);
 }
