@@ -2,6 +2,8 @@ import React from 'react';
 import useSWR from 'swr';
 import { BandContext } from '../BandsProvider';
 
+const DEEZER_EMPTY_PICTURE = 'https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg'
+
 const CROSS_PROXY2 = 'https://cors-anywhere.herokuapp.com/'
 const CROSS_PROXY1 = 'https://corsproxy.github.io/'
 const DEEZER_API = 'https://api.deezer.com/'
@@ -21,6 +23,7 @@ function DeezerProvider({ children }) {
   const [trackId, setTrackId] = React.useState(null);
   const [previewTrack, setPreviewTrack] = React.useState(null);
   const [bandTopTrack, setBandTopTrack] = React.useState(null);
+  const [artistId, setArtistId] = React.useState(null);
   const [currentBandId, setCurrentBandId] = React.useState();
   const [isPlaying, setIsPlaying] = React.useState(false);
 
@@ -31,10 +34,50 @@ function DeezerProvider({ children }) {
   const { data: topTrackInfo, error: topTrackError, isLoading: topTrackIsLoading } = useSWR(bandTopTrack ? `artist/${bandTopTrack}/top?index=0&limit=1` : null,
     fetcher
   );
+  const { data: artist, isLoading: artistLoading } = useSWR(artistId ? `artist/${artistId}` : null,
+    fetcher
+  );
+
+
+  const getArtistPicture = React.useCallback((bandId) => {
+    const foundBand = bands.find(band => band.deezerId === bandId);
+    if (!foundBand) return;
+    if (!foundBand.deezerPicture) return;
+
+    setArtistId(founbandId)
+  }, [])
+
+  React.useEffect(() => {
+    if (artist === undefined) return;
+
+    const bandIndex = bands.findIndex(band => band.deezerId === artistId)
+    if (bandIndex < 0) return;
+
+    const newBands = [...bands]
+    newBands[bandIndex].deezerPicture = artist.picture_medium
+    setBands(newBands)
+  }, [artist])
+
+  React.useEffect(() => {
+    if (artist === undefined) return;
+
+    const bandIndex = bands.findIndex(band => band.deezerId === artistId)
+    if (bandIndex < 0) return;
+
+    const newBands = [...bands]
+    if (artist.picture_big === DEEZER_EMPTY_PICTURE) newBands[bandIndex].emptyPicture = true
+
+    newBands[bandIndex].deezerPicture = artist.picture_big
+    setBands(newBands)
+  }, [artist])
 
   const getTrackPreview = React.useCallback((bandId) => {
     const foundBand = bands.find(band => band.deezerId === bandId);
     if (!foundBand) return;
+
+    if (!foundBand.deezerPicture) {
+      setArtistId(foundBand.deezerId)
+    }
 
     if (!foundBand.deezerRecommendationId) {
       setCurrentBandId(bandId)
@@ -106,7 +149,8 @@ function DeezerProvider({ children }) {
       isPlaying,
       setIsPlaying,
       getTrackPreview,
-      playNextTrack
+      playNextTrack,
+      getArtistPicture
     }
   }, [previewTrack, currentBandId, isPlaying, trackIsLoading, topTrackIsLoading]);
 

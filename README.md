@@ -17,15 +17,14 @@ I didn’t add genres of the bands as some don’t have it on there websites and
 - [x] Download all data and filtered data in .csv format
 - [x] Change page size
 - [x] Show/Hide columns
+- [x] Use deezer API to:
+  - [x] Get image of the band
+  - [x] Be able to listen to a preview of a song on the page
 ### ✍️ Todo
-- [ ] Use deezer API to:
-  - [ ] Get image of the band
-  - [ ] Be able to listen to a preview of a song on the page
-- [ ] Like songs and:
-  - [ ]  export as csv
-  - [ ]  using deezer api - create a new playlist and add list of liked songs
 - [ ] Graphs
 - [ ] Publish on GitHub Pages
+- [ ] Like songs and:
+  - [ ]  export as csv
 
 ---
 

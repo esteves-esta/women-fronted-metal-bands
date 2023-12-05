@@ -219,6 +219,7 @@ select.search {
 
 .card {
   width: 100%;
+  /* min-height: 660px; */
   border: 1px solid var(--border-color);
   border-radius: 6px;
 }
@@ -241,14 +242,14 @@ select.search {
 .cardImgPlaceholder {
   border-top-left-radius: var(--border);
   border-top-right-radius: var(--border);
-  height: 200px;
+  height: 300px;
   width: 100%;
   background: #2C0732;
   background: linear-gradient(143deg, #000 7.25%, #2C0732 57.22%, rgba(42, 1, 49, 0.91) 89.5%),
 }
 
 .card img {
-  height: 200px;
+  /* height: 300px; */
   width: 100%;
   border-radius: var(--border);
 
@@ -264,6 +265,7 @@ select.search {
 }
 
 .cardBody {
+  height: fit-content;
   padding: 10px 15px;
 }
 

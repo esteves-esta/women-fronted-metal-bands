@@ -12,11 +12,12 @@ function Grid({ columns, rows, size, currentPage, rowIdName, onRowClick }) {
       {range(start, end).map((rowIndex) => {
         const row = rows[rowIndex]
         return rowIndex < rows.length && (
-          <div key={rowIndex} className={row.selected ? `${classes.cardSelected} ${classes.card}` : classes.card} onClick={() => onRowClick(row)}>
+          <div key={row[rowIdName]} className={row.selected ? `${classes.cardSelected} ${classes.card}` : classes.card} onClick={() => onRowClick(row)}>
 
-            {row.img && <img src={row.img.src} alt={row.img.alt} />}
-
-            {!row.img && <div className={classes.cardImgPlaceholder} />}
+            {row.deezerPicture && !row.emptyPicture && <img src={row.deezerPicture} alt="Picture of the band" />}
+            {/* {!row.deezerPicture && row.emptyPicture && <div className={classes.cardImgPlaceholder} />} */}
+            {row.deezerTrackInfo && row.emptyPicture && <img src={row.deezerTrackInfo.album.cover_medium} alt={`Cover of album: ${row.deezerTrackInfo.albumtitle}`} />}
+            {!row.deezerPicture && !row.deezerTrackInfo && <div className={classes.cardImgPlaceholder} />}
 
             <div className={classes.cardBody}>
               <ul>
@@ -68,7 +69,7 @@ function GridItem({ column, row }:
     if (Array.isArray(colValue)) {
       return (<ul>
         {colValue.map((col, index) => (
-          <p>{col}{colValue.length - 1 > index && ','}</p>
+          <p key={index}>{col}{colValue.length - 1 > index && ','}</p>
         ))}
       </ul>
       )
