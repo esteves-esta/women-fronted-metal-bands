@@ -7,7 +7,7 @@
 }
 
 .rowSelected {
-  background-color: var(--bg-tertiary) !important;
+  background-color: var(--bg-6) !important;
 }
 
 .table tbody tr:nth-child(odd) {
@@ -226,7 +226,7 @@ select.search {
 
 .cardSelected {
   transition: all 0.5s ease;
-  background-color: var(--bg-4) !important;
+  background-color: var(--bg-6) !important;
 }
 
 .card:hover {
@@ -283,7 +283,7 @@ select.search {
   justify-content: space-between;
   align-items: center;
   vertical-align: middle;
-  border-bottom: 0.01em dashed var(--border-color);
+  border-bottom: 0.01em dashed var(--bg-5);
 }
 
 .cardBody ul li:last-child {
