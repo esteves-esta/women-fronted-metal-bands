@@ -3,6 +3,11 @@ A list of metal bands with women as lead vocalist (with focus on women that can 
 
 ![Header image written women fronted metal bands](/header-readme.png "Header")
 
+> ### Access app on the link:
+> ### https://esteves-esta.github.io/women-fronted-metal-bands/
+
+---
+
 This project is a list of the bands of diferent metal genres and also an way of me to pratice frontend. 
 
 I didn’t add genres of the bands as some don’t have it on there websites and a lot of bands change with time, so instead of genre you can filter bands by how much growling the singer can / or usually do on the songs of the band.
@@ -20,8 +25,8 @@ I didn’t add genres of the bands as some don’t have it on there websites and
 - [x] Use deezer API to:
   - [x] Get image of the band
   - [x] Be able to listen to a preview of a song on the page
+- [x] [Published on GitHub Pages](https://esteves-esta.github.io/women-fronted-metal-bands/)
 ### ✍️ Todo
-- [ ] Publish on GitHub Pages
 - [ ] Graphs
 - [ ] Like songs and:
   - [ ]  export as csv
