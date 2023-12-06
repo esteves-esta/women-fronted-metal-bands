@@ -34,9 +34,40 @@ I didn’t add genres of the bands as some don’t have it on there websites and
 ---
 
 ## 🧰 Tech Stack
-// TODO
+
+- Vite
+- React
+- Typescript
+- Lucide React
+- Tailwind CSS
+- Papaparse
+- SWR
+- Radix-UI - unstyled
 
 ---
 
 ## 🚀 How to run locally
-// TODO
+
+1. Install packages
+
+      ```
+      npm i 
+      ```
+      
+      or
+
+      ```
+      yarn i
+      ```
+
+2. Run dev server
+
+      ```
+      npm run dev 
+      ```
+      
+      or
+
+      ```
+      yarn dev
+      ```
