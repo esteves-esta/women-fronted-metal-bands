@@ -1,4 +1,3 @@
-import { Table } from 'lucide-react';
 import * as React from 'react';
 import { range } from '../../helpers/range';
 import classes from './Table.module.css';

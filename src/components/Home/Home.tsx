@@ -1,4 +1,3 @@
-import * as React from 'react';
 import MediaPlayer from '../MediaPlayer'
 import BandsTable from '../BandsTable';
 

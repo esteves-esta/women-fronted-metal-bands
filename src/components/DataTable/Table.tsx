@@ -138,12 +138,7 @@ function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumnProps, s
 function TableRow({ currentPage, size, rows, columns, rowIdName, onRowClick }) {
   const start = currentPage * size;
   const end = size * (currentPage + 1);
-  const [rowSelected, setRowSelected] = React.useState(null);
 
-  /* function selectRow(row) {
-    setRowSelected(row[rowIdName])
-    onRowClick(row)
-  } */
   return (
     <React.Fragment>
       {range(start, end).map((rowIndex) => {

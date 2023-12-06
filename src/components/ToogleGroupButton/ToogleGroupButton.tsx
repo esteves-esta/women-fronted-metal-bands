@@ -1,4 +1,3 @@
-import * as React from 'react';
 import classes from './ToogleGroupButton.module.css';
 import * as ToggleGroup from '@radix-ui/react-toggle-group';
 import { LucideIcon } from 'lucide-react';

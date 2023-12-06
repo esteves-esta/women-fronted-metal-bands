@@ -32,8 +32,7 @@ function DataTable({
   children,
   gridMode = false,
   rowIdName,
-  onRowClick,
-  ...delegated
+  onRowClick
 }: Props) {
 
   const [initialRow] = React.useState([...rows]);

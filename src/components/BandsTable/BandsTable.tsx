@@ -5,7 +5,7 @@ import { DeezerContext } from '../DeezerProvider';
 import { booleanTagList, growTagList } from '../../constants';
 import { downloadCsvFile } from '../../helpers/downloadCsvFile'
 import ToogleGroupButton from '../ToogleGroupButton/ToogleGroupButton';
-import { Filter, ExternalLink, Table2, Grid, Download, Play, Pause } from 'lucide-react';
+import { Filter, ExternalLink, Table2, Grid, Download } from 'lucide-react';
 import Papa from 'papaparse';
 import { TagInfo } from '../Tag';
 import { TableColumn } from '../DataTable/TableProps';
@@ -15,7 +15,7 @@ function BandsTable() {
   const [growlFilter, setGrowlFilter] = React.useState('viewAll')
   const [displayMode, setIsDisplayMode] = React.useState('table')
 
-  const { getTrackPreview, currentBandId, trackIsLoading, isPlaying } = React.useContext(DeezerContext)
+  const { getTrackPreview, currentBandId, trackIsLoading } = React.useContext(DeezerContext)
 
   const growFilterOptions = React.useMemo(() => [
     { value: 'viewAll', text: 'View All' },
