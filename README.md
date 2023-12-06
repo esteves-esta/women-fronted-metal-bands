@@ -21,8 +21,8 @@ I didn’t add genres of the bands as some don’t have it on there websites and
   - [x] Get image of the band
   - [x] Be able to listen to a preview of a song on the page
 ### ✍️ Todo
-- [ ] Graphs
 - [ ] Publish on GitHub Pages
+- [ ] Graphs
 - [ ] Like songs and:
   - [ ]  export as csv
 

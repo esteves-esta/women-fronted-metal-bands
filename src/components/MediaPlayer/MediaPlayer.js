@@ -42,26 +42,26 @@ function MediaPlayer() {
       }
     }
 
-    progressBarRef.current?.addEventListener("click", seek);
+    progressBarRef.current.addEventListener("click", seek);
     return () => {
-      progressBarRef.current?.removeEventListener("click", seek);
+      progressBarRef.current.removeEventListener("click", seek);
     };
   }, []);
 
   React.useEffect(() => {
     if (isPlaying) {
-      audioRef.current?.play();
+      audioRef.current.play();
     } else {
-      audioRef.current?.pause();
+      audioRef.current.pause();
     }
   }, [isPlaying]);
 
   React.useEffect(() => {
-    if (audioRef.current?.readyState === 0) setIsPlaying(!isPlaying)
+    if (src && audioRef.current.readyState === 0) setIsPlaying(!isPlaying)
   }, [src]);
 
   React.useEffect(() => {
-    const time = Math.round(audioRef.current?.currentTime)
+    const time = Math.round(audioRef.current.currentTime)
     setCurrentTimeFormatted(time < 10 ? `0${time}` : time)
   }, [audioRef.current?.currentTime]);
 
@@ -96,6 +96,7 @@ function MediaPlayer() {
     <div className={classes.mediaPlayer} style={{ display: src ? 'block' : 'none' }}>
       <div className={classes.info}>
         <AudioLines />
+        <p className="label">Playing preview via deezer api</p>
       </div>
 
       <div className={classes.mediaPlayerBody} >
