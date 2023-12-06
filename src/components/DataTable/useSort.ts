@@ -55,7 +55,7 @@ function useSort({
     }
 
     const sortedData = [...rows];
-    console.log("oi boolean value");
+
     if (handleSort && field) {
       sortedData.sort((a, b) =>
         handleSort(

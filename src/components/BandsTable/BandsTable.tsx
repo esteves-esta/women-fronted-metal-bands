@@ -82,19 +82,19 @@ function BandsTable() {
         tagList: growTagList, tag: true, sort: 'desc', sortWithRawValue: true,
       },
       {
-        filter: false, visible: true, headerLabel: 'Status', handleSort: handleSortBoolean, sortable: true,
+        filter: false, visible: true, headerLabel: 'Status', handleSort: handleSortBoolean, sortWithRawValue: true, sortable: true,
         format: (cols) => !cols.yearEnded, tag: true, tagList: statusTagList
       },
       {
-        filter: false, visible: false, field: 'blackWomen', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean,
+        filter: false, visible: false, field: 'blackWomen', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean, sortWithRawValue: true,
         tagList: booleanTagList, tag: true
       },
       {
-        filter: false, visible: true, field: 'allWomenBand', headerLabel: 'All women', sortable: true, handleSort: handleSortBoolean,
+        filter: false, visible: true, field: 'allWomenBand', headerLabel: 'All women', sortable: true, handleSort: handleSortBoolean, sortWithRawValue: true,
         tagList: booleanTagList, tag: true
       },
       {
-        filter: false, visible: false, field: 'sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean,
+        filter: false, visible: false, field: 'sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean, sortWithRawValue: true,
         tagList: booleanTagList, tag: true
       },
       { filter: true, visible: false, field: 'currentVocalists', headerLabel: 'Nº Voc.', sortable: true, format: (col) => col.currentVocalists.length },
