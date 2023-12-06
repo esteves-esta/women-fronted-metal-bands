@@ -1,21 +1,21 @@
 import * as React from 'react';
+import { Filter, ExternalLink, Table2, Grid, Download } from 'lucide-react';
+import { booleanTagList, growTagList } from '../../constants';
+import { TableColumn } from '../DataTable/TableProps';
 import DataTable from '../DataTable'
 import { BandContext } from '../BandsProvider';
 import { DeezerContext } from '../DeezerProvider';
-import { booleanTagList, growTagList } from '../../constants';
-import { downloadCsvFile } from '../../helpers/downloadCsvFile'
-import ToogleGroupButton from '../ToogleGroupButton/ToogleGroupButton';
-import { Filter, ExternalLink, Table2, Grid, Download } from 'lucide-react';
-import Papa from 'papaparse';
+import ToogleGroupButton from '../ToogleGroupButton';
 import { TagInfo } from '../Tag';
-import { TableColumn } from '../DataTable/TableProps';
 
 function BandsTable() {
-  const { bands, initialBandList, setBands, filterByGrow } = React.useContext(BandContext)
+  const { bands, initialBandList, setBands, filterByGrow, downloadAll,
+    downloadFiltered } = React.useContext(BandContext)
+  const { getTrackPreview, currentBandId, trackIsLoading } = React.useContext(DeezerContext)
+
   const [growlFilter, setGrowlFilter] = React.useState('viewAll')
   const [displayMode, setIsDisplayMode] = React.useState('table')
 
-  const { getTrackPreview, currentBandId, trackIsLoading } = React.useContext(DeezerContext)
 
   const growFilterOptions = React.useMemo(() => [
     { value: 'viewAll', text: 'View All' },
@@ -117,34 +117,6 @@ function BandsTable() {
     }
   }, []);
 
-  function downloadAll() {
-    const content = Papa.unparse(initialBandList, {
-      quotes: false,
-      delimiter: ",",
-      header: true,
-      newline: "\r\n",
-      skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
-      columns: null //or array of strings
-    }
-    );
-
-    downloadCsvFile(content, 'women-frontend-metal-bands.csv')
-  }
-
-  function downloadFiltered() {
-    const content = Papa.unparse(bands, {
-      quotes: false,
-      delimiter: ",",
-      header: true,
-      newline: "\r\n",
-      skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
-      columns: null //or array of strings
-    }
-    );
-
-    downloadCsvFile(content, 'women-frontend-metal-bands filtered-list.csv')
-  }
-
   return < section >
     <div className='flex flex-col gap-8 items-center'>
       <h2 className="title1">
@@ -184,6 +156,19 @@ function BandsTable() {
       gridMode={displayMode === 'grid'}
       rowIdName="deezerId"
       onRowClick={playRecommendedTrack}
+      gridImage={(row) => {
+        if (row.deezerPicture && !row.emptyPicture)
+          return {
+            src: row.deezerPicture,
+            alt: "Picture of the band"
+          }
+        if (row.deezerTrackInfo && row.emptyPicture)
+          return {
+            src: row.deezerTrackInfo.album.cover_medium,
+            alt: `Cover of album: ${row.deezerTrackInfo.albumtitle}`
+          }
+        return { src: null, alt: null }
+      }}
     >
 
       <div className='flex flex-row items-center mb-16 justify-between'>

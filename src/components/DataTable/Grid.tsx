@@ -4,20 +4,19 @@ import classes from './Table.module.css';
 import Tag from '../Tag';
 import { TableColumn } from './TableProps';
 
-function Grid({ columns, rows, size, currentPage, rowIdName, onRowClick }) {
+function Grid({ columns, rows, size, currentPage, rowIdName, onRowClick, gridImage }) {
   const start = React.useMemo(() => currentPage * size, [size, currentPage]);
   const end = React.useMemo(() => size * (currentPage + 1), [size, currentPage]);
   return (
     <div className={classes.grid}>
       {range(start, end).map((rowIndex) => {
         const row = rows[rowIndex]
+        const imageSrc = gridImage(row)
         return rowIndex < rows.length && (
           <div key={row[rowIdName]} className={row.selected ? `${classes.cardSelected} ${classes.card}` : classes.card} onClick={() => onRowClick(row)}>
 
-            {row.deezerPicture && !row.emptyPicture && <img src={row.deezerPicture} alt="Picture of the band" />}
-            {/* {!row.deezerPicture && row.emptyPicture && <div className={classes.cardImgPlaceholder} />} */}
-            {row.deezerTrackInfo && row.emptyPicture && <img src={row.deezerTrackInfo.album.cover_medium} alt={`Cover of album: ${row.deezerTrackInfo.albumtitle}`} />}
-            {!row.deezerPicture && !row.deezerTrackInfo && <div className={classes.cardImgPlaceholder} />}
+            {imageSrc.src && <img src={imageSrc.src} alt={imageSrc.alt} />}
+            {!imageSrc.src && <div className={classes.cardImgPlaceholder} />} 
 
             <div className={classes.cardBody}>
               <ul>

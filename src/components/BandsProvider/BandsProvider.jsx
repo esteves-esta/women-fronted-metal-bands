@@ -1,5 +1,7 @@
 import * as React from "react";
 import list from "../../../list-of-metal-bands/list.json";
+import Papa from 'papaparse';
+import { downloadCsvFile } from '../../helpers/downloadCsvFile'
 
 export const BandContext = React.createContext();
 
@@ -21,7 +23,42 @@ function BandsProvider({ children }) {
     }
   };
 
-  const state = { initialBandList, bands, filterByGrow, setBands };
+  function downloadAll() {
+    const content = Papa.unparse(initialBandList, {
+      quotes: false,
+      delimiter: ",",
+      header: true,
+      newline: "\r\n",
+      skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
+      columns: null //or array of strings
+    }
+    );
+
+    downloadCsvFile(content, 'women-frontend-metal-bands.csv')
+  }
+
+  function downloadFiltered() {
+    const content = Papa.unparse(bands, {
+      quotes: false,
+      delimiter: ",",
+      header: true,
+      newline: "\r\n",
+      skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
+      columns: null //or array of strings
+    }
+    );
+
+    downloadCsvFile(content, 'women-frontend-metal-bands filtered-list.csv')
+  }
+
+  const state = {
+    initialBandList,
+    bands,
+    filterByGrow,
+    setBands,
+    downloadAll,
+    downloadFiltered
+  };
 
   return <BandContext.Provider value={state}>{children}</BandContext.Provider>;
 }

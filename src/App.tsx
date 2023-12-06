@@ -5,7 +5,6 @@ import Home from './components/Home'
 import { Github } from 'lucide-react';
 
 function App() {
-  console.log('changes')
   const year = new Date().getFullYear()
 
   React.useEffect(() => {

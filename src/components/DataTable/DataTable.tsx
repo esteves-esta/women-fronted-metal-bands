@@ -20,6 +20,7 @@ interface Props {
   children?: any
   rowIdName: string
   onRowClick?: (row) => void
+  gridImage?: (row) => { src: string | null, alt: string | null }
 }
 
 function DataTable({
@@ -32,7 +33,8 @@ function DataTable({
   children,
   gridMode = false,
   rowIdName,
-  onRowClick
+  onRowClick,
+  gridImage
 }: Props) {
 
   const [initialRow] = React.useState([...rows]);
@@ -87,7 +89,6 @@ function DataTable({
           const col = columns.find(col => col.key === colKey)
           if (col) {
             let colValue = getValueFromRow(col, row)
-            console.log({ colValue })
             if (typeof colValue === 'number')
               return colValue == Number(searchValue)
             else
@@ -175,6 +176,7 @@ function DataTable({
           currentPage={currentPage}
           rowIdName={rowIdName}
           onRowClick={onRowClick}
+          gridImage={gridImage}
         />
       )}
 
