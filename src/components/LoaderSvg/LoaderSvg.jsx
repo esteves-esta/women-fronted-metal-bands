@@ -1,5 +1,5 @@
 import React from 'react';
-import * as classes from './LoaderSvg.module.css';
+import classes from './LoaderSvg.module.css';
 // credits: https://codepen.io/aurer/pen/ZEJxpO?editors=1100
 
 function LoaderSvg() {

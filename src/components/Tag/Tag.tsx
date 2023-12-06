@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as classes from './Tag.module.css';
+import classes from './Tag.module.css';
 
 type Notification = 'success' | 'info' | 'danger' | 'warning'
 type Deep = 'deep-1' | 'deep-2' | 'deep-3' | 'deep-4' | 'dark'

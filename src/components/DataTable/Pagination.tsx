@@ -1,7 +1,7 @@
 import { Table } from 'lucide-react';
 import * as React from 'react';
 import { range } from '../../helpers/range';
-import * as classes from './Table.module.css';
+import classes from './Table.module.css';
 import { ChevronRight, ChevronLeft, ChevronsRight, ChevronsLeft } from 'lucide-react';
 import * as ToggleGroup from '@radix-ui/react-toggle-group';
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as classes from './Table.module.css';
+import classes from './Table.module.css';
 import { Search } from 'lucide-react';
 
 function TableFilter({ onChange, columns, className }) {

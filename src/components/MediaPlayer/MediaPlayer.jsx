@@ -2,7 +2,7 @@
 {/* https://dev.to/lukewduncan/how-to-build-an-audio-player-with-html5-and-the-progress-element-387m */ }
 import React from "react";
 import { PlayCircle, PauseCircle, Volume1, Volume2, VolumeX, AudioLines } from "lucide-react";
-import * as classes from './MediaPlayer.module.css';
+import classes from './MediaPlayer.module.css';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { DeezerContext } from '../DeezerProvider';
 import LoaderSvg from '../LoaderSvg'
@@ -49,6 +49,10 @@ function MediaPlayer() {
   }, []);
 
   React.useEffect(() => {
+    audioRef.current.volume = 0.4;
+  }, [])
+
+  React.useEffect(() => {
     if (isPlaying) {
       audioRef.current.play();
     } else {
@@ -73,7 +77,7 @@ function MediaPlayer() {
   function changeVolume() {
     switch (volume) {
       case 1:
-        audioRef.current.volume = 0.6;
+        audioRef.current.volume = 0.8;
         setVolume(2)
         break;
       case 2:
@@ -81,7 +85,7 @@ function MediaPlayer() {
         setVolume(0)
         break;
       case 0:
-        audioRef.current.volume = 0.3;
+        audioRef.current.volume = 0.4;
         setVolume(1)
         break;
 
@@ -132,7 +136,7 @@ function MediaPlayer() {
 
           {!!audioRef.current?.duration &&
             (<p className="mb-0 font-bold">
-              00:{currentTimeFormatted} 
+              00:{currentTimeFormatted}
               {/* / 00:{Math.round(audioRef.current.duration)} */}
             </p>)
           }

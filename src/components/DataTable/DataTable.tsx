@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Pagination from './Pagination';
-import * as classes from './Table.module.css';
+import classes from './Table.module.css';
 import { Columns, ChevronDown, Check } from 'lucide-react';
 import TableFilter from './TableFilter';
 import Table from './Table';

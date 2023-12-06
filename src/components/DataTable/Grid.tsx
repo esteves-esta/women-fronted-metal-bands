@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { range } from '../../helpers/range';
-import * as classes from './Table.module.css';
+import classes from './Table.module.css';
 import Tag from '../Tag';
 import { TableColumn } from './TableProps';
 

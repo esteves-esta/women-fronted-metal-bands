@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { range } from '../../helpers/range';
-import * as classes from './Table.module.css';
+import classes from './Table.module.css';
 import { ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
 import { TableColumn as TableColumnProps } from './TableProps';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
