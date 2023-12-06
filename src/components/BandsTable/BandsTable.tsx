@@ -7,6 +7,7 @@ import { BandContext } from '../BandsProvider';
 import { DeezerContext } from '../DeezerProvider';
 import ToogleGroupButton from '../ToogleGroupButton';
 import { TagInfo } from '../Tag';
+import classes from './BandsTable.module.css'
 
 function BandsTable() {
   const { bands, initialBandList, setBands, filterByGrow, downloadAll,
@@ -22,15 +23,25 @@ function BandsTable() {
     ...growTagList,
   ], [])
 
+  const handleGrowlFilter = React.useCallback((val) => {
+    if (growFilterOptions.find(filter => filter.value.toString() === val)) {
+      setGrowlFilter(val)
+      filterByGrow(val)
+    }
+  }, []);
+
+  // ------------
+
   const displayOptions = React.useMemo(() => [
     { value: 'table', text: 'Table', icon: Table2, iconOnly: true },
     { value: 'grid', text: 'Grid', icon: Grid, iconOnly: true }
   ], [])
 
-  const handleSortBoolean = React.useCallback((valA, valB, sort: 'asc' | 'desc') => {
-    if (sort === 'asc') return (valA === valB) ? 0 : valA ? -1 : 1;
-    else return (valA === valB) ? 0 : valA ? 1 : -1;
-  }, [])
+  const playRecommendedTrack = React.useCallback((row) => getTrackPreview(row.deezerId), [currentBandId, trackIsLoading])
+
+
+
+  // ------------
 
   const formatYearsActive = React.useCallback((column: any) => {
     if (!column) return '';
@@ -50,12 +61,11 @@ function BandsTable() {
     if (!column) return;
     if (!column.links) return column.band;
     return (
-      <span className='flex items-center gap-3 justify-center'>
+      <span className={classes.bandName}>
         {column.band}
-        <a href={column.links} target="_blank">
+        <a href={column.links} target="_blank" onClick={(event) => event.stopPropagation()}>
           <ExternalLink size={12} />
         </a>
-
       </span>
     )
   }, [])
@@ -71,8 +81,6 @@ function BandsTable() {
     return `${column.yearStarted} - ${end}`
   }, [])
 
-  const playRecommendedTrack = React.useCallback((row) => getTrackPreview(row.deezerId), [currentBandId, trackIsLoading])
-
 
   const columns = React.useMemo(() => {
     const cols: TableColumn[] = [
@@ -82,19 +90,19 @@ function BandsTable() {
         tagList: growTagList, tag: true, sort: 'desc', sortWithRawValue: true,
       },
       {
-        filter: false, visible: true, headerLabel: 'Status', handleSort: handleSortBoolean, sortWithRawValue: true, sortable: true,
+        filter: false, visible: true, headerLabel: 'Status', sortable: true,
         format: (cols) => !cols.yearEnded, tag: true, tagList: statusTagList
       },
       {
-        filter: false, visible: false, field: 'blackWomen', headerLabel: 'Black Women', sortable: true, handleSort: handleSortBoolean, sortWithRawValue: true,
+        filter: false, visible: false, field: 'blackWomen', headerLabel: 'Black Women', sortable: true,
         tagList: booleanTagList, tag: true
       },
       {
-        filter: false, visible: true, field: 'allWomenBand', headerLabel: 'All women', sortable: true, handleSort: handleSortBoolean, sortWithRawValue: true,
+        filter: false, visible: true, field: 'allWomenBand', headerLabel: 'All women', sortable: true,
         tagList: booleanTagList, tag: true
       },
       {
-        filter: false, visible: false, field: 'sister', headerLabel: 'Sisters', sortable: true, handleSort: handleSortBoolean, sortWithRawValue: true,
+        filter: false, visible: false, field: 'sister', headerLabel: 'Sisters', sortable: true,
         tagList: booleanTagList, tag: true
       },
       { filter: true, visible: false, field: 'currentVocalists', headerLabel: 'Nº Voc.', sortable: true, format: (col) => col.currentVocalists.length },
@@ -110,12 +118,6 @@ function BandsTable() {
     })
   }, [])
 
-  const handleGrowlFilter = React.useCallback((val) => {
-    if (growFilterOptions.find(filter => filter.value.toString() === val)) {
-      setGrowlFilter(val)
-      filterByGrow(val)
-    }
-  }, []);
 
   return < section >
     <div className='flex flex-col gap-8 items-center'>
