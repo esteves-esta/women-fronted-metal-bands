@@ -11,8 +11,9 @@ function App() {
   React.useEffect(() => {
     function handleKeyDown(event) {
       // prevent scrolling when clicking on spacebar
-      if (event.keyCode === 32) {
+      if (event.keyCode === 32 && event.target == document.body) {
         event.preventDefault();
+        return false;
       }
     };
     window.addEventListener("keydown", handleKeyDown);

@@ -5,13 +5,13 @@ import { BandContext } from '../BandsProvider';
 const DEEZER_EMPTY_PICTURE = 'https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg'
 
 const CROSS_PROXY2 = 'https://cors-anywhere.herokuapp.com/'
-const CROSS_PROXY1 = 'https://corsproxy.github.io/'
+const CROSS_PROXY1 = 'https://crossorigin.me/'
 const DEEZER_API = 'https://api.deezer.com/'
 
 export const DeezerContext = React.createContext();
 
 async function fetcher(endpoint) {
-  const response = await fetch(`${CROSS_PROXY2}${DEEZER_API}${endpoint}`, {
+  const response = await fetch(`${DEEZER_API}${endpoint}`, {
     method: 'GET'
   });
   const json = await response.json();
