@@ -10,13 +10,21 @@
   background-color: var(--bg-6) !important;
 }
 
-.table tbody tr:nth-child(odd) {
-  background-color: transparent;
+tbody tr {
+  cursor: pointer;
 }
 
-.table tbody tr:nth-child(even) {
-  /* background-color: var(--bg-primary); */
+tbody tr:hover {
+  background-color: var(--bg-7);
 }
+
+/* .table tbody tr:nth-child(odd) {
+  background-color: transparent;
+} */
+
+/* .table tbody tr:nth-child(even) {
+  background-color: var(--bg-primary); 
+} */
 
 .table th,
 .table td {
@@ -74,7 +82,12 @@
   width: 100%
 }
 
-.sortBtn:hover {
+th:has(.sortBtn),
+th:has(.sortBtn) button {
+  cursor: pointer;
+}
+
+th:hover>.sortBtn {
   color: var(--color-primary-lighten1);
 }
 

@@ -135,9 +135,13 @@ function TableColumn({ row, columnInfo }: {
     if (Array.isArray(colValue)) {
       if (colValue.length === 0) return (<React.Fragment>-</React.Fragment>);
 
-      const values = colValue.map((col, index) => (
-        <p key={index}>{col}{colValue.length - 1 > index && ','}</p>
-      ))
+      const values = colValue.map((col, index) => {
+        const last = colValue.length - 1 > index
+        const only = colValue.length - 1 === index
+        return (
+          <p key={index} className={only ? "mb-0" : ""}>{col}{last && ','}</p>
+        )
+      })
       return <React.Fragment>{values}</React.Fragment>
     }
     return <React.Fragment>{colValue}</React.Fragment>

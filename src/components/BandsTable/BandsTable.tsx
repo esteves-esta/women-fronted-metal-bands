@@ -172,7 +172,6 @@ function BandsTable() {
         return { src: null, alt: null }
       }}
     >
-
       <div className='flex flex-row items-center mb-16 justify-between'>
         <div className='flex flex-row items-center gap-3'>
           <Filter size={20} />
@@ -189,6 +188,9 @@ function BandsTable() {
 
       </div>
 
+      <div className='flex justify-center mb-2'>
+        <p className='label'>Click on row to play a preview of a track of the band.</p>
+      </div>
     </DataTable>
 
   </section >;
