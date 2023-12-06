@@ -3,6 +3,7 @@ import BandsProvider from './components/BandsProvider';
 import DeezerProvider from './components/DeezerProvider';
 import Home from './components/Home'
 import { Github } from 'lucide-react';
+import ChartsPage from './components/ChartsPage';
 
 function App() {
   const year = new Date().getFullYear()
@@ -28,6 +29,10 @@ function App() {
         <main className="mx-40 my-16">
           <Home />
         </main>
+
+        <hr />
+
+        <ChartsPage />
 
         <hr />
         <footer className='mx-40 py-20 flex flew-row justify-between'>
