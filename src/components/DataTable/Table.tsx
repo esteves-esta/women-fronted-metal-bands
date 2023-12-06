@@ -2,7 +2,7 @@ import * as React from 'react';
 import { range } from '../../helpers/range';
 import * as classes from './Table.module.css';
 import { ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
-import { TableColumn } from './TableProps';
+import { TableColumn as TableColumnProps } from './TableProps';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 import Tag from '../Tag';
@@ -27,7 +27,7 @@ function Table({
     }
   }, [])
 
-  function handleSortRows(headerInfo: TableColumn, colIndex: number) {
+  function handleSortRows(headerInfo: TableColumnProps, colIndex: number) {
     let sort: 'desc' | 'asc' | undefined;
 
     const resetCols = columnsInfo.map((col, index) => {
@@ -48,7 +48,7 @@ function Table({
     sortRows(headerInfo, colIndex, sort);
   }
 
-  function sortRows(columnInfo: TableColumn, index: number, sort: 'asc' | 'desc' | undefined) {
+  function sortRows(columnInfo: TableColumnProps, index: number, sort: 'asc' | 'desc' | undefined) {
     const { field, handleSort } = columnInfo;
 
     const newColumns = [...columnsInfo]
@@ -114,7 +114,7 @@ function Table({
   )
 }
 
-function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumn, sortRows: (string) => void }) {
+function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumnProps, sortRows: (string) => void }) {
   const { sortable, headerLabel, sort } = headerInfo
 
   if (sortable) {
@@ -164,7 +164,7 @@ function TableRow({ currentPage, size, rows, columns, rowIdName, onRowClick }) {
 }
 
 function TableColumns({ columns, rowIndex, rows }: {
-  columns: TableColumn[], rowIndex: number, rows: Array<any>
+  columns: TableColumnProps[], rowIndex: number, rows: Array<any>
 }) {
   const row = rows[rowIndex]
   return <React.Fragment>
@@ -177,7 +177,7 @@ function TableColumns({ columns, rowIndex, rows }: {
 }
 
 function TableColumn({ row, columnInfo }: {
-  row: any, columnInfo: TableColumn
+  row: any, columnInfo: TableColumnProps
 }) {
   const { field, formatElement, format, tag, tagList } = columnInfo
 
