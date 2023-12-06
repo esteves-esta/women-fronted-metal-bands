@@ -1,13 +1,15 @@
 import * as React from 'react';
 import Pagination from './Pagination';
 import classes from './Table.module.css';
-import { Columns, ChevronDown, Check } from 'lucide-react';
+import { Columns, ChevronDown, Check, ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
 import TableFilter from './TableFilter';
 import Table from './Table';
 import Grid from './Grid';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { getValueFromRow } from './getValueFromRow';
 import { TableColumn } from './TableProps';
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
+import useSort from './useSort';
 
 interface Props {
   rows: Array<any>
@@ -49,6 +51,14 @@ function DataTable({
       return col;
     })
   });
+
+  const [handleSortRows] = useSort({
+    rows,
+    columnsInfo,
+    setColumnsInfo,
+    handleRowChange,
+    initialRow
+  })
 
   React.useEffect(() => {
     setLastPage(Math.ceil(rows.length / size))
@@ -146,10 +156,7 @@ function DataTable({
               </DropdownMenu.Content>
             </DropdownMenu.Portal>
           </DropdownMenu.Root>
-
-
         </div>
-
       </div>
 
       {children}
@@ -166,6 +173,31 @@ function DataTable({
           rowIdName={rowIdName}
           onRowClick={onRowClick}
         />
+      )}
+
+      {gridMode && (
+        <div className='flex flex-row gap-4 mb-5 items-center'>
+          <p className='label mb-0'>Sorting</p>
+          {columnsInfo.map((headerInfo, index) => {
+            const { sortable, headerLabel, sort, visible } = headerInfo
+
+            return sortable && visible && (
+              <button onClick={() => handleSortRows(headerInfo, index)} className='flex flex-row gap-3 items-center' key={headerInfo.key}>
+
+                {headerLabel}
+
+                {!sort && <ArrowUpDown size={15} />}
+                {sort === 'asc' && <ArrowUpAZ size={15} />}
+                {sort === 'desc' && <ArrowDownAZ size={15} />}
+                <VisuallyHidden.Root>
+                  Toggle sorting{' '}
+                  {sort || 'off'}
+                </VisuallyHidden.Root>
+              </button>)
+          }
+          )}
+        </div>
+
       )}
 
       {gridMode && (

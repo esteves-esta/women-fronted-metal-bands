@@ -6,7 +6,8 @@ import { TableColumn as TableColumnProps } from './TableProps';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 import Tag from '../Tag';
-import { getValueFromRow } from './getValueFromRow';
+import useSort from './useSort';
+
 
 function Table({
   columnsInfo,
@@ -20,73 +21,13 @@ function Table({
   onRowClick
 }) {
 
-  React.useEffect(() => {
-    const colSort = columnsInfo.findIndex(col => col.sort != undefined)
-    if (colSort >= 0) {
-      sortRows(columnsInfo[colSort], colSort, columnsInfo[colSort].sort)
-    }
-  }, [])
-
-  function handleSortRows(headerInfo: TableColumnProps, colIndex: number) {
-    let sort: 'desc' | 'asc' | undefined;
-
-    const resetCols = columnsInfo.map((col, index) => {
-      if (index !== colIndex) {
-        col.sort = undefined;
-      }
-      return col;
-    })
-
-    setColumnsInfo(resetCols)
-
-    if (columnsInfo[colIndex].sort === 'asc') {
-      sort = 'desc';
-    } else if (columnsInfo[colIndex].sort === 'desc') {
-      sort = undefined
-    } else { sort = 'asc'; }
-
-    sortRows(headerInfo, colIndex, sort);
-  }
-
-  function sortRows(columnInfo: TableColumnProps, index: number, sort: 'asc' | 'desc' | undefined) {
-    const { field, handleSort } = columnInfo;
-
-    const newColumns = [...columnsInfo]
-    newColumns[index].sort = sort
-    setColumnsInfo(newColumns);
-    if (!sort) {
-      handleRowChange([...initialRow]);
-      return
-    };
-
-    const sortedData = [...rows]
-    if (handleSort && field) {
-      sortedData.sort((a, b) => handleSort(
-        getValueFromRow(columnInfo, a),
-        getValueFromRow(columnInfo, b), sort
-      )
-      );
-
-      handleRowChange(sortedData)
-      return;
-    }
-
-    sortedData.sort((a, b) => {
-      // console.log({ field })
-      let formattedA = getValueFromRow(columnInfo, a);
-      let formattedB = getValueFromRow(columnInfo, b);
-
-      if (formattedA < formattedB) {
-        return sort === 'asc' ? -1 : 1;
-      }
-      if (formattedA > formattedB) {
-        return sort === 'asc' ? 1 : -1;
-      }
-      return 0;
-    });
-
-    handleRowChange(sortedData)
-  }
+  const [handleSortRows] = useSort({
+    rows,
+    columnsInfo,
+    setColumnsInfo,
+    handleRowChange,
+    initialRow
+  })
 
   return (
     <table className={classes.table}>
@@ -148,7 +89,7 @@ function TableRow({ currentPage, size, rows, columns, rowIdName, onRowClick }) {
             className={row.selected ? classes.rowSelected : ``}
             key={row[rowIdName]}
             onClick={() => onRowClick(row)}>
-              
+
             <TableColumns rows={rows} rowIndex={rowIndex} columns={columns} />
           </tr>
         )
