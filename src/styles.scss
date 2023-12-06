@@ -24,6 +24,7 @@ body {
   --font-family-title: 'Cinzel', serif;
   --font-family-title2: 'Lexend Peta', sans-serif;
 
+  --text-title: #fff;
   --text-color: rgba(255, 255, 255, 0.829);
   --text-secondary: #CECECE;
 
@@ -108,6 +109,7 @@ p {
 }
 
 .title1 {
+  color: var(--text-title);
   // font-family: 'Rubik', sans-serif;
   font-family: 'Cinzel', serif;
   text-transform: capitalize;
@@ -115,6 +117,7 @@ p {
 }
 
 .title2 {
+  color: var(--text-title);
   // font-family: 'Rubik Glitch', cursive;
   font-family: 'Lexend Peta', sans-serif;
   text-transform: uppercase;

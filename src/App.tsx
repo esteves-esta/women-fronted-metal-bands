@@ -11,7 +11,7 @@ function App() {
   React.useEffect(() => {
     function handleKeyDown(event) {
       // prevent scrolling when clicking on spacebar
-      if (event.keyCode === 32 && event.target == document.body) {
+      if (event.code === 'Space' && (event.target == document.body || event.target.nodeName == 'BUTTON')) {
         event.preventDefault();
         return false;
       }
@@ -43,7 +43,7 @@ function App() {
             </a>
           </div>
           <small>
-            built with: React / RadixUI / Parcel / Tailwind / LucideIcons
+            built with: React / RadixUI / Vite / Tailwind / LucideIcons
           </small>
         </footer>
       </DeezerProvider>
