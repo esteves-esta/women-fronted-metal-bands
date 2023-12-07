@@ -1,7 +1,7 @@
-.container {
-  /* height: 900px; */
+.borderRight {
+  border-right: 1px solid var(--border-color);
 }
 
-/* .container text {
-  fill: var(--text-color) !important;
-} */
+.borderBottom {
+  border-bottom: 1px solid var(--border-color);
+}
