@@ -71,7 +71,6 @@ function BandCountByContryChart() {
     ]}
     tooltip={
       ({ data }) => {
-        console.log(data)
         return (<div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexDirection: 'row', padding: 12, backgroundColor: "#444", }}>
           <div style={{ backgroundColor: data.color, height: '15px', width: '15px' }}></div>
           <strong>{data.id}: {data.value}</strong>

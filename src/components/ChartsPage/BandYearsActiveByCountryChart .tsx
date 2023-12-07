@@ -1,4 +1,5 @@
 import React from 'react';
+import { ResponsiveWaffle } from '@nivo/waffle'
 import { BandContext } from '../BandsProvider';
 import { ResponsiveHeatMap } from '@nivo/heatmap'
 import colors from './colors'
@@ -10,64 +11,74 @@ id - country
 x - year - decade 1950 - 2020
 x - count
 
+---- active years
+id - country
+x: 1 - y: count
+1 a 5
+5 a 10
+10 a 20
+20 a 30
 */
 
-function getIfActiveOnDecade(band, decade) {
-  const { yearStarted, yearEnded } = band
-  if (yearEnded) {
-    // console.log({ yearEnded })
-    // console.log({ decade })
-    return yearEnded <= decade ? 0 : 1
-  }
-  
-  // console.log({ yearStarted })
-  return yearStarted >= decade && yearStarted < (decade + 10) ? 1 : 0
-}
-
-function BandCountByDecadeChart() {
+function BandYearsActiveByCountryChart () {
   const { initialBandList } = React.useContext(BandContext)
   const [chartHeatData, setChartHeatData] = React.useState([])
+
+  const formatYearsActive = React.useCallback((data) => {
+    const { yearStarted, yearEnded } = data;
+
+    const thisYear = new Date().getFullYear()
+
+    let activeYears = 0
+    if (yearStarted !== null) {
+      activeYears = thisYear - yearStarted
+      if (yearEnded) activeYears = yearEnded - yearStarted
+    }
+    return activeYears;
+  }, []);
+
 
   React.useEffect(() => {
     const list = [...initialBandList];
     const newChartData = []
     list.forEach((band) => {
-
-      const already = newChartData.findIndex(data => data.id === band.country)
-      if (already >= 0) {
-        newChartData[already].data[0].y += getIfActiveOnDecade(band, 1970);
-        newChartData[already].data[1].y += getIfActiveOnDecade(band, 1980)
-        newChartData[already].data[2].y += getIfActiveOnDecade(band, 1990)
-        newChartData[already].data[3].y += getIfActiveOnDecade(band, 2000)
-        newChartData[already].data[4].y += getIfActiveOnDecade(band, 2010)
-        newChartData[already].data[5].y += getIfActiveOnDecade(band, 2020)
+      // console.log(band)
+      const alredy = newChartData.findIndex(data => data.id === band.country)
+      const yearsActive = formatYearsActive(band)
+      if (alredy >= 0) {
+        newChartData[alredy].data[0].y += yearsActive < 5 ? 1 : 0;
+        newChartData[alredy].data[1].y += yearsActive >= 5 && yearsActive < 10 ? 1 : 0;
+        newChartData[alredy].data[2].y += yearsActive >= 20 && yearsActive < 30 ? 1 : 0;
+        newChartData[alredy].data[3].y += yearsActive >= 30 && yearsActive < 40 ? 1 : 0;
+        newChartData[alredy].data[4].y += yearsActive >= 30 && yearsActive < 40 ? 1 : 0;
+        newChartData[alredy].data[5].y += yearsActive >= 40 && yearsActive < 50 ? 1 : 0;
       } else {
         newChartData.push({
           id: band.country,
           data: [
             {
-              x: '70s',
-              y: getIfActiveOnDecade(band, 1970),
+              x: '1 to 5',
+              y: yearsActive < 5 ? 1 : 0,
             },
             {
-              x: '80s',
-              y: getIfActiveOnDecade(band, 1980),
+              x: '5 to 10',
+              y: yearsActive >= 5 && yearsActive < 10 ? 1 : 0,
             },
             {
-              x: '90s',
-              y: getIfActiveOnDecade(band, 1990),
+              x: '10 to 20',
+              y: yearsActive >= 10 && yearsActive < 20 ? 1 : 0,
             },
             {
-              x: '00s',
-              y: getIfActiveOnDecade(band, 2000),
+              x: '20 to 30',
+              y: yearsActive >= 20 && yearsActive < 30 ? 1 : 0,
             },
             {
-              x: '10s',
-              y: getIfActiveOnDecade(band, 2010),
+              x: '30 to 40',
+              y: yearsActive >= 30 && yearsActive < 40 ? 1 : 0,
             },
             {
-              x: '20s',
-              y: getIfActiveOnDecade(band, 2020),
+              x: '40 to 50',
+              y: yearsActive >= 40 && yearsActive < 50 ? 1 : 0,
             },
           ]
         })
@@ -142,4 +153,4 @@ function BandCountByDecadeChart() {
   )
 };
 
-export default BandCountByDecadeChart;
+export default BandYearsActiveByCountryChart ;
