@@ -30,8 +30,6 @@ function App() {
           <Home />
         </main>
 
-        <hr />
-
         <ChartsPage />
 
         <hr />

@@ -11,7 +11,8 @@
       "Lori S."
     ],
     "pastVocalists": [],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 1993,
     "yearEnded": null,
     "recommendation": null,
@@ -30,7 +31,8 @@
       "Melissa Bonny"
     ],
     "pastVocalists": [],
-    "country": "Swiss",
+    "country": "Switzerland",
+    "countryCode": "CH",
     "yearStarted": 2018,
     "yearEnded": null,
     "recommendation": null,
@@ -50,6 +52,7 @@
     ],
     "pastVocalists": [],
     "country": "Sweden",
+    "countryCode": "SE",
     "yearStarted": 2012,
     "yearEnded": null,
     "recommendation": "God Is Silent",
@@ -71,6 +74,7 @@
     ],
     "pastVocalists": [],
     "country": "Japan",
+    "countryCode": "JP",
     "yearStarted": 2010,
     "yearEnded": null,
     "recommendation": "BxMxC",
@@ -90,6 +94,7 @@
     ],
     "pastVocalists": [],
     "country": "Japan",
+    "countryCode": "JP",
     "yearStarted": 2013,
     "yearEnded": null,
     "recommendation": "Unleash!!!!!",
@@ -108,7 +113,8 @@
       "Elizabeth Blackwell"
     ],
     "pastVocalists": [],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2019,
     "yearEnded": null,
     "recommendation": "Red Phantom",
@@ -127,7 +133,8 @@
       "Stormy Maya"
     ],
     "pastVocalists": [],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2022,
     "yearEnded": null,
     "recommendation": null,
@@ -146,7 +153,8 @@
       "Emily Armstrong"
     ],
     "pastVocalists": [],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2002,
     "yearEnded": null,
     "recommendation": "Weatherman",
@@ -165,7 +173,8 @@
       "Eva Marie"
     ],
     "pastVocalists": [],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2015,
     "yearEnded": null,
     "recommendation": "Death of Me",
@@ -184,7 +193,8 @@
       "Alexia Rodriguez"
     ],
     "pastVocalists": [],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2003,
     "yearEnded": null,
     "recommendation": "Infected",
@@ -205,6 +215,7 @@
     ],
     "pastVocalists": [],
     "country": "Russia",
+    "countryCode": "RU",
     "yearStarted": 2007,
     "yearEnded": null,
     "recommendation": null,
@@ -223,7 +234,8 @@
       "Lzzy Hale"
     ],
     "pastVocalists": [],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 1997,
     "yearEnded": null,
     "recommendation": null,
@@ -243,6 +255,7 @@
     ],
     "pastVocalists": [],
     "country": "Portugal",
+    "countryCode": "PT",
     "yearStarted": 2007,
     "yearEnded": null,
     "recommendation": "Deathwish",
@@ -261,7 +274,8 @@
       "Kristina Esfandiari"
     ],
     "pastVocalists": [],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2009,
     "yearEnded": null,
     "recommendation": null,
@@ -281,6 +295,7 @@
     ],
     "pastVocalists": [],
     "country": "Canada",
+    "countryCode": "CA",
     "yearStarted": 1996,
     "yearEnded": null,
     "recommendation": null,
@@ -300,6 +315,7 @@
     ],
     "pastVocalists": [],
     "country": "Italy",
+    "countryCode": "IT",
     "yearStarted": 1997,
     "yearEnded": null,
     "recommendation": "Under the Surface",
@@ -319,6 +335,7 @@
     ],
     "pastVocalists": [],
     "country": "Canada",
+    "countryCode": "CA",
     "yearStarted": 2008,
     "yearEnded": null,
     "recommendation": "Toxic",
@@ -338,6 +355,7 @@
     ],
     "pastVocalists": [],
     "country": "Germany",
+    "countryCode": "DE",
     "yearStarted": 2020,
     "yearEnded": null,
     "recommendation": "My Revenge",
@@ -356,7 +374,8 @@
       "Sidina"
     ],
     "pastVocalists": [],
-    "country": "Africa",
+    "country": "Madagascar ",
+    "countryCode": "MG",
     "yearStarted": 2020,
     "yearEnded": null,
     "recommendation": "Koaitra",
@@ -375,7 +394,8 @@
       "Becca Macintyre"
     ],
     "pastVocalists": [],
-    "country": "UK",
+    "country": "United Kingdom",
+    "countryCode": "GB",
     "yearStarted": 2007,
     "yearEnded": null,
     "recommendation": "Born Young and Free",
@@ -395,6 +415,7 @@
     ],
     "pastVocalists": [],
     "country": "Japan",
+    "countryCode": "JP",
     "yearStarted": 2002,
     "yearEnded": null,
     "recommendation": null,
@@ -415,6 +436,7 @@
     ],
     "pastVocalists": [],
     "country": "Italy",
+    "countryCode": "IT",
     "yearStarted": 2000,
     "yearEnded": null,
     "recommendation": "Tyrants of Damnation",
@@ -434,7 +456,8 @@
       "Georgia South"
     ],
     "pastVocalists": [],
-    "country": "UK",
+    "country": "United Kingdom",
+    "countryCode": "GB",
     "yearStarted": 2014,
     "yearEnded": null,
     "recommendation": "Fire & Ice",
@@ -453,7 +476,8 @@
       "Cammie Gilbert-Beverly"
     ],
     "pastVocalists": [],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2011,
     "yearEnded": null,
     "recommendation": "Pray for Fire",
@@ -473,13 +497,13 @@
     ],
     "pastVocalists": [],
     "country": "France",
+    "countryCode": "FR",
     "yearStarted": 2009,
     "yearEnded": null,
     "recommendation": "The Lie",
     "links": "",
     "sister": false
   },
- 
   {
     "deezerId": 134541,
     "deezerRecommendationId": null,
@@ -493,6 +517,7 @@
     ],
     "pastVocalists": [],
     "country": "Sweden",
+    "countryCode": "SE",
     "yearStarted": 2002,
     "yearEnded": null,
     "recommendation": null,
@@ -511,7 +536,8 @@
     "currentVocalists": [
       "Tiaday Rocke"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2014,
     "yearEnded": null,
     "recommendation": null,
@@ -531,6 +557,7 @@
       "Violet Orlandi"
     ],
     "country": "Brazil",
+    "countryCode": "BR",
     "yearStarted": 2012,
     "yearEnded": null,
     "recommendation": "Dance Macabre",
@@ -550,6 +577,7 @@
       "Doro Pesch"
     ],
     "country": "Germany",
+    "countryCode": "DE",
     "yearStarted": 1982,
     "yearEnded": 1989,
     "recommendation": "Hellbound",
@@ -569,6 +597,7 @@
       "Sharon Den Adel"
     ],
     "country": "Netherlands",
+    "countryCode": "NL",
     "yearStarted": 1996,
     "yearEnded": null,
     "recommendation": "The Fire Within",
@@ -588,6 +617,7 @@
       "Christina Blom"
     ],
     "country": "Sweden",
+    "countryCode": "SE",
     "yearStarted": 2015,
     "yearEnded": null,
     "recommendation": "talion",
@@ -607,7 +637,8 @@
       "Nyrobi",
       "Chaya"
     ],
-    "country": "UK",
+    "country": "United Kingdom",
+    "countryCode": "GB",
     "yearStarted": 2022,
     "yearEnded": null,
     "recommendation": "Obsession : SOLAR",
@@ -627,6 +658,7 @@
       "Alissa White-Gluz"
     ],
     "country": "Sweden",
+    "countryCode": "SE",
     "yearStarted": 1995,
     "yearEnded": null,
     "recommendation": "The World Is Yours",
@@ -646,6 +678,7 @@
       "Masha Scream"
     ],
     "country": "Russia",
+    "countryCode": "RU",
     "yearStarted": 2002,
     "yearEnded": null,
     "recommendation": "Tropoiu Nevedannoi",
@@ -664,7 +697,8 @@
     "currentVocalists": [
       "Charlie Rolfe"
     ],
-    "country": "UK",
+    "country": "United Kingdom",
+    "countryCode": "GB",
     "yearStarted": 2013,
     "yearEnded": null,
     "recommendation": "Stranger In The Mirror",
@@ -683,7 +717,8 @@
     "currentVocalists": [
       "Taylor Destroy"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2022,
     "yearEnded": null,
     "recommendation": "Angels To Ashes",
@@ -702,7 +737,8 @@
     "currentVocalists": [
       "Banshee"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2020,
     "yearEnded": null,
     "recommendation": "FAIRY METAL",
@@ -721,7 +757,8 @@
     "currentVocalists": [
       "Jen Pickett"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2006,
     "yearEnded": 2013,
     "recommendation": "Unleashed",
@@ -740,7 +777,8 @@
     "currentVocalists": [
       "Ally French"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 1999,
     "yearEnded": 2004,
     "recommendation": "It Can't Rain All The Time",
@@ -760,6 +798,7 @@
       "Laura Guldemond"
     ],
     "country": "Switzerland",
+    "countryCode": "CH",
     "yearStarted": 2015,
     "yearEnded": null,
     "recommendation": "The Circle of Five",
@@ -779,7 +818,8 @@
       "Carla Harvey",
       "Heidi Shepherd"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2009,
     "yearEnded": null,
     "recommendation": "Best Friend",
@@ -799,6 +839,7 @@
       "Steffanie"
     ],
     "country": "Australia",
+    "countryCode": "AU",
     "yearStarted": 2018,
     "yearEnded": 2019,
     "recommendation": "The Burden of Purpose",
@@ -817,7 +858,8 @@
     "currentVocalists": [
       "Simone \"Som\" Pluijmers"
     ],
-    "country": "Scotland",
+    "country": "United Kingdom",
+    "countryCode": "GB",
     "yearStarted": 2006,
     "yearEnded": 2014,
     "recommendation": "The Bald Cadaver",
@@ -837,6 +879,7 @@
       "Britta Görtz"
     ],
     "country": "Germany",
+    "countryCode": "DE",
     "yearStarted": 2005,
     "yearEnded": 2018,
     "recommendation": null,
@@ -856,6 +899,7 @@
       "Fernanda Lira"
     ],
     "country": "Brazil",
+    "countryCode": "BR",
     "yearStarted": 2019,
     "yearEnded": null,
     "recommendation": null,
@@ -875,6 +919,7 @@
       "Sandie The Lilith"
     ],
     "country": "Denmark",
+    "countryCode": "DK",
     "yearStarted": 2015,
     "yearEnded": null,
     "recommendation": null,
@@ -894,6 +939,7 @@
       "Alex Reade"
     ],
     "country": "Australia",
+    "countryCode": "AU",
     "yearStarted": 2015,
     "yearEnded": 2022,
     "recommendation": "In Your Image",
@@ -912,7 +958,8 @@
     "currentVocalists": [
       "Emma Boster"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2016,
     "yearEnded": null,
     "recommendation": "Now You'll Rot",
@@ -931,7 +978,8 @@
     "currentVocalists": [
       "Justine Jones"
     ],
-    "country": "UK",
+    "country": "United Kingdom",
+    "countryCode": "GB",
     "yearStarted": 2011,
     "yearEnded": null,
     "recommendation": "Take Back Control",
@@ -950,7 +998,8 @@
     "currentVocalists": [
       "Chaney Crabb"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2015,
     "yearEnded": null,
     "recommendation": null,
@@ -970,6 +1019,7 @@
       "Sabina Classen"
     ],
     "country": "Germany",
+    "countryCode": "DE",
     "yearStarted": 1980,
     "yearEnded": null,
     "recommendation": "Cult Of The Machine",
@@ -989,6 +1039,7 @@
       "Lena"
     ],
     "country": "Moldova",
+    "countryCode": "MD",
     "yearStarted": 2008,
     "yearEnded": null,
     "recommendation": "The Earth Mantra",
@@ -1007,7 +1058,8 @@
     "currentVocalists": [
       "Djamila Boden Azzouz"
     ],
-    "country": "UK",
+    "country": "United Kingdom",
+    "countryCode": "GB",
     "yearStarted": 2012,
     "yearEnded": null,
     "recommendation": "They Fear Us",
@@ -1029,7 +1081,8 @@
       "Krysta Cameron",
       "Courtney Laplante"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2007,
     "yearEnded": 2016,
     "recommendation": "You Aint No Family",
@@ -1048,6 +1101,7 @@
       "Tatiana Shmailyuk"
     ],
     "country": "Ukraine",
+    "countryCode": "UA",
     "yearStarted": 2009,
     "yearEnded": null,
     "recommendation": "A Plus or a Minus",
@@ -1067,7 +1121,8 @@
     "currentVocalists": [
       "K Enagonio"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2011,
     "yearEnded": null,
     "recommendation": "Wap",
@@ -1087,6 +1142,7 @@
       "Rikke Emilie List"
     ],
     "country": "Denmark",
+    "countryCode": "DK",
     "yearStarted": 2015,
     "yearEnded": null,
     "recommendation": null,
@@ -1105,7 +1161,8 @@
     "currentVocalists": [
       "Krysta Curry"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2004,
     "yearEnded": null,
     "recommendation": "Shadows Fed to Tyrants",
@@ -1124,7 +1181,8 @@
     "currentVocalists": [
       "Laura Nichol"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2002,
     "yearEnded": null,
     "recommendation": "Agents of Fate",
@@ -1143,7 +1201,8 @@
     "currentVocalists": [
       "K Enagonio"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2012,
     "yearEnded": null,
     "recommendation": null,
@@ -1162,7 +1221,8 @@
     "currentVocalists": [
       "Linzey Rae"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2015,
     "yearEnded": null,
     "recommendation": null,
@@ -1182,6 +1242,7 @@
       "Mayu"
     ],
     "country": "Japan",
+    "countryCode": "JP",
     "yearStarted": 2019,
     "yearEnded": null,
     "recommendation": "Rise",
@@ -1201,6 +1262,7 @@
       "Caro Tanghe"
     ],
     "country": "Belgium",
+    "countryCode": "BE",
     "yearStarted": 2008,
     "yearEnded": null,
     "recommendation": "Glimpse Of The Unseen",
@@ -1219,7 +1281,8 @@
     "currentVocalists": [
       "Lauren Hart"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2014,
     "yearEnded": null,
     "recommendation": "Scar Weaver",
@@ -1238,7 +1301,8 @@
     "currentVocalists": [
       "Otep Shamaya"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2000,
     "yearEnded": null,
     "recommendation": "Run For Cover",
@@ -1257,7 +1321,8 @@
     "currentVocalists": [
       "Katie Davies"
     ],
-    "country": "UK",
+    "country": "United Kingdom",
+    "countryCode": "GB",
     "yearStarted": 2021,
     "yearEnded": null,
     "recommendation": "Momentary Actuality",
@@ -1277,6 +1342,7 @@
       "Monique Pym"
     ],
     "country": "Australia",
+    "countryCode": "AU",
     "yearStarted": 2018,
     "yearEnded": null,
     "recommendation": "The Ritualist",
@@ -1295,7 +1361,8 @@
     "currentVocalists": [
       "Eva Korman"
     ],
-    "country": "UK",
+    "country": "United Kingdom",
+    "countryCode": "GB",
     "yearStarted": 2005,
     "yearEnded": null,
     "recommendation": "Mutual Ruin",
@@ -1314,7 +1381,8 @@
     "currentVocalists": [
       "Connie Sgarbossa"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2016,
     "yearEnded": null,
     "recommendation": "Misinterpreting Constellations",
@@ -1334,6 +1402,7 @@
       "Els Prins"
     ],
     "country": "Netherlands",
+    "countryCode": "NL",
     "yearStarted": 2014,
     "yearEnded": null,
     "recommendation": "Humans Are Broken",
@@ -1352,7 +1421,8 @@
     "currentVocalists": [
       "Courtney Laplante"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2016,
     "yearEnded": null,
     "recommendation": "Holy Roller",
@@ -1372,6 +1442,7 @@
       "Iris Goessens"
     ],
     "country": "Belgium",
+    "countryCode": "BE",
     "yearStarted": 2004,
     "yearEnded": null,
     "recommendation": "Disconnect",
@@ -1390,7 +1461,8 @@
     "currentVocalists": [
       "Taylor Destroy"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2021,
     "yearEnded": null,
     "recommendation": "BYOB (Cover)",
@@ -1410,6 +1482,7 @@
       "Vicky Psarakis"
     ],
     "country": "Canada",
+    "countryCode": "CA",
     "yearStarted": 2004,
     "yearEnded": 2023,
     "recommendation": "Feast on the Living",
@@ -1428,7 +1501,8 @@
     "currentVocalists": [
       "Linzey Rae"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2016,
     "yearEnded": null,
     "recommendation": "Miscreation",
@@ -1448,6 +1522,7 @@
       "Caroline Westendorp"
     ],
     "country": "Netherlands",
+    "countryCode": "NL",
     "yearStarted": 2010,
     "yearEnded": 2018,
     "recommendation": "Weaponized",
@@ -1466,7 +1541,8 @@
     "currentVocalists": [
       "Iris Goessens"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2021,
     "yearEnded": null,
     "recommendation": "Do You Know What It’s Like ?",
@@ -1486,6 +1562,7 @@
       "Irohana"
     ],
     "country": "South Korea",
+    "countryCode": "KR",
     "yearStarted": 2013,
     "yearEnded": null,
     "recommendation": "The siege",
@@ -1504,7 +1581,8 @@
     "currentVocalists": [
       "Larissa Stupar"
     ],
-    "country": "UK",
+    "country": "United Kingdom",
+    "countryCode": "GB",
     "yearStarted": 2014,
     "yearEnded": null,
     "recommendation": "Uterine Industrialisation",
@@ -1523,7 +1601,8 @@
     "currentVocalists": [
       "Megan Targett"
     ],
-    "country": "UK",
+    "country": "United Kingdom",
+    "countryCode": "GB",
     "yearStarted": 2021,
     "yearEnded": null,
     "recommendation": "Hideous",
@@ -1543,6 +1622,7 @@
       "Emily Beekmans"
     ],
     "country": "Australia",
+    "countryCode": "AU",
     "yearStarted": 2019,
     "yearEnded": null,
     "recommendation": "Time's Up",
@@ -1561,7 +1641,8 @@
     "currentVocalists": [
       "Candace Kucsulain"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 1998,
     "yearEnded": null,
     "recommendation": "Forever Militant",
@@ -1582,7 +1663,8 @@
     "pastVocalists": [
       "Simone \"Som\" Pluijmers"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2007,
     "yearEnded": null,
     "recommendation": null,
@@ -1601,7 +1683,8 @@
     "currentVocalists": [
       "Mallika Sundaramurthy"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2005,
     "yearEnded": 2020,
     "recommendation": "Monarch Alpha",
@@ -1621,6 +1704,7 @@
       "Marion Bascoul"
     ],
     "country": "France",
+    "countryCode": "FR",
     "yearStarted": 2013,
     "yearEnded": null,
     "recommendation": null,
@@ -1640,6 +1724,7 @@
       "Elize Ryd"
     ],
     "country": "Sweden",
+    "countryCode": "SE",
     "yearStarted": 2008,
     "yearEnded": null,
     "recommendation": 365,
@@ -1659,6 +1744,7 @@
       "Jessie Williams"
     ],
     "country": "Spain",
+    "countryCode": "ES",
     "yearStarted": 2003,
     "yearEnded": null,
     "recommendation": "Prisioner",
@@ -1678,6 +1764,7 @@
       "Noora Louhimo"
     ],
     "country": "Finland",
+    "countryCode": "FI",
     "yearStarted": 2008,
     "yearEnded": null,
     "recommendation": "Where Angels Fear to Fly",
@@ -1697,6 +1784,7 @@
       "Marcella Di Troia"
     ],
     "country": "Belgium",
+    "countryCode": "BE",
     "yearStarted": 2017,
     "yearEnded": null,
     "recommendation": "Burning Warriors",
@@ -1715,7 +1803,8 @@
     "currentVocalists": [
       "Kiarely Castillo"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2013,
     "yearEnded": null,
     "recommendation": "Paralyzed",
@@ -1735,6 +1824,7 @@
       "Jennie Skulander"
     ],
     "country": "New Zealand",
+    "countryCode": "NZ",
     "yearStarted": 2010,
     "yearEnded": null,
     "recommendation": "Everybody's High but Me",
@@ -1753,7 +1843,8 @@
     "currentVocalists": [
       "Jessie Powell"
     ],
-    "country": "UK",
+    "country": "United Kingdom",
+    "countryCode": "GB",
     "yearStarted": 2014,
     "yearEnded": null,
     "recommendation": "Taunt Me",
@@ -1772,7 +1863,8 @@
     "currentVocalists": [
       "Renee Phoenix"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2009,
     "yearEnded": null,
     "recommendation": "Crash",
@@ -1791,7 +1883,8 @@
     "currentVocalists": [
       "Sami Kaiser"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2019,
     "yearEnded": null,
     "recommendation": "Honed Blade",
@@ -1810,7 +1903,8 @@
     "currentVocalists": [
       "Jill Janus"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2009,
     "yearEnded": 2018,
     "recommendation": "Eight Of Swords",
@@ -1829,7 +1923,8 @@
     "currentVocalists": [
       "Maria Brink"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 1995,
     "yearEnded": null,
     "recommendation": "The In-Between",
@@ -1849,6 +1944,7 @@
       "Prika Amaral"
     ],
     "country": "Brazil",
+    "countryCode": "BR",
     "yearStarted": 2010,
     "yearEnded": null,
     "recommendation": "Under Ruins",
@@ -1868,6 +1964,7 @@
       "Zofia \"Wielebna\" Fraś"
     ],
     "country": "Poland",
+    "countryCode": "PL",
     "yearStarted": 2008,
     "yearEnded": null,
     "recommendation": null,
@@ -1887,6 +1984,7 @@
       "Lauren Babic"
     ],
     "country": "Canada",
+    "countryCode": "CA",
     "yearStarted": 2008,
     "yearEnded": null,
     "recommendation": "Carbon Copies",
@@ -1905,7 +2003,8 @@
     "currentVocalists": [
       "Renee Phoenix"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2009,
     "yearEnded": null,
     "recommendation": null,
@@ -1925,6 +2024,7 @@
       "Jules Mitch"
     ],
     "country": "Germany",
+    "countryCode": "DE",
     "yearStarted": 2017,
     "yearEnded": null,
     "recommendation": "Nightfall",
@@ -1943,7 +2043,8 @@
     "currentVocalists": [
       "Vicky Psarakis"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2022,
     "yearEnded": null,
     "recommendation": null,
@@ -1962,7 +2063,8 @@
     "currentVocalists": [
       "Alexis Brown"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2000,
     "yearEnded": null,
     "recommendation": "Conversion",
@@ -1982,6 +2084,7 @@
       "Amanda Kiernan"
     ],
     "country": "Canada",
+    "countryCode": "CA",
     "yearStarted": 2003,
     "yearEnded": null,
     "recommendation": "Apocalypse Moon",
@@ -2001,6 +2104,7 @@
       "Brittany B. Hayes"
     ],
     "country": "Canada",
+    "countryCode": "CA",
     "yearStarted": 2007,
     "yearEnded": null,
     "recommendation": "Cleanse the Bloodlines",
@@ -2019,7 +2123,8 @@
     "currentVocalists": [
       "Kayla Dixon"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 1997,
     "yearEnded": null,
     "recommendation": "Shelter",
@@ -2041,6 +2146,7 @@
       "Re:No"
     ],
     "country": "Japan",
+    "countryCode": "JP",
     "yearStarted": 2008,
     "yearEnded": null,
     "recommendation": null,
@@ -2060,13 +2166,13 @@
       "Päivi \"Capri\" Virkkunen"
     ],
     "country": "Finland",
+    "countryCode": "FI",
     "yearStarted": 2006,
     "yearEnded": null,
     "recommendation": null,
     "links": "",
     "sister": false
   },
- 
   {
     "deezerId": 7308658,
     "deezerRecommendationId": null,
@@ -2080,6 +2186,7 @@
       "Jennifer Haben"
     ],
     "country": "Germany",
+    "countryCode": "DE",
     "yearStarted": 2015,
     "yearEnded": null,
     "recommendation": null,
@@ -2099,6 +2206,7 @@
       "Kimi"
     ],
     "country": "Japan",
+    "countryCode": "JP",
     "yearStarted": 2011,
     "yearEnded": null,
     "recommendation": null,
@@ -2118,6 +2226,7 @@
       "Kristina Vega"
     ],
     "country": "Netherlands",
+    "countryCode": "NL",
     "yearStarted": 2019,
     "yearEnded": 2020,
     "recommendation": null,
@@ -2137,6 +2246,7 @@
       "Saki"
     ],
     "country": "Japan",
+    "countryCode": "JP",
     "yearStarted": 2011,
     "yearEnded": 2018,
     "recommendation": null,
@@ -2144,7 +2254,7 @@
     "sister": false
   },
   {
-    "deezerId":5417809,
+    "deezerId": 5417809,
     "deezerRecommendationId": 1909915937,
     "band": "Deathless Legacy",
     "recommendationIsCover": false,
@@ -2156,6 +2266,7 @@
       "Steva La Cinghiala (Eleonora Vaiana)"
     ],
     "country": "Italy",
+    "countryCode": "IT",
     "yearStarted": 2005,
     "yearEnded": null,
     "recommendation": "Ora Pro Nobis",
@@ -2175,6 +2286,7 @@
       "Diana Leah"
     ],
     "country": "Netherlands",
+    "countryCode": "NL",
     "yearStarted": 2002,
     "yearEnded": null,
     "recommendation": null,
@@ -2194,6 +2306,7 @@
       "Kyrah Aylin"
     ],
     "country": "Italy",
+    "countryCode": "IT",
     "yearStarted": 2006,
     "yearEnded": null,
     "recommendation": null,
@@ -2213,6 +2326,7 @@
       "Nele Messerschmidt"
     ],
     "country": "Germany",
+    "countryCode": "DE",
     "yearStarted": 2010,
     "yearEnded": null,
     "recommendation": null,
@@ -2232,6 +2346,7 @@
       "Simone Simons"
     ],
     "country": "Netherlands",
+    "countryCode": "NL",
     "yearStarted": 2002,
     "yearEnded": null,
     "recommendation": null,
@@ -2250,7 +2365,8 @@
     "currentVocalists": [
       "Amy Lee"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 1995,
     "yearEnded": null,
     "recommendation": null,
@@ -2272,7 +2388,8 @@
       "Marina La Torraca",
       "Anna Brunner"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2017,
     "yearEnded": null,
     "recommendation": null,
@@ -2292,6 +2409,7 @@
     ],
     "pastVocalists": [],
     "country": "Italy",
+    "countryCode": "IT",
     "yearStarted": 2017,
     "yearEnded": null,
     "recommendation": null,
@@ -2311,6 +2429,7 @@
     ],
     "pastVocalists": [],
     "country": "Ukraine",
+    "countryCode": "UA",
     "yearStarted": 2011,
     "yearEnded": null,
     "recommendation": null,
@@ -2329,7 +2448,8 @@
       "Joan Marie Larkin"
     ],
     "pastVocalists": [],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 1975,
     "yearEnded": null,
     "recommendation": null,
@@ -2349,6 +2469,7 @@
     ],
     "pastVocalists": [],
     "country": "Germany",
+    "countryCode": "DE",
     "yearStarted": 2014,
     "yearEnded": null,
     "recommendation": null,
@@ -2368,6 +2489,7 @@
     ],
     "pastVocalists": [],
     "country": "Finland",
+    "countryCode": "FI",
     "yearStarted": 1996,
     "yearEnded": null,
     "recommendation": null,
@@ -2387,6 +2509,7 @@
       "Nini"
     ],
     "country": "Taiwan",
+    "countryCode": "TW",
     "yearStarted": 2019,
     "yearEnded": null,
     "recommendation": "Longma",
@@ -2406,6 +2529,7 @@
       "Natasha “Baba Yaga” Pakhalenko"
     ],
     "country": "Russia",
+    "countryCode": "RU",
     "yearStarted": 2013,
     "yearEnded": null,
     "recommendation": null,
@@ -2425,6 +2549,7 @@
       "Marina La Torraca"
     ],
     "country": "Brazil",
+    "countryCode": "BR",
     "yearStarted": 2016,
     "yearEnded": null,
     "recommendation": null,
@@ -2433,7 +2558,7 @@
   },
   {
     "deezerId": 7812184,
-    "deezerRecommendationId": null,
+    "deezerRecommendationId": 604719032,
     "band": "Sate",
     "recommendationIsCover": false,
     "blackWomen": true,
@@ -2444,9 +2569,10 @@
       "Saidah Baba Talibah"
     ],
     "country": "Canada",
+    "countryCode": "CA",
     "yearStarted": 2011,
     "yearEnded": null,
-    "recommendation": null,
+    "recommendation": "Dirty Little Lie",
     "links": "",
     "sister": false
   },
@@ -2462,7 +2588,8 @@
     "currentVocalists": [
       "Sabrina Valentine"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 2007,
     "yearEnded": null,
     "recommendation": null,
@@ -2482,6 +2609,7 @@
       "Morten Veland"
     ],
     "country": "Norway",
+    "countryCode": "NO",
     "yearStarted": 2001,
     "yearEnded": null,
     "recommendation": null,
@@ -2501,6 +2629,7 @@
       "Federica Lanna"
     ],
     "country": "Italy",
+    "countryCode": "IT",
     "yearStarted": 2013,
     "yearEnded": null,
     "recommendation": null,
@@ -2520,6 +2649,7 @@
       "Alessia Scolletti"
     ],
     "country": "Italy",
+    "countryCode": "IT",
     "yearStarted": 2014,
     "yearEnded": null,
     "recommendation": null,
@@ -2539,6 +2669,7 @@
       "Johanna Sadonis"
     ],
     "country": "Germany",
+    "countryCode": "DE",
     "yearStarted": 2012,
     "yearEnded": 2014,
     "recommendation": null,
@@ -2559,7 +2690,8 @@
       "Cherie Currie",
       "Micki Steele"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 1975,
     "yearEnded": 1979,
     "recommendation": null,
@@ -2580,6 +2712,7 @@
       "Paulina Villarreal Vélez"
     ],
     "country": "Mexico",
+    "countryCode": "MX",
     "yearStarted": 2013,
     "yearEnded": null,
     "recommendation": "CHOKE",
@@ -2598,7 +2731,8 @@
     "currentVocalists": [
       "Lorraine Lewis"
     ],
-    "country": "US",
+    "country": "United States of America",
+    "countryCode": "US",
     "yearStarted": 1980,
     "yearEnded": null,
     "recommendation": null,
@@ -2618,6 +2752,7 @@
       "Ambre Vourvahis"
     ],
     "country": "Germany",
+    "countryCode": "DE",
     "yearStarted": 1994,
     "yearEnded": null,
     "recommendation": null,
@@ -2637,10 +2772,51 @@
       "Daria Zaritskaya"
     ],
     "country": "Ukraine",
+    "countryCode": "UA",
     "yearStarted": 2014,
     "yearEnded": null,
     "recommendation": "Deadhearted ",
     "links": "https://sershenzaritskaya.bandcamp.com/",
+    "sister": false
+  },
+  {
+    "deezerId": 12352788,
+    "deezerRecommendationId": null ,
+    "band": "SHOW-YA",
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 1,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Keiko Terada"
+    ],
+    "country": "Japan",
+    "countryCode": "JP",
+    "yearStarted": 1981,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://show-ya.jp/",
+    "sister": false
+  },
+  {
+    "deezerId": 14279115,
+    "deezerRecommendationId": null ,
+    "band": "Future Static",
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Amariah Cook"
+    ],
+    "country": "Australia",
+    "countryCode": "AU",
+    "yearStarted": 1981,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://futurestatic.net/about",
     "sister": false
   }
 ]
