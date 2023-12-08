@@ -156,7 +156,7 @@ function BandsTable() {
       pageSize={10}
       handleRowChange={setBands}
       gridMode={displayMode === 'grid'}
-      rowIdName="deezerId"
+      rowIdName="id"
       onRowClick={playRecommendedTrack}
       gridImage={(row) => {
         if (row.deezerPicture && !row.emptyPicture)

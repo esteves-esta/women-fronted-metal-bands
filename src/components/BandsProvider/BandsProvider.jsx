@@ -9,7 +9,11 @@ function BandsProvider({ children }) {
   const initialBandList = React.useMemo(() => list, [])
 
   const [bands, setBands] = React.useState(() =>
-    initialBandList
+    initialBandList.map(band => {
+      if (!band.deezerId) band.id = crypto.randomUUID()
+      else band.id = band.deezerId
+      return band
+    })
   );
 
   const filterByGrow = (intensity) => {

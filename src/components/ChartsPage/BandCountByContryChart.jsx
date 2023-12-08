@@ -15,6 +15,11 @@ function BandCountByContryChart({ filter }) {
       const already = newChartData.findIndex(data => data.id === band.country)
       if (filter === 'active' && band.yearEnded) return
       if (filter === 'disbanded' && !band.yearEnded) return
+      if (filter === 'all women' && !band.allWomenBand) return
+      if (filter === 'mixed' && band.allWomenBand) return
+      if (filter === 'sister' && !band.sister) return
+      if (filter === 'black women' && !band.blackWomen) return
+
       if (already >= 0) {
         newChartData[already].value += 1;
       } else {

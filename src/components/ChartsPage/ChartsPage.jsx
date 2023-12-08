@@ -29,6 +29,10 @@ function ChartsPage() {
           { value: 'viewAll', text: 'View All' },
           { value: 'active', text: 'Active' },
           { value: 'disbanded', text: 'Disbanded' },
+          { value: 'all women', text: 'All women' },
+          { value: 'mixed', text: 'Mixed Gender' },
+          { value: 'black women', text: 'Black women' },
+          { value: 'sister', text: 'Sisters' },
         ]} currentValue={bandStatusFilter}
           onChange={(val) =>
             setBandStatusFilter(val)

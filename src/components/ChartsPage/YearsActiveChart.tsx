@@ -20,7 +20,7 @@ function BandYearsActiveChart() {
 
   React.useEffect(() => {
     const newChartData = [...chartData]
-    console.log(chartData)
+    // console.log(chartData)
     let average = 0
 
     initialBandList.forEach((band) => {
