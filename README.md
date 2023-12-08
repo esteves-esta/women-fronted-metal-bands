@@ -12,6 +12,18 @@ This project is a list of the bands of diferent metal genres and also an way of 
 
 I didn’t add genres of the bands as some don’t have it on there websites and a lot of bands change with time, so instead of genre you can filter bands by how much growling the singer can / or usually do on the songs of the band.
 
+## Credits
+
+I got some of the bands and the information on this list from the following:
+- https://www.youtube.com/@femalemetalbands
+- https://www.metal-archives.com/
+- https://www.metaladies.com/bands/
+- https://www.wikimetal.com.br/
+- https://www.spirit-of-metal.com/
+- https://www.metalmusicarchives.com
+- [Swedish hard n' heavy encyclopedia](https://www.fwoshm.com/index/)
+
+
 ---
 ## 📖 Features
 
