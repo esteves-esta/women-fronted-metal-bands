@@ -3,15 +3,15 @@ import { ResponsivePie } from '@nivo/pie'
 import { BandContext } from '../BandsProvider';
 import classes from './ChartsPage.module.css'
 
-function BandDetailsChart() {
+function BandDetailsChart({ filter }) {
   const { initialBandList } = React.useContext(BandContext)
   const [allwomenData, setAllwomenData] = React.useState([
     { id: 'all women', value: 0 },
     { id: 'mixed', value: 0 },
   ])
   const [blackwomenData, setBlackwomenData] = React.useState([
-    { id: 'black women', value: 0 },
     { id: 'other', value: 0 },
+    { id: 'black women', value: 0 },
   ])
   const [sisterData, setSisterData] = React.useState([
     { id: 'yes', value: 0 },
@@ -24,42 +24,56 @@ function BandDetailsChart() {
   ])
 
   React.useEffect(() => {
-    const list = [...initialBandList];
     const newChartData = [...allwomenData]
-    list.forEach((band) => {
+    newChartData[0].value = 0;
+    newChartData[1].value = 0;
+
+    initialBandList.forEach((band) => {
+      if (filter === 'active' && band.yearEnded) return
+      if (filter === 'disbanded' && !band.yearEnded) return
+
       newChartData[0].value += band.allWomenBand ? 1 : 0;
       newChartData[1].value += band.allWomenBand ? 0 : 1
 
     })
     setAllwomenData(newChartData)
-  }, [])
+  }, [filter])
 
   React.useEffect(() => {
-    const list = [...initialBandList];
     const newChartData = [...blackwomenData]
-    list.forEach((band) => {
-      newChartData[0].value += band.blackWomen ? 1 : 0;
-      newChartData[1].value += band.blackWomen ? 0 : 1
+    newChartData[0].value = 0;
+    newChartData[1].value = 0;
+
+    initialBandList.forEach((band) => {
+      if (filter === 'active' && band.yearEnded) return
+      if (filter === 'disbanded' && !band.yearEnded) return
+
+      newChartData[1].value += band.blackWomen ? 1 : 0;
+      newChartData[0].value += band.blackWomen ? 0 : 1
 
     })
     setBlackwomenData(newChartData)
-  }, [])
+  }, [filter])
 
   React.useEffect(() => {
-    const list = [...initialBandList];
     const newChartData = [...sisterData]
-    list.forEach((band) => {
+    newChartData[0].value = 0;
+    newChartData[1].value = 0;
+
+    initialBandList.forEach((band) => {
+      if (filter === 'active' && band.yearEnded) return
+      if (filter === 'disbanded' && !band.yearEnded) return
+
       newChartData[0].value += band.sister ? 1 : 0;
       newChartData[1].value += band.sister ? 0 : 1
 
     })
     setSisterData(newChartData)
-  }, [])
+  }, [filter])
 
   React.useEffect(() => {
-    const list = [...initialBandList];
     const newChartData = [...statusData]
-    list.forEach((band) => {
+    initialBandList.forEach((band) => {
       newChartData[0].value += band.yearEnded ? 0 : 1;
       newChartData[1].value += band.yearEnded ? 1 : 0
 

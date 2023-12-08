@@ -3,7 +3,7 @@ import { ResponsiveBar } from '@nivo/bar'
 import { BandContext } from '../BandsProvider';
 import colors from './colors'
 
-function ByCountryBoolean() {
+function ActivityInEachDecadeChart() {
   const { initialBandList } = React.useContext(BandContext)
   const [chartData, setChartData] = React.useState([
     { id: '1970', value: 0 },
@@ -27,9 +27,8 @@ function ByCountryBoolean() {
   }
 
   React.useEffect(() => {
-    const list = [...initialBandList];
     const newChartData = [...chartData]
-    list.forEach((band) => {
+    initialBandList.forEach((band) => {
       newChartData[0].value += getIfActiveOnDecade(band, 1970);
       newChartData[1].value += getIfActiveOnDecade(band, 1980)
       newChartData[2].value += getIfActiveOnDecade(band, 1990)
@@ -51,16 +50,8 @@ function ByCountryBoolean() {
     enableGridX={true}
     enableGridY={false}
     margin={{ top: 50, right: 200, bottom: 50, left: 260 }}
-    colors={{ scheme: 'set2' }}
-    labelTextColor={{
-      from: 'color',
-      modifiers: [
-        [
-          'darker',
-          2
-        ]
-      ]
-    }}
+    colors={{ scheme: 'red_yellow_blue' }}
+    labelTextColor={'white'}
     barAriaLabel={e => e.id + ": " + e.formattedValue}
     theme={{
       "text": {
@@ -99,4 +90,4 @@ function ByCountryBoolean() {
   )
 };
 
-export default ByCountryBoolean;
+export default ActivityInEachDecadeChart;

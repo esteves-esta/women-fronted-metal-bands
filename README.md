@@ -26,10 +26,12 @@ I didn’t add genres of the bands as some don’t have it on there websites and
   - [x] Get image of the band
   - [x] Be able to listen to a preview of a song on the page
 - [x] [Published on GitHub Pages](https://esteves-esta.github.io/women-fronted-metal-bands/)
+- [x] Graphs
 ### ✍️ Todo
-- [ ] Graphs
 - [ ] Like songs and:
   - [ ]  export as csv
+  - [ ]  create or add to a playlist on deezer
+    - [ ]  redirect do deezer login
 
 ---
 
@@ -38,11 +40,12 @@ I didn’t add genres of the bands as some don’t have it on there websites and
 - Vite
 - React
 - Typescript
-- Lucide React
 - Tailwind CSS
-- Papaparse
 - SWR
-- Radix-UI - unstyled
+- Lucide React - icons
+- Papaparse - json to csv
+- Radix-UI - unstyled components
+- Nivo - charts
 
 ---
 

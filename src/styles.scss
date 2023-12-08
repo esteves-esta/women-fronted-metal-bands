@@ -126,6 +126,15 @@ p {
   font-size: 2em;
 }
 
+.title3 {
+  color: var(--text-title);
+  font-weight: 600;
+  // font-family: 'Lexend Peta', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 1em;
+}
+
 p.title2 {
   font-size: 20px;
   margin-bottom: 0px;

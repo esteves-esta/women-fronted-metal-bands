@@ -1,50 +1,23 @@
 import React from 'react';
-import { ResponsiveWaffle } from '@nivo/waffle'
 import { BandContext } from '../BandsProvider';
 import { ResponsiveHeatMap } from '@nivo/heatmap'
-import colors from './colors'
+import formatYearsActive from '../../helpers/formatYearsActive';
 
-// heatmap - 
-/* 
-----qtd de bandas por decada
-id - country
-x - year - decade 1950 - 2020
-x - count
 
----- active years
-id - country
-x: 1 - y: count
-1 a 5
-5 a 10
-10 a 20
-20 a 30
-*/
-
-function BandYearsActiveByCountryChart () {
+function BandYearsActiveByCountryChart() {
   const { initialBandList } = React.useContext(BandContext)
   const [chartHeatData, setChartHeatData] = React.useState([])
 
-  const formatYearsActive = React.useCallback((data) => {
-    const { yearStarted, yearEnded } = data;
 
-    const thisYear = new Date().getFullYear()
-
-    let activeYears = 0
-    if (yearStarted !== null) {
-      activeYears = thisYear - yearStarted
-      if (yearEnded) activeYears = yearEnded - yearStarted
-    }
-    return activeYears;
-  }, []);
 
 
   React.useEffect(() => {
-    const list = [...initialBandList];
     const newChartData = []
-    list.forEach((band) => {
-      // console.log(band)
+
+    initialBandList.forEach((band) => {
       const alredy = newChartData.findIndex(data => data.id === band.country)
       const yearsActive = formatYearsActive(band)
+
       if (alredy >= 0) {
         newChartData[alredy].data[0].y += yearsActive < 5 ? 1 : 0;
         newChartData[alredy].data[1].y += yearsActive >= 5 && yearsActive < 10 ? 1 : 0;
@@ -84,8 +57,8 @@ function BandYearsActiveByCountryChart () {
         })
       }
     })
+
     setChartHeatData(newChartData)
-    // console.log(chartHeatData)
   }, [])
 
   return (
@@ -109,11 +82,11 @@ function BandYearsActiveByCountryChart () {
         legendOffset: 70
       }}
       colors={{
-        type: 'sequential',
-        scheme: 'turbo',
-        divergeAt: 0.6,
+        type: 'diverging',
+        scheme: 'sinebow',
+        divergeAt: 0.2,
         minValue: 0,
-        maxValue: 16
+        maxValue: 15
       }}
       emptyColor="#000"
       legends={[
@@ -153,4 +126,4 @@ function BandYearsActiveByCountryChart () {
   )
 };
 
-export default BandYearsActiveByCountryChart ;
+export default BandYearsActiveByCountryChart;
