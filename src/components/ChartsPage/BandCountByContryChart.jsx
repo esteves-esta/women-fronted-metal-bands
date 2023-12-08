@@ -35,8 +35,8 @@ function BandCountByContryChart({ filter }) {
     <ResponsiveWaffle
       data={chartData}
       total={initialBandList.length + 5}
-      rows={5}
-      columns={30}
+      rows={10}
+      columns={(initialBandList.length + 5) / 5}
       padding={2}
       borderRadius={10}
       fillDirection='right'
@@ -45,13 +45,13 @@ function BandCountByContryChart({ filter }) {
       colors={{
         datum: 'color'
       }}
-      margin={{ left: 30, right: 30 }}
+      margin={{ left: 30, right: 30, top: 50 }}
       legends={[
         {
           anchor: 'top-left',
           direction: 'row',
           padding: 10,
-          translateY: 40,
+          translateY: -30,
           itemsSpacing: 4,
           itemWidth: 40,
           itemHeight: 5,

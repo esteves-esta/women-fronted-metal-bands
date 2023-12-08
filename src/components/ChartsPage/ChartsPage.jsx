@@ -36,7 +36,7 @@ function ChartsPage() {
       </div>
     </div>
 
-    <div style={{ height: '350px' }}>
+    <div style={{ height: '450px' }}>
       <BandCountByContryChart filter={bandStatusFilter} />
     </div>
     {/* ---------------------------------- */}

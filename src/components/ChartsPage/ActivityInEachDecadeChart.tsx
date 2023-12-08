@@ -4,29 +4,29 @@ import { BandContext } from '../BandsProvider';
 
 function ActivityInEachDecadeChart() {
   const { initialBandList } = React.useContext(BandContext)
-  const [chartData, setChartData] = React.useState([
-    { id: '1970', value: 0 },
-    { id: '1980', value: 0 },
-    { id: '1990', value: 0 },
-    { id: '2000', value: 0 },
-    { id: '2010', value: 0 },
-    { id: '2020', value: 0 },
-  ])
+  const [chartData, setChartData] = React.useState([])
 
   function getIfActiveOnDecade(band, decade) {
     const { yearStarted, yearEnded } = band
+    // console.log({ decade })
     if (yearEnded) {
       // console.log({ yearEnded })
-      // console.log({ decade })
       return yearEnded <= decade ? 0 : 1
     }
 
     // console.log({ yearStarted })
+    // console.log("------------------")
     return yearStarted >= decade && yearStarted < (decade + 10) ? 1 : 0
   }
 
   React.useEffect(() => {
-    const newChartData = [...chartData]
+    const newChartData = [{ id: '1970', value: 0 },
+    { id: '1980', value: 0 },
+    { id: '1990', value: 0 },
+    { id: '2000', value: 0 },
+    { id: '2010', value: 0 },
+    { id: '2020', value: 0 }]
+
     initialBandList.forEach((band) => {
       newChartData[0].value += getIfActiveOnDecade(band, 1970);
       newChartData[1].value += getIfActiveOnDecade(band, 1980)

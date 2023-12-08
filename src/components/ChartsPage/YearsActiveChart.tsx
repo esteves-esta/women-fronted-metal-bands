@@ -6,7 +6,10 @@ import formatYearsActive from '../../helpers/formatYearsActive';
 function BandYearsActiveChart() {
   const { initialBandList } = React.useContext(BandContext)
   const [chartData, setChartData] = React.useState([
-    { id: '1-5', value: 0 },
+    { id: '1', value: 0 },
+    { id: '2', value: 0 },
+    { id: '3', value: 0 },
+    { id: '4', value: 0 },
     { id: '5-10', value: 0 },
     { id: '10-20', value: 0 },
     { id: '20-30', value: 0 },
@@ -24,12 +27,15 @@ function BandYearsActiveChart() {
       const yearsActive = formatYearsActive(band)
       average += yearsActive;
 
-      newChartData[0].value += yearsActive < 5 ? 1 : 0;
-      newChartData[1].value += yearsActive >= 5 && yearsActive < 10 ? 1 : 0;
-      newChartData[2].value += yearsActive >= 20 && yearsActive < 30 ? 1 : 0;
-      newChartData[3].value += yearsActive >= 30 && yearsActive < 40 ? 1 : 0;
-      newChartData[4].value += yearsActive >= 30 && yearsActive < 40 ? 1 : 0;
-      newChartData[5].value += yearsActive >= 40 && yearsActive < 50 ? 1 : 0;
+      newChartData[0].value += yearsActive <= 1 ? 1 : 0;
+      newChartData[1].value += yearsActive <= 2 ? 1 : 0;
+      newChartData[2].value += yearsActive <= 3 ? 1 : 0;
+      newChartData[3].value += yearsActive <= 4 ? 1 : 0;
+      newChartData[4].value += yearsActive >= 5 && yearsActive < 10 ? 1 : 0;
+      newChartData[5].value += yearsActive >= 20 && yearsActive < 30 ? 1 : 0;
+      newChartData[6].value += yearsActive >= 30 && yearsActive < 40 ? 1 : 0;
+      newChartData[7].value += yearsActive >= 30 && yearsActive < 40 ? 1 : 0;
+      newChartData[8].value += yearsActive >= 40 && yearsActive < 50 ? 1 : 0;
 
     })
 
