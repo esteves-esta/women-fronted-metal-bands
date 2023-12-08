@@ -1,37 +1,23 @@
 import React from 'react';
 import { BandContext } from '../BandsProvider';
 import { ResponsiveHeatMap } from '@nivo/heatmap'
-import colors from './colors'
-
-// heatmap - 
-/* 
-----qtd de bandas por decada
-id - country
-x - year - decade 1950 - 2020
-x - count
-
-*/
 
 function getIfActiveOnDecade(band, decade) {
   const { yearStarted, yearEnded } = band
   if (yearEnded) {
-    // console.log({ yearEnded })
-    // console.log({ decade })
     return yearEnded <= decade ? 0 : 1
   }
-  
-  // console.log({ yearStarted })
+
   return yearStarted >= decade && yearStarted < (decade + 10) ? 1 : 0
 }
 
 function BandCountByDecadeChart() {
   const { initialBandList } = React.useContext(BandContext)
-  const [chartHeatData, setChartHeatData] = React.useState([])
+  const [chartData, setChartData] = React.useState([])
 
   React.useEffect(() => {
-    const list = [...initialBandList];
     const newChartData = []
-    list.forEach((band) => {
+    initialBandList.forEach((band) => {
 
       const already = newChartData.findIndex(data => data.id === band.country)
       if (already >= 0) {
@@ -73,16 +59,15 @@ function BandCountByDecadeChart() {
         })
       }
     })
-    setChartHeatData(newChartData)
+    setChartData(newChartData)
     // console.log(chartHeatData)
   }, [])
 
   return (
     <ResponsiveHeatMap
-      data={chartHeatData}
+      data={chartData}
       // forceSquare={true}
       margin={{ top: 60, right: 300, bottom: 60, left: 300 }}
-      // valueFormat=">-.2s"
       axisTop={{
         tickSize: 5,
         tickPadding: 5,
@@ -124,7 +109,6 @@ function BandCountByDecadeChart() {
       ]}
       inactiveOpacity={0.1}
       theme={{
-        // "background": "#ffffff",
         "text": {
           "fontSize": 14,
           "fill": "var(--text-color)",

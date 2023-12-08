@@ -3,13 +3,9 @@ import { BandContext } from '../BandsProvider';
 import { ResponsiveHeatMap } from '@nivo/heatmap'
 import formatYearsActive from '../../helpers/formatYearsActive';
 
-
 function BandYearsActiveByCountryChart() {
   const { initialBandList } = React.useContext(BandContext)
-  const [chartHeatData, setChartHeatData] = React.useState([])
-
-
-
+  const [chartData, setChartData] = React.useState([])
 
   React.useEffect(() => {
     const newChartData = []
@@ -58,15 +54,14 @@ function BandYearsActiveByCountryChart() {
       }
     })
 
-    setChartHeatData(newChartData)
+    setChartData(newChartData)
   }, [])
 
   return (
     <ResponsiveHeatMap
-      data={chartHeatData}
+      data={chartData}
       // forceSquare={true}
       margin={{ top: 60, right: 300, bottom: 60, left: 300 }}
-      // valueFormat=">-.2s"
       axisTop={{
         tickSize: 5,
         tickPadding: 5,
@@ -84,7 +79,7 @@ function BandYearsActiveByCountryChart() {
       colors={{
         type: 'diverging',
         scheme: 'sinebow',
-        divergeAt: 0.2,
+        divergeAt: 0.7,
         minValue: 0,
         maxValue: 15
       }}
@@ -108,7 +103,6 @@ function BandYearsActiveByCountryChart() {
       ]}
       inactiveOpacity={0.1}
       theme={{
-        // "background": "#ffffff",
         "text": {
           "fontSize": 14,
           "fill": "var(--text-color)",

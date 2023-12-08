@@ -121,7 +121,6 @@ const PieChartCustom = ({ data, startAngle, endAngle, colors, /* style */ }) => 
   return (
     <div style={{ height: "350px", width: '350px',/*  ...style */ }}>
       <ResponsivePie
-
         data={data}
         fit={true}
         margin={{ left: 20, right: 20 }}

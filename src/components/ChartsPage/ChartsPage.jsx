@@ -5,7 +5,7 @@ import BandCountByContryChart from './BandCountByContryChart'
 import BandYearsActiveByCountryChart from './BandYearsActiveByCountryChart '
 import BandCountByDecadeChart from './BandCountByDecadeChart'
 import ActivityInEachDecadeChart from './ActivityInEachDecadeChart'
-import BandYearsActiveChart from './BandYearsActiveChart'
+import BandYearsActiveChart from './YearsActiveChart'
 import BandDetailsChart from './BandDetailsChart'
 import classes from './ChartsPage.module.css'
 import ToogleGroupButton from '../ToogleGroupButton';

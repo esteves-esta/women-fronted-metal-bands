@@ -52,10 +52,13 @@ function BandYearsActiveChart() {
         layout="horizontal"
         enableGridX={true}
         enableGridY={false}
-        margin={{ top: 50, right: 200, bottom: 50, left: 260 }}
+        margin={{ top: 50, right: 200, bottom: 50, left: 200 }}
+        borderRadius={10}
+        padding={0.4}
         colors={{ scheme: 'purpleRed_green' }}
         labelTextColor={"white"}
-        barAriaLabel={e => e.id + ": " + e.formattedValue}
+        isInteractive={false}
+        barAriaLabel={e => e.id + ": " + e.value}
         theme={{
           "text": {
             "fontSize": 13,
@@ -64,30 +67,24 @@ function BandYearsActiveChart() {
           "axis": {
             "domain": {
               "line": {
-                "stroke": "#444",
+                "stroke": "var(--border-color)",
                 "strokeWidth": 1
               }
             },
             "ticks": {
               "line": {
-                "stroke": "#444",
+                "stroke": "var(--border-color)",
                 "strokeWidth": 1
               },
             }
           },
           "grid": {
             "line": {
-              "stroke": "#444",
+              "stroke": "var(--border-color)",
               "strokeDasharray": 20,
               "strokeWidth": 1,
             }
           },
-          "tooltip": {
-            "container": {
-              "background": "#444",
-              "fontSize": 12
-            },
-          }
         }}
       />
     </React.Fragment>
