@@ -3996,5 +3996,68 @@
     "recommendation": null,
     "links": "https://www.metal-archives.com/bands/Anghell/125079",
     "sister": false
+  },
+  {
+    "deezerId": 3864661,
+    "deezerRecommendationId": 2297766445,
+    "band": "Tessia ",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Julie Berthelsen"
+    ],
+    "country": "Norway",
+    "countryCode": "NO",
+    "yearStarted": 2016,
+    "yearEnded": null,
+    "recommendation": "The Fall of Divinity",
+    "links": "https://www.youtube.com/watch?v=iPpaNZXj9qY",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "nova crow",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Kitty Staunton "
+    ],
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "yearStarted": 2013,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "WWW.NOVACROWOFFICIAL.COM",
+    "sister": false
+  },
+  {
+    "deezerId": 876623,
+    "deezerRecommendationId": null,
+    "band": "Soraia",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 1,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "ZouZou Mansour"
+    ],
+    "country": "United States of America",
+    "countryCode": "US",
+    "yearStarted": 2013,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://www.soraia.com/about-us",
+    "sister": false
   }
 ]
