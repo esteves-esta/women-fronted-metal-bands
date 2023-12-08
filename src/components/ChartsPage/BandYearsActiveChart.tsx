@@ -41,7 +41,7 @@ function BandYearsActiveChart() {
     <React.Fragment>
       <p className='text-center title3 mt-10'>
         Average time of activity: {" "}
-        <span className='font-black'>{averageTime}</span>
+        <span className='font-black'>{averageTime} years</span>
       </p>
       <ResponsiveBar
         data={chartData}
