@@ -2,7 +2,49 @@
   {
     "deezerId": null,
     "deezerRecommendationId": null,
-    "band": "anguished",
+    "band": "Bela Blvk",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 1,
+    "pastVocalists": [],
+    "currentVocalists": [
+      ""
+    ],
+    "country": "United States of America",
+    "countryCode": "US",
+    "yearStarted": null,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://www.youtube.com/watch?v=o2hGAR5Ybnw",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "Santa Cora",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      ""
+    ],
+    "country": "Brasil",
+    "countryCode": "BR",
+    "yearStarted": null,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://www.youtube.com/watch?v=R38QDDqmReI",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "Edge Of Paradise",
     "genre": [],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -17,7 +59,7 @@
     "yearStarted": null,
     "yearEnded": null,
     "recommendation": null,
-    "links": null,
+    "links": "https://www.youtube.com/watch?v=CB4BuybXJPs",
     "sister": false
   },
   {
