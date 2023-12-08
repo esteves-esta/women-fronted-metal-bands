@@ -18,9 +18,12 @@ I got some of the bands and the information on this list from the following:
 - https://www.youtube.com/@femalemetalbands
 - https://www.metal-archives.com/
 - https://www.metaladies.com/bands/
+- https://www.youtube.com/channel/UC7oMXVI6Dwk2yIuWiY0lH1A
+- https://femmetal.rocks/
 - https://www.wikimetal.com.br/
 - https://www.spirit-of-metal.com/
 - https://www.metalmusicarchives.com
+- https://www.metal-archives.com/artists/Diva_Satanica/496116
 - [Swedish hard n' heavy encyclopedia](https://www.fwoshm.com/index/)
 
 
