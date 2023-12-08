@@ -85,13 +85,13 @@ function BandDetailsChart({ filter }) {
     <div>
       <div className={`flex flex-row justify-center mt-5 ${classes.borderBottom}`}>
         <div className={`flex flex-col pb-4 ${classes.borderRight}`}>
-          <PieChartCustom colors={{ scheme: 'purpleRed_green' }} data={allwomenData} startAngle={-90} endAngle={0} /* style={{ "borderRight": '2px solid red' }} */ />
+          <PieChartCustom colors={{ scheme: 'purpleRed_green' }} data={allwomenData} /* style={{ "borderRight": '2px solid red' }} */ />
           <small className='title2 text-center'>
             All women band
           </small>
         </div>
         <div className='flex flex-col pb-4'>
-          <PieChartCustom colors={{ scheme: 'pink_yellowGreen' }} data={blackwomenData} startAngle={0} endAngle={90} /* style={{}} */ />
+          <PieChartCustom colors={{ scheme: 'pink_yellowGreen' }} data={blackwomenData} /* style={{}} */ />
           <small className='title2 text-center'>
             Black women
           </small>
@@ -100,13 +100,13 @@ function BandDetailsChart({ filter }) {
 
       <div className='flex flex-row justify-center' >
         <div className={`flex flex-col pb-4 ${classes.borderRight}`}>
-          <PieChartCustom colors={{ scheme: 'category10' }} data={sisterData} startAngle={-90} endAngle={-180} /* style={{ "borderRight": '2px solid red' }} */ />
+          <PieChartCustom colors={{ scheme: 'category10' }} data={sisterData} /* style={{ "borderRight": '2px solid red' }} */ />
           <small className='title2 text-center'>
             Sisters
           </small>
         </div>
         <div className='flex flex-col pb-4'>
-          <PieChartCustom colors={{ scheme: 'paired' }} data={statusData} startAngle={90} endAngle={180} /* style={{}} */ />
+          <PieChartCustom colors={{ scheme: 'paired' }} data={statusData} /* style={{}} */ />
           <small className='title2 text-center'>
             Band status
           </small>
