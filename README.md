@@ -103,6 +103,7 @@ I got some of the bands and the information on this list from the following:
   - [Metal ladies - all-female metal bands](https://www.metaladies.com/bands/)
   ---
 - Sites / Magazines 
+  - [FemMetal - Goddsses of Metal](https: //femmetal.rocks)
   - [Wiki Metal](https://www.wikimetal.com.br/)
   - [Bandcamp Daily - Ten Divine, Diabolical Feminine Artists Challenging Heavy Metal Machismo](https://daily.bandcamp.com/lists/feminine-expression-in-metal-guide)
   - [No Clean Singing - FEMALE GROWLERS](https://www.nocleansinging.com/2012/02/08/female-growlers/)
