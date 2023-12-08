@@ -22,7 +22,8 @@ function Home() {
           skills. You can filter bands by how much growling the singer can / usually do on the songs of
           the band.</p>
 
-        <small className="text-sm">Note: This is an ongoing project.</small>
+        <small className="text-sm">Note: This is an ongoing project. To see where these data was gathered from{" "}
+        <a className='inline' href="https://github.com/esteves-esta/women-fronted-metal-bands#sources" target="_blank"> click here</a></small>
       </div>
     </section>
 
