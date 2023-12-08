@@ -176,13 +176,17 @@ function DataTable({
       )}
 
       {gridMode && (
-        <div className='flex flex-row gap-4 mb-5 items-center'>
+        <div className='flex flex-row gap-10 my-10 items-center'>
           <p className='label mb-0'>Sorting</p>
           {columnsInfo.map((headerInfo, index) => {
             const { sortable, headerLabel, sort, visible } = headerInfo
 
             return sortable && visible && (
-              <button onClick={() => handleSortRows(headerInfo, index)} className='flex flex-row gap-3 items-center' key={headerInfo.key}>
+              <button
+                key={headerInfo.key}
+                className={classes.gridSortBtn}
+                onClick={() => handleSortRows(headerInfo, index)}
+              >
 
                 {headerLabel}
 

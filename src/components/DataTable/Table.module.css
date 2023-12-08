@@ -222,6 +222,29 @@ select.search {
 }
 
 /* grid */
+.gridSortBtn {
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0px;
+  color: var(--text-secondary);
+  vertical-align: middle;
+  border: 0px;
+  outline: 0px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  /* width: 100%; */
+  transition: all 0.5s ease;
+}
+
+.gridSortBtn:hover {
+  color: var(--color-primary-lighten1);
+
+}
 
 .grid {
   display: grid;
