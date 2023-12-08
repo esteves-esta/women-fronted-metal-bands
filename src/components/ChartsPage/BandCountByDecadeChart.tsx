@@ -18,7 +18,6 @@ function BandCountByDecadeChart() {
   React.useEffect(() => {
     const newChartData = []
     initialBandList.forEach((band) => {
-
       const already = newChartData.findIndex(data => data.id === band.country)
       if (already >= 0) {
         newChartData[already].data[0].y += getIfActiveOnDecade(band, 1970);
@@ -85,7 +84,6 @@ function BandCountByDecadeChart() {
       colors={{
         type: 'sequential',
         scheme: 'turbo',
-        divergeAt: 0.6,
         minValue: 0,
         maxValue: 16
       }}

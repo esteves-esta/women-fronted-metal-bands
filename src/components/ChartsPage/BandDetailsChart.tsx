@@ -117,7 +117,7 @@ function BandDetailsChart({ filter }) {
 };
 
 
-const PieChartCustom = ({ data, startAngle, endAngle, colors, /* style */ }) => {
+const PieChartCustom = ({ data, /* startAngle, endAngle, */ colors, /* style */ }) => {
   return (
     <div style={{ height: "350px", width: '350px',/*  ...style */ }}>
       <ResponsivePie

@@ -1,7 +1,6 @@
 import React from 'react';
 import { ResponsiveBar } from '@nivo/bar'
 import { BandContext } from '../BandsProvider';
-import colors from './colors'
 
 function ActivityInEachDecadeChart() {
   const { initialBandList } = React.useContext(BandContext)
