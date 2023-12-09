@@ -101,6 +101,7 @@ I got some of the bands and the information on this list from the following:
   - [Swedish Hard n'Heavy Encyclopedia](https://www.fwoshm.com/index/)
   - [Spirit of Metal](https://www.spirit-of-metal.com/)
   - [Metal ladies - all-female metal bands](https://www.metaladies.com/bands/)
+  - http://www.metaleros.de/
   ---
 - Sites / Magazines 
   - [FemMetal - Goddsses of Metal](https: //femmetal.rocks)

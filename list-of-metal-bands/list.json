@@ -4059,5 +4059,778 @@
     "recommendation": null,
     "links": "https://www.soraia.com/about-us",
     "sister": false
+  },
+  {
+    "deezerId": 207926157,
+    "deezerRecommendationId": null,
+    "band": "Santa Cora",
+    "genre": [
+      "Symphonic",
+      "Progressive Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Carolina Corteze"
+    ],
+    "country": "Brasil",
+    "countryCode": "BR",
+    "yearStarted": 2022,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://www.youtube.com/watch?v=R38QDDqmReI",
+    "sister": false
+  },
+  {
+    "deezerId": 1439815,
+    "deezerRecommendationId": null,
+    "band": "Edge Of Paradise",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 1,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Margarita Monet "
+    ],
+    "country": "United States of America",
+    "countryCode": "US",
+    "yearStarted": 2019,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://www.edgeofparadiseband.com/about-us.php",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": 278693562,
+    "band": "aphasia",
+    "genre": [
+      "Hard Rock",
+      "Melodic Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Sion"
+    ],
+    "country": "Japan",
+    "countryCode": "JP",
+    "yearStarted": 1994,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://www.aphasiajpn.com/",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "aphrodite",
+    "genre": [
+      "Heavy Metal "
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 1,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Malin Ekholm"
+    ],
+    "country": "Sweden",
+    "countryCode": "SE",
+    "yearStarted": 1985,
+    "yearEnded": 1990,
+    "recommendation": null,
+    "links": "https://www.fwoshm.com/index/A/638-aphrodite-swe",
+    "sister": false
+  },
+  {
+    "deezerId": 7881516,
+    "deezerRecommendationId": null,
+    "band": "apofenia",
+    "genre": [
+      "Death Thrash Metal "
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Evelin Karen Castro",
+      "Gisselle"
+    ],
+    "country": "Argentina",
+    "countryCode": "",
+    "yearStarted": 2015,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://apofenia.bandcamp.com/track/worm-infested",
+    "sister": false
+  },
+  {
+    "deezerId": 824990,
+    "deezerRecommendationId": null,
+    "band": "area 7",
+    "genre": [
+      "Nu-Metal",
+      "Hardcore",
+      "Metalcore"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Diana Foronda"
+    ],
+    "country": "Peru",
+    "countryCode": "",
+    "yearStarted": 1999,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://www.youtube.com/watch?v=UVrhDgQr20g",
+    "sister": true
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "ashes arise",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Emily Moss"
+    ],
+    "country": "United States of America",
+    "countryCode": "",
+    "yearStarted": null,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://ashesariseproject.bandcamp.com/album/resurgence-from-oblivion",
+    "sister": false
+  },
+  {
+    "deezerId": 3269,
+    "deezerRecommendationId": null,
+    "band": "astarte",
+    "genre": [
+      "BLACK METAL"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 2,
+    "pastVocalists": [
+      "KINTHIA "
+    ],
+    "currentVocalists": [
+      "Tristessa  "
+    ],
+    "country": "Greece ",
+    "countryCode": "",
+    "yearStarted": 1995,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://astarteband.bandcamp.com/merch",
+    "sister": false
+  },
+  {
+    "deezerId": 4920932,
+    "deezerRecommendationId": null,
+    "band": "atomic blonde / Glass Lily",
+    "genre": [
+      "Hard Rock"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Dacia Tee"
+    ],
+    "country": "",
+    "countryCode": "",
+    "yearStarted": 2004,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://www.atomicblonde.net/",
+    "sister": false
+  },
+  {
+    "deezerId": 13145987,
+    "deezerRecommendationId": null,
+    "band": "baby dollz",
+    "genre": [
+      "Gothic Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 1,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Karina Clowes"
+    ],
+    "country": "Mexico",
+    "countryCode": "",
+    "yearStarted": 2013,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "http://babydollz.bandcamp.com",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "bandit",
+    "genre": [
+      "Heavy Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 2,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Cathy Montgomery"
+    ],
+    "country": "United States of America",
+    "countryCode": "US",
+    "yearStarted": 1989,
+    "yearEnded": 1994,
+    "recommendation": null,
+    "links": "https://soundcloud.com/allfemalebandbandit",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "beltane",
+    "genre": [
+      "Thrash Metal",
+      "Hardcore"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 1,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Annemarie Blokland"
+    ],
+    "country": "Netherlands",
+    "countryCode": "",
+    "yearStarted": 1994,
+    "yearEnded": 1998,
+    "recommendation": null,
+    "links": "https://soundcloud.com/hipperthanhellrecords/sets/beltane-1995-beltane",
+    "sister": false
+  },
+  {
+    "deezerId": 480856,
+    "deezerRecommendationId": null,
+    "band": "betty blowtorch",
+    "genre": [
+      "Hard Rock "
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 1,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Bianca Halstead"
+    ],
+    "country": "United States of America",
+    "countryCode": "",
+    "yearStarted": 1998,
+    "yearEnded": 2001,
+    "recommendation": null,
+    "links": "https://www.last.fm/music/Betty+Blowtorch/+wiki",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "bitchcraft",
+    "genre": [
+      "Thrash Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 2,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Hollie Petit",
+      "Taryn “Tararyzer” Lee",
+      "Cori Anderson"
+    ],
+    "country": "United States of America",
+    "countryCode": "",
+    "yearStarted": 1993,
+    "yearEnded": 1995,
+    "recommendation": null,
+    "links": "https://sangrealrecords.bandcamp.com/album/anghell-bitchcraft-split-lp",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "bitchcraft",
+    "genre": [
+      "Doom Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Julka"
+    ],
+    "country": "Poland",
+    "countryCode": "",
+    "yearStarted": 2011,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://bitchcraftband.bandcamp.com/album/bitchcraft-2",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "black palace",
+    "genre": [
+      "Black Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      ""
+    ],
+    "country": "Mexico",
+    "countryCode": "",
+    "yearStarted": 2006,
+    "yearEnded": 2014,
+    "recommendation": null,
+    "links": "https://www.reverbnation.com/blackpalace",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "black widows",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Aphrodite “The Howling Of The Dragon”"
+    ],
+    "country": "Portugal",
+    "countryCode": "",
+    "yearStarted": 1995,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://blackwidowsportugal.bandcamp.com/album/among-the-brave-ones",
+    "sister": false
+  },
+  {
+    "deezerId": 362749,
+    "deezerRecommendationId": null,
+    "band": "blackthorn",
+    "genre": [
+      "Symphonic Black Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Aina "
+    ],
+    "country": "Russsia",
+    "countryCode": "",
+    "yearStarted": 2004,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://blackthornmetal.bandcamp.com/",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "blair witch (女巫)",
+    "genre": [
+      "Black Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Ice"
+    ],
+    "country": "Taiwan",
+    "countryCode": "",
+    "yearStarted": 2008,
+    "yearEnded": 2011,
+    "recommendation": null,
+    "links": "https://www.youtube.com/watch?v=NkcRcLOwx20",
+    "sister": false
+  },
+  /* --------- */
+  {
+    "deezerId": 5549369,
+    "deezerRecommendationId": null,
+    "band": "tera volts",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      ""
+    ],
+    "country": "",
+    "countryCode": "",
+    "yearStarted": null,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": null,
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "turdus merula",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Dísa"
+    ],
+    "country": "Sweden",
+    "countryCode": "",
+    "yearStarted": 2007,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://lecrepusculedusoir.bandcamp.com/album/herbarium",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "valhalla",
+    "genre": [
+      "Death Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      ""
+    ],
+    "country": "Brazil",
+    "countryCode": "",
+    "yearStarted": null,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://www.youtube.com/watch?v=cSfgou_djdQ",
+    "sister": false
+  },
+  {
+    "deezerId": 13319599,
+    "deezerRecommendationId": null,
+    "band": "vehemal",
+    "genre": [
+      " Black Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Hekatharsia "
+    ],
+    "country": "Canada",
+    "countryCode": "CA",
+    "yearStarted": 2008,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://www.youtube.com/user/Vehemal",
+    "sister": false
+  },
+  {
+    "deezerId": 1368020,
+    "deezerRecommendationId": null,
+    "band": "cybele",
+    "genre": [
+      "Gothic metal "
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Hilde Wahl"
+    ],
+    "country": "Norway",
+    "countryCode": "",
+    "yearStarted": 1994,
+    "yearEnded": 2001,
+    "recommendation": null,
+    "links": "https://cybeleband.bandcamp.com/album/brightly-blackhearted",
+    "sister": false
+  },
+  {
+    "deezerId": 12193820,
+    "deezerRecommendationId": null,
+    "band": "dodsangel / DödsÄngel",
+    "genre": [
+      "Black Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Trish "
+    ],
+    "country": "Norway ",
+    "countryCode": "",
+    "yearStarted": 2007,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://digipus.bandcamp.com/album/helgrind",
+    "sister": false
+  },
+  {
+    "deezerId": 1174611,
+    "deezerRecommendationId": null,
+    "band": "dormitory effect",
+    "genre": [
+      "Heavy Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 2,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Susan Wendelken"
+    ],
+    "country": "United States of America",
+    "countryCode": "",
+    "yearStarted": 2004,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://web.archive.org/web/20110207202532/http://www.dormitoryeffect.com/",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "dracena",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      ""
+    ],
+    "country": "",
+    "countryCode": "",
+    "yearStarted": null,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://dracena.se/html/frameset/frameset.html",
+    "sister": false
+  },
+  {
+    "deezerId": 4405309,
+    "deezerRecommendationId": null,
+    "band": "drain sth",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      ""
+    ],
+    "country": "",
+    "countryCode": "",
+    "yearStarted": null,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": null,
+    "sister": false
+  },
+  {
+    "deezerId": 1368020,
+    "deezerRecommendationId": null,
+    "band": "cybele",
+    "genre": [
+      "Gothic metal "
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Hilde Wahl"
+    ],
+    "country": "Norway",
+    "countryCode": "",
+    "yearStarted": 1994,
+    "yearEnded": 2001,
+    "recommendation": null,
+    "links": "https://cybeleband.bandcamp.com/album/brightly-blackhearted",
+    "sister": false
+  },
+  {
+    "deezerId": 12193820,
+    "deezerRecommendationId": null,
+    "band": "dodsangel / DödsÄngel",
+    "genre": [
+      "Black Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Trish "
+    ],
+    "country": "Norway ",
+    "countryCode": "",
+    "yearStarted": 2007,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://digipus.bandcamp.com/album/helgrind",
+    "sister": false
+  },
+  {
+    "deezerId": 1174611,
+    "deezerRecommendationId": null,
+    "band": "dormitory effect",
+    "genre": [
+      "Heavy Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 2,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Susan Wendelken"
+    ],
+    "country": "United States of America",
+    "countryCode": "",
+    "yearStarted": 2004,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://web.archive.org/web/20110207202532/http://www.dormitoryeffect.com/",
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "dracena",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      ""
+    ],
+    "country": "",
+    "countryCode": "",
+    "yearStarted": null,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "https://dracena.se/html/frameset/frameset.html",
+    "sister": false
+  },
+  {
+    "deezerId": 4405309,
+    "deezerRecommendationId": null,
+    "band": "drain sth",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      ""
+    ],
+    "country": "",
+    "countryCode": "",
+    "yearStarted": null,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": null,
+    "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "revolution eve",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      ""
+    ],
+    "country": "",
+    "countryCode": "",
+    "yearStarted": null,
+    "yearEnded": null,
+    "recommendation": null,
+    "links": "http://www.revolutioneve.com/",
+    "sister": false
   }
 ]
