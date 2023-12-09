@@ -101,7 +101,8 @@ function MediaPlayer() {
       <div className={classes.info}>
         <div className="flex flex-row gap-4 items-center">
           <AudioLines />
-          <p className="label mb-0">Playing preview via deezer api</p>
+          <p className="label mb-0">Playing preview via
+            <a className="inline pl-2" href="https://developers.deezer.com/api" target="_blank">deezer api</a></p>
 
         </div>
       </div>

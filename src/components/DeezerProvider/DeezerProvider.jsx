@@ -39,7 +39,6 @@ function DeezerProvider({ children }) {
     fetcher
   );
 
-
   const getArtistPicture = React.useCallback((bandId) => {
     const foundBand = bands.find(band => band.deezerId === bandId);
     if (!foundBand) return;
@@ -93,7 +92,7 @@ function DeezerProvider({ children }) {
     }
 
     if (foundBand.deezerTrackInfo) {
-      setPreviewTrack(foundBand.deezerTrackInfo)
+      setPreviewTrack({...foundBand.deezerTrackInfo})
       setCurrentBandId(bandId)
       setIsPlaying(false)
       return;
@@ -106,7 +105,7 @@ function DeezerProvider({ children }) {
 
   React.useEffect(() => {
     if (trackInfo === undefined) return;
-    setPreviewTrack(trackInfo)
+    setPreviewTrack({...trackInfo})
   }, [trackInfo])
 
   React.useEffect(() => {
