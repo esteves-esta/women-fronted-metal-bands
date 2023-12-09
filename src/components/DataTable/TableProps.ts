@@ -6,9 +6,9 @@ export interface TableColumn {
   img?: { source: string, alt: string }
 
   field?: string,
-  format?: (val) => string | boolean,
+  format?: (val) => string | boolean | number,
   formatElement?: (val) => React.ReactNode,
-  filter: boolean,
+  filter?: boolean,
   sortable?: boolean
   sort?: 'desc' | 'asc'
   handleSort?: (valA, valB, sort) => number,

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Filter, ExternalLink, Table2, Grid, Download } from 'lucide-react';
+import { Filter, ExternalLink, PlayCircle, Table2, Grid, Download } from 'lucide-react';
 import { booleanTagList, growTagList } from '../../constants';
 import { TableColumn } from '../DataTable/TableProps';
 import DataTable from '../DataTable'
@@ -7,7 +7,8 @@ import { BandContext } from '../BandsProvider';
 import { DeezerContext } from '../DeezerProvider';
 import ToogleGroupButton from '../ToogleGroupButton';
 import { TagInfo } from '../Tag';
-import classes from './BandsTable.module.css'
+import formatYearsActive from '../../helpers/formatYearsActive';
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 function BandsTable() {
   const { bands, initialBandList, setBands, filterByGrow, downloadAll,
@@ -37,37 +38,48 @@ function BandsTable() {
     { value: 'grid', text: 'Grid', icon: Grid, iconOnly: true }
   ], [])
 
-  const playRecommendedTrack = React.useCallback((row) => getTrackPreview(row.deezerId), [currentBandId, trackIsLoading])
+  const playRecommendedTrackOrOpenLink = React.useCallback((row) => {
+    if (row.deezerId) getTrackPreview(row.deezerId);
+    if (row.links) window.open(
+      row.links,
+      '_blank'
+    ); 
 
+  }, [currentBandId, trackIsLoading])
 
+  const formatGridImage = React.useCallback((row) => {
+    if (row.deezerPicture && !row.emptyPicture)
+      return {
+        src: row.deezerPicture,
+        alt: "Picture of the band"
+      }
+    if (row.deezerTrackInfo && row.emptyPicture)
+      return {
+        src: row.deezerTrackInfo.album.cover_medium,
+        alt: `Cover of album: ${row.deezerTrackInfo.albumtitle}`
+      }
+    return { src: null, alt: null }
+  }, [])
 
   // ------------
-
-  const formatYearsActive = React.useCallback((column: any) => {
-    if (!column) return '';
-    const { yearStarted, YearEnded: yearEnded } = column;
-
-    const thisYear = new Date().getFullYear()
-
-    let activeYears = 0
-    if (yearStarted !== null) {
-      activeYears = thisYear - yearStarted
-      if (yearEnded) activeYears = yearEnded - yearStarted
-    }
-    return activeYears.toString();
-  }, []);
-
-  const formatBandNameLinks = React.useCallback((column) => {
+  const formatPlayOrLink = React.useCallback((column) => {
     if (!column) return;
-    if (!column.links) return column.band;
-    return (
-      <span className={classes.bandName}>
-        {column.band}
-        <a href={column.links} target="_blank" onClick={(event) => event.stopPropagation()}>
-          <ExternalLink size={12} />
-        </a>
+    if (column.deezerId) {
+      return (<span className='flex justify-center'>
+        <PlayCircle />
+        <VisuallyHidden.Root>This band has a preview that can be played clicking on the row.</VisuallyHidden.Root>
       </span>
-    )
+      )
+    }
+    if (column.links && !column.deezerId) {
+      return (
+        <a className='flex justify-center' href={column.links} target="_blank" onClick={(event) => event.stopPropagation()}>
+          <ExternalLink />
+          <VisuallyHidden.Root>Link for an official page or a track from the band.</VisuallyHidden.Root>
+        </a>
+      )
+    }
+    return <React.Fragment></React.Fragment>
   }, [])
 
   const statusTagList: TagInfo[] = React.useMemo(() => [
@@ -84,7 +96,8 @@ function BandsTable() {
 
   const columns = React.useMemo(() => {
     const cols: TableColumn[] = [
-      { filter: true, visible: true, field: 'band', formatElement: formatBandNameLinks, headerLabel: 'Band', sortable: true },
+      { visible: true, formatElement: formatPlayOrLink, headerLabel: '' },
+      { filter: true, visible: true, field: 'band', headerLabel: 'Band', sortable: true },
       {
         filter: false, visible: true, field: 'growling', headerLabel: 'Growling', sortable: true,
         tagList: growTagList, tag: true, sort: 'desc', sortWithRawValue: true,
@@ -119,81 +132,69 @@ function BandsTable() {
   }, [])
 
 
-  return < section >
-    <div className='flex flex-col gap-8 items-center'>
-      <h2 className="title1">
-        The List
-      </h2>
+  return (
+    <section>
+      <div className='flex flex-col gap-8 items-center'>
+        <h2 className="title1">
+          The List
+        </h2>
 
-      <div className='flex flex-col gap-2 text-center'>
-        <p className='title2'>
-          {initialBandList.length} bands
-        </p>
-        {initialBandList.length !== bands.length && (
-          <small className='title2'>
-            (filtered: {bands.length} bands)
-          </small>
-        )}
-      </div>
-
-      <div className='flex flex-row items-center gap-3'>
-        <Download size={20} />
-        <span className='label'>Download</span>
-        <button className='button' onClick={downloadAll}>
-          List
-        </button>
-        <button className='button' onClick={downloadFiltered} >
-          Filtered list
-        </button>
-      </div>
-
-    </div>
-
-    <DataTable
-      isFiltered={growlFilter !== 'viewAll'}
-      rows={bands}
-      columns={columns}
-      pageSize={10}
-      handleRowChange={setBands}
-      gridMode={displayMode === 'grid'}
-      rowIdName="id"
-      onRowClick={playRecommendedTrack}
-      gridImage={(row) => {
-        if (row.deezerPicture && !row.emptyPicture)
-          return {
-            src: row.deezerPicture,
-            alt: "Picture of the band"
-          }
-        if (row.deezerTrackInfo && row.emptyPicture)
-          return {
-            src: row.deezerTrackInfo.album.cover_medium,
-            alt: `Cover of album: ${row.deezerTrackInfo.albumtitle}`
-          }
-        return { src: null, alt: null }
-      }}
-    >
-      <div className='flex flex-row items-center mb-16 justify-between'>
-        <div className='flex flex-row items-center gap-3'>
-          <Filter size={20} />
-          <span className='label'>Growling intensity</span>
-          <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
-            onChange={handleGrowlFilter} />
+        <div className='flex flex-col gap-2 text-center'>
+          <p className='title2'>
+            {initialBandList.length} bands
+          </p>
+          {initialBandList.length !== bands.length && (
+            <small className='title2'>
+              (filtered: {bands.length} bands)
+            </small>
+          )}
         </div>
 
         <div className='flex flex-row items-center gap-3'>
-          <span className='label'>Display mode</span>
-          <ToogleGroupButton list={displayOptions} currentValue={displayMode}
-            onChange={setIsDisplayMode} />
+          <Download size={20} />
+          <span className='label'>Download</span>
+          <button className='button' onClick={downloadAll}>
+            List
+          </button>
+          <button className='button' onClick={downloadFiltered} >
+            Filtered list
+          </button>
         </div>
 
       </div>
 
-      <div className='flex justify-center mb-2'>
-        <p className='label'>Click on row to play a preview of a track of the band.</p>
-      </div>
-    </DataTable>
+      <DataTable
+        isFiltered={growlFilter !== 'viewAll'}
+        rows={bands}
+        columns={columns}
+        pageSize={10}
+        handleRowChange={setBands}
+        gridMode={displayMode === 'grid'}
+        rowIdName="id"
+        onRowClick={playRecommendedTrackOrOpenLink}
+        gridImage={formatGridImage}
+      >
+        <div className='flex flex-row items-center mb-16 justify-between'>
+          <div className='flex flex-row items-center gap-3'>
+            <Filter size={20} />
+            <span className='label'>Growling intensity</span>
+            <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
+              onChange={handleGrowlFilter} />
+          </div>
 
-  </section >;
+          <div className='flex flex-row items-center gap-3'>
+            <span className='label'>Display mode</span>
+            <ToogleGroupButton list={displayOptions} currentValue={displayMode}
+              onChange={setIsDisplayMode} />
+          </div>
+
+        </div>
+
+        <div className='flex justify-center mb-2'>
+          <p className='label'>Click on row to play a preview of a track or be open on other tab a band link.</p>
+        </div>
+      </DataTable>
+    </section>)
 }
 
 export default BandsTable;

@@ -19,8 +19,7 @@ function Home() {
           And this realization lead me to search for bands with women as lead
           vocalists, and specially where said vocalist isn’t just doing the melodic parts but doing lots of growling. </p>
         <p>So I decided to make this page to compile the bands that I found and also pratice my frontend
-          skills. You can filter bands by how much growling the singer can / usually do on the songs of
-          the band.</p>
+          skills. You can filter bands by how much growling the singer is capable of doing.</p>
 
         <small className="text-sm">Note: This is an ongoing project. To see where these data was gathered from{" "}
         <a className='inline' href="https://github.com/esteves-esta/women-fronted-metal-bands#sources" target="_blank"> click here</a></small>
