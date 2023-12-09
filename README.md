@@ -10,7 +10,8 @@ A list of metal bands with women as lead vocalist (with focus on women that can 
 
 This project is a list of the bands of diferent metal genres and also an way of me to pratice frontend. 
 
-I didn’t add genres of the bands as some don’t have it on there websites and a lot of bands change with time, so instead of genre you can filter bands by how much growling the singer can / or usually do on the songs of the band.
+You can filter bands by how much growling the singer is capable of doing.
+
 
 ## Index
 
@@ -24,6 +25,8 @@ I didn’t add genres of the bands as some don’t have it on there websites and
   - [🧰 Tech Stack](#-tech-stack)
   - [🚀 How to run locally](#-how-to-run-locally)
   - [Sources](#sources)
+    - [Method of data collecting](#method-of-data-collecting)
+    - [Links](#links)
 
 ---
 ## 📖 Features
@@ -92,6 +95,22 @@ I didn’t add genres of the bands as some don’t have it on there websites and
 
       
 ## Sources
+
+### Method of data collecting
+
+1. Bands got on the list if they had:
+  - at least one official site:
+    - home page (active or archived)
+    - streaming page 
+    - bandcamp
+    - official youtube channel
+    - soundcloud
+    - last.fm
+    - blog
+  - or having their music saved/archived by fans on some available website
+2. The band detail information when possible was obtained from their official sites but some comes from fan archives/wikis so there may be incorrect data about the bands.
+
+### Links
 
 I got some of the bands and the information on this list from the following:
 

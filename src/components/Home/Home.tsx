@@ -11,7 +11,7 @@ function Home() {
             Women Frontend
           </h1>
           <h1 className="title2">metal bands</h1>
-          <p className="text-xl mt-5"> This is a tiny project to compile a list of metal bands that have women as lead
+          <p className="text-xl mt-5"> This is a project to compile a list of metal bands that have women as lead
             vocalists.</p>
         </div>
 
@@ -21,7 +21,7 @@ function Home() {
         <p>So I decided to make this page to compile the bands that I found and also pratice my frontend
           skills. You can filter bands by how much growling the singer is capable of doing.</p>
 
-        <small className="text-sm">Note: This is an ongoing project. To see where these data was gathered from{" "}
+        <small className="text-sm">Note: This is an ongoing project. To see from where these data has been collected{" "}
         <a className='inline' href="https://github.com/esteves-esta/women-fronted-metal-bands#sources" target="_blank"> click here</a></small>
       </div>
     </section>
