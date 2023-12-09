@@ -56,7 +56,10 @@ function BandsTable() {
   ], [])
 
   const playRecommendedTrackOrOpenLink = React.useCallback((row) => {
-    if (row.deezerId) getTrackPreview(row.deezerId);
+    if (row.deezerId) {
+      getTrackPreview(row.deezerId);
+      return;
+    }
     if (row.links) window.open(
       row.links,
       '_blank'
@@ -113,7 +116,7 @@ function BandsTable() {
 
   const columns = React.useMemo(() => {
     const cols: TableColumn[] = [
-      { visible: true, formatElement: formatPlayOrLink, headerLabel: '' },
+      { visible: true, formatElement: formatPlayOrLink, headerLabel: 'Play/Link' },
       { filter: true, visible: true, field: 'band', headerLabel: 'Band', sortable: true },
       {
         filter: false, visible: true, field: 'growling', headerLabel: 'Growling', sortable: true,
