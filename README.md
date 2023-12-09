@@ -111,6 +111,8 @@ I got some of the bands and the information on this list from the following:
   - [Alternative Press - 20 women vocalists in metal who are a driving force for the genre](https://www.altpress.com/best-current-women-metal-vocalists/)
   - [Loud Wire - Top 50 Hard Rock + Metal Frontwomen of All Time](https://loudwire.com/top-hard-rock-metal-frontwomen-of-all-time/)
   - [Metal Injection - Six Frontwomen That Are Tearing Up The Chinese Metal Scene](https://metalinjection.net/scene-report/six-frontwomen-that-are-tearing-up-the-chinese-metal-scene)
+  - [Metal Kindgom](https://www.metalkingdom.net/band/flagitious-idiosyncrasy-in-the-dilapidation-8195)
+  - [Discogs](https://www.discogs.com/artist/1313975-Flagitious-Idiosyncrasy-In-The-Dilapidation)
 ---
 - Lists on Rate your Music
   - [Metal bands with women on vocals - A list by Eudus](https://rateyourmusic.com/list/Eudus/metal-bands-with-women-on-vocals/)

@@ -592,7 +592,6 @@ occultist
 ocularis infernum
 oizys
 ol sonuf
-on
 oral
 original sin
 perfume of darkness
@@ -731,7 +730,7 @@ wench
 whyzdom
 will of hatred
 winterthrall
-witch cult [us]
+witch cult
 witchblood
 witchmark
 wox
