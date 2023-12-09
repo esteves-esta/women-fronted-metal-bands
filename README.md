@@ -43,9 +43,8 @@ I didn’t add genres of the bands as some don’t have it on there websites and
 ### ✍️ Todo
 - [ ] Like songs and:
   - [ ]  export as csv
-  - [ ]  create or add to a playlist on deezer
-    - [ ]  redirect do deezer login
-
+- [ ] Make site responsive
+- [ ] create or add songs to a playlist on deezer
 ---
 
 ## 🧰 Tech Stack
@@ -104,7 +103,7 @@ I got some of the bands and the information on this list from the following:
   - http://www.metaleros.de/
   ---
 - Sites / Magazines 
-  - [FemMetal - Goddsses of Metal](https: //femmetal.rocks)
+  - [FemMetal - Goddsses of Metal](https://femmetal.rocks/browse-by-artist/)
   - [Wiki Metal](https://www.wikimetal.com.br/)
   - [Bandcamp Daily - Ten Divine, Diabolical Feminine Artists Challenging Heavy Metal Machismo](https://daily.bandcamp.com/lists/feminine-expression-in-metal-guide)
   - [No Clean Singing - FEMALE GROWLERS](https://www.nocleansinging.com/2012/02/08/female-growlers/)
