@@ -14,7 +14,7 @@ function TableFilter({ onChange, columns, className }) {
 
     const intervalId = window.setTimeout(() => {
       onChange(search, searchType);
-    }, 1000);
+    }, 600);
     return () => window.clearTimeout(intervalId)
   };
 

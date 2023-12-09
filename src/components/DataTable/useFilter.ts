@@ -14,7 +14,7 @@ function useFilter({
     (searchValue: string, colKey: string) => {
       let newRows = [...initialRow];
 
-      if (searchValue) newRows = filterRows(searchValue, colKey);
+      if (searchValue) newRows = filterRows(searchValue.toLowerCase(), colKey);
 
       handleRowChange(newRows);
       setCurrentPage(0);
@@ -25,32 +25,30 @@ function useFilter({
 
   const filterRows = (searchValue: string, colKey: string) => {
     let newRows = [...rows];
-
-    if (colKey === "all")
-      return newRows.filter((row) => filterByAllColumn(searchValue, row));
+    // console.log({ newRows });
+    if (colKey === "all") {
+      // return newRows.filter((row) => filterByAllColumn(searchValue, row));
+      const filtered = [];
+      for (let index = 0; index < newRows.length; index++) {
+        const row = newRows[index];
+        if (filterByAllColumn(searchValue, row)) filtered.push(row);
+      }
+      return filtered;
+    }
 
     newRows.sort((rowA, rowB) => rowA[colKey] - rowB[colKey]);
     return newRows.filter((row) => filterByColumn(searchValue, colKey, row));
   };
+
   const filterByAllColumn = React.useCallback(
     (searchValue: string, row: Array<any>) => {
-      const columnsVisible = Object.entries(row).filter((item) =>
-        columns.find((col) => col.field === item[0])
-      );
-      const valuesNotBoolean = columnsVisible
-        .filter((item) => typeof item[1] !== "boolean")
-        .map((item) => item[1]);
-
-      const formattedColumns = columns.filter((col) => !!col.format);
-      const formattedRow = formattedColumns.map(
-        (col) => col.format && col.format(row)
-      );
-
-      return valuesNotBoolean
-        .concat(formattedRow)
-        .join(" ")
-        .toLowerCase()
-        .includes(searchValue.toLowerCase());
+      const columnsFormatted = [];
+      Object.entries(row).forEach((item) => {
+        const colInfo = columns.find((col) => col.field === item[0]);
+        let value = colInfo ? getValueFromRow(colInfo, row) : item[1];
+        colInfo && columnsFormatted.push(value);
+      });
+      return columnsFormatted.join(" ").indexOf(searchValue) >= 0;
     },
     []
   );
@@ -62,7 +60,7 @@ function useFilter({
         let colValue = getValueFromRow(col, row);
         if (typeof colValue === "number")
           return colValue == Number(searchValue);
-        else return colValue.includes(searchValue.toLowerCase());
+        else return colValue.indexOf(searchValue) >= 0;
       }
     },
     []
