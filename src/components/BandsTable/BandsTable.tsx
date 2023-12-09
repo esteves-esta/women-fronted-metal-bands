@@ -13,7 +13,7 @@ import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 function BandsTable() {
   const { bands, initialBandList, setBands, filter, downloadAll,
     downloadFiltered } = React.useContext(BandContext)
-  const { getTrackPreview, currentBandId, trackIsLoading } = React.useContext(DeezerContext)
+  const { getTrackPreview } = React.useContext(DeezerContext)
 
   const [growlFilter, setGrowlFilter] = React.useState('viewAll')
   const [bandDetailsFilter, setBandDetailsFilter] = React.useState('viewAll')
@@ -35,12 +35,17 @@ function BandsTable() {
 
   // ------------
 
-  const displayOptions = React.useMemo(() => [
+  const displayOptions = [
     { value: 'table', text: 'Table', icon: Table2, iconOnly: true },
     { value: 'grid', text: 'Grid', icon: Grid, iconOnly: true }
-  ], [])
+  ]
 
-  const playRecommendedTrackOrOpenLink = React.useCallback((row) => {
+  const statusTagList: TagInfo[] = [
+    { value: true, text: "Active", type: "info" },
+    { value: false, text: "Disbanded", type: "dark" }
+  ];
+
+  const playRecommendedTrackOrOpenLink = (row) => {
     if (row.deezerId) {
       getTrackPreview(row.deezerId);
       return;
@@ -50,9 +55,9 @@ function BandsTable() {
       '_blank'
     );
 
-  }, [currentBandId, trackIsLoading])
+  }
 
-  const formatGridImage = React.useCallback((row) => {
+  const formatGridImage = (row) => {
     if (row.deezerPicture && !row.emptyPicture)
       return {
         src: row.deezerPicture,
@@ -64,10 +69,10 @@ function BandsTable() {
         alt: `Cover of album: ${row.deezerTrackInfo.albumtitle}`
       }
     return { src: null, alt: null }
-  }, [])
+  }
 
   // ------------
-  const formatPlayOrLink = React.useCallback((column) => {
+  const formatPlayOrLink = (column) => {
     if (!column) return;
     if (column.deezerId) {
       return (<span className='flex justify-center'>
@@ -85,18 +90,13 @@ function BandsTable() {
       )
     }
     return <React.Fragment></React.Fragment>
-  }, [])
+  }
 
-  const statusTagList: TagInfo[] = React.useMemo(() => [
-    { value: true, text: "Active", type: "info" },
-    { value: false, text: "Disbanded", type: "dark" }
-  ], []);
-
-  const formatActiveYears = React.useCallback((column) => {
+  const formatActiveYears = (column) => {
     if (!column) return '';
     const end = column.yearEnded ? column.yearEnded : 'now'
     return `${column.yearStarted} - ${end}`
-  }, [])
+  }
 
   const columns = React.useMemo(() => {
     const cols: TableColumn[] = [

@@ -5,8 +5,8 @@ import Tag from '../Tag';
 import { TableColumn } from './TableProps';
 
 function Grid({ columns, rows, size, currentPage, rowIdName, onRowClick, gridImage }) {
-  const start = React.useMemo(() => currentPage * size, [size, currentPage]);
-  const end = React.useMemo(() => size * (currentPage + 1), [size, currentPage]);
+  const start = currentPage * size;
+  const end = size * (currentPage + 1);
   return (
     <div className={classes.grid}>
       {range(start, end).map((rowIndex) => {
@@ -16,7 +16,7 @@ function Grid({ columns, rows, size, currentPage, rowIdName, onRowClick, gridIma
           <div key={row[rowIdName]} className={row.selected ? `${classes.cardSelected} ${classes.card}` : classes.card} onClick={() => onRowClick(row)}>
 
             {imageSrc.src && <img src={imageSrc.src} alt={imageSrc.alt} />}
-            {!imageSrc.src && <div className={classes.cardImgPlaceholder} />} 
+            {!imageSrc.src && <div className={classes.cardImgPlaceholder} />}
 
             <div className={classes.cardBody}>
               <ul>

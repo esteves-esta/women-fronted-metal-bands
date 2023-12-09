@@ -151,7 +151,7 @@ function MediaPlayer() {
               playNextTrack();
             }}
           />
-          <progress ref={progressBarRef} id="seek-obj" value={progressValue} max="1" />
+          <progress ref={progressBarRef} value={progressValue} max="1" />
         </div>
         <button
           onKeyDown={(event) => {

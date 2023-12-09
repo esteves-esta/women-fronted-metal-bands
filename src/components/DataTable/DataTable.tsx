@@ -52,6 +52,9 @@ function DataTable({
     })
   });
 
+  const id = React.useId();
+  const selectId = `${id}-rowsPerPage`;
+
   const [handleSortRows] = useSort({
     rows,
     columnsInfo,
@@ -220,10 +223,15 @@ function DataTable({
       <div className='flex flex-row items-center justify-between mt-10 mb-10'>
         <div className='flex flex-row gap-5 items-center'>
           <div className='flex flex-row gap-3 items-center'>
-            <label htmlFor="rowsPerPage" className='label'>Rows per page</label>
-            <select className={classes.pageSize} value={size} onChange={event => {
-              setSize(Number(event.target.value));
-            }} id='rowsPerPage' placeholder="Select">
+            <label htmlFor={selectId} className='label'>Rows per page</label>
+            <select
+              className={classes.pageSize}
+              value={size}
+              id={selectId}
+              placeholder="Select"
+              onChange={event => {
+                setSize(Number(event.target.value));
+              }} >
               <option value="10">10</option>
               <option value="20">20</option>
               <option value="30">30</option>

@@ -17,18 +17,8 @@ function BandsProvider({ children }) {
     })
   );
 
-  const filterByGrow = (intensity) => {
-    const grows = [0, 1, 2, 3];
-    if (grows.includes(Number(intensity))) {
-      setBands(
-        initialBandList.filter((band) => band.growling === Number(intensity))
-      );
-    } else {
-      setBands(initialBandList)
-    }
-  };
 
-  const filter = (growIntensity, detailFilter) => {
+  const filter = React.useCallback((growIntensity, detailFilter) => {
     const details = ['active', 'disbanded', 'all women',
       'mixed', 'black women', 'sister',];
     const grows = [0, 1, 2, 3];
@@ -48,7 +38,7 @@ function BandsProvider({ children }) {
     }
 
     setBands(filtered);
-  };
+  }, []);
 
   function downloadAll() {
     const content = Papa.unparse(initialBandList, {

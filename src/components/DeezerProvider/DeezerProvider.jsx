@@ -39,13 +39,13 @@ function DeezerProvider({ children }) {
     fetcher
   );
 
-  const getArtistPicture = React.useCallback((bandId) => {
+  const getArtistPicture = (bandId) => {
     const foundBand = bands.find(band => band.deezerId === bandId);
     if (!foundBand) return;
     if (!foundBand.deezerPicture) return;
 
     setArtistId(founbandId)
-  }, [])
+  }
 
   React.useEffect(() => {
     if (artist === undefined) return;
@@ -71,7 +71,7 @@ function DeezerProvider({ children }) {
     setBands(newBands)
   }, [artist])
 
-  const getTrackPreview = React.useCallback((bandId) => {
+  const getTrackPreview = (bandId) => {
     // console.log('hey')
     setTrackId(null)
     setArtistId(null)
@@ -107,7 +107,7 @@ function DeezerProvider({ children }) {
     setCurrentBandId(bandId)
     setIsPlaying(false)
     setTrackId(foundBand.deezerRecommendationId)
-  }, [currentBandId])
+  }
 
   React.useEffect(() => {
     if (trackInfo === undefined) return;
@@ -134,7 +134,7 @@ function DeezerProvider({ children }) {
 
   }, [previewTrack])
 
-  const playNextTrack = React.useCallback(() => {
+  const playNextTrack = () => {
     const bandIndex = bands.findIndex(band => band.deezerId === currentBandId)
     if (bandIndex < 0) return;
 
@@ -142,24 +142,22 @@ function DeezerProvider({ children }) {
     if (nextIndex >= bands.length) nextIndex = 0;
 
     getTrackPreview(bands[nextIndex].deezerId)
-  }, [currentBandId])
+  }
 
-  const state = React.useMemo(() => {
-    return {
-      deezerTrackInfo: previewTrack,
-      title: previewTrack ? previewTrack.title : null,
-      cover: previewTrack ? previewTrack.album.cover_small : null,
-      artist: previewTrack ? previewTrack.artist.name : null,
-      src: previewTrack ? previewTrack.preview : null,
-      currentBandId,
-      trackIsLoading: trackIsLoading || topTrackIsLoading,
-      isPlaying,
-      setIsPlaying,
-      getTrackPreview,
-      playNextTrack,
-      getArtistPicture
-    }
-  }, [previewTrack, currentBandId, isPlaying, trackIsLoading, topTrackIsLoading]);
+  const state = {
+    deezerTrackInfo: previewTrack,
+    title: previewTrack ? previewTrack.title : null,
+    cover: previewTrack ? previewTrack.album.cover_small : null,
+    artist: previewTrack ? previewTrack.artist.name : null,
+    src: previewTrack ? previewTrack.preview : null,
+    currentBandId,
+    trackIsLoading: trackIsLoading || topTrackIsLoading,
+    isPlaying,
+    setIsPlaying,
+    getTrackPreview,
+    playNextTrack,
+    getArtistPicture
+  }
 
   return (<DeezerContext.Provider value={state}>{children}</DeezerContext.Provider>);
 }
