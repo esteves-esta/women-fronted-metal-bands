@@ -5,7 +5,7 @@ import { TableColumn as TableColumnProps } from "./TableProps";
 function useSort({
   rows,
   columnsInfo,
-  setColumnsInfo,
+  handleColumnChange,
   handleRowChange,
   initialRow
 }) {
@@ -26,7 +26,7 @@ function useSort({
       return col;
     });
 
-    setColumnsInfo(resetCols);
+    handleColumnChange(resetCols);
 
     if (columnsInfo[colIndex].sort === "asc") {
       sort = "desc";
@@ -48,7 +48,7 @@ function useSort({
 
     const newColumns = [...columnsInfo];
     newColumns[index].sort = sort;
-    setColumnsInfo(newColumns);
+    handleColumnChange(newColumns);
     if (!sort) {
       handleRowChange([...initialRow]);
       return;

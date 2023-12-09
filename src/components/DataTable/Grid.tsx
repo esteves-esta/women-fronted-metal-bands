@@ -16,7 +16,7 @@ function Grid({
   rowIdName,
   onRowClick,
   gridImage,
-  setColumnsInfo,
+  handleColumnChange,
   handleRowChange,
   initialRow }) {
   const start = currentPage * size;
@@ -25,7 +25,7 @@ function Grid({
   const [handleSortRows] = useSort({
     rows,
     columnsInfo: columns,
-    setColumnsInfo,
+    handleColumnChange,
     handleRowChange,
     initialRow
   })

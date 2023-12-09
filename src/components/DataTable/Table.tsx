@@ -14,7 +14,7 @@ function Table({
   rows,
   size,
   currentPage,
-  setColumnsInfo,
+  handleColumnChange,
   handleRowChange,
   initialRow,
   rowIdName,
@@ -24,7 +24,7 @@ function Table({
   const [handleSortRows] = useSort({
     rows,
     columnsInfo,
-    setColumnsInfo,
+    handleColumnChange,
     handleRowChange,
     initialRow
   })

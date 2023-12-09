@@ -25,15 +25,15 @@ interface Props {
 }
 
 function DataTable({
-  rows,
   initialPage = 0,
-  pageSize,
+  gridMode = false,
+  rows,
+  rowIdName,
   columns,
-  handleRowChange,
+  pageSize,
   isFiltered,
   children,
-  gridMode = false,
-  rowIdName,
+  handleRowChange,
   onRowClick,
   gridImage
 }: Props) {
@@ -129,7 +129,7 @@ function DataTable({
           rowIdName={rowIdName}
           onRowClick={onRowClick}
           // sort
-          setColumnsInfo={setColumnsInfo}
+          handleColumnChange={setColumnsInfo}
           handleRowChange={handleRowChange}
           initialRow={initialRow}
         />
@@ -146,7 +146,7 @@ function DataTable({
           rowIdName={rowIdName}
           onRowClick={onRowClick}
           // sort
-          setColumnsInfo={setColumnsInfo}
+          handleColumnChange={setColumnsInfo}
           handleRowChange={handleRowChange}
           initialRow={initialRow}
         />
