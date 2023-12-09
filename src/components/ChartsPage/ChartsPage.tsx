@@ -1,5 +1,5 @@
 import React from 'react';
-import { growTagList } from '../../constants';
+import { filterByDetailsOptions, growFilterOptions } from '../../constants';
 import BandCountByContryChart from './BandCountByContryChart'
 import BandYearsActiveByCountryChart from './YearsActiveByCountryChart '
 import BandCountByDecadeChart from './BandCountByDecadeChart'
@@ -13,21 +13,6 @@ function ChartsPage() {
   const [bandStatus2Filter, setBandStatus2Filter] = React.useState('viewAll')
   const [growlFilter, setGrowlFilter] = React.useState('viewAll')
 
-  const filterBy = React.useMemo(() => [
-    { value: 'viewAll', text: 'View All' },
-    { value: 'active', text: 'Active' },
-    { value: 'disbanded', text: 'Disbanded' },
-    { value: 'all women', text: 'All women' },
-    { value: 'mixed', text: 'Mixed gender' },
-    { value: 'black women', text: 'Black women' },
-    { value: 'sister', text: 'Sisters' },
-  ], [])
-
-  const growFilterOptions = React.useMemo(() => [
-    { value: 'viewAll', text: 'View All' },
-    ...growTagList,
-  ], [])
-
   return <div className="mx-10 my-24">
 
     <div className='text-center '>
@@ -39,7 +24,7 @@ function ChartsPage() {
 
       <div className='flex justify-center my-5 gap-3 items-center'>
         <label  className='label'>Filter</label>
-        <ToogleGroupButton  list={filterBy} currentValue={bandStatusFilter}
+        <ToogleGroupButton list={filterByDetailsOptions} currentValue={bandStatusFilter}
           onChange={(val) =>
             setBandStatusFilter(val)
           } />

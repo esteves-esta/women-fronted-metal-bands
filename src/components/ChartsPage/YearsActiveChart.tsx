@@ -36,7 +36,6 @@ function BandYearsActiveChart() {
       newChartData[6].value += yearsActive >= 30 && yearsActive < 40 ? 1 : 0;
       newChartData[7].value += yearsActive >= 30 && yearsActive < 40 ? 1 : 0;
       newChartData[8].value += yearsActive >= 40 && yearsActive < 50 ? 1 : 0;
-
     })
 
     setAverageTime(Math.round(average / initialBandList.length))

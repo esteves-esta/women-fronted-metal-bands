@@ -11,16 +11,16 @@ function BandYearsActiveByCountryChart() {
     const newChartData = []
 
     initialBandList.forEach((band) => {
-      const alredy = newChartData.findIndex(data => data.id === band.country)
+      const indexFound = newChartData.findIndex(data => data.id === band.country)
       const yearsActive = formatYearsActive(band)
 
-      if (alredy >= 0) {
-        newChartData[alredy].data[0].y += yearsActive < 5 ? 1 : 0;
-        newChartData[alredy].data[1].y += yearsActive >= 5 && yearsActive < 10 ? 1 : 0;
-        newChartData[alredy].data[2].y += yearsActive >= 20 && yearsActive < 30 ? 1 : 0;
-        newChartData[alredy].data[3].y += yearsActive >= 30 && yearsActive < 40 ? 1 : 0;
-        newChartData[alredy].data[4].y += yearsActive >= 30 && yearsActive < 40 ? 1 : 0;
-        newChartData[alredy].data[5].y += yearsActive >= 40 && yearsActive < 50 ? 1 : 0;
+      if (indexFound >= 0) {
+        newChartData[indexFound].data[0].y += yearsActive < 5 ? 1 : 0;
+        newChartData[indexFound].data[1].y += yearsActive >= 5 && yearsActive < 10 ? 1 : 0;
+        newChartData[indexFound].data[2].y += yearsActive >= 20 && yearsActive < 30 ? 1 : 0;
+        newChartData[indexFound].data[3].y += yearsActive >= 30 && yearsActive < 40 ? 1 : 0;
+        newChartData[indexFound].data[4].y += yearsActive >= 30 && yearsActive < 40 ? 1 : 0;
+        newChartData[indexFound].data[5].y += yearsActive >= 40 && yearsActive < 50 ? 1 : 0;
       } else {
         newChartData.push({
           id: band.country,
@@ -61,7 +61,7 @@ function BandYearsActiveByCountryChart() {
     <ResponsiveHeatMap
       data={chartData}
       // forceSquare={true}
-      margin={{ top:90, right: 300, bottom: 60, left: 300 }}
+      margin={{ top: 90, right: 300, bottom: 60, left: 300 }}
       axisTop={{
         tickSize: 5,
         tickPadding: 5,

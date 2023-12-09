@@ -1,15 +1,7 @@
 import React from 'react';
 import { BandContext } from '../BandsProvider';
 import { ResponsiveHeatMap } from '@nivo/heatmap'
-
-function getIfActiveOnDecade(band, decade) {
-  const { yearStarted, yearEnded } = band
-  if (yearEnded) {
-    return yearEnded <= decade ? 0 : 1
-  }
-
-  return yearStarted >= decade && yearStarted < (decade + 10) ? 1 : 0
-}
+import { getIfActiveOnDecade } from './GetIfActiveOnDecade';
 
 function BandCountByDecadeChart() {
   const { initialBandList } = React.useContext(BandContext)
@@ -18,14 +10,14 @@ function BandCountByDecadeChart() {
   React.useEffect(() => {
     const newChartData = []
     initialBandList.forEach((band) => {
-      const already = newChartData.findIndex(data => data.id === band.country)
-      if (already >= 0) {
-        newChartData[already].data[0].y += getIfActiveOnDecade(band, 1970);
-        newChartData[already].data[1].y += getIfActiveOnDecade(band, 1980)
-        newChartData[already].data[2].y += getIfActiveOnDecade(band, 1990)
-        newChartData[already].data[3].y += getIfActiveOnDecade(band, 2000)
-        newChartData[already].data[4].y += getIfActiveOnDecade(band, 2010)
-        newChartData[already].data[5].y += getIfActiveOnDecade(band, 2020)
+      const indexFound = newChartData.findIndex(data => data.id === band.country)
+      if (indexFound >= 0) {
+        newChartData[indexFound].data[0].y += getIfActiveOnDecade(band, 1970);
+        newChartData[indexFound].data[1].y += getIfActiveOnDecade(band, 1980)
+        newChartData[indexFound].data[2].y += getIfActiveOnDecade(band, 1990)
+        newChartData[indexFound].data[3].y += getIfActiveOnDecade(band, 2000)
+        newChartData[indexFound].data[4].y += getIfActiveOnDecade(band, 2010)
+        newChartData[indexFound].data[5].y += getIfActiveOnDecade(band, 2020)
       } else {
         newChartData.push({
           id: band.country,

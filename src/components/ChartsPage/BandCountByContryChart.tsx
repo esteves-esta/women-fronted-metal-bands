@@ -19,7 +19,7 @@ function BandCountByContryChart({ filter, filterGrow }) {
     }
 
     bandListFiltered.forEach((band) => {
-      const already = newChartData.findIndex(data => data.id === band.country)
+      const indexFound = newChartData.findIndex(data => data.id === band.country)
       if (filter === 'active' && band.yearEnded) return
       if (filter === 'disbanded' && !band.yearEnded) return
       if (filter === 'all women' && !band.allWomenBand) return
@@ -27,8 +27,8 @@ function BandCountByContryChart({ filter, filterGrow }) {
       if (filter === 'sister' && !band.sister) return
       if (filter === 'black women' && !band.blackWomen) return
 
-      if (already >= 0) {
-        newChartData[already].value += 1;
+      if (indexFound >= 0) {
+        newChartData[indexFound].value += 1;
       } else {
         newChartData.push({
           color: colors[colorIndex],

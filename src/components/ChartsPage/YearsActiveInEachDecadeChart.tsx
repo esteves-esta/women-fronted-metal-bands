@@ -1,23 +1,11 @@
 import React from 'react';
 import { ResponsiveBar } from '@nivo/bar'
 import { BandContext } from '../BandsProvider';
+import { getIfActiveOnDecade } from './GetIfActiveOnDecade';
 
 function ActivityInEachDecadeChart() {
   const { initialBandList } = React.useContext(BandContext)
   const [chartData, setChartData] = React.useState([])
-
-  function getIfActiveOnDecade(band, decade) {
-    const { yearStarted, yearEnded } = band
-    // console.log({ decade })
-    if (yearEnded) {
-      // console.log({ yearEnded })
-      return yearEnded <= decade ? 0 : 1
-    }
-
-    // console.log({ yearStarted })
-    // console.log("------------------")
-    return yearStarted >= decade && yearStarted < (decade + 10) ? 1 : 0
-  }
 
   React.useEffect(() => {
     const newChartData = [{ id: '1970', value: 0 },

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Filter, ExternalLink, PlayCircle, Table2, Grid, Download } from 'lucide-react';
-import { booleanTagList, growTagList } from '../../constants';
+import { booleanTagList, filterByDetailsOptions, growFilterOptions, growTagList } from '../../constants';
 import { TableColumn } from '../DataTable/TableProps';
 import DataTable from '../DataTable'
 import { BandContext } from '../BandsProvider';
@@ -17,22 +17,7 @@ function BandsTable() {
 
   const [growlFilter, setGrowlFilter] = React.useState('viewAll')
   const [bandDetailsFilter, setBandDetailsFilter] = React.useState('viewAll')
-  const filterByDetailsOptions = React.useMemo(() => [
-    { value: 'viewAll', text: 'View All' },
-    { value: 'active', text: 'Active' },
-    { value: 'disbanded', text: 'Disbanded' },
-    { value: 'all women', text: 'All women' },
-    { value: 'mixed', text: 'Mixed gender' },
-    { value: 'black women', text: 'Black women' },
-    { value: 'sister', text: 'Sisters' },
-  ], [])
-
   const [displayMode, setIsDisplayMode] = React.useState('table')
-
-  const growFilterOptions = React.useMemo(() => [
-    { value: 'viewAll', text: 'View All' },
-    ...growTagList,
-  ], [])
 
   const handleGrowlFilter = React.useCallback((val) => {
     if (val) {
@@ -112,7 +97,6 @@ function BandsTable() {
     const end = column.yearEnded ? column.yearEnded : 'now'
     return `${column.yearStarted} - ${end}`
   }, [])
-
 
   const columns = React.useMemo(() => {
     const cols: TableColumn[] = [
