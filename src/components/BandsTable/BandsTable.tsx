@@ -124,7 +124,7 @@ function BandsTable() {
       },
       { filter: true, visible: false, field: 'currentVocalists', headerLabel: 'Nº Voc.', sortable: true, format: (col) => col.currentVocalists.length },
       { filter: true, visible: true, field: 'currentVocalists', headerLabel: 'Vocalists', },
-      { filter: true, visible: false, field: 'pastVocalists', headerLabel: 'Past Vo.', },
+      // { filter: true, visible: false, field: 'pastVocalists', headerLabel: 'Past Vo.', },
       { filter: true, visible: true, field: 'country', headerLabel: 'Country', sortable: true },
       { filter: true, visible: true, format: formatYearsActive, headerLabel: 'Active for', sortable: true },
       { filter: true, visible: false, format: formatActiveYears, headerLabel: 'Years Active', sortable: true },

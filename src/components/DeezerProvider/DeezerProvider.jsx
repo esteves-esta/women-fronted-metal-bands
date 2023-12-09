@@ -97,7 +97,7 @@ function DeezerProvider({ children }) {
     }
 
     if (foundBand.deezerTrackInfo) {
-      console.log({ deezerTrackInfo: foundBand.deezerTrackInfo })
+
       setPreviewTrack({ ...foundBand.deezerTrackInfo })
       setCurrentBandId(bandId)
       setIsPlaying(false)
@@ -111,14 +111,14 @@ function DeezerProvider({ children }) {
 
   React.useEffect(() => {
     if (trackInfo === undefined) return;
-    console.log({ trackInfo })
+
     setPreviewTrack({ ...trackInfo })
   }, [trackInfo])
 
   React.useEffect(() => {
     if (topTrackInfo === undefined) return;
     if (topTrackInfo.data.length === 0) return;
-    console.log({ top: topTrackInfo.data[0] })
+
     setPreviewTrack(topTrackInfo.data[0])
   }, [topTrackInfo])
 

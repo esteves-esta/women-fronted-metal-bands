@@ -6,8 +6,8 @@ import TableFilter from './TableFilter';
 import Table from './Table';
 import Grid from './Grid';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import { getValueFromRow } from './getValueFromRow';
 import { TableColumn } from './TableProps';
+import useFilter from './useFilter';
 
 
 interface Props {
@@ -67,46 +67,20 @@ function DataTable({
     setLastPage(Math.ceil(rows.length / size))
   }, [isFiltered])
 
-  const handleChangePage = React.useCallback((value: number | string) => {
+  const handleChangePage = (value: number | string) => {
     if (value) setCurrentPage(Number(value))
-  }, []);
+  };
 
-  const handleFilter = React.useCallback(
-    (searchValue: string, colKey: string) => {
-      let newRows;
-      if (searchValue) newRows = filterRows(searchValue, colKey);
-      else newRows = [...initialRow];
-      // console.log({ newRows })
 
-      handleRowChange(newRows);
-      setCurrentPage(0);
-      setLastPage(Math.ceil(newRows.length / size))
-    }, [])
-
-  const filterRows = React.useCallback((searchValue: string, colKey: string) => {
-    let newRows = [...rows];
-    return newRows.filter(
-      row => {
-        if (colKey !== 'all') {
-          const col = columns.find(col => col.key === colKey)
-          if (col) {
-            let colValue = getValueFromRow(col, row)
-            if (typeof colValue === 'number')
-              return colValue == Number(searchValue)
-            else
-              return colValue.includes(searchValue.toLowerCase())
-          }
-        }
-        const columnsVisible = Object.entries(row).filter(item => columns.find(col => col.field === item[0]))
-        const formattedColumns = columns.filter(col => !!col.format);
-        const formattedRow = formattedColumns.map(col => col.format && col.format(row))
-        const valuesNotBoolean = columnsVisible.filter(item => typeof item[1] !== 'boolean').map(item => item[1])
-        return valuesNotBoolean.concat(formattedRow).join(' ').toLowerCase().includes(searchValue.toLowerCase())
-      }
-    )
-
-  }, []);
-
+  const [handleFilter] = useFilter({
+    columns,
+    initialRow,
+    handleRowChange,
+    setCurrentPage,
+    setLastPage,
+    size,
+    rows,
+  })
 
   return (
     <React.Fragment>
