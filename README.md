@@ -48,7 +48,7 @@ You can filter bands by how much growling the singer is capable of doing.
 - [ ] Like songs and:
   - [ ] Export as csv
 - [ ] Make site responsive
-- [ ] Save already requested tracks/artist on localstorage
+- [ ] Save data already requested by api (tracks/artist) on localstorage
 - [ ] Create or add songs to a playlist on deezer
 ---
 

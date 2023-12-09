@@ -1,15 +1,14 @@
 import * as React from 'react';
 import Pagination from './Pagination';
 import classes from './Table.module.css';
-import { Columns, ChevronDown, Check, ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
+import { Columns, ChevronDown, Check } from 'lucide-react';
 import TableFilter from './TableFilter';
 import Table from './Table';
 import Grid from './Grid';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { getValueFromRow } from './getValueFromRow';
 import { TableColumn } from './TableProps';
-import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
-import useSort from './useSort';
+
 
 interface Props {
   rows: Array<any>
@@ -51,17 +50,6 @@ function DataTable({
       return col;
     })
   });
-
-  const id = React.useId();
-  const selectId = `${id}-rowsPerPage`;
-
-  const [handleSortRows] = useSort({
-    rows,
-    columnsInfo,
-    setColumnsInfo,
-    handleRowChange,
-    initialRow
-  })
 
   React.useEffect(() => {
     setLastPage(Math.ceil(rows.length / size))
@@ -119,47 +107,14 @@ function DataTable({
 
   }, []);
 
-  const handleToogleColumns = React.useCallback((checked: boolean, key: string) => {
-    const newCols = [...columnsInfo]
-    const toggled = newCols.find(col => col.key === key)
-    if (toggled) toggled.visible = checked;
-    setColumnsInfo([...newCols])
-  }, [columnsInfo]);
 
   return (
     <React.Fragment>
       <div className='flex flex-row gap-5 my-8'>
-
         <TableFilter className="grow" onChange={handleFilter} columns={columns} />
 
         <div className='flex flex-col self-end'>
-          <DropdownMenu.Root>
-            <DropdownMenu.Trigger asChild>
-              <button className={classes.dropdownBtn} aria-label="Customise options">
-                <Columns size={15} />
-                Toggle columns
-                <ChevronDown size={15} />
-              </button>
-            </DropdownMenu.Trigger>
-
-            <DropdownMenu.Portal>
-              <DropdownMenu.Content className={classes.dropdownMenuContent} sideOffset={5}>
-                {
-                  columnsInfo.map(({ key, headerLabel, visible }) => key && (
-                    <DropdownMenu.CheckboxItem
-                      key={key}
-                      className={`${classes.dropdownCheckItem} ${visible ? classes.dropdownCheckItemActive : ''}`}
-                      checked={visible}
-                      onCheckedChange={(checked) => handleToogleColumns(checked, key)}>
-                      <DropdownMenu.ItemIndicator>
-                        <Check size={15} />
-                      </DropdownMenu.ItemIndicator>
-                      {headerLabel}
-                    </DropdownMenu.CheckboxItem>
-                  ))}
-              </DropdownMenu.Content>
-            </DropdownMenu.Portal>
-          </DropdownMenu.Root>
+          <TableColumnToogle columns={columnsInfo} onChange={setColumnsInfo} />
         </div>
       </div>
 
@@ -171,75 +126,39 @@ function DataTable({
           size={size}
           rows={rows}
           currentPage={currentPage}
-          handleRowChange={handleRowChange}
-          setColumnsInfo={setColumnsInfo}
-          initialRow={initialRow}
           rowIdName={rowIdName}
           onRowClick={onRowClick}
+          // sort
+          setColumnsInfo={setColumnsInfo}
+          handleRowChange={handleRowChange}
+          initialRow={initialRow}
         />
       )}
 
       {gridMode && (
-        <div className='flex flex-row gap-10 my-10 items-center'>
-          <p className='label mb-0'>Sorting</p>
-          {columnsInfo.map((headerInfo, index) => {
-            const { sortable, headerLabel, sort, visible } = headerInfo
-
-            return sortable && visible && (
-              <button
-                key={headerInfo.key}
-                className={classes.gridSortBtn}
-                onClick={() => handleSortRows(headerInfo, index)}
-              >
-
-                {headerLabel}
-
-                {!sort && <ArrowUpDown size={15} />}
-                {sort === 'asc' && <ArrowUpAZ size={15} />}
-                {sort === 'desc' && <ArrowDownAZ size={15} />}
-                <VisuallyHidden.Root>
-                  Toggle sorting{' '}
-                  {sort || 'off'}
-                </VisuallyHidden.Root>
-              </button>)
-          }
-          )}
-        </div>
-
-      )}
-
-      {gridMode && (
         <Grid
+          gridImage={gridImage}
+
           columns={columnsInfo}
           size={size}
           rows={rows}
           currentPage={currentPage}
           rowIdName={rowIdName}
           onRowClick={onRowClick}
-          gridImage={gridImage}
+          // sort
+          setColumnsInfo={setColumnsInfo}
+          handleRowChange={handleRowChange}
+          initialRow={initialRow}
         />
       )}
 
       <div className='flex flex-row items-center justify-between mt-10 mb-10'>
         <div className='flex flex-row gap-5 items-center'>
-          <div className='flex flex-row gap-3 items-center'>
-            <label htmlFor={selectId} className='label'>Rows per page</label>
-            <select
-              className={classes.pageSize}
-              value={size}
-              id={selectId}
-              placeholder="Select"
-              onChange={event => {
-                setSize(Number(event.target.value));
-              }} >
-              <option value="10">10</option>
-              <option value="20">20</option>
-              <option value="30">30</option>
-              <option value="40">40</option>
-              <option value="50">50</option>
-              <option value={rows.length}>{rows.length}</option>
-            </select>
-          </div>
+          <PageSizeSelection
+            size={size}
+            setSize={setSize}
+            totalRows={rows.length}
+          />
           <p className='label mb-0'>
             Showing <span className='font-black'>{currentPage * size} - {(currentPage + 1) * size}</span> {' '}
             of {' '}
@@ -250,12 +169,74 @@ function DataTable({
           currentPage={currentPage}
           lastPage={lastPage}
           onChange={handleChangePage}
+
         />
       </div>
     </React.Fragment>);
 }
 
+function PageSizeSelection({ size, setSize, totalRows }) {
+  const id = React.useId();
+  const selectId = `${id}-rowsPerPage`;
+
+  return (
+    <div className='flex flex-row gap-3 items-center'>
+      <label htmlFor={selectId} className='label'>Rows per page</label>
+      <select
+        className={classes.pageSize}
+        value={size}
+        id={selectId}
+        placeholder="Select"
+        onChange={event => {
+          setSize(Number(event.target.value));
+        }} >
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+        <option value={totalRows}>{totalRows}</option>
+      </select>
+    </div>
+  )
+}
+
+function TableColumnToogle({ columns, onChange }) {
+  const handleToogleColumns = React.useCallback((checked: boolean, key: string) => {
+    const newCols = [...columns]
+    const toggled = newCols.find(col => col.key === key)
+    if (toggled) toggled.visible = checked;
+    onChange([...newCols])
+  }, [columns]);
 
 
+  return <DropdownMenu.Root>
+    <DropdownMenu.Trigger asChild>
+      <button className={classes.dropdownBtn} aria-label="Customise options">
+        <Columns size={15} />
+        Toggle columns
+        <ChevronDown size={15} />
+      </button>
+    </DropdownMenu.Trigger>
+
+    <DropdownMenu.Portal>
+      <DropdownMenu.Content className={classes.dropdownMenuContent} sideOffset={5}>
+        {
+          columns.map(({ key, headerLabel, visible }) => key && (
+            <DropdownMenu.CheckboxItem
+              key={key}
+              className={`${classes.dropdownCheckItem} ${visible ? classes.dropdownCheckItemActive : ''}`}
+              checked={visible}
+              onCheckedChange={(checked) => handleToogleColumns(checked, key)}>
+              <DropdownMenu.ItemIndicator>
+                <Check size={15} />
+              </DropdownMenu.ItemIndicator>
+              {headerLabel}
+            </DropdownMenu.CheckboxItem>
+          ))}
+      </DropdownMenu.Content>
+    </DropdownMenu.Portal>
+  </DropdownMenu.Root>
+}
 
 export default DataTable;

@@ -182,14 +182,18 @@ function BandsTable() {
           <div className='flex flex-row items-center gap-3'>
             <Filter size={20} />
             <span className='label'>Growling intensity</span>
-            <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
+            <ToogleGroupButton
+              list={growFilterOptions}
+              currentValue={growlFilter}
               onChange={handleGrowlFilter} />
           </div>
 
           <div className='flex flex-row items-center gap-3'>
             <span className='label'>Display mode</span>
-            <ToogleGroupButton list={displayOptions} currentValue={displayMode}
-              onChange={setIsDisplayMode} />
+            <ToogleGroupButton
+              list={displayOptions}
+              currentValue={displayMode}
+              onChange={(val) => val && setIsDisplayMode(val)} />
           </div>
 
         </div>
@@ -198,7 +202,9 @@ function BandsTable() {
           <div className='flex justify-center my-5 gap-3 items-center'>
             <Filter size={20} />
             <label className='label'>Filter</label>
-            <ToogleGroupButton list={filterByDetailsOptions} currentValue={bandDetailsFilter}
+            <ToogleGroupButton
+              list={filterByDetailsOptions}
+              currentValue={bandDetailsFilter}
               onChange={handleDetailFilter} />
           </div>
         </div>

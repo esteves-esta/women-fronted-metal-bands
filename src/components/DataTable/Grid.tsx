@@ -3,11 +3,60 @@ import { range } from '../../helpers/range';
 import classes from './Table.module.css';
 import Tag from '../Tag';
 import { TableColumn } from './TableProps';
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
+import { ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
+import useSort from './useSort';
 
-function Grid({ columns, rows, size, currentPage, rowIdName, onRowClick, gridImage }) {
+
+function Grid({
+  columns,
+  rows,
+  size,
+  currentPage,
+  rowIdName,
+  onRowClick,
+  gridImage,
+  setColumnsInfo,
+  handleRowChange,
+  initialRow }) {
   const start = currentPage * size;
   const end = size * (currentPage + 1);
-  return (
+
+  const [handleSortRows] = useSort({
+    rows,
+    columnsInfo: columns,
+    setColumnsInfo,
+    handleRowChange,
+    initialRow
+  })
+
+  return (<React.Fragment>
+    <div className='flex flex-row gap-10 my-10 items-center'>
+      <p className='label mb-0'>Sorting</p>
+      {columns.map((headerInfo, index) => {
+        const { sortable, headerLabel, sort, visible } = headerInfo
+
+        return sortable && visible && (
+          <button
+            key={headerInfo.key}
+            className={classes.gridSortBtn}
+            onClick={() => handleSortRows(headerInfo, index)}
+          >
+
+            {headerLabel}
+
+            {!sort && <ArrowUpDown size={15} />}
+            {sort === 'asc' && <ArrowUpAZ size={15} />}
+            {sort === 'desc' && <ArrowDownAZ size={15} />}
+            <VisuallyHidden.Root>
+              Toggle sorting{' '}
+              {sort || 'off'}
+            </VisuallyHidden.Root>
+          </button>)
+      }
+      )}
+    </div>
+
     <div className={classes.grid}>
       {range(start, end).map((rowIndex) => {
         const row = rows[rowIndex]
@@ -32,6 +81,7 @@ function Grid({ columns, rows, size, currentPage, rowIdName, onRowClick, gridIma
       }
       )}
     </div>
+  </React.Fragment>
   )
 }
 
