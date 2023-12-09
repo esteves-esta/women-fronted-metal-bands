@@ -72,6 +72,11 @@ function DeezerProvider({ children }) {
   }, [artist])
 
   const getTrackPreview = React.useCallback((bandId) => {
+    // console.log('hey')
+    setTrackId(null)
+    setArtistId(null)
+    setBandTopTrack(null)
+
     const foundBand = bands.find(band => band.deezerId === bandId);
     if (!foundBand) return;
 
@@ -92,26 +97,28 @@ function DeezerProvider({ children }) {
     }
 
     if (foundBand.deezerTrackInfo) {
-      setPreviewTrack({...foundBand.deezerTrackInfo})
+      console.log({ deezerTrackInfo: foundBand.deezerTrackInfo })
+      setPreviewTrack({ ...foundBand.deezerTrackInfo })
       setCurrentBandId(bandId)
       setIsPlaying(false)
       return;
     }
-
+    // console.log('oi')
     setCurrentBandId(bandId)
     setIsPlaying(false)
     setTrackId(foundBand.deezerRecommendationId)
-  }, [currentBandId, trackIsLoading])
+  }, [currentBandId])
 
   React.useEffect(() => {
     if (trackInfo === undefined) return;
-    setPreviewTrack({...trackInfo})
+    console.log({ trackInfo })
+    setPreviewTrack({ ...trackInfo })
   }, [trackInfo])
 
   React.useEffect(() => {
     if (topTrackInfo === undefined) return;
     if (topTrackInfo.data.length === 0) return;
-
+    console.log({ top: topTrackInfo.data[0] })
     setPreviewTrack(topTrackInfo.data[0])
   }, [topTrackInfo])
 

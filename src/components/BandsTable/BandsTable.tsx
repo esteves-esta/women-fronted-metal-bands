@@ -220,7 +220,7 @@ function BandsTable() {
         </div>
 
         <div className='flex justify-center mb-2'>
-          <p className='label'>Click on row to play a preview of a track or be open on other tab a band link.</p>
+          <p className='label'>Click on row to play a preview of a track or to open the band website on other tab.</p>
         </div>
       </DataTable>
     </section>)

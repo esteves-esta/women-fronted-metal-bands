@@ -36,16 +36,17 @@ I didn’t add genres of the bands as some don’t have it on there websites and
 - [x] Change page size
 - [x] Show/Hide columns
 - [x] Use deezer API to:
-  - [x] Get image of the band
+  - [x] Get image of the band on click of row/on playing track
   - [x] Be able to listen to a preview of a song on the page
 - [x] [Published on GitHub Pages](https://esteves-esta.github.io/women-fronted-metal-bands/)
 - [x] Graphs
 ### ✍️ Todo
+- [ ] Fix style of progress bar on firefox
 - [ ] Like songs and:
-  - [ ]  export as csv
+  - [ ] Export as csv
 - [ ] Make site responsive
-- [ ] save already requested tracks/artist on localstorage
-- [ ] create or add songs to a playlist on deezer
+- [ ] Save already requested tracks/artist on localstorage
+- [ ] Create or add songs to a playlist on deezer
 ---
 
 ## 🧰 Tech Stack

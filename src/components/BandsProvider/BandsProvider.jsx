@@ -33,12 +33,9 @@ function BandsProvider({ children }) {
       'mixed', 'black women', 'sister',];
     const grows = [0, 1, 2, 3];
     let filtered = [...initialBandList]
-    console.log({ detailFilter })
-    console.log({ growIntensity })
 
     if (grows.includes(Number(growIntensity))) {
       filtered = initialBandList.filter((band) => band.growling === Number(growIntensity))
-      console.log({ filtered1: filtered })
     }
 
     if (details.includes(detailFilter)) {
@@ -48,8 +45,6 @@ function BandsProvider({ children }) {
       if (detailFilter === 'mixed') filtered = filtered.filter((band) => !band.allWomenBand)
       if (detailFilter === 'sister') filtered = filtered.filter((band) => band.sister)
       if (detailFilter === 'black women') filtered = filtered.filter((band) => band.blackWomen)
-
-      console.log({ filtered2: filtered })
     }
 
     setBands(filtered);
