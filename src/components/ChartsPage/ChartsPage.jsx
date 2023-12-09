@@ -1,10 +1,9 @@
 import React from 'react';
-// import { ResponsiveLine } from '@nivo/line'
-
+import { growTagList } from '../../constants';
 import BandCountByContryChart from './BandCountByContryChart'
-import BandYearsActiveByCountryChart from './BandYearsActiveByCountryChart '
+import BandYearsActiveByCountryChart from './YearsActiveByCountryChart '
 import BandCountByDecadeChart from './BandCountByDecadeChart'
-import ActivityInEachDecadeChart from './ActivityInEachDecadeChart'
+import ActivityInEachDecadeChart from './YearsActiveInEachDecadeChart'
 import BandYearsActiveChart from './YearsActiveChart'
 import BandDetailsChart from './BandDetailsChart'
 import classes from './ChartsPage.module.css'
@@ -13,6 +12,22 @@ import ToogleGroupButton from '../ToogleGroupButton';
 function ChartsPage() {
   const [bandStatusFilter, setBandStatusFilter] = React.useState('viewAll')
   const [bandStatus2Filter, setBandStatus2Filter] = React.useState('viewAll')
+  const [growlFilter, setGrowlFilter] = React.useState('viewAll')
+
+  const filterBy = React.useMemo(() => [
+    { value: 'viewAll', text: 'View All' },
+    { value: 'active', text: 'Active' },
+    { value: 'disbanded', text: 'Disbanded' },
+    { value: 'all women', text: 'All women' },
+    { value: 'mixed', text: 'Mixed Gender' },
+    { value: 'black women', text: 'Black women' },
+    { value: 'sister', text: 'Sisters' },
+  ], [])
+
+  const growFilterOptions = React.useMemo(() => [
+    { value: 'viewAll', text: 'View All' },
+    ...growTagList,
+  ], [])
 
   return <div className="mx-10 my-24">
 
@@ -23,25 +38,26 @@ function ChartsPage() {
         Bands count by country
       </p>
 
-      <div className='flex justify-center mt-5 gap-3 items-center'>
+      <div className='flex justify-center my-5 gap-3 items-center'>
         <label htmlFor="filterCountByCountry" className='label'>Filter</label>
-        <ToogleGroupButton id="filterCountByCountry" list={[
-          { value: 'viewAll', text: 'View All' },
-          { value: 'active', text: 'Active' },
-          { value: 'disbanded', text: 'Disbanded' },
-          { value: 'all women', text: 'All women' },
-          { value: 'mixed', text: 'Mixed Gender' },
-          { value: 'black women', text: 'Black women' },
-          { value: 'sister', text: 'Sisters' },
-        ]} currentValue={bandStatusFilter}
+        <ToogleGroupButton id="filterCountByCountry" list={filterBy} currentValue={bandStatusFilter}
           onChange={(val) =>
             setBandStatusFilter(val)
+          } />
+      </div>
+
+      <hr className='mx-16' />
+      <div className='flex justify-center mt-5 gap-3 items-center'>
+        <label htmlFor="filterbyGrowl" className='label'>Growling intensity</label>
+        <ToogleGroupButton id="filterbyGrowl" list={growFilterOptions} currentValue={growlFilter}
+          onChange={(val) =>
+            setGrowlFilter(val)
           } />
       </div>
     </div>
 
     <div style={{ height: '450px' }}>
-      <BandCountByContryChart filter={bandStatusFilter} />
+      <BandCountByContryChart filter={bandStatusFilter} filterGrow={growlFilter} />
     </div>
     {/* ---------------------------------- */}
 

@@ -85,7 +85,7 @@ function DataTable({
       let newRows;
       if (searchValue) newRows = filterRows(searchValue, colKey);
       else newRows = [...initialRow];
-      console.log({ newRows })
+      // console.log({ newRows })
 
       handleRowChange(newRows);
       setCurrentPage(0);

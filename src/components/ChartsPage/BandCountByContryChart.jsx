@@ -3,15 +3,22 @@ import { ResponsiveWaffle } from '@nivo/waffle'
 import { BandContext } from '../BandsProvider';
 import colors from './colors'
 
-function BandCountByContryChart({ filter }) {
+function BandCountByContryChart({ filter, filterGrow }) {
   const { initialBandList } = React.useContext(BandContext)
   const [chartData, setChartData] = React.useState([])
+  const [bandCount, setBandCount] = React.useState(0)
 
   React.useEffect(() => {
     const newChartData = []
     let colorIndex = colors.length - 1
+    let bandCount = 0
 
-    initialBandList.forEach((band, index) => {
+    let bandListFiltered = [...initialBandList]
+    if (filterGrow !== 'viewAll') {
+      bandListFiltered = bandListFiltered.filter(band => band.growling === Number(filterGrow))
+    }
+
+    bandListFiltered.forEach((band, index) => {
       const already = newChartData.findIndex(data => data.id === band.country)
       if (filter === 'active' && band.yearEnded) return
       if (filter === 'disbanded' && !band.yearEnded) return
@@ -31,12 +38,26 @@ function BandCountByContryChart({ filter }) {
         })
         colorIndex -= 1
       }
+      bandCount++;
     })
+    setBandCount(bandCount)
     newChartData.sort((a, b) => b.value - a.value);
     setChartData(newChartData)
-  }, [filter])
+  }, [filter, filterGrow])
 
-  return (
+  return (<React.Fragment>
+    <div className='flex flex-row gap-5 justify-center'>
+      <p className='text-center title3 mt-10'>
+         Total countries: {" "}
+        <span className='font-black'> {chartData.length}</span>
+      </p>
+
+      <p className='text-center title3 mt-10'>
+         Total bands : {" "}
+        <span className='font-black'>{bandCount}</span>
+      </p>
+    </div>
+
     <ResponsiveWaffle
       data={chartData}
       total={initialBandList.length + 5}
@@ -50,7 +71,7 @@ function BandCountByContryChart({ filter }) {
       colors={{
         datum: 'color'
       }}
-      margin={{ left: 30, right: 30, top: 50 }}
+      margin={{ left: 30, right: 30, top: 0 }}
       // legends={[
       //   {
       //     anchor: 'top-left',
@@ -83,6 +104,7 @@ function BandCountByContryChart({ filter }) {
         }
       }
     />
+  </React.Fragment>
   )
 };
 
