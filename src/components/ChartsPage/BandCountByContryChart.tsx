@@ -18,7 +18,7 @@ function BandCountByContryChart({ filter, filterGrow }) {
       bandListFiltered = bandListFiltered.filter(band => band.growling === Number(filterGrow))
     }
 
-    bandListFiltered.forEach((band, index) => {
+    bandListFiltered.forEach((band) => {
       const already = newChartData.findIndex(data => data.id === band.country)
       if (filter === 'active' && band.yearEnded) return
       if (filter === 'disbanded' && !band.yearEnded) return

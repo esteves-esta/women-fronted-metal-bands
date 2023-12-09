@@ -1,3 +1,4 @@
+// jsx file because didnt know how to type context
 import * as React from "react";
 import list from "../../../list-of-metal-bands/list.json";
 import Papa from 'papaparse';

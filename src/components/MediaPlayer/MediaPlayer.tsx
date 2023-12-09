@@ -8,14 +8,14 @@ import { DeezerContext } from '../DeezerProvider';
 import LoaderSvg from '../LoaderSvg'
 
 function MediaPlayer() {
-  const { title, cover, artist, src, bandId, trackIsLoading, isPlaying, setIsPlaying, playNextTrack } = React.useContext(DeezerContext)
+  const { title, cover, artist, src, trackIsLoading, isPlaying, setIsPlaying, playNextTrack } = React.useContext(DeezerContext)
 
   const [progressValue, setProgressValue] = React.useState(0);
   const [volume, setVolume] = React.useState(1);
-  const [currentTimeFormatted, setCurrentTimeFormatted] = React.useState(0);
+  const [currentTimeFormatted, setCurrentTimeFormatted] = React.useState<number | string>(0);
 
-  const audioRef = React.useRef();
-  const progressBarRef = React.useRef();
+  const audioRef = React.useRef<HTMLAudioElement>();
+  const progressBarRef = React.useRef<HTMLProgressElement>();
 
   React.useEffect(() => {
     function handleKeyDown(event) {
@@ -41,7 +41,7 @@ function MediaPlayer() {
         setProgressValue(percent);
       }
     }
-
+    // ussing event like this to access offsetX from event
     progressBarRef.current.addEventListener("click", seek);
     return () => {
       progressBarRef.current.removeEventListener("click", seek);

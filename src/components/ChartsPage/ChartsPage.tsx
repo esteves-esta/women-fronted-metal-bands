@@ -6,7 +6,6 @@ import BandCountByDecadeChart from './BandCountByDecadeChart'
 import ActivityInEachDecadeChart from './YearsActiveInEachDecadeChart'
 import BandYearsActiveChart from './YearsActiveChart'
 import BandDetailsChart from './BandDetailsChart'
-import classes from './ChartsPage.module.css'
 import ToogleGroupButton from '../ToogleGroupButton';
 
 function ChartsPage() {
@@ -39,8 +38,8 @@ function ChartsPage() {
       </p>
 
       <div className='flex justify-center my-5 gap-3 items-center'>
-        <label htmlFor="filterCountByCountry" className='label'>Filter</label>
-        <ToogleGroupButton id="filterCountByCountry" list={filterBy} currentValue={bandStatusFilter}
+        <label  className='label'>Filter</label>
+        <ToogleGroupButton  list={filterBy} currentValue={bandStatusFilter}
           onChange={(val) =>
             setBandStatusFilter(val)
           } />
@@ -48,8 +47,8 @@ function ChartsPage() {
 
       <hr className='mx-16' />
       <div className='flex justify-center mt-5 gap-3 items-center'>
-        <label htmlFor="filterbyGrowl" className='label'>Growling intensity</label>
-        <ToogleGroupButton id="filterbyGrowl" list={growFilterOptions} currentValue={growlFilter}
+        <label className='label'>Growling intensity</label>
+        <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
           onChange={(val) =>
             setGrowlFilter(val)
           } />
@@ -93,8 +92,8 @@ function ChartsPage() {
       </p>
 
       <div className='flex justify-center mt-5 gap-3 items-center'>
-        <label htmlFor="filterDemographics" className='label'>Filter</label>
-        <ToogleGroupButton id="filterDemographics" list={[
+        <label className='label'>Filter</label>
+        <ToogleGroupButton list={[
           { value: 'viewAll', text: 'View All' },
           { value: 'active', text: 'Active' },
           { value: 'disbanded', text: 'Disbanded' },

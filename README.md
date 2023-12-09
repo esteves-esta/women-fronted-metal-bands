@@ -44,6 +44,7 @@ I didn’t add genres of the bands as some don’t have it on there websites and
 - [ ] Like songs and:
   - [ ]  export as csv
 - [ ] Make site responsive
+- [ ] save already requested tracks/artist on localstorage
 - [ ] create or add songs to a playlist on deezer
 ---
 

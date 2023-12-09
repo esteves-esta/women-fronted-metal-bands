@@ -1,3 +1,4 @@
+// jsx file because didnt know how to type context
 import React from 'react';
 import useSWR from 'swr';
 import { BandContext } from '../BandsProvider';
