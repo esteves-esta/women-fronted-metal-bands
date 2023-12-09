@@ -1,11 +1,15 @@
-import { defineConfig } from "vite";
+import { UserConfig, defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  const config = {
+  const config: UserConfig = {
     base: mode === "production" ? "/women-fronted-metal-bands/" : "",
-    plugins: [react()]
+    plugins: [react()],
+    //  testing cors on personal proxy server and error handler
+    // server: {
+    //   port: 3401
+    // }
   };
   return config;
 });

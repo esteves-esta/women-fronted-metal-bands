@@ -5,9 +5,7 @@ import { BandContext } from '../BandsProvider';
 
 const DEEZER_EMPTY_PICTURE = 'https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg'
 
-const CROSS_PROXY2 = 'https://cors-anywhere.herokuapp.com/'
-const CROSS_PROXY1 = 'https://crossorigin.me/'
-const DEEZER_API = 'https://api.deezer.com/'
+const DEEZER_API = 'https://deezer-proxy-metalbands.onrender.com/'
 
 export const DeezerContext = React.createContext();
 
@@ -17,6 +15,19 @@ async function fetcher(endpoint) {
   });
   const json = await response.json();
   return json;
+};
+
+const errorRetry = {
+  onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
+    // Never retry on 404.
+    if (error.status === 404) return
+
+    // Only retry up to 10 times.
+    if (retryCount >= 3) return
+
+    // Retry after 5 seconds.
+    setTimeout(() => revalidate({ retryCount }), 5000)
+  }
 };
 
 function DeezerProvider({ children }) {
@@ -29,14 +40,14 @@ function DeezerProvider({ children }) {
   const [isPlaying, setIsPlaying] = React.useState(false);
 
   const { data: trackInfo, error: trackError, isLoading: trackIsLoading } = useSWR(trackId ? `track/${trackId}` : null,
-    fetcher
+    fetcher, errorRetry
   );
 
   const { data: topTrackInfo, error: topTrackError, isLoading: topTrackIsLoading } = useSWR(bandTopTrack ? `artist/${bandTopTrack}/top?index=0&limit=1` : null,
-    fetcher
+    fetcher, errorRetry
   );
   const { data: artist, isLoading: artistLoading } = useSWR(artistId ? `artist/${artistId}` : null,
-    fetcher
+    fetcher, errorRetry
   );
 
   const getArtistPicture = (bandId) => {
