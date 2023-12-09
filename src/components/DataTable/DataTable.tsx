@@ -229,6 +229,7 @@ function DataTable({
               <option value="30">30</option>
               <option value="40">40</option>
               <option value="50">50</option>
+              <option value={rows.length}>{rows.length}</option>
             </select>
           </div>
           <p className='label mb-0'>

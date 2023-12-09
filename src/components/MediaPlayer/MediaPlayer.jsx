@@ -35,8 +35,8 @@ function MediaPlayer() {
 
   React.useEffect(() => {
     function seek(evt) {
-      if (progressBarRef.current && audioRef.current) {
-        var percent = evt.offsetX / progressBarRef.current.offsetWidth;
+      if (progressBarRef?.current && audioRef.current) {
+        var percent = evt.offsetX / progressBarRef?.current.offsetWidth;
         audioRef.current.currentTime = percent * audioRef.current.duration;
         setProgressValue(percent);
       }

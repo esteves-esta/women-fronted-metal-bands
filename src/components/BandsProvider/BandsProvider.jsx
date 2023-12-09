@@ -27,6 +27,33 @@ function BandsProvider({ children }) {
     }
   };
 
+  const filter = (growIntensity, detailFilter) => {
+    const details = ['active', 'disbanded', 'all women',
+      'mixed', 'black women', 'sister',];
+    const grows = [0, 1, 2, 3];
+    let filtered = [...initialBandList]
+    console.log({ detailFilter })
+    console.log({ growIntensity })
+
+    if (grows.includes(Number(growIntensity))) {
+      filtered = initialBandList.filter((band) => band.growling === Number(growIntensity))
+      console.log({ filtered1: filtered })
+    }
+
+    if (details.includes(detailFilter)) {
+      if (detailFilter === 'active') filtered = filtered.filter((band) => !band.yearEnded)
+      if (detailFilter === 'disbanded') filtered = filtered.filter((band) => band.yearEnded)
+      if (detailFilter === 'all women') filtered = filtered.filter((band) => band.allWomenBand)
+      if (detailFilter === 'mixed') filtered = filtered.filter((band) => !band.allWomenBand)
+      if (detailFilter === 'sister') filtered = filtered.filter((band) => band.sister)
+      if (detailFilter === 'black women') filtered = filtered.filter((band) => band.blackWomen)
+
+      console.log({ filtered2: filtered })
+    }
+
+    setBands(filtered);
+  };
+
   function downloadAll() {
     const content = Papa.unparse(initialBandList, {
       quotes: false,
@@ -58,7 +85,7 @@ function BandsProvider({ children }) {
   const state = {
     initialBandList,
     bands,
-    filterByGrow,
+    filter,
     setBands,
     downloadAll,
     downloadFiltered

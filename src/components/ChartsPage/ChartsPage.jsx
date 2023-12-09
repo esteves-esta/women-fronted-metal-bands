@@ -19,7 +19,7 @@ function ChartsPage() {
     { value: 'active', text: 'Active' },
     { value: 'disbanded', text: 'Disbanded' },
     { value: 'all women', text: 'All women' },
-    { value: 'mixed', text: 'Mixed Gender' },
+    { value: 'mixed', text: 'Mixed gender' },
     { value: 'black women', text: 'Black women' },
     { value: 'sister', text: 'Sisters' },
   ], [])

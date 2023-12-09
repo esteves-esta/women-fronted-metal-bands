@@ -11,13 +11,23 @@ import formatYearsActive from '../../helpers/formatYearsActive';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 function BandsTable() {
-  const { bands, initialBandList, setBands, filterByGrow, downloadAll,
+  const { bands, initialBandList, setBands, filter, downloadAll,
     downloadFiltered } = React.useContext(BandContext)
   const { getTrackPreview, currentBandId, trackIsLoading } = React.useContext(DeezerContext)
 
   const [growlFilter, setGrowlFilter] = React.useState('viewAll')
-  const [displayMode, setIsDisplayMode] = React.useState('table')
+  const [bandDetailsFilter, setBandDetailsFilter] = React.useState('viewAll')
+  const filterByDetailsOptions = React.useMemo(() => [
+    { value: 'viewAll', text: 'View All' },
+    { value: 'active', text: 'Active' },
+    { value: 'disbanded', text: 'Disbanded' },
+    { value: 'all women', text: 'All women' },
+    { value: 'mixed', text: 'Mixed gender' },
+    { value: 'black women', text: 'Black women' },
+    { value: 'sister', text: 'Sisters' },
+  ], [])
 
+  const [displayMode, setIsDisplayMode] = React.useState('table')
 
   const growFilterOptions = React.useMemo(() => [
     { value: 'viewAll', text: 'View All' },
@@ -25,11 +35,18 @@ function BandsTable() {
   ], [])
 
   const handleGrowlFilter = React.useCallback((val) => {
-    if (growFilterOptions.find(filter => filter.value.toString() === val)) {
+    if (val) {
       setGrowlFilter(val)
-      filterByGrow(val)
+      filter(val, bandDetailsFilter)
     }
-  }, []);
+  }, [bandDetailsFilter]);
+
+  const handleDetailFilter = React.useCallback((val) => {
+    if (val) {
+      setBandDetailsFilter(val)
+      filter(growlFilter, val)
+    }
+  }, [growlFilter]);
 
   // ------------
 
@@ -43,7 +60,7 @@ function BandsTable() {
     if (row.links) window.open(
       row.links,
       '_blank'
-    ); 
+    );
 
   }, [currentBandId, trackIsLoading])
 
@@ -164,7 +181,7 @@ function BandsTable() {
       </div>
 
       <DataTable
-        isFiltered={growlFilter !== 'viewAll'}
+        isFiltered={growlFilter !== 'viewAll' || bandDetailsFilter !== 'viewAll'}
         rows={bands}
         columns={columns}
         pageSize={10}
@@ -174,7 +191,7 @@ function BandsTable() {
         onRowClick={playRecommendedTrackOrOpenLink}
         gridImage={formatGridImage}
       >
-        <div className='flex flex-row items-center mb-16 justify-between'>
+        <div className='flex flex-row items-center justify-between'>
           <div className='flex flex-row items-center gap-3'>
             <Filter size={20} />
             <span className='label'>Growling intensity</span>
@@ -188,6 +205,15 @@ function BandsTable() {
               onChange={setIsDisplayMode} />
           </div>
 
+        </div>
+
+        <div className='flex flex-row items-center mb-16 justify-between'>
+          <div className='flex justify-center my-5 gap-3 items-center'>
+            <Filter size={20} />
+            <label className='label'>Filter</label>
+            <ToogleGroupButton list={filterByDetailsOptions} currentValue={bandDetailsFilter}
+              onChange={handleDetailFilter} />
+          </div>
         </div>
 
         <div className='flex justify-center mb-2'>
