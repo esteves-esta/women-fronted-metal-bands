@@ -61,7 +61,7 @@ function BandYearsActiveByCountryChart() {
     <ResponsiveHeatMap
       data={chartData}
       // forceSquare={true}
-      margin={{ top: 60, right: 300, bottom: 60, left: 300 }}
+      margin={{ top:90, right: 300, bottom: 60, left: 300 }}
       axisTop={{
         tickSize: 5,
         tickPadding: 5,

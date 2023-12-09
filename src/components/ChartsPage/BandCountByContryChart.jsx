@@ -51,29 +51,29 @@ function BandCountByContryChart({ filter }) {
         datum: 'color'
       }}
       margin={{ left: 30, right: 30, top: 50 }}
-      legends={[
-        {
-          anchor: 'top-left',
-          direction: 'row',
-          padding: 10,
-          translateY: -30,
-          itemsSpacing: 4,
-          itemWidth: 40,
-          itemHeight: 5,
-          itemDirection: 'left-to-right',
-          itemTextColor: '#fff ',
-          symbolSize: 10,
-          symbolShape: 'circle',
-          effects: [
-            {
-              on: 'hover',
-              style: {
-                itemOpacity: 0.5,
-              }
-            }
-          ]
-        }
-      ]}
+      // legends={[
+      //   {
+      //     anchor: 'top-left',
+      //     direction: 'row',
+      //     padding: 10,
+      //     translateY: -30,
+      //     itemsSpacing: 4,
+      //     itemWidth: 40,
+      //     itemHeight: 5,
+      //     itemDirection: 'left-to-right',
+      //     itemTextColor: '#fff ',
+      //     symbolSize: 10,
+      //     symbolShape: 'circle',
+      //     effects: [
+      //       {
+      //         on: 'hover',
+      //         style: {
+      //           itemOpacity: 0.5,
+      //         }
+      //       }
+      //     ]
+      //   }
+      // ]}
       tooltip={
         ({ data }) => {
           return (<div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexDirection: 'row', padding: 12, backgroundColor: "#444", }}>
