@@ -54,6 +54,7 @@
   height: 12px;
   background-color: var(--color-primary);
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .mediaPlayer .controls progress::-webkit-progress-bar {
@@ -68,6 +69,7 @@
 
 .mediaPlayer button {
   background: transparent;
+  cursor: pointer;
 }
 
 .mediaPlayer svg {
