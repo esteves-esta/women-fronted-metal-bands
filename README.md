@@ -93,7 +93,20 @@ You can filter bands by how much growling the singer is capable of doing.
       yarn i
       ```
 
-2. Run dev server
+2. Run api proxy
+
+      ```
+      npm run proxy 
+      ```
+      
+      or
+
+      ```
+      yarn proxy
+      ```
+
+
+3. Run dev server
 
       ```
       npm run dev 
