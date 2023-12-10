@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Pagination from './Pagination';
-import classes from './Table.module.css';
 import { Columns } from 'lucide-react';
 import TableFilter from './TableFilter';
 import Table from './Table';

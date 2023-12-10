@@ -52,6 +52,8 @@ You can filter bands by how much growling the singer is capable of doing.
 
 ### ✍️ Todo
 - [ ] Add liked songs to a list:
+  - [ ] open modal and show list
+    - [ ]  be able to remove item from list
   - [ ] Export as csv
 - [ ] Make site responsive
 - [ ] Save data already requested by api (tracks/artist) on localstorage
