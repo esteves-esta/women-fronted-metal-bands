@@ -6,6 +6,7 @@ import { BandContext } from '../BandsProvider';
 const DEEZER_EMPTY_PICTURE = 'https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg'
 
 const DEEZER_API = 'https://deezer-proxy-metalbands.onrender.com/'
+// const DEEZER_API = 'http://localhost:3001/'
 
 export const DeezerContext = React.createContext();
 
@@ -13,21 +14,20 @@ async function fetcher(endpoint) {
   const response = await fetch(`${DEEZER_API}${endpoint}`, {
     method: 'GET'
   });
+
   const json = await response.json();
+  if (json.error && json.error?.code === 800) throw new Error(json.error.message);
   return json;
 };
 
-const errorRetry = {
-  onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
-    // Never retry on 404.
-    if (error.status === 404) return
+const errorRetry = (error, key, config, revalidate, { retryCount }) => {
+  // Never retry on 404.
+  if (error.status === 404) return
 
-    // Only retry up to 10 times.
-    if (retryCount >= 3) return
+  if (retryCount >= 2) return
 
-    // Retry after 5 seconds.
-    setTimeout(() => revalidate({ retryCount }), 5000)
-  }
+  // Retry after 5 seconds.
+  setTimeout(() => revalidate({ retryCount }), 5000)
 };
 
 function DeezerProvider({ children }) {
@@ -39,16 +39,29 @@ function DeezerProvider({ children }) {
   const [currentBandId, setCurrentBandId] = React.useState();
   const [isPlaying, setIsPlaying] = React.useState(false);
 
+
   const { data: trackInfo, error: trackError, isLoading: trackIsLoading } = useSWR(trackId ? `track/${trackId}` : null,
-    fetcher, errorRetry
+    fetcher, {
+    errorRetry,
+    revalidateOnFocus: false
+  }
   );
 
   const { data: topTrackInfo, error: topTrackError, isLoading: topTrackIsLoading } = useSWR(bandTopTrack ? `artist/${bandTopTrack}/top?index=0&limit=1` : null,
-    fetcher, errorRetry
+    fetcher, {
+    errorRetry,
+    revalidateOnFocus: false
+  }
   );
   const { data: artist, isLoading: artistLoading } = useSWR(artistId ? `artist/${artistId}` : null,
-    fetcher, errorRetry
+    fetcher, {
+    errorRetry,
+    revalidateOnFocus: false
+  }
   );
+
+
+
 
   const getArtistPicture = (bandId) => {
     const foundBand = bands.find(band => band.deezerId === bandId);
@@ -81,6 +94,23 @@ function DeezerProvider({ children }) {
     newBands[bandIndex].deezerPicture = artist.picture_big
     setBands(newBands)
   }, [artist])
+
+
+  React.useEffect(() => {
+    if (trackError !== undefined) {
+      setBandTopTrack(currentBandId)
+      setTrackId(undefined)
+    }
+  }, [trackError, currentBandId])
+
+  React.useEffect(() => {
+    if (topTrackError !== undefined) {
+      // todo remove alert and add modal / toast
+      alert(`An error ocurred to get the track from deezzer api: ${topTrackError.error ? topTrackError.error?.message : ''}`)
+      setBandTopTrack(undefined)
+      setCurrentBandId(undefined)
+    }
+  }, [topTrackError])
 
   const getTrackPreview = (bandId) => {
     // console.log('hey')
@@ -122,7 +152,6 @@ function DeezerProvider({ children }) {
 
   React.useEffect(() => {
     if (trackInfo === undefined) return;
-
     setPreviewTrack({ ...trackInfo })
   }, [trackInfo])
 
