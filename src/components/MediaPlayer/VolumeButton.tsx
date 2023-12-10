@@ -1,6 +1,7 @@
 import React from "react";
 import {  Volume1, Volume2, VolumeX } from "lucide-react";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
+import classes from './MediaPlayer.module.css';
 
 function VolumeButton({}, ref) {
   const [volume, setVolume] = React.useState(1);
@@ -28,6 +29,7 @@ function VolumeButton({}, ref) {
   }
 
   return <button
+    className={classes.volBtn}
     onKeyDown={(event) => {
       if (event.code === "Space") {
         event.stopPropagation();

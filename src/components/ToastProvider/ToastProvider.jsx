@@ -23,7 +23,7 @@ function ToastProvider({ children }) {
 
     timerRef.current = window.setTimeout(() => {
       setIsOpen(true);
-    }, 100);
+    }, 300);
   }
 
   const state = {

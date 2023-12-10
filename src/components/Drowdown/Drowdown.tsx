@@ -24,6 +24,18 @@ function Drowdown({
   keyName,
 }: Props) {
 
+  if (checkOptions && !checkName) {
+    throw new Error(
+      'Checkbox dropdown must have prop: "checkName"',
+    );
+  }
+
+  if (radioOptions && !radioValue) {
+    throw new Error(
+      'Radio dropdown must have prop: "radioValue"',
+    );
+  }
+
   return (<DropdownMenu.Root>
     <DropdownMenu.Trigger asChild>
       <button className={classes.dropdownBtn} aria-label="Customise options">
