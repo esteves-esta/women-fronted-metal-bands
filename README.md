@@ -32,30 +32,35 @@ You can filter bands by how much growling the singer is capable of doing.
 ## 📖 Features
 
 ### ✅ Done
-- [x] Display list by table and grid
-- [x] Filter data
-- [x] Pagination
-- [x] Download all data and filtered data in .csv format
-- [x] Change page size
-- [x] Show/Hide columns
-- [x] Use deezer API to:
+- [x] Display list as table 
+  - [x] option to change to grid
+  - [x] Filter data
+  - [x] Pagination
+  - [x] Show/Hide columns
+  - [x] Change page size
+- [x] Download as .csv
+  - [x] all data 
+  - [x] filtered data
+- [x] Use deezer API
+  - [x] Uses a proxy to use api - with expressjs and hosted by render
   - [x] Get image of the band on click of row/on playing track
   - [x] Be able to listen to a preview of a song on the page
+    - [x] When track ends play next
+    - [x] When band doesn't have a top track - show toast and play next
 - [x] [Published on GitHub Pages](https://esteves-esta.github.io/women-fronted-metal-bands/)
 - [x] Graphs
-- [x] Deezer proxy - hosted by render 
-- [x] When band doesn't have a top tracks - warn with toast
+
 ### ✍️ Todo
-- [ ] Fix style of progress bar on firefox
-- [ ] Like songs and:
+- [ ] Add liked songs to a list:
   - [ ] Export as csv
 - [ ] Make site responsive
 - [ ] Save data already requested by api (tracks/artist) on localstorage
-- [ ] Create or add songs to a playlist on deezer
-- [ ] Graphs - how many bands start with each letter of the alphabet
+- [ ] Create playlist or add liked songs list to a playlist on deezer
+
+- [ ] Button to select a random band / track to play ??
+- [ ] Graph - how many bands start with each letter of the alphabet ??
 
 - [ ] Open track cover on modal ?? 
-- [ ] button to select a random band / track to play ??
 ---
 
 ## 🧰 Tech Stack
