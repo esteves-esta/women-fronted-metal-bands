@@ -1,0 +1,60 @@
+/* TOOGLE COLUMNS  */
+.dropdownBtn {
+  border: 0.3px solid var(--border-color);
+  height: 48px;
+  padding: 5px 10px;
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  width: 180px;
+  justify-content: space-between;
+}
+
+.dropdownMenuContent {
+  min-width: 180px;
+  max-width: fit-content;
+  background-color: var(--bg-primary-opaque);
+  border-radius: 6px;
+  padding: 5px;
+  min-height: fit-content;
+  max-height: 50vh;
+  
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: var(--color-primary-lighten1) var(--bg-primary-opaque);
+  scrollbar-width: thin;
+}
+
+.dropdownMenuContent::-webkit-scrollbar {
+  background-color: var(--bg-primary-opaque);
+}
+
+.dropdownMenuContent::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary-lighten1);
+  width: 10px;
+}
+
+.dropdownCheckItem {
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dropdownCheckItem:focus {
+  outline: none;
+  box-shadow: var(--box-shadow-focus);
+}
+
+.dropdownCheckItemActive {
+  color: var(--color-primary-lighten2)
+}
+
+.dropdownCheckItem:last-child {
+  border-bottom: none;
+}

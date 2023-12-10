@@ -43,6 +43,7 @@ You can filter bands by how much growling the singer is capable of doing.
   - [x] Be able to listen to a preview of a song on the page
 - [x] [Published on GitHub Pages](https://esteves-esta.github.io/women-fronted-metal-bands/)
 - [x] Graphs
+- [x] Deezer proxy - hosted by render 
 - [x] When band doesn't have a top tracks - warn with toast
 ### ✍️ Todo
 - [ ] Fix style of progress bar on firefox

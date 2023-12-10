@@ -1,14 +1,13 @@
 import * as React from 'react';
 import Pagination from './Pagination';
 import classes from './Table.module.css';
-import { Columns, ChevronDown, Check } from 'lucide-react';
+import { Columns } from 'lucide-react';
 import TableFilter from './TableFilter';
 import Table from './Table';
 import Grid from './Grid';
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { TableColumn } from './TableProps';
 import useFilter from './useFilter';
-
+import Dropdown from '../Drowdown'
 
 interface Props {
   rows: Array<any>
@@ -152,25 +151,29 @@ function DataTable({
 function PageSizeSelection({ size, setSize, totalRows }) {
   const id = React.useId();
   const selectId = `${id}-rowsPerPage`;
+  const options = [
+    { size: 10 },
+    { size: 20 },
+    { size: 30 },
+    { size: 40 },
+    { size: 50 },
+    { size: totalRows }
+  ];
 
   return (
     <div className='flex flex-row gap-3 items-center'>
       <label htmlFor={selectId} className='label'>Rows per page</label>
-      <select
-        className={classes.pageSize}
-        value={size}
-        id={selectId}
-        placeholder="Select"
-        onChange={event => {
-          setSize(Number(event.target.value));
-        }} >
-        <option value="10">10</option>
-        <option value="20">20</option>
-        <option value="30">30</option>
-        <option value="40">40</option>
-        <option value="50">50</option>
-        <option value={totalRows}>{totalRows}</option>
-      </select>
+      <Dropdown
+        radioOptions={options}
+        handleChange={(selected) => {
+          setSize(selected)
+        }}
+        radioValue={size}
+        labelName="size"
+        keyName="size"
+      >
+        {size}
+      </Dropdown>
     </div>
   )
 }
@@ -184,33 +187,16 @@ function TableColumnToogle({ columns, onChange }) {
   }, [columns]);
 
 
-  return <DropdownMenu.Root>
-    <DropdownMenu.Trigger asChild>
-      <button className={classes.dropdownBtn} aria-label="Customise options">
-        <Columns size={15} />
-        Toggle columns
-        <ChevronDown size={15} />
-      </button>
-    </DropdownMenu.Trigger>
-
-    <DropdownMenu.Portal>
-      <DropdownMenu.Content className={classes.dropdownMenuContent} sideOffset={5}>
-        {
-          columns.map(({ key, headerLabel, visible }) => key && (
-            <DropdownMenu.CheckboxItem
-              key={key}
-              className={`${classes.dropdownCheckItem} ${visible ? classes.dropdownCheckItemActive : ''}`}
-              checked={visible}
-              onCheckedChange={(checked) => handleToogleColumns(checked, key)}>
-              <DropdownMenu.ItemIndicator>
-                <Check size={15} />
-              </DropdownMenu.ItemIndicator>
-              {headerLabel}
-            </DropdownMenu.CheckboxItem>
-          ))}
-      </DropdownMenu.Content>
-    </DropdownMenu.Portal>
-  </DropdownMenu.Root>
+  return <Dropdown
+    checkOptions={columns}
+    handleChange={handleToogleColumns}
+    checkName="visible"
+    labelName="headerLabel"
+    keyName="key"
+  >
+    <Columns size={15} />
+    Toggle columns
+  </Dropdown>
 }
 
 export default DataTable;
