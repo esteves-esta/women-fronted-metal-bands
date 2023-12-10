@@ -21,7 +21,7 @@ function MediaPlayerControls({ }, ref) {
 
   React.useEffect(() => {
     function handleKeyDown(event) {
-      if (event.code === "Space") {
+      if (event.code === "Space" && event.target.nodeName !== 'INPUT') {
         setIsPlaying((currentIsPlaying) => {
           return !currentIsPlaying;
         });

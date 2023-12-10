@@ -1,6 +1,7 @@
 import * as React from 'react';
 import classes from './Table.module.css';
 import { Search } from 'lucide-react';
+import Dropdown from '../Drowdown'
 
 function TableFilter({ onChange, columns, className }) {
   const [search, setSearch] = React.useState('');
@@ -18,20 +19,25 @@ function TableFilter({ onChange, columns, className }) {
     return () => window.clearTimeout(intervalId)
   };
 
+  const options = columns.filter(col => col.filter && col)
+  options.unshift({ key: 'all', headerLabel: 'All columns' })
   return (
     <div className={`flex flex-row ${className ? className : ''}`} >
       <div className='flex flex-col'>
         <label className='label' htmlFor={searchTypeId}>Search by</label>
-        <select className={classes.search} id={searchTypeId} value={searchType} placeholder="Search by"
-          onChange={event => {
-            setSearchType(event.target.value)
-            handleOnChange(search, event.target.value)
-          }}>
-          <option value='all'>All columns</option>
-          {columns.map(col => col.filter && (
-            <option key={col.key} value={col.key}> {col.headerLabel}</option>
-          ))}
-        </select>
+        <Dropdown
+          radioOptions={options}
+          handleChange={(selected) => {
+            // console.log(selected)
+            setSearchType(selected)
+            handleOnChange(search, selected)
+          }}
+          radioValue={searchType}
+          labelName="headerLabel"
+          keyName="key"
+        >
+          {options.find(opt => opt.key === searchType).headerLabel}
+        </Dropdown>
       </div>
 
       <div className='flex flex-col grow'>
