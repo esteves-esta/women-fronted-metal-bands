@@ -6,8 +6,8 @@ import { ToastContext } from '../ToastProvider';
 
 const DEEZER_EMPTY_PICTURE = 'https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg'
 
-// const DEEZER_API = 'https://deezer-proxy-metalbands.onrender.com/'
-const DEEZER_API = 'http://localhost:3001/'
+const DEEZER_API = 'https://deezer-proxy-metalbands.onrender.com/'
+// const DEEZER_API = 'http://localhost:3001/'
 
 export const DeezerContext = React.createContext();
 

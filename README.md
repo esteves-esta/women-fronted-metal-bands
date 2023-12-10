@@ -42,7 +42,7 @@ You can filter bands by how much growling the singer is capable of doing.
   - [x] all data 
   - [x] filtered data
 - [x] Use deezer API
-  - [x] Uses a proxy to use api - with expressjs and hosted by render
+  - [x] Uses a proxy to use api (/proxy/server.js) - and deployed on render free plan
   - [x] Get image of the band on click of row/on playing track
   - [x] Be able to listen to a preview of a song on the page
     - [x] When track ends play next
