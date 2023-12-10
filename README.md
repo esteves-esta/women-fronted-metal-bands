@@ -43,6 +43,7 @@ You can filter bands by how much growling the singer is capable of doing.
   - [x] Be able to listen to a preview of a song on the page
 - [x] [Published on GitHub Pages](https://esteves-esta.github.io/women-fronted-metal-bands/)
 - [x] Graphs
+- [x] When band doesn't have a top tracks - warn with toast
 ### ✍️ Todo
 - [ ] Fix style of progress bar on firefox
 - [ ] Like songs and:
@@ -50,6 +51,10 @@ You can filter bands by how much growling the singer is capable of doing.
 - [ ] Make site responsive
 - [ ] Save data already requested by api (tracks/artist) on localstorage
 - [ ] Create or add songs to a playlist on deezer
+- [ ] Graphs - how many bands start with each letter of the alphabet
+
+- [ ] Open track cover on modal ?? 
+- [ ] button to select a random band / track to play ??
 ---
 
 ## 🧰 Tech Stack

@@ -46,18 +46,24 @@ function BandsTable() {
   ];
 
   const playRecommendedTrackOrOpenLink = (row) => {
-    if (row.deezerId) {
+    if (row.deezerId || row.deezerRecommendationId) {
       getTrackPreview(row.deezerId);
       return;
     }
-    if (row.links) window.open(
-      row.links,
-      '_blank'
-    );
+    if (row.links) {
+      setTimeout(() => window.open(
+        row.links,
+        '_blank'
+      ), 10);
+    }
 
   }
 
   const formatGridImage = (row) => {
+    if (!row) {
+      // console.log({ row })
+      return { src: null, alt: null }
+    }
     if (row.deezerPicture && !row.emptyPicture)
       return {
         src: row.deezerPicture,
@@ -74,14 +80,14 @@ function BandsTable() {
   // ------------
   const formatPlayOrLink = (column) => {
     if (!column) return;
-    if (column.deezerId) {
+    if (column.deezerId || column.deezerRecommendationId) {
       return (<span className='flex justify-center'>
         <PlayCircle />
         <VisuallyHidden.Root>This band has a preview that can be played clicking on the row.</VisuallyHidden.Root>
       </span>
       )
     }
-    if (column.links && !column.deezerId) {
+    if (column.links && !column.deezerId && !column.deezerRecommendationId) {
       return (
         <a className='flex justify-center' href={column.links} target="_blank" onClick={(event) => event.stopPropagation()}>
           <ExternalLink />

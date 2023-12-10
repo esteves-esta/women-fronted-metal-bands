@@ -24,7 +24,7 @@
 
 .summary {
   /* background-color: red; */
-  width: 200px;
+  width: 300px;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
 }
@@ -41,7 +41,7 @@
 
 .mediaPlayer .controls {
   /* flex: 1 1 100px; */
-  width: 65%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -50,7 +50,7 @@
 }
 
 .mediaPlayer .controls progress {
-  width: 60%;
+  width: 400px;
   height: 12px;
   background-color: var(--color-primary);
   border-radius: 7px;

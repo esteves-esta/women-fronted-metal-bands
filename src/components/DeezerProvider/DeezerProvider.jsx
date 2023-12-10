@@ -2,11 +2,12 @@
 import React from 'react';
 import useSWR from 'swr';
 import { BandContext } from '../BandsProvider';
+import { ToastContext } from '../ToastProvider';
 
 const DEEZER_EMPTY_PICTURE = 'https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg'
 
-const DEEZER_API = 'https://deezer-proxy-metalbands.onrender.com/'
-// const DEEZER_API = 'http://localhost:3001/'
+// const DEEZER_API = 'https://deezer-proxy-metalbands.onrender.com/'
+const DEEZER_API = 'http://localhost:3001/'
 
 export const DeezerContext = React.createContext();
 
@@ -32,6 +33,8 @@ const errorRetry = (error, key, config, revalidate, { retryCount }) => {
 
 function DeezerProvider({ children }) {
   const { bands, setBands } = React.useContext(BandContext)
+  const { openToast } = React.useContext(ToastContext)
+
   const [trackId, setTrackId] = React.useState(null);
   const [previewTrack, setPreviewTrack] = React.useState(null);
   const [bandTopTrack, setBandTopTrack] = React.useState(null);
@@ -105,8 +108,13 @@ function DeezerProvider({ children }) {
 
   React.useEffect(() => {
     if (topTrackError !== undefined) {
-      // todo remove alert and add modal / toast
-      alert(`An error ocurred to get the track from deezzer api: ${topTrackError.error ? topTrackError.error?.message : ''}`)
+      const band = bands.find(band => band.deezerId === currentBandId)
+      let bandMessage = ''
+      if (band) bandMessage = `from the band ${band.band} `;
+      openToast({
+        title: 'Deezer API Error',
+        description: `An error ocurred to get the top track  ${bandMessage} of Deezer API: ${topTrackError.error ? topTrackError.error?.message : ''}`
+      })
       setBandTopTrack(undefined)
       setCurrentBandId(undefined)
     }
@@ -157,7 +165,18 @@ function DeezerProvider({ children }) {
 
   React.useEffect(() => {
     if (topTrackInfo === undefined) return;
-    if (topTrackInfo.data.length === 0) return;
+    if (topTrackInfo.data.length === 0) {
+      const band = bands.find(band => band.deezerId === currentBandId)
+      let bandName = ''
+      if (band) bandName = `${band.band} `;
+
+      openToast({
+        title: 'Loading next band..',
+        description: `Band ${bandName} doesn't have a top track.`
+      })
+      playNextTrack()
+      return
+    };
 
     setPreviewTrack(topTrackInfo.data[0])
   }, [topTrackInfo])
@@ -180,8 +199,10 @@ function DeezerProvider({ children }) {
 
     let nextIndex = bandIndex + 1;
     if (nextIndex >= bands.length) nextIndex = 0;
-
-    getTrackPreview(bands[nextIndex].deezerId)
+    const copyBand = [...bands].slice(nextIndex, bands.length)
+    const nextBandPlaying = copyBand.find(band => band.deezerId || band.deezerRecommendationId)
+    console.log({ name: nextBandPlaying.band })
+    getTrackPreview(nextBandPlaying.deezerId)
   }
 
   const state = {
@@ -199,7 +220,9 @@ function DeezerProvider({ children }) {
     getArtistPicture
   }
 
-  return (<DeezerContext.Provider value={state}>{children}</DeezerContext.Provider>);
+  return (<DeezerContext.Provider value={state}>
+    {children}
+  </DeezerContext.Provider>);
 }
 
 export default React.memo(DeezerProvider);
