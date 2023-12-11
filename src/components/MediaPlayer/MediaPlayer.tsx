@@ -6,7 +6,7 @@ import MediaPlayerControls from "./MediaPlayerControls";
 import VolumeButton from "./VolumeButton";
 import classes from './MediaPlayer.module.css';
 import UserListModal from '../UserListModal'
-import { PlusCircle, Heart } from 'lucide-react';
+import { ListMusic, Heart } from 'lucide-react';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { BandContext } from "../BandsProvider";
 
@@ -68,8 +68,8 @@ function MediaPlayerTopBar() {
       </div>
 
       <button className="clearButton" onClick={() => setIsOpen(true)}>
-        <PlusCircle size={21} />
-        save your favorite <strong>{total} {total > 1 ? 'songs' : 'song'}</strong>
+        <ListMusic size={21} />
+        your list of favorites: <strong>{total} {total > 1 ? 'songs' : 'song'}</strong>
       </button>
     </div>
     <UserListModal isOpen={isOpen} handleOpen={setIsOpen} />
