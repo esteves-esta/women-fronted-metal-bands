@@ -20,7 +20,9 @@ app.use(
   })
 );
 
-const server = app.listen(port);
+const server = app.listen(port, ()=> {
+  console.log(`running in ${port}`)
+});
 
 server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;

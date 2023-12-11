@@ -29,7 +29,7 @@ function VolumeButton({}, ref) {
   }
 
   return <button
-    className={classes.volBtn}
+    className={`clearButton ${classes.volBtn}`}
     onKeyDown={(event) => {
       if (event.code === "Space") {
         event.stopPropagation();

@@ -159,6 +159,7 @@ h2 {
 button {
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 hr {
@@ -191,6 +192,11 @@ a:hover {
 
 a:visited {
   color: var(--color-primary-lighten3)
+}
+
+a:focus {
+  box-shadow: var(--box-shadow-focus);
+  outline: 0 none;
 }
 
 table th:focus-within {
@@ -228,4 +234,29 @@ input:focus,
 select:focus {
   outline: none;
   box-shadow: var(--box-shadow-focus);
+}
+
+
+.clearButton {
+  background-color: transparent;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  font-weight: 500;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.5s ease;
+  height: fit-content;
+}
+
+.clearButton strong {
+  font-weight: 700;
+}
+
+.clearButton:hover {
+  background-color: var(--bg-6);
+  border-radius: 6px;
 }
