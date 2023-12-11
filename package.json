@@ -37,18 +37,19 @@
     "@nivo/line": "^0.84.0",
     "@nivo/pie": "^0.84.0",
     "@nivo/waffle": "^0.84.0",
+    "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle-group": "1.0.4",
     "@radix-ui/react-visually-hidden": "^1.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6",
     "lucide-react": "^0.294.0",
     "papaparse": "^5.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "swr": "^2.2.4",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "http-proxy-middleware": "^2.0.6"
+    "swr": "^2.2.4"
   }
 }

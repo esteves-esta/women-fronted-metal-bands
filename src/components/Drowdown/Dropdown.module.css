@@ -30,11 +30,11 @@
 
 .dropdownMenuContent::-webkit-scrollbar {
   background-color: var(--bg-primary-opaque);
+  width: 10px;
 }
 
 .dropdownMenuContent::-webkit-scrollbar-thumb {
   background-color: var(--color-primary-lighten1);
-  width: 10px;
 }
 
 .dropdownCheckItem {

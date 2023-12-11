@@ -29,11 +29,12 @@ function App() {
     <ToastProvider>
       <BandsProvider>
         <DeezerProvider>
+
           <Toast />
           <main className="mx-40 my-16">
             <Home />
           </main>
-
+         
           <ChartsPage />
 
           <hr />

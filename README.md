@@ -43,26 +43,27 @@ You can filter bands by how much growling the singer is capable of doing.
   - [x] filtered data
 - [x] Use deezer API
   - [x] Uses a proxy to use api (/proxy/server.js) - and deployed on render free plan
+  - [x] Save data already requested by api (tracks/artist) on localstorage
   - [x] Get image of the band on click of row/on playing track
   - [x] Be able to listen to a preview of a song on the page
     - [x] When track ends play next
     - [x] When band doesn't have a top track - show toast and play next
 - [x] [Published on GitHub Pages](https://esteves-esta.github.io/women-fronted-metal-bands/)
 - [x] Graphs
+- [x] Add liked songs to a list:
+  - [x] open modal and show list
+    - [x]  be able to remove item from list
+  - [x] Export as csv
 
 ### ✍️ Todo
-- [ ] Add liked songs to a list:
-  - [ ] open modal and show list
-    - [ ]  be able to remove item from list
-  - [ ] Export as csv
+- [ ] Button to play a random track
 - [ ] Make site responsive
-- [ ] Save data already requested by api (tracks/artist) on localstorage
 - [ ] Create playlist or add liked songs list to a playlist on deezer
 
-- [ ] Button to select a random band / track to play ??
-- [ ] Graph - how many bands start with each letter of the alphabet ??
-
-- [ ] Open track cover on modal ?? 
+- [ ] ?? Graph - how many bands start with each letter of the alphabet ??
+- [ ] ?? Put all data on redis ? api ? faster search ??
+<!-- https://redis.io/docs/connect/clients/nodejs/
+https://render.com/docs/databases -->
 ---
 
 ## 🧰 Tech Stack

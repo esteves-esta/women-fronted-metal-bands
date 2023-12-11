@@ -55,11 +55,23 @@ function MediaPlayerControls({ }, ref) {
   }, [])
 
   React.useEffect(() => {
+    let intervalId
+
     if (isPlaying) {
-      ref.current.play();
+      intervalId = window.setInterval(async () => {
+        try {
+          await ref.current.play()
+        } catch (e) {
+          // console.log({ e })
+          setIsPlaying(false)
+        }
+      }, 300);
     } else {
       ref.current.pause();
     }
+
+
+    return () => clearTimeout(intervalId);
   }, [isPlaying]);
 
   React.useEffect(() => {
@@ -78,6 +90,7 @@ function MediaPlayerControls({ }, ref) {
 
   return <div className={classes.controls} >
     <button
+      className="clearButton"
       onKeyDown={(event) => {
         if (event.code === "Space") {
           event.stopPropagation();

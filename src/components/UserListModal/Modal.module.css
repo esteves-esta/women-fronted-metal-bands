@@ -1,0 +1,33 @@
+.trackList {
+  margin-top: 45px;
+  padding: 0px;
+}
+
+.trackList hr {
+  margin: 15px 0px;
+}
+
+.track {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.track img {
+  height: 130px;
+  border-radius: 8px;
+}
+
+.info {
+  width: 100%
+}
+
+.info h4 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.info strong {
+  font-weight: 600;
+}
