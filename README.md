@@ -56,11 +56,10 @@ You can filter bands by how much growling the singer is capable of doing.
   - [x] Export as csv
 
 ### ✍️ Todo
-- [ ] Open track details on modal
+- [ ] Button to play a random track
 - [ ] Make site responsive
 - [ ] Create playlist or add liked songs list to a playlist on deezer
 
-- [ ] ?? Button to select a random band / track to play ??
 - [ ] ?? Graph - how many bands start with each letter of the alphabet ??
 - [ ] ?? Put all data on redis ? api ? faster search ??
 <!-- https://redis.io/docs/connect/clients/nodejs/
