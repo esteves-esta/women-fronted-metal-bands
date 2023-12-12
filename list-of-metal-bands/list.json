@@ -4134,7 +4134,9 @@
     "deezerId": null,
     "deezerRecommendationId": null,
     "band": "ashes arise",
-    "genre": ["Melodic Death Metal "],
+    "genre": [
+      "Melodic Death Metal "
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
@@ -4434,7 +4436,9 @@
     "deezerId": 5549369,
     "deezerRecommendationId": null,
     "band": "tera volts",
-    "genre": ["Heavy Metal"],
+    "genre": [
+      "Heavy Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
@@ -4591,7 +4595,9 @@
     "deezerId": 9458516,
     "deezerRecommendationId": null,
     "band": "dracena",
-    "genre": ["Thrash/Death/Black Metal"],
+    "genre": [
+      "Thrash/Death/Black Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -4612,7 +4618,10 @@
     "deezerId": 4405309,
     "deezerRecommendationId": null,
     "band": "drain sth",
-    "genre": ["Grunge", "Heavy metal"],
+    "genre": [
+      "Grunge",
+      "Heavy metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
@@ -4633,7 +4642,9 @@
     "deezerId": 5069091,
     "deezerRecommendationId": null,
     "band": "revolution eve",
-    "genre": ["Hard Rock "],
+    "genre": [
+      "Hard Rock "
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
@@ -4648,6 +4659,54 @@
     "yearEnded": null,
     "recommendation": null,
     "links": "http://www.revolutioneve.com/",
+    "sister": false
+  },
+  {
+    "deezerId": 377,
+    "deezerRecommendationId": 15489838,
+    "band": "Against Me!",
+    "genre": [
+      "Punk Rock",
+      "alternative rock"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Laura Jane Grace"
+    ],
+    "country": "United States of America",
+    "countryCode": "US",
+    "yearStarted": 1997,
+    "yearEnded": 2020,
+    "recommendation": "333",
+    "links": "https://www.againstme.net/",
+    "sister": false
+  },
+  {
+    "deezerId": 50353652,
+    "deezerRecommendationId": 50353652,
+    "band": "Laura Jane Grace & the Devouring Mothers",
+    "genre": [
+      "Punk Rock",
+      "alternative rock"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Laura Jane Grace"
+    ],
+    "country": "United States of America",
+    "countryCode": "US",
+    "yearStarted": 2018,
+    "yearEnded": null,
+    "recommendation": "China Beach",
+    "links": "https://www.laurajanegrace.com/",
     "sister": false
   }
 ]
