@@ -49,6 +49,7 @@ You can filter bands by how much growling the singer is capable of doing.
   - [x] Be able to listen to a preview of a song on the page
     - [x] When track ends play next
     - [x] When band doesn't have a top track - show toast and play next
+- [x] Button to play a random track
 - [x] [Published on GitHub Pages](https://esteves-esta.github.io/women-fronted-metal-bands/)
 - [x] Graphs
 - [x] Add liked songs to a list:
@@ -57,7 +58,6 @@ You can filter bands by how much growling the singer is capable of doing.
   - [x] Export as csv
 
 ### ✍️ Todo
-- [ ] Button to play a random track
 - [ ] Make site responsive
 
 - [ ] Create playlist or add liked songs list to a playlist on deezer
