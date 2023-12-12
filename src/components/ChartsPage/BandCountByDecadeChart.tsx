@@ -2,15 +2,18 @@ import React from 'react';
 import { BandContext } from '../BandsProvider';
 import { ResponsiveHeatMap } from '@nivo/heatmap'
 import { getIfActiveOnDecade } from './GetIfActiveOnDecade';
+import useMatchMedia from '../../helpers/useMatchMedia';
 
 function BandCountByDecadeChart() {
   const { initialBandList } = React.useContext(BandContext)
   const [chartData, setChartData] = React.useState([])
+  const isMediaNarrow = useMatchMedia();
 
   React.useEffect(() => {
     const newChartData = []
     initialBandList.forEach((band) => {
-      const indexFound = newChartData.findIndex(data => data.id === band.country)
+      const compare = isMediaNarrow ? band.countryCode : band.country
+      const indexFound = newChartData.findIndex(data => data.id === compare)
       if (indexFound >= 0) {
         newChartData[indexFound].data[0].y += getIfActiveOnDecade(band, 1970);
         newChartData[indexFound].data[1].y += getIfActiveOnDecade(band, 1980)
@@ -20,7 +23,7 @@ function BandCountByDecadeChart() {
         newChartData[indexFound].data[5].y += getIfActiveOnDecade(band, 2020)
       } else {
         newChartData.push({
-          id: band.country,
+          id: isMediaNarrow ? band.countryCode : band.country,
           data: [
             {
               x: '70s',
@@ -52,13 +55,15 @@ function BandCountByDecadeChart() {
     })
     setChartData(newChartData)
     // console.log(chartHeatData)
-  }, [])
+  }, [isMediaNarrow])
 
-  return (
+  
+
+  return (<>
     <ResponsiveHeatMap
       data={chartData}
       // forceSquare={true}
-      margin={{ top: 60, right: 300, bottom: 60, left: 300 }}
+      margin={{ top: 60, right: isMediaNarrow ? 30 : 300, bottom: 60, left: isMediaNarrow ? 30 : 300 }}
       axisTop={{
         tickSize: 5,
         tickPadding: 5,
@@ -112,7 +117,7 @@ function BandCountByDecadeChart() {
           },
         }
       }}
-    />
+    /></>
   )
 };
 

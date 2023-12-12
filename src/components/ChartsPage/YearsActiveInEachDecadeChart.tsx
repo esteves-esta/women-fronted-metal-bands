@@ -2,6 +2,7 @@ import React from 'react';
 import { ResponsiveBar } from '@nivo/bar'
 import { BandContext } from '../BandsProvider';
 import { getIfActiveOnDecade } from './GetIfActiveOnDecade';
+import useMatchMedia from '../../helpers/useMatchMedia';
 
 function ActivityInEachDecadeChart() {
   const { initialBandList } = React.useContext(BandContext)
@@ -26,6 +27,7 @@ function ActivityInEachDecadeChart() {
     setChartData(newChartData)
     // console.log(chartData)
   }, [])
+  const isMediaNarrow = useMatchMedia();
 
   return (<ResponsiveBar
     data={chartData}
@@ -37,7 +39,7 @@ function ActivityInEachDecadeChart() {
     enableGridX={true}
     enableGridY={false}
     isInteractive={false}
-    margin={{ top: 50, right: 200, bottom: 50, left: 200 }}
+    margin={{ top: 50, right: isMediaNarrow ? 10 : 200, bottom: 50, left: isMediaNarrow ? 10 : 200 }}
     borderRadius={10}
     padding={0.4}
     colors={{ scheme: 'red_yellow_blue' }}

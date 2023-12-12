@@ -31,18 +31,18 @@ function App() {
         <DeezerProvider>
 
           <Toast />
-          <main className="mx-40 my-16">
+          <main>
             <Home />
           </main>
-         
+
           <ChartsPage />
 
           <hr />
-          <footer className='mx-40 py-20 flex flew-row justify-between'>
-            <div className='flex flex-row gap-3'>
+          <footer className='mx-10 md:mx-40 py-20 flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between'>
+            <div className='flex flex-col lg:flex-row gap-3'>
               <a href='https://github.com/esteves-esta/women-fronted-metal-bands' target='_blank'>
-                <Github size={18} />
 
+                <Github size={18} />
                 <small>
                   designed & developed by esteves-esta ©{' '}
                   {year}

@@ -2,6 +2,7 @@ import React from 'react';
 import { ResponsiveWaffle } from '@nivo/waffle'
 import { BandContext } from '../BandsProvider';
 import colors from './colors'
+import useMatchMedia from '../../helpers/useMatchMedia';
 
 function BandCountByContryChart({ filter, filterGrow }) {
   const { initialBandList } = React.useContext(BandContext)
@@ -45,24 +46,26 @@ function BandCountByContryChart({ filter, filterGrow }) {
     setChartData(newChartData)
   }, [filter, filterGrow])
 
+  const isMediaNarrow = useMatchMedia();
+
   return (<React.Fragment>
-    <div className='flex flex-row gap-5 justify-center'>
+    <div className='flex flex-col md:flex-row gap-5 justify-center'>
       <p className='text-center title3 mt-10'>
-         Total countries: {" "}
+        Total countries: {" "}
         <span className='font-black'> {chartData.length}</span>
       </p>
 
       <p className='text-center title3 mt-10'>
-         Total bands : {" "}
+        Total bands : {" "}
         <span className='font-black'>{bandCount}</span>
       </p>
     </div>
-
+    
     <ResponsiveWaffle
       data={chartData}
       total={initialBandList.length + 5}
-      rows={10}
-      columns={(initialBandList.length + 5) / 5}
+      rows={isMediaNarrow ? 20: 10}
+      columns={isMediaNarrow ? 15 : ((initialBandList.length + 5) / 5)}
       padding={2}
       borderRadius={10}
       fillDirection='right'

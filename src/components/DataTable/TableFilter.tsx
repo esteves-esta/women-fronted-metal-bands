@@ -3,7 +3,7 @@ import classes from './Table.module.css';
 import { Search } from 'lucide-react';
 import Dropdown from '../Drowdown'
 
-function TableFilter({ onChange, columns, className }) {
+function TableFilter({ onChange, columns }) {
   const [search, setSearch] = React.useState('');
   const [searchType, setSearchType] = React.useState('all');
   const id = React.useId();
@@ -22,8 +22,8 @@ function TableFilter({ onChange, columns, className }) {
   const options = columns.filter(col => col.filter && col)
   options.unshift({ key: 'all', headerLabel: 'All columns' })
   return (
-    <div className={`flex flex-row ${className ? className : ''}`} >
-      <div className='flex flex-col'>
+    <div className={`${classes.filter}`} >
+      <div className={classes.filterSearchCol}>
         <label className='label' htmlFor={searchTypeId}>Search by</label>
         <Dropdown
           radioOptions={options}
@@ -40,7 +40,7 @@ function TableFilter({ onChange, columns, className }) {
         </Dropdown>
       </div>
 
-      <div className='flex flex-col grow'>
+      <div className={classes.filterInputCol}>
         <label className='label' htmlFor={searchId}>Search</label>
         <div className={`flex flex-row items-center ${classes.search}`}>
           <input id={searchId} type="text" placeholder="Search for..."

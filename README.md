@@ -56,15 +56,13 @@ You can filter bands by how much growling the singer is capable of doing.
   - [x] open modal and show list
     - [x]  be able to remove item from list
   - [x] Export as csv
+- [x] Make site responsive
 
 ### ✍️ Todo
-- [ ] Make site responsive
-
+> for later
 - [ ] Create playlist or add liked songs list to a playlist on deezer
 - [ ] Put all data on redis
-
-
-
+> maybe
 - [ ] ?? Graph - how many bands start with each letter of the alphabet ??
 
 ---

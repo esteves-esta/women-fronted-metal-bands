@@ -31,7 +31,7 @@ function Grid({
   })
 
   return (<React.Fragment>
-    <div className='flex flex-row gap-10 my-10 items-center'>
+    <div className='flex flex-col gap-2 md:flex-row md:gap-10 my-10 items-center'>
       <p className='label mb-0'>Sorting</p>
       {columns.map((headerInfo, index) => {
         const { sortable, headerLabel, sort, visible } = headerInfo

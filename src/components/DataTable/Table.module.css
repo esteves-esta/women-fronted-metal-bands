@@ -101,7 +101,7 @@ th:hover>.sortBtn {
   /* width: 100%; */
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   vertical-align: middle;
 }
 
@@ -136,6 +136,49 @@ th:hover>.sortBtn {
 }
 
 /* search filter */
+.filter {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+
+}
+
+.filterSearchCol {
+  flex-grow: 0;
+}
+
+.filterInputCol {
+  flex-grow: 1;
+}
+
+.filterRow {
+  display: flex;
+
+  gap: 1em;
+  margin: 2em 0em;
+}
+
+.colToggle {
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+
+  .filter,
+  .filterRow {
+    flex-wrap: wrap;
+  }
+
+  .filter {
+    gap: 1em;
+  }
+
+  .filter,
+  .filterSearchCol,
+  .colToggle {
+    width: 100%;
+  }
+}
 
 .search {
   border: 0.3px solid var(--border-color);
@@ -198,6 +241,17 @@ select.search {
   /* grid-template-columns: 23.5% 23.5% 23.5% 23.5%; */
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .card {

@@ -7,7 +7,7 @@ import Grid from './Grid';
 import { TableColumn } from './TableProps';
 import useFilter from './useFilter';
 import Dropdown from '../Drowdown'
-
+import classes from './Table.module.css'
 interface Props {
   rows: Array<any>
   initialPage?: number
@@ -82,10 +82,10 @@ function DataTable({
 
   return (
     <React.Fragment>
-      <div className='flex flex-row gap-5 my-8'>
-        <TableFilter className="grow" onChange={handleFilter} columns={columns} />
+      <div className={classes.filterRow}>
+        <TableFilter onChange={handleFilter} columns={columns} />
 
-        <div className='flex flex-col self-end'>
+        <div className={classes.colToggle}>
           <TableColumnToogle columns={columnsInfo} onChange={setColumnsInfo} />
         </div>
       </div>
@@ -124,25 +124,27 @@ function DataTable({
         />
       )}
 
-      <div className='flex flex-row items-center justify-between mt-10 mb-10'>
-        <div className='flex flex-row gap-5 items-center'>
+      <div className='flex flex-col gap-3 md:gap-0 md:flex-row md:items-center justify-between mt-10 mb-10'>
+        <div className='flex flex-col lg:flex-row gap-5 md:items-center'>
           <PageSizeSelection
             size={size}
             setSize={setSize}
             totalRows={rows.length}
           />
-          <p className='label mb-0'>
+
+        </div>
+        <div className="flex flex-col lg:flex-row lg:items-center gap-3">
+          <p className='label md:mb-0'>
             Showing <span className='font-black'>{currentPage * size} - {(currentPage + 1) * size}</span> {' '}
             of {' '}
             <span className='font-black'>{rows.length}</span> items
           </p>
+          <Pagination
+            currentPage={currentPage}
+            lastPage={lastPage}
+            onChange={handleChangePage}
+          />
         </div>
-        <Pagination
-          currentPage={currentPage}
-          lastPage={lastPage}
-          onChange={handleChangePage}
-
-        />
       </div>
     </React.Fragment>);
 }
@@ -160,7 +162,7 @@ function PageSizeSelection({ size, setSize, totalRows }) {
   ];
 
   return (
-    <div className='flex flex-row gap-3 items-center'>
+    <div className='flex flex-col lg:flex-row gap-3 lg:items-center'>
       <label htmlFor={selectId} className='label'>Rows per page</label>
       <Dropdown
         radioOptions={options}
