@@ -21,7 +21,9 @@ function BandsProvider({ children }) {
 
   const [bands, setBands] = React.useState(() => {
     const storageValue = localStorage.getItem(localStorageBandKey)
-    if (storageValue) return JSON.parse(storageValue);
+    let parsedValue
+    if (storageValue) parsedValue = JSON.parse(storageValue);
+    if (Array.isArray(parsedValue) && parsedValue.length === initialBandList.length) return parsedValue
 
     return initialBandList.map(band => {
       if (!band.deezerId) band.id = crypto.randomUUID()

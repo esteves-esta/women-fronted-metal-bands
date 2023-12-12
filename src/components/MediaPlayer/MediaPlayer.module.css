@@ -49,6 +49,7 @@
   /* background-color: red; */
   display: flex;
   flex-direction: row;
+  gap: 1em;
 }
 
 .summary {
