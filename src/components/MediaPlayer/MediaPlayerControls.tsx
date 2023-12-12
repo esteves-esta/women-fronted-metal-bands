@@ -58,6 +58,8 @@ function MediaPlayerControls({ }, ref) {
     let intervalId
 
     if (isPlaying) {
+      // using interval because browser can play song before user interacted with page, 
+      // so in that cenario it will set isPlaying to false and not cause error
       intervalId = window.setInterval(async () => {
         try {
           await ref.current.play()

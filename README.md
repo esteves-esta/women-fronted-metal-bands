@@ -27,6 +27,7 @@ You can filter bands by how much growling the singer is capable of doing.
   - [Sources](#sources)
     - [Method of data collecting](#method-of-data-collecting)
     - [Links](#links)
+- [Printscreen of site](#printscreen-of-site)
 
 ---
 ## 📖 Features
@@ -58,12 +59,14 @@ You can filter bands by how much growling the singer is capable of doing.
 ### ✍️ Todo
 - [ ] Button to play a random track
 - [ ] Make site responsive
+
 - [ ] Create playlist or add liked songs list to a playlist on deezer
+- [ ] Put all data on redis
+
+
 
 - [ ] ?? Graph - how many bands start with each letter of the alphabet ??
-- [ ] ?? Put all data on redis ? api ? faster search ??
-<!-- https://redis.io/docs/connect/clients/nodejs/
-https://render.com/docs/databases -->
+
 ---
 
 ## 🧰 Tech Stack
@@ -178,3 +181,8 @@ I got some of the bands and the information on this list from the following:
     - [Mulheres no Rock e Heavy metal](https://open.spotify.com/playlist/07oeFZ6ru3G8ltbLWgeOXy?go=1&sp_cid=eed76d07a2d4ebe4ded7ff943a8a9283&utm_source=embed_player_p&utm_medium=desktop&nd=1)
     - [Metal Queens](https://www.deezer.com/br/playlist/8825163122)
     - [Women of Metal](https://www.deezer.com/br/playlist/1159266401)
+
+
+# Printscreen of site
+
+![Printscreen](/printscreen-site.png "Header")
