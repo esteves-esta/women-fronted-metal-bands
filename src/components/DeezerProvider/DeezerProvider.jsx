@@ -7,9 +7,9 @@ import { ToastContext } from "../ToastProvider";
 const DEEZER_EMPTY_PICTURE =
   "https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg";
 
-const DEEZER_API = /* import.meta.env.DEV
-  ? "http://localhost:3001/"
-  :  */"https://deezer-proxy-metalbands.onrender.com/";
+
+const DEEZER_API = import.meta.env.DEV ? "http://localhost:3001/"
+  : "https://deezer-proxy-metalbands.onrender.com/";
 
 const localStoragePreviewKey = 'last-preview-track'
 
@@ -45,12 +45,15 @@ function DeezerProvider({ children }) {
     const storageValue = localStorage.getItem(localStoragePreviewKey)
 
     return storageValue ? JSON.parse(storageValue) : null;
-
   });
+
   const [bandTopTrack, setBandTopTrack] = React.useState(null);
   const [artistId, setArtistId] = React.useState(null);
   const [currentBandId, setCurrentBandId] = React.useState();
   const [isPlaying, setIsPlaying] = React.useState(false);
+
+  const [progress, setProgress] = React.useState(55);
+
 
   const {
     data: trackInfo,
@@ -237,55 +240,10 @@ function DeezerProvider({ children }) {
   };
 
   return (
-    <DeezerContext.Provider value={state}>{children}</DeezerContext.Provider>
+    <DeezerContext.Provider value={state}>
+      {children}
+    </DeezerContext.Provider>
   );
 }
 
 export default React.memo(DeezerProvider);
-
-/* 
-https://developers.deezer.com/sdk/javascript/init
-https://developers.deezer.com/api
-https://api.deezer.com/artist/27
-https://api.deezer.com/search/artist?q=otep&index=0&limit=2
-https://api.deezer.com/track/2012155467
-
-
-## dezeer acess
-DOCS -> https://developers.deezer.com/api/oauth
-
-### 1
-GET https://connect.deezer.com/oauth/auth.php?
-app_id=[ID]
-&redirect_uri=http://localhost:1234/
-&perms=manage_library
-&dispatch_path=auth
-// if user give permission
-// on url will be code necessary to get acess_token
-
-### 2
-GET https://connect.deezer.com/oauth/access_token.php
-?app_id=[APPID]
-&secret=[APPSECRET]
-&code=[code from step 1]
-
-### 3
-GET  https://api.deezer.com/user/me?access_token=[TOKEN]
-- get user id
-- 
-### 4
-POST https://api.deezer.com/user/[USERID]/playlists?access_token=[TOKEN]
-- title : asdf
-- response - new playlistid
-- 
-### 5
-POST https://api.deezer.com/playlist/[PLAYLIST_ID]/tracks?access_token=[TOKEN]
-- songs : 234,234,234
-- response: boolean
-
-https://api.deezer.com/playlist/[PLAYLIST_ID]/tracks?
-&request_method=POST
-&songs=555962972
-&access_token=[TOKEN]
-
-*/
