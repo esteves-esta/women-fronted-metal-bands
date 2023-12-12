@@ -3,7 +3,7 @@ import { AudioLines } from "lucide-react";
 import { DeezerContext } from '../DeezerProvider';
 import LoaderSvg from '../LoaderSvg'
 import MediaPlayerControls from "./MediaPlayerControls";
-import VolumeButton from "./VolumeButton";
+
 import classes from './MediaPlayer.module.css';
 import UserListModal from '../UserListModal'
 import { ListMusic, Heart } from 'lucide-react';
@@ -22,8 +22,6 @@ function MediaPlayer() {
         <MediaPlayerSummary />
 
         <MediaPlayerControls ref={audioRef} />
-
-        <VolumeButton ref={audioRef} />
       </div>
     </div >
   );
@@ -33,7 +31,7 @@ function MediaPlayerSummary() {
   const { title, cover, artist, trackIsLoading, deezerTrackInfo } = React.useContext(DeezerContext)
   const { saveTrackToUserList } = React.useContext(BandContext)
 
-  return <div className="flex flex-row gap-5 items-center">
+  return <div className={classes.summaryContainer}>
     {!trackIsLoading ? <img
       width={50}
       height={50}
@@ -69,7 +67,9 @@ function MediaPlayerTopBar() {
 
       <button className="clearButton" onClick={() => setIsOpen(true)}>
         <ListMusic size={21} />
-        your list of favorites: <strong>{total} {total > 1 ? 'songs' : 'song'}</strong>
+        <span>
+          your list of favorites: <strong>{total} {total > 1 ? 'songs' : 'song'}</strong>
+        </span>
       </button>
     </div>
     <UserListModal isOpen={isOpen} handleOpen={setIsOpen} />

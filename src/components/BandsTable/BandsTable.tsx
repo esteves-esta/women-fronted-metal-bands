@@ -224,7 +224,7 @@ function BandsTable() {
           </div>
         </div>
 
-        <div className='flex flex-col md:flex-row text-center md:text-left md:justify-between items-center mb-6 gap-3'>
+        <div className='flex flex-col lg:flex-row text-center md:text-left md:justify-between items-center mb-6 gap-3'>
           <p className='label m-0'>Click on row to play a preview of a track or to open the band website on other tab.</p>
           <button className='button' onClick={playRandom}>
             <PlayCircle size={20} />

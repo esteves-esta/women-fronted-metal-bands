@@ -54,6 +54,15 @@
   right: 20px;
 }
 
+@media screen and (min-width: 0px) and (max-width: 640px) {
+  .IconButton {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    /* background-color: red!important; */
+  }
+}
+
 @keyframes overlayShow {
   from {
     opacity: 0;

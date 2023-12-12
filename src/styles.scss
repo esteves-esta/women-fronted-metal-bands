@@ -361,4 +361,10 @@ main {
   p {
     font-size: 1em !important;
   }
+
+  .clearButton {
+    text-align: left;
+    align-items: flex-start;
+    padding: 5px 0px;
+  }
 }

@@ -3,14 +3,15 @@ import { BandContext } from "../BandsProvider";
 import { PlusCircle, XCircle, Trash } from 'lucide-react';
 import classes from './Modal.module.css'
 import React from 'react';
+import useMatchMedia from '../../helpers/useMatchMedia';
 
 function UserListModal({ isOpen, handleOpen }) {
   const { clearUserList, removeTrackFromUserList, userLikedTracksList, downloadUserList } = React.useContext(BandContext)
-
+  const mediaNarrow = useMatchMedia()
   const total = userLikedTracksList.length
   return <Modal title="Your list" description={`${total} ${total > 1 ? 'songs' : 'song'}`}
     isOpen={isOpen} handleOpen={handleOpen}>
-    <div className='flex flex-row justify-center gap-5 m-10'>
+    <div className='flex flex-col lg:flex-row justify-center gap-5 m-10'>
       <button className="clearButton" onClick={downloadUserList}>
         <PlusCircle />
         download as csv
@@ -35,7 +36,7 @@ function UserListModal({ isOpen, handleOpen }) {
               <p><strong>Album:</strong> {item.album.title}</p>
             </div>
             <button onClick={() => removeTrackFromUserList(item.id)} className="clearButton">
-              <XCircle size={45} />
+              <XCircle size={mediaNarrow ? 30: 45} />
             </button>
           </li>
           {/* <hr /> */}
