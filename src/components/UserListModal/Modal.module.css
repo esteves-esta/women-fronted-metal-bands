@@ -3,14 +3,14 @@
   padding: 0px;
 }
 
-.trackList hr {
-  margin: 15px 0px;
-}
-
 .track {
   display: flex;
   gap: 25px;
   align-items: center;
+  margin: 15px 0px;
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  border-radius: 5px;
 }
 
 .track img {

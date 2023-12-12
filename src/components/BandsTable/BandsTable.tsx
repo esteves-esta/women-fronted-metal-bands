@@ -9,6 +9,7 @@ import ToogleGroupButton from '../ToogleGroupButton';
 import { TagInfo } from '../Tag';
 import formatYearsActive from '../../helpers/formatYearsActive';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
+import { sample } from '../../helpers/range';
 
 function BandsTable() {
   const { bands, initialBandList, setBands, filter, downloadAll,
@@ -57,6 +58,11 @@ function BandsTable() {
       ), 10);
     }
 
+  }
+
+  const playRandom = () => {
+    const randomBand = sample(bands);
+    getTrackPreview(randomBand.deezerId);
   }
 
   const formatGridImage = (row) => {
@@ -215,8 +221,14 @@ function BandsTable() {
           </div>
         </div>
 
-        <div className='flex justify-center mb-2'>
-          <p className='label'>Click on row to play a preview of a track or to open the band website on other tab.</p>
+
+        <div className='flex justify-between items-center mb-6'>
+          <p className='label m-0'>Click on row to play a preview of a track or to open the band website on other tab.</p>
+          <button className='button' onClick={playRandom}>
+            <PlayCircle size={20} />
+            Or play a random track
+          </button>
+
         </div>
       </DataTable>
     </section>)

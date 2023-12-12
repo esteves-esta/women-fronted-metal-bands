@@ -29,7 +29,7 @@ function UserListModal({ isOpen, handleOpen }) {
 
             <div className={classes.info}>
 
-              <h4>{item.title}</h4>
+              <a href={item.album.link} target="_blank"><h4>{item.title}</h4></a>
               <p><strong>Band:</strong> {item.artist.name}</p>
               <p><strong>Released:</strong> {item.release_date}</p>
               <p><strong>Album:</strong> {item.album.title}</p>
@@ -38,7 +38,7 @@ function UserListModal({ isOpen, handleOpen }) {
               <XCircle size={45} />
             </button>
           </li>
-          <hr />
+          {/* <hr /> */}
         </React.Fragment>
       )}
     </ul>

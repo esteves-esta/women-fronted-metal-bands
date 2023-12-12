@@ -120,7 +120,8 @@ function BandsProvider({ children }) {
         "title": track.title,
         "release date": track.release_date,
         "artist": track.artist.name,
-        "album": track.album.title
+        "album": track.album.title,
+        "link": track.share
       }
     })
     const content = Papa.unparse(formattedTrackList, {
