@@ -4487,13 +4487,13 @@
     "blackWomen": false,
     "allWomenBand": false,
     "growling": 3,
-    "pastVocalists": [],
+    "pastVocalists": ["Michelle Godinho"],
     "currentVocalists": [
-      "Michelle Godinho"
+      "Ariadne Souza"
     ],
     "country": "Brazil",
     "countryCode": "BR",
-    "yearStarted": null,
+    "yearStarted": 1989,
     "yearEnded": null,
     "recommendation": null,
     "links": "https://www.youtube.com/watch?v=cSfgou_djdQ",

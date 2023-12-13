@@ -79,9 +79,10 @@ function BandCountByDecadeChart() {
         legendOffset: 70
       }}
       colors={{
-        type: 'sequential',
+        type: 'diverging',
         scheme: 'turbo',
-        minValue: 0,
+        divergeAt: 0.35,
+        minValue: 1,
         maxValue: 16
       }}
       emptyColor="#000"
