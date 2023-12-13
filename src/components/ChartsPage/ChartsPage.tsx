@@ -43,7 +43,7 @@ function ChartsPage() {
       </div>
     </div>
 
-    <div style={{ height: isMediaNarrow ? '650px' : '450px' }}>
+    <div style={{ height: isMediaNarrow ? '900px' : '450px' }}>
       <BandCountByContryChart filter={bandStatusFilter} filterGrow={growlFilter} />
     </div>
     {/* ---------------------------------- */}
