@@ -10,6 +10,8 @@ import { TagInfo } from '../Tag';
 import formatYearsActive from '../../helpers/formatYearsActive';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { sample } from '../../helpers/range';
+import classes from './BandsTable.module.css'
+import useMatchMedia from '../../helpers/useMatchMedia';
 
 function BandsTable() {
   const { bands, initialBandList, setBands, filter, downloadAll,
@@ -147,10 +149,14 @@ function BandsTable() {
     })
   }, [])
 
+  const mediaNarrow = useMatchMedia(900)
+  React.useEffect(() => {
+    if (mediaNarrow) setIsDisplayMode('grid')
+  }, [mediaNarrow])
 
   return (
     <section>
-      <div className='flex flex-col gap-8 items-center'>
+      <div className='gap-4 flex-col flex md:gap-8 items-center'>
         <h2 className="title1">
           The List
         </h2>
@@ -166,7 +172,7 @@ function BandsTable() {
           )}
         </div>
 
-        <div className='flex flex-row items-center gap-3'>
+        <div className='flex flex-col lg:flex-row items-center gap-3'>
           <Download size={20} />
           <span className='label'>Download</span>
           <button className='button' onClick={downloadAll}>
@@ -190,30 +196,27 @@ function BandsTable() {
         onRowClick={playRecommendedTrackOrOpenLink}
         gridImage={formatGridImage}
       >
-        <div className='flex flex-row items-center justify-between'>
-          <div className='flex flex-row items-center gap-3'>
-            <Filter size={20} />
-            <span className='label'>Growling intensity</span>
+        <div className={classes.row}>
+          <div className={`${classes.innerRow}`}>
+            <span className='flex gap-3 label'>
+              <Filter size={20} />
+              Growling intensity</span>
             <ToogleGroupButton
               list={growFilterOptions}
               currentValue={growlFilter}
               onChange={handleGrowlFilter} />
           </div>
 
-          <div className='flex flex-row items-center gap-3'>
-            <span className='label'>Display mode</span>
+          {!mediaNarrow && <div className={`${classes.innerRow}`}>
+            <span className='flex gap-3 label'>    <Filter size={20} />Display mode</span>
             <ToogleGroupButton
               list={displayOptions}
               currentValue={displayMode}
               onChange={(val) => val && setIsDisplayMode(val)} />
-          </div>
+          </div>}
 
-        </div>
-
-        <div className='flex flex-row items-center mb-16 justify-between'>
-          <div className='flex justify-center my-5 gap-3 items-center'>
-            <Filter size={20} />
-            <label className='label'>Filter</label>
+          <div className={`${classes.innerRow}`}>
+            <label className='label flex gap-3'><Filter size={20} />Filter</label>
             <ToogleGroupButton
               list={filterByDetailsOptions}
               currentValue={bandDetailsFilter}
@@ -221,8 +224,7 @@ function BandsTable() {
           </div>
         </div>
 
-
-        <div className='flex justify-between items-center mb-6'>
+        <div className='flex flex-col lg:flex-row text-center md:text-left md:justify-between items-center mb-6 gap-3'>
           <p className='label m-0'>Click on row to play a preview of a track or to open the band website on other tab.</p>
           <button className='button' onClick={playRandom}>
             <PlayCircle size={20} />
@@ -231,7 +233,7 @@ function BandsTable() {
 
         </div>
       </DataTable>
-    </section>)
+    </section >)
 }
 
 export default BandsTable;

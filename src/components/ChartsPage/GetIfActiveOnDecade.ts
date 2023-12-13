@@ -4,5 +4,5 @@ export function getIfActiveOnDecade(band, decade) {
     return yearEnded <= decade ? 0 : 1;
   }
 
-  return yearStarted >= decade && yearStarted < decade + 10 ? 1 : 0;
+  return yearStarted < decade + 10 ? 1 : 0;
 }

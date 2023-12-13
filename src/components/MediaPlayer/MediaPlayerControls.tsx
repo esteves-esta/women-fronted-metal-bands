@@ -3,7 +3,7 @@ import { PlayCircle, PauseCircle } from "lucide-react";
 import { DeezerContext } from '../DeezerProvider';
 import classes from './MediaPlayer.module.css';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
-
+import VolumeButton from "./VolumeButton";
 /* 
 credits: 
 - https://www.joyofreact.com/
@@ -123,6 +123,8 @@ function MediaPlayerControls({ }, ref) {
       }}
     />
     <progress ref={progressBarRef} value={progressValue} max="1" />
+
+    <VolumeButton ref={ref} />
   </div>
 }
 

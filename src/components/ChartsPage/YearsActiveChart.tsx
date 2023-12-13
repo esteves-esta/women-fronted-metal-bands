@@ -2,6 +2,7 @@ import React from 'react';
 import { BandContext } from '../BandsProvider';
 import { ResponsiveBar } from '@nivo/bar'
 import formatYearsActive from '../../helpers/formatYearsActive';
+import useMatchMedia from '../../helpers/useMatchMedia';
 
 function BandYearsActiveChart() {
   const { initialBandList } = React.useContext(BandContext)
@@ -41,7 +42,7 @@ function BandYearsActiveChart() {
     setAverageTime(Math.round(average / initialBandList.length))
     setChartData(newChartData)
   }, [])
-
+  const isMediaNarrow = useMatchMedia();
   return (
     <React.Fragment>
       <p className='text-center title3 mt-10'>
@@ -57,7 +58,7 @@ function BandYearsActiveChart() {
         layout="horizontal"
         enableGridX={true}
         enableGridY={false}
-        margin={{ top: 50, right: 200, bottom: 50, left: 200 }}
+        margin={{ top: 50, right: isMediaNarrow ? 10 : 200, bottom: 50, left: isMediaNarrow ? 10 : 200 }}
         borderRadius={10}
         padding={0.4}
         colors={{ scheme: 'purpleRed_green' }}

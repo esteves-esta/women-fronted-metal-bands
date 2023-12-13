@@ -7,23 +7,26 @@ import ActivityInEachDecadeChart from './YearsActiveInEachDecadeChart'
 import BandYearsActiveChart from './YearsActiveChart'
 import BandDetailsChart from './BandDetailsChart'
 import ToogleGroupButton from '../ToogleGroupButton';
+import useMatchMedia from '../../helpers/useMatchMedia';
 
 function ChartsPage() {
   const [bandStatusFilter, setBandStatusFilter] = React.useState('viewAll')
   const [bandStatus2Filter, setBandStatus2Filter] = React.useState('viewAll')
   const [growlFilter, setGrowlFilter] = React.useState('viewAll')
 
+  const isMediaNarrow = useMatchMedia();
+
   return <div className="mx-10 my-24">
 
-    <div className='text-center '>
-      <hr className='my-16' />
-      <h2 className='title1'>Data visualization</h2>
-      <p className='title2 mt-16'>
+    <div>
+      <hr className='text-center my-16' />
+      <h2 className='text-center title1'>Data visualization</h2>
+      <p className='text-center title2 mt-16'>
         Bands count by country
       </p>
 
-      <div className='flex justify-center my-5 gap-3 items-center'>
-        <label  className='label'>Filter</label>
+      <div className='flex flex-col md:flex-row md:justify-center my-5 gap-3 md:items-center'>
+        <label className='label'>Filter</label>
         <ToogleGroupButton list={filterByDetailsOptions} currentValue={bandStatusFilter}
           onChange={(val) =>
             setBandStatusFilter(val)
@@ -31,7 +34,7 @@ function ChartsPage() {
       </div>
 
       <hr className='mx-16' />
-      <div className='flex justify-center mt-5 gap-3 items-center'>
+      <div className='flex flex-col md:flex-row md:justify-center my-5 gap-3 md:items-center'>
         <label className='label'>Growling intensity</label>
         <ToogleGroupButton list={growFilterOptions} currentValue={growlFilter}
           onChange={(val) =>
@@ -40,7 +43,7 @@ function ChartsPage() {
       </div>
     </div>
 
-    <div style={{ height: '450px' }}>
+    <div style={{ height: isMediaNarrow ? '900px' : '450px' }}>
       <BandCountByContryChart filter={bandStatusFilter} filterGrow={growlFilter} />
     </div>
     {/* ---------------------------------- */}
@@ -70,13 +73,13 @@ function ChartsPage() {
 
     {/* ---------------------------------- */}
 
-    <div className='text-center'>
-      <hr className='my-16' />
-      <p className='title2'>
+    <div>
+      <hr className='text-center my-16' />
+      <p className='text-center title2'>
         Other demographics
       </p>
 
-      <div className='flex justify-center mt-5 gap-3 items-center'>
+      <div className='flex flex-col md:flex-row  md:justify-center mt-5 gap-3  md:items-center'>
         <label className='label'>Filter</label>
         <ToogleGroupButton list={[
           { value: 'viewAll', text: 'View All' },

@@ -101,7 +101,7 @@ th:hover>.sortBtn {
   /* width: 100%; */
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   vertical-align: middle;
 }
 
@@ -136,6 +136,49 @@ th:hover>.sortBtn {
 }
 
 /* search filter */
+.filter {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+
+}
+
+.filterSearchCol {
+  flex-grow: 0;
+}
+
+.filterInputCol {
+  flex-grow: 1;
+}
+
+.filterRow {
+  display: flex;
+
+  gap: 1em;
+  margin: 2em 0em;
+}
+
+.colToggle {
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+
+  .filter,
+  .filterRow {
+    flex-wrap: wrap;
+  }
+
+  .filter {
+    gap: 1em;
+  }
+
+  .filter,
+  .filterSearchCol,
+  .colToggle {
+    width: 100%;
+  }
+}
 
 .search {
   border: 0.3px solid var(--border-color);
@@ -200,6 +243,8 @@ select.search {
   grid-gap: 20px;
 }
 
+
+
 .card {
   width: 100%;
   /* min-height: 660px; */
@@ -246,6 +291,25 @@ select.search {
   background: #2C0732;
   background: linear-gradient(143deg, #000 7.25%, #2C0732 57.22%, rgba(42, 1, 49, 0.91) 89.5%),
     #FFF;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img,
+  .cardImgPlaceholder {
+    height: 180px;
+    overflow: hidden;
+    object-position: 0px 10%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .cardBody {

@@ -9,7 +9,7 @@ function Home() {
   const { trackIsLoading } = React.useContext(DeezerContext)
   
   return <article>
-    <section className='home mb-20 mx-32'>
+    <section className='home'>
       <div className="text-justify">
         <div className='text-center mb-16'>
           <h1 className="title1">

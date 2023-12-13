@@ -83,7 +83,7 @@ function BandDetailsChart({ filter }) {
 
   return (
     <div>
-      <div className={`flex flex-row justify-center mt-5 ${classes.borderBottom}`}>
+      <div className={`flex flex-col md:flex-row items-center justify-center mt-5 ${classes.borderBottom}`}>
         <div className={`flex flex-col pb-4 ${classes.borderRight}`}>
           <PieChartCustom colors={{ scheme: 'purpleRed_green' }} data={allwomenData} /* style={{ "borderRight": '2px solid red' }} */ />
           <small className='title2 text-center'>
@@ -98,14 +98,14 @@ function BandDetailsChart({ filter }) {
         </div>
       </div>
 
-      <div className='flex flex-row justify-center' >
+      <div className='flex flex-col md:flex-row  items-center justify-center' >
         <div className={`flex flex-col pb-4 ${classes.borderRight}`}>
           <PieChartCustom colors={{ scheme: 'category10' }} data={sisterData} /* style={{ "borderRight": '2px solid red' }} */ />
           <small className='title2 text-center'>
             Sisters
           </small>
         </div>
-        <div className='flex flex-col pb-4'>
+        <div className='flex flex-col pb-4 '>
           <PieChartCustom colors={{ scheme: 'paired' }} data={statusData} /* style={{}} */ />
           <small className='title2 text-center'>
             Band status
@@ -119,11 +119,11 @@ function BandDetailsChart({ filter }) {
 
 const PieChartCustom = ({ data, /* startAngle, endAngle, */ colors, /* style */ }) => {
   return (
-    <div style={{ height: "350px", width: '350px',/*  ...style */ }}>
+    <div className={classes.container}>
       <ResponsivePie
         data={data}
         fit={true}
-        margin={{ left: 20, right: 20 }}
+        margin={{ left: 30, right: 30 }}
         innerRadius={0.3}
         padAngle={2}
         startAngle={-90}
