@@ -51,7 +51,7 @@ function ChartsPage() {
     <div className='text-center '>
       <hr className='my-16' />
       <p className='title2 '>
-        How many these bands are active in each decade
+        How many bands are active in each decade
       </p>
     </div>
 
