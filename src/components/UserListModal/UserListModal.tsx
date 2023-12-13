@@ -1,6 +1,6 @@
 import Modal from '../Modal'
 import { BandContext } from "../BandsProvider";
-import { PlusCircle, XCircle, Trash } from 'lucide-react';
+import { Download, XCircle, Trash } from 'lucide-react';
 import classes from './Modal.module.css'
 import React from 'react';
 import useMatchMedia from '../../helpers/useMatchMedia';
@@ -13,7 +13,7 @@ function UserListModal({ isOpen, handleOpen }) {
     isOpen={isOpen} handleOpen={handleOpen}>
     <div className='flex flex-col lg:flex-row justify-center gap-5 m-10'>
       <button className="clearButton" onClick={downloadUserList}>
-        <PlusCircle />
+        <Download />
         download as csv
       </button>
       <button className="clearButton" onClick={clearUserList}>
@@ -29,8 +29,7 @@ function UserListModal({ isOpen, handleOpen }) {
             <img src={item.album.cover_medium} />
 
             <div className={classes.info}>
-
-              <a href={item.album.link} target="_blank"><h4>{item.title}</h4></a>
+              <a href={item.link} target="_blank"><h4>{item.title}</h4></a>
               <p><strong>Band:</strong> {item.artist.name}</p>
               <p><strong>Released:</strong> {item.release_date}</p>
               <p><strong>Album:</strong> {item.album.title}</p>

@@ -22,7 +22,6 @@ function ActivityInEachDecadeChart() {
       newChartData[2].value += getIfActiveOnDecade(band, 1990)
       newChartData[3].value += getIfActiveOnDecade(band, 2000)
       newChartData[4].value += getIfActiveOnDecade(band, 2010)
-      console.log(band.yearStarted, index)
       newChartData[5].value += getIfActiveOnDecade(band, 2020)
     })
     setChartData(newChartData)
