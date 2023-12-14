@@ -98,7 +98,7 @@ function BandsProvider({ children }) {
     }
     );
 
-    downloadCsvFile(content, 'women-frontend-metal-bands.csv')
+    downloadCsvFile(content, 'women-fronted-metal-bands.csv')
   }
 
   function downloadFiltered() {
@@ -112,7 +112,7 @@ function BandsProvider({ children }) {
     }
     );
 
-    downloadCsvFile(content, 'women-frontend-metal-bands filtered-list.csv')
+    downloadCsvFile(content, 'women-fronted-metal-bands filtered-list.csv')
   }
 
   function downloadUserList() {
