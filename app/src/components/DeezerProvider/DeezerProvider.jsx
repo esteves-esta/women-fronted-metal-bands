@@ -7,11 +7,11 @@ import { ToastContext } from "../ToastProvider";
 const DEEZER_EMPTY_PICTURE =
   "https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg";
 
+const DEEZER_API = import.meta.env.DEV
+  ? "http://localhost:3001/"
+  : "https://women-fronted-metal-bands.netlify.app/api/";
 
-const DEEZER_API = /* import.meta.env.DEV ? "http://localhost:3001/"
-  :  */"https://deezer-proxy-metalbands.onrender.com/";
-
-const localStoragePreviewKey = 'last-preview-track'
+const localStoragePreviewKey = "last-preview-track";
 
 export const DeezerContext = React.createContext();
 
@@ -37,12 +37,13 @@ const errorRetry = (error, key, config, revalidate, { retryCount }) => {
 };
 
 function DeezerProvider({ children }) {
-  const { bands, setBands, saveBandListStorage } = React.useContext(BandContext);
+  const { bands, setBands, saveBandListStorage } =
+    React.useContext(BandContext);
   const { openToast } = React.useContext(ToastContext);
 
   const [trackId, setTrackId] = React.useState(null);
   const [previewTrack, setPreviewTrack] = React.useState(() => {
-    const storageValue = localStorage.getItem(localStoragePreviewKey)
+    const storageValue = localStorage.getItem(localStoragePreviewKey);
 
     return storageValue ? JSON.parse(storageValue) : null;
   });
@@ -53,7 +54,6 @@ function DeezerProvider({ children }) {
   const [isPlaying, setIsPlaying] = React.useState(false);
 
   const [progress, setProgress] = React.useState(55);
-
 
   const {
     data: trackInfo,
@@ -93,7 +93,6 @@ function DeezerProvider({ children }) {
     setArtistId(founbandId);
   };
 
-
   React.useEffect(() => {
     if (artist === undefined) return;
 
@@ -106,7 +105,7 @@ function DeezerProvider({ children }) {
 
     newBands[bandIndex].deezerPicture = artist.picture_big;
     setBands(newBands);
-    saveBandListStorage(newBands)
+    saveBandListStorage(newBands);
   }, [artist]);
 
   React.useEffect(() => {
@@ -123,8 +122,9 @@ function DeezerProvider({ children }) {
       if (band) bandMessage = `from the band ${band.band} `;
       openToast({
         title: "Deezer API Error",
-        description: `An error ocurred to get the top track  ${bandMessage} of Deezer API: ${topTrackError.error ? topTrackError.error?.message : ""
-          }`,
+        description: `An error ocurred to get the top track  ${bandMessage} of Deezer API: ${
+          topTrackError.error ? topTrackError.error?.message : ""
+        }`,
       });
       setBandTopTrack(undefined);
       setCurrentBandId(undefined);
@@ -204,8 +204,11 @@ function DeezerProvider({ children }) {
     newBands[bandIndex].deezerTrackInfo = trackInfo;
     newBands[bandIndex].selected = true;
     setBands(newBands);
-    saveBandListStorage(newBands)
-    window.localStorage.setItem(localStoragePreviewKey, JSON.stringify(previewTrack))
+    saveBandListStorage(newBands);
+    window.localStorage.setItem(
+      localStoragePreviewKey,
+      JSON.stringify(previewTrack)
+    );
   }, [previewTrack]);
 
   const playNextTrack = () => {
@@ -240,9 +243,7 @@ function DeezerProvider({ children }) {
   };
 
   return (
-    <DeezerContext.Provider value={state}>
-      {children}
-    </DeezerContext.Provider>
+    <DeezerContext.Provider value={state}>{children}</DeezerContext.Provider>
   );
 }
 
