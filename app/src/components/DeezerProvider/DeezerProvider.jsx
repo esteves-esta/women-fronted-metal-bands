@@ -9,7 +9,7 @@ const DEEZER_EMPTY_PICTURE =
 
 const DEEZER_API = import.meta.env.DEV
   ? "http://localhost:3001/"
-  : "https://women-fronted-metal-bands.netlify.app/api";
+  : "https://women-fronted-metal-bands.netlify.app/api/";
 
 const localStoragePreviewKey = "last-preview-track";
 
