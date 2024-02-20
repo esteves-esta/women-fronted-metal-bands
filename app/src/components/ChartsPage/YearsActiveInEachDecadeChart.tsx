@@ -16,7 +16,7 @@ function ActivityInEachDecadeChart() {
     { id: '2010', value: 0 },
     { id: '2020', value: 0 }]
 
-    initialBandList.forEach((band, index) => {
+    initialBandList.forEach((band) => {
       newChartData[0].value += getIfActiveOnDecade(band, 1970);
       newChartData[1].value += getIfActiveOnDecade(band, 1980)
       newChartData[2].value += getIfActiveOnDecade(band, 1990)
