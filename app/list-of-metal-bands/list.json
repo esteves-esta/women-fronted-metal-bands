@@ -4708,5 +4708,27 @@
     "recommendation": "China Beach",
     "links": "https://www.laurajanegrace.com/",
     "sister": false
+  },
+  {
+    "deezerId": 133086462,
+    "deezerRecommendationId": null,
+    "band": "herenwen",
+    "genre": ["Thrash Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 2,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Lucila Guevara"
+    ],
+    "country": "Mexico",
+    "countryCode": "MX",
+    "yearStarted": 2005,
+    "yearEnded": null,
+    "recommendation": "",
+    "links": "",
+    "sister": false
   }
 ]
