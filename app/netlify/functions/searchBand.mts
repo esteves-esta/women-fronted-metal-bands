@@ -1,35 +1,43 @@
 import type { Config, Context } from "@netlify/functions";
 import { createClient } from "redis";
+import { createDatabase } from "./database";
 
 // run by using yarn netlify dev
 
 export default async (req: Request, context: Context) => {
   const { query } = context.params;
+  // const { query, col } = context.params;
   const apiKey = Netlify.env.get("MY_API_KEY");
   const requestKey = req.headers.get("X-API-Key");
 
   // if (requestKey !== apiKey) {
-  //   return new Response("Sorry, no access for you.", { status: 401 });
+  //   return Response.json("Sorry, no access for you.", { status: 401 });
   // }
 
-  const databasePassword = Netlify.env.get("DATABASE_PASSWORD");
-  const client = createClient({
-    url: `redis://default:${databasePassword}@us1-moving-glider-41412.upstash.io:41412`,
-  });
+  const client = await createDatabase();
+  console.log(query);
+  /* 
+  https://redis.io/commands/ft.search/ 
+  https://redis.io/docs/interact/search-and-query/query/
+  */
 
-  client.on("error", function (err) {
-    console.log(err);
-  });
+  // switch (col) {
+  //   case `allWomenBand`:
+  // let result = await client.ft.search("idx:bands", `@allWomenBand:{true}`);
+  //     break;
 
-  await client.connect();
+  //   default:
+  // let result = await client.ft.search("idx:bands", query);
+  //     break;
+  // }
 
-  let result = await client.ft.search("idx:bands", query);
+  let result = await client.ft.search("idx:bands", `@allWomenBand:{true}`);
+  // let result = await client.ft.search("idx:bands", `@band:${query}`);
   // let result = await client.ft.search("idx:bands", `query @age:[30 40]`);
 
   client.quit();
 
-  
-  return new Response(JSON.stringify(result));
+  return Response.json(result);
 };
 
 export const config: Config = {
@@ -42,7 +50,6 @@ export const config: Config = {
 https://redis.io/docs/connect/clients/nodejs/
 https://docs.netlify.com/functions/get-started/#write-a-function
 */
-
 
 /* 
 https://github.com/redis/node-redis/blob/master/packages/search/README.md
