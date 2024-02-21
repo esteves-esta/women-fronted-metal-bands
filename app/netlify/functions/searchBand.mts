@@ -6,7 +6,7 @@ import { createDatabase } from "./database";
 
 export default async (req: Request, context: Context) => {
   const { query } = context.params;
-  // const { query, col } = context.params;
+  // const { query, col, page, limit } = context.params;
   const apiKey = Netlify.env.get("MY_API_KEY");
   const requestKey = req.headers.get("X-API-Key");
 
