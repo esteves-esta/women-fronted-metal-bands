@@ -17,6 +17,8 @@ export default async (req: Request, context: Context) => {
   const client = await createDatabase();
   console.log(query);
   /* 
+  https://app.netlify.com/
+  https://app.redislabs.com/#/login
   https://redis.io/commands/ft.search/ 
   https://redis.io/docs/interact/search-and-query/query/
   */
