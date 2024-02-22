@@ -27,7 +27,7 @@ export async function connectClient() {
 
 export async function loadData() {
   const listJSON = require("../../list-of-metal-bands/list.json");
-  console.log("oi");
+
   const client = await connectClient();
 
   //https://redis.io/commands/dbsize/
@@ -73,38 +73,35 @@ export async function loadData() {
           AS: "countryCode",
           SORTABLE: true,
         },
-        "$.deezerId": {
-          type: SchemaFieldTypes.NUMERIC,
-          AS: "deezerId",
-        },
-        "$.deezerRecommendationId": {
-          type: SchemaFieldTypes.NUMERIC,
-          AS: "deezerRecommendationId",
-        },
         "$.growling": {
           type: SchemaFieldTypes.NUMERIC,
           AS: "growling",
           SORTABLE: true,
         },
-        // "$.links": {
-        //   type: SchemaFieldTypes.TEXT,
-        // },
-        // "$.recommendation": {
-        //   type: SchemaFieldTypes.TEXT,
-        // },
-        // "$.recommendationIsCover": {
-        //   type: SchemaFieldTypes.TAG,
-        // },
+        "$.activeFor": {
+          type: SchemaFieldTypes.NUMERIC,
+          AS: "activeFor",
+          SORTABLE: true,
+        },
+        "$.numberOfVocalists": {
+          type: SchemaFieldTypes.NUMERIC,
+          AS: "numberOfVocalists",
+          SORTABLE: true,
+        },
         "$.sister": {
           type: SchemaFieldTypes.TAG,
+          AS: "sister",
+          SORTABLE: true,
         },
         "$.yearEnded": {
           type: SchemaFieldTypes.NUMERIC,
           AS: "yearEnded",
+          SORTABLE: true,
         },
         "$.yearStarted": {
           type: SchemaFieldTypes.NUMERIC,
           AS: "yearStarted",
+          SORTABLE: true,
         },
         "$.currentVocalists.*": {
           type: SchemaFieldTypes.TEXT,
@@ -125,7 +122,7 @@ export async function loadData() {
       console.log("Index exists already, skipped creation.");
     } else {
       // Something went wrong, perhaps RediSearch isn't installed...
-      console.error(e);
+      console.error("index creation error: " + e);
       // process.exit(1);
     }
   }
@@ -137,15 +134,13 @@ export async function loadData() {
       if (item.deezerId) key = item.deezerId;
       if (item.deezerRecommendationId) key = item.deezerRecommendationId;
 
-// todo 
-/* 
-before adding to database 
-- calculate active year
-- calculate number of vocalist
--
- */
+      const activeFor = formatYearsActive(item);
 
-      return client.json.set(`band:${key}`, "$", item);
+      return client.json.set(`band:${key}`, "$", {
+        ...item,
+        activeFor,
+        numberOfVocalists: item.currentVocalists.length,
+      });
     })
   );
 
@@ -160,3 +155,41 @@ before adding to database
   }
   return { errorCount, message: "Database updated" };
 }
+
+const formatYearsActive = (data) => {
+  const { yearStarted, yearEnded } = data;
+
+  const thisYear = new Date().getFullYear();
+
+  let activeYears = 0;
+  if (yearStarted !== null) {
+    if (yearEnded !== 0) activeYears = yearEnded - yearStarted;
+    else activeYears = thisYear - yearStarted;
+  }
+  return activeYears;
+};
+
+// run by using yarn netlify dev
+/* 
+  https://app.netlify.com/
+  https://app.redislabs.com/#/login
+  https://redis.io/commands/ft.search/ 
+  https://redis.io/docs/interact/search-and-query/query/
+  */
+
+// https://dev.to/myogeshchavan97/using-serverless-redis-as-database-for-netlify-functions-2mii
+/* 
+https://redis.io/docs/connect/clients/nodejs/
+https://docs.netlify.com/functions/get-started/#write-a-function
+
+https://github.com/redis/node-redis/blob/master/packages/search/README.md
+https://github.com/redis/node-redis/blob/master/examples/managing-json.js
+https://redis.io/docs/connect/clients/nodejs/
+
+
+https://github.com/redis/node-redis/blob/master/examples/search-json.js
+https://redis.io/commands/ft.create/#description
+https://github.com/RediSearch/RediSearch/issues/2293#issuecomment-941987561
+https://learn.redis.com/kb/doc/2dhiyayzpm/how-to-model-a-boolean-at-index-creation-time
+https://redis.io/docs/interact/search-and-query/indexing/
+*/

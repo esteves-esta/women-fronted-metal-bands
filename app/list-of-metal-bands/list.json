@@ -4123,7 +4123,7 @@
       "Diana Foronda"
     ],
     "country": "Peru",
-    "countryCode": "",
+    "countryCode": "PE",
     "yearStarted": 1999,
     "yearEnded": 0,
     "recommendation": null,
@@ -4487,7 +4487,9 @@
     "blackWomen": false,
     "allWomenBand": false,
     "growling": 3,
-    "pastVocalists": ["Michelle Godinho"],
+    "pastVocalists": [
+      "Michelle Godinho"
+    ],
     "currentVocalists": [
       "Ariadne Souza"
     ],
@@ -4584,7 +4586,7 @@
       "Susan Wendelken"
     ],
     "country": "United States of America",
-    "countryCode": "",
+    "countryCode": "US",
     "yearStarted": 2004,
     "yearEnded": 0,
     "recommendation": null,
@@ -4713,7 +4715,8 @@
     "deezerId": 133086462,
     "deezerRecommendationId": null,
     "band": "herenwen",
-    "genre": ["Thrash Metal"
+    "genre": [
+      "Thrash Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -4729,6 +4732,52 @@
     "yearEnded": 0,
     "recommendation": "",
     "links": "",
+    "sister": false
+  },
+  {
+    "deezerId": 106436522,
+    "deezerRecommendationId": null,
+    "band": "Folterkammer",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 2,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Andromeda Anarchia"
+    ],
+    "country": "United States of America",
+    "countryCode": "US",
+    "yearStarted": 2021,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.femmemetalwebzine.net/interviews/folterkammer-an-interview-with-andromeda-anarchia/",
+    "sister": false
+  },
+  {
+    "deezerId": 10990094,
+    "deezerRecommendationId": null,
+    "band": "Heriot ",
+    "genre": [
+      "Metalcore",
+      "sludge metal",
+      "doom metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 2,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Debbie Gough"
+    ],
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "yearStarted": 2019,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "heriotmetal.com",
     "sister": false
   }
 ]
