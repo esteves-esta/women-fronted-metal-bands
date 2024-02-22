@@ -15,7 +15,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 1993,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.acidking.com/about/",
     "sister": false
@@ -36,7 +36,7 @@
     "country": "Switzerland",
     "countryCode": "CH",
     "yearStarted": 2018,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://adinfinitumofficial.com/bio/",
     "sister": false
@@ -57,7 +57,7 @@
     "country": "Sweden",
     "countryCode": "SE",
     "yearStarted": 2012,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "God Is Silent",
     "links": "",
     "sister": false
@@ -80,7 +80,7 @@
     "country": "Japan",
     "countryCode": "JP",
     "yearStarted": 2010,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "BxMxC",
     "links": "",
     "sister": false
@@ -101,7 +101,7 @@
     "country": "Japan",
     "countryCode": "JP",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Unleash!!!!!",
     "links": "https://bandmaid.tokyo/",
     "sister": false
@@ -122,7 +122,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2019,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Red Phantom",
     "links": "https://www.heavycastle.com/",
     "sister": false
@@ -143,7 +143,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2022,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://cinnamonbabe.com/",
     "sister": false
@@ -164,7 +164,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2002,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Weatherman",
     "links": "https://www.deadsara.com/",
     "sister": false
@@ -185,7 +185,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2015,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Death of Me",
     "links": "",
     "sister": false
@@ -206,7 +206,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2003,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Infected",
     "links": "",
     "sister": false
@@ -228,7 +228,7 @@
     "country": "Russia",
     "countryCode": "RU",
     "yearStarted": 2007,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -249,7 +249,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 1997,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -270,7 +270,7 @@
     "country": "Portugal",
     "countryCode": "PT",
     "yearStarted": 2007,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Deathwish",
     "links": "",
     "sister": false
@@ -291,7 +291,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2009,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -312,7 +312,7 @@
     "country": "Canada",
     "countryCode": "CA",
     "yearStarted": 1996,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -333,7 +333,7 @@
     "country": "Italy",
     "countryCode": "IT",
     "yearStarted": 1997,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Under the Surface",
     "links": "https://www.lacunacoil.com/bio/",
     "sister": false
@@ -354,7 +354,7 @@
     "country": "Canada",
     "countryCode": "CA",
     "yearStarted": 2008,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Toxic",
     "links": "",
     "sister": false
@@ -375,7 +375,7 @@
     "country": "Germany",
     "countryCode": "DE",
     "yearStarted": 2020,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "My Revenge",
     "links": "",
     "sister": false
@@ -396,7 +396,7 @@
     "country": "Madagascar ",
     "countryCode": "MG",
     "yearStarted": 2020,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Koaitra",
     "links": "https://loharano.bandcamp.com/album/loharano-live-at-trans-musicales-of-rennes",
     "sister": false
@@ -417,7 +417,7 @@
     "country": "United Kingdom",
     "countryCode": "GB",
     "yearStarted": 2007,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Born Young and Free",
     "links": "",
     "sister": false
@@ -438,7 +438,7 @@
     "country": "Japan",
     "countryCode": "JP",
     "yearStarted": 2002,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -460,7 +460,7 @@
     "country": "Italy",
     "countryCode": "IT",
     "yearStarted": 2000,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Tyrants of Damnation",
     "links": "",
     "sister": false
@@ -482,7 +482,7 @@
     "country": "United Kingdom",
     "countryCode": "GB",
     "yearStarted": 2014,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Fire & Ice",
     "links": "https://novatwins.co.uk/",
     "sister": true
@@ -503,7 +503,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2011,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Pray for Fire",
     "links": "",
     "sister": false
@@ -524,7 +524,7 @@
     "country": "France",
     "countryCode": "FR",
     "yearStarted": 2009,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "The Lie",
     "links": "",
     "sister": false
@@ -545,7 +545,7 @@
     "country": "Sweden",
     "countryCode": "SE",
     "yearStarted": 2002,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -566,7 +566,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2014,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -587,7 +587,7 @@
     "country": "Brazil",
     "countryCode": "BR",
     "yearStarted": 2012,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Dance Macabre",
     "links": "",
     "sister": false
@@ -629,7 +629,7 @@
     "country": "Netherlands",
     "countryCode": "NL",
     "yearStarted": 1996,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "The Fire Within",
     "links": "",
     "sister": false
@@ -650,7 +650,7 @@
     "country": "Sweden",
     "countryCode": "SE",
     "yearStarted": 2015,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "talion",
     "links": "",
     "sister": false
@@ -672,7 +672,7 @@
     "country": "United Kingdom",
     "countryCode": "GB",
     "yearStarted": 2022,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Obsession : SOLAR",
     "links": "",
     "sister": true
@@ -693,7 +693,7 @@
     "country": "Sweden",
     "countryCode": "SE",
     "yearStarted": 1995,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "The World Is Yours",
     "links": "",
     "sister": false
@@ -714,7 +714,7 @@
     "country": "Russia",
     "countryCode": "RU",
     "yearStarted": 2002,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Tropoiu Nevedannoi",
     "links": "http://www.arkona-russia.com/",
     "sister": false
@@ -735,7 +735,7 @@
     "country": "United Kingdom",
     "countryCode": "GB",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Stranger In The Mirror",
     "links": "",
     "sister": false
@@ -756,7 +756,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2022,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Angels To Ashes",
     "links": "",
     "sister": false
@@ -777,7 +777,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2020,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "FAIRY METAL",
     "links": "https://ffm.to/fairymetal",
     "sister": false
@@ -840,7 +840,7 @@
     "country": "Switzerland",
     "countryCode": "CH",
     "yearStarted": 2015,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "The Circle of Five",
     "links": "https://www.burningwitches.ch/",
     "sister": false
@@ -862,7 +862,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2009,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Best Friend",
     "links": "https://butcherbabies.com/",
     "sister": false
@@ -946,7 +946,7 @@
     "country": "Brazil",
     "countryCode": "BR",
     "yearStarted": 2019,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -967,7 +967,7 @@
     "country": "Denmark",
     "countryCode": "DK",
     "yearStarted": 2015,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -1009,7 +1009,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2016,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Now You'll Rot",
     "links": "",
     "sister": false
@@ -1030,7 +1030,7 @@
     "country": "United Kingdom",
     "countryCode": "GB",
     "yearStarted": 2011,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Take Back Control",
     "links": "",
     "sister": false
@@ -1051,7 +1051,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2015,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -1072,7 +1072,7 @@
     "country": "Germany",
     "countryCode": "DE",
     "yearStarted": 1980,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Cult Of The Machine",
     "links": "",
     "sister": false
@@ -1093,7 +1093,7 @@
     "country": "Moldova",
     "countryCode": "MD",
     "yearStarted": 2008,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "The Earth Mantra",
     "links": "https://www.infectedrain.com/about-us/",
     "sister": false
@@ -1114,7 +1114,7 @@
     "country": "United Kingdom",
     "countryCode": "GB",
     "yearStarted": 2012,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "They Fear Us",
     "links": "http://theyfearus.com/",
     "sister": false
@@ -1158,7 +1158,7 @@
     "country": "Ukraine",
     "countryCode": "UA",
     "yearStarted": 2009,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "A Plus or a Minus",
     "links": "http://jinjer-metal.com/",
     "pastVocalists": [],
@@ -1180,7 +1180,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2011,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Wap",
     "links": "https://www.youtube.com/@KtheScreamerOfficial",
     "sister": false
@@ -1201,7 +1201,7 @@
     "country": "Denmark",
     "countryCode": "DK",
     "yearStarted": 2015,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -1222,7 +1222,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2004,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Shadows Fed to Tyrants",
     "links": "",
     "sister": false
@@ -1243,7 +1243,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2002,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Agents of Fate",
     "links": "",
     "sister": false
@@ -1264,7 +1264,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2012,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -1285,7 +1285,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2015,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -1306,7 +1306,7 @@
     "country": "Japan",
     "countryCode": "JP",
     "yearStarted": 2019,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Rise",
     "links": "",
     "sister": false
@@ -1327,7 +1327,7 @@
     "country": "Belgium",
     "countryCode": "BE",
     "yearStarted": 2008,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Glimpse Of The Unseen",
     "links": "",
     "sister": false
@@ -1348,7 +1348,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2014,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Scar Weaver",
     "links": "",
     "sister": false
@@ -1369,7 +1369,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2000,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Run For Cover",
     "links": "",
     "sister": false
@@ -1390,7 +1390,7 @@
     "country": "United Kingdom",
     "countryCode": "GB",
     "yearStarted": 2021,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Momentary Actuality",
     "links": "",
     "sister": false
@@ -1411,7 +1411,7 @@
     "country": "Australia",
     "countryCode": "AU",
     "yearStarted": 2018,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "The Ritualist",
     "links": "",
     "sister": false
@@ -1432,7 +1432,7 @@
     "country": "United Kingdom",
     "countryCode": "GB",
     "yearStarted": 2005,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Mutual Ruin",
     "links": "",
     "sister": false
@@ -1453,7 +1453,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2016,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Misinterpreting Constellations",
     "links": "",
     "sister": false
@@ -1474,7 +1474,7 @@
     "country": "Netherlands",
     "countryCode": "NL",
     "yearStarted": 2014,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Humans Are Broken",
     "links": "",
     "sister": false
@@ -1495,7 +1495,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2016,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Holy Roller",
     "links": "",
     "sister": false
@@ -1516,7 +1516,7 @@
     "country": "Belgium",
     "countryCode": "BE",
     "yearStarted": 2004,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Disconnect",
     "links": "",
     "sister": false
@@ -1537,7 +1537,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2021,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "BYOB (Cover)",
     "links": "",
     "sister": false
@@ -1579,7 +1579,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2016,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Miscreation",
     "links": "",
     "sister": false
@@ -1621,7 +1621,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2021,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Do You Know What It’s Like ?",
     "links": "",
     "sister": false
@@ -1642,7 +1642,7 @@
     "country": "South Korea",
     "countryCode": "KR",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "The siege",
     "links": "https://traitorbsdm.bandcamp.com/",
     "sister": false
@@ -1663,7 +1663,7 @@
     "country": "United Kingdom",
     "countryCode": "GB",
     "yearStarted": 2014,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Uterine Industrialisation",
     "links": "",
     "sister": false
@@ -1684,7 +1684,7 @@
     "country": "United Kingdom",
     "countryCode": "GB",
     "yearStarted": 2021,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Hideous",
     "links": "",
     "sister": false
@@ -1705,7 +1705,7 @@
     "country": "Australia",
     "countryCode": "AU",
     "yearStarted": 2019,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Time's Up",
     "links": "",
     "sister": false
@@ -1726,7 +1726,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 1998,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Forever Militant",
     "links": "",
     "sister": false
@@ -1749,7 +1749,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2007,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -1791,7 +1791,7 @@
     "country": "France",
     "countryCode": "FR",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -1812,7 +1812,7 @@
     "country": "Sweden",
     "countryCode": "SE",
     "yearStarted": 2008,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": 365,
     "links": "https://www.amaranthe.se/the-band",
     "sister": false
@@ -1833,7 +1833,7 @@
     "country": "Spain",
     "countryCode": "ES",
     "yearStarted": 2003,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Prisioner",
     "links": "https://ankormusic.com/",
     "sister": false
@@ -1854,7 +1854,7 @@
     "country": "Finland",
     "countryCode": "FI",
     "yearStarted": 2008,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Where Angels Fear to Fly",
     "links": "",
     "sister": false
@@ -1875,7 +1875,7 @@
     "country": "Belgium",
     "countryCode": "BE",
     "yearStarted": 2017,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Burning Warriors",
     "links": "",
     "sister": false
@@ -1896,7 +1896,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Paralyzed",
     "links": "https://conquerdivideofficial.com/",
     "sister": false
@@ -1917,7 +1917,7 @@
     "country": "New Zealand",
     "countryCode": "NZ",
     "yearStarted": 2010,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Everybody's High but Me",
     "links": "",
     "sister": false
@@ -1938,7 +1938,7 @@
     "country": "United Kingdom",
     "countryCode": "GB",
     "yearStarted": 2014,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Taunt Me",
     "links": "",
     "sister": false
@@ -1959,7 +1959,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2009,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Crash",
     "links": "",
     "sister": false
@@ -1980,7 +1980,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2019,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Honed Blade",
     "links": "https://gelhc.bandcamp.com/album/only-constant",
     "sister": false
@@ -2022,7 +2022,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 1995,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "The In-Between",
     "links": "",
     "sister": false
@@ -2043,7 +2043,7 @@
     "country": "Brazil",
     "countryCode": "BR",
     "yearStarted": 2010,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Under Ruins",
     "links": "",
     "sister": false
@@ -2064,7 +2064,7 @@
     "country": "Poland",
     "countryCode": "PL",
     "yearStarted": 2008,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2085,7 +2085,7 @@
     "country": "Canada",
     "countryCode": "CA",
     "yearStarted": 2008,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Carbon Copies",
     "links": "",
     "sister": false
@@ -2106,7 +2106,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2009,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2127,7 +2127,7 @@
     "country": "Germany",
     "countryCode": "DE",
     "yearStarted": 2017,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Nightfall",
     "links": "",
     "sister": false
@@ -2148,7 +2148,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2022,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.patreon.com/sicksense",
     "sister": false
@@ -2169,7 +2169,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2000,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Conversion",
     "links": "",
     "sister": false
@@ -2190,7 +2190,7 @@
     "country": "Canada",
     "countryCode": "CA",
     "yearStarted": 2003,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Apocalypse Moon",
     "links": "",
     "sister": false
@@ -2211,7 +2211,7 @@
     "country": "Canada",
     "countryCode": "CA",
     "yearStarted": 2007,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Cleanse the Bloodlines",
     "links": "",
     "sister": false
@@ -2232,7 +2232,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 1997,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Shelter",
     "links": "",
     "sister": false
@@ -2255,7 +2255,7 @@
     "country": "Japan",
     "countryCode": "JP",
     "yearStarted": 2008,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://aldious.net/",
     "sister": false
@@ -2276,7 +2276,7 @@
     "country": "Finland",
     "countryCode": "FI",
     "yearStarted": 2006,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2297,7 +2297,7 @@
     "country": "Germany",
     "countryCode": "DE",
     "yearStarted": 2015,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://beyond-the-black.com/",
     "sister": false
@@ -2318,7 +2318,7 @@
     "country": "Japan",
     "countryCode": "JP",
     "yearStarted": 2011,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2381,7 +2381,7 @@
     "country": "Italy",
     "countryCode": "IT",
     "yearStarted": 2005,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Ora Pro Nobis",
     "links": "",
     "sister": false
@@ -2402,7 +2402,7 @@
     "country": "Netherlands",
     "countryCode": "NL",
     "yearStarted": 2002,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2423,7 +2423,7 @@
     "country": "Italy",
     "countryCode": "IT",
     "yearStarted": 2006,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2444,7 +2444,7 @@
     "country": "Germany",
     "countryCode": "DE",
     "yearStarted": 2010,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2465,7 +2465,7 @@
     "country": "Netherlands",
     "countryCode": "NL",
     "yearStarted": 2002,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2486,7 +2486,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 1995,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2510,7 +2510,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2017,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2531,7 +2531,7 @@
     "country": "Italy",
     "countryCode": "IT",
     "yearStarted": 2017,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2552,7 +2552,7 @@
     "country": "Ukraine",
     "countryCode": "UA",
     "yearStarted": 2011,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://ignea.band/",
     "sister": false
@@ -2573,7 +2573,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 1975,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2594,7 +2594,7 @@
     "country": "Germany",
     "countryCode": "DE",
     "yearStarted": 2014,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2615,7 +2615,7 @@
     "country": "Finland",
     "countryCode": "FI",
     "yearStarted": 1996,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2636,7 +2636,7 @@
     "country": "Taiwan",
     "countryCode": "TW",
     "yearStarted": 2019,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Longma",
     "links": "",
     "sister": false
@@ -2657,7 +2657,7 @@
     "country": "Russia",
     "countryCode": "RU",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2678,7 +2678,7 @@
     "country": "Brazil",
     "countryCode": "BR",
     "yearStarted": 2016,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2699,7 +2699,7 @@
     "country": "Canada",
     "countryCode": "CA",
     "yearStarted": 2011,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Dirty Little Lie",
     "links": "",
     "sister": false
@@ -2720,7 +2720,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2007,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2741,7 +2741,7 @@
     "country": "Norway",
     "countryCode": "NO",
     "yearStarted": 2001,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2762,7 +2762,7 @@
     "country": "Italy",
     "countryCode": "IT",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2783,7 +2783,7 @@
     "country": "Italy",
     "countryCode": "IT",
     "yearStarted": 2014,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2849,7 +2849,7 @@
     "country": "Mexico",
     "countryCode": "MX",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "CHOKE",
     "links": "",
     "sister": true
@@ -2870,7 +2870,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 1980,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2891,7 +2891,7 @@
     "country": "Germany",
     "countryCode": "DE",
     "yearStarted": 1994,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -2912,7 +2912,7 @@
     "country": "Ukraine",
     "countryCode": "UA",
     "yearStarted": 2014,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Deadhearted ",
     "links": "https://sershenzaritskaya.bandcamp.com/",
     "sister": false
@@ -2933,7 +2933,7 @@
     "country": "Japan",
     "countryCode": "JP",
     "yearStarted": 1981,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://show-ya.jp/",
     "sister": false
@@ -2958,7 +2958,7 @@
     "country": "Australia",
     "countryCode": "AU",
     "yearStarted": 2023,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://futurestatic.net/about",
     "sister": false
@@ -2982,7 +2982,7 @@
     "country": "Brazil",
     "countryCode": "BR",
     "yearStarted": 2019,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.thedamnnation.com.br/",
     "sister": false
@@ -3005,7 +3005,7 @@
     "country": "Brazil",
     "countryCode": "BR",
     "yearStarted": 2010,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.youtube.com/channel/UC3-HhMstJsSVM9yDA6USYwA",
     "sister": false
@@ -3026,7 +3026,7 @@
     "country": "Spain",
     "countryCode": "ES",
     "yearStarted": 2009,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -3049,7 +3049,7 @@
     "country": "Spain",
     "countryCode": "ES",
     "yearStarted": 2008,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "",
     "sister": false
@@ -3072,7 +3072,7 @@
     "country": "Serbia",
     "countryCode": "RS",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.youtube.com/channel/UCUkziyC9BQkFh6-0vpLwpdQ",
     "sister": false
@@ -3100,7 +3100,7 @@
     "country": "Chile",
     "countryCode": "CL",
     "yearStarted": 1998,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.youtube.com/watch?v=wAPHk9VFwFQ&list=UULF2Ir5Bt3cBLdn6nRKuaPM5w&index=2&pp=iAQB8AUB",
     "sister": true
@@ -3123,7 +3123,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://castrator.bandcamp.com/",
     "sister": false
@@ -3146,7 +3146,7 @@
     "country": "Japan",
     "countryCode": "JP",
     "yearStarted": 2016,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://lovebites.jp/",
     "sister": false
@@ -3169,7 +3169,7 @@
     "country": "Russia",
     "countryCode": "RU",
     "yearStarted": 2007,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.youtube.com/user/aellaband",
     "sister": false
@@ -3193,7 +3193,7 @@
     "country": "Brazil",
     "countryCode": "BR",
     "yearStarted": 2014,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "Call Us By Her Name",
     "links": "https://www.egokilltalent.com/bio",
     "sister": false
@@ -3246,7 +3246,7 @@
     "country": "Colombia",
     "countryCode": "CO",
     "yearStarted": 2003,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "No Eres Tan Fuerte",
     "links": "https://soundcloud.com/highwaygirls",
     "sister": false
@@ -3269,7 +3269,7 @@
     "country": "Mexico",
     "countryCode": "MX",
     "yearStarted": 2009,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://introtyl.bandcamp.com/album/inside-of-violence",
     "sister": false
@@ -3292,7 +3292,7 @@
     "country": "Brazil",
     "countryCode": "BR",
     "yearStarted": 2017,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://eskrotacs.bandcamp.com/",
     "sister": false
@@ -3316,7 +3316,7 @@
     "country": "Brazil",
     "countryCode": "BR",
     "yearStarted": 2000,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://soundcloud.com/panndora",
     "sister": false
@@ -3340,7 +3340,7 @@
     "country": "Serbia",
     "countryCode": "RS",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://jennerserbia.bandcamp.com/",
     "sister": false
@@ -3363,7 +3363,7 @@
     "country": "Mexico",
     "countryCode": "MX",
     "yearStarted": 2005,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://mysticagirlsofc.blogspot.com/search/label/Integrantes",
     "sister": false
@@ -3386,7 +3386,7 @@
     "country": "Sweden",
     "countryCode": "SE",
     "yearStarted": 2005,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": null,
     "sister": false
@@ -3435,7 +3435,7 @@
     "country": "Sweden",
     "countryCode": "SE",
     "yearStarted": 2016,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "The Island",
     "links": "https://theheardband.bandcamp.com/album/the-island",
     "sister": false
@@ -3459,7 +3459,7 @@
     "country": "Slovenia",
     "countryCode": "SI",
     "yearStarted": 2003,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.youtube.com/user/Hellcatspress",
     "sister": true
@@ -3505,7 +3505,7 @@
     "country": "Colombia",
     "countryCode": "CO",
     "yearStarted": 2006,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://soundcloud.com/virginkillers",
     "sister": false
@@ -3574,7 +3574,7 @@
     "country": "Brazil",
     "countryCode": "BR",
     "yearStarted": 1987,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://volkanabr.wixsite.com/volkana/about",
     "sister": false
@@ -3597,7 +3597,7 @@
     "country": "Russia",
     "countryCode": "RU",
     "yearStarted": 2006,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": null,
     "sister": false
@@ -3620,7 +3620,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2011,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://soundcloud.com/volr",
     "sister": false
@@ -3643,7 +3643,7 @@
     "country": "Japan",
     "countryCode": "JP",
     "yearStarted": 2006,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "http://vysonbrutality.com/index.html",
     "sister": false
@@ -3689,7 +3689,7 @@
     "country": "italy",
     "countryCode": "IT",
     "yearStarted": 2010,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.youtube.com/channel/UC_toPiJjHojxnKGbQvo24Ng/featured",
     "sister": false
@@ -3828,7 +3828,7 @@
     "country": "Brazil",
     "countryCode": "BR",
     "yearStarted": 2016,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.youtube.com/channel/UCOS3klDs2J8TF5WbG9OoJ5w",
     "sister": false
@@ -3942,7 +3942,7 @@
     "country": "Norway",
     "countryCode": "NO",
     "yearStarted": 2016,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "The Fall of Divinity",
     "links": "https://www.youtube.com/watch?v=iPpaNZXj9qY",
     "sister": false
@@ -3963,7 +3963,7 @@
     "country": "United Kingdom",
     "countryCode": "GB",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "www.novacrowofficial.com",
     "sister": false
@@ -3984,7 +3984,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.soraia.com/about-us",
     "sister": false
@@ -4008,7 +4008,7 @@
     "country": "Brasil",
     "countryCode": "BR",
     "yearStarted": 2022,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.youtube.com/watch?v=R38QDDqmReI",
     "sister": false
@@ -4029,7 +4029,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2019,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.edgeofparadiseband.com/about-us.php",
     "sister": false
@@ -4053,7 +4053,7 @@
     "country": "Japan",
     "countryCode": "JP",
     "yearStarted": 1994,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.aphasiajpn.com/",
     "sister": false
@@ -4100,7 +4100,7 @@
     "country": "Argentina",
     "countryCode": "AR",
     "yearStarted": 2015,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://apofenia.bandcamp.com/track/worm-infested",
     "sister": false
@@ -4125,7 +4125,7 @@
     "country": "Peru",
     "countryCode": "",
     "yearStarted": 1999,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.youtube.com/watch?v=UVrhDgQr20g",
     "sister": true
@@ -4148,7 +4148,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2016,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://ashesariseproject.bandcamp.com/album/resurgence-from-oblivion",
     "sister": false
@@ -4173,7 +4173,7 @@
     "country": "Greece",
     "countryCode": "GR",
     "yearStarted": 1995,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://astarteband.bandcamp.com/merch",
     "sister": false
@@ -4196,7 +4196,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2004,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.atomicblonde.net/",
     "sister": false
@@ -4219,7 +4219,7 @@
     "country": "Mexico",
     "countryCode": "MX",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "http://babydollz.bandcamp.com",
     "sister": false
@@ -4337,7 +4337,7 @@
     "country": "Poland",
     "countryCode": "PL",
     "yearStarted": 2011,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://bitchcraftband.bandcamp.com/album/bitchcraft-2",
     "sister": false
@@ -4381,7 +4381,7 @@
     "country": "Portugal",
     "countryCode": "PT",
     "yearStarted": 1995,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://blackwidowsportugal.bandcamp.com/album/among-the-brave-ones",
     "sister": false
@@ -4404,7 +4404,7 @@
     "country": "Russsia",
     "countryCode": "RU",
     "yearStarted": 2004,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://blackthornmetal.bandcamp.com/",
     "sister": false
@@ -4450,7 +4450,7 @@
     "country": "Mexico",
     "countryCode": "MX",
     "yearStarted": 2013,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.youtube.com/channel/UCTqUGWK5H2QtEnDL0haGIOw",
     "sister": false
@@ -4471,7 +4471,7 @@
     "country": "Sweden",
     "countryCode": "SE",
     "yearStarted": 2007,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://lecrepusculedusoir.bandcamp.com/album/herbarium",
     "sister": false
@@ -4494,7 +4494,7 @@
     "country": "Brazil",
     "countryCode": "BR",
     "yearStarted": 1989,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.youtube.com/watch?v=cSfgou_djdQ",
     "sister": false
@@ -4517,7 +4517,7 @@
     "country": "Canada",
     "countryCode": "CA",
     "yearStarted": 2008,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://www.youtube.com/user/Vehemal",
     "sister": false
@@ -4563,7 +4563,7 @@
     "country": "Norway ",
     "countryCode": "NO",
     "yearStarted": 2007,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://digipus.bandcamp.com/album/helgrind",
     "sister": false
@@ -4586,7 +4586,7 @@
     "country": "United States of America",
     "countryCode": "",
     "yearStarted": 2004,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://web.archive.org/web/20110207202532/http://www.dormitoryeffect.com/",
     "sister": false
@@ -4609,7 +4609,7 @@
     "country": "Sweden",
     "countryCode": "SE",
     "yearStarted": 1994,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "https://dracena.se/html/frameset/frameset.html",
     "sister": false
@@ -4656,7 +4656,7 @@
     "country": "Germany",
     "countryCode": "DE",
     "yearStarted": 2012,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": null,
     "links": "http://www.revolutioneve.com/",
     "sister": false
@@ -4704,7 +4704,7 @@
     "country": "United States of America",
     "countryCode": "US",
     "yearStarted": 2018,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "China Beach",
     "links": "https://www.laurajanegrace.com/",
     "sister": false
@@ -4726,7 +4726,7 @@
     "country": "Mexico",
     "countryCode": "MX",
     "yearStarted": 2005,
-    "yearEnded": null,
+    "yearEnded": 0,
     "recommendation": "",
     "links": "",
     "sister": false

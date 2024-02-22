@@ -27,14 +27,17 @@ export async function connectClient() {
 
 export async function loadData() {
   const listJSON = require("../../list-of-metal-bands/list.json");
-
+  console.log("oi");
   const client = await connectClient();
 
   //https://redis.io/commands/dbsize/
   const itemsOnDB = await client.dbSize();
 
   if (itemsOnDB === listJSON.length) {
-    return new Response("Everything is updated on the database !! ");
+    return {
+      errorCount: 0,
+      message: "Everything is updated on the database !!",
+    };
   }
 
   // clean db
@@ -97,15 +100,19 @@ export async function loadData() {
         },
         "$.yearEnded": {
           type: SchemaFieldTypes.NUMERIC,
+          AS: "yearEnded",
         },
         "$.yearStarted": {
           type: SchemaFieldTypes.NUMERIC,
+          AS: "yearStarted",
         },
         "$.currentVocalists.*": {
           type: SchemaFieldTypes.TEXT,
+          AS: "currentVocalists",
         },
         "$.pastVocalists.*": {
           type: SchemaFieldTypes.TEXT,
+          AS: "pastVocalists",
         },
       },
       {
@@ -129,6 +136,15 @@ export async function loadData() {
       let key = crypto.randomUUID();
       if (item.deezerId) key = item.deezerId;
       if (item.deezerRecommendationId) key = item.deezerRecommendationId;
+
+// todo 
+/* 
+before adding to database 
+- calculate active year
+- calculate number of vocalist
+-
+ */
+
       return client.json.set(`band:${key}`, "$", item);
     })
   );
@@ -142,5 +158,5 @@ export async function loadData() {
       errorCount += 1;
     }
   }
-  console.log(`Data updated with ${errorCount} errors.`);
+  return { errorCount, message: "Database updated" };
 }

@@ -1,5 +1,6 @@
 import type { Config, Context } from "@netlify/functions";
 import { connectClient } from "./database";
+import { AggregateSteps } from "@redis/search";
 
 // run by using yarn netlify dev
 
@@ -10,10 +11,11 @@ export default async (req: Request, context: Context) => {
   /* 
 search
 - band
-- n vocalists
 - vocalists
 - country
-- active for - APPLY "@yearEnded - @yearStarted" AS active
+- active for - ft.AGGREGATE  - index "*" APPLY "@yearEnded - @yearStarted" AS active 
+
+
 - years active @price:[270 270]
 
 ex: (@band:${query}) (@${allWomenBand}:{true})
@@ -43,12 +45,77 @@ filter
   https://redis.io/docs/interact/search-and-query/query/
   */
 
-  const searchCols = ["band", "country"];
+  const searchCols = [
+    "band",
+    "country",
+    "vocalists",
+    "active-for",
+    "yearStarted",
+    "yearEnded",
+  ];
 
-  let searchQuery = `@${col}:*${query}*`;
-
+  let searchQuery = "";
+  // let type = "search";
   if (query === "null") searchQuery = `*`;
-  else if (col === "null") searchQuery = `*${query}*`;
+  else {
+    if (col === "null") searchQuery = `*${query}*`;
+    else if (searchCols.includes(col)) {
+      searchQuery = `@${col}:*${query}*`;
+      // if (col === "n-vocalists") {
+      //   searchQuery = `$..currentVocalists`;
+      // }
+      if (col === "vocalists") {
+        searchQuery = `(@currentVocalists:*${query}*) (@pastVocalists:*${query}*)`;
+      }
+      if (col === "active-for") {
+        // negation
+        // searchQuery = `-@yearEnded:[0 0]`;
+        
+        // ended
+        // searchQuery = `@yearEnded:[1 +inf]`;
+
+        // active
+        // searchQuery = `@yearEnded:[0 0]`;
+
+        // searchQuery = `*`;
+        // type = "aggregate";
+        // FT.AGGREGATE idx:bicycle "*" LOAD 1 price APPLY "@price<1000" AS price_category GROUPBY 1 @condition REDUCE SUM 1 "@price_category" AS "num_affordable"
+        // searchQuery = `* APPLY @yearEnded - @yearStarted AS active`;
+        // searchQuery = `* APPLY @yearEnded - @yearStarted AS active @active:[${query} ${query}]`;
+
+        // const result2 = await client.ft.aggregate("idx:users", "*", {
+        //   STEPS: [
+        //     {
+        //       type: AggregateSteps.APPLY,
+        //       expression: "@yearStarted < 2000",
+        //       AS: "active",
+        //     },
+        //   ],
+        // });
+        // return Response.json(result2);
+      }
+    }
+  }
+
+  // {
+  //         STEPS: [
+  //           {
+  //             type: AggregateSteps.GROUPBY,
+  //             REDUCE: [
+  //               {
+  //                 type: AggregateGroupByReducers.AVG,
+  //                 property: "age",
+  //                 AS: "averageAge",
+  //               },
+  //               {
+  //                 type: AggregateGroupByReducers.SUM,
+  //                 property: "coins",
+  //                 AS: "totalCoins",
+  //               },
+  //             ],
+  //           },
+  //         ],
+  //       }
 
   const filterCols = [
     "active",
@@ -81,10 +148,14 @@ filter
   /* DATABASE FULL TEXT SEARCH */
   console.log({ searchQuery });
   console.log({ searchOption });
-  let result = await client.ft.search("idx:bands", searchQuery, searchOption);
-  
+  console.log({ searchOptions: Object.keys(searchOption).length > 0 });
+  let result;
+  if (Object.keys(searchOption).length > 0)
+    result = await client.ft.search("idx:bands", searchQuery, searchOption);
+  else result = await client.ft.search("idx:bands", searchQuery);
+
   client.quit();
-  
+
   console.log({ result: result.documents.length });
   return Response.json(result);
 };
@@ -96,13 +167,6 @@ export const config: Config = {
   path: "/search/:query/:col/:page/:limit/:sort/:sortBy/:filter",
   // https://teste--women-fronted-metal-bands.netlify.app/hello
 };
-
-// case `currentVocalists`:
-//   searchQuery = `@yearStarted:${query}`;
-//   break;
-// case `pastVocalists`:
-//   searchQuery = `@yearStarted:${query}`;
-//   break;
 
 // https://dev.to/myogeshchavan97/using-serverless-redis-as-database-for-netlify-functions-2mii
 /* 

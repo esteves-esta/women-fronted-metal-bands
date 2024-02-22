@@ -1,7 +1,7 @@
 import type { Config, Context } from "@netlify/functions";
 import { loadData } from "./database";
 
-// run by using 
+// run by using
 // --yarn netlify dev
 // http://localhost:8888/search/baby/null/1/10/asc/band
 export default async (req: Request, context: Context) => {
@@ -12,9 +12,9 @@ export default async (req: Request, context: Context) => {
   //   return Response.json("Sorry, no access for you.", { status: 401 });
   // }
 
-  await loadData();
-
-  return Response.json("Database updated !! ");
+  const result = await loadData();
+  console.log(`Data updated with ${result.errorCount} errors.`);
+  return Response.json("OK!! " + result.message);
 };
 
 export const config: Config = {
