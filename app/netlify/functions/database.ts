@@ -1,6 +1,6 @@
 import { createClient, SchemaFieldTypes } from "redis";
 
-export async function createDatabase() {
+export async function connectClient() {
   // const databasePassword = Netlify.env.get("DATABASE_PASSWORD");
   const databasePassword = Netlify.env.get("DB_PASSWORD");
 
@@ -28,7 +28,7 @@ export async function createDatabase() {
 export async function loadData() {
   const listJSON = require("../../list-of-metal-bands/list.json");
 
-  const client = await createDatabase();
+  const client = await connectClient();
 
   //https://redis.io/commands/dbsize/
   const itemsOnDB = await client.dbSize();
@@ -83,15 +83,15 @@ export async function loadData() {
           AS: "growling",
           SORTABLE: true,
         },
-        "$.links": {
-          type: SchemaFieldTypes.TEXT,
-        },
-        "$.recommendation": {
-          type: SchemaFieldTypes.TEXT,
-        },
-        "$.recommendationIsCover": {
-          type: SchemaFieldTypes.TAG,
-        },
+        // "$.links": {
+        //   type: SchemaFieldTypes.TEXT,
+        // },
+        // "$.recommendation": {
+        //   type: SchemaFieldTypes.TEXT,
+        // },
+        // "$.recommendationIsCover": {
+        //   type: SchemaFieldTypes.TAG,
+        // },
         "$.sister": {
           type: SchemaFieldTypes.TAG,
         },
