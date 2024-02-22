@@ -33,9 +33,13 @@ export default async (req: Request, context: Context) => {
 
   /* DATABASE FULL TEXT SEARCH */
   let result;
-  if (Object.keys(searchOption).length > 0)
-    result = await client.ft.search("idx:bands", searchQuery, searchOption);
-  else result = await client.ft.search("idx:bands", searchQuery);
+  try {
+    if (Object.keys(searchOption).length > 0)
+      result = await client.ft.search("idx:bands", searchQuery, searchOption);
+    else result = await client.ft.search("idx:bands", searchQuery);
+  } catch (e) {
+    console.log("search error: " + e);
+  }
 
   client.quit();
 
