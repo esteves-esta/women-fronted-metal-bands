@@ -18,7 +18,7 @@ export async function connectClient() {
 }
 
 export async function loadData() {
-  const listJSON = require("../../list-of-metal-bands/list.json");
+  const listJSON = require("../../../list-of-metal-bands/list.json");
 
   let client;
 
