@@ -5,9 +5,9 @@ import { authAPI } from "./auth";
 export default async (req: Request, context: Context) => {
   authAPI(req);
 
-  const { artistId } = context.params;
+  const { trackId } = context.params;
 
-  const result = await cacheResponses("artist", artistId);
+  const result = await cacheResponses("track", trackId);
 
   if (result.error)
     return Response.json(result.message || result.response, {
@@ -18,6 +18,6 @@ export default async (req: Request, context: Context) => {
 };
 
 export const config: Config = {
-  path: "/deezer/artist/:artistId",
+  path: "/deezer/track/:trackId",
   // https://teste--women-fronted-metal-bands.netlify.app/hello
 };

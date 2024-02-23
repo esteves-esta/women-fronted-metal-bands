@@ -4,7 +4,7 @@ import { AggregateGroupByReducers, AggregateSteps } from "redis";
 import { authAPI } from "./auth";
 
 export default async (req: Request, context: Context) => {
-  // authAPI(req);
+  authAPI(req);
 
   let client;
   try {
