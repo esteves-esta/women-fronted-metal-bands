@@ -4779,5 +4779,28 @@
     "recommendation": "",
     "links": "heriotmetal.com",
     "sister": false
+  },
+  {
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "band": "ice age",
+    "genre": [
+      "Thrash Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 2,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Sabrina Kihlstrand"
+    ],
+    "country": "Sweden",
+    "countryCode": "SE",
+    "yearStarted": 1986,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://ice-age.se/songs.html",
+    "sister": false
   }
 ]

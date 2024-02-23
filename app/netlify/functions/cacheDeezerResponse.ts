@@ -5,7 +5,6 @@ export async function cacheResponses(
   id: string,
   endpoint2?: string
 ) {
-
   if (Number.isNaN(id)) {
     return {
       error: true,
@@ -70,6 +69,7 @@ export async function cacheResponses(
   try {
     if (cacheExist == null)
       await client.json.set(`${endpoint}:${id}`, "$", responseResult);
+    // await client.json.EXPIRE(`${endpoint}:${id}`, "14400 NX");
 
     await client.quit();
   } catch (e) {
