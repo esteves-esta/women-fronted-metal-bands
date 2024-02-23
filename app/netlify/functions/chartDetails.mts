@@ -1,7 +1,7 @@
 import type { Config, Context } from "@netlify/functions";
 import { connectClient } from "./database";
 import { AggregateGroupByReducers, AggregateSteps } from "redis";
-
+//DONE - test
 export default async (req: Request, context: Context) => {
   const apiKey = Netlify.env.get("MY_API_KEY");
   const requestKey = req.headers.get("X-API-Key");
