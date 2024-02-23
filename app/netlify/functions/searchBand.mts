@@ -1,6 +1,6 @@
 import type { Config, Context } from "@netlify/functions";
-import { connectClient } from "./database";
-import { authAPI } from "./auth";
+import { connectClient } from "./utils/database";
+import { authAPI } from "./utils/auth";
 
 export default async (req: Request, context: Context) => {
   // console.log(context.params);

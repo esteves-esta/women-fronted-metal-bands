@@ -1,6 +1,6 @@
 import type { Config, Context } from "@netlify/functions";
-import { authAPI } from "./auth";
-import { loadData } from "./database";
+import { authAPI } from "./utils/auth";
+import { loadData } from "./utils/database";
 
 export default async (req: Request, context: Context) => {
   authAPI(req);
@@ -14,5 +14,4 @@ export default async (req: Request, context: Context) => {
 
 export const config: Config = {
   path: "/update-database",
-  // https://teste--women-fronted-metal-bands.netlify.app/hello
 };

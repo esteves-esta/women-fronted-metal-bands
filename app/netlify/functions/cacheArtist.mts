@@ -1,6 +1,6 @@
 import type { Config, Context } from "@netlify/functions";
-import { cacheResponses } from "./cacheDeezerResponse";
-import { authAPI } from "./auth";
+import { cacheResponses } from "./utils/cacheDeezerResponse";
+import { authAPI } from "./utils/auth";
 
 export default async (req: Request, context: Context) => {
   authAPI(req);
@@ -19,5 +19,4 @@ export default async (req: Request, context: Context) => {
 
 export const config: Config = {
   path: "/deezer/artist/:artistId",
-  // https://teste--women-fronted-metal-bands.netlify.app/hello
 };
