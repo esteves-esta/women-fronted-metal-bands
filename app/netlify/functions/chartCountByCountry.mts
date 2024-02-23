@@ -44,11 +44,6 @@ export default async (req: Request, context: Context) => {
     filters += ` @growling:[${growling} ${growling}]`;
   }
 
-  /* 
-todo
-> FT.AGGREGATE idx:bands "*" GROUPBY 0 REDUCE AVG 1 @activeFor as active
-*/
-
   let result;
   try {
     /* 

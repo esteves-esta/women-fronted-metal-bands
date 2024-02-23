@@ -9,6 +9,7 @@ export default async (req: Request, context: Context) => {
   const client = await connectClient();
 
   let responses;
+  let average;
   let chartData = [
     { id: "1", value: 0 },
     { id: "2", value: 0 },
@@ -20,6 +21,7 @@ export default async (req: Request, context: Context) => {
     { id: "30-40", value: 0 },
     { id: "40-50", value: 0 },
   ];
+
   try {
     /* 
  FT.AGGREGATE idx:bands "@yearStarted:[0 1989] -@yearEnded:[1 1980]" GROUPBY 0 REDUCE COUNT 0 as count
@@ -61,6 +63,22 @@ export default async (req: Request, context: Context) => {
       })
     );
 
+    average = await client.ft.aggregate("idx:bands", "*", {
+      STEPS: [
+        {
+          type: AggregateSteps.GROUPBY,
+          properties: [],
+          REDUCE: [
+            {
+              type: AggregateGroupByReducers.AVG,
+              property: "@activeFor",
+              AS: "active",
+            },
+          ],
+        },
+      ],
+    });
+
     //https://github.com/redislabs-training/node-js-crash-course/blob/main/src/utils/dataloader.js
 
     responses.forEach((response, index) => {
@@ -73,19 +91,12 @@ export default async (req: Request, context: Context) => {
   client.quit();
 
   // console.log({ result: result.total });
-  return Response.json(chartData);
+  return Response.json({
+    chartData,
+    average,
+  });
 };
 
 export const config: Config = {
   path: "/chart/time-active",
 };
-
-
-/* 
-get countris => > FT.AGGREGATE idx:bands "*" GROUPBY 1 @countryCode
-
-- populate each data point 
-
-How long these bands are active - by country
-> FT.AGGREGATE idx:bands "@activeFor:[0 4]" GROUPBY 1 @countryCode REDUCE COUNT 0 as count
- */
