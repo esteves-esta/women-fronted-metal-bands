@@ -1,12 +1,20 @@
 import type { Config, Context } from "@netlify/functions";
 import { connectClient } from "./database";
 import { AggregateGroupByReducers, AggregateSteps } from "redis";
-//TODO
-export default async (req: Request, context: Context) => {
-  const apiKey = Netlify.env.get("MY_API_KEY");
-  const requestKey = req.headers.get("X-API-Key");
+import { authAPI } from "./auth";
 
-  const client = await connectClient();
+export default async (req: Request, context: Context) => {
+  // authAPI(req);
+
+  let client;
+
+  try {
+    client = await connectClient();
+  } catch (e) {
+    console.log("cliente " + e);
+    return Response.json("Connection error.", { status: 500 });
+  }
+
 
   let responses;
   let countries;
@@ -71,40 +79,42 @@ How long these bands are active - by country
 
     //https://github.com/redislabs-training/node-js-crash-course/blob/main/src/utils/dataloader.js
 
-    // countries.results.forEach((result) => {
-    //   chartData.push({
-    //     id: result.countryCode,
-    //     id2: result.country,
-    //     data: [
-    //       { x: "70s", y: 0 },
-    //       { x: "80s", y: 0 },
-    //       { x: "90s", y: 0 },
-    //       { x: "00s", y: 0 },
-    //       { x: "10s", y: 0 },
-    //       { x: "20s", y: 0 },
-    //     ],
-    //   });
-    // });
+    countries.results.forEach((result) => {
+      chartData.push({
+        id: result.countryCode,
+        id2: result.country,
+        data: [
+          { x: "70s", y: 0 },
+          { x: "80s", y: 0 },
+          { x: "90s", y: 0 },
+          { x: "00s", y: 0 },
+          { x: "10s", y: 0 },
+          { x: "20s", y: 0 },
+        ],
+      });
+    });
 
-    // responses.forEach((response, index) => {
-    //   const countryIndex = chartData.find(
-    //     (item) => item.id === response.results[0].countryCode
-    //   );
-    //   chartData[countryIndex].data[index].y = response.results[0].count;
-    // });
+    responses.forEach((response, index) => {
+      response.results.forEach((result) => {
+        const { countryCode, count } = result;
+        const countryIndex = chartData.findIndex(
+          (item) => item.id === countryCode
+        );
+
+        if (countryIndex > 0)
+          chartData[countryIndex].data[index].y = Number(count);
+      });
+    });
   } catch (e) {
     console.log("error mine: " + e);
+    return Response.json(`Error: ${e}`, { status: 500 });
   }
 
   client.quit();
 
-  // console.log({ result: result.total });
-  return Response.json({
-    countries,
-    responses,
-  });
+  return Response.json(chartData);
 };
 
 export const config: Config = {
-  path: "/chart/count-on-decade",
+  path: "/chart/active-by-each-decade",
 };

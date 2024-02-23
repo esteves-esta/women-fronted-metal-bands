@@ -1,35 +1,49 @@
 import type { Config, Context } from "@netlify/functions";
 import { connectClient } from "./database";
 import { AggregateGroupByReducers, AggregateSteps } from "redis";
-// DONE
-export default async (req: Request, context: Context) => {
-  const apiKey = Netlify.env.get("MY_API_KEY");
-  const requestKey = req.headers.get("X-API-Key");
+import { authAPI } from "./auth";
 
-  const client = await connectClient();
+export default async (req: Request, context: Context) => {
+  // authAPI(req);
+
+  let client;
+
+  try {
+    client = await connectClient();
+  } catch (e) {
+    console.log("cliente " + e);
+    return Response.json("Connection error.", { status: 500 });
+  }
 
   let responses;
-  let chartData = [
-    { id: "1970", value: 0 },
-    { id: "1980", value: 0 },
-    { id: "1990", value: 0 },
-    { id: "2000", value: 0 },
-    { id: "2010", value: 0 },
-    { id: "2020", value: 0 },
-  ];
-  try {
-    /* 
-  same as  ==> FT.AGGREGATE idx:bands "*" GROUPBY 2 @countryCode @country REDUCE COUNT 0 as count
-   */
+  let countries;
+  let chartData: any[] = [];
 
-    const decadeBeginEnd = [
-      [1979, 1970],
-      [1989, 1980],
-      [1999, 1990],
-      [2009, 2000],
-      [2019, 2010],
-      [2029, 2020],
-    ];
+  const decadeBeginEnd = [
+    [1979, 1970],
+    [1989, 1980],
+    [1999, 1990],
+    [2009, 2000],
+    [2019, 2010],
+    [2029, 2020],
+  ];
+
+  try {
+    countries = await client.ft.aggregate("idx:bands", "*", {
+      STEPS: [
+        {
+          type: AggregateSteps.GROUPBY,
+          properties: ["@countryCode", "@country"],
+          REDUCE: [
+            {
+              type: AggregateGroupByReducers.COUNT,
+              AS: "count",
+            },
+          ],
+        },
+      ],
+    });
+
     responses = await Promise.all(
       decadeBeginEnd.map((item) => {
         return client.ft.aggregate(
@@ -39,7 +53,7 @@ export default async (req: Request, context: Context) => {
             STEPS: [
               {
                 type: AggregateSteps.GROUPBY,
-                properties: [],
+                properties: ["@countryCode"],
                 REDUCE: [
                   {
                     type: AggregateGroupByReducers.COUNT,
@@ -53,21 +67,42 @@ export default async (req: Request, context: Context) => {
       })
     );
 
-    //https://github.com/redislabs-training/node-js-crash-course/blob/main/src/utils/dataloader.js
+    countries.results.forEach((result) => {
+      chartData.push({
+        id: result.countryCode,
+        id2: result.country,
+        data: [
+          { x: "70s", y: 0 },
+          { x: "80s", y: 0 },
+          { x: "90s", y: 0 },
+          { x: "00s", y: 0 },
+          { x: "10s", y: 0 },
+          { x: "20s", y: 0 },
+        ],
+      });
+    });
 
     responses.forEach((response, index) => {
-      chartData[index].value = response.results[0].count;
+      response.results.forEach((result) => {
+        const { countryCode, count } = result;
+        const countryIndex = chartData.findIndex(
+          (item) => item.id === countryCode
+        );
+
+        if (countryIndex >= 0)
+          chartData[countryIndex].data[index].y = Number(count);
+      });
     });
   } catch (e) {
     console.log("error mine: " + e);
+    return Response.json(`Error: ${e}`, { status: 500 });
   }
 
   client.quit();
 
-  // console.log({ result: result.total });
   return Response.json(chartData);
 };
 
 export const config: Config = {
-  path: "/chart/count-on-decade",
+  path: "/chart/years-active-in-each-decade",
 };

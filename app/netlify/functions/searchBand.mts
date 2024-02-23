@@ -1,22 +1,23 @@
 import type { Config, Context } from "@netlify/functions";
 import { connectClient } from "./database";
+import { authAPI } from "./auth";
 
 export default async (req: Request, context: Context) => {
-  console.log(context.params);
+  // console.log(context.params);
+  authAPI(req);
 
   const { query, col, page, limit, sort, sortBy, filter } = context.params;
+  let client;
 
-  const apiKey = Netlify.env.get("MY_API_KEY");
-  const requestKey = req.headers.get("X-API-Key");
+  try {
+    client = await connectClient();
+  } catch (e) {
+    console.log("cliente " + e);
+    return Response.json("Connection error.", { status: 500 });
+  }
 
-  // if (requestKey !== apiKey) {
-  //   return Response.json("Sorry, no access for you.", { status: 401 });
-  // }
-
-  const client = await connectClient();
-
+  // SEARCH AND FILTER
   let searchQuery = getSearchQuery(query, col);
-
   searchQuery += getFilterQuery(filter);
 
   /* SORT AND LIMIT */
@@ -27,9 +28,9 @@ export default async (req: Request, context: Context) => {
     page,
   });
 
-  console.log({ searchQuery });
+  /* console.log({ searchQuery });
   console.log({ searchOption });
-  console.log({ searchOptions: Object.keys(searchOption).length > 0 });
+  console.log({ searchOptions: Object.keys(searchOption).length > 0 }); */
 
   /* DATABASE FULL TEXT SEARCH */
   let result;
@@ -39,11 +40,12 @@ export default async (req: Request, context: Context) => {
     else result = await client.ft.search("idx:bands", searchQuery);
   } catch (e) {
     console.log("search error: " + e);
+    return Response.json("Error" + e, { status: 500 });
   }
 
   client.quit();
 
-  console.log({ result: result.documents.length });
+  // console.log({ result: result.documents.length });
   return Response.json(result);
 };
 

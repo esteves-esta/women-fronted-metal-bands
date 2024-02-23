@@ -21,14 +21,23 @@ export async function connectClient() {
     console.log("client error: ", err);
   });
   await client.connect();
-
   return client;
 }
 
 export async function loadData() {
   const listJSON = require("../../list-of-metal-bands/list.json");
 
-  const client = await connectClient();
+  let client;
+
+  try {
+    client = await connectClient();
+  } catch (e) {
+    console.log("cliente " + e);
+    return {
+      errorCount: 1,
+      message: "Connection error!",
+    };
+  }
 
   //https://redis.io/commands/dbsize/
   const itemsOnDB = await client.dbSize();
@@ -36,7 +45,7 @@ export async function loadData() {
   if (itemsOnDB === listJSON.length) {
     return {
       errorCount: 0,
-      message: "Everything is updated on the database !!",
+      message: "Nothing updated, database is up to date !!",
     };
   }
 

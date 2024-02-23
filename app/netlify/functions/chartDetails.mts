@@ -1,12 +1,19 @@
 import type { Config, Context } from "@netlify/functions";
 import { connectClient } from "./database";
 import { AggregateGroupByReducers, AggregateSteps } from "redis";
-//DONE - test
-export default async (req: Request, context: Context) => {
-  const apiKey = Netlify.env.get("MY_API_KEY");
-  const requestKey = req.headers.get("X-API-Key");
+import { authAPI } from "./auth";
 
-  const client = await connectClient();
+export default async (req: Request, context: Context) => {
+  // authAPI(req);
+
+  let client;
+
+  try {
+    client = await connectClient();
+  } catch (e) {
+    console.log("cliente " + e);
+    return Response.json("Connection error.", { status: 500 });
+  }
 
   let responses;
   const allwomenData = [
@@ -28,8 +35,8 @@ export default async (req: Request, context: Context) => {
   ];
 
   const queries = [
-    `@allWomen:{true}`,
-    `@allWomen:{false}`,
+    `@allWomenBand:{true}`,
+    `@allWomenBand:{false}`,
 
     `@blackWomen:{true}`,
     `@blackWomen:{false}`,
@@ -62,7 +69,6 @@ export default async (req: Request, context: Context) => {
     );
 
     //https://github.com/redislabs-training/node-js-crash-course/blob/main/src/utils/dataloader.js
-
     responses.forEach((response, index) => {
       switch (index) {
         case 0:
@@ -99,6 +105,7 @@ export default async (req: Request, context: Context) => {
     });
   } catch (e) {
     console.log("error mine: " + e);
+    return Response.json(`Error: ${e}`, { status: 500 });
   }
 
   client.quit();

@@ -1,15 +1,22 @@
 import type { Config, Context } from "@netlify/functions";
 import { connectClient } from "./database";
 import { AggregateGroupByReducers, AggregateSteps } from "redis";
-// DONE
-export default async (req: Request, context: Context) => {
-  const apiKey = Netlify.env.get("MY_API_KEY");
-  const requestKey = req.headers.get("X-API-Key");
+import { authAPI } from "./auth";
 
-  console.log(context.params);
+export default async (req: Request, context: Context) => {
+  // authAPI(req);
+
+  // console.log(context.params);
   const { filter, growling } = context.params;
 
-  const client = await connectClient();
+  let client;
+
+  try {
+    client = await connectClient();
+  } catch (e) {
+    console.log("cliente " + e);
+    return Response.json("Connection error.", { status: 500 });
+  }
 
   let filters = "*";
   const filterCols = [
@@ -36,11 +43,10 @@ export default async (req: Request, context: Context) => {
         filters = `@${filter}:{true}`;
         break;
     }
-  } else {
-    filters = "";
   }
 
   if (growling !== "null" && !Number.isNaN(growling)) {
+    if (filters.includes("*")) filters = "";
     filters += ` @growling:[${growling} ${growling}]`;
   }
 
@@ -67,11 +73,12 @@ export default async (req: Request, context: Context) => {
     });
   } catch (e) {
     console.log("error mine: " + e);
+    return Response.json(`Error: ${e}`, { status: 500 });
   }
 
   client.quit();
-
-  console.log({ result: result.total });
+  // console.log({ filters });
+  // console.log({ result: result.total });
   return Response.json(result);
 };
 
