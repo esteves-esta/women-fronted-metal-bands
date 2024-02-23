@@ -1,14 +1,7 @@
 import { createClient, SchemaFieldTypes } from "redis";
 
 export async function connectClient() {
-  // const databasePassword = Netlify.env.get("DATABASE_PASSWORD");
   const databasePassword = Netlify.env.get("DB_PASSWORD");
-
-  // const client = createClient({
-  //   url: `redis://default:${databasePassword}@redis-19105.c279.us-central1-1.gce.cloud.redislabs.com:19105`,
-  //   // url: `redis://default:${databasePassword}@us1-moving-glider-41412.upstash.io:41412`,
-  // });
-
   const client = createClient({
     password: databasePassword,
     socket: {
