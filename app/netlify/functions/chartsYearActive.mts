@@ -77,7 +77,7 @@ export default async (req: Request, context: Context) => {
 };
 
 export const config: Config = {
-  path: "/time-active",
+  path: "/chart/time-active",
 };
 
 

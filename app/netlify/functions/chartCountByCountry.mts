@@ -81,7 +81,7 @@ todo
 };
 
 export const config: Config = {
-  path: "/graph/:filter/:growling",
+  path: "/chart/count-by-country/:filter/:growling",
 };
 
 // TO LIST

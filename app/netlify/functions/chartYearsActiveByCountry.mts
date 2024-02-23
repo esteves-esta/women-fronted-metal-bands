@@ -10,31 +10,33 @@ export default async (req: Request, context: Context) => {
 
   let responses;
   let chartData = [
-    { id: "1970", value: 0 },
-    { id: "1980", value: 0 },
-    { id: "1990", value: 0 },
-    { id: "2000", value: 0 },
-    { id: "2010", value: 0 },
-    { id: "2020", value: 0 },
+    { id: "1", value: 0 },
+    { id: "2", value: 0 },
+    { id: "3", value: 0 },
+    { id: "4", value: 0 },
+    { id: "5-10", value: 0 },
+    { id: "10-20", value: 0 },
+    { id: "20-30", value: 0 },
+    { id: "30-40", value: 0 },
+    { id: "40-50", value: 0 },
   ];
   try {
-    /* 
-  same as  ==> FT.AGGREGATE idx:bands "*" GROUPBY 2 @countryCode @country REDUCE COUNT 0 as count
-   */
-
-    const decadeBeginEnd = [
-      [1979, 1970],
-      [1989, 1980],
-      [1999, 1990],
-      [2009, 2000],
-      [2019, 2010],
-      [2029, 2020],
+    const beginEnd = [
+      [0, 1],
+      [0, 2],
+      [0, 3],
+      [0, 4],
+      [5, 10],
+      [10, 20],
+      [20, 30],
+      [30, 40],
+      [40, 50],
     ];
     responses = await Promise.all(
-      decadeBeginEnd.map((item) => {
+      beginEnd.map((item) => {
         return client.ft.aggregate(
           "idx:bands",
-          `@yearStarted:[0 ${item[0]}] -@yearEnded:[1 ${item[1]}]`,
+          `@activeFor:[${item[0]} ${item[1]}]`,
           {
             STEPS: [
               {
@@ -56,7 +58,7 @@ export default async (req: Request, context: Context) => {
     //https://github.com/redislabs-training/node-js-crash-course/blob/main/src/utils/dataloader.js
 
     responses.forEach((response, index) => {
-      chartData[index].value = response.results[0].count
+      chartData[index].value = response.results[0].count;
     });
   } catch (e) {
     console.log("error mine: " + e);
@@ -64,10 +66,9 @@ export default async (req: Request, context: Context) => {
 
   client.quit();
 
-  // console.log({ result: result.total });
   return Response.json(chartData);
 };
 
 export const config: Config = {
-  path: "/active-on-decades",
+  path: "/chart/years-active-by-country",
 };

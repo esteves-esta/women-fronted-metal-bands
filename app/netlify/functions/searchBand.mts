@@ -89,8 +89,8 @@ function getFilterQuery(filter) {
   const filterCols = [
     "active",
     "disbanded",
-    "allwomen",
-    "blackwomen",
+    "allWomen",
+    "blackWomen",
     "mixedGender",
     "sister",
   ];
