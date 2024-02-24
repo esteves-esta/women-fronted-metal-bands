@@ -1,6 +1,7 @@
 import { createClient, SchemaFieldTypes } from "redis";
 
 export async function connectClient() {
+  // process.env.DB_PASSWORD
   const databasePassword = Netlify.env.get("DB_PASSWORD");
   const client = createClient({
     password: databasePassword,

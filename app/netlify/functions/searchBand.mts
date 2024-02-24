@@ -5,10 +5,11 @@ import { authAPI } from "./utils/auth";
 export default async (req: Request, context: Context) => {
   // console.log(context.params);
   authAPI(req);
-
   const { query, col, page, limit, sort, sortBy, filter } = context.params;
   let client;
-
+  console.log({
+    clientContext: context?.clientContext && context?.clientContext.user,
+  });
   try {
     client = await connectClient();
   } catch (e) {
