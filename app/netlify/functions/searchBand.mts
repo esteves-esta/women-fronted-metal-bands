@@ -7,13 +7,7 @@ export default async (req: Request, context: Context) => {
   authAPI(req);
   const { query, col, page, limit, sort, sortBy, filter } = context.params;
   let client;
-  console.log({
-    clientContext: context?.clientContext && context?.clientContext.user,
-    account: context.account,
-    deploy: context.deploy,
-    credentials: req.credentials,
-    method: req.method,
-  });
+
   try {
     client = await connectClient();
   } catch (e) {
