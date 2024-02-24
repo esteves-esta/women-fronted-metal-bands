@@ -9,6 +9,10 @@ export default async (req: Request, context: Context) => {
   let client;
   console.log({
     clientContext: context?.clientContext && context?.clientContext.user,
+    account: context.account,
+    deploy: context.deploy,
+    credentials: req.credentials,
+    method: req.method,
   });
   try {
     client = await connectClient();
