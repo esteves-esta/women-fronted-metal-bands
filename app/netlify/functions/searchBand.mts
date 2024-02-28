@@ -5,7 +5,8 @@ import { authAPI } from "./utils/auth";
 export default async (req: Request, context: Context) => {
   // console.log(context.params);
   authAPI(req);
-  const { query, col, page, limit, sort, sortBy, filter } = context.params;
+  const { query, col, page, limit, sort, sortBy, filter, growling } =
+    context.params;
   let client;
 
   try {
@@ -18,6 +19,7 @@ export default async (req: Request, context: Context) => {
   // SEARCH AND FILTER
   let searchQuery = getSearchQuery(query, col);
   searchQuery += getFilterQuery(filter);
+  searchQuery += getGrowlingFilter(growling);
 
   /* SORT AND LIMIT */
   let searchOption: { LIMIT?: any; SORTBY?: any } = getSortAndLimit({
@@ -26,10 +28,12 @@ export default async (req: Request, context: Context) => {
     limit,
     page,
   });
+  if (searchQuery.length > 1 && searchQuery.includes("*"))
+    searchQuery = searchQuery.replace("*", "");
 
-  /* console.log({ searchQuery });
+  console.log({ searchQuery });
   console.log({ searchOption });
-  console.log({ searchOptions: Object.keys(searchOption).length > 0 }); */
+  console.log({ searchOptions: Object.keys(searchOption).length > 0 });
 
   /* DATABASE FULL TEXT SEARCH */
   let result;
@@ -39,17 +43,29 @@ export default async (req: Request, context: Context) => {
     else result = await client.ft.search("idx:bands", searchQuery);
   } catch (e) {
     console.log("search error: " + e);
-    return Response.json("Error" + e, { status: 500 });
+    return Response.json("Error " + e, { status: 500 });
   }
 
   client.quit();
 
   // console.log({ result: result.documents.length });
-  return Response.json(result);
+  let docs = [];
+  if (result.documents) {
+    docs = result.documents.map((item) => {
+      return {
+        ...item.value,
+        id: item.id,
+      };
+    });
+  }
+  return Response.json({
+    total: result.total,
+    documents: docs,
+  });
 };
 
 export const config: Config = {
-  path: "/search/:query/:col/:page/:limit/:sort/:sortBy/:filter",
+  path: "/api/search/:query/:col/:page/:limit/:sort/:sortBy/:filter/:growling",
 };
 //localhost:8888/search/brazil/country/10/10/ASC/growling/active
 // https://teste--women-fronted-metal-bands.netlify.app/hello
@@ -109,6 +125,12 @@ function getFilterQuery(filter) {
     default:
       return ` @${filter}:{true}`;
   }
+}
+
+function getGrowlingFilter(growling) {
+  if (Number.isNaN(Number(growling))) return "";
+
+  return ` @growling:[${growling} ${growling}]`;
 }
 
 function getSortAndLimit({ sort, sortBy, limit, page }) {

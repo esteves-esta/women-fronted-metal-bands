@@ -14,20 +14,10 @@ function Table({
   rows,
   size,
   currentPage,
-  handleColumnChange,
-  handleRowChange,
-  initialRow,
+  // handleSortRows,
   rowIdName,
   onRowClick
 }) {
-
-  const [handleSortRows] = useSort({
-    rows,
-    columnsInfo,
-    handleColumnChange,
-    handleRowChange,
-    initialRow
-  })
 
   return (
     <table className={classes.table}>
@@ -35,7 +25,8 @@ function Table({
         <tr>
           {columnsInfo.map((headerInfo, index) => headerInfo.visible && (
             <th key={headerInfo.key}>
-              <TableHeader headerInfo={headerInfo} sortRows={() => handleSortRows(headerInfo, index)} />
+              <TableHeader headerInfo={headerInfo} />
+              {/* sortRows={() => handleSortRows(headerInfo.)}  */}
             </th>
           ))}
         </tr>
@@ -55,12 +46,13 @@ function Table({
   )
 }
 
-function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumnProps, sortRows: (string) => void }) {
+function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumnProps, sortRows?: (string) => void }) {
   const { sortable, headerLabel, sort } = headerInfo
 
+  {/* onClick={sortRows} */}
   if (sortable) {
     return <React.Fragment>
-      {sortable && <button onClick={sortRows} className={classes.sortBtn}>
+      {sortable && <button  className={classes.sortBtn}> 
         {!sort && <ArrowUpDown size={15} />}
         {sort === 'asc' && <ArrowUpAZ size={15} />}
         {sort === 'desc' && <ArrowDownAZ size={15} />}

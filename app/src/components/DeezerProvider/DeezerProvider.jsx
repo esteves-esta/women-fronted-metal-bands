@@ -8,7 +8,7 @@ const DEEZER_EMPTY_PICTURE =
   "https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg";
 
 const DEEZER_API = import.meta.env.DEV
-  ? "http://localhost:3001/"
+  ? "http://localhost:8888/api/"
   : "https://women-fronted-metal-bands.netlify.app/api/";
 
 const localStoragePreviewKey = "last-preview-track";
@@ -37,7 +37,7 @@ const errorRetry = (error, key, config, revalidate, { retryCount }) => {
 };
 
 function DeezerProvider({ children }) {
-  const { bands, setBands, saveBandListStorage } =
+  const { bands } =
     React.useContext(BandContext);
   const { openToast } = React.useContext(ToastContext);
 
@@ -59,7 +59,7 @@ function DeezerProvider({ children }) {
     data: trackInfo,
     error: trackError,
     isLoading: trackIsLoading,
-  } = useSWR(trackId ? `track/${trackId}` : null, fetcher, {
+  } = useSWR(trackId ? `deezer/track/${trackId}` : null, fetcher, {
     errorRetry,
     revalidateOnFocus: false,
   });
@@ -69,7 +69,7 @@ function DeezerProvider({ children }) {
     error: topTrackError,
     isLoading: topTrackIsLoading,
   } = useSWR(
-    bandTopTrack ? `artist/${bandTopTrack}/top?index=0&limit=1` : null,
+    bandTopTrack ? `deezer/artist/${bandTopTrack}/top` : null,
     fetcher,
     {
       errorRetry,
@@ -77,7 +77,7 @@ function DeezerProvider({ children }) {
     }
   );
   const { data: artist, isLoading: artistLoading } = useSWR(
-    artistId ? `artist/${artistId}` : null,
+    artistId ? `deezer/artist/${artistId}/null` : null,
     fetcher,
     {
       errorRetry,
@@ -104,8 +104,7 @@ function DeezerProvider({ children }) {
       newBands[bandIndex].emptyPicture = true;
 
     newBands[bandIndex].deezerPicture = artist.picture_big;
-    setBands(newBands);
-    saveBandListStorage(newBands);
+    // setBands(newBands);
   }, [artist]);
 
   React.useEffect(() => {
@@ -203,8 +202,8 @@ function DeezerProvider({ children }) {
     });
     newBands[bandIndex].deezerTrackInfo = trackInfo;
     newBands[bandIndex].selected = true;
-    setBands(newBands);
-    saveBandListStorage(newBands);
+    // setBands(newBands);
+    // saveBandListStorage(newBands);
     window.localStorage.setItem(
       localStoragePreviewKey,
       JSON.stringify(previewTrack)

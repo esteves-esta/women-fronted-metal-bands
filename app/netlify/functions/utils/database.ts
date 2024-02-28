@@ -44,7 +44,7 @@ export async function loadData() {
   }
 
   // clean db
-  await client.flushDb();
+  // await client.flushDb();
 
   // Create an index.
   try {
@@ -135,7 +135,6 @@ export async function loadData() {
     listJSON.map((item) => {
       let key = crypto.randomUUID();
       if (item.deezerId) key = item.deezerId;
-      if (item.deezerRecommendationId) key = item.deezerRecommendationId;
 
       const activeFor = formatYearsActive(item);
 
@@ -159,7 +158,7 @@ export async function loadData() {
   return { errorCount, message: "Database updated" };
 }
 
-const formatYearsActive = (data) => {
+export const formatYearsActive = (data) => {
   const { yearStarted, yearEnded } = data;
 
   const thisYear = new Date().getFullYear();

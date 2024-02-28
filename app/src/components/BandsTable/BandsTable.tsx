@@ -14,8 +14,9 @@ import classes from './BandsTable.module.css'
 import useMatchMedia from '../../helpers/useMatchMedia';
 
 function BandsTable() {
-  const { bands, initialBandList, setBands, filter, downloadAll,
-    downloadFiltered } = React.useContext(BandContext)
+  const { bands, total, handleFilter, downloadAll, downloadFiltered, searchParams,
+    handlePageChange
+  } = React.useContext(BandContext)
   const { getTrackPreview } = React.useContext(DeezerContext)
 
   const [growlFilter, setGrowlFilter] = React.useState('viewAll')
@@ -25,14 +26,14 @@ function BandsTable() {
   const handleGrowlFilter = React.useCallback((val) => {
     if (val) {
       setGrowlFilter(val)
-      filter(val, bandDetailsFilter)
+      handleFilter(val, bandDetailsFilter)
     }
   }, [bandDetailsFilter]);
 
   const handleDetailFilter = React.useCallback((val) => {
     if (val) {
       setBandDetailsFilter(val)
-      filter(growlFilter, val)
+      handleFilter(growlFilter, val)
     }
   }, [growlFilter]);
 
@@ -163,11 +164,11 @@ function BandsTable() {
 
         <div className='flex flex-col gap-2 text-center'>
           <p className='title2'>
-            {initialBandList.length} bands
+            XXX bands
           </p>
-          {initialBandList.length !== bands.length && (
+          {233 !== total && (
             <small className='title2'>
-              (filtered: {bands.length} bands)
+              (filtered: {total} bands)
             </small>
           )}
         </div>
@@ -186,11 +187,10 @@ function BandsTable() {
       </div>
 
       <DataTable
-        isFiltered={growlFilter !== 'viewAll' || bandDetailsFilter !== 'viewAll'}
         rows={bands}
+        total={total}
         columns={columns}
         pageSize={10}
-        handleRowChange={setBands}
         gridMode={displayMode === 'grid'}
         rowIdName="id"
         onRowClick={playRecommendedTrackOrOpenLink}

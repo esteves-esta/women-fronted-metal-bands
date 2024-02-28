@@ -16,9 +16,9 @@ export const filterByDetailsOptions = [
   { value: "viewAll", text: "View All" },
   { value: "active", text: "Active" },
   { value: "disbanded", text: "Disbanded" },
-  { value: "all women", text: "All women" },
-  { value: "mixed", text: "Mixed gender" },
-  { value: "black women", text: "Black women" },
+  { value: "allWomen", text: "All women" },
+  { value: "mixedGender", text: "Mixed gender" },
+  { value: "blackWomen", text: "Black women" },
   { value: "sister", text: "Sisters" },
 ];
 

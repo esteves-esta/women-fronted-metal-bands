@@ -16,19 +16,19 @@ function Grid({
   rowIdName,
   onRowClick,
   gridImage,
-  handleColumnChange,
-  handleRowChange,
-  initialRow }) {
+  // handleColumnChange,
+  // initialRow 
+}) {
   const start = currentPage * size;
   const end = size * (currentPage + 1);
 
-  const [handleSortRows] = useSort({
-    rows,
-    columnsInfo: columns,
-    handleColumnChange,
-    handleRowChange,
-    initialRow
-  })
+  // const [handleSortRows] = useSort({
+  //   rows,
+  //   columnsInfo: columns,
+  //   handleColumnChange,
+  //   handleRowChange,
+  //   initialRow
+  // })
 
   return (<React.Fragment>
     <div className='flex flex-col gap-2 md:flex-row md:gap-10 my-10 items-center'>
@@ -40,8 +40,8 @@ function Grid({
           <button
             key={headerInfo.key}
             className={classes.gridSortBtn}
-            onClick={() => handleSortRows(headerInfo, index)}
           >
+            {/* onClick={() => handleSortRows(headerInfo, index)} */}
 
             {headerLabel}
 

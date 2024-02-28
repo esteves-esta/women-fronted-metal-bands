@@ -5,16 +5,16 @@ import TableFilter from './TableFilter';
 import Table from './Table';
 import Grid from './Grid';
 import { TableColumn } from './TableProps';
-import useFilter from './useFilter';
+
 import Dropdown from '../Drowdown'
 import classes from './Table.module.css'
 interface Props {
   rows: Array<any>
   initialPage?: number
+  total: number
   pageSize: number
   columns: TableColumn[]
-  handleRowChange: (val) => void
-  isFiltered: boolean | null,
+  // handleSortRows: (val) => void
   gridMode: boolean | null,
   children?: any
   rowIdName: string
@@ -29,14 +29,14 @@ function DataTable({
   rowIdName,
   columns,
   pageSize,
-  isFiltered,
+  total,
   children,
-  handleRowChange,
+  // handleSortRows,
   onRowClick,
   gridImage
 }: Props) {
 
-  const [initialRow] = React.useState([...rows]);
+  // const [initialRow] = React.useState([...rows]);
   const [currentPage, setCurrentPage] = React.useState(initialPage);
   const [size, setSize] = React.useState(pageSize);
   const [lastPage, setLastPage] = React.useState(() => Math.ceil(rows.length / pageSize));
@@ -50,35 +50,45 @@ function DataTable({
   });
 
   React.useEffect(() => {
-    setLastPage(Math.ceil(rows.length / size))
-  }, [size])
+    setLastPage(Math.ceil(total / size))
+  }, [size, total])
 
-  React.useEffect(() => {
-    const colSort = columnsInfo.findIndex(col => col.sort != undefined)
-    if (colSort >= 0 && isFiltered) {
-      const newCols = [...columnsInfo]
-      newCols[colSort].sort = undefined
-      setColumnsInfo(newCols)
-    }
+  // React.useEffect(() => {
+  //   const colSort = columnsInfo.findIndex(col => col.sort != undefined)
+  //   if (colSort >= 0 && isFiltered) {
+  //     const newCols = [...columnsInfo]
+  //     newCols[colSort].sort = undefined
+  //     setColumnsInfo(newCols)
+  //   }
 
-    setCurrentPage(0);
-    setLastPage(Math.ceil(rows.length / size))
-  }, [isFiltered])
+  //   setCurrentPage(0);
+  //   setLastPage(Math.ceil(rows.length / size))
+  // }, [isFiltered])
 
   const handleChangePage = (value: number | string) => {
     if (value) setCurrentPage(Number(value))
   };
 
 
-  const [handleFilter] = useFilter({
-    columns,
-    initialRow,
-    handleRowChange,
-    setCurrentPage,
-    setLastPage,
-    size,
-    rows,
-  })
+  // const [handleFilter] = useFilter({
+  //   columns,
+  //   initialRow,
+  //   handleRowChange,
+  //   setCurrentPage,
+  //   setLastPage,
+  //   size,
+  //   rows,
+  // })
+
+  const handleFilter = React.useCallback(
+    (searchValue: string, colKey: string) => {
+      handleFilter(searchValue, colKey)
+      // setCurrentPage(0);
+      // setLastPage(Math.ceil(newRows.length / size));
+    },
+    []
+  );
+
 
   return (
     <React.Fragment>
@@ -91,7 +101,6 @@ function DataTable({
       </div>
 
       {children}
-
       {!gridMode && (
         <Table
           columnsInfo={columnsInfo}
@@ -100,10 +109,7 @@ function DataTable({
           currentPage={currentPage}
           rowIdName={rowIdName}
           onRowClick={onRowClick}
-          // sort
-          handleColumnChange={setColumnsInfo}
-          handleRowChange={handleRowChange}
-          initialRow={initialRow}
+        // handleSortRows={handleSortRows}
         />
       )}
 
@@ -117,10 +123,9 @@ function DataTable({
           currentPage={currentPage}
           rowIdName={rowIdName}
           onRowClick={onRowClick}
-          // sort
-          handleColumnChange={setColumnsInfo}
-          handleRowChange={handleRowChange}
-          initialRow={initialRow}
+        // sort
+        // handleColumnChange={setColumnsInfo}
+        // initialRow={initialRow}
         />
       )}
 

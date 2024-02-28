@@ -5,9 +5,12 @@ import { authAPI } from "./utils/auth";
 export default async (req: Request, context: Context) => {
   authAPI(req);
 
-  const { artistId } = context.params;
-
-  const result = await cacheResponses("artist", artistId);
+  const { artistId, top } = context.params;
+  let enpdoint2 = `null`;
+  if (top !== "null") {
+    enpdoint2 = `/top?index=0&limit=1`;
+  }
+  const result = await cacheResponses("artist", artistId, enpdoint2);
 
   if (result.error)
     return Response.json(result.message || result.response, {
@@ -18,5 +21,5 @@ export default async (req: Request, context: Context) => {
 };
 
 export const config: Config = {
-  path: "/deezer/artist/:artistId",
+  path: "/api/deezer/artist/:artistId/:top",
 };
