@@ -21,7 +21,7 @@ export async function cacheResponses(
   try {
     clientUpstash = await connectCacheClient();
     // cacheExist = await client.EXISTS(`artist:${artistId}`);
-    cacheExist = await clientUpstash.json.get(`${endpoint}:${id}`);
+    cacheExist = await clientUpstash.json.get(`${endpoint}${endpoint2}:${id}`);
   } catch (e) {
     console.log("cliente " + e);
 
@@ -43,35 +43,38 @@ export async function cacheResponses(
 
   let responseResult;
   try {
-    console.log({ endpoint2: endpoint2 === undefined });
+    // console.log({ mnode: process.env.MODE });
+    // const URL = "https://women-fronted-metal-bands.netlify.app/deezerapi";
+    const URL = "https://api.deezer.com";
     const endpointEnd =
-      endpoint2 !== "null" && endpoint2 !== undefined ? `/${endpoint2}` : "";
+      endpoint2 !== "null" && endpoint2 !== undefined ? `${endpoint2}` : "";
 
-    console.log(
-      `https://women-fronted-metal-bands.netlify.app/api-deezer/${endpoint}/${id}${endpointEnd}`
-    );
     const response = await fetch(
-      `https://women-fronted-metal-bands.netlify.app/api-deezer/${endpoint}/${id}${endpointEnd}`,
+      `${URL}/${endpoint}/${Number(id)}${endpointEnd}`,
       {
         method: "GET",
       }
     );
-    console.log({ response });
-    responseResult = await response.json();
-    console.log({ responseResult });
-    if (responseResult.error && responseResult.error?.code === 800)
+
+    if (response.status === 200) {
+      responseResult = await response.json();
+    }
+    if (
+      response.status !== 200 ||
+      (responseResult.error && responseResult.error?.code === 800)
+    )
       return {
         error: true,
-        status: 500,
-        message: "error",
-        response: responseResult,
+        status: response.status,
+        message: null,
+        response: response,
       };
   } catch (e) {
-    console.log({ e });
+    console.log({ json: e });
     return {
       error: true,
       status: 500,
-      message: "error",
+      message: null,
       response: e,
     };
   }
@@ -84,7 +87,11 @@ export async function cacheResponses(
   try {
     let clientBandDB;
     if (cacheExist == null) {
-      await clientUpstash.json.set(`${endpoint}:${id}`, "$", responseResult);
+      await clientUpstash.json.set(
+        `${endpoint}${endpoint2}:${id}`,
+        "$",
+        responseResult
+      );
       if (endpoint === "artist" && endpoint2 === "null") {
         const itemFound = listJSON.find((item) => item.deezerId === Number(id));
         if (itemFound) {

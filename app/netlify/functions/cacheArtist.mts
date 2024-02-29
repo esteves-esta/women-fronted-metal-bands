@@ -7,6 +7,7 @@ export default async (req: Request, context: Context) => {
 
   const { artistId, top } = context.params;
   let enpdoint2 = `null`;
+
   if (top !== "null") {
     enpdoint2 = `/top?index=0&limit=1`;
   }

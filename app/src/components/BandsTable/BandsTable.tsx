@@ -64,7 +64,7 @@ function BandsTable() {
   }
 
   const playRandom = () => {
-    const randomBand = sample(bands);
+    const randomBand = sample(bands.filter(item => item.deezerId != null || item.deezerRecommendationId != null));
     getTrackPreview(randomBand.deezerId);
   }
 

@@ -29,7 +29,7 @@ export default async (req: Request, context: Context) => {
     page,
   });
   if (searchQuery.length > 1 && searchQuery.includes("*"))
-    searchQuery = searchQuery.replace("*", "");
+    searchQuery = searchQuery.replace("*", "").trim();
 
   console.log({ searchQuery });
   console.log({ searchOption });
@@ -120,8 +120,10 @@ function getFilterQuery(filter) {
       return ` @yearEnded:[1 +inf]`;
 
     case "mixedGender":
-      return ` @allWomen:{false}`;
+      return ` @allWomenBand:{false}`;
 
+    case "allWomen":
+      return ` @allWomenBand:{true}`;
     default:
       return ` @${filter}:{true}`;
   }

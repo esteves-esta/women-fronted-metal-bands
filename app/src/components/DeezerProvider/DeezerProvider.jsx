@@ -37,8 +37,7 @@ const errorRetry = (error, key, config, revalidate, { retryCount }) => {
 };
 
 function DeezerProvider({ children }) {
-  const { bands } =
-    React.useContext(BandContext);
+  const { bands } = React.useContext(BandContext);
   const { openToast } = React.useContext(ToastContext);
 
   const [trackId, setTrackId] = React.useState(null);
@@ -208,17 +207,20 @@ function DeezerProvider({ children }) {
       localStoragePreviewKey,
       JSON.stringify(previewTrack)
     );
+    console.log(previewTrack);
   }, [previewTrack]);
 
   const playNextTrack = () => {
-    const bandIndex = bands.findIndex(
-      (band) => band.deezerId === currentBandId
-    );
+    const bandIndex = bands
+      .filter((item) => item.deezerId !== null)
+      .findIndex((band) => band.deezerId === currentBandId);
     if (bandIndex < 0) return;
 
     let nextIndex = bandIndex + 1;
     if (nextIndex >= bands.length) nextIndex = 0;
-    const copyBand = [...bands].slice(nextIndex, bands.length);
+    const copyBand = [...bands]
+      .filter((item) => item.deezerId !== null)
+      .slice(nextIndex, bands.length);
     const nextBandPlaying = copyBand.find(
       (band) => band.deezerId || band.deezerRecommendationId
     );
@@ -228,10 +230,14 @@ function DeezerProvider({ children }) {
 
   const state = {
     deezerTrackInfo: previewTrack,
-    title: previewTrack ? previewTrack.title : null,
-    cover: previewTrack ? previewTrack.album.cover_small : null,
-    artist: previewTrack ? previewTrack.artist.name : null,
-    src: previewTrack ? previewTrack.preview : null,
+    title: previewTrack && previewTrack?.title ? previewTrack.title : null,
+    cover:
+      previewTrack && previewTrack?.album
+        ? previewTrack.album.cover_small
+        : null,
+    artist:
+      previewTrack && previewTrack?.artist ? previewTrack.artist.name : null,
+    src: previewTrack && previewTrack?.preview ? previewTrack.preview : null,
     currentBandId,
     trackIsLoading: trackIsLoading || topTrackIsLoading,
     isPlaying,

@@ -7,8 +7,8 @@ export default async (req: Request, context: Context) => {
 
   const { trackId } = context.params;
 
-  const result = await cacheResponses("track", trackId);
-
+  const result = await cacheResponses("track", trackId, "null");
+  
   if (result.error)
     return Response.json(result.message || result.response, {
       status: result.status,
