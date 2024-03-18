@@ -45,6 +45,7 @@ export default async (req: Request, context: Context) => {
     console.log("search error: " + e);
     return Response.json("Error " + e, { status: 500 });
   }
+  const itemsOnDB = await client.dbSize();
 
   client.quit();
 
@@ -59,7 +60,8 @@ export default async (req: Request, context: Context) => {
     });
   }
   return Response.json({
-    total: result.total,
+    total: itemsOnDB,
+    totalFiltered: result.total,
     documents: docs,
   });
 };

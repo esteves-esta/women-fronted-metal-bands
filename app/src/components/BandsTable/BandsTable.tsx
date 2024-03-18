@@ -16,7 +16,7 @@ import Pagination from '../DataTable/Pagination';
 import Dropdown from '../Drowdown'
 
 function BandsTable() {
-  const { bands, total, handleFilter, handleSort, downloadAll, downloadFiltered, handleQuery, searchParams } = React.useContext(BandContext)
+  const { bands, total, isLoading, totalFiltered, handleFilter, handleSort, downloadAll, downloadFiltered, handleQuery, searchParams } = React.useContext(BandContext)
   const { getTrackPreview } = React.useContext(DeezerContext)
 
   const [growlFilter, setGrowlFilter] = React.useState('viewAll')
@@ -109,12 +109,6 @@ function BandsTable() {
     return <React.Fragment></React.Fragment>
   }
 
-  const formatActiveYears = (column) => {
-    if (!column) return '';
-    const end = column.yearEnded ? column.yearEnded : 'now'
-    return `${column.yearStarted} - ${end}`
-  }
-
   const columns = React.useMemo(() => {
     const cols: TableColumn[] = [
       { visible: true, formatElement: formatPlayOrLink, headerLabel: 'Play/Link' },
@@ -162,8 +156,8 @@ function BandsTable() {
   const [lastPage, setLastPage] = React.useState(() => Math.ceil(bands.length / 10));
 
   React.useEffect(() => {
-    setLastPage(Math.ceil(total / size))
-  }, [size, total])
+    setLastPage(Math.ceil(totalFiltered / size))
+  }, [size, totalFiltered])
 
 
   const handleChangePage = (value: number | string) => {
@@ -188,9 +182,9 @@ function BandsTable() {
           <p className='title2'>
             {total} bands
           </p>
-          {233 !== total && (
+          {total !== totalFiltered && (
             <small className='title2'>
-              (filtered: {total} bands)
+              (filtered: {totalFiltered} bands)
             </small>
           )}
         </div>
@@ -209,8 +203,9 @@ function BandsTable() {
       </div>
 
       <DataTable
+        isLoading={isLoading}
         rows={bands}
-        total={total}
+        total={totalFiltered}
         columns={columns}
         currentPage={currentPage}
         pageSize={size}
@@ -250,23 +245,23 @@ function BandsTable() {
           </div>
         </div>
 
-        <div className='flex flex-col lg:flex-row text-center md:text-left md:justify-between items-center mb-6 gap-3'>
+        {!isLoading && <div className='flex flex-col lg:flex-row text-center md:text-left md:justify-between items-center mb-6 gap-3'>
           <p className='label m-0'>Click on a row to play a preview or to open the band's website.</p>
           <button className='button' onClick={playRandom}>
             <PlayCircle size={20} />
             Or play a random track
           </button>
 
-        </div>
+        </div>}
       </DataTable>
 
 
-      <div className='flex flex-col gap-3 md:gap-0 md:flex-row md:items-center justify-between mt-10 mb-10'>
+      {!isLoading && <div className='flex flex-col gap-3 md:gap-0 md:flex-row md:items-center justify-between mt-10 mb-10'>
         <div className='flex flex-col lg:flex-row gap-5 md:items-center'>
           <PageSizeSelection
             size={size}
             setSize={setSize}
-            totalRows={bands.length}
+            totalRows={totalFiltered}
           />
 
         </div>
@@ -274,7 +269,7 @@ function BandsTable() {
           <p className='label md:mb-0'>
             Showing <span className='font-black'>{currentPage * size} - {(currentPage + 1) * size}</span> {' '}
             of {' '}
-            <span className='font-black'>{bands.length}</span> items
+            <span className='font-black'>{totalFiltered}</span> items
           </p>
           <Pagination
             currentPage={currentPage}
@@ -282,7 +277,9 @@ function BandsTable() {
             onChange={handleChangePage}
           />
         </div>
-      </div>
+      </div>}
+
+
     </section >)
 }
 

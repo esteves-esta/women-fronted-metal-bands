@@ -8,6 +8,7 @@ import { TableColumn } from './TableProps';
 
 import Dropdown from '../Drowdown'
 import classes from './Table.module.css'
+import LoaderSvg from '../LoaderSvg/LoaderSvg';
 interface Props {
   rows: Array<any>
   currentPage: number
@@ -17,6 +18,7 @@ interface Props {
   columns: TableColumn[]
   onSortRow: (sort, sortBy) => void
   gridMode: boolean | null,
+  isLoading: boolean | null,
   children?: any
   rowIdName: string
   onRowClick?: (row) => void
@@ -35,6 +37,7 @@ function DataTable({
   sortParams,
   onSortRow,
   onRowClick,
+  isLoading,
   onFilter,
   gridImage
 }: Props) {
@@ -76,7 +79,13 @@ function DataTable({
       </div>
 
       {children}
-      {!gridMode && (
+      {isLoading && (
+        <div className="flex flex-row gap-4 justify-center items-center">
+          <p>Loading </p>
+          <LoaderSvg width={50} height={50} />
+        </div>
+      )}
+      {!gridMode && !isLoading && (
         <Table
           columnsInfo={columnsInfo}
           size={pageSize}
@@ -89,7 +98,7 @@ function DataTable({
         />
       )}
 
-      {gridMode && (
+      {gridMode && !isLoading && (
         <Grid
           gridImage={gridImage}
           columns={columnsInfo}

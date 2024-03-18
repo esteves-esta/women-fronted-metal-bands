@@ -48,6 +48,7 @@ function BandsProvider({ children }) {
 
   const [databaseChecked, setDatabaseChecked] = React.useState(false);
   const [total, setTotal] = React.useState(0);
+  const [totalFiltered, setTotalFiltered] = React.useState(0);
   const [bands, setBands] = React.useState([]);
   const [currentPage, setCurrentPage] = React.useState(0);
   const [searchParams, setSearchParams] = React.useState({
@@ -90,6 +91,7 @@ function BandsProvider({ children }) {
   React.useEffect(() => {
     if (data !== undefined) {
       setTotal(data.total ? data.total : 0);
+      setTotalFiltered(data.totalFiltered ? data.totalFiltered : 0);
       setBands(data.documents ? data.documents : []);
     }
     // console.log({ data, bands });
@@ -246,6 +248,8 @@ function BandsProvider({ children }) {
   const state = {
     databaseChecked,
     total,
+    isLoading,
+    totalFiltered,
     bands,
     currentPage,
     searchParams,
