@@ -92,7 +92,7 @@ function BandsProvider({ children }) {
       setTotal(data.total ? data.total : 0);
       setBands(data.documents ? data.documents : []);
     }
-    console.log({ data, bands });
+    // console.log({ data, bands });
   }, [data]);
 
   React.useEffect(() => {
@@ -133,7 +133,22 @@ function BandsProvider({ children }) {
 
   const handleQuery = React.useCallback((query, col) => {
     setSearchParams((params) => {
-      return { ...params, query: query ? query : null, col: col ? col : null };
+      return {
+        ...params,
+        query: query ? query : null,
+        col: col ? col : null,
+        page: 0,
+      };
+    });
+  }, []);
+
+  const handleSort = React.useCallback((sortBy, sort) => {
+    setSearchParams((params) => {
+      return {
+        ...params,
+        sort,
+        sortBy,
+      };
     });
   }, []);
 
@@ -145,7 +160,7 @@ function BandsProvider({ children }) {
         page: page > 0 ? Number(page) + Number(params.limit) : 0,
       };
     });
-    console.log(page);
+    // console.log(page);
   }, []);
 
   const handleFilter = React.useCallback((growIntensity, detailFilter) => {
@@ -161,22 +176,23 @@ function BandsProvider({ children }) {
 
     if (grows.includes(Number(growIntensity))) {
       setSearchParams((params) => {
-        return { ...params, growling: growIntensity };
+        return { ...params, growling: growIntensity, page: 0 };
       });
     } else {
       setSearchParams((params) => {
-        return { ...params, growling: null };
+        return { ...params, growling: null, page: 0 };
       });
     }
     if (details.includes(detailFilter)) {
       setSearchParams((params) => {
-        return { ...params, filter: detailFilter };
+        return { ...params, filter: detailFilter, page: 0 };
       });
     } else {
       setSearchParams((params) => {
-        return { ...params, filter: null };
+        return { ...params, filter: null, page: 0 };
       });
     }
+    setCurrentPage(0);
   }, []);
 
   function downloadAll() {
@@ -235,6 +251,7 @@ function BandsProvider({ children }) {
     handleFilter,
     handleQuery,
     handlePageChange,
+    handleSort,
     downloadAll,
     downloadFiltered,
     userLikedTracksList,

@@ -4,9 +4,7 @@ import classes from './Table.module.css';
 import { ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
 import { TableColumn as TableColumnProps } from './TableProps';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
-
 import Tag from '../Tag';
-import useSort from './useSort';
 
 
 function Table({
@@ -14,7 +12,8 @@ function Table({
   rows,
   size,
   currentPage,
-  // handleSortRows,
+  handleSortRows,
+  sortParams,
   rowIdName,
   onRowClick
 }) {
@@ -25,8 +24,9 @@ function Table({
         <tr>
           {columnsInfo.map((headerInfo, index) => headerInfo.visible && (
             <th key={headerInfo.key}>
-              <TableHeader headerInfo={headerInfo} />
-              {/* sortRows={() => handleSortRows(headerInfo.)}  */}
+              <TableHeader headerInfo={headerInfo}
+                sortParams={sortParams}
+                sortRows={handleSortRows} />
             </th>
           ))}
         </tr>
@@ -46,13 +46,36 @@ function Table({
   )
 }
 
-function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumnProps, sortRows?: (string) => void }) {
-  const { sortable, headerLabel, sort } = headerInfo
+interface TableHeaderProps {
+  headerInfo: TableColumnProps
+  sortRows?: (sort, sortby) => void
+  sortParams: { sort: string, sortBy: string }
+}
 
-  {/* onClick={sortRows} */}
+function TableHeader({ headerInfo, sortRows, sortParams }: TableHeaderProps) {
+  const { sortable, headerLabel, field } = headerInfo
+  const sort = sortParams.sortBy === field ? sortParams.sort : null
+
+  const onSort = () => {
+
+    let newSort = null
+
+    if (sort === "asc") {
+      newSort = "desc";
+    } else if (sort === "desc") {
+      newSort = null;
+    } else {
+      newSort = "asc";
+    }
+    console.log({ sortParams, sort, newSort })
+
+    if (field)
+      sortRows(field, newSort)
+  }
+
   if (sortable) {
     return <React.Fragment>
-      {sortable && <button  className={classes.sortBtn}> 
+      {sortable && <button className={classes.sortBtn} onClick={onSort}>
         {!sort && <ArrowUpDown size={15} />}
         {sort === 'asc' && <ArrowUpAZ size={15} />}
         {sort === 'desc' && <ArrowDownAZ size={15} />}

@@ -74,7 +74,7 @@ function getSearchQuery(query: string, col: string) {
   const searchCols = [
     "band",
     "country",
-    "vocalists",
+    "currentVocalists",
     "numberOfVocalists",
     "activeFor",
     "yearStarted",
@@ -94,8 +94,9 @@ function getSearchQuery(query: string, col: string) {
       if (!Number.isNaN(query)) return `@${col}:[${query} ${query}]`;
       return `*${query}*`;
 
-    case "vocalists":
-      return `(@currentVocalists:*${query}*) (@pastVocalists:*${query}*)`;
+    case "currentVocalists":
+      return `@currentVocalists:*${query}*`;
+    // return `(@currentVocalists:*${query}*) (@pastVocalists:*${query}*)`;
 
     default:
       return `@${col}:*${query}*`;

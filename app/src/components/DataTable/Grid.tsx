@@ -5,7 +5,7 @@ import Tag from '../Tag';
 import { TableColumn } from './TableProps';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
-import useSort from './useSort';
+
 
 
 function Grid({
@@ -16,32 +16,40 @@ function Grid({
   rowIdName,
   onRowClick,
   gridImage,
-  // handleColumnChange,
-  // initialRow 
+  handleSortRows,
+  sortParams,
 }) {
   const start = currentPage * size;
   const end = size * (currentPage + 1);
 
-  // const [handleSortRows] = useSort({
-  //   rows,
-  //   columnsInfo: columns,
-  //   handleColumnChange,
-  //   handleRowChange,
-  //   initialRow
-  // })
-
   return (<React.Fragment>
     <div className='flex flex-col gap-2 md:flex-row md:gap-10 my-10 items-center'>
       <p className='label mb-0'>Sorting</p>
-      {columns.map((headerInfo, index) => {
-        const { sortable, headerLabel, sort, visible } = headerInfo
+      {columns.map((headerInfo) => {
+        const { sortable, headerLabel, field, visible } = headerInfo
+
+        const sort = sortParams.sortBy === field ? sortParams.sort : null
+
+        const onSort = () => {
+          let newSort = null
+
+          if (sort === "asc") {
+            newSort = "desc";
+          } else if (sort === "desc") {
+            newSort = undefined;
+          } else {
+            newSort = "asc";
+          }
+          if (headerInfo.field)
+            handleSortRows(headerInfo.field, newSort)
+        }
 
         return sortable && visible && (
           <button
             key={headerInfo.key}
             className={classes.gridSortBtn}
+            onClick={onSort}
           >
-            {/* onClick={() => handleSortRows(headerInfo, index)} */}
 
             {headerLabel}
 

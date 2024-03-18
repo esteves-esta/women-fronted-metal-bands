@@ -7,16 +7,16 @@ import { BandContext } from '../BandsProvider';
 import { DeezerContext } from '../DeezerProvider';
 import ToogleGroupButton from '../ToogleGroupButton';
 import { TagInfo } from '../Tag';
-import formatYearsActive from '../../helpers/formatYearsActive';
+
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { sample } from '../../helpers/range';
 import classes from './BandsTable.module.css'
 import useMatchMedia from '../../helpers/useMatchMedia';
+import Pagination from '../DataTable/Pagination';
+import Dropdown from '../Drowdown'
 
 function BandsTable() {
-  const { bands, total, handleFilter, downloadAll, downloadFiltered, searchParams,
-    handlePageChange
-  } = React.useContext(BandContext)
+  const { bands, total, handleFilter, handleSort, downloadAll, downloadFiltered, handleQuery, searchParams } = React.useContext(BandContext)
   const { getTrackPreview } = React.useContext(DeezerContext)
 
   const [growlFilter, setGrowlFilter] = React.useState('viewAll')
@@ -27,6 +27,7 @@ function BandsTable() {
     if (val) {
       setGrowlFilter(val)
       handleFilter(val, bandDetailsFilter)
+      setCurrentPage(0)
     }
   }, [bandDetailsFilter]);
 
@@ -34,6 +35,7 @@ function BandsTable() {
     if (val) {
       setBandDetailsFilter(val)
       handleFilter(growlFilter, val)
+      setCurrentPage(0)
     }
   }, [growlFilter]);
 
@@ -122,7 +124,7 @@ function BandsTable() {
         tagList: growTagList, tag: true, sort: 'desc', sortWithRawValue: true,
       },
       {
-        filter: false, visible: true, headerLabel: 'Status', sortable: true,
+        filter: false, visible: true, field: 'yearEnded', headerLabel: 'Status', sortable: true,
         format: (cols) => !cols.yearEnded, tag: true, tagList: statusTagList
       },
       {
@@ -137,12 +139,12 @@ function BandsTable() {
         filter: false, visible: false, field: 'sister', headerLabel: 'Sisters', sortable: true,
         tagList: booleanTagList, tag: true
       },
-      { filter: true, visible: false, field: 'currentVocalists', headerLabel: 'Nº Voc.', sortable: true, format: (col) => col.currentVocalists.length },
+      { filter: true, visible: false, field: 'numberOfVocalists', headerLabel: 'Nº Voc.', sortable: true },
       { filter: true, visible: true, field: 'currentVocalists', headerLabel: 'Vocalists', },
-      // { filter: true, visible: false, field: 'pastVocalists', headerLabel: 'Past Vo.', },
       { filter: true, visible: true, field: 'country', headerLabel: 'Country', sortable: true },
-      { filter: true, visible: true, format: formatYearsActive, headerLabel: 'Active for', sortable: true },
-      { filter: true, visible: false, format: formatActiveYears, headerLabel: 'Years Active', sortable: true },
+      { filter: true, visible: true, field: 'activeFor', headerLabel: 'Active for', sortable: true },
+      { filter: true, visible: true, field: 'yearStarted', headerLabel: 'Years Started', sortable: true },
+      { filter: true, visible: false, field: 'yearEnded', headerLabel: 'Years Started', sortable: true },
     ];
     return cols.map(col => {
       if (col.key == undefined) col.key = crypto.randomUUID();
@@ -154,6 +156,26 @@ function BandsTable() {
   React.useEffect(() => {
     if (mediaNarrow) setIsDisplayMode('grid')
   }, [mediaNarrow])
+
+  const [currentPage, setCurrentPage] = React.useState(0);
+  const [size, setSize] = React.useState(10);
+  const [lastPage, setLastPage] = React.useState(() => Math.ceil(bands.length / 10));
+
+  React.useEffect(() => {
+    setLastPage(Math.ceil(total / size))
+  }, [size, total])
+
+
+  const handleChangePage = (value: number | string) => {
+    if (value) setCurrentPage(Number(value))
+  };
+
+
+  const handleSearchFilter = (searchValue: string, col: string) => {
+    handleQuery(searchValue, col)
+    setCurrentPage(0);
+
+  };
 
   return (
     <section>
@@ -190,11 +212,15 @@ function BandsTable() {
         rows={bands}
         total={total}
         columns={columns}
-        pageSize={10}
+        currentPage={currentPage}
+        pageSize={size}
         gridMode={displayMode === 'grid'}
         rowIdName="id"
         onRowClick={playRecommendedTrackOrOpenLink}
+        onFilter={handleSearchFilter}
         gridImage={formatGridImage}
+        sortParams={searchParams}
+        onSortRow={handleSort}
       >
         <div className={classes.row}>
           <div className={`${classes.innerRow}`}>
@@ -233,8 +259,62 @@ function BandsTable() {
 
         </div>
       </DataTable>
+
+
+      <div className='flex flex-col gap-3 md:gap-0 md:flex-row md:items-center justify-between mt-10 mb-10'>
+        <div className='flex flex-col lg:flex-row gap-5 md:items-center'>
+          <PageSizeSelection
+            size={size}
+            setSize={setSize}
+            totalRows={bands.length}
+          />
+
+        </div>
+        <div className="flex flex-col lg:flex-row lg:items-center gap-3">
+          <p className='label md:mb-0'>
+            Showing <span className='font-black'>{currentPage * size} - {(currentPage + 1) * size}</span> {' '}
+            of {' '}
+            <span className='font-black'>{bands.length}</span> items
+          </p>
+          <Pagination
+            currentPage={currentPage}
+            lastPage={lastPage}
+            onChange={handleChangePage}
+          />
+        </div>
+      </div>
     </section >)
 }
 
 export default BandsTable;
 
+
+function PageSizeSelection({ size, setSize, totalRows }) {
+  const id = React.useId();
+  const selectId = `${id}-rowsPerPage`;
+  const options = [
+    { size: 10 },
+    { size: 20 },
+    { size: 30 },
+    { size: 40 },
+    { size: 50 },
+    { size: totalRows }
+  ];
+
+  return (
+    <div className='flex flex-col lg:flex-row gap-3 lg:items-center'>
+      <label htmlFor={selectId} className='label'>Rows per page</label>
+      <Dropdown
+        radioOptions={options}
+        handleChange={(selected) => {
+          setSize(selected)
+        }}
+        radioValue={size}
+        labelName="size"
+        keyName="size"
+      >
+        {size}
+      </Dropdown>
+    </div>
+  )
+}

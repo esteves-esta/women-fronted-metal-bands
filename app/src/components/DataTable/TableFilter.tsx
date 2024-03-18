@@ -11,12 +11,24 @@ function TableFilter({ onChange, columns }) {
   const searchId = `${id}-search`;
   const searchTypeId = `${id}-seachType`;
 
-  const handleOnChange = (search, searchType) => {
+  const [timeoutid, setTimeoutid] = React.useState<number | null>(null);
 
-    const intervalId = window.setTimeout(() => {
+  const handleOnChange = (search, searchType, delay) => {
+    console.log({
+      search, searchType
+    })
+    if (timeoutid) {
+      clearTimeout(timeoutid)
+      setTimeoutid(null);
+    }
+
+    const timeout = window.setTimeout(() => {
       onChange(search, searchType);
-    }, 600);
-    return () => window.clearTimeout(intervalId)
+    }, delay)
+
+    setTimeoutid(timeout);
+
+    // return () => window.clearTimeout(timeoutId)
   };
 
   const options = columns.filter(col => col.filter && col)
@@ -30,7 +42,7 @@ function TableFilter({ onChange, columns }) {
           handleChange={(selected) => {
             // console.log(selected)
             setSearchType(selected)
-            handleOnChange(search, selected)
+            handleOnChange(search, selected, 0)
           }}
           radioValue={searchType}
           labelName="headerLabel"
@@ -47,7 +59,7 @@ function TableFilter({ onChange, columns }) {
             value={search}
             onChange={(event) => {
               setSearch(event.target.value);
-              handleOnChange(event.target.value, searchType)
+              handleOnChange(event.target.value, searchType, 2000)
             }}
           />
           <Search size={15} />
