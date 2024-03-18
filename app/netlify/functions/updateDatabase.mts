@@ -13,5 +13,5 @@ export default async (req: Request, context: Context) => {
 };
 
 export const config: Config = {
-  path: "/update-database",
+  path: "/api/update-database",
 };

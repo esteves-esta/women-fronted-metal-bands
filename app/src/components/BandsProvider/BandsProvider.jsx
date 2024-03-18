@@ -28,7 +28,7 @@ async function fetcher(endpoint) {
 
 const errorRetry = (error, key, config, revalidate, { retryCount }) => {
   // Never retry on 404.
-  if (error.status === 404) return;
+  if (error.status === 404 || error.status === 500) return;
 
   if (retryCount >= 2) return;
 
@@ -46,6 +46,7 @@ function BandsProvider({ children }) {
     return storageValue ? JSON.parse(storageValue) : [];
   });
 
+  const [databaseChecked, setDatabaseChecked] = React.useState(false);
   const [total, setTotal] = React.useState(0);
   const [bands, setBands] = React.useState([]);
   const [currentPage, setCurrentPage] = React.useState(0);
@@ -60,8 +61,25 @@ function BandsProvider({ children }) {
     growling: null,
   });
 
+  const { data: isUpdated, error: updateError } = useSWR(
+    `/update-database`,
+    fetcher,
+    {
+      errorRetry,
+      revalidateOnFocus: false,
+    }
+  );
+
+  React.useEffect(() => {
+    if (isUpdated !== undefined) {
+      setDatabaseChecked(true);
+    }
+  }, [isUpdated]);
+
   const { data, error, isLoading } = useSWR(
-    `/search/${searchParams.query}/${searchParams.col}/${searchParams.page}/${searchParams.limit}/${searchParams.sort}/${searchParams.sortBy}/${searchParams.filter}/${searchParams.growling}`,
+    databaseChecked
+      ? `/search/${searchParams.query}/${searchParams.col}/${searchParams.page}/${searchParams.limit}/${searchParams.sort}/${searchParams.sortBy}/${searchParams.filter}/${searchParams.growling}`
+      : null,
     fetcher,
     {
       errorRetry,
@@ -122,7 +140,10 @@ function BandsProvider({ children }) {
   const handlePageChange = React.useCallback((page) => {
     setCurrentPage(Number(page));
     setSearchParams((params) => {
-      return { ...params, page: page > 0 ? Number(page) + Number(params.limit) : 0 };
+      return {
+        ...params,
+        page: page > 0 ? Number(page) + Number(params.limit) : 0,
+      };
     });
     console.log(page);
   }, []);

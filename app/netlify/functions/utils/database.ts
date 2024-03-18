@@ -6,8 +6,8 @@ export async function connectClient() {
   const client = createClient({
     password: databasePassword,
     socket: {
-      host: "redis-19105.c279.us-central1-1.gce.cloud.redislabs.com",
-      port: 19105,
+      host: "redis-19242.c228.us-central1-1.gce.cloud.redislabs.com",
+      port: 19242,
     },
   });
 
