@@ -2,14 +2,9 @@ import * as React from 'react';
 import BandsProvider from './components/BandsProvider';
 import DeezerProvider from './components/DeezerProvider';
 import ToastProvider from './components/ToastProvider';
-import Home from './components/Home'
-import { Github } from 'lucide-react';
-import ChartsPage from './components/ChartsPage';
-import Toast from './components/Toast';
+import MainPage from './components/MainPage';
 
 function App() {
-  const year = new Date().getFullYear()
-
   React.useEffect(() => {
     function handleKeyDown(event) {
       // prevent scrolling when clicking on spacebar
@@ -30,29 +25,8 @@ function App() {
       <BandsProvider>
         <DeezerProvider>
 
-          <Toast />
-          <main>
-            <Home />
-          </main>
+          <MainPage />
 
-          <ChartsPage />
-
-          <hr />
-          <footer className='mx-10 md:mx-40 py-20 flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between'>
-            <div className='flex flex-col lg:flex-row gap-3'>
-              <a href='https://github.com/esteves-esta/women-fronted-metal-bands' target='_blank'>
-
-                <Github size={18} />
-                <small>
-                  designed & developed by esteves-esta ©{' '}
-                  {year}
-                </small>
-              </a>
-            </div>
-            <small>
-              built with: React / RadixUI / Vite / Tailwind / LucideIcons
-            </small>
-          </footer>
         </DeezerProvider>
       </BandsProvider>
     </ToastProvider>

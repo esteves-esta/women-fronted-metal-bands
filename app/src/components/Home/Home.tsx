@@ -1,12 +1,5 @@
-import MediaPlayer from '../MediaPlayer'
-import BandsTable from '../BandsTable';
-import * as Progress from '@radix-ui/react-progress';
-import classes from './Home.module.css'
-import { DeezerContext } from '../DeezerProvider';
-import React from 'react';
-
 function Home() {
-  const { trackIsLoading } = React.useContext(DeezerContext)
+
   // {import.meta.env.VITE_MY_API_KEY}
 
   return <article>
@@ -32,19 +25,7 @@ function Home() {
       </div>
     </section>
 
-    <BandsTable />
 
-
-    <MediaPlayer />
-
-    {trackIsLoading && <div className={classes.ProgressContainer}>
-      <Progress.Root className={classes.ProgressRoot}>
-
-        <Progress.Indicator
-          className={classes.ProgressIndicator}
-        />
-      </Progress.Root>
-    </div>}
   </article >;
 }
 

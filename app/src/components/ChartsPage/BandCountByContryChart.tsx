@@ -5,6 +5,7 @@ import colors from './colors'
 import useMatchMedia from '../../helpers/useMatchMedia';
 import useSWR from "swr";
 import { errorRetry, fetcher } from './apiFunctions';
+import LoaderSvg from '../LoaderSvg';
 
 function BandCountByContryChart({ filter, filterGrow }) {
   const { databaseChecked, total } = React.useContext(BandContext)
@@ -106,7 +107,12 @@ function BandCountByContryChart({ filter, filterGrow }) {
       />
     </React.Fragment>
     );
-  else return (<p>Loading...</p>)
+  else return (<React.Fragment>
+    <div className="flex flex-row gap-4 justify-center items-center">
+      <p>Loading </p>
+      <LoaderSvg width={50} height={50} />
+    </div>
+  </React.Fragment>)
 };
 
 export default BandCountByContryChart;

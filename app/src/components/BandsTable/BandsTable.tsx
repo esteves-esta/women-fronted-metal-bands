@@ -186,7 +186,7 @@ function BandsTable() {
 
         <div className='flex flex-col gap-2 text-center'>
           <p className='title2'>
-            XXX bands
+            {total} bands
           </p>
           {233 !== total && (
             <small className='title2'>

@@ -4,6 +4,7 @@ import { BandContext } from '../BandsProvider';
 import useSWR from "swr";
 import useMatchMedia from '../../helpers/useMatchMedia';
 import { errorRetry, fetcher } from './apiFunctions';
+import LoaderSvg from '../LoaderSvg';
 
 function ActivityInEachDecadeChart() {
   const { databaseChecked } = React.useContext(BandContext)
@@ -75,7 +76,12 @@ function ActivityInEachDecadeChart() {
     />
     )
 
-  else return (<p>Loading...</p>)
+  else return (<React.Fragment>
+    <div className="flex flex-row gap-4 justify-center items-center">
+      <p>Loading </p>
+      <LoaderSvg width={50} height={50} />
+    </div>
+  </React.Fragment>)
 };
 
 
