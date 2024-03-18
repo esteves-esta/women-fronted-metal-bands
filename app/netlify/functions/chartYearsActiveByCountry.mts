@@ -70,12 +70,12 @@ export default async (req: Request, context: Context) => {
         id: result.countryCode,
         id2: result.country,
         data: [
-          { id: "1-5", value: "0" },
-          { id: "5-10", value: "0" },
-          { id: "10-20", value: "0" },
-          { id: "20-30", value: "0" },
-          { id: "30-40", value: "0" },
-          { id: "40-50", value: "0" },
+          { x: "1-5", y: 0 },
+          { x: "5-10", y: 0 },
+          { x: "10-20", y: 0 },
+          { x: "20-30", y: 0 },
+          { x: "30-40", y: 0 },
+          { x: "40-50", y: 0 },
         ],
       });
     });
@@ -89,19 +89,19 @@ export default async (req: Request, context: Context) => {
         );
 
         if (countryIndex >= 0) {
-          console.log("oi", countryCode);
-          chartData[countryIndex].data[index].value = Number(count);
+          // console.log("oi", countryCode);
+          chartData[countryIndex].data[index].y = Number(count);
         }
 
-        console.log({
-          countryIndex,
-          countryCode,
-          count,
-          chartData: chartData[countryIndex].id,
-          chartData2: chartData[countryIndex].data[index],
-        });
+        //   console.log({
+        //     countryIndex,
+        //     countryCode,
+        //     count,
+        //     chartData: chartData[countryIndex].id,
+        //     chartData2: chartData[countryIndex].data[index],
+        //   });
       });
-      console.log("=============");
+      // console.log("=============");
     });
   } catch (e) {
     console.log("error mine: " + e);

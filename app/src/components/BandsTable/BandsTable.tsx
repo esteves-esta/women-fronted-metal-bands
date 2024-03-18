@@ -143,8 +143,8 @@ function BandsTable() {
       { filter: true, visible: true, field: 'currentVocalists', headerLabel: 'Vocalists', },
       { filter: true, visible: true, field: 'country', headerLabel: 'Country', sortable: true },
       { filter: true, visible: true, field: 'activeFor', headerLabel: 'Active for', sortable: true },
-      { filter: true, visible: true, field: 'yearStarted', headerLabel: 'Years Started', sortable: true },
-      { filter: true, visible: false, field: 'yearEnded', headerLabel: 'Years Started', sortable: true },
+      { filter: true, visible: true, field: 'yearStarted', headerLabel: 'Start', sortable: true },
+      { filter: true, visible: false, field: 'yearEnded', headerLabel: 'End', sortable: true },
     ];
     return cols.map(col => {
       if (col.key == undefined) col.key = crypto.randomUUID();

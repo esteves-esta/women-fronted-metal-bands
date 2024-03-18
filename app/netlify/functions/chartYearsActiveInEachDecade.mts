@@ -16,8 +16,15 @@ export default async (req: Request, context: Context) => {
   }
 
   let responses;
-  let countries;
-  let chartData: any[] = [];
+  // let countries;
+  let chartData: any[] = [
+    { id: "1970", value: 0 },
+    { id: "1980", value: 0 },
+    { id: "1990", value: 0 },
+    { id: "2000", value: 0 },
+    { id: "2010", value: 0 },
+    { id: "2020", value: 0 },
+  ];
 
   const decadeBeginEnd = [
     [1979, 1970],
@@ -29,20 +36,20 @@ export default async (req: Request, context: Context) => {
   ];
 
   try {
-    countries = await client.ft.aggregate("idx:bands", "*", {
-      STEPS: [
-        {
-          type: AggregateSteps.GROUPBY,
-          properties: ["@countryCode", "@country"],
-          REDUCE: [
-            {
-              type: AggregateGroupByReducers.COUNT,
-              AS: "count",
-            },
-          ],
-        },
-      ],
-    });
+    // countries = await client.ft.aggregate("idx:bands", "*", {
+    //   STEPS: [
+    //     {
+    //       type: AggregateSteps.GROUPBY,
+    //       properties: ["@countryCode", "@country"],
+    //       REDUCE: [
+    //         {
+    //           type: AggregateGroupByReducers.COUNT,
+    //           AS: "count",
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // });
 
     responses = await Promise.all(
       decadeBeginEnd.map((item) => {
@@ -53,7 +60,7 @@ export default async (req: Request, context: Context) => {
             STEPS: [
               {
                 type: AggregateSteps.GROUPBY,
-                properties: ["@countryCode"],
+                properties: [],
                 REDUCE: [
                   {
                     type: AggregateGroupByReducers.COUNT,
@@ -67,30 +74,25 @@ export default async (req: Request, context: Context) => {
       })
     );
 
-    countries.results.forEach((result) => {
-      chartData.push({
-        id: result.countryCode,
-        id2: result.country,
-        data: [
-          { x: "70s", y: 0 },
-          { x: "80s", y: 0 },
-          { x: "90s", y: 0 },
-          { x: "00s", y: 0 },
-          { x: "10s", y: 0 },
-          { x: "20s", y: 0 },
-        ],
-      });
-    });
+    // countries.results.forEach((result) => {
+    //   chartData.push({
+    //     id: result.countryCode,
+    //     id2: result.country,
+    //     data: [
+    //       { x: "70s", y: 0 },
+    //       { x: "80s", y: 0 },
+    //       { x: "90s", y: 0 },
+    //       { x: "00s", y: 0 },
+    //       { x: "10s", y: 0 },
+    //       { x: "20s", y: 0 },
+    //     ],
+    //   });
+    // });
 
     responses.forEach((response, index) => {
       response.results.forEach((result) => {
-        const { countryCode, count } = result;
-        const countryIndex = chartData.findIndex(
-          (item) => item.id === countryCode
-        );
-
-        if (countryIndex >= 0)
-          chartData[countryIndex].data[index].y = Number(count);
+        const { count } = result;
+        chartData[index].value = Number(count);
       });
     });
   } catch (e) {

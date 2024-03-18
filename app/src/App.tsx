@@ -35,7 +35,7 @@ function App() {
             <Home />
           </main>
 
-          {/* <ChartsPage /> */}
+          <ChartsPage />
 
           <hr />
           <footer className='mx-10 md:mx-40 py-20 flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between'>

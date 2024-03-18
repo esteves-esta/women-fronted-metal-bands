@@ -6,6 +6,8 @@ import { authAPI } from "./utils/auth";
 export default async (req: Request, context: Context) => {
   authAPI(req);
 
+  const { filter } = context.params;
+
   let client;
 
   try {
@@ -13,6 +15,20 @@ export default async (req: Request, context: Context) => {
   } catch (e) {
     console.log("cliente " + e);
     return Response.json("Connection error.", { status: 500 });
+  }
+
+  let filters = "";
+  const filterCols = ["active", "disbanded"];
+
+  if (filter !== "null" && filterCols.includes(filter)) {
+    switch (filter) {
+      case "active":
+        filters = `@yearEnded:[0 0]`;
+        break;
+      case "disbanded":
+        filters = `@yearEnded:[1 +inf]`;
+        break;
+    }
   }
 
   let responses;
@@ -51,7 +67,7 @@ export default async (req: Request, context: Context) => {
   try {
     responses = await Promise.all(
       queries.map((query) =>
-        client.ft.aggregate("idx:bands", query, {
+        client.ft.aggregate("idx:bands", `${query} ${filters}`, {
           STEPS: [
             {
               type: AggregateSteps.GROUPBY,
@@ -70,37 +86,41 @@ export default async (req: Request, context: Context) => {
 
     //https://github.com/redislabs-training/node-js-crash-course/blob/main/src/utils/dataloader.js
     responses.forEach((response, index) => {
-      switch (index) {
-        case 0:
-          allwomenData[0].value = response.results[0].count;
-          break;
-        case 1:
-          allwomenData[1].value = response.results[0].count;
-          break;
+      console.log(response);
+      const result = response.results[0];
+      if (response.total >= 1) {
+        switch (index) {
+          case 0:
+            allwomenData[0].value = result.count;
+            break;
+          case 1:
+            allwomenData[1].value = response.results[0].count;
+            break;
 
-        case 2:
-          blackwomenData[0].value = response.results[0].count;
-          break;
-        case 3:
-          blackwomenData[1].value = response.results[0].count;
-          break;
+          case 2:
+            blackwomenData[0].value = response.results[0].count;
+            break;
+          case 3:
+            blackwomenData[1].value = response.results[0].count;
+            break;
 
-        case 4:
-          sisterData[0].value = response.results[0].count;
-          break;
-        case 5:
-          sisterData[1].value = response.results[0].count;
-          break;
+          case 4:
+            sisterData[0].value = response.results[0].count;
+            break;
+          case 5:
+            sisterData[1].value = response.results[0].count;
+            break;
 
-        case 6:
-          statusData[0].value = response.results[0].count;
-          break;
-        case 7:
-          statusData[1].value = response.results[0].count;
-          break;
+          case 6:
+            statusData[0].value = response.results[0].count;
+            break;
+          case 7:
+            statusData[1].value = response.results[0].count;
+            break;
 
-        default:
-          break;
+          default:
+            break;
+        }
       }
     });
   } catch (e) {
@@ -119,5 +139,5 @@ export default async (req: Request, context: Context) => {
 };
 
 export const config: Config = {
-  path: "/chart/details",
+  path: "/chart/details/:filter",
 };

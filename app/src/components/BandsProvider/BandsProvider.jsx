@@ -244,6 +244,7 @@ function BandsProvider({ children }) {
   }
 
   const state = {
+    databaseChecked,
     total,
     bands,
     currentPage,
