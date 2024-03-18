@@ -55,7 +55,7 @@ export default async (req: Request, context: Context) => {
     /* 
   same as  ==> FT.AGGREGATE idx:bands "*" GROUPBY 2 @countryCode @country REDUCE COUNT 0 as count
    */
-    console.log(filters);
+    // console.log(filters);
 
     result = await client.ft.aggregate("idx:bands", filters, {
       STEPS: [

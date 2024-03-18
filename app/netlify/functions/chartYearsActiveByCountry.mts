@@ -81,7 +81,7 @@ export default async (req: Request, context: Context) => {
     });
 
     responses.forEach((response, index) => {
-      console.log({ beginENd: beginEnd[index] });
+      // console.log({ beginENd: beginEnd[index] });
       response.results.forEach((result) => {
         const { countryCode, count } = result;
         const countryIndex = chartData.findIndex(

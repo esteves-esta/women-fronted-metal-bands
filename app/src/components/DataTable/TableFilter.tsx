@@ -14,9 +14,9 @@ function TableFilter({ onChange, columns }) {
   const [timeoutid, setTimeoutid] = React.useState<number | null>(null);
 
   const handleOnChange = (search, searchType, delay) => {
-    console.log({
-      search, searchType
-    })
+    // console.log({
+    //   search, searchType
+    // })
     if (timeoutid) {
       clearTimeout(timeoutid)
       setTimeoutid(null);

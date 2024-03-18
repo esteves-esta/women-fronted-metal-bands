@@ -207,7 +207,7 @@ function DeezerProvider({ children }) {
       localStoragePreviewKey,
       JSON.stringify(previewTrack)
     );
-    console.log(previewTrack);
+    // console.log(previewTrack);
   }, [previewTrack]);
 
   const playNextTrack = () => {

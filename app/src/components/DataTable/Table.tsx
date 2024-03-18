@@ -67,7 +67,7 @@ function TableHeader({ headerInfo, sortRows, sortParams }: TableHeaderProps) {
     } else {
       newSort = "asc";
     }
-    console.log({ sortParams, sort, newSort })
+    // console.log({ sortParams, sort, newSort })
 
     if (field)
       sortRows(field, newSort)

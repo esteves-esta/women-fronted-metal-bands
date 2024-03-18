@@ -55,7 +55,7 @@ function DataTable({
       if (colKey === 'all') onFilter(searchValue, '');
       else {
         const col = columnsInfo.find(col => col.key === colKey)
-        console.log(columnsInfo)
+        // console.log(columnsInfo)
         if (col) {
           onFilter(searchValue, col.field);
         }

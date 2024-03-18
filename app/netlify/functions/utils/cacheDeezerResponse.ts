@@ -70,7 +70,7 @@ export async function cacheResponses(
         response: response,
       };
   } catch (e) {
-    console.log({ json: e });
+    // console.log({ json: e });
     return {
       error: true,
       status: 500,

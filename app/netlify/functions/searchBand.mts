@@ -31,9 +31,9 @@ export default async (req: Request, context: Context) => {
   if (searchQuery.length > 1 && searchQuery.includes("*"))
     searchQuery = searchQuery.replace("*", "").trim();
 
-  console.log({ searchQuery });
-  console.log({ searchOption });
-  console.log({ searchOptions: Object.keys(searchOption).length > 0 });
+  // console.log({ searchQuery });
+  // console.log({ searchOption });
+  // console.log({ searchOptions: Object.keys(searchOption).length > 0 });
 
   /* DATABASE FULL TEXT SEARCH */
   let result;
