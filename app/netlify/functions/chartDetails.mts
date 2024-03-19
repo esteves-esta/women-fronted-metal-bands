@@ -54,8 +54,8 @@ export default async (req: Request, context: Context) => {
     `@allWomenBand:{true}`,
     `@allWomenBand:{false}`,
 
-    `@blackWomen:{true}`,
     `@blackWomen:{false}`,
+    `@blackWomen:{true}`,
 
     `@sister:{true}`,
     `@sister:{false}`,
