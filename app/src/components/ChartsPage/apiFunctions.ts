@@ -15,6 +15,7 @@ export async function fetcher(endpoint) {
 }
 
 export const errorRetry = (error, key, config, revalidate, { retryCount }) => {
+  console.log({key, config})
   // Never retry on 404.
   if (error.status === 404 || error.status === 500) return;
 

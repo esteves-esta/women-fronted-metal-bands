@@ -22,7 +22,7 @@ function Table({
     <table className={classes.table}>
       <thead>
         <tr>
-          {columnsInfo.map((headerInfo, index) => headerInfo.visible && (
+          {columnsInfo.map(headerInfo => headerInfo.visible && (
             <th key={headerInfo.key}>
               <TableHeader headerInfo={headerInfo}
                 sortParams={sortParams}
