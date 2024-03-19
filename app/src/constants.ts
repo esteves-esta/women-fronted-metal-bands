@@ -1,9 +1,11 @@
 import { TagInfo } from "./components/Tag";
 
-export const DEEZER_API = import.meta.env.DEV
-  ? "http://localhost:8888/"
-  : "https://women-fronted-metal-bands.netlify.app/";
-// teste--
+export const DEEZER_API = window.location.href; 
+
+// export const DEEZER_API = import.meta.env.DEV
+//   ? "http://localhost:8888/"
+//   : "https://women-fronted-metal-bands.netlify.app/";
+// // teste--
 export const booleanTagList: TagInfo[] = [
   { value: true, text: "Yes", type: "success" },
   { value: false, text: "No", type: "dark" },
