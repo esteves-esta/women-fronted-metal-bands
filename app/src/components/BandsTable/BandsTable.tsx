@@ -7,15 +7,16 @@ import { BandContext } from '../BandsProvider';
 import { DeezerContext } from '../DeezerProvider';
 import ToogleGroupButton from '../ToogleGroupButton';
 import { TagInfo } from '../Tag';
-import formatYearsActive from '../../helpers/formatYearsActive';
+
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { sample } from '../../helpers/range';
 import classes from './BandsTable.module.css'
 import useMatchMedia from '../../helpers/useMatchMedia';
+import Pagination from '../DataTable/Pagination';
+import Dropdown from '../Drowdown'
 
 function BandsTable() {
-  const { bands, initialBandList, setBands, filter, downloadAll,
-    downloadFiltered } = React.useContext(BandContext)
+  const { bands, total, isLoading, totalFiltered, handleFilter, handleSort, downloadAll, downloadFiltered, handleQuery, searchParams } = React.useContext(BandContext)
   const { getTrackPreview } = React.useContext(DeezerContext)
 
   const [growlFilter, setGrowlFilter] = React.useState('viewAll')
@@ -25,14 +26,16 @@ function BandsTable() {
   const handleGrowlFilter = React.useCallback((val) => {
     if (val) {
       setGrowlFilter(val)
-      filter(val, bandDetailsFilter)
+      handleFilter(val, bandDetailsFilter)
+      setCurrentPage(0)
     }
   }, [bandDetailsFilter]);
 
   const handleDetailFilter = React.useCallback((val) => {
     if (val) {
       setBandDetailsFilter(val)
-      filter(growlFilter, val)
+      handleFilter(growlFilter, val)
+      setCurrentPage(0)
     }
   }, [growlFilter]);
 
@@ -63,7 +66,7 @@ function BandsTable() {
   }
 
   const playRandom = () => {
-    const randomBand = sample(bands);
+    const randomBand = sample(bands.filter(item => item.deezerId != null || item.deezerRecommendationId != null));
     getTrackPreview(randomBand.deezerId);
   }
 
@@ -106,12 +109,6 @@ function BandsTable() {
     return <React.Fragment></React.Fragment>
   }
 
-  const formatActiveYears = (column) => {
-    if (!column) return '';
-    const end = column.yearEnded ? column.yearEnded : 'now'
-    return `${column.yearStarted} - ${end}`
-  }
-
   const columns = React.useMemo(() => {
     const cols: TableColumn[] = [
       { visible: true, formatElement: formatPlayOrLink, headerLabel: 'Play/Link' },
@@ -121,7 +118,7 @@ function BandsTable() {
         tagList: growTagList, tag: true, sort: 'desc', sortWithRawValue: true,
       },
       {
-        filter: false, visible: true, headerLabel: 'Status', sortable: true,
+        filter: false, visible: true, field: 'yearEnded', headerLabel: 'Status', sortable: true,
         format: (cols) => !cols.yearEnded, tag: true, tagList: statusTagList
       },
       {
@@ -136,12 +133,12 @@ function BandsTable() {
         filter: false, visible: false, field: 'sister', headerLabel: 'Sisters', sortable: true,
         tagList: booleanTagList, tag: true
       },
-      { filter: true, visible: false, field: 'currentVocalists', headerLabel: 'Nº Voc.', sortable: true, format: (col) => col.currentVocalists.length },
+      { filter: true, visible: false, field: 'numberOfVocalists', headerLabel: 'Nº Voc.', sortable: true },
       { filter: true, visible: true, field: 'currentVocalists', headerLabel: 'Vocalists', },
-      // { filter: true, visible: false, field: 'pastVocalists', headerLabel: 'Past Vo.', },
       { filter: true, visible: true, field: 'country', headerLabel: 'Country', sortable: true },
-      { filter: true, visible: true, format: formatYearsActive, headerLabel: 'Active for', sortable: true },
-      { filter: true, visible: false, format: formatActiveYears, headerLabel: 'Years Active', sortable: true },
+      { filter: true, visible: true, field: 'activeFor', headerLabel: 'Active for', sortable: true },
+      { filter: true, visible: false, field: 'yearStarted', headerLabel: 'Start', sortable: true },
+      { filter: true, visible: false, field: 'yearEnded', headerLabel: 'End', sortable: true },
     ];
     return cols.map(col => {
       if (col.key == undefined) col.key = crypto.randomUUID();
@@ -154,6 +151,26 @@ function BandsTable() {
     if (mediaNarrow) setIsDisplayMode('grid')
   }, [mediaNarrow])
 
+  const [currentPage, setCurrentPage] = React.useState(0);
+  const [size, setSize] = React.useState(10);
+  const [lastPage, setLastPage] = React.useState(() => Math.ceil(bands.length / 10));
+
+  React.useEffect(() => {
+    setLastPage(Math.ceil(totalFiltered / size))
+  }, [size, totalFiltered])
+
+
+  const handleChangePage = (value: number | string) => {
+    if (value) setCurrentPage(Number(value))
+  };
+
+
+  const handleSearchFilter = (searchValue: string, col: string) => {
+    handleQuery(searchValue, col)
+    setCurrentPage(0);
+
+  };
+
   return (
     <section>
       <div className='gap-4 flex-col flex md:gap-8 items-center'>
@@ -163,11 +180,11 @@ function BandsTable() {
 
         <div className='flex flex-col gap-2 text-center'>
           <p className='title2'>
-            {initialBandList.length} bands
+            {total} bands
           </p>
-          {initialBandList.length !== bands.length && (
+          {total !== totalFiltered && (
             <small className='title2'>
-              (filtered: {bands.length} bands)
+              (filtered: {totalFiltered} bands)
             </small>
           )}
         </div>
@@ -186,15 +203,19 @@ function BandsTable() {
       </div>
 
       <DataTable
-        isFiltered={growlFilter !== 'viewAll' || bandDetailsFilter !== 'viewAll'}
+        isLoading={isLoading}
         rows={bands}
+        total={totalFiltered}
         columns={columns}
-        pageSize={10}
-        handleRowChange={setBands}
+        currentPage={currentPage}
+        pageSize={size}
         gridMode={displayMode === 'grid'}
         rowIdName="id"
         onRowClick={playRecommendedTrackOrOpenLink}
+        onFilter={handleSearchFilter}
         gridImage={formatGridImage}
+        sortParams={searchParams}
+        onSortRow={handleSort}
       >
         <div className={classes.row}>
           <div className={`${classes.innerRow}`}>
@@ -224,17 +245,73 @@ function BandsTable() {
           </div>
         </div>
 
-        <div className='flex flex-col lg:flex-row text-center md:text-left md:justify-between items-center mb-6 gap-3'>
+        {!isLoading && <div className='flex flex-col lg:flex-row text-center md:text-left md:justify-between items-center mb-6 gap-3'>
           <p className='label m-0'>Click on a row to play a preview or to open the band's website.</p>
           <button className='button' onClick={playRandom}>
             <PlayCircle size={20} />
             Or play a random track
           </button>
 
-        </div>
+        </div>}
       </DataTable>
+
+
+      {!isLoading && <div className='flex flex-col gap-3 md:gap-0 md:flex-row md:items-center justify-between mt-10 mb-10'>
+        <div className='flex flex-col lg:flex-row gap-5 md:items-center'>
+          <PageSizeSelection
+            size={size}
+            setSize={setSize}
+            totalRows={totalFiltered}
+          />
+
+        </div>
+        <div className="flex flex-col lg:flex-row lg:items-center gap-3">
+          <p className='label md:mb-0'>
+            Showing <span className='font-black'>{currentPage * size} - {(currentPage + 1) * size}</span> {' '}
+            of {' '}
+            <span className='font-black'>{totalFiltered}</span> items
+          </p>
+          <Pagination
+            currentPage={currentPage}
+            lastPage={lastPage}
+            onChange={handleChangePage}
+          />
+        </div>
+      </div>}
+
+
     </section >)
 }
 
 export default BandsTable;
 
+
+function PageSizeSelection({ size, setSize, totalRows }) {
+  const id = React.useId();
+  const selectId = `${id}-rowsPerPage`;
+  const options = [
+    { size: 10 },
+    { size: 20 },
+    { size: 30 },
+    { size: 40 },
+    { size: 50 },
+    { size: totalRows }
+  ];
+
+  return (
+    <div className='flex flex-col lg:flex-row gap-3 lg:items-center'>
+      <label htmlFor={selectId} className='label'>Rows per page</label>
+      <Dropdown
+        radioOptions={options}
+        handleChange={(selected) => {
+          setSize(selected)
+        }}
+        radioValue={size}
+        labelName="size"
+        keyName="size"
+      >
+        {size}
+      </Dropdown>
+    </div>
+  )
+}

@@ -1,157 +1,266 @@
 // jsx file because didnt know how to type context
 import * as React from "react";
+import useSWR from "swr";
 import list from "../../../list-of-metal-bands/list.json";
-import Papa from 'papaparse';
-import { downloadCsvFile } from '../../helpers/downloadCsvFile'
+import Papa from "papaparse";
+import { downloadCsvFile } from "../../helpers/downloadCsvFile";
 import { ToastContext } from "../ToastProvider";
+import { DEEZER_API } from "../../constants";
 
 export const BandContext = React.createContext();
-const localStorageUserListKey = 'user-liked-tracks-list'
-const localStorageBandKey = 'band-list'
+
+const localStorageUserListKey = "user-liked-tracks-list";
+const localStorageBandKey = "band-list";
+
+async function fetcher(endpoint) {
+  const response = await fetch(`${DEEZER_API}api${endpoint}`, {
+    method: "GET",
+  });
+
+  const json = await response.json();
+  if (json.error && json.error?.code === 500)
+    throw new Error(json.error.message);
+  return json;
+}
+
+const errorRetry = (error, key, config, revalidate, { retryCount }) => {
+  // Never retry on 404.
+  if (error.status === 404 || error.status === 500) return;
+
+  if (retryCount >= 2) return;
+
+  // Retry after 5 seconds.
+  setTimeout(() => revalidate({ retryCount }), 5000);
+};
 
 function BandsProvider({ children }) {
-  const initialBandList = React.useMemo(() => list, [])
+  // const initialBandList = React.useMemo(() => list, []);
   const { openToast } = React.useContext(ToastContext);
 
   const [userLikedTracksList, setUserLikedTracksList] = React.useState(() => {
-    const storageValue = localStorage.getItem(localStorageUserListKey)
+    const storageValue = localStorage.getItem(localStorageUserListKey);
 
     return storageValue ? JSON.parse(storageValue) : [];
   });
 
-  const [bands, setBands] = React.useState(() => {
-    const storageValue = localStorage.getItem(localStorageBandKey)
-    let parsedValue
-    if (storageValue) parsedValue = JSON.parse(storageValue);
-    if (Array.isArray(parsedValue) && parsedValue.length === initialBandList.length) return parsedValue
-
-    return initialBandList.map(band => {
-      if (!band.deezerId) band.id = crypto.randomUUID()
-      else band.id = band.deezerId
-      return band
-    })
+  const [databaseChecked, setDatabaseChecked] = React.useState(false);
+  const [total, setTotal] = React.useState(0);
+  const [totalFiltered, setTotalFiltered] = React.useState(0);
+  const [bands, setBands] = React.useState([]);
+  const [currentPage, setCurrentPage] = React.useState(0);
+  const [searchParams, setSearchParams] = React.useState({
+    query: null,
+    col: null,
+    page: 0,
+    limit: 10000,
+    sort: "desc",
+    sortBy: "growling",
+    filter: null,
+    growling: null,
   });
 
+  const { data: isUpdated, error: updateError } = useSWR(
+    `/update-database`,
+    fetcher,
+    {
+      errorRetry,
+      revalidateOnFocus: false,
+    }
+  );
+
   React.useEffect(() => {
-    window.localStorage.setItem(localStorageUserListKey, JSON.stringify(userLikedTracksList))
-  }, [userLikedTracksList])
+    if (isUpdated !== undefined) {
+      setDatabaseChecked(true);
+    }
+  }, [isUpdated]);
+
+  const { data, error, isLoading } = useSWR(
+    databaseChecked
+      ? `/search/${searchParams.query}/${searchParams.col}/${searchParams.page}/${searchParams.limit}/${searchParams.sort}/${searchParams.sortBy}/${searchParams.filter}/${searchParams.growling}`
+      : null,
+    fetcher,
+    {
+      errorRetry,
+      revalidateOnFocus: false,
+    }
+  );
+
+  React.useEffect(() => {
+    if (data !== undefined) {
+      setTotal(data.total ? data.total : 0);
+      setTotalFiltered(data.totalFiltered ? data.totalFiltered : 0);
+      setBands(data.documents ? data.documents : []);
+    }
+    // console.log({ data, bands });
+  }, [data]);
+
+  React.useEffect(() => {
+    window.localStorage.setItem(
+      localStorageUserListKey,
+      JSON.stringify(userLikedTracksList)
+    );
+  }, [userLikedTracksList]);
 
   const saveTrackToUserList = (deezerTrackInfo) => {
     if (!deezerTrackInfo) return;
-    const alreadyOnList = userLikedTracksList.find(track => track.id === deezerTrackInfo.id)
+    const alreadyOnList = userLikedTracksList.find(
+      (track) => track.id === deezerTrackInfo.id
+    );
     if (alreadyOnList) {
       openToast({
         title: "Already on list",
         description: `This track has already been added to the playlist.`,
-      })
+      });
       return;
     }
-    setUserLikedTracksList([...userLikedTracksList, deezerTrackInfo])
+    setUserLikedTracksList([...userLikedTracksList, deezerTrackInfo]);
     openToast({
       title: "Add track to list",
       description: `${deezerTrackInfo.title} added to list.`,
-    })
-  }
-
-  const saveBandListStorage = (newList) => {
-    window.localStorage.setItem(localStorageBandKey, JSON.stringify(newList))
-  }
+    });
+  };
 
   const clearUserList = () => {
-    setUserLikedTracksList([])
-  }
+    setUserLikedTracksList([]);
+  };
 
   const removeTrackFromUserList = (id) => {
-    setUserLikedTracksList(userLikedTracksList.filter(track => track.id !== id))
-  }
+    setUserLikedTracksList(
+      userLikedTracksList.filter((track) => track.id !== id)
+    );
+  };
 
-  const filter = React.useCallback((growIntensity, detailFilter) => {
-    const details = ['active', 'disbanded', 'all women',
-      'mixed', 'black women', 'sister',];
+  const handleQuery = React.useCallback((query, col) => {
+    setSearchParams((params) => {
+      return {
+        ...params,
+        query: query ? query : null,
+        col: col ? col : null,
+        page: 0,
+      };
+    });
+  }, []);
+
+  const handleSort = React.useCallback((sortBy, sort) => {
+    setSearchParams((params) => {
+      return {
+        ...params,
+        sort,
+        sortBy,
+      };
+    });
+  }, []);
+
+  const handlePageChange = React.useCallback((page) => {
+    setCurrentPage(Number(page));
+    setSearchParams((params) => {
+      return {
+        ...params,
+        page: page > 0 ? Number(page) + Number(params.limit) : 0,
+      };
+    });
+    // console.log(page);
+  }, []);
+
+  const handleFilter = React.useCallback((growIntensity, detailFilter) => {
+    const details = [
+      "active",
+      "disbanded",
+      "allWomen",
+      "mixedGender",
+      "blackWomen",
+      "sister",
+    ];
     const grows = [0, 1, 2, 3];
-    let filtered = [...initialBandList]
 
     if (grows.includes(Number(growIntensity))) {
-      filtered = initialBandList.filter((band) => band.growling === Number(growIntensity))
+      setSearchParams((params) => {
+        return { ...params, growling: growIntensity, page: 0 };
+      });
+    } else {
+      setSearchParams((params) => {
+        return { ...params, growling: null, page: 0 };
+      });
     }
-
     if (details.includes(detailFilter)) {
-      if (detailFilter === 'active') filtered = filtered.filter((band) => !band.yearEnded)
-      if (detailFilter === 'disbanded') filtered = filtered.filter((band) => band.yearEnded)
-      if (detailFilter === 'all women') filtered = filtered.filter((band) => band.allWomenBand)
-      if (detailFilter === 'mixed') filtered = filtered.filter((band) => !band.allWomenBand)
-      if (detailFilter === 'sister') filtered = filtered.filter((band) => band.sister)
-      if (detailFilter === 'black women') filtered = filtered.filter((band) => band.blackWomen)
+      setSearchParams((params) => {
+        return { ...params, filter: detailFilter, page: 0 };
+      });
+    } else {
+      setSearchParams((params) => {
+        return { ...params, filter: null, page: 0 };
+      });
     }
-
-    setBands(filtered);
+    setCurrentPage(0);
   }, []);
 
   function downloadAll() {
-    const content = Papa.unparse(initialBandList, {
+    const content = Papa.unparse(list, {
       quotes: false,
       delimiter: ",",
       header: true,
       newline: "\r\n",
       skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
-      columns: null //or array of strings
-    }
-    );
-
-    downloadCsvFile(content, 'women-fronted-metal-bands.csv')
+      columns: null, //or array of strings
+    });
+    downloadCsvFile(content, "women-fronted-metal-bands.csv");
   }
 
   function downloadFiltered() {
-    const content = Papa.unparse(bands, {
+    if (!data) return;
+    const content = Papa.unparse(data.document, {
       quotes: false,
       delimiter: ",",
       header: true,
       newline: "\r\n",
       skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
-      columns: null //or array of strings
-    }
-    );
-
-    downloadCsvFile(content, 'women-fronted-metal-bands filtered-list.csv')
+      columns: null, //or array of strings
+    });
+    downloadCsvFile(content, "women-fronted-metal-bands filtered-list.csv");
   }
 
   function downloadUserList() {
-    const formattedTrackList = userLikedTracksList.map(track => {
+    const formattedTrackList = userLikedTracksList.map((track) => {
       return {
-        "id": track.id,
-        "title": track.title,
+        id: track.id,
+        title: track.title,
         "release date": track.release_date,
-        "artist": track.artist.name,
-        "album": track.album.title,
-        "link": track.share
-      }
-    })
+        artist: track.artist.name,
+        album: track.album.title,
+        link: track.share,
+      };
+    });
     const content = Papa.unparse(formattedTrackList, {
       quotes: false,
       delimiter: ",",
       header: true,
       newline: "\r\n",
       skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
-      columns: null //or array of strings
-    }
-    );
+      columns: null, //or array of strings
+    });
 
-    downloadCsvFile(content, 'user favorite tracks.csv')
+    downloadCsvFile(content, "user favorite tracks.csv");
   }
 
   const state = {
-    initialBandList,
+    databaseChecked,
+    total,
+    isLoading,
+    totalFiltered,
     bands,
-    filter,
-    setBands,
+    currentPage,
+    searchParams,
+    handleFilter,
+    handleQuery,
+    handlePageChange,
+    handleSort,
     downloadAll,
     downloadFiltered,
     userLikedTracksList,
     saveTrackToUserList,
     clearUserList,
     removeTrackFromUserList,
-    saveBandListStorage,
-    downloadUserList
+    downloadUserList,
   };
 
   return <BandContext.Provider value={state}>{children}</BandContext.Provider>;

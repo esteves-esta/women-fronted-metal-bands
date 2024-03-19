@@ -221,13 +221,14 @@ select.search {
   border: 0px;
   outline: 0px;
   display: flex;
-  gap: 5px;
+  gap: 5%;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: var(--letter-spacing);
   /* width: 100%; */
+  font-size: .8rem;
   transition: all 0.5s ease;
 }
 
@@ -271,14 +272,15 @@ select.search {
 .cardImgPlaceholder {
   border-top-left-radius: var(--border);
   border-top-right-radius: var(--border);
-  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
   width: 100%;
   background: #2C0732;
   background: linear-gradient(143deg, #000 7.25%, #2C0732 57.22%, rgba(42, 1, 49, 0.91) 89.5%),
 }
 
 .card img {
-  /* height: 300px; */
+  max-height: 300px;
   width: 100%;
   border-radius: var(--border);
 

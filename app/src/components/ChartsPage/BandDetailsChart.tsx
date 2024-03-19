@@ -2,96 +2,58 @@ import React from 'react';
 import { ResponsivePie } from '@nivo/pie'
 import { BandContext } from '../BandsProvider';
 import classes from './ChartsPage.module.css'
-
+import useSWR from "swr";
+import { errorRetry, fetcher } from './apiFunctions';
+import LoaderSvg from '../LoaderSvg';
 function BandDetailsChart({ filter }) {
-  const { initialBandList } = React.useContext(BandContext)
-  const [allwomenData, setAllwomenData] = React.useState([
-    { id: 'all women', value: 0 },
-    { id: 'mixed', value: 0 },
-  ])
-  const [blackwomenData, setBlackwomenData] = React.useState([
-    { id: 'other', value: 0 },
-    { id: 'black women', value: 0 },
-  ])
-  const [sisterData, setSisterData] = React.useState([
-    { id: 'yes', value: 0 },
-    { id: 'no', value: 0 },
-  ])
 
-  const [statusData, setStatusData] = React.useState([
-    { id: 'active', value: 0 },
-    { id: 'disbanded', value: 0 },
-  ])
+  const { databaseChecked } = React.useContext(BandContext)
+  const [chartDetails, setChartDetails] = React.useState({
+    allwomenData:
+      [{ id: "all women", value: 0 }, { id: "mixed", value: 0 }],
+    blackwomenData: [{ id: "other", value: 0 }, { id: "black women", value: 0 }],
+    sisterData: [{ id: "yes", value: 0 }, { id: "no", value: 0 }],
+    statusData: [{ id: "active", value: 0 }, { id: "disbanded", value: 0 }]
+  });
 
-  React.useEffect(() => {
-    const newChartData = [...allwomenData]
-    newChartData[0].value = 0;
-    newChartData[1].value = 0;
-
-    initialBandList.forEach((band) => {
-      if (filter === 'active' && band.yearEnded) return
-      if (filter === 'disbanded' && !band.yearEnded) return
-
-      newChartData[0].value += band.allWomenBand ? 1 : 0;
-      newChartData[1].value += band.allWomenBand ? 0 : 1
-
-    })
-    setAllwomenData(newChartData)
-  }, [filter])
+  const { data, isLoading } = useSWR(
+    databaseChecked ? `/details/${filter === 'viewAll' ? 'null' : filter}` : null,
+    fetcher,
+    {
+      errorRetry,
+      revalidateOnFocus: false,
+    }
+  );
 
   React.useEffect(() => {
-    const newChartData = [...blackwomenData]
-    newChartData[0].value = 0;
-    newChartData[1].value = 0;
+    if (data !== undefined) {
+      setChartDetails(data);
+    }
+  }, [data]);
+  // return (<React.Fragment>
+  //   <div className="flex flex-row gap-4 justify-center items-center">
+  //     <p>Loading </p>
 
-    initialBandList.forEach((band) => {
-      if (filter === 'active' && band.yearEnded) return
-      if (filter === 'disbanded' && !band.yearEnded) return
-
-      newChartData[1].value += band.blackWomen ? 1 : 0;
-      newChartData[0].value += band.blackWomen ? 0 : 1
-
-    })
-    setBlackwomenData(newChartData)
-  }, [filter])
-
-  React.useEffect(() => {
-    const newChartData = [...sisterData]
-    newChartData[0].value = 0;
-    newChartData[1].value = 0;
-
-    initialBandList.forEach((band) => {
-      if (filter === 'active' && band.yearEnded) return
-      if (filter === 'disbanded' && !band.yearEnded) return
-
-      newChartData[0].value += band.sister ? 1 : 0;
-      newChartData[1].value += band.sister ? 0 : 1
-
-    })
-    setSisterData(newChartData)
-  }, [filter])
-
-  React.useEffect(() => {
-    const newChartData = [...statusData]
-    initialBandList.forEach((band) => {
-      newChartData[0].value += band.yearEnded ? 0 : 1;
-      newChartData[1].value += band.yearEnded ? 1 : 0
-
-    })
-    setStatusData(newChartData)
-  }, [])
+  //   </div>
+  // </React.Fragment>)
 
   return (
     <div>
       <div className={`flex flex-col md:flex-row items-center justify-center mt-5 ${classes.borderBottom}`}>
         <div className={`flex flex-col pb-4 ${classes.borderRight}`}>
-          <PieChartCustom colors={{ scheme: 'purpleRed_green' }} data={allwomenData} /* style={{ "borderRight": '2px solid red' }} */ />
+          {!isLoading && <PieChartCustom colors={{ scheme: 'purpleRed_green' }} data={chartDetails.allwomenData} />}
+          {isLoading && <div className="flex justify-center items-center" style={{ width: "350px", height: "350px" }}>
+            <LoaderSvg width={50} height={50} />
+          </div>}
           <small className='title2 text-center'>
             All women band
           </small>
         </div>
         <div className='flex flex-col pb-4'>
-          <PieChartCustom colors={{ scheme: 'pink_yellowGreen' }} data={blackwomenData} /* style={{}} */ />
+          {!isLoading && <PieChartCustom colors={{ scheme: 'pink_yellowGreen' }} data={chartDetails.blackwomenData} />}
+          {isLoading && <div className="flex justify-center items-center" style={{ width: "350px", height: "350px" }}>
+            <LoaderSvg width={50} height={50} />
+          </div>}
           <small className='title2 text-center'>
             Black women
           </small>
@@ -100,20 +62,27 @@ function BandDetailsChart({ filter }) {
 
       <div className='flex flex-col md:flex-row  items-center justify-center' >
         <div className={`flex flex-col pb-4 ${classes.borderRight}`}>
-          <PieChartCustom colors={{ scheme: 'category10' }} data={sisterData} /* style={{ "borderRight": '2px solid red' }} */ />
+          {!isLoading && <PieChartCustom colors={{ scheme: 'category10' }} data={chartDetails.sisterData} />}
+          {isLoading && <div className="flex justify-center items-center" style={{ width: "350px", height: "350px" }}>
+            <LoaderSvg width={50} height={50} />
+          </div>}
           <small className='title2 text-center'>
             Sisters
           </small>
         </div>
         <div className='flex flex-col pb-4 '>
-          <PieChartCustom colors={{ scheme: 'paired' }} data={statusData} /* style={{}} */ />
+          {!isLoading && <PieChartCustom colors={{ scheme: 'paired' }} data={chartDetails.statusData} />}
+          {isLoading && <div className="flex justify-center items-center" style={{ width: "350px", height: "350px" }}>
+            <LoaderSvg width={50} height={50} />
+          </div>}
           <small className='title2 text-center'>
             Band status
           </small>
         </div>
       </div>
-    </div>
+    </div >
   )
+
 };
 
 

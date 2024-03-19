@@ -4,9 +4,7 @@ import classes from './Table.module.css';
 import { ArrowUpDown, ArrowUpAZ, ArrowDownAZ } from 'lucide-react';
 import { TableColumn as TableColumnProps } from './TableProps';
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
-
 import Tag from '../Tag';
-import useSort from './useSort';
 
 
 function Table({
@@ -14,28 +12,21 @@ function Table({
   rows,
   size,
   currentPage,
-  handleColumnChange,
-  handleRowChange,
-  initialRow,
+  handleSortRows,
+  sortParams,
   rowIdName,
   onRowClick
 }) {
-
-  const [handleSortRows] = useSort({
-    rows,
-    columnsInfo,
-    handleColumnChange,
-    handleRowChange,
-    initialRow
-  })
 
   return (
     <table className={classes.table}>
       <thead>
         <tr>
-          {columnsInfo.map((headerInfo, index) => headerInfo.visible && (
+          {columnsInfo.map(headerInfo => headerInfo.visible && (
             <th key={headerInfo.key}>
-              <TableHeader headerInfo={headerInfo} sortRows={() => handleSortRows(headerInfo, index)} />
+              <TableHeader headerInfo={headerInfo}
+                sortParams={sortParams}
+                sortRows={handleSortRows} />
             </th>
           ))}
         </tr>
@@ -55,12 +46,36 @@ function Table({
   )
 }
 
-function TableHeader({ headerInfo, sortRows }: { headerInfo: TableColumnProps, sortRows: (string) => void }) {
-  const { sortable, headerLabel, sort } = headerInfo
+interface TableHeaderProps {
+  headerInfo: TableColumnProps
+  sortRows?: (sort, sortby) => void
+  sortParams: { sort: string, sortBy: string }
+}
+
+function TableHeader({ headerInfo, sortRows, sortParams }: TableHeaderProps) {
+  const { sortable, headerLabel, field } = headerInfo
+  const sort = sortParams.sortBy === field ? sortParams.sort : null
+
+  const onSort = () => {
+
+    let newSort = null
+
+    if (sort === "asc") {
+      newSort = "desc";
+    } else if (sort === "desc") {
+      newSort = null;
+    } else {
+      newSort = "asc";
+    }
+    // console.log({ sortParams, sort, newSort })
+
+    if (field)
+      sortRows(field, newSort)
+  }
 
   if (sortable) {
     return <React.Fragment>
-      {sortable && <button onClick={sortRows} className={classes.sortBtn}>
+      {sortable && <button className={classes.sortBtn} onClick={onSort}>
         {!sort && <ArrowUpDown size={15} />}
         {sort === 'asc' && <ArrowUpAZ size={15} />}
         {sort === 'desc' && <ArrowDownAZ size={15} />}
@@ -103,6 +118,7 @@ function TableColumns({ columns, rowIndex, rows }: {
   columns: TableColumnProps[], rowIndex: number, rows: Array<any>
 }) {
   const row = rows[rowIndex]
+
   return <React.Fragment>
     {columns.map((columnInfo, index) => columnInfo.visible && (
       <td key={`${columnInfo.key}${index}`}>
@@ -118,7 +134,7 @@ function TableColumn({ row, columnInfo }: {
   const { field, formatElement, format, tag, tagList } = columnInfo
 
   if (tag && tagList) {
-    if (field) return (<Tag value={row[field]} tagInfo={tagList} />)
+    if (field && !format) return (<Tag value={row[field]} tagInfo={tagList} />)
     if (format) return (<Tag value={format(row)} tagInfo={tagList} />)
   }
 

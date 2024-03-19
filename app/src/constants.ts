@@ -1,5 +1,11 @@
 import { TagInfo } from "./components/Tag";
 
+export const DEEZER_API = window.location.href; 
+
+// export const DEEZER_API = import.meta.env.DEV
+//   ? "http://localhost:8888/"
+//   : "https://women-fronted-metal-bands.netlify.app/";
+// // teste--
 export const booleanTagList: TagInfo[] = [
   { value: true, text: "Yes", type: "success" },
   { value: false, text: "No", type: "dark" },
@@ -16,9 +22,9 @@ export const filterByDetailsOptions = [
   { value: "viewAll", text: "View All" },
   { value: "active", text: "Active" },
   { value: "disbanded", text: "Disbanded" },
-  { value: "all women", text: "All women" },
-  { value: "mixed", text: "Mixed gender" },
-  { value: "black women", text: "Black women" },
+  { value: "allWomen", text: "All women" },
+  { value: "mixedGender", text: "Mixed gender" },
+  { value: "blackWomen", text: "Black women" },
   { value: "sister", text: "Sisters" },
 ];
 

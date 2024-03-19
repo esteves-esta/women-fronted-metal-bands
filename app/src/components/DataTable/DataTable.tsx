@@ -1,45 +1,48 @@
 import * as React from 'react';
-import Pagination from './Pagination';
+
 import { Columns } from 'lucide-react';
 import TableFilter from './TableFilter';
 import Table from './Table';
 import Grid from './Grid';
 import { TableColumn } from './TableProps';
-import useFilter from './useFilter';
+
 import Dropdown from '../Drowdown'
 import classes from './Table.module.css'
+import LoaderSvg from '../LoaderSvg/LoaderSvg';
 interface Props {
   rows: Array<any>
-  initialPage?: number
+  currentPage: number
+  total: number
   pageSize: number
+  sortParams: { sort: string, sortBy: string }
   columns: TableColumn[]
-  handleRowChange: (val) => void
-  isFiltered: boolean | null,
+  onSortRow: (sort, sortBy) => void
   gridMode: boolean | null,
+  isLoading: boolean | null,
   children?: any
   rowIdName: string
   onRowClick?: (row) => void
+  onFilter?: (search, col) => void
   gridImage?: (row) => { src: string | null, alt: string | null }
 }
 
 function DataTable({
-  initialPage = 0,
   gridMode = false,
   rows,
   rowIdName,
   columns,
   pageSize,
-  isFiltered,
   children,
-  handleRowChange,
+  currentPage,
+  sortParams,
+  onSortRow,
   onRowClick,
+  isLoading,
+  onFilter,
   gridImage
 }: Props) {
 
-  const [initialRow] = React.useState([...rows]);
-  const [currentPage, setCurrentPage] = React.useState(initialPage);
-  const [size, setSize] = React.useState(pageSize);
-  const [lastPage, setLastPage] = React.useState(() => Math.ceil(rows.length / pageSize));
+
 
   const [columnsInfo, setColumnsInfo] = React.useState(() => {
     const newColumns = [...columns];
@@ -49,36 +52,21 @@ function DataTable({
     })
   });
 
-  React.useEffect(() => {
-    setLastPage(Math.ceil(rows.length / size))
-  }, [size])
+  const handleFilter = React.useCallback(
+    (searchValue: string, colKey: string) => {
 
-  React.useEffect(() => {
-    const colSort = columnsInfo.findIndex(col => col.sort != undefined)
-    if (colSort >= 0 && isFiltered) {
-      const newCols = [...columnsInfo]
-      newCols[colSort].sort = undefined
-      setColumnsInfo(newCols)
-    }
+      if (colKey === 'all') onFilter(searchValue, '');
+      else {
+        const col = columnsInfo.find(col => col.key === colKey)
+        // console.log(columnsInfo)
+        if (col) {
+          onFilter(searchValue, col.field);
+        }
+      }
+    },
+    []
+  );
 
-    setCurrentPage(0);
-    setLastPage(Math.ceil(rows.length / size))
-  }, [isFiltered])
-
-  const handleChangePage = (value: number | string) => {
-    if (value) setCurrentPage(Number(value))
-  };
-
-
-  const [handleFilter] = useFilter({
-    columns,
-    initialRow,
-    handleRowChange,
-    setCurrentPage,
-    setLastPage,
-    size,
-    rows,
-  })
 
   return (
     <React.Fragment>
@@ -91,93 +79,42 @@ function DataTable({
       </div>
 
       {children}
-
-      {!gridMode && (
+      {isLoading && (
+        <div className="flex flex-row gap-4 justify-center items-center">
+          <p>Loading </p>
+          <LoaderSvg width={50} height={50} />
+        </div>
+      )}
+      {!gridMode && !isLoading && (
         <Table
           columnsInfo={columnsInfo}
-          size={size}
+          size={pageSize}
           rows={rows}
           currentPage={currentPage}
           rowIdName={rowIdName}
           onRowClick={onRowClick}
-          // sort
-          handleColumnChange={setColumnsInfo}
-          handleRowChange={handleRowChange}
-          initialRow={initialRow}
+          sortParams={sortParams}
+          handleSortRows={onSortRow}
         />
       )}
 
-      {gridMode && (
+      {gridMode && !isLoading && (
         <Grid
           gridImage={gridImage}
-
           columns={columnsInfo}
-          size={size}
+          size={pageSize}
           rows={rows}
           currentPage={currentPage}
           rowIdName={rowIdName}
           onRowClick={onRowClick}
-          // sort
-          handleColumnChange={setColumnsInfo}
-          handleRowChange={handleRowChange}
-          initialRow={initialRow}
+          sortParams={sortParams}
+          handleSortRows={onSortRow}
         />
       )}
 
-      <div className='flex flex-col gap-3 md:gap-0 md:flex-row md:items-center justify-between mt-10 mb-10'>
-        <div className='flex flex-col lg:flex-row gap-5 md:items-center'>
-          <PageSizeSelection
-            size={size}
-            setSize={setSize}
-            totalRows={rows.length}
-          />
-
-        </div>
-        <div className="flex flex-col lg:flex-row lg:items-center gap-3">
-          <p className='label md:mb-0'>
-            Showing <span className='font-black'>{currentPage * size} - {(currentPage + 1) * size}</span> {' '}
-            of {' '}
-            <span className='font-black'>{rows.length}</span> items
-          </p>
-          <Pagination
-            currentPage={currentPage}
-            lastPage={lastPage}
-            onChange={handleChangePage}
-          />
-        </div>
-      </div>
     </React.Fragment>);
 }
 
-function PageSizeSelection({ size, setSize, totalRows }) {
-  const id = React.useId();
-  const selectId = `${id}-rowsPerPage`;
-  const options = [
-    { size: 10 },
-    { size: 20 },
-    { size: 30 },
-    { size: 40 },
-    { size: 50 },
-    { size: totalRows }
-  ];
-
-  return (
-    <div className='flex flex-col lg:flex-row gap-3 lg:items-center'>
-      <label htmlFor={selectId} className='label'>Rows per page</label>
-      <Dropdown
-        radioOptions={options}
-        handleChange={(selected) => {
-          setSize(selected)
-        }}
-        radioValue={size}
-        labelName="size"
-        keyName="size"
-      >
-        {size}
-      </Dropdown>
-    </div>
-  )
-}
 
 function TableColumnToogle({ columns, onChange }) {
   const handleToogleColumns = React.useCallback((checked: boolean, key: string) => {
