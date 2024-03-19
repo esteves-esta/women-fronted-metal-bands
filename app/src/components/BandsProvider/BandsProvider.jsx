@@ -13,7 +13,7 @@ const localStorageUserListKey = "user-liked-tracks-list";
 const localStorageBandKey = "band-list";
 
 async function fetcher(endpoint) {
-  const response = await fetch(`${DEEZER_API}/api${endpoint}`, {
+  const response = await fetch(`${DEEZER_API}api${endpoint}`, {
     method: "GET",
   });
 
