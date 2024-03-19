@@ -66,8 +66,12 @@ export default async (req: Request, context: Context) => {
 
   try {
     responses = await Promise.all(
-      queries.map((query) =>
-        client.ft.aggregate("idx:bands", `${query} ${filters}`, {
+      queries.map((query) => {
+        let queryAndFilter = `${query} ${filters}`;
+        if (query.includes("yearEnded")) {
+          queryAndFilter = query;
+        }
+        return client.ft.aggregate("idx:bands", queryAndFilter, {
           STEPS: [
             {
               type: AggregateSteps.GROUPBY,
@@ -80,8 +84,8 @@ export default async (req: Request, context: Context) => {
               ],
             },
           ],
-        })
-      )
+        });
+      })
     );
 
     //https://github.com/redislabs-training/node-js-crash-course/blob/main/src/utils/dataloader.js
