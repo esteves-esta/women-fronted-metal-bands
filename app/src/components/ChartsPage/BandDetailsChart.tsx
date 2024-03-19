@@ -33,7 +33,7 @@ function BandDetailsChart({ filter }) {
   // return (<React.Fragment>
   //   <div className="flex flex-row gap-4 justify-center items-center">
   //     <p>Loading </p>
-    
+
   //   </div>
   // </React.Fragment>)
 
@@ -42,14 +42,18 @@ function BandDetailsChart({ filter }) {
       <div className={`flex flex-col md:flex-row items-center justify-center mt-5 ${classes.borderBottom}`}>
         <div className={`flex flex-col pb-4 ${classes.borderRight}`}>
           {!isLoading && <PieChartCustom colors={{ scheme: 'purpleRed_green' }} data={chartDetails.allwomenData} />}
-          {isLoading && <LoaderSvg width={50} height={50} />}
+          {isLoading && <div className="flex justify-center items-center" style={{ width: "350px", height: "350px" }}>
+            <LoaderSvg width={50} height={50} />
+          </div>}
           <small className='title2 text-center'>
             All women band
           </small>
         </div>
         <div className='flex flex-col pb-4'>
           {!isLoading && <PieChartCustom colors={{ scheme: 'pink_yellowGreen' }} data={chartDetails.blackwomenData} />}
-          {isLoading &&   <LoaderSvg width={50} height={50} />}
+          {isLoading && <div className="flex justify-center items-center" style={{ width: "350px", height: "350px" }}>
+            <LoaderSvg width={50} height={50} />
+          </div>}
           <small className='title2 text-center'>
             Black women
           </small>
@@ -59,20 +63,24 @@ function BandDetailsChart({ filter }) {
       <div className='flex flex-col md:flex-row  items-center justify-center' >
         <div className={`flex flex-col pb-4 ${classes.borderRight}`}>
           {!isLoading && <PieChartCustom colors={{ scheme: 'category10' }} data={chartDetails.sisterData} />}
-          {isLoading &&   <LoaderSvg width={50} height={50} />}
+          {isLoading && <div className="flex justify-center items-center" style={{ width: "350px", height: "350px" }}>
+            <LoaderSvg width={50} height={50} />
+          </div>}
           <small className='title2 text-center'>
             Sisters
           </small>
         </div>
         <div className='flex flex-col pb-4 '>
           {!isLoading && <PieChartCustom colors={{ scheme: 'paired' }} data={chartDetails.statusData} />}
-          {isLoading &&   <LoaderSvg width={50} height={50} />}
+          {isLoading && <div className="flex justify-center items-center" style={{ width: "350px", height: "350px" }}>
+            <LoaderSvg width={50} height={50} />
+          </div>}
           <small className='title2 text-center'>
             Band status
           </small>
         </div>
       </div>
-    </div>
+    </div >
   )
 
 };

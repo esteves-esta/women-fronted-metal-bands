@@ -1,5 +1,3 @@
 - [ ] coluna status
 - [ ] nome coluna sort - modo grid - icone pequeno
-- [ ] tamanho grafico detalhes
 - [ ] imagens no modo grid -fixo
-- [ ] 
