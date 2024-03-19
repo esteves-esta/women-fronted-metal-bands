@@ -5,10 +5,7 @@ import list from "../../../list-of-metal-bands/list.json";
 import Papa from "papaparse";
 import { downloadCsvFile } from "../../helpers/downloadCsvFile";
 import { ToastContext } from "../ToastProvider";
-
-const BANDS_API = import.meta.env.DEV
-  ? "http://localhost:8888/api"
-  : "https://women-fronted-metal-bands.netlify.app/api";
+import { DEEZER_API } from "../../constants";
 
 export const BandContext = React.createContext();
 
@@ -16,7 +13,7 @@ const localStorageUserListKey = "user-liked-tracks-list";
 const localStorageBandKey = "band-list";
 
 async function fetcher(endpoint) {
-  const response = await fetch(`${BANDS_API}${endpoint}`, {
+  const response = await fetch(`${DEEZER_API}/api${endpoint}`, {
     method: "GET",
   });
 

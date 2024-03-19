@@ -1,10 +1,7 @@
-export const BANDS_API = import.meta.env.DEV
-  ? "http://localhost:8888/chart"
-  : "https://women-fronted-metal-bands.netlify.app/chart";
-
+import { DEEZER_API } from "../../constants";
 
 export async function fetcher(endpoint) {
-  const response = await fetch(`${BANDS_API}${endpoint}`, {
+  const response = await fetch(`${DEEZER_API}/chart${endpoint}`, {
     method: "GET",
   });
 
@@ -15,7 +12,7 @@ export async function fetcher(endpoint) {
 }
 
 export const errorRetry = (error, key, config, revalidate, { retryCount }) => {
-  console.log({key, config})
+  console.log({ key, config });
   // Never retry on 404.
   if (error.status === 404 || error.status === 500) return;
 

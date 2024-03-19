@@ -3,20 +3,17 @@ import React from "react";
 import useSWR from "swr";
 import { BandContext } from "../BandsProvider";
 import { ToastContext } from "../ToastProvider";
+import { DEEZER_API } from "../../constants";
 
 const DEEZER_EMPTY_PICTURE =
   "https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg";
-
-const DEEZER_API = import.meta.env.DEV
-  ? "http://localhost:8888/api/"
-  : "https://women-fronted-metal-bands.netlify.app/api/";
 
 const localStoragePreviewKey = "last-preview-track";
 
 export const DeezerContext = React.createContext();
 
 async function fetcher(endpoint) {
-  const response = await fetch(`${DEEZER_API}${endpoint}`, {
+  const response = await fetch(`${DEEZER_API}api/${endpoint}`, {
     method: "GET",
   });
 
