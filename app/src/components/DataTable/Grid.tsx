@@ -23,7 +23,7 @@ function Grid({
   const end = size * (currentPage + 1);
 
   return (<React.Fragment>
-    <div className='flex flex-col gap-2 md:flex-row md:gap-10 my-10 items-center'>
+    <div className='flex flex-wrap flex-col gap-2 md:flex-row md:gap-5 my-10 items-center'>
       <p className='label mb-0'>Sorting</p>
       {columns.map((headerInfo) => {
         const { sortable, headerLabel, field, visible } = headerInfo
@@ -52,10 +52,11 @@ function Grid({
           >
 
             {headerLabel}
-
-            {!sort && <ArrowUpDown size={15} />}
-            {sort === 'asc' && <ArrowUpAZ size={15} />}
-            {sort === 'desc' && <ArrowDownAZ size={15} />}
+            <div style={{width: "25px"}}>
+              {!sort && <ArrowUpDown size={15} />}
+              {sort === 'asc' && <ArrowUpAZ size={15} />}
+              {sort === 'desc' && <ArrowDownAZ size={15} />}
+            </div>
             <VisuallyHidden.Root>
               Toggle sorting{' '}
               {sort || 'off'}
