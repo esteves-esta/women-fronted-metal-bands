@@ -1,2 +1,0 @@
-- [ ] nome coluna sort - modo grid - icone pequeno
-- [ ] imagens no modo grid -fixo
