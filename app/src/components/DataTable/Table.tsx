@@ -118,6 +118,7 @@ function TableColumns({ columns, rowIndex, rows }: {
   columns: TableColumnProps[], rowIndex: number, rows: Array<any>
 }) {
   const row = rows[rowIndex]
+
   return <React.Fragment>
     {columns.map((columnInfo, index) => columnInfo.visible && (
       <td key={`${columnInfo.key}${index}`}>
@@ -133,7 +134,7 @@ function TableColumn({ row, columnInfo }: {
   const { field, formatElement, format, tag, tagList } = columnInfo
 
   if (tag && tagList) {
-    if (field) return (<Tag value={row[field]} tagInfo={tagList} />)
+    if (field && !format) return (<Tag value={row[field]} tagInfo={tagList} />)
     if (format) return (<Tag value={format(row)} tagInfo={tagList} />)
   }
 
