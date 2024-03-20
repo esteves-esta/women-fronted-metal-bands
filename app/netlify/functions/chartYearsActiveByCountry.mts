@@ -4,7 +4,13 @@ import { AggregateGroupByReducers, AggregateSteps } from "redis";
 import { authAPI } from "./utils/auth";
 
 export default async (req: Request, context: Context) => {
-  authAPI(req);
+   const auth = authAPI(req);
+   if (auth) {
+     return Response.json(auth.message, {
+       status: auth.status,
+     });
+   }
+
 
   let client;
   try {

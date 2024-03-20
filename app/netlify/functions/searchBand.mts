@@ -4,7 +4,13 @@ import { authAPI } from "./utils/auth";
 
 export default async (req: Request, context: Context) => {
   // console.log(context.params);
-  authAPI(req);
+   const auth = authAPI(req);
+   if (auth) {
+     return Response.json(auth.message, {
+       status: auth.status,
+     });
+   }
+
   const { query, col, page, limit, sort, sortBy, filter, growling } =
     context.params;
   let client;

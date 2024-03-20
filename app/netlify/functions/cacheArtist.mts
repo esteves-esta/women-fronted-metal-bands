@@ -3,7 +3,12 @@ import { cacheResponses } from "./utils/cacheDeezerResponse";
 import { authAPI } from "./utils/auth";
 
 export default async (req: Request, context: Context) => {
-  authAPI(req);
+  const auth = authAPI(req);
+  if (auth) {
+    return Response.json(auth.message, {
+      status: auth.status,
+    });
+  }
 
   const { artistId, top } = context.params;
   let enpdoint2 = `null`;
