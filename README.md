@@ -4,7 +4,7 @@ A list of metal bands with women as lead vocalist (with focus on women that can 
 ![Header image written women fronted metal bands](/header-readme.png "Header")
 
 > ### Access app on the link:
-> ### https://esteves-esta.github.io/women-fronted-metal-bands/
+> ### https://women-fronted-metal-bands.netlify.app
 
 ---
 teste
@@ -50,18 +50,20 @@ You can filter bands by how much growling the singer is capable of doing.
     - [x] When track ends play next
     - [x] When band doesn't have a top track - show toast and play next
 - [x] Button to play a random track
-- [x] [Published on GitHub Pages](https://esteves-esta.github.io/women-fronted-metal-bands/)
+- [x] [Published on Nettlify](https://women-fronted-metal-bands.netlify.app)
 - [x] Graphs
 - [x] Add liked songs to a list:
   - [x] open modal and show list
     - [x]  be able to remove item from list
   - [x] Export as csv
 - [x] Make site responsive
+- [x] API to get data - **with Netlify serveless functions**
+  - [x]  All data on redis
+    - [x] Using redis JSON and SEARCH to filter data and get data for charts
 
 ### ✍️ Todo
 > for later
 - [ ] Create playlist or add liked songs list to a playlist on deezer
-- [ ] Put all data on redis
 > maybe
 - [ ] ?? Graph - how many bands start with each letter of the alphabet ??
 
@@ -95,20 +97,24 @@ You can filter bands by how much growling the singer is capable of doing.
       yarn i
       ```
 
-2. Run api proxy
-
-      ```
-      npm run proxy 
-      ```
+2. Install nettlify globally
+  ```
+  npm install netlify-cli -g
+  ```
       
-      or
+  2.1 Run nettlify dev
+    ```
+    npm netlify dev 
+    ```
+    
+    or
 
-      ```
-      yarn proxy
-      ```
+    ```
+    yarn netlify dev
+    ```
 
 
-3. Run dev server
+1. Run dev server
 
       ```
       npm run dev 
