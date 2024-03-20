@@ -3,7 +3,13 @@ import { authAPI } from "./utils/auth";
 import { loadData } from "./utils/database";
 
 export default async (req: Request, context: Context) => {
-  authAPI(req);
+   const auth = authAPI(req);
+   if (auth) {
+     return Response.json(auth.message, {
+       status: auth.status,
+     });
+   }
+
 
   const result = await loadData();
   // console.log(`Data updated with ${result.errorCount} errors.`);

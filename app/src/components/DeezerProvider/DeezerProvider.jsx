@@ -15,6 +15,9 @@ export const DeezerContext = React.createContext();
 async function fetcher(endpoint) {
   const response = await fetch(`${DEEZER_API}api/${endpoint}`, {
     method: "GET",
+    headers: {
+      "X-API-KEY": import.meta.env.VITE_MY_API_KEY,
+    },
   });
 
   const json = await response.json();

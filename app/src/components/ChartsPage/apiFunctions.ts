@@ -3,6 +3,9 @@ import { DEEZER_API } from "../../constants";
 export async function fetcher(endpoint) {
   const response = await fetch(`${DEEZER_API}chart${endpoint}`, {
     method: "GET",
+    headers: {
+      "X-API-KEY": import.meta.env.VITE_MY_API_KEY,
+    },
   });
 
   const json = await response.json();

@@ -1,7 +1,4 @@
 function Home() {
-
-  // {import.meta.env.VITE_MY_API_KEY}
-
   return <article>
     <section className='home'>
       <div className="text-justify">
