@@ -1,27 +1,32 @@
-https://www.metaladies.com/bands/vehemal/
-https://www.metal-archives.com/bands/Velle_Witch/62475
-https://www.metalmusicarchives.com/artist/wench/?ac=wench
-https://www.discogs.com/artist/6688356-Caged-Existence
-
-
------
-imber - https://www.deezer.com/br/album/10501652 - https://www.youtube.com/@Imberofficial/videos
-indiscipline - https://www.deezer.com/br/artist/6790517 - https://www.metal-archives.com/bands/Indiscipline/3540385486
-indisposed - https://www.metaladies.com/bands/indisposed/
-mortarium - https://www.metal-archives.com/bands/Mortarium/3540343859
-infernal-pussy - https://www.reverbnation.com/infernalpussy
-jaded-lady - 51407612 - https://www.metal-archives.com/bands/Jaded_Lady/95643
-Junkyard Lipstick - https://junkyardlipstick.bandcamp.com/music - https://www.metal-archives.com/bands/Junkyard_Lipstick/3540358276
-jadish - https://www.metaladies.com/bands/jadish/
-https://www.metal-archives.com/bands/Loretta/35130
-https://www.reverbnation.com/matriarch?fb_og_action=reverbnation_fb:unknown&fb_og_object=reverbnation_fb:artist&player_client_id=j29dsi7kl&utm_campaign=a_profile_page&utm_content=reverbnation_fb:artist&utm_medium=facebook_og&utm_source=reverbnation_fb:unknown
-https://www.franticamber.com/
-https://girlschool.co.uk/
+//https://open.spotify.com/playlist/6VLyqry0Zrr5EdTbKT7SVa
+// ================================
+  {
+    "deezerId": 0,
+    "deezerRecommendationId": null,
+    "band": "",
+    "genre": [
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+    ],
+    "country": "",
+    "countryCode": "",
+    "yearStarted": 0,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "",
+    "sister": false
+  },https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes
+// ================================
 -- http://www.listdiff.com/compare-2-lists-difference-tool
-
+// ================================
 .nema
 13 winters
-17 crash
+
 ACCIDENTAL PRESIDENT
 Alain Johanne
 Apocalyptica
@@ -42,8 +47,8 @@ FAYE WEBSTER
 Folterkammer
 Furies
 
-Girlschool
-HANABIE.
+
+
 HER ALONE
 HOLY SHIRE
 Heriot
@@ -53,7 +58,7 @@ Isyana Sarasvati
 Lilith Czar
 Lutharo
 
-Lyric Noel 
+ 
 MNEMOS
 Metalite
 Mimi Barks
@@ -65,7 +70,7 @@ New Years Day
 PANZERCHRIST
 
 PROJECT RENEGADE
-Predatory Void
+
 SANGHAM
 SINHERESY
 Saint Agnes
@@ -79,7 +84,7 @@ Tarja Turunen
 The Pretty Reckless
 VALAR MORGHULIS
 Voice of Baceprot
-WICKED ASYLUM
+
 Wolvennest
 a cloud forest
 a winter lost
@@ -96,7 +101,7 @@ aetherea
 aevum
 after evolution
 afterlife
-against myself
+
 
 aherusia
 ahna
@@ -198,7 +203,7 @@ bagronk
 bare infinity
 battlelore
 
-beaten victoriouses
+
 beautiful sin
 belligerence
 benatnash
@@ -224,7 +229,7 @@ crimson sun
 crusade of bards
 dama
 dark horse white horse
-dark sarah
+
 darkspace
 darzamat
 dask
@@ -346,7 +351,6 @@ soulgrind
 soulspell
 spiritus tenebrae
 star eternal
-straightout
 streben
 strynn
 synthwailer
