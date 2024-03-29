@@ -1,4 +1,5 @@
 import { createClient, SchemaFieldTypes } from "redis";
+import { v4 as uuidv4 } from "uuid";
 
 let client;
 
@@ -137,7 +138,7 @@ export async function loadData() {
   // fill db
   const responses = await Promise.all(
     listJSON.map((item) => {
-      let key = crypto.randomUUID();
+      let key = uuidv4();
       if (item.deezerId) key = item.deezerId;
 
       const activeFor = formatYearsActive(item);
