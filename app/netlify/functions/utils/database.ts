@@ -138,8 +138,9 @@ export async function loadData() {
   // fill db
   const responses = await Promise.all(
     listJSON.map((item) => {
-      let key = uuidv4();
+      let key = item?.key;
       if (item.deezerId) key = item.deezerId;
+      if (!item?.key) key = uuidv4();
 
       const activeFor = formatYearsActive(item);
 
