@@ -92,8 +92,10 @@ export async function cacheResponses(
         "$",
         responseResult
       );
+
       if (endpoint === "artist" && endpoint2 === "null") {
         const itemFound = listJSON.find((item) => item.deezerId === Number(id));
+
         if (itemFound) {
           clientBandDB = await connectClient();
           if (responseResult.picture_big === DEEZER_EMPTY_PICTURE)
@@ -112,7 +114,7 @@ export async function cacheResponses(
     await clientUpstash.quit();
     await clientBandDB.quit();
   } catch (e) {
-    console.log(`cache error: ${e}`);
+    console.error(`cache error: ${e}`);
   }
 
   return {

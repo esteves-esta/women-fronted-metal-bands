@@ -17,7 +17,7 @@ export async function connectClient() {
   });
 
   client.on("error", function (err) {
-    console.log("client error: ", err);
+    console.error("client error: ", err);
   });
   await client.connect();
   return client;
@@ -111,6 +111,10 @@ export async function loadData() {
           AS: "yearStarted",
           SORTABLE: true,
         },
+        "$.genre.*": {
+          type: SchemaFieldTypes.TEXT,
+          AS: "genre",
+        },
         "$.currentVocalists.*": {
           type: SchemaFieldTypes.TEXT,
           AS: "currentVocalists",
@@ -139,8 +143,8 @@ export async function loadData() {
   const responses = await Promise.all(
     listJSON.map((item) => {
       let key = item?.key;
-      if (item.deezerId) key = item.deezerId;
       if (!item?.key) key = uuidv4();
+      if (item.deezerId) key = item.deezerId;
 
       const activeFor = formatYearsActive(item);
 

@@ -96,7 +96,7 @@ export default async (req: Request, context: Context) => {
 
     //https://github.com/redislabs-training/node-js-crash-course/blob/main/src/utils/dataloader.js
     responses.forEach((response, index) => {
-      console.log(response);
+      // console.log(response);
       const result = response.results[0];
       if (response.total >= 1) {
         switch (index) {
