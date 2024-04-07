@@ -31,7 +31,9 @@
     "band": "Abnormality",
     "deezerId": 4722651,
     "deezerRecommendationId": 640204942,
-    "genre": [],
+    "genre": [
+      "Death Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -56,7 +58,9 @@
     "band": "Acid King",
     "deezerId": 478207,
     "deezerRecommendationId": 2173327237,
-    "genre": [],
+    "genre": [
+      "Stoner Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -81,7 +85,9 @@
     "band": "Ad Infinitum",
     "deezerId": 3719401,
     "deezerRecommendationId": 1903363937,
-    "genre": [],
+    "genre": [
+      "Symphonic Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": true,
     "allWomenBand": false,
@@ -133,7 +139,9 @@
     "band": "Aephanemer",
     "deezerId": 12249836,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": [
+      "Melodic Death Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -160,7 +168,7 @@
     "deezerRecommendationId": 127526455,
     "genre": [
       "Punk Rock",
-      "alternative rock"
+      "Alternative Rock"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -186,7 +194,9 @@
     "band": "Agrimonia",
     "deezerId": 577518,
     "deezerRecommendationId": 66412050,
-    "genre": [],
+    "genre": [
+      "Heavy Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -211,7 +221,9 @@
     "band": "Aldious",
     "deezerId": 55187772,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": [
+      "Heavy Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
@@ -268,7 +280,10 @@
     "band": "Alt Blk Era",
     "deezerId": 149783892,
     "deezerRecommendationId": 2295212185,
-    "genre": [],
+    "genre": [
+      "Nu-Metal",
+      "Alternative Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": true,
     "allWomenBand": true,
@@ -294,7 +309,9 @@
     "band": "Amaranthe",
     "deezerId": 807296,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": [
+      "Heavy Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -319,7 +336,9 @@
     "band": "Amberian Dawn",
     "deezerId": 803372,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": [
+      "Symphonic Power Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -343,7 +362,9 @@
     "band": "Ankor",
     "deezerId": 505689,
     "deezerRecommendationId": 2043781867,
-    "genre": [],
+    "genre": [
+      "Alternative Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -368,7 +389,9 @@
     "band": "Arch Enemy",
     "deezerId": 1392,
     "deezerRecommendationId": 377443421,
-    "genre": [],
+    "genre": [
+      "Melodic Death Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -393,7 +416,9 @@
     "band": "Arkona (Аркона)",
     "deezerId": 122901,
     "deezerRecommendationId": 137605255,
-    "genre": [],
+    "genre": [
+      "Folk Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -418,7 +443,9 @@
     "band": "As Everything Unfolds",
     "deezerId": 11646615,
     "deezerRecommendationId": 1129221012,
-    "genre": [],
+    "genre": [
+      "Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -443,7 +470,9 @@
     "band": "Aspect Iris",
     "deezerId": 114449742,
     "deezerRecommendationId": 2451036925,
-    "genre": [],
+    "genre": [
+      "Metalcore"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -468,7 +497,9 @@
     "band": "Avatarium",
     "deezerId": 5126036,
     "deezerRecommendationId": 1759137177,
-    "genre": [],
+    "genre": [
+      "Doom Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -493,7 +524,9 @@
     "band": "Babymetal",
     "deezerId": 7805012,
     "deezerRecommendationId": 1095802182,
-    "genre": [],
+    "genre": [
+      "Kawaii Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -520,7 +553,10 @@
     "band": "Band-Maid",
     "deezerId": 52494612,
     "deezerRecommendationId": 1839009147,
-    "genre": [],
+    "genre": [
+      "Heavy Metal",
+      "Hard Rock"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
@@ -545,7 +581,10 @@
     "band": "Banshee",
     "deezerId": 4033867,
     "deezerRecommendationId": 1737810097,
-    "genre": [],
+    "genre": [
+      "Fairy Metal",
+      "Trap Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -570,7 +609,10 @@
     "band": "Battle Beast",
     "deezerId": 400967,
     "deezerRecommendationId": 1674324307,
-    "genre": [],
+    "genre": [
+      "Power Metal",
+      "Heavy Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -595,7 +637,9 @@
     "band": "Beyond The Black",
     "deezerId": 7308658,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": [
+      "Symphonic Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -619,7 +663,9 @@
     "band": "Black Mirrors",
     "deezerId": 5895526,
     "deezerRecommendationId": 510177802,
-    "genre": [],
+    "genre": [
+      "Hard Rock"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -644,7 +690,9 @@
     "band": "Black September",
     "deezerId": 116966,
     "deezerRecommendationId": 16304691,
-    "genre": [],
+    "genre": [
+      "Alternative Rock"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -696,7 +744,10 @@
     "band": "Bloodlined Calligraphy",
     "deezerId": 416824,
     "deezerRecommendationId": 11494313,
-    "genre": [],
+    "genre": [
+      "Metalcore",
+      "Christian Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -721,7 +772,7 @@
     "band": "Bridear",
     "deezerId": 5429637,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Power Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
@@ -745,7 +796,7 @@
     "band": "Burning Witches",
     "deezerId": 12466006,
     "deezerRecommendationId": 1246997692,
-    "genre": [],
+    "genre": ["Power Metal", "Heavy Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
@@ -770,7 +821,7 @@
     "band": "Butcher Babies",
     "deezerId": 667614,
     "deezerRecommendationId": 1959455057,
-    "genre": [],
+    "genre": ["Heavy Metal"],
     "recommendationIsCover": true,
     "blackWomen": false,
     "allWomenBand": false,
@@ -796,7 +847,7 @@
     "band": "Caged Existence",
     "deezerId": 14017145,
     "deezerRecommendationId": 678806862,
-    "genre": [],
+    "genre": ["Hardcore"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -821,7 +872,7 @@
     "band": "Castle",
     "deezerId": null,
     "deezerRecommendationId": 553750132,
-    "genre": [],
+    "genre": ["Heavy Metal", "Doom Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -872,7 +923,7 @@
     "band": "Cerebral Bore",
     "deezerId": 1702013,
     "deezerRecommendationId": 70981758,
-    "genre": [],
+    "genre": ["Death Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -897,7 +948,7 @@
     "band": "Cinnamon Babe",
     "deezerId": 157759112,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Nu-Metal"],
     "recommendationIsCover": false,
     "blackWomen": true,
     "allWomenBand": false,
@@ -922,7 +973,7 @@
     "band": "Cobra Spell",
     "deezerId": 104005552,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Heavy Rock"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
@@ -946,7 +997,7 @@
     "band": "Conquer Divide",
     "deezerId": 5172291,
     "deezerRecommendationId": 2196075967,
-    "genre": [],
+    "genre": ["Metalcore"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
@@ -971,7 +1022,7 @@
     "band": "Cripper",
     "deezerId": 288542,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Thrash Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1024,7 +1075,7 @@
     "band": "Crypta",
     "deezerId": 129797752,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Death Metal"],
     "recommendationIsCover": false,
     "blackWomen": true,
     "allWomenBand": true,
@@ -1049,7 +1100,7 @@
     "band": "Cyntia",
     "deezerId": 1450237,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Heavy Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
@@ -1073,7 +1124,7 @@
     "band": "Dead Sara",
     "deezerId": 552744,
     "deezerRecommendationId": 63534071,
-    "genre": [],
+    "genre": ["Hard Rock"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1098,7 +1149,7 @@
     "band": "Deathless Legacy",
     "deezerId": 5417809,
     "deezerRecommendationId": 1909915937,
-    "genre": [],
+    "genre": ["Heavy Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1123,7 +1174,7 @@
     "band": "Defacing God",
     "deezerId": 81105342,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Gothic Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1148,7 +1199,7 @@
     "band": "Delain",
     "deezerId": 12013,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Symphonic Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1174,7 +1225,7 @@
     "deezerId": null,
     "deezerRecommendationId": null,
     "genre": [
-      "Heavy metal"
+      "Heavy Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -1205,7 +1256,7 @@
     "band": "Devilskin",
     "deezerId": 4085267,
     "deezerRecommendationId": 2374883865,
-    "genre": [],
+    "genre": ["Alternative Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1230,7 +1281,7 @@
     "band": "Diva Satanica",
     "deezerId": 52936322,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Melodic Death Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
@@ -1255,7 +1306,7 @@
     "band": "Dream State",
     "deezerId": 1459813,
     "deezerRecommendationId": 1945755727,
-    "genre": [],
+    "genre": ["Power Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1280,7 +1331,7 @@
     "band": "Drown This City",
     "deezerId": 10214974,
     "deezerRecommendationId": 684939672,
-    "genre": [],
+    "genre": ["Hard Rock"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1305,7 +1356,7 @@
     "band": "Dying Wish",
     "deezerId": 138915322,
     "deezerRecommendationId": 1404437842,
-    "genre": [],
+    "genre": ["Metalcore"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1357,7 +1408,7 @@
     "band": "Edge Of Paradise",
     "deezerId": 1439815,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Heavy Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1382,7 +1433,7 @@
     "band": "Elegy Of Madness",
     "deezerId": 1432240,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Symphonic Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1407,7 +1458,7 @@
     "band": "Elvellon",
     "deezerId": 7402134,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Symphonic Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1432,7 +1483,7 @@
     "band": "Employed To Serve",
     "deezerId": 5550954,
     "deezerRecommendationId": 2113432317,
-    "genre": [],
+    "genre": ["Heavy Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1457,7 +1508,7 @@
     "band": "Entheos",
     "deezerId": 327046,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Progressive Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1482,7 +1533,7 @@
     "band": "Epica",
     "deezerId": 1343,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Symphonic Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1507,7 +1558,7 @@
     "band": "Eva Under Fire",
     "deezerId": 9484842,
     "deezerRecommendationId": 1522477252,
-    "genre": [],
+    "genre": ["Hard Rock"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1532,7 +1583,7 @@
     "band": "Evanescence",
     "deezerId": 98,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Alternative Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1557,7 +1608,7 @@
     "band": "Exit Eden",
     "deezerId": 1167650,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Symphonic Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
@@ -1585,7 +1636,7 @@
     "band": "Eyes Set To Kill",
     "deezerId": 383459,
     "deezerRecommendationId": 108598704,
-    "genre": [],
+    "genre": ["Hardcore"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1610,7 +1661,7 @@
     "band": "Fit For Rivals",
     "deezerId": 400615,
     "deezerRecommendationId": 2547572112,
-    "genre": [],
+    "genre": ["Punk Rock"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1635,7 +1686,7 @@
     "band": "Folterkammer",
     "deezerId": 106436522,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Symphonic Black Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1660,7 +1711,7 @@
     "band": "Frozen Crown",
     "deezerId": 13795355,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Melodic Metal", "Groove Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1686,9 +1737,9 @@
     "deezerId": 14279115,
     "deezerRecommendationId": null,
     "genre": [
-      "metalcore",
-      "progressive metal",
-      "alternative rock"
+      "Metalcore",
+      "Progressive Metal",
+      "Alternative Rock"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -1714,7 +1765,7 @@
     "band": "Gel",
     "deezerId": 177185,
     "deezerRecommendationId": 2138759137,
-    "genre": [],
+    "genre": ["Hardcore Punk"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1739,7 +1790,7 @@
     "band": "Grai",
     "deezerId": 4045336,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Folk Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1846,7 +1897,7 @@
     "band": "Halestorm",
     "deezerId": 108493,
     "deezerRecommendationId": null,
-    "genre": [],
+    "genre": ["Hard Rock"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -1873,8 +1924,8 @@
     "deezerRecommendationId": null,
     "genre": [
       "Metalcore",
-      "sludge metal",
-      "doom metal"
+      "Sludge Metal",
+      "Doom Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -1900,7 +1951,7 @@
     "band": "Holy Moses",
     "deezerId": 328673,
     "deezerRecommendationId": 2208296837,
-    "genre": [],
+    "genre": ["Thrash Metal"],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
@@ -2107,7 +2158,7 @@
     "deezerRecommendationId": null,
     "genre": [
       "Thrash Metal",
-      "Heavy metal"
+      "Heavy Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -2309,7 +2360,7 @@
     "deezerId": 331450,
     "deezerRecommendationId": null,
     "genre": [
-      "Power metal"
+      "Power Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -2387,7 +2438,7 @@
     "deezerRecommendationId": 1724097757,
     "genre": [
       "Punk Rock",
-      "alternative rock"
+      "Alternative Rock"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -2666,7 +2717,7 @@
     "deezerId": 125461302,
     "deezerRecommendationId": null,
     "genre": [
-      "melodic death metal"
+      "Melodic Death Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -3248,7 +3299,7 @@
     "deezerId": 8694638,
     "deezerRecommendationId": null,
     "genre": [
-      "deathcore"
+      "Deathcore"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -3753,7 +3804,7 @@
     "deezerId": 75609372,
     "deezerRecommendationId": null,
     "genre": [
-      "extreme metal"
+      "Extreme Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -3781,9 +3832,9 @@
     "deezerId": null,
     "deezerRecommendationId": 554114772,
     "genre": [
-      "stoner metal",
+      "Stoner Metal",
       "Heavy Metal",
-      "doom metal"
+      "Doom Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -4392,7 +4443,7 @@
     "deezerId": 193518877,
     "deezerRecommendationId": null,
     "genre": [
-      "dark ambience "
+      "Dark Ambience"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -4499,7 +4550,7 @@
     "deezerId": null,
     "deezerRecommendationId": null,
     "genre": [
-      "Heavy Metal "
+      "Heavy Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -4582,7 +4633,7 @@
     "deezerId": null,
     "deezerRecommendationId": null,
     "genre": [
-      "Melodic Death Metal "
+      "Melodic Death Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -4608,7 +4659,7 @@
     "deezerId": 3269,
     "deezerRecommendationId": null,
     "genre": [
-      "BLACK METAL"
+      "Black Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -4744,7 +4795,7 @@
     "deezerId": 480856,
     "deezerRecommendationId": null,
     "genre": [
-      "Hard Rock "
+      "Hard Rock"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -4928,7 +4979,7 @@
     "deezerId": 1368020,
     "deezerRecommendationId": null,
     "genre": [
-      "Gothic metal "
+      "Gothic Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -5009,7 +5060,9 @@
     "deezerId": 9458516,
     "deezerRecommendationId": null,
     "genre": [
-      "Thrash/Death/Black Metal"
+      "Thrash Metal",
+      "Black Metal",
+      "Death Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -5037,7 +5090,7 @@
     "deezerRecommendationId": null,
     "genre": [
       "Grunge",
-      "Heavy metal"
+      "Heavy Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -5064,8 +5117,8 @@
     "deezerId": 7966280,
     "deezerRecommendationId": 2514852281,
     "genre": [
-      "Hard rock",
-      "alternative metal"
+      "Hard Rock",
+      "Alternative Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -5169,7 +5222,7 @@
     "deezerId": 5069091,
     "deezerRecommendationId": null,
     "genre": [
-      "Hard Rock "
+      "Hard Rock"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -5300,7 +5353,7 @@
     "deezerId": 13319599,
     "deezerRecommendationId": null,
     "genre": [
-      " Black Metal"
+      "Black Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -5614,8 +5667,8 @@
     "deezerId": 52496822,
     "deezerRecommendationId": null,
     "genre": [
-      "Hardcore punk",
-      "heavy metal"
+      "Hardcore Punk",
+      "Heavy Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -5717,14 +5770,16 @@
     "deezerRecommendationId": null,
     "band": "Junkyard Lipstick",
     "genre": [
-      " Thrash Metal"
+      "Thrash Metal"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
     "growling": 3,
     "pastVocalists": [],
-    "currentVocalists": ["Jo Smit"],
+    "currentVocalists": [
+      "Jo Smit"
+    ],
     "country": "South Africa",
     "countryCode": "ZA",
     "yearStarted": 2011,
@@ -5737,13 +5792,17 @@
     "deezerId": 85654042,
     "deezerRecommendationId": 781080392,
     "band": "Loretta",
-    "genre": ["Heavy Metal"],
+    "genre": [
+      "Heavy Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
     "growling": 1,
     "pastVocalists": [],
-    "currentVocalists": ["Daria Hrubá"],
+    "currentVocalists": [
+      "Daria Hrubá"
+    ],
     "country": "Czechia",
     "countryCode": "CZ",
     "yearStarted": 1989,
@@ -5756,13 +5815,17 @@
     "deezerId": 1253538,
     "deezerRecommendationId": null,
     "band": "Frantic Amber",
-    "genre": ["Melodic Death Metal"],
+    "genre": [
+      "Melodic Death Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
     "growling": 3,
     "pastVocalists": [],
-    "currentVocalists": ["Elizabeth Andrews"],
+    "currentVocalists": [
+      "Elizabeth Andrews"
+    ],
     "country": "Sweden",
     "countryCode": "SE",
     "yearStarted": 2008,
@@ -5775,13 +5838,17 @@
     "deezerId": 9921,
     "deezerRecommendationId": null,
     "band": "Girlschool ",
-    "genre": ["Heavy Metal"],
+    "genre": [
+      "Heavy Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
     "growling": 0,
     "pastVocalists": [],
-    "currentVocalists": ["Kim McAuliffe"],
+    "currentVocalists": [
+      "Kim McAuliffe"
+    ],
     "country": "United Kingdom",
     "countryCode": "GB",
     "yearStarted": 1978,
@@ -5794,13 +5861,19 @@
     "deezerId": 142990212,
     "deezerRecommendationId": null,
     "band": "HANABIE.",
-    "genre": ["Metalcore"],
+    "genre": [
+      "Metalcore"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": true,
     "growling": 3,
     "pastVocalists": [],
-    "currentVocalists": ["Yukina", "Matsuri", "Hettsu "],
+    "currentVocalists": [
+      "Yukina",
+      "Matsuri",
+      "Hettsu "
+    ],
     "country": "Japan",
     "countryCode": "JP",
     "yearStarted": 2015,
@@ -5813,13 +5886,17 @@
     "deezerId": 1428745,
     "deezerRecommendationId": null,
     "band": "AGAINST MYSELF",
-    "genre": ["Symphonic Metal"],
+    "genre": [
+      "Symphonic Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
     "growling": 0,
     "pastVocalists": [],
-    "currentVocalists": ["Elizabeth Amoedo"],
+    "currentVocalists": [
+      "Elizabeth Amoedo"
+    ],
     "country": "Spain",
     "countryCode": "ES",
     "yearStarted": 2009,
@@ -5838,7 +5915,9 @@
     "allWomenBand": true,
     "growling": 0,
     "pastVocalists": [],
-    "currentVocalists": ["Veronica Banshee"],
+    "currentVocalists": [
+      "Veronica Banshee"
+    ],
     "country": "Italy",
     "countryCode": "IT",
     "yearStarted": 2009,
@@ -5846,17 +5925,24 @@
     "recommendation": "",
     "links": "https://www.wickedasylum.com/",
     "sister": false
-  },{
+  },
+  {
     "deezerId": 196556777,
     "deezerRecommendationId": null,
     "band": "Predatory Void",
-    "genre": ["Black/Sludge/Death Metal"],
+    "genre": [
+      "Black Metal",
+      "Sludge Metal",
+      "Death Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
     "growling": 3,
     "pastVocalists": [],
-    "currentVocalists": ["Lina R"],
+    "currentVocalists": [
+      "Lina R"
+    ],
     "country": "Belgium",
     "countryCode": "BE",
     "yearStarted": 2022,
@@ -5864,7 +5950,8 @@
     "recommendation": "",
     "links": "https://centurymedia.bandcamp.com/album/seven-keys-to-the-discomfort-of-being",
     "sister": false
-  },{
+  },
+  {
     "deezerId": 0,
     "deezerRecommendationId": null,
     "band": "beaten victoriouses",
@@ -5874,7 +5961,10 @@
     "allWomenBand": false,
     "growling": 3,
     "pastVocalists": [],
-    "currentVocalists": ["Çaruk Revan", "Lord Faustoos"],
+    "currentVocalists": [
+      "Çaruk Revan",
+      "Lord Faustoos"
+    ],
     "country": "Iran",
     "countryCode": "IR",
     "yearStarted": 2005,
@@ -5882,17 +5972,22 @@
     "recommendation": "",
     "links": "https://beatenvictoriouses.bandcamp.com/album/fatwa",
     "sister": false
-  },{
+  },
+  {
     "deezerId": 5736607,
     "deezerRecommendationId": null,
     "band": "dark sarah",
-    "genre": ["Symphonic Metal"],
+    "genre": [
+      "Symphonic Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
     "growling": 0,
     "pastVocalists": [],
-    "currentVocalists": ["Heidi Parviainen"],
+    "currentVocalists": [
+      "Heidi Parviainen"
+    ],
     "country": "Finland",
     "countryCode": "FI",
     "yearStarted": 2012,
@@ -5900,17 +5995,22 @@
     "recommendation": "",
     "links": "https://darksarah.com/",
     "sister": false
-  },{
+  },
+  {
     "deezerId": 0,
     "deezerRecommendationId": null,
     "band": "bendida",
-    "genre": ["Symphonic Power Metal"],
+    "genre": [
+      "Symphonic Power Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
     "growling": 0,
     "pastVocalists": [],
-    "currentVocalists": ["Kremena Nikolova"],
+    "currentVocalists": [
+      "Kremena Nikolova"
+    ],
     "country": "Bulgaria",
     "countryCode": "BG",
     "yearStarted": 2008,
@@ -5918,23 +6018,466 @@
     "recommendation": "",
     "links": "https://bendida.bandcamp.com/album/first-of-the-heroes",
     "sister": false
-  },{
+  },
+  {
     "deezerId": 7654864,
     "deezerRecommendationId": null,
     "band": "Metaphoric Mind",
-    "genre": ["Progressive Metal"],
+    "genre": [
+      "Progressive Metal"
+    ],
     "recommendationIsCover": false,
     "blackWomen": false,
     "allWomenBand": false,
     "growling": 3,
     "pastVocalists": [],
-    "currentVocalists": ["Melissa Bruschi"],
+    "currentVocalists": [
+      "Melissa Bruschi"
+    ],
     "country": "Italy",
     "countryCode": "IT",
     "yearStarted": 2013,
     "yearEnded": 0,
     "recommendation": "",
     "links": "https://metaphoricmind.bandcamp.com/",
+    "sister": false
+  },
+  {
+    "deezerId": 173976697,
+    "deezerRecommendationId": null,
+    "band": "Harper",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Harper"
+    ],
+    "country": "United Kingdom",
+    "countryCode": "UK",
+    "yearStarted": 2022,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://thatyellaharper.com/",
+    "sister": false
+  },
+  {
+    "deezerId": 7426884,
+    "deezerRecommendationId": null,
+    "band": "April Art",
+    "genre": [
+      "Alternative Rock"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 2,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Lisa-Marie Watz"
+    ],
+    "country": "Germany",
+    "countryCode": "DE",
+    "yearStarted": 2014,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.aprilart.de/",
+    "sister": false
+  },
+  {
+    "deezerId": 0,
+    "deezerRecommendationId": null,
+    "band": "shewolf",
+    "genre": [
+      "Symphonic Power Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 1,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "The Shaman - Angel Chatzitheodorou"
+    ],
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "yearStarted": 2021,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.instagram.com/shewolf.band/",
+    "sister": false
+  },
+  {
+    "deezerId": 164567517,
+    "deezerRecommendationId": null,
+    "band": "after evolution",
+    "genre": [
+      "Symphonic Metal",
+      "Gothic Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Nikolette Olšáková"
+    ],
+    "country": "Czechia",
+    "countryCode": "CZ",
+    "yearStarted": 2013,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://afterevolution.bandcamp.com/album/war-of-the-worlds",
+    "sister": false
+  },
+  {
+    "deezerId": 12481124,
+    "deezerRecommendationId": null,
+    "band": "Holy Wars",
+    "genre": [],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Kat Leon"
+    ],
+    "country": "United States of America",
+    "countryCode": "US",
+    "yearStarted": 2013,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.holywarsmusic.com/",
+    "sister": false
+  },
+  {
+    "deezerId": 11659495,
+    "deezerRecommendationId": null,
+    "band": "Arcane Existence",
+    "genre": [
+      "Symphonic Melodic Black Metal",
+      "Symphonic Melodic Death Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      " Jade Ordonez "
+    ],
+    "country": "United States of America",
+    "countryCode": "US",
+    "yearStarted": 2016,
+    "yearEnded": 2024,
+    "recommendation": "",
+    "links": "https://arcaneexistence.bandcamp.com/music",
+    "sister": false
+  },
+  {
+    "deezerId": 4811101,
+    "deezerRecommendationId": null,
+    "band": "KALIDIA",
+    "genre": [
+      "Symphonic Metal",
+      "Power Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Nicoletta Rosellini"
+    ],
+    "country": "Italy",
+    "countryCode": "IT",
+    "yearStarted": 2010,
+    "yearEnded": 2022,
+    "recommendation": "",
+    "links": "https://www.youtube.com/user/KalidiaBandOfficial",
+    "sister": false
+  },
+  {
+    "deezerId": 0,
+    "deezerRecommendationId": null,
+    "band": "Will of Hatred",
+    "genre": [
+      "Symphonic Black Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Damiena"
+    ],
+    "country": "Russia",
+    "countryCode": "RU",
+    "yearStarted": 2015,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.youtube.com/@willofhatred4396",
+    "sister": false
+  },
+  {
+    "deezerId": 5110701,
+    "deezerRecommendationId": null,
+    "band": "crimson sun",
+    "genre": [
+      "Melodic Heavy Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 1,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Sini Seppälä"
+    ],
+    "country": "Finland",
+    "countryCode": "FI",
+    "yearStarted": 2005,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "",
+    "sister": false
+  },
+  {
+    "deezerId": 398157,
+    "deezerRecommendationId": null,
+    "band": "chelsea wolfe",
+    "genre": [
+      "Gothic Rock",
+      "Doom Metal",
+      "Folk",
+      "Doom Folk"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [],
+    "country": "United States of America",
+    "countryCode": "US",
+    "yearStarted": 2010,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://chelseawolfe.com/",
+    "sister": false
+  },
+  {
+    "deezerId": 206244617,
+    "deezerRecommendationId": null,
+    "band": "NOVA DOLL",
+    "genre": [
+      "Heavy stoner rock"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Casey Cuff "
+    ],
+    "country": "Canada",
+    "countryCode": "CA",
+    "yearStarted": 2023,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://novadoll.bandcamp.com/",
+    "sister": false
+  },
+  {
+    "deezerId": 60891852,
+    "deezerRecommendationId": null,
+    "band": "Mimi Barks",
+    "genre": [
+      "Doom Trap"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Mimi Barks"
+    ],
+    "country": "Germany",
+    "countryCode": "DE",
+    "yearStarted": 2022,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://mimibarks.com/",
+    "sister": false
+  },
+  {
+    "deezerId": 129736352,
+    "deezerRecommendationId": null,
+    "band": "CONSPIRACY OF BLACKNESS",
+    "genre": [
+      "Melodic Heavy Metal",
+      "Nu-Metal",
+      "Gothic metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Grazia Riccardo"
+    ],
+    "country": "Italy",
+    "countryCode": "IT",
+    "yearStarted": 2008,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.conspiracyofblackness.com/",
+    "sister": false
+  },
+  {
+    "deezerId": 0,
+    "deezerRecommendationId": null,
+    "band": "VICTORIA K",
+    "genre": [
+      "Symphonic Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 1,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Victoria Knight"
+    ],
+    "country": "Australia",
+    "countryCode": "AU",
+    "yearStarted": 0,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.victoriakmusicofficial.com/",
+    "sister": false
+  },
+  {
+    "deezerId": 49727502,
+    "deezerRecommendationId": null,
+    "band": "ESPERFALL",
+    "genre": [
+      "Symphonic Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Nóra 'Nonee Darkling' Sima"
+    ],
+    "country": "Hungary",
+    "countryCode": "HU",
+    "yearStarted": 2016,
+    "yearEnded": 0,
+    "recommendation": "https://www.youtube.com/channel/UCoObSdLZlNl0IpR5iNkiVZA",
+    "links": "",
+    "sister": false
+  },
+  {
+    "deezerId": 160901752,
+    "deezerRecommendationId": null,
+    "band": "Madame Neptune",
+    "genre": [
+      "Alternative Rock",
+      "Occult Rock"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 3,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Liss Eulenherz"
+    ],
+    "country": "Germany",
+    "countryCode": "De",
+    "yearStarted": 2022,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "",
+    "sister": false
+  },
+  {
+    "deezerId": 58735,
+    "deezerRecommendationId": null,
+    "band": "Bex",
+    "genre": [
+      "Punk Rock"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 2,
+    "pastVocalists": [],
+    "currentVocalists": [],
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "yearStarted": 2023,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.bexofficial.co.uk/",
+    "sister": false
+  },
+  {
+    "deezerId": 62300862,
+    "deezerRecommendationId": null,
+    "band": "Apolinara",
+    "genre": [
+      "Melodic Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 2,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Apolinara "
+    ],
+    "country": "Ukraine",
+    "countryCode": "UA",
+    "yearStarted": 0,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.apolinara.com/",
+    "sister": false
+  },
+  {
+    "deezerId": 0,
+    "deezerRecommendationId": null,
+    "band": "Angel Nation",
+    "genre": [
+      "Symphonic Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "growling": 0,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Elina Siirala"
+    ],
+    "country": "Finland",
+    "countryCode": "FI",
+    "yearStarted": 2011,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.angelnationofficial.com/bio",
     "sister": false
   }
 ]
