@@ -210,8 +210,8 @@ function BandsProvider({ children }) {
   }
 
   function downloadFiltered() {
-    if (!data) return;
-    const content = Papa.unparse(data.document, {
+    if (!bands) return;
+    const content = Papa.unparse(bands, {
       quotes: false,
       delimiter: ",",
       header: true,

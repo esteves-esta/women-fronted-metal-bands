@@ -7,7 +7,7 @@ export async function connectCacheClient() {
   });
 
   client.on("error", function (err) {
-    console.log("client error: ", err);
+    console.error("client error: ", err);
   });
 
   await client.connect();
