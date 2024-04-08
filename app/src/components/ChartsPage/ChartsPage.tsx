@@ -8,6 +8,9 @@ import BandYearsActiveChart from './YearsActiveChart'
 import BandDetailsChart from './BandDetailsChart'
 import ToogleGroupButton from '../ToogleGroupButton';
 import useMatchMedia from '../../helpers/useMatchMedia';
+import GenreChart from './GenresChart';
+import BandNamesChart from './BandNamesChart';
+import BandNameBeginningLetter from './BandNameBeginningLetter';
 
 function ChartsPage() {
   const [bandStatusFilter, setBandStatusFilter] = React.useState('viewAll')
@@ -72,6 +75,18 @@ function ChartsPage() {
     </div>
 
     {/* ---------------------------------- */}
+    <div>
+      <hr className='text-center my-16' />
+      <p className='text-center title2'>
+        Genres
+      </p>
+    </div>
+
+    <div>
+      <GenreChart />
+    </div>
+
+
 
     <div>
       <hr className='text-center my-16' />
@@ -91,6 +106,7 @@ function ChartsPage() {
           } />
       </div>
     </div>
+
 
     <div>
       <BandDetailsChart filter={bandStatus2Filter} />
@@ -124,7 +140,34 @@ function ChartsPage() {
     </div>
 
 
+    {/* ---------------------------------- */}
+    <div>
+      <hr className='text-center my-16' />
+      <p className='text-center title2'>
+        Most common words on band names
+      </p>
+    </div>
 
+    <div>
+      <BandNamesChart />
+    </div>
+
+
+    {/* ---------------------------------- */}
+
+    <div>
+      <hr className='text-center my-16' />
+      <p className='text-center title2'>
+        Most common starting letter of a band name
+      </p>
+    </div>
+
+    <div>
+      <BandNameBeginningLetter />
+    </div>
+
+
+    {/* ---------------------------------- */}
 
   </div>;
 }

@@ -64,8 +64,6 @@ You can filter bands by how much growling the singer is capable of doing.
 ### ✍️ Todo
 > for later
 - [ ] Create playlist or add liked songs list to a playlist on deezer
-> maybe
-- [ ] ?? Graph - how many bands start with each letter of the alphabet ??
 
 ---
 
