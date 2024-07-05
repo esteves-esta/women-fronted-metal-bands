@@ -6892,5 +6892,56 @@
     "activeFor": 19,
     "numberOfVocalists": 1,
     "id": "band:5417809"
+  },
+  {
+    "growling": 3,
+    "band": "Manixive",
+    "deezerId": 5817879,
+    "deezerRecommendationId": 77799446,
+    "genre": [
+      "Death Metal",
+      "Melodic Groove"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Irohana / Silver"
+    ],
+    "country": "South Korea",
+    "countryCode": "KR",
+    "yearStarted": 2013,
+    "yearEnded": 2016,
+    "recommendation": "",
+    "links": "https://www.youtube.com/@manixive6168/videos",
+    "sister": false,
+    "numberOfVocalists": 1,
+    "id": "band:5817879"
+  },
+  {
+    "growling": 3,
+    "band": "Clownus",
+    "deezerId": 50344552,
+    "deezerRecommendationId": 631460582,
+    "genre": [
+      "Deathcore"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Irohana / イ ロセ"
+    ],
+    "country": "South Korea",
+    "countryCode": "KR",
+    "yearStarted": 2017,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://clownus.bandcamp.com/track/defect",
+    "sister": false,
+    "numberOfVocalists": 1,
+    "id": "band:50344552"
   }
 ]
