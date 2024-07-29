@@ -6943,5 +6943,83 @@
     "sister": false,
     "numberOfVocalists": 1,
     "id": "band:50344552"
+  },
+  {
+    "growling": 2,
+    "band": "VENUES",
+    "deezerId": 12011736,
+    "deezerRecommendationId": null,
+    "genre": [
+      "post-hardcore"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "LELA"
+    ],
+    "country": "Germany",
+    "countryCode": "DE",
+    "yearStarted": 2017,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://arising-empire.com/artists/venues",
+    "sister": false,
+    "numberOfVocalists": 1,
+    "id": "band:12011736"
+  }
+
+  ,
+
+  {
+    "growling": 2,
+    "band": "FINAL STAGE",
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "genre": [
+      "Alternative Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Giorgia Romanin"
+    ],
+    "country": "Italy",
+    "countryCode": "IT",
+    "yearStarted": 2020,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.youtube.com/@finalstage8995",
+    "sister": false,
+    "numberOfVocalists": 1,
+    "id": null
+  },
+  {
+    "growling": 3,
+    "band": "Pistacia ",
+    "deezerId": null,
+    "deezerRecommendationId": null,
+    "genre": [
+      "Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Vic Gregg"
+    ],
+    "country": "United States of America",
+    "countryCode": "USA",
+    "yearStarted": 2019,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.youtube.com/@finalstage8995",
+    "sister": false,
+    "numberOfVocalists": 1,
+    "id": null
   }
 ]
