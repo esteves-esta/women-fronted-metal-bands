@@ -7021,5 +7021,30 @@
     "sister": false,
     "numberOfVocalists": 1,
     "id": null
+  },
+  {
+    "growling": 3,
+    "band": "BURIAL PATH ",
+    "deezerId": 263714801,
+    "deezerRecommendationId": 2770208811,
+    "genre": [
+      "deathcore "
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Aïcha Finnleikr"
+    ],
+    "country": "United States of America",
+    "countryCode": "USA",
+    "yearStarted": 2023,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.youtube.com/@BurialPath",
+    "sister": false,
+    "numberOfVocalists": 1,
+    "id": "band:263714801"
   }
 ]
