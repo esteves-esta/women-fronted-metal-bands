@@ -7050,7 +7050,7 @@
     "deezerId": 11543993,
     "deezerRecommendationId": 2812896012,
     "genre": [
-      "deathcore "
+      "metalcore"
     ],
     "recommendationIsCover": false,
     "blackWomen": false,
@@ -7068,5 +7068,31 @@
     "sister": false,
     "numberOfVocalists": 1,
     "id": "band:11543993"
+  },
+  {
+    "growling": 1,
+    "band": "Lithian",
+    "deezerId": 15314317,
+    "deezerRecommendationId": 526172962,
+    "genre": [
+      "Symphonic Metal",
+      "Gothic Metal "
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Annie Kraken"
+    ],
+    "country": "Mexico",
+    "countryCode": "MX",
+    "yearStarted": 2018,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://www.youtube.com/channel/UCHS9cEhqJcOHzvBTwscPORQ",
+    "sister": false,
+    "numberOfVocalists": 1,
+    "id": "band:15314317"
   }
 ]

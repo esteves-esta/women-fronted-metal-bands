@@ -49,7 +49,7 @@ export async function loadData() {
   }
 
   // clean db
-  await client.flushDb();
+  // await client.flushDb();
 
   // Create an index.
   try {
@@ -138,13 +138,12 @@ export async function loadData() {
       // process.exit(1);
     }
   }
-  // const newItemsCount = listJSON.length - itemsOnDB;
-  // const newItemsToAdd = listJSON.splice(itemsOnDB, newItemsCount);
+  const newItemsCount = listJSON.length - itemsOnDB;
+  const newItemsToAdd = listJSON.splice(itemsOnDB, newItemsCount);
 
   // fill db
   const responses = await Promise.all(
-    // newItemsToAdd.map((item) => {
-    listJSON.map((item) => {
+    newItemsToAdd.map((item) => {
       let key = item?.key;
       if (!item?.key) key = uuidv4();
       if (item.deezerId) key = item.deezerId;
