@@ -12,8 +12,8 @@ export async function connectClient() {
     password: databasePassword,
     socket: {
       host: "redis-19242.c228.us-central1-1.gce.cloud.redislabs.com",
-      port: 19242,
-    },
+      port: 19242
+    }
   });
 
   client.on("error", function (err) {
@@ -34,7 +34,7 @@ export async function loadData() {
     console.log("cliente " + e);
     return {
       errorCount: 1,
-      message: "Connection error!",
+      message: "Connection error!"
     };
   }
 
@@ -44,12 +44,12 @@ export async function loadData() {
   if (itemsOnDB === listJSON.length) {
     return {
       errorCount: 0,
-      message: "Nothing updated, database is up to date !!",
+      message: "Nothing updated, database is up to date !!"
     };
   }
 
   // clean db
-  // await client.flushDb();
+  await client.flushDb();
 
   // Create an index.
   try {
@@ -59,74 +59,74 @@ export async function loadData() {
         "$.allWomenBand": {
           type: SchemaFieldTypes.TAG,
           AS: "allWomenBand",
-          SORTABLE: true,
+          SORTABLE: true
         },
         "$.band": {
           type: SchemaFieldTypes.TEXT,
           AS: "band",
-          SORTABLE: true,
+          SORTABLE: true
         },
         "$.blackWomen": {
           type: SchemaFieldTypes.TAG,
           AS: "blackWomen",
-          SORTABLE: true,
+          SORTABLE: true
         },
         "$.country": {
           type: SchemaFieldTypes.TEXT,
           AS: "country",
-          SORTABLE: true,
+          SORTABLE: true
         },
         "$.countryCode": {
           type: SchemaFieldTypes.TEXT,
           AS: "countryCode",
-          SORTABLE: true,
+          SORTABLE: true
         },
         "$.growling": {
           type: SchemaFieldTypes.NUMERIC,
           AS: "growling",
-          SORTABLE: true,
+          SORTABLE: true
         },
         "$.activeFor": {
           type: SchemaFieldTypes.NUMERIC,
           AS: "activeFor",
-          SORTABLE: true,
+          SORTABLE: true
         },
         "$.numberOfVocalists": {
           type: SchemaFieldTypes.NUMERIC,
           AS: "numberOfVocalists",
-          SORTABLE: true,
+          SORTABLE: true
         },
         "$.sister": {
           type: SchemaFieldTypes.TAG,
           AS: "sister",
-          SORTABLE: true,
+          SORTABLE: true
         },
         "$.yearEnded": {
           type: SchemaFieldTypes.NUMERIC,
           AS: "yearEnded",
-          SORTABLE: true,
+          SORTABLE: true
         },
         "$.yearStarted": {
           type: SchemaFieldTypes.NUMERIC,
           AS: "yearStarted",
-          SORTABLE: true,
+          SORTABLE: true
         },
         "$.genre.*": {
           type: SchemaFieldTypes.TEXT,
-          AS: "genre",
+          AS: "genre"
         },
         "$.currentVocalists.*": {
           type: SchemaFieldTypes.TEXT,
-          AS: "currentVocalists",
+          AS: "currentVocalists"
         },
         "$.pastVocalists.*": {
           type: SchemaFieldTypes.TEXT,
-          AS: "pastVocalists",
-        },
+          AS: "pastVocalists"
+        }
       },
       {
         ON: "JSON",
-        PREFIX: "band:",
+        PREFIX: "band:"
       }
     );
   } catch (e) {
@@ -138,9 +138,12 @@ export async function loadData() {
       // process.exit(1);
     }
   }
+  // const newItemsCount = listJSON.length - itemsOnDB;
+  // const newItemsToAdd = listJSON.splice(itemsOnDB, newItemsCount);
 
   // fill db
   const responses = await Promise.all(
+    // newItemsToAdd.map((item) => {
     listJSON.map((item) => {
       let key = item?.key;
       if (!item?.key) key = uuidv4();
@@ -151,7 +154,7 @@ export async function loadData() {
       return client.json.set(`band:${key}`, "$", {
         ...item,
         activeFor,
-        numberOfVocalists: item.currentVocalists.length,
+        numberOfVocalists: item.currentVocalists.length
       });
     })
   );
