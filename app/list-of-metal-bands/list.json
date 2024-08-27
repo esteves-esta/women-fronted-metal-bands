@@ -6968,10 +6968,7 @@
     "sister": false,
     "numberOfVocalists": 1,
     "id": "band:12011736"
-  }
-
-  ,
-
+  },
   {
     "growling": 2,
     "band": "FINAL STAGE",
@@ -7046,5 +7043,30 @@
     "sister": false,
     "numberOfVocalists": 1,
     "id": "band:263714801"
+  },
+  {
+    "growling": 3,
+    "band": "Calva Louise",
+    "deezerId": 11543993,
+    "deezerRecommendationId": 2812896012,
+    "genre": [
+      "deathcore "
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Jess Allanic"
+    ],
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "yearStarted": 2016,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "https://calvalouise.bandcamp.com/",
+    "sister": false,
+    "numberOfVocalists": 1,
+    "id": "band:11543993"
   }
 ]
