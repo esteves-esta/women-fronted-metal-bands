@@ -49,7 +49,7 @@ export async function loadData() {
   }
 
   // clean db
-  await client.flushDb();
+  // await client.flushDb();
 
   // Create an index.
   try {
