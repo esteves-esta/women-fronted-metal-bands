@@ -7095,4 +7095,30 @@
     "numberOfVocalists": 1,
     "id": "band:15314317"
   }
+  {
+    "growling": 1,
+    "band": "Exist Trace",
+    "deezerId": 390353,
+    "deezerRecommendationId": 1010315292,
+    "genre": [
+      "Alternative metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": true,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "Jyou",
+      "Miko"
+    ],
+    "country": "Japan",
+    "countryCode": "JP",
+    "yearStarted": 2003,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "http://www.exist-trace.com/",
+    "sister": false,
+    "numberOfVocalists": 2,
+    "id": "band:390353"
+  }
 ]
