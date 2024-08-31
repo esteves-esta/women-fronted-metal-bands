@@ -1,4 +1,6 @@
-# List of women fronted metalbands
+# Version 1.0
+
+## List of women fronted metalbands
 A list of metal bands with women as lead vocalist (with focus on women that can growl)
 
 ![Header image written women fronted metal bands](/header-readme.png "Header")
