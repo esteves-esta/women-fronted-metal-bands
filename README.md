@@ -5,6 +5,7 @@ A list of metal bands with women as lead vocalist (with focus on women that can 
 
 > ### Access app on the link:
 > ### https://women-fronted-metal-bands.netlify.app
+> [VERSION 1.0 OF THE SITE](https://version-1-0--women-fronted-metal-bands.netlify.app/)
 
 ---
 teste
