@@ -1,9 +1,90 @@
-// @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Lexend+Peta:wght@900&display=swap');
+import { createGlobalStyle } from "styled-components";
 
+const GlobalStyles = createGlobalStyle`
+  /*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+/* ------------ */
 /*
   Theme and global variables
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Lexend+Peta:wght@900&display=swap');
 
 :root {
   --font-family-title: 'Cinzel', serif;
@@ -24,7 +105,17 @@
   --bg-7: rgba(77, 77, 77, 0.308);
 
 
-  --gradient-bg1: linear-gradient(180deg, #16011A 8%, rgba(0, 0, 0, 0.99) 18%, rgba(0, 0, 0, 0.911) 100%);
+  --gradient-bg1: linear-gradient(
+  180deg,
+  hsl(291deg 96% 10%) 0%,
+  hsl(291deg 95% 8%) 24%,
+  hsl(290deg 95% 7%) 35%,
+  hsl(291deg 93% 6%) 45%,
+  hsl(291deg 91% 5%) 55%,
+  hsl(291deg 88% 3%) 65%,
+  hsl(291deg 100% 1%) 76%,
+  hsl(0deg 0% 0%) 100%
+);
   --gradient-bg2: linear-gradient(143deg, #000 7.25%, #2C0732 57.22%, rgba(42, 1, 49, 0.91) 89.5%), #FFF;
 
   --color-primary: hsl(291, 58%, 24%);
@@ -50,21 +141,6 @@
   --color-deep-4: hsl(265, 60%, 15%);
 }
 
-*::selection {
-  background-color: var(--color-primary);
-}
-
-/*
-  Custom styles
-*/
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
-}
 
 body {
   text-rendering: optimizeLegibility;
@@ -81,3 +157,7 @@ body {
   background-size: 100%;
   background-image: var(--gradient-bg1);
 }
+
+`;
+
+export default GlobalStyles;

@@ -73,7 +73,6 @@ You can filter bands by how much growling the singer is capable of doing.
 - Vite
 - React
 - Typescript
-- Tailwind CSS
 - SWR
 - Lucide React - icons
 - Papaparse - json to csv
