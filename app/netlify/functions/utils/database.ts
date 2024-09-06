@@ -41,7 +41,7 @@ export async function loadData() {
   //https://redis.io/commands/dbsize/
   const itemsOnDB = await client.dbSize();
 
-  if (itemsOnDB === listJSON.length) {
+  if (itemsOnDB === listJSON.length || itemsOnDB > listJSON.length) {
     return {
       errorCount: 0,
       message: "Nothing updated, database is up to date !!"
