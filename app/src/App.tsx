@@ -5,7 +5,7 @@ import ToastProvider from "./components/ToastProvider";
 import Header from "./components/Header";
 import { Outlet } from "react-router-dom";
 import GlobalStyles from "./GlobalStyles";
-import { Github } from "lucide-react";
+import Footer from "./components/Footer";
 
 function App() {
   React.useEffect(() => {
@@ -26,8 +26,6 @@ function App() {
     };
   }, []);
 
-  const year = new Date().getFullYear();
-
   return (
     <ToastProvider>
       <BandsProvider>
@@ -36,18 +34,7 @@ function App() {
 
           <Outlet />
 
-          <footer>
-            <div>
-              <a
-                href="https://github.com/esteves-esta/women-fronted-metal-bands"
-                target="_blank"
-              >
-                <Github size={18} />
-                <small>designed & developed by esteves-esta © {year}</small>
-              </a>
-            </div>
-            <small>built with: React / RadixUI / Vite / LucideIcons</small>
-          </footer>
+          <Footer />
 
           <GlobalStyles />
         </DeezerProvider>
