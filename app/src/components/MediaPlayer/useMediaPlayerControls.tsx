@@ -1,17 +1,14 @@
 import React from "react";
-import { PlayCircle, PauseCircle } from "lucide-react";
 import { DeezerContext } from '../DeezerProvider';
-import classes from './MediaPlayer.module.css';
-import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
-import VolumeButton from "./VolumeButton";
+
 /* 
 credits: 
 - https://www.joyofreact.com/
 - https://dev.to/lukewduncan/how-to-build-an-audio-player-with-html5-and-the-progress-element-387m
  */
 
-function MediaPlayerControls({ }, ref) {
-  const { src, isPlaying, setIsPlaying, playNextTrack } = React.useContext(DeezerContext)
+function useMediaPlayerControls( ref ) {
+  const { src, isPlaying, setIsPlaying } = React.useContext(DeezerContext)
 
   const [progressValue, setProgressValue] = React.useState(0);
   const [currentTimeFormatted, setCurrentTimeFormatted] = React.useState<number | string>(0);
@@ -90,43 +87,13 @@ function MediaPlayerControls({ }, ref) {
       setProgressValue(ref.current.currentTime / ref.current.duration);
   }
 
-  return <div className={classes.controls} >
-    <button
-      className="clearButton"
-      onKeyDown={(event) => {
-        if (event.code === "Space") {
-          event.stopPropagation();
-        }
-      }}
-      onClick={() => {
-        setIsPlaying(!isPlaying);
-      }}
-    >
-      {isPlaying ? <PauseCircle /> : <PlayCircle />}
-      <VisuallyHidden.Root>Toggle playing</VisuallyHidden.Root>
-    </button>
-
-    {!!ref.current?.duration &&
-      (<p className="mb-0 font-bold">
-        00:{currentTimeFormatted}
-        {/* / 00:{Math.round(ref.current.duration)} */}
-      </p>)
-    }
-
-    <audio
-      onTimeUpdate={updateProgressBar}
-      ref={ref}
-      src={src}
-      onEnded={() => {
-        setIsPlaying(false);
-        playNextTrack();
-      }}
-    />
-    <progress ref={progressBarRef} value={progressValue} max="1" />
-
-    <VolumeButton ref={ref} />
-  </div>
+  return {
+    updateProgressBar,
+    progressValue,
+    currentTimeFormatted,
+    progressBarRef
+  }
 }
 
-export default React.forwardRef(MediaPlayerControls)
+export default useMediaPlayerControls;
 

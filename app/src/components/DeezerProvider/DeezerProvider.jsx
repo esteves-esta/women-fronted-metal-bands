@@ -230,13 +230,13 @@ function DeezerProvider({ children }) {
 
   const state = {
     deezerTrackInfo: previewTrack,
-    title: previewTrack && previewTrack?.title ? previewTrack.title : null,
+    title: previewTrack && previewTrack?.title ? previewTrack.title : "teste",
     cover:
       previewTrack && previewTrack?.album
         ? previewTrack.album.cover_small
         : null,
     artist:
-      previewTrack && previewTrack?.artist ? previewTrack.artist.name : null,
+      previewTrack && previewTrack?.artist ? previewTrack.artist.name : "TESTNADO",
     src: previewTrack && previewTrack?.preview ? previewTrack.preview : null,
     currentBandId,
     trackIsLoading: trackIsLoading || topTrackIsLoading,
