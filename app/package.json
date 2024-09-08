@@ -65,5 +65,6 @@
     "redis-commander": "^0.8.0",
     "styled-components": "^6.1.13",
     "swr": "^2.2.4"
-  }
+  },
+  "packageManager": "yarn@4.4.1"
 }

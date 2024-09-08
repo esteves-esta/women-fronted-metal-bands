@@ -5,7 +5,7 @@ import LoaderSvg from "../../components/LoaderSvg";
 import MediaPlayerControls from "./MediaPlayerControls";
 
 import classes from "./MediaPlayer.module.css";
-import UserListModal from "../UserListModal";
+// import UserListModal from "../UserListModal";
 import { ListMusic, Heart } from "lucide-react";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { BandContext } from "../BandsProvider";
@@ -17,7 +17,7 @@ function MediaPlayer() {
   return (
     <div
       className={classes.mediaPlayer}
-      style={{ display: src ? "block" : "none" }}
+      
     >
       <MediaPlayerTopBar />
 
@@ -91,7 +91,7 @@ function MediaPlayerTopBar() {
           </span>
         </button>
       </div>
-      <UserListModal isOpen={isOpen} handleOpen={setIsOpen} />
+      {/* <UserListModal isOpen={isOpen} handleOpen={setIsOpen} /> */}
     </>
   );
 }

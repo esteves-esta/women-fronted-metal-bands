@@ -2,7 +2,6 @@ import * as React from "react";
 import Toast from "../../components/Toast";
 import { BandContext } from "../../components/BandsProvider";
 function App() {
-  const year = new Date().getFullYear();
   const {
     bands,
     total,
@@ -25,8 +24,9 @@ function App() {
       <Toast />
 
       {bands.map((band) => (
-        <div>{band.name}</div>
-      ))}
+        <div key={band.id} > {band.band}</div>
+      ))
+      }
     </>
   );
 }

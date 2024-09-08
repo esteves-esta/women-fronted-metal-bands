@@ -7,8 +7,8 @@ export function authAPI(req: Request) {
   //   apiKey,
   // });
 
-  if (requestKey !== apiKey) {
-    return { message: "Use not authenticated, if you want the website data you can get the data as an .csv from the website.", status: 401 };
-  }
+  // if (requestKey !== apiKey) {
+  //   return { message: "Use not authenticated, if you want the website data you can get the data as an .csv from the website.", status: 401 };
+  // }
   return null;
 }

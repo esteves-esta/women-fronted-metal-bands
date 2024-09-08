@@ -22,6 +22,7 @@ const GlobalStyles = createGlobalStyle`
 */
 html,
 body {
+  min-height:100%
   height: 100%;
 }
 
@@ -87,8 +88,8 @@ h6 {
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Lexend+Peta:wght@900&display=swap');
 
 :root {
-  --font-family-title: 'Cinzel', serif;
-  --font-family-title2: 'Lexend Peta', sans-serif;
+  --primary-font-family: 'Cinzel', serif;
+  --secondary-font-family: 'Lexend Peta', sans-serif;
 
   --text-title: #fff;
   --text-color: rgba(255, 255, 255, 0.829);
@@ -153,11 +154,10 @@ body {
   color: var(--text-color);
 
   background-repeat: no-repeat;
-  // background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-size: 100%;
-  background-image: var(--gradient-bg1);
+  background-image: var(--gradient-bg1); 
 }
-
 `;
 
 export default GlobalStyles;

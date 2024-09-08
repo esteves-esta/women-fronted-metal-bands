@@ -2,7 +2,8 @@ import * as React from "react";
 import BandsProvider from "./components/BandsProvider";
 import DeezerProvider from "./components/DeezerProvider";
 import ToastProvider from "./components/ToastProvider";
-import { Outlet, NavLink } from "react-router-dom";
+import Header from "./components/Header";
+import { Outlet } from "react-router-dom";
 import GlobalStyles from "./GlobalStyles";
 import { Github } from "lucide-react";
 
@@ -31,34 +32,7 @@ function App() {
     <ToastProvider>
       <BandsProvider>
         <DeezerProvider>
-          <header>
-            <nav>
-              <ul>
-                <li>
-                  <NavLink to="/">Bands</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/table">table view</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/graphs">graphs</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/about">About</NavLink>
-                </li>
-              </ul>
-            </nav>
-
-            <div>
-              <h1>
-                Women Fronted <span>metal bands</span>
-              </h1>
-              <p>
-                This is a project to compile a list of metal bands that have
-                women as lead vocalists.
-              </p>
-            </div>
-          </header>
+          <Header />
 
           <Outlet />
 
