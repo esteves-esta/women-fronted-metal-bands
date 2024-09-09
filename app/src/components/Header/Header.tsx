@@ -117,6 +117,7 @@ const Nav = styled.nav`
     flex-direction: row;
 
     ul {
+      width: revert;
       flex-direction: row;
       gap: 10px;
       li {
