@@ -4,20 +4,36 @@ import useSWR from "swr";
 import { BandContext } from "../BandsProvider";
 import { ToastContext } from "../ToastProvider";
 import { DEEZER_API } from "../../constants";
+import { TrackInfo } from "../../models/Band";
 
 const DEEZER_EMPTY_PICTURE =
   "https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg";
 
 const localStoragePreviewKey = "last-preview-track";
 
-export const DeezerContext = React.createContext();
+interface IDeezerContext {
+  deezerTrackInfo: TrackInfo;
+  title: string;
+  cover: string | null;
+  artist: string | null;
+  src: string | null;
+  currentBandId: number | undefined;
+  trackIsLoading: boolean;
+  isPlaying: boolean;
+  setIsPlaying: (value: boolean) => void;
+  getTrackPreview: (bandId: number | null) => void;
+  playNextTrack: () => void;
+  getArtistPicture: (bandId: number | null) => void;
+}
+
+export const DeezerContext = React.createContext<Partial<IDeezerContext>>({});
 
 async function fetcher(endpoint) {
   const response = await fetch(`${DEEZER_API}api/${endpoint}`, {
     method: "GET",
     headers: {
-      "X-API-KEY": import.meta.env.VITE_MY_API_KEY,
-    },
+      "X-API-KEY": import.meta.env.VITE_MY_API_KEY
+    }
   });
 
   const json = await response.json();
@@ -57,22 +73,22 @@ function DeezerProvider({ children }) {
   const {
     data: trackInfo,
     error: trackError,
-    isLoading: trackIsLoading,
+    isLoading: trackIsLoading
   } = useSWR(trackId ? `deezer/track/${trackId}` : null, fetcher, {
     errorRetry,
-    revalidateOnFocus: false,
+    revalidateOnFocus: false
   });
 
   const {
     data: topTrackInfo,
     error: topTrackError,
-    isLoading: topTrackIsLoading,
+    isLoading: topTrackIsLoading
   } = useSWR(
     bandTopTrack ? `deezer/artist/${bandTopTrack}/top` : null,
     fetcher,
     {
       errorRetry,
-      revalidateOnFocus: false,
+      revalidateOnFocus: false
     }
   );
   const { data: artist, isLoading: artistLoading } = useSWR(
@@ -80,7 +96,7 @@ function DeezerProvider({ children }) {
     fetcher,
     {
       errorRetry,
-      revalidateOnFocus: false,
+      revalidateOnFocus: false
     }
   );
 
@@ -89,7 +105,7 @@ function DeezerProvider({ children }) {
     if (!foundBand) return;
     if (!foundBand.deezerPicture) return;
 
-    setArtistId(founbandId);
+    setArtistId(foundBand.id);
   };
 
   React.useEffect(() => {
@@ -122,7 +138,7 @@ function DeezerProvider({ children }) {
         title: "Deezer API Error",
         description: `An error ocurred to get the top track  ${bandMessage} of Deezer API: ${
           topTrackError.error ? topTrackError.error?.message : ""
-        }`,
+        }`
       });
       setBandTopTrack(undefined);
       setCurrentBandId(undefined);
@@ -180,7 +196,7 @@ function DeezerProvider({ children }) {
 
       openToast({
         title: "Loading next band..",
-        description: `Band ${bandName} doesn't have a top track.`,
+        description: `Band ${bandName} doesn't have a top track.`
       });
       playNextTrack();
       return;
@@ -236,7 +252,9 @@ function DeezerProvider({ children }) {
         ? previewTrack.album.cover_small
         : null,
     artist:
-      previewTrack && previewTrack?.artist ? previewTrack.artist.name : "TESTNADO",
+      previewTrack && previewTrack?.artist
+        ? previewTrack.artist.name
+        : "TESTNADO",
     src: previewTrack && previewTrack?.preview ? previewTrack.preview : null,
     currentBandId,
     trackIsLoading: trackIsLoading || topTrackIsLoading,
@@ -244,7 +262,7 @@ function DeezerProvider({ children }) {
     setIsPlaying,
     getTrackPreview,
     playNextTrack,
-    getArtistPicture,
+    getArtistPicture
   };
 
   return (

@@ -6,8 +6,42 @@ import Papa from "papaparse";
 import { downloadCsvFile } from "../../helpers/downloadCsvFile";
 import { ToastContext } from "../ToastProvider";
 import { DEEZER_API } from "../../constants";
+import { Band, TrackInfo } from "../../models/Band";
 
-export const BandContext = React.createContext();
+interface IBandContext {
+  databaseChecked: boolean;
+  total: number;
+  isLoading: boolean;
+  totalFiltered: number;
+  bands: Band[];
+  currentPage: number;
+  searchParams: Params;
+  handleFilter: (growIntensity: number, detailFilter: string) => void;
+  handleQuery: (query?: string, col?: string) => void;
+  handlePageChange: (page: number) => void;
+  handleSort: (sortBy: string, sort: string) => void;
+  downloadAll: () => void;
+  downloadFiltered: () => void;
+  downloadUserList: () => void;
+
+  userLikedTracksList: TrackInfo[];
+  saveTrackToUserList: (deezerTrackInfo: TrackInfo) => void;
+  clearUserList: () => void;
+  removeTrackFromUserList: (id: string) => void;
+}
+
+interface Params {
+  query: string | null;
+  col: string | null;
+  page: number;
+  limit: number;
+  sort: "desc" | "asc";
+  sortBy: string;
+  filter: string | null;
+  growling: number | null;
+}
+
+export const BandContext = React.createContext<Partial<IBandContext>>({});
 
 const localStorageUserListKey = "user-liked-tracks-list";
 const localStorageBandKey = "band-list";
@@ -16,8 +50,8 @@ async function fetcher(endpoint) {
   const response = await fetch(`${DEEZER_API}api${endpoint}`, {
     method: "GET",
     headers: {
-      "X-API-KEY": import.meta.env.VITE_MY_API_KEY,
-    },
+      "X-API-KEY": import.meta.env.VITE_MY_API_KEY
+    }
   });
 
   const json = await response.json();
@@ -49,9 +83,9 @@ function BandsProvider({ children }) {
   const [databaseChecked, setDatabaseChecked] = React.useState(false);
   const [total, setTotal] = React.useState(0);
   const [totalFiltered, setTotalFiltered] = React.useState(0);
-  const [bands, setBands] = React.useState([]);
+  const [bands, setBands] = React.useState<Band[]>([]);
   const [currentPage, setCurrentPage] = React.useState(0);
-  const [searchParams, setSearchParams] = React.useState({
+  const [searchParams, setSearchParams] = React.useState<Params>({
     query: null,
     col: null,
     page: 0,
@@ -59,7 +93,7 @@ function BandsProvider({ children }) {
     sort: "desc",
     sortBy: "growling",
     filter: null,
-    growling: null,
+    growling: null
   });
 
   const { data: isUpdated, error: updateError } = useSWR(
@@ -67,7 +101,7 @@ function BandsProvider({ children }) {
     fetcher,
     {
       errorRetry,
-      revalidateOnFocus: false,
+      revalidateOnFocus: false
     }
   );
 
@@ -84,7 +118,7 @@ function BandsProvider({ children }) {
     fetcher,
     {
       errorRetry,
-      revalidateOnFocus: false,
+      revalidateOnFocus: false
     }
   );
 
@@ -112,14 +146,14 @@ function BandsProvider({ children }) {
     if (alreadyOnList) {
       openToast({
         title: "Already on list",
-        description: `This track has already been added to the playlist.`,
+        description: `This track has already been added to the playlist.`
       });
       return;
     }
     setUserLikedTracksList([...userLikedTracksList, deezerTrackInfo]);
     openToast({
       title: "Add track to list",
-      description: `${deezerTrackInfo.title} added to list.`,
+      description: `${deezerTrackInfo.title} added to list.`
     });
   };
 
@@ -139,7 +173,7 @@ function BandsProvider({ children }) {
         ...params,
         query: query ? query : null,
         col: col ? col : null,
-        page: 0,
+        page: 0
       };
     });
   }, []);
@@ -149,7 +183,7 @@ function BandsProvider({ children }) {
       return {
         ...params,
         sort,
-        sortBy,
+        sortBy
       };
     });
   }, []);
@@ -159,7 +193,7 @@ function BandsProvider({ children }) {
     setSearchParams((params) => {
       return {
         ...params,
-        page: page > 0 ? Number(page) + Number(params.limit) : 0,
+        page: page > 0 ? Number(page) + Number(params.limit) : 0
       };
     });
     // console.log(page);
@@ -172,7 +206,7 @@ function BandsProvider({ children }) {
       "allWomen",
       "mixedGender",
       "blackWomen",
-      "sister",
+      "sister"
     ];
     const grows = [0, 1, 2, 3];
 
@@ -204,7 +238,7 @@ function BandsProvider({ children }) {
       header: true,
       newline: "\r\n",
       skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
-      columns: null, //or array of strings
+      columns: null //or array of strings
     });
     downloadCsvFile(content, "women-fronted-metal-bands.csv");
   }
@@ -217,7 +251,7 @@ function BandsProvider({ children }) {
       header: true,
       newline: "\r\n",
       skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
-      columns: null, //or array of strings
+      columns: null //or array of strings
     });
     downloadCsvFile(content, "women-fronted-metal-bands filtered-list.csv");
   }
@@ -230,7 +264,7 @@ function BandsProvider({ children }) {
         "release date": track.release_date,
         artist: track.artist.name,
         album: track.album.title,
-        link: track.share,
+        link: track.share
       };
     });
     const content = Papa.unparse(formattedTrackList, {
@@ -239,7 +273,7 @@ function BandsProvider({ children }) {
       header: true,
       newline: "\r\n",
       skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
-      columns: null, //or array of strings
+      columns: null //or array of strings
     });
 
     downloadCsvFile(content, "user favorite tracks.csv");
@@ -263,7 +297,7 @@ function BandsProvider({ children }) {
     saveTrackToUserList,
     clearUserList,
     removeTrackFromUserList,
-    downloadUserList,
+    downloadUserList
   };
 
   return <BandContext.Provider value={state}>{children}</BandContext.Provider>;

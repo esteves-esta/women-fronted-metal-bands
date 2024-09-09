@@ -7,6 +7,7 @@ export interface Band {
   band: string;
   genre: string[];
   recommendationIsCover: boolean;
+  selected: boolean;
   blackWomen: boolean;
   allWomenBand: boolean;
   pastVocalists: string[];

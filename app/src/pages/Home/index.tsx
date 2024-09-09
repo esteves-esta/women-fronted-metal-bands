@@ -3,6 +3,7 @@ import Toast from "../../components/Toast";
 import { BandContext } from "../../components/BandsProvider";
 import BandGrid from "../../components/BandGrid";
 import bands from "../../../list-of-metal-bands/list.json";
+import { Band } from "../../models/Band";
 
 function App() {
   // const { isLoading } = React.useContext(BandContext);
@@ -14,7 +15,7 @@ function App() {
   return (
     <>
       <Toast />
-      <BandGrid bands={bands} />
+      <BandGrid bands={bands as Band[]} />
     </>
   );
 }
