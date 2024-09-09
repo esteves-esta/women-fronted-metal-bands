@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-
 const GlobalStyles = createGlobalStyle`
   /*
   1. Use a more-intuitive box-sizing model.
@@ -21,7 +20,10 @@ const GlobalStyles = createGlobalStyle`
   3. Allow percentage-based heights in the application
 */
 html,
-body {
+body, 
+#app {
+  /* height: 100vh; Fallback for legacy users */
+  /* height: 100dvh; */
   min-height:100%;
   /* height: 100%; */
 }
@@ -91,6 +93,22 @@ h6 {
   --primary-font-family: 'Cinzel', serif;
   --secondary-font-family: 'Lexend Peta', sans-serif;
 
+ --gray-hue: 270deg;
+    --color-gray-100: hsl(var(--gray-hue) 20% 95%);
+    --color-gray-300: hsl(var(--gray-hue) 10% 75%);
+    --color-gray-500: hsl(var(--gray-hue) 5% 50%);
+    --color-gray-700: hsl(var(--gray-hue) 10% 30%);
+    --color-gray-900: hsl(var(--gray-hue) 15% 15%);
+
+    --primary-hue: 245deg 90%;
+    --color-primary: hsl(var(--primary-hue) 50%);
+    --color-primary-light: hsl(var(--primary-hue) 70%);
+    --color-primary-dark: hsl(var(--primary-hue) 30%);
+    --color-primary-alpha-300: hsl(var(--primary-hue)  50% / 0.3);
+    --color-primary-alpha-500: hsl(var(--primary-hue)  50% / 0.5);
+    --color-primary-alpha-700: hsl(var(--primary-hue)  50% / 0.7);
+
+
   --text-title: #fff;
   --text-color: rgba(255, 255, 255, 0.829);
   --text-secondary: #CECECE;
@@ -140,6 +158,9 @@ h6 {
   --color-deep-2: hsl(265, 40%, 34%);
   --color-deep-3: hsl(281, 71%, 20%);
   --color-deep-4: hsl(265, 60%, 15%);
+  
+
+  /* todo */
 }
 
 

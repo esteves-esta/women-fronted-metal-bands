@@ -6,7 +6,6 @@ import { DeezerContext } from "../DeezerProvider";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { BandContext } from "../BandsProvider";
 import useMediaPlayerControls from './useMediaPlayerControls'
-import { MEDIA_QUERIES } from "../../constants";
 
 function MediaPlayer() {
   const audioRef = React.useRef<HTMLAudioElement>();
@@ -173,7 +172,7 @@ a {
   color: hsl(292, 32%, 45%);
   text-underline-offset: 4px;
 }
-@media (${MEDIA_QUERIES.tabletAndUp}) {
+@media ${p => p.theme.queries.tabletAndUp}  {
   gap: 5px;
   align-items: center;
   display: flex;
@@ -196,7 +195,7 @@ cursor: pointer;
 span {
   display: none;
 }
-@media (${MEDIA_QUERIES.tabletAndUp}) {
+@media ${p => p.theme.queries.tabletAndUp}  {
    span {
     display: revert;
    }
@@ -220,7 +219,7 @@ const TrackInfo = styled.div`
   span {
     font-weight: normal;
   }
-  @media (${MEDIA_QUERIES.tabletAndUp}) {
+  @media ${p => p.theme.queries.tabletAndUp}  {
     flex: 1 0 auto;
   }
 `;
@@ -237,7 +236,7 @@ button {
   color: white;
   border: none;
 }
-@media (${MEDIA_QUERIES.tabletAndUp}) {
+@media ${p => p.theme.queries.tabletAndUp}  {
     justify-content: space-between;
     flex: 1 0 auto;
     gap: 15px;

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { styled } from "styled-components";
-import { MEDIA_QUERIES } from "../../constants";
 import { BandContext } from "../BandsProvider";
 import MediaPlayer from "../MediaPlayer";
 import { NavLink } from "react-router-dom";
@@ -67,7 +66,7 @@ function HeaderLink({ children, to }) {
 const TotalSpan = styled.span`
 text-transform: uppercase;
 font-family: var(--secondary-font-family);
- @media (${MEDIA_QUERIES.tabletAndUp}) {
+ @media ${p => p.theme.queries.tabletAndUp} {
   margin-left: auto
  }
 `;
@@ -120,7 +119,7 @@ const Nav = styled.nav`
     }
   }
 
-  @media (${MEDIA_QUERIES.tabletAndUp}) {
+  @media ${p => p.theme.queries.tabletAndUp} {
     flex-direction: row;
 
     ul {
@@ -143,7 +142,7 @@ const Head = styled.header`
   flex-direction: column;
   gap: 25px;
   
-  @media (${MEDIA_QUERIES.tabletAndUp}) {
+  @media ${p => p.theme.queries.tabletAndUp} {
     padding: 0px 10%;
     gap: 40px;
     margin: 30px auto;
@@ -162,7 +161,7 @@ const TitleContainer = styled.div`
     padding: 0 25px;
   }
 
- @media (${MEDIA_QUERIES.tabletAndUp}) {
+ @media ${p => p.theme.queries.tabletAndUp} {
     flex-direction: row;
     gap: 10px;
     justify-content: space-between;

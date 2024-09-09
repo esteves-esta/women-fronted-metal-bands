@@ -5,6 +5,8 @@ import ToastProvider from "./components/ToastProvider";
 import Header from "./components/Header";
 import { Outlet } from "react-router-dom";
 import GlobalStyles from "./GlobalStyles";
+import { MEDIA_QUERIES } from "./constants";
+import {  ThemeProvider } from "styled-components";
 import Footer from "./components/Footer";
 
 function App() {
@@ -27,6 +29,9 @@ function App() {
   }, []);
 
   return (
+    <ThemeProvider theme={{
+      queries: MEDIA_QUERIES
+    }}>
     <ToastProvider>
       <BandsProvider>
         <DeezerProvider>
@@ -40,6 +45,7 @@ function App() {
         </DeezerProvider>
       </BandsProvider>
     </ToastProvider>
+    </ThemeProvider>
   );
 }
 

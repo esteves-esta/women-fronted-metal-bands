@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Github } from "lucide-react";
 import { styled } from "styled-components";
-import { MEDIA_QUERIES } from '../../constants';
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -45,7 +44,7 @@ a {
     }
   }
   
-@media (${MEDIA_QUERIES.tabletAndUp}) {
+@media ${p => p.theme.queries.tabletAndUp}  {
   padding: 0px 10%;
   gap: 40px;
   margin: 30px auto;
