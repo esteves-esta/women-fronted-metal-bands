@@ -6,7 +6,7 @@ function BandGrid() {
   const {
     bands
   } = React.useContext(BandContext);
-
+// TODO - have prop to receive band info
   return (<Wrapper>
     {bands.map((band) => (
       <Card key={band.id} >
