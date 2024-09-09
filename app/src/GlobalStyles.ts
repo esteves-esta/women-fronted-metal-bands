@@ -93,6 +93,7 @@ h6 {
   --primary-font-family: 'Cinzel', serif;
   --secondary-font-family: 'Lexend Peta', sans-serif;
 
+  /* TODO COLORS */
  --gray-hue: 270deg;
     --color-gray-100: hsl(var(--gray-hue) 20% 95%);
     --color-gray-300: hsl(var(--gray-hue) 10% 75%);

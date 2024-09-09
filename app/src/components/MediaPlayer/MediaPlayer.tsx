@@ -155,6 +155,7 @@ const VolumeBtn = React.forwardRef(VolumeButton);
 
 const PlayerWrapper = styled.div`
 isolation: isolate;
+z-index: 1;
 position: sticky;
 left: 0px;
 font-size: .8rem;
