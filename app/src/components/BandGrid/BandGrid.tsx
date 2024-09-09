@@ -1,22 +1,19 @@
 import * as React from "react";
-import { BandContext } from "../../components/BandsProvider";
 import { styled } from "styled-components";
 import { growTagList } from "../../constants";
-function BandGrid() {
-  const { bands } = React.useContext(BandContext);
-  // TODO - have prop to receive band info
+import { Band, Tntensity } from "../../models/Band";
+
+interface GridProps {
+  bands: Band[];
+}
+
+function BandGrid({ bands }: GridProps) {
   return (
     <Wrapper>
       {bands.map((band) => (
         <Card key={band.id}>
-          {band.deezerPicture && (
-            <img src={band.deezerPicture} alt={band.band} />
-          )}
-          {!band.deezerPicture && (
-            <ImgPlaceholder>
-              <div>{band.band}</div>
-            </ImgPlaceholder>
-          )}
+          <CardImage band={band} />
+
           <p>{band.band}</p>
 
           <InfoWrapper>
@@ -33,11 +30,32 @@ function BandGrid() {
     </Wrapper>
   );
 }
+
+function CardImage({ band }: { band: Band }) {
+  if (band.deezerPicture && !band.emptyPicture) {
+    return <img src={band.deezerPicture} alt="Picture of the band" />;
+  }
+  if (!!band.deezerTrackInfo && band.emptyPicture) {
+    return (
+      <img
+        src={band.deezerTrackInfo && band.deezerTrackInfo.album.cover_medium}
+        alt="Picture of the band"
+      />
+    );
+  }
+
+  return (
+    <ImgPlaceholder>
+      <div>{band.band}</div>
+    </ImgPlaceholder>
+  );
+}
+
 type TagHues = "purple" | "green" | "blue" | "yellow" | "red" | "cyan";
 
 type Props = React.ComponentProps<"div"> & {
   hue: TagHues;
-  intensity: 0 | 1 | 2 | 3;
+  intensity: Tntensity;
   children: any;
 };
 
@@ -47,13 +65,15 @@ function Tag({ children, ...props }: Props) {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
 
   @media (hover: hover) and (pointer: fine) {
   }
 
   @media ${(p) => p.theme.queries.tabletAndUp} {
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
   }
 `;
 
@@ -71,6 +91,7 @@ const Card = styled.div`
 `;
 
 const ImgPlaceholder = styled.div`
+  user-select: none;
   background: radial-gradient(
       71.14% 84.14% at 50% 49.75%,
       hsl(291, 87%, 19%) 0%,
@@ -90,7 +111,6 @@ const ImgPlaceholder = styled.div`
     letter-spacing: -0.3rem;
     line-height: 0.5;
     word-break: break-all;
-    width: 210px;
   }
 `;
 
