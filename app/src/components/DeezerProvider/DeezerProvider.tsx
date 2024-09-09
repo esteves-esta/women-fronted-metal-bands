@@ -21,9 +21,9 @@ interface IDeezerContext {
   trackIsLoading: boolean;
   isPlaying: boolean;
   setIsPlaying: (value: boolean) => void;
-  getTrackPreview: (bandId: number | null) => void;
+  getTrackPreview: (bandId: string | null) => void;
   playNextTrack: () => void;
-  getArtistPicture: (bandId: number | null) => void;
+  getArtistPicture: (bandId: string | null) => void;
 }
 
 export const DeezerContext = React.createContext<Partial<IDeezerContext>>({});

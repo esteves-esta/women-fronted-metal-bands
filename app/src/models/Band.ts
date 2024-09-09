@@ -1,6 +1,7 @@
 export type Tntensity = 0 | 1 | 2 | 3;
 
 export interface Band {
+  id: string;
   growling: Tntensity;
   deezerId: number;
   deezerRecommendationId: number;
@@ -21,7 +22,6 @@ export interface Band {
   sister: boolean;
   activeFor: number;
   numberOfVocalists: number;
-  id: string;
   emptyPicture: boolean;
   deezerTrackInfo?: TrackInfo;
   deezerPicture: string;
