@@ -20,12 +20,9 @@ const GlobalStyles = createGlobalStyle`
   3. Allow percentage-based heights in the application
 */
 html,
-body, 
-#app {
-  /* height: 100vh; Fallback for legacy users */
-  /* height: 100dvh; */
-  min-height:100%;
-  /* height: 100%; */
+body {
+  height: 100vh; /* Fallback for legacy users */
+  height: 100dvh;
 }
 
 /*
@@ -109,7 +106,7 @@ h6 {
   --color-primary: hsl(var(--primary) 38%);
   --color-primary-light: hsl(var(--primary) 70%);
   --color-primary-dark: hsl(var(--primary) 30%);
-  --color-primary-alpha-300: hsl(var(--primary)  50% / 0.3);
+  --color-primary-alpha-300: hsl(var(--primary)  50% / 0.1);
   --color-primary-alpha-500: hsl(var(--primary)  50% / 0.5);
   --color-primary-alpha-700: hsl(var(--primary)  50% / 0.7);
 
@@ -155,7 +152,12 @@ body {
   font-family: Roboto, Oxygen, sans-serif;
   font-size: 15px;
   color: var(--text-color);
+  background-size: 100%;
+  background-image: var(--gradient-bg1); 
+}
 
+#app {
+  min-height: 100%;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
   background-size: 100%;

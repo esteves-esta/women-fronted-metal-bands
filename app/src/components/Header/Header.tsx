@@ -128,18 +128,18 @@ const Nav = styled.nav`
 `;
 
 const Head = styled.header`
-  margin: 20px auto;
+  margin: 0px auto;
   max-width: 1500px;
   margin-bottom: 15px;
-  padding: 0px 15px;
+  padding: 20px 15px;
   display: flex;
   flex-direction: column;
   gap: 25px;
 
   @media ${(p) => p.theme.queries.tabletAndUp} {
-    padding: 0px 10%;
+    padding: 30px 10%;
     gap: 40px;
-    margin: 30px auto;
+    margin: 0px auto;
   }
 `;
 
