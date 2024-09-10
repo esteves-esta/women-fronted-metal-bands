@@ -172,6 +172,9 @@ const PlayerWrapper = styled.div`
   background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
+  @media ${(p) => p.theme.queries.tabletAndUp} {
+    max-height: 42px;
+  }
 `;
 
 const ApiInfo = styled.div`

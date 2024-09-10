@@ -118,6 +118,14 @@ h6 {
   --color-secondary-alpha-500: hsl(var(--secondary)  50% / 0.5);
   --color-secondary-alpha-700: hsl(var(--secondary)  50% / 0.7);
 
+  --tertiary: 251 68%;
+  --color-tertiary-light: hsl(var(--tertiary) 70%);
+  --color-tertiary: hsl(var(--tertiary) 24%);
+  --color-tertiary-dark: hsl(var(--tertiary) 15%);
+  --color-tertiary-alpha-300: hsl(var(--tertiary)  50% / 0.3);
+  --color-tertiary-alpha-500: hsl(var(--tertiary)  50% / 0.5);
+  --color-tertiary-alpha-700: hsl(var(--tertiary)  50% / 0.7);
+
   /* hues and intensities */
   --purple: 291;
   --green: 94;

@@ -9,7 +9,8 @@ function Header() {
 
   return (
     <>
-      {databaseChecked && <MediaPlayer />}
+      {/* {databaseChecked && <MediaPlayer />} */}
+      <MediaPlayer />
       <Head>
         <Nav>
           <ul>

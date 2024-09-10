@@ -10,11 +10,11 @@ interface GridProps {
 function BandGrid({ bands }: GridProps) {
   return (
     <GridWrapper>
-      {bands.map((band) => (
+      {bands.map((band, index) => (
         <Card key={band.id}>
           <CardImage band={band} />
 
-          <Title>
+          <Title className={index === 0 ? "listing" : ""}>
             <p>{band.band}</p>
           </Title>
           <InfoWrapper>
@@ -25,6 +25,14 @@ function BandGrid({ bands }: GridProps) {
             <Tag $hue="cyan" $intensity={1}>
               {!!band.yearEnded ? "Active" : "Disbanded"}
             </Tag>
+            {/* <MoreInfoWrapper>
+              <Tag $hue="cyan" $intensity={1}>
+                {!!band.yearEnded ? "Active" : "Disbanded"}
+              </Tag>
+              <Tag $hue="cyan" $intensity={1}>
+                {!!band.yearEnded ? "Active" : "Disbanded"}
+              </Tag>
+            </MoreInfoWrapper> */}
           </InfoWrapper>
           <ActionBtn>Play</ActionBtn>
         </Card>
@@ -70,16 +78,15 @@ const GridWrapper = styled.div`
 const Title = styled.div`
   text-align: center;
   padding: 5px;
-  background-color: var(--color-primary-alpha-300);
-`;
-
-const InfoWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /* align-items: center; */
-  padding: 15px 10px;
-  flex: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-size: calc(12rem / 16);
+  border-bottom: 0.05rem solid var(--color-secondary-alpha-300);
+  &.listing {
+    border-bottom: 0px;
+    background-color: var(--color-tertiary);
+  }
 `;
 
 const ImgPlaceholder = styled.div`
@@ -108,19 +115,19 @@ const ImgPlaceholder = styled.div`
 `;
 
 const Card = styled.div`
+  position: relative;
   height: 300px;
-  border: 1px solid black;
+  border: 0.15rem solid var(--color-secondary-alpha-300);
   display: flex;
   flex-direction: column;
-  gap: 3px;
   overflow: hidden;
   @media ${(p) => p.theme.queries.tabletAndUp} {
   }
 
   img,
   ${ImgPlaceholder} {
-    /* height: 70%; */
-    height: clamp(30px, 70%, 200px);
+    height: 200px;
+    /* height: clamp(10%, 70%, 220px); */
     width: 100%;
     object-fit: cover;
     object-position: 0px 10%;
@@ -137,24 +144,50 @@ const Card = styled.div`
   }
 `;
 
+const MoreInfoWrapper = styled.div`
+  background: blue;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex: 1; */
+`;
+
+const InfoWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px 10px;
+  flex: 1;
+  /* gap: 15px; */
+
+  ${Card}:hover & > ${MoreInfoWrapper} {
+    background: red;
+  }
+`;
+
 const ActionBtn = styled.button`
   width: 100%;
-  background: var(--color-primary);
+  background: var(--color-primary-alpha-500);
   color: var(--text-color);
   border: none;
-  align-self: end;
-
+  text-align: left;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: calc(0.4rem / 16);
   cursor: pointer;
+  flex: 0;
   opacity: 0;
-  /* height: 1px; */
-  overflow: hidden;
-  transition: all 450ms ease-in-out 20ms;
+
+  position: relative;
+  bottom: 0px;
+  transform: translateY(40px);
+  transition: opacity 450ms ease-in-out 20ms, transform 40ms 700ms;
 
   ${Card}:hover & {
-    /* height: fit-content; */
     opacity: 1;
-    align-self: end;
-    transition: all 550ms ease-in-out 200ms;
+    transform: translateY(0px);
+    transition: opacity 550ms ease-in-out 200ms, transform 50ms;
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -186,6 +219,8 @@ const TagWrapper = styled.div.attrs<Props>((p) => ({
   height: fit-content;
   font-size: calc(13rem / 16);
   letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  font-weight: bold;
 `;
 
 // -------------------

@@ -4,6 +4,7 @@ import App from "./App";
 import Home from "./pages/Home/index";
 import About from "./pages/About/index";
 import ChartsPage from "./pages/ChartsPage/index";
+import TablePage from "./pages/TableView";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "table",
-        element: <About />
+        element: <TablePage />
       }
     ]
   }
