@@ -114,6 +114,7 @@ h6 {
   --color-secondary: hsl(var(--secondary) 24%);
   --color-secondary-light: hsl(var(--secondary) 70%);
   --color-secondary-dark: hsl(var(--secondary) 15%);
+  --color-secondary-dark-alpha-700: hsl(var(--secondary) 15% / 0.7);
   --color-secondary-alpha-300: hsl(var(--secondary)  50% / 0.3);
   --color-secondary-alpha-500: hsl(var(--secondary)  50% / 0.5);
   --color-secondary-alpha-700: hsl(var(--secondary)  50% / 0.7);
