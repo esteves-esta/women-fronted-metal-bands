@@ -17,44 +17,79 @@ interface GridProps {
 function BandGrid({ bands }: GridProps) {
   const ICON_SIZE = 20;
   const { playRecommendedTrackOrOpenLink } = React.useContext(DeezerContext);
-
+  const [cardHovered, setCardHovered] = React.useState(null);
 
   return (
     <GridWrapper>
       {bands.map((band) => (
-        <Card key={band.id}>
+        <Card key={band.id}
+          onPointerEnter={() => setCardHovered(band.id)}
+          onPointerLeave={() => setCardHovered(null)}
+        >
           <CardImage band={band} />
 
           <Title className={band.selected ? "listening" : ""}>
             <p>{band.band}</p>
             {band.selected && <AudioLines size={ICON_SIZE} />}
           </Title>
-          <InfoWrapper>
-            <Tag $hue="purple" $intensity={band.growling}>
-              {growTagList.find((tag) => tag.value === band.growling).text}
-            </Tag>
 
-            <Tag $hue="cyan" $intensity={1}>
-              {!!band.yearEnded ? "Active" : "Disbanded"}
-            </Tag>
-            {/* <MoreInfoWrapper>
-              <Tag $hue="cyan" $intensity={1}>
+          <>
+            {cardHovered !== band.id ? (<InfoWrapper>
+              <Tag $hue="purple" $intensity={band.growling}>
+                {growTagList.find((tag) => tag.value === band.growling).text}
+              </Tag>
+
+              <Tag $hue={!!band.yearEnded ? 'cyan' : 'black'} $intensity={1}>
                 {!!band.yearEnded ? "Active" : "Disbanded"}
               </Tag>
-              <Tag $hue="cyan" $intensity={1}>
-                {!!band.yearEnded ? "Active" : "Disbanded"}
-              </Tag>
-            </MoreInfoWrapper> */}
-          </InfoWrapper>
-          {band.deezerId || band.deezerRecommendationId ?
-            <ActionBtn onClick={() => playRecommendedTrackOrOpenLink(band)}>
-              Play
-              <Play size={ICON_SIZE} />
-            </ActionBtn>
-            : <ActionBtn $secondary={true} onClick={() => playRecommendedTrackOrOpenLink(band)}>
-              Link
-              <ExternalLink size={ICON_SIZE} />
-            </ActionBtn>}
+            </InfoWrapper>) :
+              (<InfoWrapper>
+                <InfoCol>
+                  <span>Growling</span>
+                  <Tag $hue="purple" $intensity={band.growling}>
+                    {growTagList.find((tag) => tag.value === band.growling).text}
+                  </Tag>
+                </InfoCol>
+                <InfoCol>
+                  <span>Status</span>
+                  <Tag $hue={!!band.yearEnded ? 'cyan' : 'black'} $intensity={1}>
+                    {!!band.yearEnded ? "Active" : "Disbanded"}
+                  </Tag>
+                </InfoCol>
+                <InfoCol>
+                  <span>Country</span>
+                  {band.countryCode}
+                </InfoCol>
+                <InfoCol>
+                  <span>All women</span>
+                  <Tag $hue={band.allWomenBand ? 'green' : 'black'} $intensity={0}>
+                    {band.allWomenBand ? "Yes" : "No"}
+                  </Tag>
+                </InfoCol>
+                <InfoCol>
+                  <span>Activity</span>
+                  {band.yearStarted}-{band.yearEnded === 0 ? 'now' : band.yearEnded}
+                </InfoCol>
+                <InfoCol>
+                  <span>Years active</span>
+                  {band.activeFor} year{band.activeFor > 1 ? 's' : ''}
+                </InfoCol>
+
+              </InfoWrapper>)}
+          </>
+
+          {cardHovered === band.id && <>
+            {band.deezerId || band.deezerRecommendationId ?
+              <ActionBtn onClick={() => playRecommendedTrackOrOpenLink(band)}>
+                Play
+                <Play size={ICON_SIZE} />
+              </ActionBtn>
+              : <ActionBtn $secondary={true} onClick={() => playRecommendedTrackOrOpenLink(band)}>
+                Link
+                <ExternalLink size={ICON_SIZE} />
+              </ActionBtn>}
+          </>
+          }
         </Card>
       ))}
     </GridWrapper>
@@ -141,7 +176,7 @@ const ImgPlaceholder = styled.div`
 
 const Card = styled.div`
   position: relative;
-  height: 300px;
+  height: 315px;
   border: 0.15rem solid var(--color-secondary-alpha-300);
   display: flex;
   flex-direction: column;
@@ -169,12 +204,20 @@ const Card = styled.div`
   }
 `;
 
-const MoreInfoWrapper = styled.div`
-  background: blue;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  /* flex: 1; */
+const InfoCol = styled.div`
+flex: 1 0 100px;
+display: flex;
+flex-direction: column;
+gap: 5px;
+> span {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: calc(10rem / 16);
+  letter-spacing: .05rem;
+}
+@media ${(p) => p.theme.queries.tabletAndUp} {
+  flex: 1 0 auto;
+}
 `;
 
 const InfoWrapper = styled.div`
@@ -183,11 +226,9 @@ const InfoWrapper = styled.div`
   justify-content: space-between;
   padding: 15px 10px;
   flex: 1;
-  /* gap: 15px; */
-
-  ${Card}:hover & > ${MoreInfoWrapper} {
-    background: red;
-  }
+  align-content: center;
+  align-items: center;
+  gap: 16px 0px;
 `;
 type Props = { $secondary?: boolean }
 
