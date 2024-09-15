@@ -5,7 +5,8 @@ import { ResponsiveBar } from '@nivo/bar'
 import useMatchMedia from '../../helpers/useMatchMedia';
 import useSWR from "swr";
 import { errorRetry, fetcher } from './apiFunctions';
-import LoaderSvg from '../LoaderSvg';
+import ChartLoader from './ChartLoader';
+import styled from 'styled-components';
 
 function BandYearsActiveChart() {
   const { databaseChecked } = React.useContext(BandContext)
@@ -47,10 +48,12 @@ function BandYearsActiveChart() {
   if (!isLoading)
     return (
       <React.Fragment>
-        <p className='text-center title3 mt-10'>
+        <Wrapper>
+        <p >
           Average time of activity: {" "}
-          <span className='font-black'>{averageTime} years</span>
+          <span>{averageTime} years</span>
         </p>
+        </Wrapper>
         <ResponsiveBar
           data={chartData}
           keys={[
@@ -97,12 +100,22 @@ function BandYearsActiveChart() {
         />
       </React.Fragment>
     )
-  else return (<React.Fragment>
-    <div className="flex flex-row gap-4 justify-center items-center">
-      <p>Loading </p>
-      <LoaderSvg width={50} height={50} />
-    </div>
-  </React.Fragment>)
+  else return (<ChartLoader />)
 };
+const Wrapper = styled.div`
+p {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--text-title);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1rem;
+}
+span {
+  color: white;
+}
+`;
+
 
 export default BandYearsActiveChart;

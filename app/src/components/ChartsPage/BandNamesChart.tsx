@@ -8,6 +8,7 @@ import { Text } from '@visx/text';
 import { scaleLog } from '@visx/scale';
 import Wordcloud from '@visx/wordcloud/lib/Wordcloud';
 import ParentSize from '@visx/responsive/lib/components/ParentSize';
+import { styled } from "styled-components";
 
 export interface WordData {
   text: string;
@@ -37,16 +38,16 @@ function GenreChart() {
 
 
   return (
-    <div className={`flex flex-col md:flex-row items-center justify-center`}>
-      {isLoading && <div className="flex justify-center items-center" style={{ width: "350px", height: "350px" }}>
+    <Wrapper >
+      {isLoading && <LoaderWrapper>
         <LoaderSvg width={50} height={50} />
-      </div>}
+      </LoaderWrapper>}
       {/* {chartDetails.length} */}
       {!isLoading && data.length > 0 && <ParentSize>
         {({ width }) => <WordCloundCustom data={chartDetails} width={width} />}
       </ParentSize>}
 
-    </div>
+    </Wrapper>
   )
 
 };
@@ -135,4 +136,27 @@ function WordCloundCustom({ data, width }) {
       </Wordcloud>
     </div>);
 }
+
+const Wrapper = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+@media ${(p) => p.theme.queries.tabletAndUp} {
+  flex-direction: row;
+}
+`;
+
+const LoaderWrapper = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 350px;
+ height: 350px;
+@media ${(p) => p.theme.queries.tabletAndUp} {
+flex-direction: row;
+}
+`;
+
 export default GenreChart;

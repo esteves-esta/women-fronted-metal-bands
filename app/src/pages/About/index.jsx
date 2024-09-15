@@ -52,6 +52,21 @@ const Wrapper = styled.article`
     margin: 0px auto;
     font-size: calc(20rem / 16);
   }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 2px;
+    }
+  }
 `;
 
 export default About;

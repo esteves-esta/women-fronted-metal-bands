@@ -90,7 +90,6 @@ h6 {
   --box-shadow-focus: 0px 0px 3px 1px var(--color-primary-lighten3);
   --primary-font-family: 'Cinzel', serif;
   --secondary-font-family: 'Lexend Peta', sans-serif;
-
   --text-color-alpha-8: hsla(0deg 0% 40% / 0.8);
   --text-color-alpha-9: hsla(0deg 0% 80.78% / 0.8);
   --text-color: hsl(0deg 0% 80.78%);
@@ -101,6 +100,7 @@ h6 {
   --color-grey-500: hsl(var(--grey) 5% 50%);
   --color-grey-700: hsl(var(--grey) 10% 30%);
   --color-grey-900: hsl(var(--grey) 15% 15%);
+  --border-color: var(--color-grey-700);
 
 
   --primary: 291 85%;
