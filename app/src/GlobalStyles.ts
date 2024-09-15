@@ -115,6 +115,7 @@ h6 {
   --color-secondary-light: hsl(var(--secondary) 70%);
   --color-secondary-dark: hsl(var(--secondary) 15%);
   --color-secondary-dark-alpha-700: hsl(var(--secondary) 15% / 0.7);
+  --color-secondary-alpha-200: hsl(var(--secondary)  50% / 0.2);
   --color-secondary-alpha-300: hsl(var(--secondary)  50% / 0.3);
   --color-secondary-alpha-500: hsl(var(--secondary)  50% / 0.5);
   --color-secondary-alpha-700: hsl(var(--secondary)  50% / 0.7);
@@ -128,16 +129,17 @@ h6 {
   --color-tertiary-alpha-700: hsl(var(--tertiary)  50% / 0.7);
 
   /* hues and intensities */
-  --purple: 291;
+  --purple: 280;
   --green: 94;
   --blue: 241;
   --yellow: 47;
   --red: 15;
   --cyan: 183;
-  --intensity-0: 27%, 49%;
-  --intensity-1: 40%, 34%;
-  --intensity-2: 71%, 20%;
-  --intensity-3: 60%, 15%;
+  --black: 0;
+  --intensity-0: 27% 49%;
+  --intensity-1: 40% 34%;
+  --intensity-2: 71% 20%;
+  --intensity-3: 60% 11%;
 
   --gradient-bg1: linear-gradient(180deg,
       hsl(291deg 96% 10%) 0%,

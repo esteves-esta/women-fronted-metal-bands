@@ -1,7 +1,8 @@
 import * as React from "react";
 import { styled } from "styled-components";
 import { growTagList } from "../../constants";
-import { Band, Tntensity } from "../../models/Band";
+import { Band } from "../../models/Band";
+import Tag from "../Tag";
 
 interface GridProps {
   bands: Band[];
@@ -193,36 +194,5 @@ const ActionBtn = styled.button`
   @media (hover: hover) and (pointer: fine) {
   }
 `;
-
-// -------------------
-type TagHues = "purple" | "green" | "blue" | "yellow" | "red" | "cyan";
-
-type Props = React.ComponentProps<"div"> & {
-  $hue: TagHues;
-  $intensity: Tntensity;
-  children: any;
-};
-
-function Tag({ children, ...props }: Props) {
-  return <TagWrapper {...props}>{children}</TagWrapper>;
-}
-
-const TagWrapper = styled.div.attrs<Props>((p) => ({
-  $hue: p.$hue,
-  $intensity: p.$intensity
-}))`
-  background: hsl(
-    var(--${(p) => p.$hue}) var(--intensity-${(p) => p.$intensity})
-  );
-  padding: 2px 12px;
-  border-radius: 1rem;
-  height: fit-content;
-  font-size: calc(13rem / 16);
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-  font-weight: bold;
-`;
-
-// -------------------
 
 export default BandGrid;

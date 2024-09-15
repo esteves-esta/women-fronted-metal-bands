@@ -3,6 +3,8 @@ import { BandContext } from "../../components/BandsProvider";
 import { Band } from "../../models/Band";
 import { styled } from "styled-components";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { growTagList } from "../../constants";
+import Tag from "../Tag";
 
 interface GridProps {
   bands: Band[];
@@ -53,27 +55,40 @@ function BandTable({ bands }: GridProps) {
               <td>
                 {band.band}
               </td>
-              <td>
-                {!!band.yearEnded ? 'Active' : 'Disbanded'}
-              </td>
-              <td>
-                {band.growling}
-              </td>
+
+              <CellFixedWidth>
+                <Tag $hue={!!band.yearEnded ? 'cyan' : 'black'} $intensity={1} $circle={true}>
+                  {!!band.yearEnded ? 'Active' : 'Disbanded'}
+                </Tag>
+              </CellFixedWidth>
+
+              <CellFixedWidth>
+                <Tag $hue="purple" $intensity={band.growling} $circle={true}>
+                  {growTagList.find((tag) => tag.value === band.growling).text}
+                </Tag>
+              </CellFixedWidth>
+
               <td>
                 {band.country}
               </td>
+
               <CellOverflowHidden>
                 {band.genre.length > 0 ? band.genre[0] : '-'}
               </CellOverflowHidden>
+
               <CellOverflowHidden>
                 {band.currentVocalists.join(', ')}
               </CellOverflowHidden>
-              <td>
-                {band.allWomenBand ? 'Yes' : 'No'}
-              </td>
+
+              <CellFixedWidth>
+                <Tag $hue={band.allWomenBand ? 'blue' : 'black'} $intensity={0} $circle={true}>
+                  {band.allWomenBand ? 'Yes' : 'No'}
+                </Tag>
+              </CellFixedWidth>
               <td>
                 {band.yearStarted} {band.yearEnded !== 0 ? `- ${band.yearEnded}` : '- now'}
               </td>
+
               <td>
                 {band.activeFor} year{band.activeFor > 1 ? 's' : ''}
               </td>
@@ -131,18 +146,22 @@ td:first-of-type{
 }
 `;
 
+const CellFixedWidth = styled.td`
+  min-width: 58px !important; 
+  max-width: 58px !important; 
+`;
 const CellOverflowHidden = styled.td`
 white-space: nowrap;
 text-overflow: ellipsis;
 overflow: hidden;
 width: 120px;
 max-width: 120px;
-transition: height 450ms ease-in;
+transition: height 350ms ease-in;
 ${Row}:hover & {
   white-space: break-spaces;
   text-overflow: ellipsis;
   overflow: hidden;
-  height: 115px;
+  height: 100px;
 }
 `;
 
