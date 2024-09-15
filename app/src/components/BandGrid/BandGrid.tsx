@@ -190,6 +190,7 @@ const InfoWrapper = styled.div`
   }
 `;
 type Props = { $secondary?: boolean }
+
 const ActionBtn = styled.button.attrs<Props>((p) => ({
   $secondary: p.$secondary,
 }))`

@@ -24,35 +24,35 @@ function BandTable({ bands }: GridProps) {
       <Table>
         <Header>
           <tr >
-            <td>
+            <th>
               Band
-            </td>
+            </th>
 
-            <td>
+            <th>
               <VisuallyHidden>Status</VisuallyHidden>
-            </td>
+            </th>
 
-            <td>
+            <th>
               <VisuallyHidden>Growling</VisuallyHidden>
-            </td>
-            <td>
+            </th>
+            <th>
               Country
-            </td>
-            <td>
+            </th>
+            <th>
               Genres
-            </td>
-            <td>
+            </th>
+            <th>
               Vocalist(s)
-            </td>
-            <td>
+            </th>
+            <th>
               All women
-            </td>
-            <td>
+            </th>
+            <th>
               Years active
-            </td>
-            <td>
+            </th>
+            <th>
               Activity
-            </td>
+            </th>
           </tr>
         </Header>
 
@@ -73,17 +73,21 @@ function BandTable({ bands }: GridProps) {
                 </BandNameWrapper>
               </td>
 
-              <CellFixedWidth>
-                <Tag $hue={!!band.yearEnded ? 'cyan' : 'black'} $intensity={1} $circle={true}>
-                  {!!band.yearEnded ? 'Active' : 'Disbanded'}
-                </Tag>
-              </CellFixedWidth>
+              <td>
+                <CellFixedWidth>
+                  <Tag $hue={!!band.yearEnded ? 'cyan' : 'black'} $intensity={1} $circle={true}>
+                    {!!band.yearEnded ? 'Active' : 'Disbanded'}
+                  </Tag>
+                </CellFixedWidth>
+              </td>
 
-              <CellFixedWidth>
-                <Tag $hue="purple" $intensity={band.growling} $circle={true}>
-                  {growTagList.find((tag) => tag.value === band.growling).text}
-                </Tag>
-              </CellFixedWidth>
+              <td>
+                <CellFixedWidth>
+                  <Tag $hue="purple" $intensity={band.growling} $circle={true}>
+                    {growTagList.find((tag) => tag.value === band.growling).text}
+                  </Tag>
+                </CellFixedWidth>
+              </td>
 
               <td>
                 {band.countryCode}
@@ -97,11 +101,14 @@ function BandTable({ bands }: GridProps) {
                 {band.currentVocalists.join(', ')}
               </CellOverflowHidden>
 
-              <CellFixedWidth>
-                <Tag $hue={band.allWomenBand ? 'blue' : 'black'} $intensity={0} $circle={true}>
-                  {band.allWomenBand ? 'Yes' : 'No'}
-                </Tag>
-              </CellFixedWidth>
+              <td>
+                <CellFixedWidth>
+                  <Tag $hue={band.allWomenBand ? 'blue' : 'black'} $intensity={0} $circle={true}>
+                    {band.allWomenBand ? 'Yes' : 'No'}
+                  </Tag>
+                </CellFixedWidth>
+              </td>
+
               <td>
                 {band.yearStarted} {band.yearEnded !== 0 ? `- ${band.yearEnded}` : '- now'}
               </td>
@@ -126,6 +133,7 @@ const Wrapper = styled.div`
    */
    /* width: 800px; */
   overflow-x: auto;
+  position: relative;
 `;
 
 const Header = styled.thead`
@@ -150,7 +158,6 @@ background-color: var(--color-secondary-dark-alpha-700);
 
 td {
   width: 3%;
-  text-align: center;
   padding: 0px 15px;
   height: 82px;
   vertical-align: middle;
@@ -165,9 +172,11 @@ td:first-of-type{
 }
 `;
 
-const CellFixedWidth = styled.td`
-  min-width: 60px !important; 
-  max-width: 60px !important; 
+const CellFixedWidth = styled.div`
+display: flex;
+justify-content: center;
+min-width: 60px !important; 
+max-width: 60px !important; 
 `;
 
 const CellOverflowHidden = styled.td`
@@ -196,6 +205,7 @@ const BandNameWrapper = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
+    text-align: left;
 `
 const OnHoverWrapper = styled.div`
   opacity: 0;

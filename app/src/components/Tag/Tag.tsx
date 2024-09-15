@@ -37,7 +37,7 @@ const TagWrapper = styled.div.attrs<Props>((p) => ({
 
     return `hsl(var(--${p.$hue}) var(--intensity-${p.$intensity}))`
   }};
-  
+  text-align: center;
   border-radius: 1rem;
   font-size: calc(11rem / 16);
   letter-spacing: 0.05rem;
