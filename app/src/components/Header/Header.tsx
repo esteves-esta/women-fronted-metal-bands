@@ -3,14 +3,21 @@ import { styled } from "styled-components";
 import { BandContext } from "../BandsProvider";
 import MediaPlayer from "../MediaPlayer";
 import { NavLink } from "react-router-dom";
+import { ArrowUp } from "lucide-react";
 
 function Header() {
   const { total, databaseChecked } = React.useContext(BandContext);
-
+  function scrollTop() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
   return (
     <>
-      {/* {databaseChecked && <MediaPlayer />} */}
-      <MediaPlayer />
+      {databaseChecked && <MediaPlayer />}
+      {/* <MediaPlayer /> */}
       <Head>
         <Nav>
           <ul>
@@ -43,6 +50,10 @@ function Header() {
           </p>
         </TitleContainer>
       </Head>
+
+      <BackToTop onClick={scrollTop}>
+        <ArrowUp size={20} />
+      </BackToTop>
     </>
   );
 }
@@ -60,6 +71,24 @@ function HeaderLink({ children, to }) {
   );
 }
 
+const BackToTop = styled.button`
+color: inherit;
+cursor: pointer;
+border:none;
+background-color: var(--color-secondary);
+padding: 20px;
+border-radius: 100rem;
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 1;
+transition: all 400ms ease;
+@media (hover: hover) and (pointer: fine) {
+    &:hover {
+       background-color: var(--color-secondary-dark);
+    }
+}
+`;
 const TotalSpan = styled.span`
   text-transform: uppercase;
   font-family: var(--secondary-font-family);
