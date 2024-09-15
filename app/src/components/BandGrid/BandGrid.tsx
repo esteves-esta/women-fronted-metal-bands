@@ -3,20 +3,31 @@ import { styled } from "styled-components";
 import { growTagList } from "../../constants";
 import { Band } from "../../models/Band";
 import Tag from "../Tag";
+import {
+  AudioLines,
+  Play,
+  ExternalLink
+} from "lucide-react";
+import { DeezerContext } from "../DeezerProvider";
 
 interface GridProps {
   bands: Band[];
 }
 
 function BandGrid({ bands }: GridProps) {
+  const ICON_SIZE = 20;
+  const { playRecommendedTrackOrOpenLink } = React.useContext(DeezerContext);
+
+
   return (
     <GridWrapper>
-      {bands.map((band, index) => (
+      {bands.map((band) => (
         <Card key={band.id}>
           <CardImage band={band} />
 
-          <Title className={index === 0 ? "listing" : ""}>
+          <Title className={band.selected ? "listening" : ""}>
             <p>{band.band}</p>
+            {band.selected && <AudioLines size={ICON_SIZE} />}
           </Title>
           <InfoWrapper>
             <Tag $hue="purple" $intensity={band.growling}>
@@ -35,7 +46,15 @@ function BandGrid({ bands }: GridProps) {
               </Tag>
             </MoreInfoWrapper> */}
           </InfoWrapper>
-          <ActionBtn>Play</ActionBtn>
+          {band.deezerId || band.deezerRecommendationId ?
+            <ActionBtn onClick={() => playRecommendedTrackOrOpenLink(band)}>
+              Play
+              <Play size={ICON_SIZE} />
+            </ActionBtn>
+            : <ActionBtn $secondary={true} onClick={() => playRecommendedTrackOrOpenLink(band)}>
+              Link
+              <ExternalLink size={ICON_SIZE} />
+            </ActionBtn>}
         </Card>
       ))}
     </GridWrapper>
@@ -77,14 +96,19 @@ const GridWrapper = styled.div`
 `;
 
 const Title = styled.div`
+  transition: background-color 500ms ease-in;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
   text-align: center;
-  padding: 5px;
+  padding: 10px 0px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   font-size: calc(12rem / 16);
   border-bottom: 0.05rem solid var(--color-secondary-alpha-300);
-  &.listing {
+  &.listening {
+    transition: background-color 500ms ease-in;
     border-bottom: 0px;
     background-color: var(--color-tertiary);
   }
@@ -165,10 +189,15 @@ const InfoWrapper = styled.div`
     background: red;
   }
 `;
-
-const ActionBtn = styled.button`
+type Props = { $secondary?: boolean }
+const ActionBtn = styled.button.attrs<Props>((p) => ({
+  $secondary: p.$secondary,
+}))`
   width: 100%;
-  background: var(--color-primary-alpha-500);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: ${(p) => `var(${p.$secondary ? '--color-secondary)' : '--color-primary-alpha-500)'}`};
   color: var(--text-color);
   border: none;
   text-align: left;

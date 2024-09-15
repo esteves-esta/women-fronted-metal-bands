@@ -4,7 +4,7 @@ import useSWR from "swr";
 import { BandContext } from "../BandsProvider";
 import { ToastContext } from "../ToastProvider";
 import { DEEZER_API } from "../../constants";
-import { TrackInfo } from "../../models/Band";
+import { Band, TrackInfo } from "../../models/Band";
 
 const DEEZER_EMPTY_PICTURE =
   "https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg";
@@ -21,7 +21,7 @@ interface IDeezerContext {
   trackIsLoading: boolean;
   isPlaying: boolean;
   setIsPlaying: (value: boolean) => void;
-  getTrackPreview: (bandId: string | null) => void;
+  playRecommendedTrackOrOpenLink: (band: Band) => void;
   playNextTrack: () => void;
   getArtistPicture: (bandId: string | null) => void;
 }
@@ -136,9 +136,8 @@ function DeezerProvider({ children }) {
       if (band) bandMessage = `from the band ${band.band} `;
       openToast({
         title: "Deezer API Error",
-        description: `An error ocurred to get the top track  ${bandMessage} of Deezer API: ${
-          topTrackError.error ? topTrackError.error?.message : ""
-        }`
+        description: `An error ocurred to get the top track  ${bandMessage} of Deezer API: ${topTrackError.error ? topTrackError.error?.message : ""
+          }`
       });
       setBandTopTrack(undefined);
       setCurrentBandId(undefined);
@@ -146,14 +145,14 @@ function DeezerProvider({ children }) {
   }, [topTrackError]);
 
   const getTrackPreview = (bandId) => {
-    // console.log('hey')
+    //   console.log('hey', bandId)
     setTrackId(null);
     setArtistId(null);
     setBandTopTrack(null);
 
     const foundBand = bands.find((band) => band.deezerId === bandId);
+    // console.log({foundBand})
     if (!foundBand) return;
-
     if (!foundBand.deezerPicture) {
       setArtistId(foundBand.deezerId);
     }
@@ -176,7 +175,7 @@ function DeezerProvider({ children }) {
       setIsPlaying(false);
       return;
     }
-    // console.log('oi')
+    console.log('oi')
     setCurrentBandId(bandId);
     setIsPlaying(false);
     setTrackId(foundBand.deezerRecommendationId);
@@ -244,9 +243,21 @@ function DeezerProvider({ children }) {
     getTrackPreview(nextBandPlaying.deezerId);
   };
 
+  const playRecommendedTrackOrOpenLink = (band: Band) => {
+    console.log(band)
+    if (band.deezerId || band.deezerRecommendationId) {
+      getTrackPreview(band.deezerId);
+      return;
+    }
+    if (band.links) {
+      setTimeout(() => window.open(band.links, "_blank"), 10);
+    }
+  };
+
+
   const state = {
     deezerTrackInfo: previewTrack,
-    title: previewTrack && previewTrack?.title ? previewTrack.title : "teste",
+    title: previewTrack && previewTrack?.title ? previewTrack.title : "",
     cover:
       previewTrack && previewTrack?.album
         ? previewTrack.album.cover_small
@@ -254,15 +265,15 @@ function DeezerProvider({ children }) {
     artist:
       previewTrack && previewTrack?.artist
         ? previewTrack.artist.name
-        : "TESTNADO",
+        : "",
     src: previewTrack && previewTrack?.preview ? previewTrack.preview : null,
     currentBandId,
     trackIsLoading: trackIsLoading || topTrackIsLoading,
     isPlaying,
     setIsPlaying,
-    getTrackPreview,
     playNextTrack,
-    getArtistPicture
+    getArtistPicture,
+    playRecommendedTrackOrOpenLink
   };
 
   return (

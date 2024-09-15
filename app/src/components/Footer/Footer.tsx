@@ -22,7 +22,8 @@ function Footer() {
 }
 
 const Wrapper = styled.footer`
-  margin: 20px auto;
+  margin: 0px auto;
+  margin-top: 20px;
   padding: 0px 15px;
   max-width: 1500px;
   display: flex;
@@ -49,7 +50,8 @@ const Wrapper = styled.footer`
   @media ${(p) => p.theme.queries.tabletAndUp} {
     padding: 0px 10%;
     gap: 40px;
-    margin: 30px auto;
+    margin: 0px auto;
+    margin-top: 30px;
     flex-direction: row;
     a {
       margin-right: auto;

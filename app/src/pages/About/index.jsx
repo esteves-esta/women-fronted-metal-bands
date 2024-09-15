@@ -1,8 +1,9 @@
 import * as React from "react";
+import { styled } from "styled-components";
 
 function About() {
   return (
-    <article>
+    <Wrapper>
       <section>
         <div>
           <p>
@@ -31,8 +32,26 @@ function About() {
           </small>
         </div>
       </section>
-    </article>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.article`
+  padding: 10px 10%;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  max-width: 1500px;
+  color: var(--text-color-alpha-9);
+  p {
+    margin-bottom: 2.2rem;
+  }
+
+  @media ${(p) => p.theme.queries.tabletAndUp} {
+    padding: 30px 10%;
+    margin: 0px auto;
+    font-size: calc(20rem / 16);
+  }
+`;
 
 export default About;

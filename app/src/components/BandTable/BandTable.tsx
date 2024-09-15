@@ -5,12 +5,19 @@ import { styled } from "styled-components";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { growTagList } from "../../constants";
 import Tag from "../Tag";
-
+import {
+  AudioLines,
+  Play,
+  ExternalLink
+} from "lucide-react";
 interface GridProps {
   bands: Band[];
 }
+import { DeezerContext } from "../DeezerProvider";
 
 function BandTable({ bands }: GridProps) {
+  const ICON_SIZE = 20;
+  const { playRecommendedTrackOrOpenLink } = React.useContext(DeezerContext);
 
   return (
     <Wrapper>
@@ -51,9 +58,19 @@ function BandTable({ bands }: GridProps) {
 
         <tbody>
           {bands.map((band) => (
-            <Row key={band.id}>
+            <Row key={band.id} className={band.selected ? "listening" : ""}>
               <td>
-                {band.band}
+                <BandNameWrapper>
+
+                  {band.band}
+                  {band.selected && <AudioLines size={ICON_SIZE} />}
+                  {!band.selected && <OnHoverWrapper>
+                    <Btn onClick={() => playRecommendedTrackOrOpenLink(band)}>
+                      {band.deezerId || band.deezerRecommendationId ? <Play size={ICON_SIZE} /> :
+                        <ExternalLink size={ICON_SIZE} />}
+                    </Btn>
+                  </OnHoverWrapper>}
+                </BandNameWrapper>
               </td>
 
               <CellFixedWidth>
@@ -69,7 +86,7 @@ function BandTable({ bands }: GridProps) {
               </CellFixedWidth>
 
               <td>
-                {band.country}
+                {band.countryCode}
               </td>
 
               <CellOverflowHidden>
@@ -124,8 +141,10 @@ color: var( --color-grey-500);
 const Row = styled.tr`
 transition: all 350ms ease-in;
 background-color: var(--color-secondary-dark-alpha-700);
-
-&:hover {
+&.listening {
+  background-color: var(--color-tertiary);
+}
+&:not(.listening):hover {
   background-color: var(--color-primary-dark);
 }
 
@@ -147,9 +166,10 @@ td:first-of-type{
 `;
 
 const CellFixedWidth = styled.td`
-  min-width: 58px !important; 
-  max-width: 58px !important; 
+  min-width: 60px !important; 
+  max-width: 60px !important; 
 `;
+
 const CellOverflowHidden = styled.td`
 white-space: nowrap;
 text-overflow: ellipsis;
@@ -157,16 +177,54 @@ overflow: hidden;
 width: 120px;
 max-width: 120px;
 transition: height 350ms ease-in;
-${Row}:hover & {
-  white-space: break-spaces;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  height: 100px;
+@media (hover: hover) and (pointer: fine) {
+  
+   ${Row}:hover & {
+     white-space: break-spaces;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     height: 100px;
+    }
 }
 `;
 
 const Table = styled.table`
   border-spacing: 0px 10px;
 `
+
+const BandNameWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`
+const OnHoverWrapper = styled.div`
+  opacity: 0;
+  user-select: none;
+  transition: opacity 650ms ease-in;
+  @media (hover: hover) and (pointer: fine) {
+    
+    ${Row}:hover & {
+     white-space: break-spaces;
+     opacity: 1;
+    }
+  }
+  `;
+
+const Btn = styled.button`
+ display: flex;
+ align-items: center;
+ background: transparent;
+ border: none;
+ cursor: pointer;
+ color: inherit;
+ padding: 10px;
+ border-radius: 100rem;
+ transition: background 450ms ease-in;
+ @media (hover: hover) and (pointer: fine) {
+  &:hover {
+    background: var(--color-primary-alpha-500);
+  }
+}
+ `;
 
 export default BandTable;

@@ -34,12 +34,12 @@ const TagWrapper = styled.div.attrs<Props>((p) => ({
 }))`
   background: ${(p) => {
     if (p.$hue === 'black') return `var(--color-grey-500)`;
-     
+
     return `hsl(var(--${p.$hue}) var(--intensity-${p.$intensity}))`
   }};
   
   border-radius: 1rem;
-  font-size: calc(13rem / 16);
+  font-size: calc(11rem / 16);
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -52,6 +52,7 @@ const TagWrapper = styled.div.attrs<Props>((p) => ({
   transition: width 350ms ease-in 0s;
   box-shadow: inset 0px 0px 8px -4px #06052768;
   /* border: .05rem solid var(--color-secondary-dark); */
+@media (hover: hover) and (pointer: fine) { 
   tr:hover & {
     transition: width 400ms ease-in .6s;
     width: 100%;
@@ -60,7 +61,8 @@ const TagWrapper = styled.div.attrs<Props>((p) => ({
       opacity: 1;
       transition: opacity 450ms ease-in 1s;
     }
-  } 
+  }
+} 
 `;
 
 export default Tag;

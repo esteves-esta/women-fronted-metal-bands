@@ -92,6 +92,7 @@ h6 {
   --secondary-font-family: 'Lexend Peta', sans-serif;
 
   --text-color-alpha-8: hsla(0deg 0% 40% / 0.8);
+  --text-color-alpha-9: hsla(0deg 0% 80.78% / 0.8);
   --text-color: hsl(0deg 0% 80.78%);
 
   --grey: -10deg;
