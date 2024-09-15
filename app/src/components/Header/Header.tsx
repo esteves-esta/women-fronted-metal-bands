@@ -3,10 +3,10 @@ import { styled } from "styled-components";
 import { BandContext } from "../BandsProvider";
 import MediaPlayer from "../MediaPlayer";
 import { NavLink } from "react-router-dom";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Download } from "lucide-react";
 
 function Header() {
-  const { total, databaseChecked } = React.useContext(BandContext);
+  const { total, databaseChecked, downloadAll } = React.useContext(BandContext);
   function scrollTop() {
     window.scrollTo({
       top: 0,
@@ -38,6 +38,10 @@ function Header() {
           <TotalSpan>
             {total} band{total > 1 && "s"}
           </TotalSpan>
+
+          <DownloadBtn onClick={downloadAll}>
+            Download list<Download size={16} />
+          </DownloadBtn>
         </Nav>
 
         <TitleContainer>
@@ -52,7 +56,7 @@ function Header() {
       </Head>
 
       <BackToTop onClick={scrollTop}>
-        <ArrowUp size={20} />
+        <ArrowUp size={26} />
       </BackToTop>
     </>
   );
@@ -71,12 +75,26 @@ function HeaderLink({ children, to }) {
   );
 }
 
+const DownloadBtn = styled.button`
+color: inherit;
+cursor: pointer;
+border:none;
+background-color: var(--color-secondary);
+padding: 5px 20px 6px 20px;
+border-radius: 100rem;
+display: flex;
+align-items: center;
+gap: 5px;
+font-weight: bold;
+letter-spacing: .05rem;
+`;
+
 const BackToTop = styled.button`
 color: inherit;
 cursor: pointer;
 border:none;
 background-color: var(--color-secondary);
-padding: 20px;
+padding: 18px;
 border-radius: 100rem;
 position: fixed;
 bottom: 20px;
