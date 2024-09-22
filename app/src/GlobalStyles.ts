@@ -175,6 +175,12 @@ body {
   background-size: 100%;
   background-image: var(--gradient-bg1); 
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 `;
 
 export default GlobalStyles;

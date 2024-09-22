@@ -52,7 +52,7 @@ const TagWrapper = styled.div.attrs<Props>((p) => ({
   transition: width 350ms ease-in 0s;
   box-shadow: inset 0px 0px 8px -4px #06052768;
   /* border: .05rem solid var(--color-secondary-dark); */
-@media (hover: hover) and (pointer: fine) { 
+/* @media (hover: hover) and (pointer: fine) {  */
   tr:hover & {
     transition: width 400ms ease-in .6s;
     width: 100%;
@@ -61,7 +61,7 @@ const TagWrapper = styled.div.attrs<Props>((p) => ({
       opacity: 1;
       transition: opacity 450ms ease-in 1s;
     }
-  }
+  /* } */
 } 
 `;
 

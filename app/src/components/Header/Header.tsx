@@ -4,6 +4,7 @@ import { BandContext } from "../BandsProvider";
 import MediaPlayer from "../MediaPlayer";
 import { NavLink } from "react-router-dom";
 import { ArrowUp, Download } from "lucide-react";
+import useIsOnscreen from "../../helpers/useIsOnScreen";
 
 function Header() {
   const { total, databaseChecked, downloadAll } = React.useContext(BandContext);
@@ -11,14 +12,16 @@ function Header() {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth",
     });
   }
+
+  const [isOnscreen, elementRef] = useIsOnscreen();
+
   return (
     <>
       {databaseChecked && <MediaPlayer />}
       {/* <MediaPlayer /> */}
-      <Head>
+      <Head ref={elementRef}>
         <Nav>
           <ul>
             <li>
@@ -55,9 +58,9 @@ function Header() {
         </TitleContainer>
       </Head>
 
-      <BackToTop onClick={scrollTop}>
+      {!isOnscreen && <BackToTop onClick={scrollTop}>
         <ArrowUp size={26} />
-      </BackToTop>
+      </BackToTop>}
     </>
   );
 }
@@ -175,7 +178,9 @@ const Nav = styled.nav`
   }
 `;
 
-const Head = styled.header`
+const Head = styled.header.attrs(({ ref }) => ({
+  ref: ref,
+}))`
   margin: 0px auto;
   max-width: 1500px;
   margin-bottom: 15px;
