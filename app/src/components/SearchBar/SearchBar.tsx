@@ -389,7 +389,7 @@ const Wrapper = styled.div`
   z-index: 1;
   position: sticky;
   left: 0;
-  top: 42px;
+  top: 40px;
   font-size: 1.2rem;
   border-top: 2px solid hsl(291deg 96% 10%);
 `;
