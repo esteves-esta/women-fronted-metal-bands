@@ -9,6 +9,7 @@ import {
   ExternalLink
 } from "lucide-react";
 import { DeezerContext } from "../DeezerProvider";
+import useMatchMedia from "../../helpers/useMatchMedia";
 
 interface GridProps {
   bands: Band[];
@@ -18,13 +19,16 @@ function BandGrid({ bands }: GridProps) {
   const ICON_SIZE = 20;
   const { playRecommendedTrackOrOpenLink } = React.useContext(DeezerContext);
   const [cardHovered, setCardHovered] = React.useState(null);
-
+  const mediaNarrow = useMatchMedia(900);
   return (
     <GridWrapper>
       {bands.map((band) => (
         <Card key={band.id}
-          onPointerEnter={() => setCardHovered(band.id)}
-          onPointerLeave={() => setCardHovered(null)}
+          onPointerEnter={() => !mediaNarrow && setCardHovered(band.id)}
+          onPointerLeave={() => !mediaNarrow && setCardHovered(null)}
+          onPointerDown={() => 
+            mediaNarrow && setCardHovered(cardHovered === band.id ? null : band.id )
+          }
         >
           <CardImage band={band} />
 
@@ -40,7 +44,7 @@ function BandGrid({ bands }: GridProps) {
               </Tag>
 
               <Tag $hue={!!band.yearEnded ? 'cyan' : 'black'} $intensity={1}>
-                {!!band.yearEnded ? "Active" : "Disbanded"}
+                {!!band.yearEnded ? "Active" : "Ended"}
               </Tag>
             </InfoWrapper>) :
               (<InfoWrapper>
@@ -53,7 +57,7 @@ function BandGrid({ bands }: GridProps) {
                 <InfoCol>
                   <span>Status</span>
                   <Tag $hue={!!band.yearEnded ? 'cyan' : 'black'} $intensity={1}>
-                    {!!band.yearEnded ? "Active" : "Disbanded"}
+                    {!!band.yearEnded ? "Active" : "Ended"}
                   </Tag>
                 </InfoCol>
                 <InfoCol>
@@ -205,7 +209,7 @@ const Card = styled.div`
 `;
 
 const InfoCol = styled.div`
-flex: 1 0 100px;
+flex: 1 0 60px;
 display: flex;
 flex-direction: column;
 gap: 5px;
