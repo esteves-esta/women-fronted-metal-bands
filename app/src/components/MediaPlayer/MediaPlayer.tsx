@@ -16,6 +16,7 @@ import { DeezerContext } from "../DeezerProvider";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { BandContext } from "../BandsProvider";
 import useMediaPlayerControls from "./useMediaPlayerControls";
+import { sample } from "../../helpers/range";
 
 function MediaPlayer() {
   const audioRef = React.useRef<HTMLAudioElement>();
@@ -28,14 +29,25 @@ function MediaPlayer() {
     progressBarRef
   } = useMediaPlayerControls(audioRef);
 
-  const { title, cover, artist, trackIsLoading, deezerTrackInfo } =
+  const { title, cover, getTrackPreview, artist, trackIsLoading, deezerTrackInfo } =
     React.useContext(DeezerContext);
-  const { saveTrackToUserList } = React.useContext(BandContext);
+  const { saveTrackToUserList, bands } = React.useContext(BandContext);
   const [isOpen, setIsOpen] = React.useState(false);
   const { userLikedTracksList } = React.useContext(BandContext);
   const total = userLikedTracksList.length;
 
   const ICON_SIZE = 17;
+
+  const playRandom = () => {
+    const randomBand = sample(
+      bands.filter(
+        (item) => item.deezerId != null || item.deezerRecommendationId != null
+      )
+    );
+    // console.log({ randomBand })
+    getTrackPreview(randomBand.deezerId);
+  };
+
   return (
     <PlayerWrapper>
       <Progress ref={progressBarRef} value={progressValue} max="1" />
@@ -92,15 +104,15 @@ function MediaPlayer() {
           )}
         </TrackInfo>
 
-        <Btn>
+        <Btn onClick={playRandom}>
           <Play size={ICON_SIZE} />
           <span>random</span>
         </Btn>
 
-        <Btn onClick={() => setIsOpen(true)}>
+        {/* <Btn onClick={() => setIsOpen(true)}>
           <ListMusic size={ICON_SIZE} />
           <span>favorites</span>
-        </Btn>
+        </Btn> */}
 
         {/* <UserListModal isOpen={isOpen} handleOpen={setIsOpen} /> */}
 

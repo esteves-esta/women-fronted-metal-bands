@@ -24,6 +24,7 @@ interface IDeezerContext {
   playRecommendedTrackOrOpenLink: (band: Band) => void;
   playNextTrack: () => void;
   getArtistPicture: (bandId: string | null) => void;
+  getTrackPreview: (bandId: string | null) => void;
 }
 
 export const DeezerContext = React.createContext<Partial<IDeezerContext>>({});
@@ -272,7 +273,8 @@ function DeezerProvider({ children }) {
     setIsPlaying,
     playNextTrack,
     getArtistPicture,
-    playRecommendedTrackOrOpenLink
+    playRecommendedTrackOrOpenLink,
+    getTrackPreview
   };
 
   return (
