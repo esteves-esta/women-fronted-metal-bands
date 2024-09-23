@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classes from './Table.module.css';
 import { Search } from 'lucide-react';
-import Dropdown from '../Drowdown'
+import Dropdown from '../../components/DroPdown'
 
 function TableFilter({ onChange, columns }) {
   const [search, setSearch] = React.useState('');

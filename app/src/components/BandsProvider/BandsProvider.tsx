@@ -16,7 +16,7 @@ interface IBandContext {
   bands: Band[];
   currentPage: number;
   searchParams: Params;
-  handleFilter: (growIntensity: number, detailFilter: string) => void;
+  handleFilter: (growIntensity: number, detailFilter: string[]) => void;
   handleQuery: (query?: string, col?: string) => void;
   handlePageChange: (page: number) => void;
   handleSort: (sortBy: string, sort: string) => void;
@@ -176,6 +176,7 @@ function BandsProvider({ children }) {
         page: 0
       };
     });
+    setTotalFiltered(0);
   }, []);
 
   const handleSort = React.useCallback((sortBy, sort) => {
@@ -200,16 +201,7 @@ function BandsProvider({ children }) {
   }, []);
 
   const handleFilter = React.useCallback((growIntensity, detailFilter) => {
-    const details = [
-      "active",
-      "disbanded",
-      "allWomen",
-      "mixedGender",
-      "blackWomen",
-      "sister"
-    ];
     const grows = [0, 1, 2, 3];
-
     if (grows.includes(Number(growIntensity))) {
       setSearchParams((params) => {
         return { ...params, growling: growIntensity, page: 0 };
@@ -219,9 +211,9 @@ function BandsProvider({ children }) {
         return { ...params, growling: null, page: 0 };
       });
     }
-    if (details.includes(detailFilter)) {
+    if (detailFilter.length > 0) {
       setSearchParams((params) => {
-        return { ...params, filter: detailFilter, page: 0 };
+        return { ...params, filter: detailFilter.join(','), page: 0 };
       });
     } else {
       setSearchParams((params) => {
@@ -229,6 +221,7 @@ function BandsProvider({ children }) {
       });
     }
     setCurrentPage(0);
+    setTotalFiltered(0);
   }, []);
 
   function downloadAll() {

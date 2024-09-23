@@ -1,5 +1,4 @@
 import * as React from "react";
-import { BandContext } from "../../components/BandsProvider";
 import { Band } from "../../models/Band";
 import { styled } from "styled-components";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";

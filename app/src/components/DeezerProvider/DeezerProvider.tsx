@@ -175,7 +175,6 @@ function DeezerProvider({ children }) {
       setIsPlaying(false);
       return;
     }
-    console.log('oi')
     setCurrentBandId(bandId);
     setIsPlaying(false);
     setTrackId(foundBand.deezerRecommendationId);
@@ -244,7 +243,7 @@ function DeezerProvider({ children }) {
   };
 
   const playRecommendedTrackOrOpenLink = (band: Band) => {
-    console.log(band)
+    // console.log(band)
     if (band.deezerId || band.deezerRecommendationId) {
       getTrackPreview(band.deezerId);
       return;

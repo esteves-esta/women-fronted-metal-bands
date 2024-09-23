@@ -84,7 +84,7 @@ h6 {
   Theme and global variables
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Lexend+Peta:wght@900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Lexend+Peta:wght@900&display=swap'); */
 
 :root {
   --box-shadow-focus: 0px 0px 3px 1px var(--color-primary-lighten3);
@@ -102,6 +102,8 @@ h6 {
   --color-grey-900: hsl(var(--grey) 15% 15%);
   --border-color: var(--color-grey-700);
 
+  --color-dark-alpha-3: hsl(0 0% 5% / .2);
+  --color-dark-alpha-5: hsl(0 0% 5% / .5);
 
   --primary: 291 85%;
   --color-primary: hsl(var(--primary) 38%);
@@ -122,7 +124,7 @@ h6 {
   --color-secondary-alpha-700: hsl(var(--secondary)  50% / 0.7);
 
   --tertiary: 251 68%;
-  --color-tertiary-light: hsl(var(--tertiary) 70%);
+  --color-tertiary-light: hsl(var(--tertiary) 55%);
   --color-tertiary: hsl(var(--tertiary) 24%);
   --color-tertiary-dark: hsl(var(--tertiary) 15%);
   --color-tertiary-alpha-300: hsl(var(--tertiary)  50% / 0.3);
@@ -174,6 +176,7 @@ body {
   /* background-attachment: fixed; */
   background-size: 100%;
   background-image: var(--gradient-bg1); 
+  padding-bottom: 100px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

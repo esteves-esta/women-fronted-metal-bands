@@ -24,8 +24,9 @@ export default async (req: Request, context: Context) => {
 
   // SEARCH AND FILTER
   let searchQuery = getSearchQuery(query, col);
-  searchQuery += getFilterQuery(filter);
+  searchQuery += getFiltersQuery(filter);
   searchQuery += getGrowlingFilter(growling);
+  // console.log({ searchQuery });
 
   /* SORT AND LIMIT */
   let searchOption: { LIMIT?: any; SORTBY?: any } = getSortAndLimit({
@@ -111,6 +112,11 @@ function getSearchQuery(query: string, col: string) {
   }
 }
 
+function getFiltersQuery(filter) {
+  const filters = filter.split(",");
+  // console.log({ filters });
+  return filters.map((filter) => getFilterQuery(filter)).join(' ')
+}
 function getFilterQuery(filter) {
   const filterCols = [
     "active",
@@ -120,6 +126,7 @@ function getFilterQuery(filter) {
     "mixedGender",
     "sister",
   ];
+  // console.log(filterCols.includes(filter));
   if (!filterCols.includes(filter)) return "";
   switch (filter) {
     case "active":

@@ -31,6 +31,20 @@ export const growTagList: TagInfo[] = [
   { value: 0, text: "None", type: "deep-1" },
 ];
 
+export const filterStatusOptions = [
+  { value: "active", text: "Active" },
+  { value: "disbanded", text: "Ended" },
+];
+export const filterGenderOptions = [
+  { value: "allWomen", text: "All women" },
+  { value: "mixedGender", text: "Mixed" },
+];
+
+export const filterDetailsOptions = [
+  { value: "blackWomen", text: "Black women" },
+  { value: "sister", text: "Sisters" },
+];
+
 export const filterByDetailsOptions = [
   { value: "viewAll", text: "View All" },
   { value: "active", text: "Active" },
@@ -40,8 +54,7 @@ export const filterByDetailsOptions = [
   { value: "blackWomen", text: "Black women" },
   { value: "sister", text: "Sisters" },
 ];
-
 export const growFilterOptions = [
-  { value: "viewAll", text: "View All" },
+  // { value: "viewAll", text: "View All" },
   ...growTagList,
 ];

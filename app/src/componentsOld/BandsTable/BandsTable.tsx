@@ -25,7 +25,7 @@ import { sample } from "../../helpers/range";
 import classes from "./BandsTable.module.css";
 import useMatchMedia from "../../helpers/useMatchMedia";
 import Pagination from "../DataTable/Pagination";
-import Dropdown from "../Drowdown";
+import Dropdown from "../../components/DroPdown";
 
 function BandsTable() {
   const {

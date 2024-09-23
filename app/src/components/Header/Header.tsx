@@ -5,6 +5,7 @@ import MediaPlayer from "../MediaPlayer";
 import { NavLink } from "react-router-dom";
 import { ArrowUp, Download } from "lucide-react";
 import useIsOnscreen from "../../helpers/useIsOnScreen";
+import ErrorBoundary from '../ErrorBoundary';
 
 function Header() {
   const { total, databaseChecked, downloadAll } = React.useContext(BandContext);
@@ -19,7 +20,17 @@ function Header() {
 
   return (
     <>
-      {databaseChecked && <MediaPlayer />}
+
+      <ErrorBoundary
+        fallback={
+          <div className="error">
+            
+          </div>
+        }
+      >
+        <MediaPlayer />
+      </ErrorBoundary>
+
       {/* <MediaPlayer /> */}
       <Head ref={elementRef}>
         <Nav>
