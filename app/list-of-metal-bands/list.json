@@ -7120,5 +7120,30 @@
     "sister": false,
     "numberOfVocalists": 2,
     "id": "band:390353"
+  },
+  {
+    "growling": 3,
+    "band": "DEVIL WITHIN",
+    "deezerId": 8329714,
+    "deezerRecommendationId": 660224672,
+    "genre": [
+      "Melodic Death Metal"
+    ],
+    "recommendationIsCover": false,
+    "blackWomen": false,
+    "allWomenBand": false,
+    "pastVocalists": [],
+    "currentVocalists": [
+      "U"
+    ],
+    "country": "Japan",
+    "countryCode": "JP",
+    "yearStarted": 2019,
+    "yearEnded": 0,
+    "recommendation": "",
+    "links": "http://undeadcorporation.com/devilwithin/",
+    "sister": false,
+    "numberOfVocalists":1,
+    "id": "band:8329714"
   }
 ]
