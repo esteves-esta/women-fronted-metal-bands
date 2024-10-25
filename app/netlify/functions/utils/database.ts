@@ -6,14 +6,17 @@ let client;
 export async function connectClient() {
   // process.env.DB_PASSWORD
   const databasePassword = Netlify.env.get("DB_PASSWORD");
+  const dbHost = Netlify.env.get("DB_HOST_URL");
+  const dbPost = Netlify.env.get("DB_HOST_PORT");
+
   if (client && client.connected) return client;
 
   client = createClient({
     password: databasePassword,
     socket: {
-      host: "redis-19242.c228.us-central1-1.gce.cloud.redislabs.com",
-      port: 19242
-    }
+      host: dbHost,
+      port: dbPost,
+    },
   });
 
   client.on("error", function (err) {
