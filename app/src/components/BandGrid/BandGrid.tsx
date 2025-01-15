@@ -24,10 +24,11 @@ function BandGrid({ bands }: GridProps) {
     <GridWrapper>
       {bands.map((band) => (
         <Card key={band.id}
+          className={cardHovered === band.id ? "cardHovered" : ""}
           onPointerEnter={() => !mediaNarrow && setCardHovered(band.id)}
           onPointerLeave={() => !mediaNarrow && setCardHovered(null)}
-          onPointerDown={() => 
-            mediaNarrow && setCardHovered(cardHovered === band.id ? null : band.id )
+          onPointerDown={() =>
+            mediaNarrow && setCardHovered(cardHovered === band.id ? null : band.id)
           }
         >
           <CardImage band={band} />
@@ -206,6 +207,13 @@ const Card = styled.div`
       transition: height 450ms ease-in-out;
     }
   }
+  &.cardHovered {
+    img,
+    ${ImgPlaceholder} {
+      height: 10%;
+      transition: height 450ms ease-in-out;
+    }
+  }
 `;
 
 const InfoCol = styled.div`
@@ -261,6 +269,12 @@ const ActionBtn = styled.button.attrs<Props>((p) => ({
   transition: opacity 450ms ease-in-out 20ms, transform 40ms 700ms;
 
   ${Card}:hover & {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 550ms ease-in-out 200ms, transform 50ms;
+  }
+
+  ${Card}.cardHovered & {
     opacity: 1;
     transform: translateY(0px);
     transition: opacity 550ms ease-in-out 200ms, transform 50ms;
