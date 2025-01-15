@@ -1,5 +1,5 @@
 import Modal from '../Modal'
-import { BandContext } from "../BandsProvider";
+import { BandContext } from "../../components/BandsProvider";
 import { Download, XCircle, Trash } from 'lucide-react';
 import classes from './Modal.module.css'
 import React from 'react';

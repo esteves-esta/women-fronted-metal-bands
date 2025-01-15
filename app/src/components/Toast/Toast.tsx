@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ToastRadix from '@radix-ui/react-toast';
 import { ToastContext } from '../ToastProvider';
 import classes from './Toast.module.css'
+import { X } from "lucide-react";
 
 function Toast() {
 
@@ -21,7 +22,9 @@ function Toast() {
           {toastBody.description}
         </ToastRadix.Description>
 
-        <ToastRadix.Close />
+        <ToastRadix.Close className={classes.Close}>
+          <X />
+        </ToastRadix.Close>
       </ToastRadix.Root>
 
       <ToastRadix.Viewport className={classes.ToastViewport} />

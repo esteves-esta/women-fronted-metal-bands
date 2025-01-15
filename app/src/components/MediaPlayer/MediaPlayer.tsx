@@ -12,7 +12,7 @@ import {
   VolumeX
 } from "lucide-react";
 import { DeezerContext } from "../DeezerProvider";
-// import UserListModal from "../UserListModal";
+import UserListModal from "../UserListModal";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { BandContext } from "../BandsProvider";
 import useMediaPlayerControls from "./useMediaPlayerControls";
@@ -109,12 +109,12 @@ function MediaPlayer() {
           <span>random</span>
         </Btn>
 
-        {/* <Btn onClick={() => setIsOpen(true)}>
+        <Btn onClick={() => setIsOpen(true)}>
           <ListMusic size={ICON_SIZE} />
           <span>favorites</span>
-        </Btn> */}
+        </Btn>
 
-        {/* <UserListModal isOpen={isOpen} handleOpen={setIsOpen} /> */}
+        <UserListModal isOpen={isOpen} handleOpen={setIsOpen} />
 
         <ApiInfo>
           <AudioLines size={ICON_SIZE} />

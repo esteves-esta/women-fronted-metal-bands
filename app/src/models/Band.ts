@@ -28,6 +28,11 @@ export interface Band {
 }
 
 export interface TrackInfo {
-  album: { cover_medium: string };
+  id: string;
+  link: string;
+  title: string;
+  artist: { name: string};
+  album: { cover_medium: string; title: string };
   albumtitle: string;
+  release_date: string;
 }
