@@ -8,7 +8,7 @@ import useIsOnscreen from "../../helpers/useIsOnScreen";
 import ErrorBoundary from '../ErrorBoundary';
 
 function Header() {
-  const { total, databaseChecked, downloadAll } = React.useContext(BandContext);
+  const { total, databaseChecked, downloadAll, searchParams, downloadFiltered } = React.useContext(BandContext);
   function scrollTop() {
     window.scrollTo({
       top: 0,
@@ -56,6 +56,10 @@ function Header() {
           <DownloadBtn onClick={downloadAll}>
             Download list<Download size={16} />
           </DownloadBtn>
+          {searchParams.filter || searchParams.growling &&
+          <DownloadBtn onClick={downloadFiltered}>
+            Download filtered <Download size={16} />
+          </DownloadBtn>}
         </Nav>
 
         <TitleContainer>
