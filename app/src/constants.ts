@@ -1,6 +1,6 @@
 import { TagInfo } from "./components/Tag";
 
-export const DEEZER_API = window.location.href;
+export const DEEZER_API = `${window.location.origin}/` ;
 
 // export const DEEZER_API = import.meta.env.DEV
 //   ? "http://localhost:8888/"
