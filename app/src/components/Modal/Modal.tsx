@@ -98,7 +98,7 @@ const Content = styled(Dialog.Content)`
   
   overflow-y: scroll;
   z-index: 4;
-  background-color: var(--color-secondary-dark);
+  background-color: #1a1a1a;
   border-radius: 8px 8px 0px 0px;
   box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
   position: fixed;
@@ -113,7 +113,7 @@ const Content = styled(Dialog.Content)`
 
   overflow-y: scroll;
   overflow-x: hidden;
-  scrollbar-color: var(--color-primary) var(--color-dark-alpha-3);
+  scrollbar-color: var(--color-secondary) var(--color-dark-alpha-3);
   scrollbar-width: thin;
 
 
@@ -123,7 +123,7 @@ const Content = styled(Dialog.Content)`
 }
 
 &::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 
 &:focus {outline: none;}

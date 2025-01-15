@@ -245,7 +245,9 @@ const TrackInfo = styled.div`
   }
   @media ${(p) => p.theme.queries.tabletAndUp} {
     flex: 1 0 auto;
+    flex-wrap: nowrap;
   }
+  flex-wrap: wrap;
 `;
 
 const PlayerBody = styled.div`

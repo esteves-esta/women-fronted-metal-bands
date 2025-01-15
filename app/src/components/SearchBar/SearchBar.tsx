@@ -309,6 +309,7 @@ const ToogleFilterButton = styled.button`
   border: none;
   color: var(--text-color);
   cursor: pointer;
+  width: 30px;
 `;
 
 const SecondRow = styled.div`
@@ -389,9 +390,12 @@ const Wrapper = styled.div`
   z-index: 1;
   position: sticky;
   left: 0;
-  top: 40px;
   font-size: 1.2rem;
   border-top: 2px solid hsl(291deg 96% 10%);
+  top: 100px;
+  @media ${(p) => p.theme.queries.tabletAndUp} {
+    top: 40px;
+  }
 `;
 
 export default SearchBar;
