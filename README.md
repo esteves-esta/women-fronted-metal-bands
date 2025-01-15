@@ -10,7 +10,6 @@ A list of metal bands with women as lead vocalist (with focus on women that can 
 > [VERSION 1.0 OF THE SITE](https://version-1-0--women-fronted-metal-bands.netlify.app/)
 
 ---
-teste
 This project is a list of the bands of diferent metal genres and also an way of me to pratice frontend. 
 
 You can filter bands by how much growling the singer is capable of doing.
@@ -19,7 +18,8 @@ You can filter bands by how much growling the singer is capable of doing.
 ## Index
 
 # Table of Contents
-- [List of women fronted metalbands](#list-of-women-fronted-metalbands)
+- [Version 1.0](#version-10)
+  - [List of women fronted metalbands](#list-of-women-fronted-metalbands)
   - [Index](#index)
 - [Table of Contents](#table-of-contents)
   - [📖 Features](#-features)
