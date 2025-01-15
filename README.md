@@ -95,7 +95,18 @@ You can filter bands by how much growling the singer is capable of doing.
       yarn i
       ```
 
-2. Install netlify globally
+2. create .env file with variables
+  ```
+    VITE_MY_API_KEY="VALUE"
+    MY_API_KEY="VALUE"
+    DB_PASSWORD="VALUE"
+    DB_HOST_URL="VALUE"
+    DB_HOST_PORT="VALUE"
+    CACHE_DB="VALUE" // CACHE DATABASE
+
+  ```
+
+3. Install netlify globally
   ```
   npm install netlify-cli -g
   ```
@@ -110,19 +121,6 @@ You can filter bands by how much growling the singer is capable of doing.
     ```
     yarn netlify dev
     ```
-
-
-1. Run dev server
-
-      ```
-      npm run dev 
-      ```
-      
-      or
-
-      ```
-      yarn dev
-      ```
 
 
       

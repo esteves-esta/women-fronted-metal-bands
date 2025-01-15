@@ -1,13 +1,15 @@
 import { createClient } from "redis";
 
 export async function connectCacheClient() {
-  const databasePassword = Netlify.env.get("DATABASE_PASSWORD");
+  const cachedb = Netlify.env.get("CACHE_DB");
   const client = createClient({
-    url: `redis://default:${databasePassword}@us1-moving-glider-41412.upstash.io:41412`,
+    url: cachedb,
+    pingInterval: 1000,
   });
 
   client.on("error", function (err) {
     console.error("client error: ", err);
+    throw err;
   });
 
   await client.connect();
