@@ -2,16 +2,17 @@ import * as ToggleGroup from '@radix-ui/react-toggle-group';
 import { LucideIcon, X, Filter } from 'lucide-react';
 import { styled } from "styled-components";
 
-function ToogleGroupButton({ list, currentValue, onChange }: {
+function ToogleGroupButton({ list, currentValue, onChange, wrap }: {
   list: { value: any, text: string, icon?: LucideIcon, iconOnly?: boolean }[],
   currentValue: any,
-  onChange: (val) => void
+  onChange: (val) => void,
+  wrap: boolean
 }) {
-  return <Group type="single" defaultValue={currentValue} onValueChange={onChange}>
+  return <Group type="single" defaultValue={currentValue} onValueChange={onChange} className={wrap ? 'wrap' : ''}>
     {list.map(({ text, value, icon, iconOnly }) => {
       const Icon = icon
       return (
-        <Span key={value}>
+        <Span key={value} >
           <GroupItem
             className={currentValue === value.toString() ? 'active' : ''}
             value={value.toString()}
@@ -38,6 +39,7 @@ align-items: center;
   margin: 0 -2px;
   height: 1em;
 }
+
 `;
 
 const GroupItem = styled(ToggleGroup.Item)`
@@ -73,6 +75,10 @@ background: var(--color-secondary-dark);
 border-radius: 9px;
 border: 1px solid var(--color-grey-500);
 @media ${(p) => p.theme.queries.tabletAndUp} {
+}
+&.wrap {
+  flex-wrap: wrap;
+  justify-content: center;
 }
 `;
 

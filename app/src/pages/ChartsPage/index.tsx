@@ -35,16 +35,18 @@ function Charts() {
           list={filterByDetailsOptions}
           currentValue={bandStatusFilter}
           onChange={(val) => setBandStatusFilter(val)}
+          wrap={true}
         />
       </FilterRow>
 
-      <BreakRule />
+      {/* <BreakRule /> */}
       <FilterRow>
         <label>Growling intensity</label>
         <ToogleGroupButton
           list={growFilterOptions}
           currentValue={growlFilter}
           onChange={(val) => setGrowlFilter(val)}
+          wrap={true}
         />
       </FilterRow>
     </div>
