@@ -7,6 +7,14 @@
   force = true # COMMENT: ensure that we always redirect
   headers = {X-From = "Netlify"}
 
+## rule to redirect react pages to base app
+[[redirects]]
+  from = "/pages/*"
+  to = "/index.html "
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+  headers = {X-From = "Netlify"}
+
 ## this rule redirects to ngrok free url to access localhost on mobile
 ##[[redirects]]
 ##  from = "/api/*"
