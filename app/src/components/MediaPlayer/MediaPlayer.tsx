@@ -29,12 +29,12 @@ function MediaPlayer() {
     progressBarRef
   } = useMediaPlayerControls(audioRef);
 
-  const { title, cover, getTrackPreview, artist, trackIsLoading, deezerTrackInfo } =
+  const { title, getTrackPreview, artist, trackIsLoading, deezerTrackInfo } =
     React.useContext(DeezerContext);
   const { saveTrackToUserList, bands } = React.useContext(BandContext);
   const [isOpen, setIsOpen] = React.useState(false);
-  const { userLikedTracksList } = React.useContext(BandContext);
-  const total = userLikedTracksList.length;
+  // const { userLikedTracksList } = React.useContext(BandContext);
+  // const total = userLikedTracksList.length;
 
   const ICON_SIZE = 17;
 

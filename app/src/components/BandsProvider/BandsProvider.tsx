@@ -44,7 +44,7 @@ interface Params {
 export const BandContext = React.createContext<Partial<IBandContext>>({});
 
 const localStorageUserListKey = "user-liked-tracks-list";
-const localStorageBandKey = "band-list";
+// const localStorageBandKey = "band-list";
 
 async function fetcher(endpoint) {
   const response = await fetch(`${DEEZER_API}api${endpoint}`, {
@@ -60,7 +60,7 @@ async function fetcher(endpoint) {
   return json;
 }
 
-const errorRetry = (error, key, config, revalidate, { retryCount }) => {
+const errorRetry = (error, revalidate, { retryCount }) => {
   // Never retry on 404.
   if (error.status === 404 || error.status === 500) return;
 
@@ -96,7 +96,7 @@ function BandsProvider({ children }) {
     growling: null
   });
 
-  const { data: isUpdated, error: updateError } = useSWR(
+  const { data: isUpdated} = useSWR(
     `/update-database`,
     fetcher,
     {
@@ -111,7 +111,7 @@ function BandsProvider({ children }) {
     }
   }, [isUpdated]);
 
-  const { data, error, isLoading } = useSWR(
+  const { data, isLoading } = useSWR(
     databaseChecked
       ? `/search/${searchParams.query}/${searchParams.col}/${searchParams.page}/${searchParams.limit}/${searchParams.sort}/${searchParams.sortBy}/${searchParams.filter}/${searchParams.growling}`
       : null,

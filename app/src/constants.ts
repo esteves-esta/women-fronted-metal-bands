@@ -1,5 +1,3 @@
-import { TagInfo } from "./components/Tag";
-
 export const DEEZER_API = `${window.location.origin}/` ;
 
 // export const DEEZER_API = import.meta.env.DEV
@@ -19,12 +17,8 @@ export const MEDIA_QUERIES = {
   desktopAndUp: `(min-width: ${BREAKPOINTS.desktop}rem)`,
 };
 
-export const booleanTagList: TagInfo[] = [
-  { value: true, text: "Yes", type: "success" },
-  { value: false, text: "No", type: "dark" },
-];
 
-export const growTagList: TagInfo[] = [
+export const growTagList = [
   { value: 3, text: "High", type: "deep-4" },
   { value: 2, text: "Medium", type: "deep-3" },
   { value: 1, text: "Few", type: "deep-2" },

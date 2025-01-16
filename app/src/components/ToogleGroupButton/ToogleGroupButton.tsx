@@ -1,12 +1,12 @@
 import * as ToggleGroup from '@radix-ui/react-toggle-group';
-import { LucideIcon, X, Filter } from 'lucide-react';
+import { LucideIcon, X } from 'lucide-react';
 import { styled } from "styled-components";
 
 function ToogleGroupButton({ list, currentValue, onChange, wrap }: {
   list: { value: any, text: string, icon?: LucideIcon, iconOnly?: boolean }[],
   currentValue: any,
   onChange: (val) => void,
-  wrap: boolean
+  wrap?: boolean
 }) {
   return <Group type="single" defaultValue={currentValue} onValueChange={onChange} className={wrap ? 'wrap' : ''}>
     {list.map(({ text, value, icon, iconOnly }) => {

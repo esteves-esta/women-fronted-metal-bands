@@ -43,7 +43,7 @@ async function fetcher(endpoint) {
   return json;
 }
 
-const errorRetry = (error, key, config, revalidate, { retryCount }) => {
+const errorRetry = (error, revalidate, { retryCount }) => {
   // Never retry on 404.
   if (error.status === 404) return;
 
@@ -69,7 +69,7 @@ function DeezerProvider({ children }) {
   const [currentBandId, setCurrentBandId] = React.useState();
   const [isPlaying, setIsPlaying] = React.useState(false);
 
-  const [progress, setProgress] = React.useState(55);
+  // const [progress, setProgress] = React.useState(55);
 
   const {
     data: trackInfo,
@@ -92,7 +92,7 @@ function DeezerProvider({ children }) {
       revalidateOnFocus: false
     }
   );
-  const { data: artist, isLoading: artistLoading } = useSWR(
+  const { data: artist} = useSWR(
     artistId ? `deezer/artist/${artistId}/null` : null,
     fetcher,
     {

@@ -1,3 +1,4 @@
+// @ts-nocheck 
 import * as React from 'react';
 import { Tntensity } from "../../models/Band";
 import { styled } from "styled-components";

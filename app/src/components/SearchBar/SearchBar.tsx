@@ -9,7 +9,7 @@ import ToogleGroupButton from "../ToogleGroupButton";
 import { filterGenderOptions, filterStatusOptions, growFilterOptions } from "../../constants";
 
 function SearchBar() {
-  const { handleQuery, handleFilter, searchParams, handleSort, totalFiltered } = React.useContext(BandContext);
+  const { handleQuery, handleFilter, searchParams, handleSort } = React.useContext(BandContext);
 
   const [growlFilter, setGrowlFilter] = React.useState(() => {
     return searchParams.growling ? searchParams.growling.toString() : ''

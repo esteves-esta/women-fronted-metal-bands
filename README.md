@@ -29,6 +29,7 @@ You can filter bands by how much growling the singer is capable of doing.
     - [Method of data collecting](#method-of-data-collecting)
     - [Links](#links)
 - [Printscreen of site](#printscreen-of-site)
+  - [services used](#services-used)
 
 ---
 ## 📖 Features
@@ -186,3 +187,9 @@ I got some of the bands and the information on this list from the following:
 # Printscreen of site
 
 ![Printscreen](/printscreen-site.png "Header")
+
+## services used
+
+https://upstash.com/
+https://app.redislabs.com/#/login
+https://app.netlify.com/
