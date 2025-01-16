@@ -1,15 +1,16 @@
 // @ts-nocheck 
 import React from "react";
 import { DeezerContext } from '../DeezerProvider';
-
+import { ToastContext } from "../ToastProvider";
 /* 
 credits: 
 - https://www.joyofreact.com/
 - https://dev.to/lukewduncan/how-to-build-an-audio-player-with-html5-and-the-progress-element-387m
  */
 
-function useMediaPlayerControls( ref ) {
-  const { src, isPlaying, setIsPlaying } = React.useContext(DeezerContext)
+function useMediaPlayerControls(ref) {
+  const { src, isPlaying, setIsPlaying, playNextTrack } = React.useContext(DeezerContext)
+  const { openToast } = React.useContext(ToastContext);
 
   const [progressValue, setProgressValue] = React.useState(0);
   const [currentTimeFormatted, setCurrentTimeFormatted] = React.useState<number | string>(0);
@@ -30,6 +31,34 @@ function useMediaPlayerControls( ref ) {
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+
+  React.useEffect(() => {
+    // handle audio error from source
+    function handleError(event) {
+      // https://stackoverflow.com/questions/25940838/how-to-detect-error-type-for-audio-tag-with-sources#25941757
+      var noSourcesLoaded = (this.networkState === HTMLMediaElement.NETWORK_NO_SOURCE);
+      if (noSourcesLoaded) {
+        openToast({
+          title: "Error to load preview",
+          description: "Could not load audio source, error from deezer api."
+        });
+      } else {
+        openToast({
+          title: "Error to load preview",
+          description: ""
+        });
+      }
+      playNextTrack();
+    }
+
+
+    ref.current.addEventListener('error', handleError);
+
+    return () => {
+      ref.current.removeEventListener('error', handleError);
     };
   }, []);
 
