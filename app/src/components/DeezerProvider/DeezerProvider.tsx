@@ -92,7 +92,7 @@ function DeezerProvider({ children }) {
       revalidateOnFocus: false
     }
   );
-  const { data: artist} = useSWR(
+  const { data: artist } = useSWR(
     artistId ? `deezer/artist/${artistId}/null` : null,
     fetcher,
     {
@@ -226,21 +226,28 @@ function DeezerProvider({ children }) {
   }, [previewTrack]);
 
   const playNextTrack = () => {
-    const bandIndex = bands
-      .filter((item) => item.deezerId !== null)
-      .findIndex((band) => band.deezerId === currentBandId);
-    if (bandIndex < 0) return;
+    try {
+      const copyBands = [...bands];
+      const bandIndex = copyBands
+        .filter((item) => item.deezerId !== null)
+        .findIndex((band) => band.deezerId === currentBandId);
 
-    let nextIndex = bandIndex + 1;
-    if (nextIndex >= bands.length) nextIndex = 0;
-    const copyBand = [...bands]
-      .filter((item) => item.deezerId !== null)
-      .slice(nextIndex, bands.length);
-    const nextBandPlaying = copyBand.find(
-      (band) => band.deezerId || band.deezerRecommendationId
-    );
-    // console.log({ name: nextBandPlaying.band });
-    getTrackPreview(nextBandPlaying.deezerId);
+      
+      if (bandIndex < 0) return;
+
+      let nextIndex = bandIndex + 1;
+      if (nextIndex >= bands.length) nextIndex = 0;
+      const copyBand = copyBands
+        .filter((item) => item.deezerId !== null)
+        .slice(nextIndex, copyBands.length);
+      const nextBandPlaying = copyBand.find(
+        (band) => band.deezerId || band.deezerRecommendationId
+      );
+      // console.log({ name: nextBandPlaying.band });
+      getTrackPreview(nextBandPlaying.deezerId);
+    } catch (error) {
+      console.log({ error })
+    }
   };
 
   const playRecommendedTrackOrOpenLink = (band: Band) => {

@@ -12,6 +12,7 @@ function Toast() {
     <>
       <ToastRadix.Root
         className={classes.ToastRoot}
+        duration={1000 * 10}
         open={isOpen}
         onOpenChange={setIsOpen}>
         <ToastRadix.Title className={classes.ToastTitle}>
