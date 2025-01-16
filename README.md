@@ -3,6 +3,8 @@ A list of metal bands with women as lead vocalist (with focus on women that can 
 
 ![Header image written women fronted metal bands](/header-readme.png "Header")
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eae0a9ef-479a-48c0-9add-f618be198af8/deploy-status)](https://app.netlify.com/sites/women-fronted-metal-bands/deploys)
+
 > ### Access app on the link:
 > ### https://women-fronted-metal-bands.netlify.app
 > [VERSION 1.0 OF THE SITE](https://version-1-0--women-fronted-metal-bands.netlify.app/)
@@ -190,6 +192,6 @@ I got some of the bands and the information on this list from the following:
 
 ## services used
 
-https://upstash.com/
-https://app.redislabs.com/#/login
-https://app.netlify.com/
+- https://upstash.com/  
+- https://app.redislabs.com/#/login  
+- https://app.netlify.com/  
