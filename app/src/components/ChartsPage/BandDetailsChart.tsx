@@ -1,10 +1,12 @@
 import React from 'react';
 import { ResponsivePie } from '@nivo/pie'
 import { BandContext } from '../BandsProvider';
-import classes from './ChartsPage.module.css'
 import useSWR from "swr";
 import { errorRetry, fetcher } from './apiFunctions';
 import LoaderSvg from '../LoaderSvg';
+import styled from 'styled-components';
+import classes from './ChartsPage.module.css'
+
 function BandDetailsChart({ filter }) {
 
   const { databaseChecked } = React.useContext(BandContext)
@@ -38,49 +40,49 @@ function BandDetailsChart({ filter }) {
   // </React.Fragment>)
 
   return (
-    <div>
-      <div className={`flex flex-col md:flex-row items-center justify-center mt-5 ${classes.borderBottom}`}>
-        <div className={`flex flex-col pb-4 ${classes.borderRight}`}>
+    <Wrapper>
+      <Row className="borderBottom">
+        <Col className="borderRight">
           {!isLoading && <PieChartCustom colors={{ scheme: 'purpleRed_green' }} data={chartDetails.allwomenData} />}
-          {isLoading && <div className="flex justify-center items-center" style={{ width: "350px", height: "350px" }}>
+          {isLoading && <LoaderWrapper>
             <LoaderSvg width={50} height={50} />
-          </div>}
-          <small className='title2 text-center'>
+          </LoaderWrapper>}
+          <small>
             All women band
           </small>
-        </div>
-        <div className='flex flex-col pb-4'>
+        </Col>
+        <Col className='flex flex-col pb-4'>
           {!isLoading && <PieChartCustom colors={{ scheme: 'pink_yellowGreen' }} data={chartDetails.blackwomenData} />}
-          {isLoading && <div className="flex justify-center items-center" style={{ width: "350px", height: "350px" }}>
+          {isLoading && <LoaderWrapper>
             <LoaderSvg width={50} height={50} />
-          </div>}
-          <small className='title2 text-center'>
+          </LoaderWrapper>}
+          <small>
             Black women
           </small>
-        </div>
-      </div>
+        </Col>
+      </Row>
 
-      <div className='flex flex-col md:flex-row  items-center justify-center' >
-        <div className={`flex flex-col pb-4 ${classes.borderRight}`}>
+      <Row>
+        <Col className="borderRight">
           {!isLoading && <PieChartCustom colors={{ scheme: 'category10' }} data={chartDetails.sisterData} />}
-          {isLoading && <div className="flex justify-center items-center" style={{ width: "350px", height: "350px" }}>
+          {isLoading && <LoaderWrapper>
             <LoaderSvg width={50} height={50} />
-          </div>}
-          <small className='title2 text-center'>
+          </LoaderWrapper>}
+          <small>
             Sisters
           </small>
-        </div>
-        <div className='flex flex-col pb-4 '>
+        </Col>
+        <Col>
           {!isLoading && <PieChartCustom colors={{ scheme: 'paired' }} data={chartDetails.statusData} />}
-          {isLoading && <div className="flex justify-center items-center" style={{ width: "350px", height: "350px" }}>
+          {isLoading && <LoaderWrapper>
             <LoaderSvg width={50} height={50} />
-          </div>}
-          <small className='title2 text-center'>
+          </LoaderWrapper>}
+          <small>
             Band status
           </small>
-        </div>
-      </div>
-    </div >
+        </Col>
+      </Row>
+    </Wrapper >
   )
 
 };
@@ -175,3 +177,67 @@ const PieChartCustom = ({ data, /* startAngle, endAngle, */ colors, /* style */ 
 }
 
 export default BandDetailsChart;
+
+const Wrapper = styled.div`
+/* @media ${(p) => p.theme.queries.tabletAndUp} { */
+
+ .borderRight{
+   border-right: 1px solid var(--border-color);
+ }
+ .borderBottom{
+   border-bottom: 1px solid var(--border-color);
+ }
+
+ @media screen and (min-width: 640px) and (max-width: 768px) {
+  .borderRight,
+  .borderBottom {
+    border: none
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 640px) {
+  .borderRight,
+  .borderBottom {
+    border: none
+  }
+}
+`;
+
+const Row = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 5px;
+@media ${(p) => p.theme.queries.tabletAndUp} {
+  flex-direction: row;
+}
+`;
+
+
+const Col = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding-bottom: 10px;
+small {
+  text-align: center;
+  color: var(--text-title);
+  // font-family: 'Rubik Glitch', cursive;
+  font-family: 'Lexend Peta', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: .8rem;
+}
+`;
+
+
+const LoaderWrapper = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 350px;
+height: 350px;
+`;

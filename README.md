@@ -29,6 +29,7 @@ You can filter bands by how much growling the singer is capable of doing.
     - [Method of data collecting](#method-of-data-collecting)
     - [Links](#links)
 - [Printscreen of site](#printscreen-of-site)
+  - [services used](#services-used)
 
 ---
 ## 📖 Features
@@ -73,7 +74,6 @@ You can filter bands by how much growling the singer is capable of doing.
 - Vite
 - React
 - Typescript
-- Tailwind CSS
 - SWR
 - Lucide React - icons
 - Papaparse - json to csv
@@ -96,7 +96,18 @@ You can filter bands by how much growling the singer is capable of doing.
       yarn i
       ```
 
-2. Install netlify globally
+2. create .env file with variables
+  ```
+    VITE_MY_API_KEY="VALUE"
+    MY_API_KEY="VALUE"
+    DB_PASSWORD="VALUE"
+    DB_HOST_URL="VALUE"
+    DB_HOST_PORT="VALUE"
+    CACHE_DB="VALUE" // CACHE DATABASE
+
+  ```
+
+3. Install netlify globally
   ```
   npm install netlify-cli -g
   ```
@@ -111,19 +122,6 @@ You can filter bands by how much growling the singer is capable of doing.
     ```
     yarn netlify dev
     ```
-
-
-1. Run dev server
-
-      ```
-      npm run dev 
-      ```
-      
-      or
-
-      ```
-      yarn dev
-      ```
 
 
       
@@ -189,3 +187,9 @@ I got some of the bands and the information on this list from the following:
 # Printscreen of site
 
 ![Printscreen](/printscreen-site.png "Header")
+
+## services used
+
+https://upstash.com/
+https://app.redislabs.com/#/login
+https://app.netlify.com/

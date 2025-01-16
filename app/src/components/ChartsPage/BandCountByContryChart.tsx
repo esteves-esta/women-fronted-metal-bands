@@ -6,6 +6,7 @@ import useMatchMedia from '../../helpers/useMatchMedia';
 import useSWR from "swr";
 import { errorRetry, fetcher } from './apiFunctions';
 import LoaderSvg from '../LoaderSvg';
+import { styled } from "styled-components";
 
 function BandCountByContryChart({ filter, filterGrow }) {
   const { databaseChecked, total } = React.useContext(BandContext)
@@ -47,17 +48,17 @@ function BandCountByContryChart({ filter, filterGrow }) {
 
   if (!isLoading)
     return (<React.Fragment>
-      <div className='flex flex-col md:flex-row gap-5 justify-center'>
-        <p className='text-center title3 mt-10'>
+      <Wrapper>
+        <p>
           Total countries: {" "}
-          <span className='font-black'> {chartData.length}</span>
+          <span> {chartData.length}</span>
         </p>
 
-        <p className='text-center title3 mt-10'>
+        <p>
           Total bands : {" "}
-          <span className='font-black'>{bandCount}</span>
+          <span>{bandCount}</span>
         </p>
-      </div>
+      </Wrapper>
 
       <ResponsiveWaffle
         data={chartData}
@@ -108,11 +109,41 @@ function BandCountByContryChart({ filter, filterGrow }) {
     </React.Fragment>
     );
   else return (<React.Fragment>
-    <div className="flex flex-row gap-4 justify-center items-center">
+    <LoaderWrapper>
       <p>Loading </p>
       <LoaderSvg width={50} height={50} />
-    </div>
+    </LoaderWrapper>
   </React.Fragment>)
 };
 
 export default BandCountByContryChart;
+
+const LoaderWrapper = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 4px;
+`;
+
+const Wrapper = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 5px;
+@media ${(p) => p.theme.queries.tabletAndUp} {
+flex-direction: row;
+}
+p {
+  text-align: center;
+  margin-top: 10px;
+   color: var(--text-title);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1rem;
+}
+span {
+   color: white;
+}
+`;

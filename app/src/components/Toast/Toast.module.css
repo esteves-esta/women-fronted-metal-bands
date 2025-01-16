@@ -101,3 +101,9 @@
   font-size: 13px;
   line-height: 1.3;
 }
+
+.Close  {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
