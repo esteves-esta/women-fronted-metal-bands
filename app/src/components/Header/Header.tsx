@@ -40,13 +40,13 @@ function Header() {
               <HeaderLink to="/">Bands</HeaderLink>
             </li>
             <li>
-              <HeaderLink to="/table">table view</HeaderLink>
+              <HeaderLink to="/pages/table">table view</HeaderLink>
             </li>
             <li>
-              <HeaderLink to="/graphs">graphs</HeaderLink>
+              <HeaderLink to="/pages/graphs">graphs</HeaderLink>
             </li>
             <li>
-              <HeaderLink to="/about">About</HeaderLink>
+              <HeaderLink to="/pages/about">About</HeaderLink>
             </li>
           </ul>
 
