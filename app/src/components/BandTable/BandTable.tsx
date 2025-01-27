@@ -74,8 +74,8 @@ function BandTable({ bands }: GridProps) {
 
               <td>
                 <CellFixedWidth>
-                  <Tag $hue={!!band.yearEnded ? 'cyan' : 'black'} $intensity={1} $circle={true}>
-                    {!!band.yearEnded ? 'Active' : 'Ended'}
+                  <Tag $hue={!band.yearEnded ? 'cyan' : 'black'} $intensity={1} $circle={true}>
+                    {!band.yearEnded ? 'Active' : 'Ended'}
                   </Tag>
                 </CellFixedWidth>
               </td>

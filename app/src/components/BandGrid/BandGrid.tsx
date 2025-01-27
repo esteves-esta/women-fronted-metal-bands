@@ -44,8 +44,8 @@ function BandGrid({ bands }: GridProps) {
                 {growTagList.find((tag) => tag.value === band.growling).text}
               </Tag>
 
-              <Tag $hue={!!band.yearEnded ? 'cyan' : 'black'} $intensity={1}>
-                {!!band.yearEnded ? "Active" : "Ended"}
+              <Tag $hue={!band.yearEnded ? 'cyan' : 'black'} $intensity={1}>
+                {!band.yearEnded ? "Active" : "Ended"}
               </Tag>
             </InfoWrapper>) :
               (<InfoWrapper>
@@ -57,8 +57,8 @@ function BandGrid({ bands }: GridProps) {
                 </InfoCol>
                 <InfoCol>
                   <span>Status</span>
-                  <Tag $hue={!!band.yearEnded ? 'cyan' : 'black'} $intensity={1}>
-                    {!!band.yearEnded ? "Active" : "Ended"}
+                  <Tag $hue={!band.yearEnded ? 'cyan' : 'black'} $intensity={1}>
+                    {!band.yearEnded ? "Active" : "Ended"}
                   </Tag>
                 </InfoCol>
                 <InfoCol>
