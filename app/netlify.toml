@@ -1,5 +1,10 @@
 ## This rule redirects to an external API, signing requests with a secret
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"  
+
 [[redirects]]
   from = "/deezerapi/*"
   to = "https://api.deezer.com/:splat"
