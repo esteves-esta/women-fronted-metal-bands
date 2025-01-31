@@ -829,27 +829,7 @@ export default async (request: Request) => {
   });
 
   if (isBot) return new Response(null, { status: 401 });
-
-  let isNotBrowser = true;
-  if (ua.match(/^Mozilla/i)) {
-    isNotBrowser = false;
-  }
-  if (ua.match(/^Opera/i)) {
-    isNotBrowser = false;
-  }
-  if (ua.match(/^Firefox/i)) {
-    isNotBrowser = false;
-  }
-  if (ua.match(/^Netscape/i)) {
-    isNotBrowser = false;
-  }
-  if (ua.match(/^Safari/i)) {
-    isNotBrowser = false;
-  }
-
-  if (isNotBrowser) return new Response(null, { status: 401 });
   else return;
-
 };
 
 
