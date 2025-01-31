@@ -818,7 +818,7 @@ const agents = [
 ];
 
 export default async (request: Request) => {
-  const ua = request.headers.get("user-agent");
+   const ua = request.headers.get("user-agent");
   if (!ua) return new Response(null, { status: 401 });
   let isBot = false;
   agents.forEach((agent) => {
@@ -828,7 +828,28 @@ export default async (request: Request) => {
     }
   });
 
- return;
+  if (isBot) return new Response(null, { status: 401 });
+
+  let isNotBrowser = true;
+  if (ua.match(/^Mozilla/i)) {
+    isNotBrowser = false;
+  }
+  if (ua.match(/^Opera/i)) {
+    isNotBrowser = false;
+  }
+  if (ua.match(/^Firefox/i)) {
+    isNotBrowser = false;
+  }
+  if (ua.match(/^Netscape/i)) {
+    isNotBrowser = false;
+  }
+  if (ua.match(/^Safari/i)) {
+    isNotBrowser = false;
+  }
+
+  if (isNotBrowser) return new Response(null, { status: 401 });
+  else return;
+
 };
 
 
