@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "women-frontend-metal-band",
   "source": "index.html",
   "version": "0.1.0",
   "private": true,
@@ -32,8 +32,8 @@
     "vite": "^5.0.7"
   },
   "dependencies": {
-    "@netlify/functions": "^2.6.0",
     "@netlify/edge-functions": "2.11.1",
+    "@netlify/functions": "^2.6.0",
     "@nivo/bar": "^0.84.0",
     "@nivo/core": "^0.84.0",
     "@nivo/heatmap": "^0.84.0",
@@ -66,6 +66,5 @@
     "redis-commander": "^0.8.0",
     "styled-components": "^6.1.13",
     "swr": "^2.2.4"
-  },
-  "packageManager": "yarn@4.4.1"
+  }
 }
