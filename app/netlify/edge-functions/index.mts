@@ -828,8 +828,7 @@ export default async (request: Request) => {
     }
   });
 
-  if (isBot) return new Response(null, { status: 401 });
-  else return;
+ return;
 };
 
 
