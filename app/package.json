@@ -65,6 +65,7 @@
     "redis": "^4.6.13",
     "redis-commander": "^0.8.0",
     "styled-components": "^6.1.13",
-    "swr": "^2.2.4"
+    "swr": "^2.2.4",
+    "uuid": "^11.0.5"
   }
 }
