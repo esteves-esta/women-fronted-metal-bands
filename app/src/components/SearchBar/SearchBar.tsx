@@ -95,8 +95,7 @@ function SearchBar() {
     { key: 'yearStarted', headerLabel: 'Start' },
     { key: 'yearEnded', headerLabel: 'Status' },
     { key: 'blackWomen', headerLabel: 'Black woman' },
-    { key: 'allWomenBand', headerLabel: 'All Women band' },
-    { key: 'allWomenBand', headerLabel: 'All Women band' },
+    { key: 'allWomenBand', headerLabel: 'All Women band' }
   ]
 
 
@@ -290,7 +289,7 @@ const ColumnFilter = styled.div`
 flex: 1 0 auto;
   @media ${(p) => p.theme.queries.tabletAndUp} {
      flex: 1 0 150px;
-    
+
   }
 `;
 

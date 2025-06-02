@@ -127,33 +127,78 @@ function BandsProvider({ children }) {
   }
 
   const data = useLiveQuery(() => {
-    const { query, sort, sortBy,growling } = searchParams;
+    console.log({ searchParams })
+    const { query, sort, sortBy, growling, filter } = searchParams;
+    let col: any = db.bands;
     if (query) {
       if (!isNumeric(query)) {
         var regex = RegExp(query, 'i');
-        return db.bands.filter(item =>
+        col = col.filter(item =>
           regex.test(item.band) ||
           regex.test(item.country) ||
           regex.test(item.currentVocalists.toString() + item.pastVocalists.toString())
-        ).toArray();
+        );
       }
       else {
         const queryNum = Number(query)
-        return db.bands.filter(item =>
+        col = col.filter(item =>
           item.activeFor === queryNum ||
           item.currentVocalists.length === queryNum ||
           item.yearStarted === queryNum ||
           item.yearEnded === queryNum
-        ).toArray();
+        );
       }
     }
-    else
-    // return db.bands.reverse().sortBy(sortBy || 'growling');
-    {
-      let col = db.bands.orderBy(sortBy || 'growling');
-      if (sort === "desc") col = col.reverse()
-      return col.toArray()
+    // if (growling) {
+    //   col = col.where('growling').equals(growling)
+    // }
+    if (filter) {
+      switch (filter) {
+        case "active":
+          {
+            col = col.where('yearEnded').notEqual(0)
+            break;
+          }
+        case "disbanded":
+          {
+            col = col.where('yearEnded').equals(0)
+            break;
+          }
+        case "allWomen":
+          {
+            col = col.where('allWomenBand').equals(true)
+            break;
+          }
+        case "mixedGender":
+          {
+            return db.bands.filter(item => !item.allWomenBand).toArray()
+            // col = col.where('allWomenBand').equals(false)
+            // break;
+          }
+        case "blackWomen":
+          {
+            col = col.where('blackWomen').equals(true)
+            break;
+          }
+        case "sister":
+          {
+            return col.where('sister').equals(true).toArray()
+            break;
+          }
+        default:
+          { break; }
+      }
     }
+    // if (sort === "desc") {
+    //   return col.reverse().sortBy(sortBy || 'growling');
+    // } else {
+    //   return col.sortBy(sortBy || 'growling');
+
+    // }
+    // col = col.orderBy(sortBy || 'growling')
+    // if (sort === "desc") col = col.reverse()
+    return col.toArray()
+
   }, [searchParams]);
 
 
