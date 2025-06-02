@@ -1,8 +1,8 @@
-export type Tntensity = 0 | 1 | 2 | 3;
+export type Intensity = 0 | 1 | 2 | 3;
 
 export interface Band {
   id: string;
-  growling: Tntensity;
+  growling: Intensity;
   deezerId: number;
   deezerRecommendationId: number;
   band: string;

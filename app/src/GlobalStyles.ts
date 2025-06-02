@@ -84,8 +84,6 @@ h6 {
   Theme and global variables
 */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Lexend+Peta:wght@900&display=swap'); */
-
 :root {
   --box-shadow-focus: 0px 0px 3px 1px var(--color-primary-lighten3);
   --primary-font-family: 'Cinzel', serif;
@@ -167,7 +165,7 @@ body {
   font-size: 15px;
   color: var(--text-color);
   background-size: 100%;
-  background-image: var(--gradient-bg1); 
+  background-image: var(--gradient-bg1);
 }
 
 #app {
@@ -175,7 +173,7 @@ body {
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
   background-size: 100%;
-  background-image: var(--gradient-bg1); 
+  background-image: var(--gradient-bg1);
   padding-bottom: 100px;
 }
 

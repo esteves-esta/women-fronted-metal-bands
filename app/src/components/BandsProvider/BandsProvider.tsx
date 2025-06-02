@@ -1,12 +1,13 @@
-// jsx file because didnt know how to type context
 import * as React from "react";
-import useSWR from "swr";
 import list from "../../../list-of-metal-bands/list.json";
 import Papa from "papaparse";
 import { downloadCsvFile } from "../../helpers/downloadCsvFile";
 import { ToastContext } from "../ToastProvider";
-import { DEEZER_API } from "../../constants";
+// import { DEEZER_API } from "../../constants";
 import { Band, TrackInfo } from "../../models/Band";
+import { useLiveQuery } from "dexie-react-hooks";
+import { db } from "../../database/db";
+import Fuse from 'fuse.js'
 
 interface IBandContext {
   databaseChecked: boolean;
@@ -44,31 +45,6 @@ interface Params {
 export const BandContext = React.createContext<Partial<IBandContext>>({});
 
 const localStorageUserListKey = "user-liked-tracks-list";
-// const localStorageBandKey = "band-list";
-
-async function fetcher(endpoint) {
-  const response = await fetch(`${DEEZER_API}api${endpoint}`, {
-    method: "GET",
-    headers: {
-      "X-API-KEY": import.meta.env.VITE_MY_API_KEY
-    }
-  });
-
-  const json = await response.json();
-  if (json.error && json.error?.code === 500)
-    throw new Error(json.error.message);
-  return json;
-}
-
-const errorRetry = (error, revalidate, { retryCount }) => {
-  // Never retry on 404.
-  if (error.status === 404 || error.status === 500) return;
-
-  if (retryCount >= 2) return;
-
-  // Retry after 5 seconds.
-  setTimeout(() => revalidate({ retryCount }), 5000);
-};
 
 function BandsProvider({ children }) {
   // const initialBandList = React.useMemo(() => list, []);
@@ -80,11 +56,59 @@ function BandsProvider({ children }) {
     return storageValue ? JSON.parse(storageValue) : [];
   });
 
-  const [databaseChecked, setDatabaseChecked] = React.useState(false);
+  const [databaseChecked] = React.useState(true);
   const [total, setTotal] = React.useState(0);
   const [totalFiltered, setTotalFiltered] = React.useState(0);
   const [bands, setBands] = React.useState<Band[]>([]);
   const [currentPage, setCurrentPage] = React.useState(0);
+
+  // fuse
+  const options = {
+    threshold: 0.1,
+    keys: ['band', 'country', "currentVocalists"]
+  }
+
+  // Create the Fuse index
+  // const myFuseIndex = Fuse.createIndex(options.keys, list as Band[])
+
+  // fuse
+
+  // const { data: isUpdated} = useSWR(
+  //   `/update-database`,
+  //   fetcher,
+  //   {
+  //     errorRetry,
+  //     revalidateOnFocus: false
+  //   }
+  // );
+
+  // React.useEffect(() => {
+  //   if (isUpdated !== undefined) {
+  //     setDatabaseChecked(true);
+  //   }
+  // }, [isUpdated]);
+
+  // const { data, isLoading } = useSWR(
+  //   databaseChecked
+  //     ? `/search/${searchParams.query}/${searchParams.col}/${searchParams.page}/${searchParams.limit}/${searchParams.sort}/${searchParams.sortBy}/${searchParams.filter}/${searchParams.growling}`
+  //     : null,
+  //   fetcher,
+  //   {
+  //     errorRetry,
+  //     revalidateOnFocus: false
+  //   }
+  // );
+
+  // React.useEffect(() => {
+  //   if (data !== undefined) {
+  //     setTotal(data.total ? data.total : 0);
+  //     setTotalFiltered(data.totalFiltered ? data.totalFiltered : 0);
+  //     setBands(data.documents ? data.documents : []);
+  //   }
+  //   // console.log({ data, bands });
+  // }, [data]);
+
+  const [isLoading, setIsLoading] = React.useState(true);
   const [searchParams, setSearchParams] = React.useState<Params>({
     query: null,
     col: null,
@@ -95,40 +119,69 @@ function BandsProvider({ children }) {
     filter: null,
     growling: null
   });
+  function isNumeric(str: unknown) {
+    if (typeof str != "string") return false // we only process strings!
+    // @ts-expect-error
+    return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+      !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
+  }
 
-  const { data: isUpdated} = useSWR(
-    `/update-database`,
-    fetcher,
-    {
-      errorRetry,
-      revalidateOnFocus: false
+  const data = useLiveQuery(() => {
+    const { query, sort, sortBy,growling } = searchParams;
+    if (query) {
+      if (!isNumeric(query)) {
+        var regex = RegExp(query, 'i');
+        return db.bands.filter(item =>
+          regex.test(item.band) ||
+          regex.test(item.country) ||
+          regex.test(item.currentVocalists.toString() + item.pastVocalists.toString())
+        ).toArray();
+      }
+      else {
+        const queryNum = Number(query)
+        return db.bands.filter(item =>
+          item.activeFor === queryNum ||
+          item.currentVocalists.length === queryNum ||
+          item.yearStarted === queryNum ||
+          item.yearEnded === queryNum
+        ).toArray();
+      }
     }
-  );
+    else
+    // return db.bands.reverse().sortBy(sortBy || 'growling');
+    {
+      let col = db.bands.orderBy(sortBy || 'growling');
+      if (sort === "desc") col = col.reverse()
+      return col.toArray()
+    }
+  }, [searchParams]);
+
+
+  // React.useEffect(() => {
+  //   setIsLoading(true)
+  //   if(!searchParams.query) {
+  //     setBands(data ? data as Band[] : []);
+  //     setIsLoading(false)
+  //     return;
+  //   }
+
+  //   if (data !== undefined) {
+  //     const fuse = new Fuse(bands, options);
+  //     const results = fuse.search(searchParams.query)
+  //     setTotalFiltered(results.length);
+  //     setBands(results.map(item => item.item));
+  //     setIsLoading(false)
+  //   }
+
+  // }, [searchParams]);
 
   React.useEffect(() => {
-    if (isUpdated !== undefined) {
-      setDatabaseChecked(true);
-    }
-  }, [isUpdated]);
-
-  const { data, isLoading } = useSWR(
-    databaseChecked
-      ? `/search/${searchParams.query}/${searchParams.col}/${searchParams.page}/${searchParams.limit}/${searchParams.sort}/${searchParams.sortBy}/${searchParams.filter}/${searchParams.growling}`
-      : null,
-    fetcher,
-    {
-      errorRetry,
-      revalidateOnFocus: false
-    }
-  );
-
-  React.useEffect(() => {
+    setIsLoading(false)
     if (data !== undefined) {
-      setTotal(data.total ? data.total : 0);
-      setTotalFiltered(data.totalFiltered ? data.totalFiltered : 0);
-      setBands(data.documents ? data.documents : []);
+      if (total === 0) setTotal(data.length);
+      setTotalFiltered(data.length);
+      setBands(data ? data as Band[] : []);
     }
-    // console.log({ data, bands });
   }, [data]);
 
   React.useEffect(() => {

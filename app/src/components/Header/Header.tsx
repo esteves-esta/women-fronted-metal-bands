@@ -1,4 +1,4 @@
-// @ts-nocheck 
+// @ts-nocheck
 import * as React from "react";
 import { styled } from "styled-components";
 import { BandContext } from "../BandsProvider";
@@ -9,7 +9,7 @@ import useIsOnscreen from "../../helpers/useIsOnScreen";
 import ErrorBoundary from '../ErrorBoundary';
 
 function Header() {
-  const { total, databaseChecked, downloadAll, searchParams, downloadFiltered } = React.useContext(BandContext);
+  const { total, totalFiltered, databaseChecked, downloadAll, searchParams, downloadFiltered } = React.useContext(BandContext);
   function scrollTop() {
     window.scrollTo({
       top: 0,
@@ -22,15 +22,15 @@ function Header() {
   return (
     <>
 
-      <ErrorBoundary
+      {/* <ErrorBoundary
         fallback={
           <div className="error">
-            
+
           </div>
         }
       >
         <MediaPlayer />
-      </ErrorBoundary>
+      </ErrorBoundary> */}
 
       {/* <MediaPlayer /> */}
       <Head ref={elementRef}>
@@ -57,7 +57,7 @@ function Header() {
           <DownloadBtn onClick={downloadAll}>
             Download list<Download size={16} />
           </DownloadBtn>
-          {searchParams.filter || searchParams.growling &&
+          {totalFiltered !== total &&
           <DownloadBtn onClick={downloadFiltered}>
             Download filtered <Download size={16} />
           </DownloadBtn>}
