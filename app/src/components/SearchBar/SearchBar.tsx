@@ -32,18 +32,14 @@ function SearchBar() {
 
   const handleFilterList = (val: string, values: string[]) => {
     let newFilter = [...filtersList];
+    newFilter = newFilter.filter(item => !values.includes(item))
 
     if (val) newFilter = [...newFilter, val];
-    else {
-      newFilter = newFilter.filter(item => !values.includes(item)
-      )
-    }
-
     setFiltersList(
       [...newFilter]
     )
 
-    console.log({ newFilter })
+    // console.log({ newFilter })
 
     handleFilter(growlFilter === '' ? null : Number(growlFilter), newFilter);
   }
@@ -227,7 +223,7 @@ function SearchBar() {
             handleSort(sortBy, newSort);
           }}>
             {sort === "asc" && <ArrowUpAZ size={20} />}
-              {sort === "desc" && <ArrowDownAZ size={20} />}
+            {sort === "desc" && <ArrowDownAZ size={20} />}
             <VisuallyHidden.Root>
               Toggle sorting
             </VisuallyHidden.Root>

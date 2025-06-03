@@ -14,7 +14,7 @@ function isNumeric(str: unknown) {
 export function searchQueryBuild(searchParams: SearchParams) {
   try {
     let collection: any = db.bands;
-    collection = queryBuild(searchParams, collection)
+    // collection = queryBuild(searchParams, collection)
     collection = filtersBuild(searchParams, collection)
     collection = sortBuild(searchParams, collection)
     return collection
@@ -27,84 +27,74 @@ export function searchQueryBuild(searchParams: SearchParams) {
 function queryBuild(searchParams: SearchParams,
   collection: any) {
   const { query, col } = searchParams;
-  if (query) {
-    if (col) {
-      var regex = RegExp(query.toString(), 'i');
-      return collection.filter(item => regex.test(item[col]));
-    }
-    else {
-      if (!isNumeric(query)) {
-        var regex = RegExp(query, 'i');
-        return collection.filter(item =>
-          regex.test(item.band) ||
-          regex.test(item.country) ||
-          regex.test(item.currentVocalists.toString() + item.pastVocalists.toString())
-        );
-      }
-      else {
-        const queryNum = Number(query)
-        return collection.filter(item =>
-          item.activeFor === queryNum ||
-          item.currentVocalists.length === queryNum ||
-          item.yearStarted === queryNum ||
-          item.yearEnded === queryNum
-        );
-      }
-    }
+  if (!query) return collection;
+
+  if (col) {
+    var regex = RegExp(query.toString(), 'i');
+    return collection.filter(band => regex.test(band[col]));
   }
-  return collection;
+
+  if (!isNumeric(query)) {
+    var regex = RegExp(query, 'i');
+    return collection.filter(item =>
+      regex.test(item.band) ||
+      regex.test(item.country) ||
+      regex.test(item.currentVocalists.toString() + item.pastVocalists.toString())
+    );
+  }
+
+  const queryNum = Number(query)
+  return collection.filter(item =>
+    item.activeFor === queryNum ||
+    item.currentVocalists.length === queryNum ||
+    item.yearStarted === queryNum ||
+    item.yearEnded === queryNum
+  );
+
 }
 
-function filtersBuild(searchParams: SearchParams,
-  collection: Table<BandDb, number, BandDb> | Collection<BandDb, number, BandDb>) {
+function filtersBuild(
+  searchParams: SearchParams,
+  collection: Table<BandDb, number, BandDb> | Collection<BandDb, number, BandDb>
+) {
+  const { growling, filter } = searchParams;
+
   let method = 'filter';
-  if ('and' in collection)
-    method = 'and';
-  const { growling, filter: filterParam } = searchParams;
-  if (growling) {
-    collection = collection[method](item => item.growling === growling)
-  }
-  if (filterParam) {
-    const filters = filterParam.split(',');
-    switch (filterParam) {
-      case "active":
-        {
-          return collection[method](t => t.yearEnded !== 0)
-        }
-      case "disbanded":
-        {
-          return collection[method](item => item.yearEnded === 0)
-        }
-      case "allWomen":
-        {
-          return collection[method](item => item.allWomenBand)
-        }
-      case "mixedGender":
-        {
-          return collection[method](item => !item.allWomenBand)
-        }
-      case "blackWomen":
-        {
-          return collection[method](item => item.blackWomen)
-        }
-      case "sister":
-        {
-          return collection[method](item => item.sister)
-        }
-      default:
-        {
-          return collection
-        }
-    }
-  }
-  return collection
+  if ('and' in collection) method = 'and';
+
+  if ((growling === null || growling === undefined) && !filter) return collection;
+  if ('filter' in collection)
+    //   console.log('hey')
+    // console.log(Number(growling))
+    // return collection.filter(band => {
+    //   if (growling) return band.growling === Number(growling)
+    //   else return true
+    // })
+    return collection.filter(band => {
+      let growl, active, disband, allWomen, mixed, black, sister;
+      if (growling) growl = band.growling === Number(growling)
+
+      if (!filter) return growl;
+      const filters = filter.split(',');
+
+      if (filters.includes('active')) active = band.yearEnded !== 0
+      if (filters.includes('disbanded')) disband = band.yearEnded === 0
+      if (filters.includes('allWomen')) allWomen = !!band.allWomenBand
+      if (filters.includes('mixedGender')) mixed = !band.allWomenBand
+      if (filters.includes('blackWomen')) black = !band.blackWomen
+      if (filters.includes('sister')) sister = !band.sister
+
+      return growl && active && disband && allWomen && mixed && black && sister;
+    })
 }
+
 function sortBuild(searchParams: SearchParams, collection: any) {
   const { sort, sortBy, } = searchParams;
+  const sortByCol = sortBy || 'growling'
   if (sort === "desc") {
-    return collection.reverse().sortBy(sortBy || 'growling');
+    return collection.reverse().sortBy(sortByCol);
   } else {
-    return collection.sortBy(sortBy || 'growling');
+    return collection.sortBy(sortByCol);
   }
   // collection = collection.orderBy(sortBy || 'growling')
   // if (sort === "desc")

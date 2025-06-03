@@ -215,7 +215,7 @@ function BandsProvider({ children }) {
   const data = useLiveQuery(() => {
     console.log({ searchParams })
     const test = searchQueryBuild(searchParams)
-    console.log({ test })
+    // console.log({ test })
     return test
   }, [searchParams]);
 
