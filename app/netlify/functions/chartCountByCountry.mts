@@ -4,12 +4,12 @@ import { AggregateGroupByReducers, AggregateSteps } from "redis";
 import { authAPI } from "./utils/auth";
 
 export default async (req: Request, context: Context) => {
-   const auth = authAPI(req);
-   if (auth) {
-     return Response.json(auth.message, {
-       status: auth.status,
-     });
-   }
+  const auth = authAPI(req);
+  if (auth) {
+    return Response.json(auth.message, {
+      status: auth.status,
+    });
+  }
 
 
   // console.log(context.params);
@@ -58,11 +58,11 @@ export default async (req: Request, context: Context) => {
 
   let result;
   try {
-    /* 
+    /*
   same as  ==> FT.AGGREGATE idx:bands "*" GROUPBY 2 @countryCode @country REDUCE COUNT 0 as count
    */
     // console.log(filters);
-
+    // https://stackoverflow.com/questions/60912360/get-groupby-count-in-dexie#60933142
     result = await client.ft.aggregate("idx:bands", filters, {
       STEPS: [
         {

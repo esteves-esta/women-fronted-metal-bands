@@ -1,16 +1,16 @@
 import * as React from "react";
 import { styled } from "styled-components";
 
-import { filterByDetailsOptions, growFilterOptions } from "../../constants";
+// import { filterByDetailsOptions, growFilterOptions } from "../../constants";
 import BandCountByContryChart from "../../components/ChartsPage/BandCountByContryChart";
-import BandYearsActiveByCountryChart from "../../components/ChartsPage/YearsActiveByCountryChart ";
-import BandCountByDecadeChart from "../../components/ChartsPage/BandCountByDecadeChart";
-import ActivityInEachDecadeChart from "../../components/ChartsPage/YearsActiveInEachDecadeChart";
-import BandYearsActiveChart from "../../components/ChartsPage/YearsActiveChart";
-import BandDetailsChart from "../../components/ChartsPage/BandDetailsChart";
-import ToogleGroupButton from "../../components/ToogleGroupButton";
+// import BandYearsActiveByCountryChart from "../../components/ChartsPage/YearsActiveByCountryChart ";
+// import BandCountByDecadeChart from "../../components/ChartsPage/BandCountByDecadeChart";
+// import ActivityInEachDecadeChart from "../../components/ChartsPage/YearsActiveInEachDecadeChart";
+// import BandYearsActiveChart from "../../components/ChartsPage/YearsActiveChart";
+// import BandDetailsChart from "../../components/ChartsPage/BandDetailsChart";
+// import ToogleGroupButton from "../../components/ToogleGroupButton";
 import useMatchMedia from "../../helpers/useMatchMedia";
-import GenreChart from "../../components/ChartsPage/GenresChart";
+// import GenreChart from "../../components/ChartsPage/GenresChart";
 import { BandContext } from "../../components/BandsProvider";
 
 function Charts() {
@@ -22,14 +22,14 @@ function Charts() {
 
   const { databaseChecked } = React.useContext(BandContext);
 
-  if (!databaseChecked) return <>loading</>;
+  // if (!databaseChecked) return <>loading</>;
 
   return <Wrapper>
     <div>
       <Title>Data visualization</Title>
       <SubTitle>Bands count by country</SubTitle>
 
-      <FilterRow>
+      {/* <FilterRow>
         <label>Filter</label>
         <ToogleGroupButton
           list={filterByDetailsOptions}
@@ -37,17 +37,17 @@ function Charts() {
           onChange={(val) => setBandStatusFilter(val)}
           wrap={true}
         />
-      </FilterRow>
+      </FilterRow> */}
 
       {/* <BreakRule /> */}
       <FilterRow>
         <label>Growling intensity</label>
-        <ToogleGroupButton
+        {/* <ToogleGroupButton
           list={growFilterOptions}
           currentValue={growlFilter}
           onChange={(val) => setGrowlFilter(val)}
           wrap={true}
-        />
+        /> */}
       </FilterRow>
     </div>
 
@@ -64,9 +64,9 @@ function Charts() {
       <SubTitle>How many bands are active in each decade</SubTitle>
     </div>
 
-    <div style={{ height: "400px" }}>
+    {/* <div style={{ height: "400px" }}>
       <ActivityInEachDecadeChart />
-    </div>
+    </div> */}
 
     {/* ---------------- */}
     <div >
@@ -74,9 +74,9 @@ function Charts() {
       <SubTitle>How long are these bands active</SubTitle>
     </div>
 
-    <div style={{ height: "400px" }}>
+    {/* <div style={{ height: "400px" }}>
       <BandYearsActiveChart />
-    </div>
+    </div> */}
 
     {/* ---------------------------------- */}
     <div>
@@ -84,9 +84,9 @@ function Charts() {
       <SubTitle>Genres</SubTitle>
     </div>
 
-    <div>
+    {/* <div>
       <GenreChart />
-    </div>
+    </div> */}
 
     <div>
       <BreakRule />
@@ -94,7 +94,7 @@ function Charts() {
 
       <FilterRow>
         <label>Filter</label>
-        <ToogleGroupButton
+        {/* <ToogleGroupButton
           list={[
             { value: "viewAll", text: "View All" },
             { value: "active", text: "Active" },
@@ -102,12 +102,12 @@ function Charts() {
           ]}
           currentValue={bandStatus2Filter}
           onChange={(val) => setBandStatus2Filter(val)}
-        />
+        /> */}
       </FilterRow>
     </div>
 
     <div>
-      <BandDetailsChart filter={bandStatus2Filter} />
+      {/* <BandDetailsChart filter={bandStatus2Filter} /> */}
     </div>
 
     {/* ========================== */}
@@ -118,7 +118,7 @@ function Charts() {
     </div>
 
     <div style={{ height: "800px" }}>
-      <BandYearsActiveByCountryChart />
+      {/* <BandYearsActiveByCountryChart /> */}
     </div>
 
     {/* ------------------------------ */}
@@ -131,7 +131,7 @@ function Charts() {
     </div>
 
     <div style={{ height: "700px" }}>
-      <BandCountByDecadeChart />
+      {/* <BandCountByDecadeChart /> */}
     </div>
   </Wrapper>;
 }

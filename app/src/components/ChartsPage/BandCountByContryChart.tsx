@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { ResponsiveWaffle } from '@nivo/waffle'
 import { BandContext } from '../BandsProvider';
@@ -7,41 +8,41 @@ import useSWR from "swr";
 import { errorRetry, fetcher } from './apiFunctions';
 import LoaderSvg from '../LoaderSvg';
 import { styled } from "styled-components";
+import { useLiveQuery } from "dexie-react-hooks";
+import { getChart } from '../../database/chartCountByCountry'
 
 function BandCountByContryChart({ filter, filterGrow }) {
   const { databaseChecked, total } = React.useContext(BandContext)
   const [chartData, setChartData] = React.useState([])
   const [bandCount, setBandCount] = React.useState(0)
+  const [isLoading, setIsLoading] = React.useState(true)
 
+  const data = useLiveQuery(() => {
+    setIsLoading(true);
+    return getChart()
+  });
 
-  const { data, isLoading } = useSWR(
-    databaseChecked
-      ? `/count-by-country/${filter === 'viewAll' ? null : filter}/${filterGrow === 'viewAll' ? null : filterGrow}`
-      : null,
-    fetcher,
-    {
-      errorRetry,
-      revalidateOnFocus: false,
-    }
-  );
 
   React.useEffect(() => {
     setBandCount(0)
     if (data !== undefined) {
       let colorIndex = colors.length
-      const newChartData = data.results.map((result) => {
+      const newChartData = []
+      Object.entries(data).forEach(([key, value]) => {
+
         colorIndex -= 1
-        setBandCount(count => count + Number(result.count))
-        return {
+        setBandCount(count => count + value)
+        newChartData.push({
           color: colors[colorIndex],
-          id: result.country,
-          label: result.countryCode,
-          value: result.count
-        }
+          id: key,
+          label: key,
+          value: value
+        })
       })
       newChartData.sort((a, b) => b.value - a.value);
       setChartData(newChartData)
     }
+    setIsLoading(false);
   }, [data]);
 
   const isMediaNarrow = useMatchMedia();
@@ -108,7 +109,9 @@ function BandCountByContryChart({ filter, filterGrow }) {
       />
     </React.Fragment>
     );
-  else return (<React.Fragment>
+
+
+  return (<React.Fragment>
     <LoaderWrapper>
       <p>Loading </p>
       <LoaderSvg width={50} height={50} />

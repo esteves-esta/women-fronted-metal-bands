@@ -1,14 +1,14 @@
 import React from "react";
-import { filterByDetailsOptions, growFilterOptions } from "../../constants";
+// import { filterByDetailsOptions, growFilterOptions } from "../../constants";
 import BandCountByContryChart from "./BandCountByContryChart";
-import BandYearsActiveByCountryChart from "./YearsActiveByCountryChart ";
-import BandCountByDecadeChart from "./BandCountByDecadeChart";
-import ActivityInEachDecadeChart from "./YearsActiveInEachDecadeChart";
-import BandYearsActiveChart from "./YearsActiveChart";
-import BandDetailsChart from "./BandDetailsChart";
-import ToogleGroupButton from "../ToogleGroupButton";
+// import BandYearsActiveByCountryChart from "./YearsActiveByCountryChart ";
+// import BandCountByDecadeChart from "./BandCountByDecadeChart";
+// import ActivityInEachDecadeChart from "./YearsActiveInEachDecadeChart";
+// import BandYearsActiveChart from "./YearsActiveChart";
+// import BandDetailsChart from "./BandDetailsChart";
+// import ToogleGroupButton from "../ToogleGroupButton";
 import useMatchMedia from "../../helpers/useMatchMedia";
-import GenreChart from "./GenresChart";
+// import GenreChart from "./GenresChart";
 // import BandNamesChart from "./BandNamesChart";
 // import BandNameBeginningLetter from "./BandNameBeginningLetter";
 
@@ -25,7 +25,7 @@ function ChartsPage() {
         <hr className="text-center my-16" />
         <h2 className="text-center title1">Data visualization</h2>
         <p className="text-center title2 mt-16">Bands count by country</p>
-
+{/*
         <div className="flex flex-col md:flex-row md:justify-center my-5 gap-3 md:items-center">
           <label className="label">Filter</label>
           <ToogleGroupButton
@@ -43,7 +43,7 @@ function ChartsPage() {
             currentValue={growlFilter}
             onChange={(val) => setGrowlFilter(val)}
           />
-        </div>
+        </div> */}
       </div>
 
       <div style={{ height: isMediaNarrow ? "900px" : "450px" }}>
@@ -53,7 +53,7 @@ function ChartsPage() {
         />
       </div>
       {/* ---------------------------------- */}
-
+{/*
       <div className="text-center ">
         <hr className="my-16" />
         <p className="title2 ">How many bands are active in each decade</p>
@@ -61,20 +61,20 @@ function ChartsPage() {
 
       <div style={{ height: "400px" }}>
         <ActivityInEachDecadeChart />
-      </div>
+      </div> */}
 
       {/* ---------------- */}
-      <div className="text-center">
+      {/* <div className="text-center">
         <hr className="my-16" />
         <p className="title2">How long are these bands active</p>
       </div>
 
       <div style={{ height: "400px" }}>
         <BandYearsActiveChart />
-      </div>
+      </div> */}
 
       {/* ---------------------------------- */}
-      <div>
+      {/* <div>
         <hr className="text-center my-16" />
         <p className="text-center title2">Genres</p>
       </div>
@@ -103,22 +103,22 @@ function ChartsPage() {
 
       <div>
         <BandDetailsChart filter={bandStatus2Filter} />
-      </div>
+      </div> */}
 
       {/* ========================== */}
 
-      <div className="text-center">
+      {/* <div className="text-center">
         <hr className="my-16" />
         <p className="title2">How long these bands are active - by country</p>
       </div>
 
       <div className="mt-9" style={{ height: "800px" }}>
         <BandYearsActiveByCountryChart />
-      </div>
+      </div> */}
 
       {/* ------------------------------ */}
 
-      <div className="text-center">
+      {/* <div className="text-center">
         <hr className="my-16" />
         <p className="title2">
           How many of these bands are active in each decade - by country
@@ -127,7 +127,7 @@ function ChartsPage() {
 
       <div style={{ height: "700px" }}>
         <BandCountByDecadeChart />
-      </div>
+      </div> */}
 
       {/* ---------------------------------- */}
 
