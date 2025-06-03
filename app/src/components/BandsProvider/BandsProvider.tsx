@@ -8,6 +8,8 @@ import { Band, TrackInfo } from "../../models/Band";
 import { useLiveQuery } from "dexie-react-hooks";
 import { db } from "../../database/db";
 import Fuse from 'fuse.js'
+import { SearchParams } from "../../models/SearchParams";
+import { searchQueryBuild } from "../../database/query";
 
 interface IBandContext {
   databaseChecked: boolean;
@@ -16,7 +18,7 @@ interface IBandContext {
   totalFiltered: number;
   bands: Band[];
   currentPage: number;
-  searchParams: Params;
+  searchParams: SearchParams;
   handleFilter: (growIntensity: number, detailFilter: string[]) => void;
   handleQuery: (query?: string, col?: string) => void;
   handlePageChange: (page: number) => void;
@@ -31,16 +33,7 @@ interface IBandContext {
   removeTrackFromUserList: (id: string) => void;
 }
 
-interface Params {
-  query: string | null;
-  col: string | null;
-  page: number;
-  limit: number;
-  sort: "desc" | "asc";
-  sortBy: string;
-  filter: string | null;
-  growling: number | null;
-}
+
 
 export const BandContext = React.createContext<Partial<IBandContext>>({});
 
@@ -109,7 +102,7 @@ function BandsProvider({ children }) {
   // }, [data]);
 
   const [isLoading, setIsLoading] = React.useState(true);
-  const [searchParams, setSearchParams] = React.useState<Params>({
+  const [searchParams, setSearchParams] = React.useState<SearchParams>({
     query: null,
     col: null,
     page: 0,
@@ -119,87 +112,87 @@ function BandsProvider({ children }) {
     filter: null,
     growling: null
   });
-  function isNumeric(str: unknown) {
-    if (typeof str != "string") return false // we only process strings!
-    // @ts-expect-error
-    return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
-      !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
-  }
+  // function isNumeric(str: unknown) {
+  //   if (typeof str != "string") return false // we only process strings!
+  //   // @ts-expect-error
+  //   return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+  //     !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
+  // }
 
-  const data = useLiveQuery(() => {
-    console.log({ searchParams })
-    const { query, sort, sortBy, growling, filter } = searchParams;
-    let col: any = db.bands;
-    if (query) {
-      if (!isNumeric(query)) {
-        var regex = RegExp(query, 'i');
-        col = col.filter(item =>
-          regex.test(item.band) ||
-          regex.test(item.country) ||
-          regex.test(item.currentVocalists.toString() + item.pastVocalists.toString())
-        );
-      }
-      else {
-        const queryNum = Number(query)
-        col = col.filter(item =>
-          item.activeFor === queryNum ||
-          item.currentVocalists.length === queryNum ||
-          item.yearStarted === queryNum ||
-          item.yearEnded === queryNum
-        );
-      }
-    }
-    // if (growling) {
-    //   col = col.where('growling').equals(growling)
-    // }
-    if (filter) {
-      switch (filter) {
-        case "active":
-          {
-            col = col.where('yearEnded').notEqual(0)
-            break;
-          }
-        case "disbanded":
-          {
-            col = col.where('yearEnded').equals(0)
-            break;
-          }
-        case "allWomen":
-          {
-            col = col.where('allWomenBand').equals(true)
-            break;
-          }
-        case "mixedGender":
-          {
-            return db.bands.filter(item => !item.allWomenBand).toArray()
-            // col = col.where('allWomenBand').equals(false)
-            // break;
-          }
-        case "blackWomen":
-          {
-            col = col.where('blackWomen').equals(true)
-            break;
-          }
-        case "sister":
-          {
-            return col.where('sister').equals(true).toArray()
-            break;
-          }
-        default:
-          { break; }
-      }
-    }
-    // if (sort === "desc") {
-    //   return col.reverse().sortBy(sortBy || 'growling');
-    // } else {
-    //   return col.sortBy(sortBy || 'growling');
+  // const data = useLiveQuery(() => {
+  //   console.log({ searchParams })
+  //   const { query, sort, sortBy, growling, filter } = searchParams;
+  //   let col: any = db.bands;
+  //   if (query) {
+  //     if (!isNumeric(query)) {
+  //       var regex = RegExp(query, 'i');
+  //       col = col.filter(item =>
+  //         regex.test(item.band) ||
+  //         regex.test(item.country) ||
+  //         regex.test(item.currentVocalists.toString() + item.pastVocalists.toString())
+  //       );
+  //     }
+  //     else {
+  //       const queryNum = Number(query)
+  //       col = col.filter(item =>
+  //         item.activeFor === queryNum ||
+  //         item.currentVocalists.length === queryNum ||
+  //         item.yearStarted === queryNum ||
+  //         item.yearEnded === queryNum
+  //       );
+  //     }
+  //   }
+  //   // if (growling) {
+  //   //   col = col.where('growling').equals(growling)
+  //   // }
+  //   if (filter) {
+  //     switch (filter) {
+  //       case "active":
+  //         {
+  //           col = col.where('yearEnded').notEqual(0)
+  //           break;
+  //         }
+  //       case "disbanded":
+  //         {
+  //           col = col.where('yearEnded').equals(0)
+  //           break;
+  //         }
+  //       case "allWomen":
+  //         {
+  //           col = col.where('allWomenBand').equals(true)
+  //           break;
+  //         }
+  //       case "mixedGender":
+  //         {
+  //           return db.bands.filter(item => !item.allWomenBand).toArray()
+  //           // col = col.where('allWomenBand').equals(false)
+  //           // break;
+  //         }
+  //       case "blackWomen":
+  //         {
+  //           col = col.where('blackWomen').equals(true)
+  //           break;
+  //         }
+  //       case "sister":
+  //         {
+  //           return col.where('sister').equals(true).toArray()
+  //           break;
+  //         }
+  //       default:
+  //         { break; }
+  //     }
+  //   }
+  //   // if (sort === "desc") {
+  //   //   return col.reverse().sortBy(sortBy || 'growling');
+  //   // } else {
+  //   //   return col.sortBy(sortBy || 'growling');
 
-    // }
-    // col = col.orderBy(sortBy || 'growling')
-    // if (sort === "desc") col = col.reverse()
-    return col.toArray()
+  //   // }
+  //   // col = col.orderBy(sortBy || 'growling')
+  //   // if (sort === "desc") col = col.reverse()
+  //   return col.toArray()
 
-  }, [searchParams]);
+  // }, [searchParams]);
 
 
   // React.useEffect(() => {
@@ -219,6 +212,12 @@ function BandsProvider({ children }) {
   //   }
 
   // }, [searchParams]);
+  const data = useLiveQuery(() => {
+    console.log({ searchParams })
+    const test = searchQueryBuild(searchParams)
+    console.log({ test })
+    return test
+  }, [searchParams]);
 
   React.useEffect(() => {
     setIsLoading(false)
