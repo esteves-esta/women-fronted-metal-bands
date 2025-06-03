@@ -1,4 +1,3 @@
-import { cloneElement } from "react";
 import { SearchParams } from "../models/SearchParams"
 import { BandDb, db } from "./db";
 import { Collection, Table } from "dexie";
@@ -14,7 +13,7 @@ function isNumeric(str: unknown) {
 export function searchQueryBuild(searchParams: SearchParams) {
   try {
     let collection: any = db.bands;
-    // collection = queryBuild(searchParams, collection)
+    collection = queryBuild(searchParams, collection)
     collection = filtersBuild(searchParams, collection)
     collection = sortBuild(searchParams, collection)
     return collection
@@ -64,25 +63,25 @@ function filtersBuild(
 
   if ((growling === null || growling === undefined) && !filter) return collection;
   if ('filter' in collection)
-    //   console.log('hey')
-    // console.log(Number(growling))
-    // return collection.filter(band => {
-    //   if (growling) return band.growling === Number(growling)
-    //   else return true
-    // })
     return collection.filter(band => {
-      let growl, active, disband, allWomen, mixed, black, sister;
+      let growl = true;
+      let active = true;
+      let disband = true;
+      let allWomen = true;
+      let mixed = true;
+      let black = true;
+      let sister = true;
       if (growling) growl = band.growling === Number(growling)
 
       if (!filter) return growl;
       const filters = filter.split(',');
 
-      if (filters.includes('active')) active = band.yearEnded !== 0
-      if (filters.includes('disbanded')) disband = band.yearEnded === 0
+      if (filters.includes('active')) active = band.yearEnded === 0
+      if (filters.includes('disbanded')) disband = band.yearEnded !== 0
       if (filters.includes('allWomen')) allWomen = !!band.allWomenBand
       if (filters.includes('mixedGender')) mixed = !band.allWomenBand
-      if (filters.includes('blackWomen')) black = !band.blackWomen
-      if (filters.includes('sister')) sister = !band.sister
+      if (filters.includes('blackWomen')) black = !!band.blackWomen
+      if (filters.includes('sister')) sister = !!band.sister
 
       return growl && active && disband && allWomen && mixed && black && sister;
     })
@@ -96,10 +95,6 @@ function sortBuild(searchParams: SearchParams, collection: any) {
   } else {
     return collection.sortBy(sortByCol);
   }
-  // collection = collection.orderBy(sortBy || 'growling')
-  // if (sort === "desc")
-  //   return collection.reverse()
-  // return collection
 }
 
 
