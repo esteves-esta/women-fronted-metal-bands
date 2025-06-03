@@ -8,9 +8,8 @@ import styled from "styled-components";
 // import bands from "../../../list-of-metal-bands/list.json";
 
 function App() {
-  const { isLoading, totalFiltered } = React.useContext(BandContext);
+  const { isLoading, totalFiltered, bands } = React.useContext(BandContext);
 
-  const { databaseChecked, bands } = React.useContext(BandContext);
 
   return (
     <>
@@ -20,7 +19,7 @@ function App() {
       <TotalSpan>
         Total: {isLoading ? '..' : totalFiltered} band{totalFiltered > 1 ? 's' : ''}
       </TotalSpan>
-      {databaseChecked && !isLoading && <BandTable bands={bands} />}
+      {bands.length > 0 && !isLoading && <BandTable bands={bands} />}
     </>
   );
 }
