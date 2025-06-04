@@ -24,7 +24,6 @@ function BandDetailsChart({ filter }) {
 
   React.useEffect(() => {
     if (data !== undefined) {
-      console.log({ data })
       setChartDetails(data);
     }
     setIsLoading(false);

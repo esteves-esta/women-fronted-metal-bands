@@ -39,7 +39,7 @@ const db = new Dexie('BandsDatabase') as Dexie & {
 // Schema declaration:
 db.version(1).stores({
   // primary key "id" (for the runtime!)
-  bands: '++id, growling, band, country,countryCode, genre, blackWomen, allWomenBand, sister, yearEnded, yearStarted, activeFor'
+  bands: '++id, growling, band, country,countryCode, genre, blackWomen, allWomenBand, sister, yearEnded, yearStarted, [yearStarted+yearEnded], activeFor'
 });
 
 

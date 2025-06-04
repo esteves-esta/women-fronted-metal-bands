@@ -206,8 +206,36 @@ export async function getDetails(filter: string) {
 
 }
 
-/*
-  { value: "viewAll", text: "View All" },
-            { value: "active", text: "Active" },
-            { value: "disbanded", text: "Disbanded" }
-*/
+
+export async function getActivityByEachDecade() {
+  try {
+    let chartData: any[] = [
+      { id: "1970", value: [] },
+      { id: "1980", value: 0 },
+      { id: "1990", value: 0 },
+      { id: "2000", value: 0 },
+      { id: "2010", value: 0 },
+      { id: "2020", value: 0 },
+    ];
+
+    const decadeBeginEnd = [
+      [1970, 1980],
+      [1980, 1990],
+      [1990, 2000],
+      [2000, 2010],
+      [2010, 2020],
+      [2020, 2030],
+    ];
+
+    await decadeBeginEnd.forEach(async ([start, end], index) => {
+      chartData[index].value = await db.bands
+        .where("yearStarted").between(start, end)
+        .count()
+    })
+
+    return chartData;
+  }
+  catch (e) {
+    console.log(e)
+  }
+}

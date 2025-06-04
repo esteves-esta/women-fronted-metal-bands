@@ -5,7 +5,7 @@ import { filterByDetailsOptions, growFilterOptions } from "../../constants";
 import BandCountByContryChart from "../../components/ChartsPage/BandCountByContryChart";
 // import BandYearsActiveByCountryChart from "../../components/ChartsPage/YearsActiveByCountryChart ";
 // import BandCountByDecadeChart from "../../components/ChartsPage/BandCountByDecadeChart";
-// import ActivityInEachDecadeChart from "../../components/ChartsPage/YearsActiveInEachDecadeChart";
+import ActivityInEachDecadeChart from "../../components/ChartsPage/YearsActiveInEachDecadeChart";
 import BandYearsActiveChart from "../../components/ChartsPage/YearsActiveChart";
 import BandDetailsChart from "../../components/ChartsPage/BandDetailsChart";
 import ToogleGroupButton from "../../components/ToogleGroupButton";
@@ -62,9 +62,9 @@ function Charts() {
       <SubTitle>How many bands are active in each decade</SubTitle>
     </div>
 
-    {/* <div style={{ height: "400px" }}>
+    <div style={{ height: "400px" }}>
       <ActivityInEachDecadeChart />
-    </div> */}
+    </div>
 
     {/* ---------------- */}
     <div >

@@ -1,29 +1,26 @@
 import React from 'react';
 import { ResponsiveBar } from '@nivo/bar'
-import { BandContext } from '../BandsProvider';
-import useSWR from "swr";
 import useMatchMedia from '../../helpers/useMatchMedia';
-import { errorRetry, fetcher } from './apiFunctions';
+import { useLiveQuery } from "dexie-react-hooks";
+import { getActivityByEachDecade } from '../../database/charts'
 
 import ChartLoader from './ChartLoader';
 
 function ActivityInEachDecadeChart() {
-  const { databaseChecked } = React.useContext(BandContext)
+  const [isLoading, setIsLoading] = React.useState(true)
   const [chartData, setChartData] = React.useState([])
 
-
-  const {
-    data,
-    isLoading,
-  } = useSWR(databaseChecked ? `/years-active-in-each-decade` : null, fetcher, {
-    errorRetry,
-    revalidateOnFocus: false,
-  });
+  const data = useLiveQuery(() => {
+    setIsLoading(true);
+    return getActivityByEachDecade()
+  }, []);
 
   React.useEffect(() => {
     if (data !== undefined) {
+      // console.log({ data })
       setChartData(data);
     }
+    setIsLoading(false)
   }, [data]);
 
   // ============================
