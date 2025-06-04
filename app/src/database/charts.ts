@@ -105,8 +105,6 @@ export async function getBandsActive() {
           .where("activeFor").between(start, end)
           .count()
       })
-      0;
-
     })
     return { chartData, average: Math.round(sumValues / count) };
   }
@@ -146,53 +144,56 @@ export async function getDetails(filter: string) {
           break;
       }
     }
-    await db.bands
-      .filter(band => !band.allWomenBand && filters(band))
-      .eachKey(() => {
-        allwomenData[0].value += 1;
-      });
 
-    await db.bands
-      .filter(band => band.allWomenBand && filters(band))
-      .eachKey(() => {
-        allwomenData[1].value += 1;
-      });
+    await db.transaction('r', db.bands, async () => {
+      await db.bands
+        .filter(band => !band.allWomenBand && filters(band))
+        .eachKey(() => {
+          allwomenData[0].value += 1;
+        });
 
-    await db.bands
-      .filter(band => !band.blackWomen && filters(band))
-      .eachKey(() => {
-        blackwomenData[0].value += 1;
-      });
+      await db.bands
+        .filter(band => band.allWomenBand && filters(band))
+        .eachKey(() => {
+          allwomenData[1].value += 1;
+        });
 
-    await db.bands
-      .filter(band => band.blackWomen && filters(band))
-      .eachKey(() => {
-        blackwomenData[1].value += 1;
-      });
+      await db.bands
+        .filter(band => !band.blackWomen && filters(band))
+        .eachKey(() => {
+          blackwomenData[0].value += 1;
+        });
 
-    await db.bands
-      .filter(band => !band.sister && filters(band))
-      .eachKey(() => {
-        sisterData[0].value += 1;
-      });
+      await db.bands
+        .filter(band => band.blackWomen && filters(band))
+        .eachKey(() => {
+          blackwomenData[1].value += 1;
+        });
 
-    await db.bands
-      .filter(band => band.sister && filters(band))
-      .eachKey(() => {
-        sisterData[1].value += 1;
-      });
+      await db.bands
+        .filter(band => !band.sister && filters(band))
+        .eachKey(() => {
+          sisterData[0].value += 1;
+        });
 
-    await db.bands
-      .filter(band => !band.yearEnded)
-      .eachKey(() => {
-        statusData[0].value += 1;
-      });
+      await db.bands
+        .filter(band => band.sister && filters(band))
+        .eachKey(() => {
+          sisterData[1].value += 1;
+        });
 
-    await db.bands
-      .filter(band => !!band.yearEnded)
-      .eachKey(() => {
-        statusData[1].value += 1;
-      });
+      await db.bands
+        .filter(band => !band.yearEnded)
+        .eachKey(() => {
+          statusData[0].value += 1;
+        });
+
+      await db.bands
+        .filter(band => !!band.yearEnded)
+        .eachKey(() => {
+          statusData[1].value += 1;
+        });
+    });
 
     return {
       allwomenData,
