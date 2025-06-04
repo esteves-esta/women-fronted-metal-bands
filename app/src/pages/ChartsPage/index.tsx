@@ -6,15 +6,15 @@ import BandCountByContryChart from "../../components/ChartsPage/BandCountByContr
 // import BandYearsActiveByCountryChart from "../../components/ChartsPage/YearsActiveByCountryChart ";
 // import BandCountByDecadeChart from "../../components/ChartsPage/BandCountByDecadeChart";
 // import ActivityInEachDecadeChart from "../../components/ChartsPage/YearsActiveInEachDecadeChart";
-// import BandYearsActiveChart from "../../components/ChartsPage/YearsActiveChart";
-// import BandDetailsChart from "../../components/ChartsPage/BandDetailsChart";
+import BandYearsActiveChart from "../../components/ChartsPage/YearsActiveChart";
+import BandDetailsChart from "../../components/ChartsPage/BandDetailsChart";
 import ToogleGroupButton from "../../components/ToogleGroupButton";
 import useMatchMedia from "../../helpers/useMatchMedia";
-// import GenreChart from "../../components/ChartsPage/GenresChart";
+import GenreChart from "../../components/ChartsPage/GenresChart";
 
 function Charts() {
   const [bandStatusFilter , setBandStatusFilter] = React.useState("viewAll");
-  // const [bandStatus2Filter, setBandStatus2Filter] = React.useState("viewAll");
+  const [bandStatus2Filter, setBandStatus2Filter] = React.useState("viewAll");
   const [growlFilter, setGrowlFilter ] = React.useState("viewAll");
 
   const isMediaNarrow = useMatchMedia();
@@ -72,9 +72,9 @@ function Charts() {
       <SubTitle>How long are these bands active</SubTitle>
     </div>
 
-    {/* <div style={{ height: "400px" }}>
+    <div style={{ height: "400px" }}>
       <BandYearsActiveChart />
-    </div> */}
+    </div>
 
     {/* ---------------------------------- */}
     <div>
@@ -82,9 +82,9 @@ function Charts() {
       <SubTitle>Genres</SubTitle>
     </div>
 
-    {/* <div>
+    <div>
       <GenreChart />
-    </div> */}
+    </div>
 
     <div>
       <BreakRule />
@@ -92,7 +92,7 @@ function Charts() {
 
       <FilterRow>
         <label>Filter</label>
-        {/* <ToogleGroupButton
+        <ToogleGroupButton
           list={[
             { value: "viewAll", text: "View All" },
             { value: "active", text: "Active" },
@@ -100,12 +100,12 @@ function Charts() {
           ]}
           currentValue={bandStatus2Filter}
           onChange={(val) => setBandStatus2Filter(val)}
-        /> */}
+        />
       </FilterRow>
     </div>
 
     <div>
-      {/* <BandDetailsChart filter={bandStatus2Filter} /> */}
+      <BandDetailsChart filter={bandStatus2Filter} />
     </div>
 
     {/* ========================== */}

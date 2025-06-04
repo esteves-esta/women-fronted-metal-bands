@@ -1,15 +1,14 @@
 import React from 'react';
 import { ResponsivePie } from '@nivo/pie'
-import { BandContext } from '../BandsProvider';
-import useSWR from "swr";
-import { errorRetry, fetcher } from './apiFunctions';
 import LoaderSvg from '../LoaderSvg';
 import styled from 'styled-components';
 import classes from './ChartsPage.module.css'
+import { useLiveQuery } from "dexie-react-hooks";
+import { getDetails } from '../../database/charts'
 
 function BandDetailsChart({ filter }) {
+  const [isLoading, setIsLoading] = React.useState(true)
 
-  const { databaseChecked } = React.useContext(BandContext)
   const [chartDetails, setChartDetails] = React.useState({
     allwomenData:
       [{ id: "all women", value: 0 }, { id: "mixed", value: 0 }],
@@ -18,20 +17,19 @@ function BandDetailsChart({ filter }) {
     statusData: [{ id: "active", value: 0 }, { id: "disbanded", value: 0 }]
   });
 
-  const { data, isLoading } = useSWR(
-    databaseChecked ? `/details/${filter === 'viewAll' ? 'null' : filter}` : null,
-    fetcher,
-    {
-      errorRetry,
-      revalidateOnFocus: false,
-    }
-  );
+  const data = useLiveQuery(() => {
+    setIsLoading(true);
+    return getDetails(filter)
+  }, [filter]);
 
   React.useEffect(() => {
     if (data !== undefined) {
+      console.log({ data })
       setChartDetails(data);
     }
+    setIsLoading(false);
   }, [data]);
+
   // return (<React.Fragment>
   //   <div className="flex flex-row gap-4 justify-center items-center">
   //     <p>Loading </p>

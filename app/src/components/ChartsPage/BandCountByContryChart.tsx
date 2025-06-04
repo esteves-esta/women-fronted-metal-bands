@@ -9,7 +9,7 @@ import { errorRetry, fetcher } from './apiFunctions';
 import LoaderSvg from '../LoaderSvg';
 import { styled } from "styled-components";
 import { useLiveQuery } from "dexie-react-hooks";
-import { getChart } from '../../database/charts'
+import { getCountryCountChart } from '../../database/charts'
 
 function BandCountByContryChart({ filter, filterGrow }) {
   const { databaseChecked, total } = React.useContext(BandContext)
@@ -19,7 +19,7 @@ function BandCountByContryChart({ filter, filterGrow }) {
 
   const data = useLiveQuery(() => {
     setIsLoading(true);
-    return getChart(filter, filterGrow)
+    return getCountryCountChart(filter, filterGrow)
   }, [filter, filterGrow]);
 
 
