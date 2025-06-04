@@ -11,7 +11,6 @@ import BandCountByContryChart from "../../components/ChartsPage/BandCountByContr
 // import ToogleGroupButton from "../../components/ToogleGroupButton";
 import useMatchMedia from "../../helpers/useMatchMedia";
 // import GenreChart from "../../components/ChartsPage/GenresChart";
-import { BandContext } from "../../components/BandsProvider";
 
 function Charts() {
   const [bandStatusFilter/* , setBandStatusFilter */] = React.useState("viewAll");
