@@ -57,10 +57,6 @@ function filtersBuild(
   collection: Table<BandDb, number, BandDb> | Collection<BandDb, number, BandDb>
 ) {
   const { growling, filter } = searchParams;
-
-  let method = 'filter';
-  if ('and' in collection) method = 'and';
-
   if ((growling === null || growling === undefined) && !filter) return collection;
   if ('filter' in collection)
     return collection.filter(band => {

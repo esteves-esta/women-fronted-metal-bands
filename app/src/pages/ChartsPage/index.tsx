@@ -14,13 +14,13 @@ import useMatchMedia from "../../helpers/useMatchMedia";
 import { BandContext } from "../../components/BandsProvider";
 
 function Charts() {
-  const [bandStatusFilter, setBandStatusFilter] = React.useState("viewAll");
-  const [bandStatus2Filter, setBandStatus2Filter] = React.useState("viewAll");
-  const [growlFilter, setGrowlFilter] = React.useState("viewAll");
+  const [bandStatusFilter/* , setBandStatusFilter */] = React.useState("viewAll");
+  // const [bandStatus2Filter, setBandStatus2Filter] = React.useState("viewAll");
+  const [growlFilter/* , setGrowlFilter */] = React.useState("viewAll");
 
   const isMediaNarrow = useMatchMedia();
 
-  const { databaseChecked } = React.useContext(BandContext);
+  // const { databaseChecked } = React.useContext(BandContext);
 
   // if (!databaseChecked) return <>loading</>;
 
