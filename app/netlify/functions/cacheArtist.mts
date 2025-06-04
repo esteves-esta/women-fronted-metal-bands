@@ -1,5 +1,5 @@
 import type { Config, Context } from "@netlify/functions";
-import { cacheResponses } from "./functions/utils/cacheDeezerResponse";
+import { cacheResponses } from "./utils/cacheDeezerResponse";
 // import { authAPI } from "./functions/utils/auth";
 
 export default async (req: Request, context: Context) => {
