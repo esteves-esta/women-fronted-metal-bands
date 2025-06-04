@@ -67,7 +67,7 @@ function filtersBuild(
       let mixed = true;
       let black = true;
       let sister = true;
-      if (growling) growl = band.growling === Number(growling)
+      if (growling >= 0) growl = band.growling === Number(growling)
 
       if (!filter) return growl;
       const filters = filter.split(',');

@@ -42,9 +42,9 @@ function Header() {
             <li>
               <HeaderLink to="/pages/table">table view</HeaderLink>
             </li>
-            {/* <li>
+            <li>
               <HeaderLink to="/pages/graphs">graphs</HeaderLink>
-            </li> */}
+            </li>
             <li>
               <HeaderLink to="/pages/about">About</HeaderLink>
             </li>

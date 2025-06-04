@@ -1,21 +1,21 @@
 import * as React from "react";
 import { styled } from "styled-components";
 
-// import { filterByDetailsOptions, growFilterOptions } from "../../constants";
+import { filterByDetailsOptions, growFilterOptions } from "../../constants";
 import BandCountByContryChart from "../../components/ChartsPage/BandCountByContryChart";
 // import BandYearsActiveByCountryChart from "../../components/ChartsPage/YearsActiveByCountryChart ";
 // import BandCountByDecadeChart from "../../components/ChartsPage/BandCountByDecadeChart";
 // import ActivityInEachDecadeChart from "../../components/ChartsPage/YearsActiveInEachDecadeChart";
 // import BandYearsActiveChart from "../../components/ChartsPage/YearsActiveChart";
 // import BandDetailsChart from "../../components/ChartsPage/BandDetailsChart";
-// import ToogleGroupButton from "../../components/ToogleGroupButton";
+import ToogleGroupButton from "../../components/ToogleGroupButton";
 import useMatchMedia from "../../helpers/useMatchMedia";
 // import GenreChart from "../../components/ChartsPage/GenresChart";
 
 function Charts() {
-  const [bandStatusFilter/* , setBandStatusFilter */] = React.useState("viewAll");
+  const [bandStatusFilter , setBandStatusFilter] = React.useState("viewAll");
   // const [bandStatus2Filter, setBandStatus2Filter] = React.useState("viewAll");
-  const [growlFilter/* , setGrowlFilter */] = React.useState("viewAll");
+  const [growlFilter, setGrowlFilter ] = React.useState("viewAll");
 
   const isMediaNarrow = useMatchMedia();
 
@@ -28,7 +28,7 @@ function Charts() {
       <Title>Data visualization</Title>
       <SubTitle>Bands count by country</SubTitle>
 
-      {/* <FilterRow>
+      <FilterRow>
         <label>Filter</label>
         <ToogleGroupButton
           list={filterByDetailsOptions}
@@ -36,17 +36,16 @@ function Charts() {
           onChange={(val) => setBandStatusFilter(val)}
           wrap={true}
         />
-      </FilterRow> */}
+      </FilterRow>
 
-      {/* <BreakRule /> */}
       <FilterRow>
         <label>Growling intensity</label>
-        {/* <ToogleGroupButton
+        <ToogleGroupButton
           list={growFilterOptions}
           currentValue={growlFilter}
           onChange={(val) => setGrowlFilter(val)}
           wrap={true}
-        /> */}
+        />
       </FilterRow>
     </div>
 
