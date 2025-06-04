@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 import { filterByDetailsOptions, growFilterOptions } from "../../constants";
 import BandCountByContryChart from "../../components/ChartsPage/BandCountByContryChart";
 // import BandYearsActiveByCountryChart from "../../components/ChartsPage/YearsActiveByCountryChart ";
-// import BandCountByDecadeChart from "../../components/ChartsPage/BandCountByDecadeChart";
+import BandCountByDecadeChart from "../../components/ChartsPage/BandCountByDecadeChart";
 import ActivityInEachDecadeChart from "../../components/ChartsPage/YearsActiveInEachDecadeChart";
 import BandYearsActiveChart from "../../components/ChartsPage/YearsActiveChart";
 import BandDetailsChart from "../../components/ChartsPage/BandDetailsChart";
@@ -129,7 +129,7 @@ function Charts() {
     </div>
 
     <div style={{ height: "700px" }}>
-      {/* <BandCountByDecadeChart /> */}
+      <BandCountByDecadeChart />
     </div>
   </Wrapper>;
 }

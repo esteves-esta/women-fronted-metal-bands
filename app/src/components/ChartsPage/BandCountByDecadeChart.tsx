@@ -1,28 +1,27 @@
 import React from 'react';
-import { BandContext } from '../BandsProvider';
 import { ResponsiveHeatMap } from '@nivo/heatmap'
 import useMatchMedia from '../../helpers/useMatchMedia';
 
-import useSWR from "swr";
-import { errorRetry, fetcher } from './apiFunctions';
+import { useLiveQuery } from "dexie-react-hooks";
+import { getActivityByDecadeAndCountry } from '../../database/charts'
 
 function BandCountByDecadeChart() {
-  const { databaseChecked } = React.useContext(BandContext)
   const [chartData, setChartData] = React.useState([])
+  const [isLoading, setIsLoading] = React.useState(true)
   const isMediaNarrow = useMatchMedia();
 
   // ============================
-
-  const { data, isLoading } =
-    useSWR(databaseChecked ? `/active-by-each-decade` : null, fetcher, {
-      errorRetry,
-      revalidateOnFocus: false,
-    });
+  const data = useLiveQuery(() => {
+    setIsLoading(true);
+    return getActivityByDecadeAndCountry()
+  }, []);
 
   React.useEffect(() => {
     if (data !== undefined) {
-      setChartData(data);
+      console.log(data)
+      // setChartData(data);
     }
+    // setIsLoading(false)
   }, [data]);
 
   if (!isLoading)
