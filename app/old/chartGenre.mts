@@ -1,7 +1,7 @@
 import type { Config, Context } from "@netlify/functions";
-import { connectClient } from "./utils/database";
+import { connectClient } from "./database";
 import { AggregateGroupByReducers, AggregateSteps } from "redis";
-import { authAPI } from "./utils/auth";
+import { authAPI } from "../netlify/functions/utils/auth";
 
 export default async (req: Request, context: Context) => {
   const auth = authAPI(req);

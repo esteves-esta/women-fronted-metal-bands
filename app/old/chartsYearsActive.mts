@@ -1,7 +1,7 @@
 import type { Config, Context } from "@netlify/functions";
-import { connectClient } from "./utils/database";
+import { connectClient } from "./database";
 import { AggregateGroupByReducers, AggregateSteps } from "redis";
-import { authAPI } from "./utils/auth";
+import { authAPI } from "../netlify/functions/utils/auth";
 
 export default async (req: Request, context: Context) => {
    const auth = authAPI(req);
@@ -36,7 +36,7 @@ export default async (req: Request, context: Context) => {
   ];
 
   try {
-    /* 
+    /*
  FT.AGGREGATE idx:bands "@yearStarted:[0 1989] -@yearEnded:[1 1980]" GROUPBY 0 REDUCE COUNT 0 as count
 
    FT.AGGREGATE idx:bands "*" GROUPBY 0 REDUCE AVG 1 @activeFor as active

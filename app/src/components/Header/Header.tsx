@@ -22,7 +22,7 @@ function Header() {
   return (
     <>
 
-      {/* <ErrorBoundary
+      <ErrorBoundary
         fallback={
           <div className="error">
 
@@ -30,7 +30,7 @@ function Header() {
         }
       >
         <MediaPlayer />
-      </ErrorBoundary> */}
+      </ErrorBoundary>
 
       {/* <MediaPlayer /> */}
       <Head ref={elementRef}>

@@ -1,6 +1,6 @@
 import type { Config, Context } from "@netlify/functions";
-import listJSON from "../../list-of-metal-bands/list.json";
-import { authAPI } from "./utils/auth";
+import listJSON from "../list-of-metal-bands/list.json";
+import { authAPI } from "../netlify/functions/utils/auth";
 
 export default async (req: Request, context: Context) => {
   const listJSON = require("../../list-of-metal-bands/list.json");

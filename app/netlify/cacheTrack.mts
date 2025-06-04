@@ -1,20 +1,20 @@
 import type { Config, Context } from "@netlify/functions";
-import { cacheResponses } from "./utils/cacheDeezerResponse";
-import { authAPI } from "./utils/auth";
+import { cacheResponses } from "./functions/utils/cacheDeezerResponse";
+// import { authAPI } from "./functions/utils/auth";
 
 export default async (req: Request, context: Context) => {
-   const auth = authAPI(req);
-   if (auth) {
-     return Response.json(auth.message, {
-       status: auth.status,
-     });
-   }
+  // const auth = authAPI(req);
+  // if (auth) {
+  //   return Response.json(auth.message, {
+  //     status: auth.status,
+  //   });
+  // }
 
 
   const { trackId } = context.params;
 
   const result = await cacheResponses("track", trackId, "null");
-  
+  console.log({ result })
   if (result.error)
     return Response.json(result.message || result.response, {
       status: result.status,

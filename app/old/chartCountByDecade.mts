@@ -1,7 +1,7 @@
 import type { Config, Context } from "@netlify/functions";
-import { connectClient } from "./utils/database";
+import { connectClient } from "./database";
 import { AggregateGroupByReducers, AggregateSteps } from "redis";
-import { authAPI } from "./utils/auth";
+import { authAPI } from "../netlify/functions/utils/auth";
 
 export default async (req: Request, context: Context) => {
    const auth = authAPI(req);
@@ -26,10 +26,10 @@ export default async (req: Request, context: Context) => {
   let countries;
   let chartData: any[] = [];
 
-  /* 
+  /*
 get countris => > FT.AGGREGATE idx:bands "*" GROUPBY 1 @countryCode
 
-- populate each data point 
+- populate each data point
 
 How long these bands are active - by country
 > FT.AGGREGATE idx:bands "@activeFor:[0 4]" GROUPBY 1 @countryCode REDUCE COUNT 0 as count

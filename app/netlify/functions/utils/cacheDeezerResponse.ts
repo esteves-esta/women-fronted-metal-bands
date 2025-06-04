@@ -1,10 +1,10 @@
-import { connectClient, formatYearsActive } from "./database";
-
 export async function cacheResponses(
   endpoint: string,
   id: string,
   endpoint2?: string
 ) {
+
+   console.log({ endpoint, id, endpoint2 })
   if (Number.isNaN(id)) {
     return {
       error: true,
