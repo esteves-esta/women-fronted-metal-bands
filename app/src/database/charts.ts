@@ -65,8 +65,7 @@ export async function getGenreChart() {
 
 export async function getBandsActive() {
   try {
-    let sumValues = 0;
-    let count = 0;
+
     let chartData = [
       { id: "1", value: 0 },
       { id: "2", value: 0 },
@@ -79,33 +78,36 @@ export async function getBandsActive() {
       { id: "40-50", value: 0 },
     ];
 
-    await db.bands
-      .orderBy('activeFor')
-      .eachKey((activeFor) => {
-        const active = Number(activeFor)
-        if (active > 0 && active <= 1)
-          chartData[0].value += 1;
-        if (active > 1 && active <= 2)
-          chartData[1].value += 1;
-        if (active > 2 && active <= 3)
-          chartData[2].value += 1;
-        if (active > 3 && active <= 4)
-          chartData[3].value += 1;
-        if (active >= 5 && active <= 10)
-          chartData[4].value += 1;
-        if (active > 10 && active <= 20)
-          chartData[5].value += 1;
-        if (active > 20 && active <= 30)
-          chartData[6].value += 1;
-        if (active > 30 && active <= 40)
-          chartData[7].value += 1;
-        if (active > 40 && active <= 50)
-          chartData[8].value += 1;
+    const beginEnd = [
+      [1, 2],
+      [2, 3],
+      [3, 4],
+      [4, 5],
+      [5, 11],
+      [10, 20],
+      [20, 30],
+      [30, 40],
+      [40, 50],
+    ];
 
-        count += 1;
-        sumValues += active;
-      });
+    let sumValues = 0;
+    let count = 0;
 
+    await db.transaction('r', db.bands, async () => {
+      count = await db.bands.count()
+
+      await db.bands
+        .orderBy('activeFor')
+        .eachKey((activeFor) => { sumValues += Number(activeFor) });
+
+      await beginEnd.forEach(async ([start, end], index) => {
+        chartData[index].value = await db.bands
+          .where("activeFor").between(start, end)
+          .count()
+      })
+      0;
+
+    })
     return { chartData, average: Math.round(sumValues / count) };
   }
   catch (e) {
