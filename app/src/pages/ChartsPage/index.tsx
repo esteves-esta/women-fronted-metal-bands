@@ -13,9 +13,9 @@ import useMatchMedia from "../../helpers/useMatchMedia";
 import GenreChart from "../../components/ChartsPage/GenresChart";
 
 function Charts() {
-  const [bandStatusFilter , setBandStatusFilter] = React.useState("viewAll");
+  const [bandStatusFilter, setBandStatusFilter] = React.useState("viewAll");
   const [bandStatus2Filter, setBandStatus2Filter] = React.useState("viewAll");
-  const [growlFilter, setGrowlFilter ] = React.useState("viewAll");
+  const [growlFilter, setGrowlFilter] = React.useState("viewAll");
 
   const isMediaNarrow = useMatchMedia();
 
@@ -23,9 +23,11 @@ function Charts() {
 
   // if (!databaseChecked) return <>loading</>;
 
+
   return <Wrapper>
     <div>
       <Title>Data visualization</Title>
+
       <SubTitle>Bands count by country</SubTitle>
 
       <FilterRow>

@@ -11,22 +11,27 @@ function BandCountByDecadeChart() {
   const isMediaNarrow = useMatchMedia();
 
   // ============================
-  const data = useLiveQuery(() => {
-    setIsLoading(true);
-    return getActivityByDecadeAndCountry()
-  }, []);
+  // const data = useLiveQuery(() => {
+  //   setIsLoading(true);
+  //   return getActivityByDecadeAndCountry()
+  // }, []);
 
   React.useEffect(() => {
-    if (data !== undefined) {
-      console.log(data)
-      // setChartData(data);
+    // if (data !== undefined) {
+    const fn = async () => {
+      setChartData(await getActivityByDecadeAndCountry())
     }
-    // setIsLoading(false)
-  }, [data]);
+    fn()
+
+    // }
+    setIsLoading(false)
+  }, []);
 
   if (!isLoading)
     return (<>
       <ResponsiveHeatMap
+        animate={false}
+
         data={chartData}
         // forceSquare={true}
         margin={{ top: 60, right: isMediaNarrow ? 30 : 300, bottom: 60, left: isMediaNarrow ? 30 : 300 }}
@@ -47,7 +52,7 @@ function BandCountByDecadeChart() {
         colors={{
           type: 'diverging',
           scheme: 'turbo',
-          divergeAt: 0.35,
+          divergeAt: 0.38,
           minValue: 1,
           maxValue: 16
         }}

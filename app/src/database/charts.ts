@@ -1,5 +1,7 @@
 // import { SearchParams } from "../models/SearchParams"
 import { db } from "./db";
+import coutryCodes from "../constants/countriesCodes"
+import countriesCodes from "../constants/countriesCodes";
 
 export async function getCountryCountChart(filterCol: string, filterGrow: number) {
   try {
@@ -246,18 +248,6 @@ export async function getActivityByEachDecade() {
 
 export async function getActivityByDecadeAndCountry() {
   try {
-
-    const coutryCodes = ["ZA"]
-
-    let chartData: any[] = [
-      { id: "1970", value: [] },
-      { id: "1980", value: 0 },
-      { id: "1990", value: 0 },
-      { id: "2000", value: 0 },
-      { id: "2010", value: 0 },
-      { id: "2020", value: 0 },
-    ];
-
     const decadeBeginEnd = [
       [1970, 1980],
       [1980, 1990],
@@ -267,19 +257,11 @@ export async function getActivityByDecadeAndCountry() {
       [2020, 2030],
     ];
 
-    await coutryCodes.forEach(async (code) => {
-      await decadeBeginEnd.forEach(async ([start, end], index) => {
-        chartData[index].value = await db.bands
-          .where("yearStarted").between(start, end)
-          .and(band => band.countryCode === code)
-          .count()
-      })
-    })
-
-    /*
-    {
-        id: result.countryCode,
-        id2: result.country,
+    const result = {}
+    countriesCodes.forEach((code) => {
+      result[code] = {
+        id: code,
+        id2: code + 's',
         data: [
           { x: "70s", y: 0 },
           { x: "80s", y: 0 },
@@ -287,11 +269,20 @@ export async function getActivityByDecadeAndCountry() {
           { x: "00s", y: 0 },
           { x: "10s", y: 0 },
           { x: "20s", y: 0 },
-        ],
+        ]
       }
-    */
+    })
+    await countriesCodes.forEach(async (code) => {
+      await decadeBeginEnd.forEach(async ([start, end], index) => {
+        result[code].data[index].y = await db.bands
+          .where("yearStarted").between(start, end)
+          .and(band => band.countryCode === code)
+          .count()
+      })
+    })
 
-    return chartData;
+    return Object.entries(result).map(([, value]) => value)
+
   }
   catch (e) {
     console.log(e)
