@@ -215,7 +215,7 @@ export async function getDetails(filter: string) {
 export async function getActivityByEachDecade() {
   try {
     let chartData: any[] = [
-      { id: "1970", value: [] },
+      { id: "1970", value: 0 },
       { id: "1980", value: 0 },
       { id: "1990", value: 0 },
       { id: "2000", value: 0 },
@@ -256,35 +256,41 @@ export async function getActivityByDecadeAndCountry() {
       [2010, 2020],
       [2020, 2030],
     ];
-
     const result = {}
-    countriesCodes.forEach((code) => {
-      result[code] = {
-        id: code,
-        id2: code + 's',
-        data: [
-          { x: "70s", y: 0 },
-          { x: "80s", y: 0 },
-          { x: "90s", y: 0 },
-          { x: "00s", y: 0 },
-          { x: "10s", y: 0 },
-          { x: "20s", y: 0 },
-        ]
-      }
-    })
-    await countriesCodes.forEach(async (code) => {
-      await decadeBeginEnd.forEach(async ([start, end], index) => {
+    await db.transaction('r', db.bands, async () => {
+      countriesCodes.forEach((code) => {
+        result[code] = {
+          id: code,
+          id2: code,
+          data: [
+            { x: "70s", y: 2 },
+            { x: "80s", y: 3 },
+            { x: "90s", y: 0 },
+            { x: "00s", y: 0 },
+            { x: "10s", y: 0 },
+            { x: "20s", y: 0 },
+          ]
+        }
+      })
+      const arr = []
+      countriesCodes.forEach((code) => {
+        decadeBeginEnd.forEach(([start, end], index) => {
+          arr.push([code, start, end, index])
+        })
+      })
+
+      await arr.forEach(async ([code, start, end, index]) => {
         result[code].data[index].y = await db.bands
           .where("yearStarted").between(start, end)
           .and(band => band.countryCode === code)
           .count()
       })
-    })
+    });
 
     return Object.entries(result).map(([, value]) => value)
 
   }
   catch (e) {
-    console.log(e)
+    // console.log(e)
   }
 }

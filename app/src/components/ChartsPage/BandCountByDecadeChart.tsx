@@ -11,21 +11,14 @@ function BandCountByDecadeChart() {
   const isMediaNarrow = useMatchMedia();
 
   // ============================
-  // const data = useLiveQuery(() => {
-  //   setIsLoading(true);
-  //   return getActivityByDecadeAndCountry()
-  // }, []);
+  const data = useLiveQuery(() => getActivityByDecadeAndCountry());
 
   React.useEffect(() => {
-    // if (data !== undefined) {
-    const fn = async () => {
-      setChartData(await getActivityByDecadeAndCountry())
+    if (data !== undefined) {
+      setChartData(data)
     }
-    fn()
-
-    // }
     setIsLoading(false)
-  }, []);
+  }, [data]);
 
   if (!isLoading)
     return (<>
