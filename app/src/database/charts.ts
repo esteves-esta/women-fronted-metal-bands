@@ -294,3 +294,53 @@ export async function getActivityByDecadeAndCountry() {
     // console.log(e)
   }
 }
+
+
+export async function getActiveByCountry() {
+  try {
+    const beginEnd = [
+      [0, 5],
+      [5, 11],
+      [10, 20],
+      [20, 30],
+      [30, 40],
+      [40, 50],
+    ];
+    const result = {}
+    await db.transaction('r', db.bands, async () => {
+      countriesCodes.forEach((code) => {
+        result[code] = {
+          id: code,
+          id2: code,
+          data: [
+          { x: "1-5", y: 0 },
+          { x: "5-10", y: 0 },
+          { x: "10-20", y: 0 },
+          { x: "20-30", y: 0 },
+          { x: "30-40", y: 0 },
+          { x: "40-50", y: 0 },
+          ]
+        }
+      })
+      const arr = []
+      countriesCodes.forEach((code) => {
+        beginEnd.forEach(([start, end], index) => {
+          arr.push([code, start, end, index])
+        })
+      })
+
+      await arr.forEach(async ([code, start, end, index]) => {
+        result[code].data[index].y = await db.bands
+          .where("activeFor").between(start, end)
+          .and(band => band.countryCode === code)
+          .count()
+      })
+    });
+
+    return Object.entries(result).map(([, value]) => value)
+
+  }
+  catch (e) {
+    // console.log(e)
+  }
+}
