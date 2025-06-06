@@ -1,6 +1,5 @@
 // import { SearchParams } from "../models/SearchParams"
 import { db } from "./db";
-import coutryCodes from "../constants/countriesCodes"
 import countriesCodes from "../constants/countriesCodes";
 
 export async function getCountryCountChart(filterCol: string, filterGrow: number) {
@@ -135,7 +134,7 @@ export async function getDetails(filter: string) {
       { id: "active", value: 0 },
       { id: "disbanded", value: 0 },
     ];
-    let filters = (band) => true
+    let filters = (band) => !!band
     if (filter && filter != "viewAll") {
       switch (filter) {
         case "active":
