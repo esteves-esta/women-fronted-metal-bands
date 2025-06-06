@@ -15,8 +15,8 @@ function About() {
           </p>
           <p>
             So I decided to make this page to compile the bands that I found and
-            also pratice my frontend skills. You can filter bands by how much
-            growling the singer is capable of doing.
+            also pratice my frontend skills. You have many ways of filterings band
+            and you can dowloand all the data as .csv or get the json file of all the band on the github repository.
           </p>
 
           <small>
