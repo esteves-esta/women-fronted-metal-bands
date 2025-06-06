@@ -32,18 +32,14 @@ function SearchBar() {
 
   const handleFilterList = (val: string, values: string[]) => {
     let newFilter = [...filtersList];
+    newFilter = newFilter.filter(item => !values.includes(item))
 
     if (val) newFilter = [...newFilter, val];
-    else {
-      newFilter = newFilter.filter(item => !values.includes(item)
-      )
-    }
-
     setFiltersList(
       [...newFilter]
     )
 
-    console.log({ newFilter })
+    // console.log({ newFilter })
 
     handleFilter(growlFilter === '' ? null : Number(growlFilter), newFilter);
   }
@@ -95,8 +91,7 @@ function SearchBar() {
     { key: 'yearStarted', headerLabel: 'Start' },
     { key: 'yearEnded', headerLabel: 'Status' },
     { key: 'blackWomen', headerLabel: 'Black woman' },
-    { key: 'allWomenBand', headerLabel: 'All Women band' },
-    { key: 'allWomenBand', headerLabel: 'All Women band' },
+    { key: 'allWomenBand', headerLabel: 'All Women band' }
   ]
 
 
@@ -228,7 +223,7 @@ function SearchBar() {
             handleSort(sortBy, newSort);
           }}>
             {sort === "asc" && <ArrowUpAZ size={20} />}
-              {sort === "desc" && <ArrowDownAZ size={20} />}
+            {sort === "desc" && <ArrowDownAZ size={20} />}
             <VisuallyHidden.Root>
               Toggle sorting
             </VisuallyHidden.Root>
@@ -290,7 +285,7 @@ const ColumnFilter = styled.div`
 flex: 1 0 auto;
   @media ${(p) => p.theme.queries.tabletAndUp} {
      flex: 1 0 150px;
-    
+
   }
 `;
 

@@ -1,4 +1,4 @@
-export const DEEZER_API = `${window.location.origin}/` ;
+export const DEEZER_API = `${window.location.origin}/deezerapi` ;
 
 // export const DEEZER_API = import.meta.env.DEV
 //   ? "http://localhost:8888/"
@@ -43,7 +43,7 @@ export const filterByDetailsOptions = [
   { value: "viewAll", text: "View All" },
   { value: "active", text: "Active" },
   { value: "disbanded", text: "Disbanded" },
-  { value: "allWomen", text: "All women" },
+  { value: "allWomenBand", text: "All women" },
   { value: "mixedGender", text: "Mixed gender" },
   { value: "blackWomen", text: "Black women" },
   { value: "sister", text: "Sisters" },

@@ -5,11 +5,8 @@ import BandGrid from "../../components/BandGrid";
 import SearchBar from "../../components/SearchBar";
 import styled from "styled-components";
 
-// import bands from "../../../list-of-metal-bands/list.json";
 function App() {
-  const { isLoading, totalFiltered } = React.useContext(BandContext);
-
-  const { databaseChecked, bands } = React.useContext(BandContext);
+  const { isLoading, totalFiltered, bands } = React.useContext(BandContext);
 
   return (
     <>
@@ -18,8 +15,7 @@ function App() {
       <TotalSpan>
         Total: {isLoading ? '..' : totalFiltered} band{totalFiltered > 1 ? 's' : ''}
       </TotalSpan>
-      {databaseChecked && !isLoading && <BandGrid bands={bands} />}
-
+      {!isLoading && bands.length > 0 && <BandGrid bands={bands} />}
     </>
   );
 }

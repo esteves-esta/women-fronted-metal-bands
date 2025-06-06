@@ -9,7 +9,7 @@ import { styled } from "styled-components";
 import { useLiveQuery } from "dexie-react-hooks";
 import { getCountryCountChart } from '../../database/charts'
 
-function BandCountByContryChart({ filter, filterGrow }) {
+function Teste() {
   const { total } = React.useContext(BandContext)
   const [chartData, setChartData] = React.useState([])
   const [bandCount, setBandCount] = React.useState(0)
@@ -17,13 +17,14 @@ function BandCountByContryChart({ filter, filterGrow }) {
 
   const data = useLiveQuery(() => {
     setIsLoading(true);
-    return getCountryCountChart(filter, filterGrow)
-  }, [filter, filterGrow]);
+    return getCountryCountChart('viewAll', 'viewAll')
+  }, []);
 
 
   React.useEffect(() => {
     setBandCount(0)
     if (data !== undefined) {
+      console.log(data)
       let colorIndex = colors.length
       const newChartData = []
       Object.entries(data).forEach(([key, value]) => {
@@ -48,15 +49,7 @@ function BandCountByContryChart({ filter, filterGrow }) {
   if (!isLoading)
     return (<React.Fragment>
       <Wrapper>
-        <p>
-          Total countries: {" "}
-          <span> {chartData.length}</span>
-        </p>
-
-        <p>
-          Total bands : {" "}
-          <span>{bandCount}</span>
-        </p>
+        teste
       </Wrapper>
 
       <ResponsiveWaffle
@@ -117,7 +110,7 @@ function BandCountByContryChart({ filter, filterGrow }) {
   </React.Fragment>)
 };
 
-export default BandCountByContryChart;
+export default Teste;
 
 const LoaderWrapper = styled.div`
 display: flex;

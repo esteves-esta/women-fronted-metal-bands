@@ -1,33 +1,30 @@
 import React from 'react';
-import { BandContext } from '../BandsProvider';
 import { ResponsiveHeatMap } from '@nivo/heatmap'
 import useMatchMedia from '../../helpers/useMatchMedia';
 
-import useSWR from "swr";
-import { errorRetry, fetcher } from './apiFunctions';
+import { useLiveQuery } from "dexie-react-hooks";
+import { getActivityByDecadeAndCountry } from '../../database/charts'
 
 function BandCountByDecadeChart() {
-  const { databaseChecked } = React.useContext(BandContext)
   const [chartData, setChartData] = React.useState([])
+  const [isLoading, setIsLoading] = React.useState(true)
   const isMediaNarrow = useMatchMedia();
 
   // ============================
-
-  const { data, isLoading } =
-    useSWR(databaseChecked ? `/active-by-each-decade` : null, fetcher, {
-      errorRetry,
-      revalidateOnFocus: false,
-    });
+  const data = useLiveQuery(() => getActivityByDecadeAndCountry());
 
   React.useEffect(() => {
     if (data !== undefined) {
-      setChartData(data);
+      setChartData(data)
     }
+    setIsLoading(false)
   }, [data]);
 
   if (!isLoading)
     return (<>
       <ResponsiveHeatMap
+        animate={false}
+
         data={chartData}
         // forceSquare={true}
         margin={{ top: 60, right: isMediaNarrow ? 30 : 300, bottom: 60, left: isMediaNarrow ? 30 : 300 }}
@@ -48,7 +45,7 @@ function BandCountByDecadeChart() {
         colors={{
           type: 'diverging',
           scheme: 'turbo',
-          divergeAt: 0.35,
+          divergeAt: 0.38,
           minValue: 1,
           maxValue: 16
         }}

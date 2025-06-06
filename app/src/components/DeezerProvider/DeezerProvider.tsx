@@ -30,7 +30,7 @@ interface IDeezerContext {
 export const DeezerContext = React.createContext<Partial<IDeezerContext>>({});
 
 async function fetcher(endpoint) {
-  const response = await fetch(`${DEEZER_API}api/${endpoint}`, {
+  const response = await fetch(`${DEEZER_API}/${endpoint}`, {
     method: "GET",
     headers: {
       "X-API-KEY": import.meta.env.VITE_MY_API_KEY
@@ -75,7 +75,7 @@ function DeezerProvider({ children }) {
     data: trackInfo,
     error: trackError,
     isLoading: trackIsLoading
-  } = useSWR(trackId ? `deezer/track/${trackId}` : null, fetcher, {
+  } = useSWR(trackId ? `/track/${trackId}` : null, fetcher, {
     errorRetry,
     revalidateOnFocus: false
   });
@@ -85,7 +85,7 @@ function DeezerProvider({ children }) {
     error: topTrackError,
     isLoading: topTrackIsLoading
   } = useSWR(
-    bandTopTrack ? `deezer/artist/${bandTopTrack}/top` : null,
+    bandTopTrack ? `/artist/${bandTopTrack}/top?index=0&limit=1` : null,
     fetcher,
     {
       errorRetry,
@@ -93,7 +93,7 @@ function DeezerProvider({ children }) {
     }
   );
   const { data: artist } = useSWR(
-    artistId ? `deezer/artist/${artistId}/null` : null,
+    artistId ? `/artist/${artistId}` : null,
     fetcher,
     {
       errorRetry,
@@ -232,7 +232,7 @@ function DeezerProvider({ children }) {
         .filter((item) => item.deezerId !== null)
         .findIndex((band) => band.deezerId === currentBandId);
 
-      
+
       if (bandIndex < 0) return;
 
       let nextIndex = bandIndex + 1;

@@ -11,7 +11,6 @@ import BandDetailsChart from "../../components/ChartsPage/BandDetailsChart";
 import ToogleGroupButton from "../../components/ToogleGroupButton";
 import useMatchMedia from "../../helpers/useMatchMedia";
 import GenreChart from "../../components/ChartsPage/GenresChart";
-import { BandContext } from "../../components/BandsProvider";
 
 function Charts() {
   const [bandStatusFilter, setBandStatusFilter] = React.useState("viewAll");
@@ -20,13 +19,15 @@ function Charts() {
 
   const isMediaNarrow = useMatchMedia();
 
-  const { databaseChecked } = React.useContext(BandContext);
+  // const { databaseChecked } = React.useContext(BandContext);
 
-  if (!databaseChecked) return <>loading</>;
+  // if (!databaseChecked) return <>loading</>;
+
 
   return <Wrapper>
     <div>
       <Title>Data visualization</Title>
+
       <SubTitle>Bands count by country</SubTitle>
 
       <FilterRow>
@@ -39,7 +40,6 @@ function Charts() {
         />
       </FilterRow>
 
-      {/* <BreakRule /> */}
       <FilterRow>
         <label>Growling intensity</label>
         <ToogleGroupButton

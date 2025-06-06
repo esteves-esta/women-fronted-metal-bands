@@ -11,7 +11,7 @@ A list of metal bands with women as lead vocalist (with focus on women that can 
 
 ---
 teste
-This project is a list of the bands of diferent metal genres and also an way of me to pratice frontend. 
+This project is a list of the bands of diferent metal genres and also an way of me to pratice frontend.
 
 You can filter bands by how much growling the singer is capable of doing.
 
@@ -37,14 +37,14 @@ You can filter bands by how much growling the singer is capable of doing.
 ## 📖 Features
 
 ### ✅ Done
-- [x] Display list as table 
+- [x] Display list as table
   - [x] option to change to grid
   - [x] Filter data
   - [x] Pagination
   - [x] Show/Hide columns
   - [x] Change page size
 - [x] Download as .csv
-  - [x] all data 
+  - [x] all data
   - [x] filtered data
 - [x] Use deezer API
   - [x] Uses a proxy to use api (/proxy/server.js) - and deployed on render free plan
@@ -61,9 +61,12 @@ You can filter bands by how much growling the singer is capable of doing.
     - [x]  be able to remove item from list
   - [x] Export as csv
 - [x] Make site responsive
-- [x] API to get data - **with Netlify serveless functions**
-  - [x]  All data on redis
-    - [x] Using redis JSON and SEARCH to filter data and get data for charts
+- [x] Using indexedDB with package **dexie.js**
+    - Since the free databases always end up delete because there is not a lot of use it doesn't make sense to buy a database but it also doesn't make sense to read the js file because the filter functions that to long.
+    With IndexedDB can use the file to populate the local browser db and the filter operations are faster.
+- [x] ~~API to get data - **with Netlify serveless functions**-~~
+  - [x]  ~~All data on redis~~
+    - [x] ~~Using redis JSON and SEARCH to filter data and get data for charts~~
 
 ### ✍️ Todo
 > for later
@@ -89,9 +92,9 @@ You can filter bands by how much growling the singer is capable of doing.
 1. Install packages
 
       ```
-      npm i 
+      npm i
       ```
-      
+
       or
 
       ```
@@ -113,12 +116,12 @@ You can filter bands by how much growling the singer is capable of doing.
   ```
   npm install netlify-cli -g
   ```
-      
+
   2.1 Run netlify dev
     ```
-    npm netlify dev 
+    npm netlify dev
     ```
-    
+
     or
 
     ```
@@ -126,7 +129,7 @@ You can filter bands by how much growling the singer is capable of doing.
     ```
 
 
-      
+
 ## Sources
 
 ### Method of data collecting
@@ -134,7 +137,7 @@ You can filter bands by how much growling the singer is capable of doing.
 1. Bands got on the list if they had:
   - at least one official site:
     - home page (active or archived)
-    - streaming page 
+    - streaming page
     - bandcamp
     - official youtube channel
     - soundcloud
@@ -156,7 +159,7 @@ I got some of the bands and the information on this list from the following:
   - [Metal ladies - all-female metal bands](https://www.metaladies.com/bands/)
   - http://www.metaleros.de/
   ---
-- Sites / Magazines 
+- Sites / Magazines
   - [FemMetal - Goddsses of Metal](https://femmetal.rocks/browse-by-artist/)
   - [Wiki Metal](https://www.wikimetal.com.br/)
   - [Bandcamp Daily - Ten Divine, Diabolical Feminine Artists Challenging Heavy Metal Machismo](https://daily.bandcamp.com/lists/feminine-expression-in-metal-guide)
@@ -192,6 +195,6 @@ I got some of the bands and the information on this list from the following:
 
 ## services used
 
-- https://upstash.com/  
-- https://app.redislabs.com/#/login  
-- https://app.netlify.com/  
+- https://upstash.com/
+- https://app.redislabs.com/#/login
+- https://app.netlify.com/

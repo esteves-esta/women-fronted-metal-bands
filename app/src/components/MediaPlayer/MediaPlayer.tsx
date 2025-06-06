@@ -276,7 +276,7 @@ const Progress = styled.progress`
   cursor: pointer;
   border: none;
   &::-webkit-progress-bar {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-secondary-dark);
   }
 
   &::-webkit-progress-value {

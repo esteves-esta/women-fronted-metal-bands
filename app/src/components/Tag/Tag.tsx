@@ -1,6 +1,6 @@
-// @ts-nocheck 
+// @ts-nocheck
 import * as React from 'react';
-import { Tntensity } from "../../models/Band";
+import { Intensity } from "../../models/Band";
 import { styled } from "styled-components";
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 // -------------------
@@ -8,7 +8,7 @@ type TagHues = "purple" | "green" | "blue" | "yellow" | "red" | "cyan" | "black"
 
 type Props = React.ComponentProps<"div"> & {
   $hue: TagHues;
-  $intensity: Tntensity;
+  $intensity: Intensity;
   children?: any;
   $circle?: boolean;
 };
@@ -23,7 +23,7 @@ function Tag({ children, ...props }: Props) {
 }
 
 const Content = styled.span`
-@media (hover: hover) and (pointer: fine) { 
+@media (hover: hover) and (pointer: fine) {
   opacity: ${(p) => p.$circle ? 0 : 1};
   user-select: none;
   transition: opacity 450ms ease-in 0s;
@@ -46,16 +46,16 @@ const TagWrapper = styled.div.attrs<Props>((p) => ({
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   font-weight: bold;
-  
+
   overflow: hidden;
   padding: 2px 12px;
-  
+
   min-height: 20px;
   height: fit-content;
   transition: width 350ms ease-in 0s;
   box-shadow: inset 0px 0px 8px -4px #06052768;
   /* border: .05rem solid var(--color-secondary-dark); */
-@media (hover: hover) and (pointer: fine) { 
+@media (hover: hover) and (pointer: fine) {
   & {
     width: ${(p) => p.$circle ? '28px' : 'fit-content'};
   }
@@ -68,7 +68,7 @@ const TagWrapper = styled.div.attrs<Props>((p) => ({
       transition: opacity 450ms ease-in 1s;
     }
   }
-} 
+}
 
 
 `;

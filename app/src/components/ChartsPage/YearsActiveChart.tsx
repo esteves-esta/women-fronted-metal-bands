@@ -1,15 +1,15 @@
 import React from 'react';
-import { BandContext } from '../BandsProvider';
 import { ResponsiveBar } from '@nivo/bar'
 
 import useMatchMedia from '../../helpers/useMatchMedia';
-import useSWR from "swr";
-import { errorRetry, fetcher } from './apiFunctions';
 import ChartLoader from './ChartLoader';
 import styled from 'styled-components';
+import { useLiveQuery } from "dexie-react-hooks";
+import { getBandsActive } from '../../database/charts'
+
 
 function BandYearsActiveChart() {
-  const { databaseChecked } = React.useContext(BandContext)
+  const [isLoading, setIsLoading] = React.useState(true)
 
   const [chartData, setChartData] = React.useState([
     { id: '1', value: 0 },
@@ -26,20 +26,18 @@ function BandYearsActiveChart() {
 
   // ============================
 
-  const { data, isLoading } = useSWR(
-    databaseChecked ? `/time-active` : null,
-    fetcher,
-    {
-      errorRetry,
-      revalidateOnFocus: false,
-    }
-  );
+  const data = useLiveQuery(() => {
+    setIsLoading(true);
+    return getBandsActive()
+  }, []);
+
 
   React.useEffect(() => {
     if (data !== undefined) {
       setChartData(data.chartData);
       setAverageTime(data.average);
     }
+    setIsLoading(false);
   }, [data]);
 
 
@@ -49,10 +47,10 @@ function BandYearsActiveChart() {
     return (
       <React.Fragment>
         <Wrapper>
-        <p >
-          Average time of activity: {" "}
-          <span>{averageTime} years</span>
-        </p>
+          <p >
+            Average time of activity: {" "}
+            <span>{averageTime} years</span>
+          </p>
         </Wrapper>
         <ResponsiveBar
           data={chartData}

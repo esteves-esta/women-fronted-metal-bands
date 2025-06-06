@@ -1,14 +1,13 @@
 import React from 'react';
-import { BandContext } from '../BandsProvider';
 import classes from './ChartsPage.module.css'
-import useSWR from "swr";
-import { errorRetry, fetcher } from './apiFunctions';
 import LoaderSvg from '../LoaderSvg';
 import { Text } from '@visx/text';
 import { scaleLog } from '@visx/scale';
 import Wordcloud from '@visx/wordcloud/lib/Wordcloud';
 import ParentSize from '@visx/responsive/lib/components/ParentSize';
 import { styled } from "styled-components";
+import { useLiveQuery } from "dexie-react-hooks";
+import { getGenreChart } from '../../database/charts'
 
 export interface WordData {
   text: string;
@@ -16,24 +15,28 @@ export interface WordData {
 }
 
 function GenreChart() {
-  const { databaseChecked } = React.useContext(BandContext)
   const [chartDetails, setChartDetails] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(true)
 
+  const data = useLiveQuery(() => {
+    setIsLoading(true);
+    return getGenreChart()
+  }, []);
 
-
-  const { data, isLoading } = useSWR(
-    databaseChecked ? `/genre` : null,
-    fetcher,
-    {
-      errorRetry,
-      revalidateOnFocus: false,
-    }
-  );
 
   React.useEffect(() => {
     if (data !== undefined) {
-      setChartDetails(data);
+      const newChartData = []
+      Object.entries(data).forEach(([key, value]) => {
+        newChartData.push({
+          text: key,
+          value: value
+        })
+      })
+
+      setChartDetails(newChartData)
     }
+    setIsLoading(false);
   }, [data]);
 
 
@@ -43,7 +46,7 @@ function GenreChart() {
         <LoaderSvg width={50} height={50} />
       </LoaderWrapper>}
       {/* {chartDetails.length} */}
-      {!isLoading && data.length > 0 && <ParentSize>
+      {!isLoading && chartDetails.length > 0 && <ParentSize>
         {({ width }) => <WordCloundCustom data={chartDetails} width={width} />}
       </ParentSize>}
 

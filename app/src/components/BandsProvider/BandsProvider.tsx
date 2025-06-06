@@ -1,12 +1,12 @@
-// jsx file because didnt know how to type context
 import * as React from "react";
-import useSWR from "swr";
 import list from "../../../list-of-metal-bands/list.json";
 import Papa from "papaparse";
 import { downloadCsvFile } from "../../helpers/downloadCsvFile";
 import { ToastContext } from "../ToastProvider";
-import { DEEZER_API } from "../../constants";
 import { Band, TrackInfo } from "../../models/Band";
+import { useLiveQuery } from "dexie-react-hooks";
+import { SearchParams } from "../../models/SearchParams";
+import { searchQueryBuild } from "../../database/query";
 
 interface IBandContext {
   databaseChecked: boolean;
@@ -15,7 +15,7 @@ interface IBandContext {
   totalFiltered: number;
   bands: Band[];
   currentPage: number;
-  searchParams: Params;
+  searchParams: SearchParams;
   handleFilter: (growIntensity: number, detailFilter: string[]) => void;
   handleQuery: (query?: string, col?: string) => void;
   handlePageChange: (page: number) => void;
@@ -30,62 +30,21 @@ interface IBandContext {
   removeTrackFromUserList: (id: string) => void;
 }
 
-interface Params {
-  query: string | null;
-  col: string | null;
-  page: number;
-  limit: number;
-  sort: "desc" | "asc";
-  sortBy: string;
-  filter: string | null;
-  growling: number | null;
-}
-
 export const BandContext = React.createContext<Partial<IBandContext>>({});
 
 const localStorageUserListKey = "user-liked-tracks-list";
-// const localStorageBandKey = "band-list";
-
-async function fetcher(endpoint) {
-  const response = await fetch(`${DEEZER_API}api${endpoint}`, {
-    method: "GET",
-    headers: {
-      "X-API-KEY": import.meta.env.VITE_MY_API_KEY
-    }
-  });
-
-  const json = await response.json();
-  if (json.error && json.error?.code === 500)
-    throw new Error(json.error.message);
-  return json;
-}
-
-const errorRetry = (error, revalidate, { retryCount }) => {
-  // Never retry on 404.
-  if (error.status === 404 || error.status === 500) return;
-
-  if (retryCount >= 2) return;
-
-  // Retry after 5 seconds.
-  setTimeout(() => revalidate({ retryCount }), 5000);
-};
 
 function BandsProvider({ children }) {
-  // const initialBandList = React.useMemo(() => list, []);
   const { openToast } = React.useContext(ToastContext);
 
-  const [userLikedTracksList, setUserLikedTracksList] = React.useState(() => {
-    const storageValue = localStorage.getItem(localStorageUserListKey);
-
-    return storageValue ? JSON.parse(storageValue) : [];
-  });
-
-  const [databaseChecked, setDatabaseChecked] = React.useState(false);
+  const [databaseChecked] = React.useState(true);
   const [total, setTotal] = React.useState(0);
   const [totalFiltered, setTotalFiltered] = React.useState(0);
   const [bands, setBands] = React.useState<Band[]>([]);
   const [currentPage, setCurrentPage] = React.useState(0);
-  const [searchParams, setSearchParams] = React.useState<Params>({
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  const [searchParams, setSearchParams] = React.useState<SearchParams>({
     query: null,
     col: null,
     page: 0,
@@ -96,76 +55,24 @@ function BandsProvider({ children }) {
     growling: null
   });
 
-  const { data: isUpdated} = useSWR(
-    `/update-database`,
-    fetcher,
-    {
-      errorRetry,
-      revalidateOnFocus: false
-    }
-  );
 
-  React.useEffect(() => {
-    if (isUpdated !== undefined) {
-      setDatabaseChecked(true);
-    }
-  }, [isUpdated]);
+  // START GET DATA FROM DEXIE DATABASE WITH SEARCH
 
-  const { data, isLoading } = useSWR(
-    databaseChecked
-      ? `/search/${searchParams.query}/${searchParams.col}/${searchParams.page}/${searchParams.limit}/${searchParams.sort}/${searchParams.sortBy}/${searchParams.filter}/${searchParams.growling}`
-      : null,
-    fetcher,
-    {
-      errorRetry,
-      revalidateOnFocus: false
-    }
-  );
+  const data = useLiveQuery(() => {
+    setIsLoading(true)
+    const result = searchQueryBuild(searchParams)
+    setIsLoading(false)
+    return result
+  }, [searchParams]);
 
   React.useEffect(() => {
     if (data !== undefined) {
-      setTotal(data.total ? data.total : 0);
-      setTotalFiltered(data.totalFiltered ? data.totalFiltered : 0);
-      setBands(data.documents ? data.documents : []);
+      if (total === 0) setTotal(data.length);
+      setTotalFiltered(data.length);
+      setBands(data ? data as Band[] : []);
     }
-    // console.log({ data, bands });
   }, [data]);
 
-  React.useEffect(() => {
-    window.localStorage.setItem(
-      localStorageUserListKey,
-      JSON.stringify(userLikedTracksList)
-    );
-  }, [userLikedTracksList]);
-
-  const saveTrackToUserList = (deezerTrackInfo) => {
-    if (!deezerTrackInfo) return;
-    const alreadyOnList = userLikedTracksList.find(
-      (track) => track.id === deezerTrackInfo.id
-    );
-    if (alreadyOnList) {
-      openToast({
-        title: "Already on list",
-        description: `This track has already been added to the playlist.`
-      });
-      return;
-    }
-    setUserLikedTracksList([...userLikedTracksList, deezerTrackInfo]);
-    openToast({
-      title: "Add track to list",
-      description: `${deezerTrackInfo.title} added to list.`
-    });
-  };
-
-  const clearUserList = () => {
-    setUserLikedTracksList([]);
-  };
-
-  const removeTrackFromUserList = (id) => {
-    setUserLikedTracksList(
-      userLikedTracksList.filter((track) => track.id !== id)
-    );
-  };
 
   const handleQuery = React.useCallback((query, col) => {
     setSearchParams((params) => {
@@ -224,6 +131,62 @@ function BandsProvider({ children }) {
     setTotalFiltered(0);
   }, []);
 
+  // END GET DATA FROM DEXIE DATABASE WITH SEARCH
+
+
+  //  -----------------------------------------
+
+  // START USER FAVORITES
+
+  const [userLikedTracksList, setUserLikedTracksList] = React.useState(() => {
+    const storageValue = localStorage.getItem(localStorageUserListKey);
+
+    return storageValue ? JSON.parse(storageValue) : [];
+  });
+
+  React.useEffect(() => {
+    window.localStorage.setItem(
+      localStorageUserListKey,
+      JSON.stringify(userLikedTracksList)
+    );
+  }, [userLikedTracksList]);
+
+
+  const saveTrackToUserList = (deezerTrackInfo) => {
+    if (!deezerTrackInfo) return;
+    const alreadyOnList = userLikedTracksList.find(
+      (track) => track.id === deezerTrackInfo.id
+    );
+    if (alreadyOnList) {
+      openToast({
+        title: "Already on list",
+        description: `This track has already been added to the playlist.`
+      });
+      return;
+    }
+    setUserLikedTracksList([...userLikedTracksList, deezerTrackInfo]);
+    openToast({
+      title: "Add track to list",
+      description: `${deezerTrackInfo.title} added to list.`
+    });
+  };
+
+  const clearUserList = () => {
+    setUserLikedTracksList([]);
+  };
+
+  const removeTrackFromUserList = (id) => {
+    setUserLikedTracksList(
+      userLikedTracksList.filter((track) => track.id !== id)
+    );
+  };
+
+  // END USER FAVORITES
+
+  //  -----------------------------------------
+
+  // START DOWNLOANDS
+
   function downloadAll() {
     const content = Papa.unparse(list, {
       quotes: false,
@@ -271,7 +234,8 @@ function BandsProvider({ children }) {
 
     downloadCsvFile(content, "user favorite tracks.csv");
   }
-
+  // START DOWNLOANDS
+  //  -----------------------------------------
   const state = {
     databaseChecked,
     total,
