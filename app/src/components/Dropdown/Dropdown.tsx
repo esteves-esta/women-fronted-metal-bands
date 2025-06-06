@@ -1,4 +1,4 @@
-// @ts-nocheck 
+// @ts-nocheck
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { styled, css } from "styled-components";
 
@@ -80,7 +80,7 @@ const DropdownBtn = styled.button`
   border: none;
   /* height: 48px; */
   padding: 5px 10px;
- 
+
   color: var(--text-color);
   /* min-width: 180px; */
   display: flex;
@@ -111,7 +111,7 @@ const DropdownBtn = styled.button`
       border-color: var(--color-grey-300);
     }
   `}
-  
+
 
 `;
 
