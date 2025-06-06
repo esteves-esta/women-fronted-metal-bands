@@ -27,7 +27,6 @@ function queryBuild(
   searchParams: SearchParams,
   collection: any
 ) {
-  console.log({ searchParams })
   const { query, col } = searchParams;
   if (!query) return collection;
 
@@ -60,7 +59,7 @@ function filtersBuild(
   collection: Table<BandDb, number, BandDb> | Collection<BandDb, number, BandDb>
 ) {
   const { growling, filter } = searchParams;
-  console.log({ growling })
+  // console.log({ growling })
   if ((growling === null || growling === undefined) && !filter) return collection;
   if ('filter' in collection)
     return collection.filter(band => {
