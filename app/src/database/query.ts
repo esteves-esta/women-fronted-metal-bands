@@ -23,8 +23,11 @@ export function searchQueryBuild(searchParams: SearchParams) {
   }
 }
 
-function queryBuild(searchParams: SearchParams,
-  collection: any) {
+function queryBuild(
+  searchParams: SearchParams,
+  collection: any
+) {
+  console.log({ searchParams })
   const { query, col } = searchParams;
   if (!query) return collection;
 
@@ -57,6 +60,7 @@ function filtersBuild(
   collection: Table<BandDb, number, BandDb> | Collection<BandDb, number, BandDb>
 ) {
   const { growling, filter } = searchParams;
+  console.log({ growling })
   if ((growling === null || growling === undefined) && !filter) return collection;
   if ('filter' in collection)
     return collection.filter(band => {
@@ -67,7 +71,7 @@ function filtersBuild(
       let mixed = true;
       let black = true;
       let sister = true;
-      if (growling >= 0) growl = band.growling === Number(growling)
+      if (growling && growling >= 0) growl = band.growling === Number(growling)
 
       if (!filter) return growl;
       const filters = filter.split(',');
