@@ -103,7 +103,7 @@ function BandGrid({ bands }: GridProps) {
 
 function CardImage({ band }: { band: Band }) {
   try {
-    if (band.deezerPicture && !band.emptyPicture) {
+    if (band.deezerPicture) {
       const id = band.id.replace('band:', '')
 
       return <img src={`/imgs/${id}.jpg`} alt="Picture of the band" />;

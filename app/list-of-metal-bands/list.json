@@ -2023,7 +2023,6 @@
 		"recommendation": "They Fear Us",
 		"links": "http://theyfearus.com/",
 		"sister": false,
-		"deezerPicture": "https://e-cdns-images.dzcdn.net/images/artist/9207f4112375d4c72e831f2f3ae22694/500x500-000000-80-0-0.jpg",
 		"activeFor": 13,
 		"numberOfVocalists": 1,
 		"id": "band:4335549"
@@ -2724,7 +2723,6 @@
 		"recommendation": "Angels To Ashes",
 		"links": "https://aspectirisband.com/",
 		"sister": false,
-		"deezerPicture": "https://e-cdns-images.dzcdn.net/images/artist/ce07bac1a6237b60657ad46024e19329/500x500-000000-80-0-0.jpg",
 		"activeFor": 3,
 		"numberOfVocalists": 1,
 		"id": "band:114449742"
@@ -2789,7 +2787,7 @@
 	},
 	{
 		"myFavorites": false,
-		"metalArchivesId": null,
+		"metalArchivesId": 10,
 		"growling": 3,
 		"band": "Arch Enemy",
 		"deezerId": 1392,
@@ -3283,7 +3281,6 @@
 		"links": "https://web.archive.org/web/20060322015253/http://www.yellowmachinegun.com/flame/ymg_navi_e.html",
 		"sister": false,
 		"emptyPicture": true,
-		"deezerPicture": "https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg",
 		"activeFor": 13,
 		"numberOfVocalists": 1,
 		"id": "band:52496822"
@@ -4272,7 +4269,6 @@
 		"recommendation": "Toxic",
 		"links": "",
 		"sister": false,
-		"deezerPicture": "https://e-cdns-images.dzcdn.net/images/artist/adff7773de8c6dd20a199931975ad595/500x500-000000-80-0-0.jpg",
 		"activeFor": 17,
 		"numberOfVocalists": 1,
 		"id": "band:7816402"
@@ -5709,8 +5705,7 @@
 		"sister": false,
 		"activeFor": 12,
 		"numberOfVocalists": 1,
-		"id": "band:164567517",
-		"deezerPicture": "https://e-cdns-images.dzcdn.net/images/artist/6cfa04ecb21e2bf823a5fcdbf20ac876/500x500-000000-80-0-0.jpg"
+		"id": "band:164567517"
 	},
 	{
 		"myFavorites": false,
@@ -6273,8 +6268,7 @@
 		"sister": false,
 		"activeFor": 16,
 		"numberOfVocalists": 1,
-		"id": "band:1428745",
-		"deezerPicture": "https://e-cdns-images.dzcdn.net/images/artist/b1cd02a4173f7e3bca424016e61248c3/500x500-000000-80-0-0.jpg"
+		"id": "band:1428745"
 	},
 	{
 		"myFavorites": false,
@@ -6555,7 +6549,6 @@
 		"recommendation": null,
 		"links": null,
 		"sister": false,
-		"deezerPicture": "https://e-cdns-images.dzcdn.net/images/artist/52eadde37c286b5227e96cf472046c76/500x500-000000-80-0-0.jpg",
 		"activeFor": 7,
 		"numberOfVocalists": 1,
 		"id": "band:4405309"
@@ -7075,7 +7068,6 @@
 		"recommendation": "Dirty Little Lie",
 		"links": "",
 		"sister": false,
-		"deezerPicture": "https://e-cdns-images.dzcdn.net/images/artist/b1176486868e42e6993fc56a5d6b9162/500x500-000000-80-0-0.jpg",
 		"activeFor": 14,
 		"numberOfVocalists": 1,
 		"id": "band:7812184"
