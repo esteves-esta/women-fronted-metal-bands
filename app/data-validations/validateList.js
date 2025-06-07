@@ -10,9 +10,9 @@ const formatYearsActive = (data) => {
   const { yearStarted, yearEnded } = data;
   const thisYear = new Date().getFullYear();
   let activeYears = 0;
-  if (yearStarted !== null && !isNaN(yearStarted)) {
-    if (Number(yearEnded) !== 0) activeYears = Number(yearEnded) - Number(yearStarted);
-    else activeYears = thisYear - Number(yearStarted);
+  if (yearStarted !== null) {
+    if (yearEnded !== 0) activeYears = yearEnded - yearStarted;
+    else activeYears = thisYear - yearStarted;
   }
   return activeYears;
 };
@@ -26,6 +26,9 @@ async function addDinamicCols() {
       if (band.deezerId) key = `band:${band.deezerId}`;
       else key = `band:${uuidv4()}`;
     }
+
+    band.yearEnded = Number(yearEnded)
+    band.yearStarted = Number(yearStarted)
 
     const activeFor = formatYearsActive(band);
     return {
@@ -49,28 +52,25 @@ async function validateCountryCodes() {
   await writeFile(ERRORS_PATH, JSON.stringify(errors, null, "\t"))
 }
 
-async function separateEnds() {
-  const bands = JSON.parse(await readFile(LIST_PATH))
-  const errors = []
-  const ok = []
-  bands.forEach(band => {
-    if (band.activeFor === null) errors.push(band)
-    else if (!band.yearStarted) errors.push(band)
-    else if (typeof band.yearEnded === "string" && isNaN(band.yearEnded)) errors.push(band)
-    else if (typeof band.yearStarted === "string" && isNaN(band.yearEnded)) errors.push(band)
-    else {
-      ok.push(band)
-    }
-  })
-  console.log({ ok: ok.length, errors: errors.length })
-  await writeFile(NOTENDSTART_PATH, JSON.stringify(errors, null, "\t"))
-  await writeFile(LIST_PATH, JSON.stringify(ok, null, "\t"))
-}
+// async function separateEnds() {
+//   const bands = JSON.parse(await readFile(LIST_PATH))
+//   const errors = []
+//   const ok = []
+//   bands.forEach(band => {
+//     if (band.yearStarted === "N/A") errors.push(band)
+//     else {
+//       ok.push(band)
+//     }
+//   })
+//   console.log({ ok: ok.length, errors: errors.length })
+//   await writeFile(NOTENDSTART_PATH, JSON.stringify(errors, null, "\t"))
+//   await writeFile(LIST_PATH, JSON.stringify(ok, null, "\t"))
+// }
 
 
 async function validate() {
   addDinamicCols()
   validateCountryCodes()
 }
-// validate()
-separateEnds()
+validate()
+// separateEnds()
