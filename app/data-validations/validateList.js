@@ -52,12 +52,19 @@ async function validateCountryCodes() {
 async function separateEnds() {
   const bands = JSON.parse(await readFile(LIST_PATH))
   const errors = []
+  const ok = []
   bands.forEach(band => {
-    if (!band.yearStarted) errors.push(band)
+    if (band.activeFor === null) errors.push(band)
+    else if (!band.yearStarted) errors.push(band)
     else if (typeof band.yearEnded === "string" && isNaN(band.yearEnded)) errors.push(band)
     else if (typeof band.yearStarted === "string" && isNaN(band.yearEnded)) errors.push(band)
+    else {
+      ok.push(band)
+    }
   })
+  console.log({ ok: ok.length, errors: errors.length })
   await writeFile(NOTENDSTART_PATH, JSON.stringify(errors, null, "\t"))
+  await writeFile(LIST_PATH, JSON.stringify(ok, null, "\t"))
 }
 
 
@@ -65,5 +72,5 @@ async function validate() {
   addDinamicCols()
   validateCountryCodes()
 }
-
-validate()
+// validate()
+separateEnds()
