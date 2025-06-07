@@ -27,8 +27,10 @@ async function addDinamicCols() {
       else key = `band:${uuidv4()}`;
     }
 
-    band.yearEnded = Number(yearEnded)
-    band.yearStarted = Number(yearStarted)
+    if (band.yearEnded) band.yearEnded = Number(band.yearEnded)
+    if (band.yearStarted) band.yearStarted = Number(band.yearStarted)
+
+    if (!Array.isArray(band.genre)) band.genre = [band.genre]
 
     const activeFor = formatYearsActive(band);
     return {
