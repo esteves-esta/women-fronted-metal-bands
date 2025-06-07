@@ -88018,7 +88018,7 @@
 		"currentVocalists": [
 			"Danyela Rubens"
 		],
-		"countryCode": null,
+		"countryCode": "MX",
 		"yearStarted": "2002",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88026,7 +88026,9 @@
 		"sister": false,
 		"activeFor": 23,
 		"id": "metal:3540275459",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Mexico"
 	},
 	{
 		"myFavorites": false,
@@ -88042,7 +88044,7 @@
 		"currentVocalists": [
 			"Miriam Isla"
 		],
-		"countryCode": null,
+		"countryCode": "AR",
 		"yearStarted": "2015",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88050,7 +88052,9 @@
 		"sister": false,
 		"activeFor": 10,
 		"id": "metal:3540442650",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive Power Metal",
+		"country": "Argentina"
 	},
 	{
 		"myFavorites": false,
@@ -88066,7 +88070,7 @@
 		"currentVocalists": [
 			"Ana Sesti"
 		],
-		"countryCode": null,
+		"countryCode": "VE",
 		"yearStarted": "2006",
 		"yearEnded": "2012",
 		"recommendation": "",
@@ -88074,7 +88078,9 @@
 		"sister": false,
 		"activeFor": 6,
 		"id": "metal:118847",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Progressive/Power Metal/Hard Rock",
+		"country": "Venezuela"
 	},
 	{
 		"myFavorites": false,
@@ -88090,7 +88096,7 @@
 		"currentVocalists": [
 			"Aziza Amy Poggi"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2011",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88098,7 +88104,9 @@
 		"sister": false,
 		"activeFor": 14,
 		"id": "metal:3540390563",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -88114,7 +88122,7 @@
 		"currentVocalists": [
 			"Luna"
 		],
-		"countryCode": null,
+		"countryCode": "JP",
 		"yearStarted": "2011",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88122,7 +88130,9 @@
 		"sister": false,
 		"activeFor": 14,
 		"id": "metal:3540470470",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Power Metal/Rock",
+		"country": "Japan"
 	},
 	{
 		"myFavorites": false,
@@ -88138,7 +88148,7 @@
 		"currentVocalists": [
 			"Yadira Monreal"
 		],
-		"countryCode": null,
+		"countryCode": "ES",
 		"yearStarted": "2007",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88146,7 +88156,9 @@
 		"sister": false,
 		"activeFor": 18,
 		"id": "metal:3540359293",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal/Hard Rock",
+		"country": "Spain"
 	},
 	{
 		"myFavorites": false,
@@ -88162,7 +88174,7 @@
 		"currentVocalists": [
 			"Siren"
 		],
-		"countryCode": null,
+		"countryCode": "MX",
 		"yearStarted": "2007",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88170,7 +88182,9 @@
 		"sister": false,
 		"activeFor": 18,
 		"id": "metal:3540349318",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Gothic Metal",
+		"country": "Mexico"
 	},
 	{
 		"myFavorites": false,
@@ -88186,7 +88200,7 @@
 		"currentVocalists": [
 			"Petra Lorentzon"
 		],
-		"countryCode": null,
+		"countryCode": "SE",
 		"yearStarted": "1984",
 		"yearEnded": "1988",
 		"recommendation": "",
@@ -88194,7 +88208,9 @@
 		"sister": false,
 		"activeFor": 4,
 		"id": "metal:110692",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Sweden"
 	},
 	{
 		"myFavorites": false,
@@ -88210,7 +88226,7 @@
 		"currentVocalists": [
 			"Ge Dubois"
 		],
-		"countryCode": null,
+		"countryCode": "CA",
 		"yearStarted": "2013",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88218,7 +88234,9 @@
 		"sister": false,
 		"activeFor": 12,
 		"id": "metal:3540403990",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Thrash/Death Metal",
+		"country": "Canada"
 	},
 	{
 		"myFavorites": false,
@@ -88234,7 +88252,7 @@
 		"currentVocalists": [
 			"Susy Sánchez"
 		],
-		"countryCode": null,
+		"countryCode": "ES",
 		"yearStarted": "2003",
 		"yearEnded": "2013",
 		"recommendation": "",
@@ -88242,7 +88260,9 @@
 		"sister": false,
 		"activeFor": 10,
 		"id": "metal:49378",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Spain"
 	},
 	{
 		"myFavorites": false,
@@ -88258,7 +88278,7 @@
 		"currentVocalists": [
 			"Priscila Serrano"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "2002",
 		"yearEnded": "2010",
 		"recommendation": "",
@@ -88266,7 +88286,9 @@
 		"sister": false,
 		"activeFor": 8,
 		"id": "metal:101083",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death Metal/Metalcore",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -88290,7 +88312,9 @@
 		"sister": false,
 		"activeFor": 1,
 		"id": "metal:3540532093",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Funeral Doom/Depressive Black Metal",
+		"country": "International"
 	},
 	{
 		"myFavorites": false,
@@ -88306,7 +88330,7 @@
 		"currentVocalists": [
 			"Michelle Loose-Schrotz"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "1996",
 		"yearEnded": "0",
 		"newName": "Brave",
@@ -88315,7 +88339,9 @@
 		"sister": false,
 		"activeFor": 29,
 		"id": "metal:65851",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Doom/Gothic/Progressive Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -88331,7 +88357,7 @@
 		"currentVocalists": [
 			"Philippa Mesiano"
 		],
-		"countryCode": null,
+		"countryCode": "GB",
 		"yearStarted": "2011",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88339,7 +88365,9 @@
 		"sister": false,
 		"activeFor": 14,
 		"id": "metal:3540392188",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive Metal",
+		"country": "United Kingdom"
 	},
 	{
 		"myFavorites": false,
@@ -88355,7 +88383,7 @@
 		"currentVocalists": [
 			"Illumina"
 		],
-		"countryCode": null,
+		"countryCode": "JP",
 		"yearStarted": "2018",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88363,7 +88391,9 @@
 		"sister": false,
 		"activeFor": 7,
 		"id": "metal:3540443835",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Power Metal",
+		"country": "Japan"
 	},
 	{
 		"myFavorites": false,
@@ -88379,7 +88409,7 @@
 		"currentVocalists": [
 			"Sarah Layssac"
 		],
-		"countryCode": null,
+		"countryCode": "FR",
 		"yearStarted": "2005",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88387,7 +88417,9 @@
 		"sister": false,
 		"activeFor": 20,
 		"id": "metal:62938",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death Metal with Middle Eastern influences",
+		"country": "France"
 	},
 	{
 		"myFavorites": false,
@@ -88403,7 +88435,7 @@
 		"currentVocalists": [
 			"Astrum Mortis"
 		],
-		"countryCode": null,
+		"countryCode": "CO",
 		"yearStarted": "2014",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88411,7 +88443,9 @@
 		"sister": false,
 		"activeFor": 11,
 		"id": "metal:3540481590",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal",
+		"country": "Colombia"
 	},
 	{
 		"myFavorites": false,
@@ -88427,7 +88461,7 @@
 		"currentVocalists": [
 			"Marilyn Diaz"
 		],
-		"countryCode": null,
+		"countryCode": "CL",
 		"yearStarted": "2011",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88435,7 +88469,9 @@
 		"sister": false,
 		"activeFor": 14,
 		"id": "metal:3540449956",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive Metal",
+		"country": "Chile"
 	},
 	{
 		"myFavorites": false,
@@ -88451,7 +88487,7 @@
 		"currentVocalists": [
 			"Kali"
 		],
-		"countryCode": null,
+		"countryCode": "FR",
 		"yearStarted": "2006",
 		"yearEnded": "2013",
 		"recommendation": "",
@@ -88459,7 +88495,9 @@
 		"sister": false,
 		"activeFor": 7,
 		"id": "metal:3540288615",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death Metal",
+		"country": "France"
 	},
 	{
 		"myFavorites": false,
@@ -88475,7 +88513,7 @@
 		"currentVocalists": [
 			"Marion"
 		],
-		"countryCode": null,
+		"countryCode": "FR",
 		"yearStarted": "1994",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88483,7 +88521,9 @@
 		"sister": false,
 		"activeFor": 31,
 		"id": "metal:4817",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal/Dark Ambient",
+		"country": "France"
 	},
 	{
 		"myFavorites": false,
@@ -88499,7 +88539,7 @@
 		"currentVocalists": [
 			"Odette López"
 		],
-		"countryCode": null,
+		"countryCode": "MX",
 		"yearStarted": "2004",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88507,7 +88547,9 @@
 		"sister": false,
 		"activeFor": 21,
 		"id": "metal:3540541943",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy/Power Metal",
+		"country": "Mexico"
 	},
 	{
 		"myFavorites": false,
@@ -88523,7 +88565,7 @@
 		"currentVocalists": [
 			"Stans Hoedemakers"
 		],
-		"countryCode": null,
+		"countryCode": "NL",
 		"yearStarted": "2005",
 		"yearEnded": "2014",
 		"newName": "RiverofBrakelights",
@@ -88532,7 +88574,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:50777",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive/Power Metal",
+		"country": "Netherlands"
 	},
 	{
 		"myFavorites": false,
@@ -88548,7 +88592,7 @@
 		"currentVocalists": [
 			"Ivon Alejandra Gonzalez Marquez"
 		],
-		"countryCode": null,
+		"countryCode": "BO",
 		"yearStarted": "2005",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88556,7 +88600,9 @@
 		"sister": false,
 		"activeFor": 20,
 		"id": "metal:76415",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Bolivia"
 	},
 	{
 		"myFavorites": false,
@@ -88572,7 +88618,7 @@
 		"currentVocalists": [
 			"Vanda Marijanski"
 		],
-		"countryCode": null,
+		"countryCode": "RS",
 		"yearStarted": "1987",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88580,7 +88626,9 @@
 		"sister": false,
 		"activeFor": 38,
 		"id": "metal:43175",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive/Symphonic Metal",
+		"country": "Serbia"
 	},
 	{
 		"myFavorites": false,
@@ -88596,7 +88644,7 @@
 		"currentVocalists": [
 			"Alyson Blake Dellinger"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2009",
 		"yearEnded": " 2017",
 		"recommendation": "",
@@ -88604,7 +88652,9 @@
 		"sister": false,
 		"activeFor": 8,
 		"id": "metal:3540302401",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Thrash Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -88620,7 +88670,7 @@
 		"currentVocalists": [
 			"Abbey (Abilene)"
 		],
-		"countryCode": null,
+		"countryCode": "MX",
 		"yearStarted": "2009",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88628,7 +88678,9 @@
 		"sister": false,
 		"activeFor": 16,
 		"id": "metal:3540362630",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black/Thrash Metal",
+		"country": "Mexico"
 	},
 	{
 		"myFavorites": false,
@@ -88644,7 +88696,7 @@
 		"currentVocalists": [
 			"Irena"
 		],
-		"countryCode": null,
+		"countryCode": "IT",
 		"yearStarted": "2007",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88652,7 +88704,9 @@
 		"sister": false,
 		"activeFor": 18,
 		"id": "metal:3540352461",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Gothic Metal (early); Rock (later)",
+		"country": "Italy"
 	},
 	{
 		"myFavorites": false,
@@ -88668,7 +88722,7 @@
 		"currentVocalists": [
 			"小虎"
 		],
-		"countryCode": null,
+		"countryCode": "CN",
 		"yearStarted": "2013",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88676,7 +88730,9 @@
 		"sister": false,
 		"activeFor": 12,
 		"id": "metal:3540391469",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Folk Metal",
+		"country": "China"
 	},
 	{
 		"myFavorites": false,
@@ -88692,7 +88748,7 @@
 		"currentVocalists": [
 			"Karla Danielle"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2011",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88700,7 +88756,9 @@
 		"sister": false,
 		"activeFor": 14,
 		"id": "metal:3540403046",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy/Power Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -88716,7 +88774,7 @@
 		"currentVocalists": [
 			"Evelyn Contreras"
 		],
-		"countryCode": null,
+		"countryCode": "CL",
 		"yearStarted": "2009",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88724,7 +88782,9 @@
 		"sister": false,
 		"activeFor": 16,
 		"id": "metal:3540350014",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy/Speed Metal",
+		"country": "Chile"
 	},
 	{
 		"myFavorites": false,
@@ -88740,7 +88800,7 @@
 		"currentVocalists": [
 			"Sarah Shanovski"
 		],
-		"countryCode": null,
+		"countryCode": "AU",
 		"yearStarted": "2006",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88748,7 +88808,9 @@
 		"sister": false,
 		"activeFor": 19,
 		"id": "metal:3540458181",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Australia"
 	},
 	{
 		"myFavorites": false,
@@ -88764,7 +88826,7 @@
 		"currentVocalists": [
 			"Camila Andrade"
 		],
-		"countryCode": null,
+		"countryCode": "BR",
 		"yearStarted": "2011",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88772,7 +88834,9 @@
 		"sister": false,
 		"activeFor": 14,
 		"id": "metal:3540420099",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Death Metal",
+		"country": "Brazil"
 	},
 	{
 		"myFavorites": false,
@@ -88788,7 +88852,7 @@
 		"currentVocalists": [
 			"Verónica Sánchez"
 		],
-		"countryCode": null,
+		"countryCode": "MX",
 		"yearStarted": "1984",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88796,7 +88860,9 @@
 		"sister": false,
 		"activeFor": 41,
 		"id": "metal:120707",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Mexico"
 	},
 	{
 		"myFavorites": false,
@@ -88812,7 +88878,7 @@
 		"currentVocalists": [
 			"Ariel Montes"
 		],
-		"countryCode": null,
+		"countryCode": "AR",
 		"yearStarted": "2001",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88820,7 +88886,9 @@
 		"sister": false,
 		"activeFor": 24,
 		"id": "metal:41071",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Argentina"
 	},
 	{
 		"myFavorites": false,
@@ -88836,7 +88904,7 @@
 		"currentVocalists": [
 			"Rebecca Lion"
 		],
-		"countryCode": null,
+		"countryCode": "AU",
 		"yearStarted": "2019",
 		"yearEnded": "2021",
 		"recommendation": "",
@@ -88844,7 +88912,9 @@
 		"sister": false,
 		"activeFor": 2,
 		"id": "metal:3540458628",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Doom/Stoner Metal/Rock",
+		"country": "Australia"
 	},
 	{
 		"myFavorites": false,
@@ -88860,7 +88930,7 @@
 		"currentVocalists": [
 			"Verena Johanna Erler"
 		],
-		"countryCode": null,
+		"countryCode": "AT",
 		"yearStarted": "2003",
 		"yearEnded": "2011",
 		"recommendation": "",
@@ -88868,7 +88938,9 @@
 		"sister": false,
 		"activeFor": 8,
 		"id": "metal:60692",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Gothic Metal/Progressive Rock",
+		"country": "Austria"
 	},
 	{
 		"myFavorites": false,
@@ -88892,7 +88964,9 @@
 		"sister": false,
 		"activeFor": 5,
 		"id": "metal:3540489161",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Black Metal",
+		"country": "Czechia"
 	},
 	{
 		"myFavorites": false,
@@ -88908,7 +88982,7 @@
 		"currentVocalists": [
 			"Christine Steel"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "1983",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88916,7 +88990,9 @@
 		"sister": false,
 		"activeFor": 42,
 		"id": "metal:127277",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -88932,7 +89008,7 @@
 		"currentVocalists": [
 			"Sonja Rosenlund Ahl"
 		],
-		"countryCode": null,
+		"countryCode": "DK",
 		"yearStarted": "2014",
 		"yearEnded": "2022",
 		"recommendation": "",
@@ -88940,7 +89016,9 @@
 		"sister": false,
 		"activeFor": 8,
 		"id": "metal:3540454435",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Death Metal",
+		"country": "Denmark"
 	},
 	{
 		"myFavorites": false,
@@ -88956,7 +89034,7 @@
 		"currentVocalists": [
 			"Lady Arsenic"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2006",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -88964,7 +89042,9 @@
 		"sister": false,
 		"activeFor": 19,
 		"id": "metal:3540352291",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Extreme Gothic Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -88980,7 +89060,7 @@
 		"currentVocalists": [
 			"Ofilia"
 		],
-		"countryCode": null,
+		"countryCode": "PL",
 		"yearStarted": "2006",
 		"yearEnded": "2023",
 		"recommendation": "",
@@ -88988,7 +89068,9 @@
 		"sister": false,
 		"activeFor": 17,
 		"id": "metal:3540417115",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy/Groove Metal/Hard Rock",
+		"country": "Poland"
 	},
 	{
 		"myFavorites": false,
@@ -89004,7 +89086,7 @@
 		"currentVocalists": [
 			"Lady Noctifera"
 		],
-		"countryCode": null,
+		"countryCode": "BR",
 		"yearStarted": "1997",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89012,7 +89094,9 @@
 		"sister": false,
 		"activeFor": 28,
 		"id": "metal:22650",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Raw Black Metal",
+		"country": "Brazil"
 	},
 	{
 		"myFavorites": false,
@@ -89028,7 +89112,7 @@
 		"currentVocalists": [
 			"Melanie Asshoff"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "2015",
 		"yearEnded": "2024",
 		"recommendation": "",
@@ -89036,7 +89120,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:3540531297",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Metal/Rock",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -89052,7 +89138,7 @@
 		"currentVocalists": [
 			"Judit Répásy"
 		],
-		"countryCode": null,
+		"countryCode": "HU",
 		"yearStarted": "2003",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89060,7 +89146,9 @@
 		"sister": false,
 		"activeFor": 22,
 		"id": "metal:45055",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Heavy/Power Metal",
+		"country": "Hungary"
 	},
 	{
 		"myFavorites": false,
@@ -89076,7 +89164,7 @@
 		"currentVocalists": [
 			"Luciana Catananti"
 		],
-		"countryCode": null,
+		"countryCode": "GB",
 		"yearStarted": "2002",
 		"yearEnded": "2011",
 		"recommendation": "",
@@ -89084,7 +89172,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:87309",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death/Thrash Metal",
+		"country": "United Kingdom"
 	},
 	{
 		"myFavorites": false,
@@ -89100,7 +89190,7 @@
 		"currentVocalists": [
 			"Janneke de Boer"
 		],
-		"countryCode": null,
+		"countryCode": "NL",
 		"yearStarted": "2012",
 		"yearEnded": "2019",
 		"recommendation": "",
@@ -89108,7 +89198,9 @@
 		"sister": false,
 		"activeFor": 7,
 		"id": "metal:3540497667",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Thrash Metal",
+		"country": "Netherlands"
 	},
 	{
 		"myFavorites": false,
@@ -89124,7 +89216,7 @@
 		"currentVocalists": [
 			"Sara Cucci"
 		],
-		"countryCode": null,
+		"countryCode": "IT",
 		"yearStarted": "2008",
 		"yearEnded": "2015",
 		"recommendation": "",
@@ -89132,7 +89224,9 @@
 		"sister": false,
 		"activeFor": 7,
 		"id": "metal:3540361503",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive Folk Metal",
+		"country": "Italy"
 	},
 	{
 		"myFavorites": false,
@@ -89148,7 +89242,7 @@
 		"currentVocalists": [
 			"Karina Artemis"
 		],
-		"countryCode": null,
+		"countryCode": "GB",
 		"yearStarted": "2021",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89156,7 +89250,9 @@
 		"sister": false,
 		"activeFor": 4,
 		"id": "metal:3540518961",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Metal",
+		"country": "United Kingdom"
 	},
 	{
 		"myFavorites": false,
@@ -89172,7 +89268,7 @@
 		"currentVocalists": [
 			"Mónica Largo"
 		],
-		"countryCode": null,
+		"countryCode": "PE",
 		"yearStarted": "2020",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89180,7 +89276,9 @@
 		"sister": false,
 		"activeFor": 5,
 		"id": "metal:3540500655",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Heavy/Power Metal",
+		"country": "Peru"
 	},
 	{
 		"myFavorites": false,
@@ -89196,7 +89294,7 @@
 		"currentVocalists": [
 			"Artep"
 		],
-		"countryCode": null,
+		"countryCode": "CA",
 		"yearStarted": "2006",
 		"yearEnded": "2022",
 		"recommendation": "",
@@ -89204,7 +89302,9 @@
 		"sister": false,
 		"activeFor": 16,
 		"id": "metal:104107",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Black Metal",
+		"country": "Canada"
 	},
 	{
 		"myFavorites": false,
@@ -89220,7 +89320,7 @@
 		"currentVocalists": [
 			"Anastasia Vikulyeva"
 		],
-		"countryCode": null,
+		"countryCode": "RU",
 		"yearStarted": "2012",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89228,7 +89328,9 @@
 		"sister": false,
 		"activeFor": 13,
 		"id": "metal:3540461004",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Black Metal",
+		"country": "Russia"
 	},
 	{
 		"myFavorites": false,
@@ -89244,7 +89346,7 @@
 		"currentVocalists": [
 			"Otisagares"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "1997",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89252,7 +89354,9 @@
 		"sister": false,
 		"activeFor": 28,
 		"id": "metal:10943",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -89268,7 +89372,7 @@
 		"currentVocalists": [
 			"Olha Ishchenko"
 		],
-		"countryCode": null,
+		"countryCode": "UA",
 		"yearStarted": "2020",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89276,7 +89380,9 @@
 		"sister": false,
 		"activeFor": 5,
 		"id": "metal:3540534955",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death/Groove Metal/Metalcore",
+		"country": "Ukraine"
 	},
 	{
 		"myFavorites": false,
@@ -89300,7 +89406,9 @@
 		"sister": false,
 		"activeFor": 11,
 		"id": "metal:3540417254",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Gothic/Death Metal",
+		"country": "Czechia"
 	},
 	{
 		"myFavorites": false,
@@ -89316,7 +89424,7 @@
 		"currentVocalists": [
 			"Izu"
 		],
-		"countryCode": null,
+		"countryCode": "PL",
 		"yearStarted": "2009",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89324,7 +89432,9 @@
 		"sister": false,
 		"activeFor": 16,
 		"id": "metal:3540367118",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Poland"
 	},
 	{
 		"myFavorites": false,
@@ -89348,7 +89458,9 @@
 		"sister": false,
 		"activeFor": 12,
 		"id": "metal:3540403863",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Power/Thrash Metal",
+		"country": "Korea, South"
 	},
 	{
 		"myFavorites": false,
@@ -89364,7 +89476,7 @@
 		"currentVocalists": [
 			"Vanessa Lara"
 		],
-		"countryCode": null,
+		"countryCode": "VE",
 		"yearStarted": "2003",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89372,7 +89484,9 @@
 		"sister": false,
 		"activeFor": 22,
 		"id": "metal:40499",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Gothic Metal",
+		"country": "Venezuela"
 	},
 	{
 		"myFavorites": false,
@@ -89388,7 +89502,7 @@
 		"currentVocalists": [
 			"Katharina Kunnert"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "2000",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89396,7 +89510,9 @@
 		"sister": false,
 		"activeFor": 25,
 		"id": "metal:34601",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -89412,7 +89528,7 @@
 		"currentVocalists": [
 			"Ana Greco"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2000",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89420,7 +89536,9 @@
 		"sister": false,
 		"activeFor": 25,
 		"id": "metal:1219",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Thrash Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -89436,7 +89554,7 @@
 		"currentVocalists": [
 			"Olga Zhilkova"
 		],
-		"countryCode": null,
+		"countryCode": "RU",
 		"yearStarted": "2006",
 		"yearEnded": "2009",
 		"recommendation": "",
@@ -89444,7 +89562,9 @@
 		"sister": false,
 		"activeFor": 3,
 		"id": "metal:119495",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive/Gothic Metal",
+		"country": "Russia"
 	},
 	{
 		"myFavorites": false,
@@ -89460,7 +89580,7 @@
 		"currentVocalists": [
 			"Medeah"
 		],
-		"countryCode": null,
+		"countryCode": "PL",
 		"yearStarted": "1995",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89468,7 +89588,9 @@
 		"sister": false,
 		"activeFor": 30,
 		"id": "metal:2526",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Gothic Metal/Rock",
+		"country": "Poland"
 	},
 	{
 		"myFavorites": false,
@@ -89484,7 +89606,7 @@
 		"currentVocalists": [
 			"Luna Campos"
 		],
-		"countryCode": null,
+		"countryCode": "GT",
 		"yearStarted": "2008",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89492,7 +89614,9 @@
 		"sister": false,
 		"activeFor": 17,
 		"id": "metal:3540338067",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive/Power Metal",
+		"country": "Guatemala"
 	},
 	{
 		"myFavorites": false,
@@ -89508,7 +89632,7 @@
 		"currentVocalists": [
 			"Marilyn Dubé"
 		],
-		"countryCode": null,
+		"countryCode": "CA",
 		"yearStarted": "2006",
 		"yearEnded": "2011",
 		"recommendation": "",
@@ -89516,7 +89640,9 @@
 		"sister": false,
 		"activeFor": 5,
 		"id": "metal:101752",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Power Metal",
+		"country": "Canada"
 	},
 	{
 		"myFavorites": false,
@@ -89532,7 +89658,7 @@
 		"currentVocalists": [
 			"Carina Hanselmann"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "2006",
 		"yearEnded": "2015",
 		"recommendation": "",
@@ -89540,7 +89666,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:120350",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Metal",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -89556,7 +89684,7 @@
 		"currentVocalists": [
 			"Lillian Eilevtjønn"
 		],
-		"countryCode": null,
+		"countryCode": "NO",
 		"yearStarted": "2001",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89564,7 +89692,9 @@
 		"sister": false,
 		"activeFor": 24,
 		"id": "metal:8603",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Folk/Viking/Black Metal",
+		"country": "Norway"
 	},
 	{
 		"myFavorites": false,
@@ -89580,7 +89710,7 @@
 		"currentVocalists": [
 			"Mamen Castaño"
 		],
-		"countryCode": null,
+		"countryCode": "ES",
 		"yearStarted": "1996",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89588,7 +89718,9 @@
 		"sister": false,
 		"activeFor": 29,
 		"id": "metal:4202",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Power Metal",
+		"country": "Spain"
 	},
 	{
 		"myFavorites": false,
@@ -89604,7 +89736,7 @@
 		"currentVocalists": [
 			"Karen M-dozza"
 		],
-		"countryCode": null,
+		"countryCode": "MX",
 		"yearStarted": "2012",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89612,7 +89744,9 @@
 		"sister": false,
 		"activeFor": 13,
 		"id": "metal:3540465041",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Metal",
+		"country": "Mexico"
 	},
 	{
 		"myFavorites": false,
@@ -89628,7 +89762,7 @@
 		"currentVocalists": [
 			"Mysterious Artémisia"
 		],
-		"countryCode": null,
+		"countryCode": "FR",
 		"yearStarted": "1994",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89636,7 +89770,9 @@
 		"sister": false,
 		"activeFor": 31,
 		"id": "metal:12532",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Avant-garde Black Metal",
+		"country": "France"
 	},
 	{
 		"myFavorites": false,
@@ -89652,7 +89788,7 @@
 		"currentVocalists": [
 			"Joanna Uchnast"
 		],
-		"countryCode": null,
+		"countryCode": "PL",
 		"yearStarted": "1995",
 		"yearEnded": "1996",
 		"recommendation": "",
@@ -89660,7 +89796,9 @@
 		"sister": false,
 		"activeFor": 1,
 		"id": "metal:82011",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death/Doom Metal",
+		"country": "Poland"
 	},
 	{
 		"myFavorites": false,
@@ -89676,7 +89814,7 @@
 		"currentVocalists": [
 			"Carol Daith"
 		],
-		"countryCode": null,
+		"countryCode": "ES",
 		"yearStarted": "1999",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89684,7 +89822,9 @@
 		"sister": false,
 		"activeFor": 26,
 		"id": "metal:33076",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Death/Black/Doom/Gothic Metal",
+		"country": "Spain"
 	},
 	{
 		"myFavorites": false,
@@ -89700,7 +89840,7 @@
 		"currentVocalists": [
 			"Anna Achtelik"
 		],
-		"countryCode": null,
+		"countryCode": "PL",
 		"yearStarted": "2010",
 		"yearEnded": "2024",
 		"recommendation": "",
@@ -89708,7 +89848,9 @@
 		"sister": false,
 		"activeFor": 14,
 		"id": "metal:3540357057",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Power Metal",
+		"country": "Poland"
 	},
 	{
 		"myFavorites": false,
@@ -89724,7 +89866,7 @@
 		"currentVocalists": [
 			"Sabrina Brühwiler"
 		],
-		"countryCode": null,
+		"countryCode": "CH",
 		"yearStarted": "2003",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89732,7 +89874,9 @@
 		"sister": false,
 		"activeFor": 22,
 		"id": "metal:34592",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Atmospheric Death Metal",
+		"country": "Switzerland"
 	},
 	{
 		"myFavorites": false,
@@ -89756,7 +89900,9 @@
 		"sister": false,
 		"activeFor": 10,
 		"id": "metal:3540421970",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal",
+		"country": "International"
 	},
 	{
 		"myFavorites": false,
@@ -89772,7 +89918,7 @@
 		"currentVocalists": [
 			"Nova"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "2014",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89780,7 +89926,9 @@
 		"sister": false,
 		"activeFor": 11,
 		"id": "metal:3540402675",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -89796,7 +89944,7 @@
 		"currentVocalists": [
 			"Kara Melodic"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2012",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89804,7 +89952,9 @@
 		"sister": false,
 		"activeFor": 13,
 		"id": "metal:3540371019",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Doom Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -89820,7 +89970,7 @@
 		"currentVocalists": [
 			"Martyna Hałas"
 		],
-		"countryCode": null,
+		"countryCode": "IE",
 		"yearStarted": "2019",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89828,7 +89978,9 @@
 		"sister": false,
 		"activeFor": 6,
 		"id": "metal:3540457819",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death Metal/Deathcore",
+		"country": "Ireland"
 	},
 	{
 		"myFavorites": false,
@@ -89844,7 +89996,7 @@
 		"currentVocalists": [
 			"Anna Dizendorf"
 		],
-		"countryCode": null,
+		"countryCode": "RU",
 		"yearStarted": "2013",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89852,7 +90004,9 @@
 		"sister": false,
 		"activeFor": 12,
 		"id": "metal:3540413699",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Death Metal",
+		"country": "Russia"
 	},
 	{
 		"myFavorites": false,
@@ -89868,7 +90022,7 @@
 		"currentVocalists": [
 			"Lilith Frost"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "2017",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89876,7 +90030,9 @@
 		"sister": false,
 		"activeFor": 8,
 		"id": "metal:3540450447",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -89892,7 +90048,7 @@
 		"currentVocalists": [
 			"Ange"
 		],
-		"countryCode": null,
+		"countryCode": "FR",
 		"yearStarted": "2015",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89900,7 +90056,9 @@
 		"sister": false,
 		"activeFor": 10,
 		"id": "metal:3540414758",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal",
+		"country": "France"
 	},
 	{
 		"myFavorites": false,
@@ -89916,7 +90074,7 @@
 		"currentVocalists": [
 			"Brit"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2006",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89924,7 +90082,9 @@
 		"sister": false,
 		"activeFor": 19,
 		"id": "metal:3540269365",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Thrash/Groove Metal/Metalcore",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -89940,7 +90100,7 @@
 		"currentVocalists": [
 			"Mar Amorós"
 		],
-		"countryCode": null,
+		"countryCode": "ES",
 		"yearStarted": "2001",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89948,7 +90108,9 @@
 		"sister": false,
 		"activeFor": 24,
 		"id": "metal:108491",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Thrash Metal",
+		"country": "Spain"
 	},
 	{
 		"myFavorites": false,
@@ -89964,7 +90126,7 @@
 		"currentVocalists": [
 			"Anna Markuszewska"
 		],
-		"countryCode": null,
+		"countryCode": "PL",
 		"yearStarted": "1994",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -89972,7 +90134,9 @@
 		"sister": false,
 		"activeFor": 31,
 		"id": "metal:3068",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Gothic/Black Metal",
+		"country": "Poland"
 	},
 	{
 		"myFavorites": false,
@@ -89988,7 +90152,7 @@
 		"currentVocalists": [
 			"Glenda González"
 		],
-		"countryCode": null,
+		"countryCode": "CU",
 		"yearStarted": "2009",
 		"yearEnded": "2013",
 		"recommendation": "",
@@ -89996,7 +90160,9 @@
 		"sister": false,
 		"activeFor": 4,
 		"id": "metal:3540321757",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Power Metal",
+		"country": "Cuba"
 	},
 	{
 		"myFavorites": false,
@@ -90012,7 +90178,7 @@
 		"currentVocalists": [
 			"Silvana Perez"
 		],
-		"countryCode": null,
+		"countryCode": "UY",
 		"yearStarted": "2001",
 		"yearEnded": "2008",
 		"recommendation": "",
@@ -90020,7 +90186,9 @@
 		"sister": false,
 		"activeFor": 7,
 		"id": "metal:3540418948",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Power Metal",
+		"country": "Uruguay"
 	},
 	{
 		"myFavorites": false,
@@ -90036,7 +90204,7 @@
 		"currentVocalists": [
 			"Marie Testi"
 		],
-		"countryCode": null,
+		"countryCode": "FR",
 		"yearStarted": "2018",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90044,7 +90212,9 @@
 		"sister": false,
 		"activeFor": 7,
 		"id": "metal:3540474601",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Thrash/Death Metal",
+		"country": "France"
 	},
 	{
 		"myFavorites": false,
@@ -90060,7 +90230,7 @@
 		"currentVocalists": [
 			"Melanie van Hoof"
 		],
-		"countryCode": null,
+		"countryCode": "NL",
 		"yearStarted": "2004",
 		"yearEnded": "2013",
 		"recommendation": "",
@@ -90068,7 +90238,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:81492",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Metal",
+		"country": "Netherlands"
 	},
 	{
 		"myFavorites": false,
@@ -90084,7 +90256,7 @@
 		"currentVocalists": [
 			"Michelle Burnier"
 		],
-		"countryCode": null,
+		"countryCode": "CH",
 		"yearStarted": "2003",
 		"yearEnded": "2006",
 		"recommendation": "",
@@ -90092,7 +90264,9 @@
 		"sister": false,
 		"activeFor": 3,
 		"id": "metal:64238",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal",
+		"country": "Switzerland"
 	},
 	{
 		"myFavorites": false,
@@ -90108,7 +90282,7 @@
 		"currentVocalists": [
 			"Melanie Bolton"
 		],
-		"countryCode": null,
+		"countryCode": "GB",
 		"yearStarted": "1993",
 		"yearEnded": "2005",
 		"recommendation": "",
@@ -90116,7 +90290,9 @@
 		"sister": false,
 		"activeFor": 12,
 		"id": "metal:4123",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Gothic/Death/Doom Metal with Folk influences",
+		"country": "United Kingdom"
 	},
 	{
 		"myFavorites": false,
@@ -90132,7 +90308,7 @@
 		"currentVocalists": [
 			"Lenore Young"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2010",
 		"yearEnded": "2015",
 		"recommendation": "",
@@ -90140,7 +90316,9 @@
 		"sister": false,
 		"activeFor": 5,
 		"id": "metal:3540332555",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -90156,7 +90334,7 @@
 		"currentVocalists": [
 			"Christine Greenwood"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2009",
 		"yearEnded": "2012",
 		"recommendation": "",
@@ -90164,7 +90342,9 @@
 		"sister": false,
 		"activeFor": 3,
 		"id": "metal:3540361969",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -90180,7 +90360,7 @@
 		"currentVocalists": [
 			"Lilith"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "2004",
 		"yearEnded": "2009",
 		"recommendation": "",
@@ -90188,7 +90368,9 @@
 		"sister": false,
 		"activeFor": 5,
 		"id": "metal:57364",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Death/Doom/Gothic Metal",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -90204,7 +90386,7 @@
 		"currentVocalists": [
 			"Tamara Mulaosmanović"
 		],
-		"countryCode": null,
+		"countryCode": "HR",
 		"yearStarted": "1995",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90212,7 +90394,9 @@
 		"sister": false,
 		"activeFor": 30,
 		"id": "metal:1621",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Doom/Death Metal (early); Gothic/Doom Metal (later)",
+		"country": "Croatia"
 	},
 	{
 		"myFavorites": false,
@@ -90228,7 +90412,7 @@
 		"currentVocalists": [
 			"Cindy Dávila"
 		],
-		"countryCode": null,
+		"countryCode": "EC",
 		"yearStarted": "2003",
 		"yearEnded": "2012",
 		"recommendation": "",
@@ -90236,7 +90420,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:107472",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive, Gothic Metal/Rock",
+		"country": "Ecuador"
 	},
 	{
 		"myFavorites": false,
@@ -90252,7 +90438,7 @@
 		"currentVocalists": [
 			"Esther"
 		],
-		"countryCode": null,
+		"countryCode": "ES",
 		"yearStarted": "2002",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90260,7 +90446,9 @@
 		"sister": false,
 		"activeFor": 23,
 		"id": "metal:94358",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Spain"
 	},
 	{
 		"myFavorites": false,
@@ -90276,7 +90464,7 @@
 		"currentVocalists": [
 			"Paula Mineoka"
 		],
-		"countryCode": null,
+		"countryCode": "BR",
 		"yearStarted": "1997",
 		"yearEnded": "2015",
 		"recommendation": "",
@@ -90284,7 +90472,9 @@
 		"sister": false,
 		"activeFor": 18,
 		"id": "metal:13493",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive Folk Metal",
+		"country": "Brazil"
 	},
 	{
 		"myFavorites": false,
@@ -90300,7 +90490,7 @@
 		"currentVocalists": [
 			"Nadine"
 		],
-		"countryCode": null,
+		"countryCode": "CH",
 		"yearStarted": "2012",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90308,7 +90498,9 @@
 		"sister": false,
 		"activeFor": 13,
 		"id": "metal:3540396617",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black/Doom Metal",
+		"country": "Switzerland"
 	},
 	{
 		"myFavorites": false,
@@ -90324,7 +90516,7 @@
 		"currentVocalists": [
 			"Nirmala Winz"
 		],
-		"countryCode": null,
+		"countryCode": "ID",
 		"yearStarted": "1996",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90332,7 +90524,9 @@
 		"sister": false,
 		"activeFor": 29,
 		"id": "metal:3540482730",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal",
+		"country": "Indonesia"
 	},
 	{
 		"myFavorites": false,
@@ -90348,7 +90542,7 @@
 		"currentVocalists": [
 			"Myriam Smithy"
 		],
-		"countryCode": null,
+		"countryCode": "CH",
 		"yearStarted": "2012",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90356,7 +90550,9 @@
 		"sister": false,
 		"activeFor": 13,
 		"id": "metal:3540418970",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive Gothic Metal",
+		"country": "Switzerland"
 	},
 	{
 		"myFavorites": false,
@@ -90372,7 +90568,7 @@
 		"currentVocalists": [
 			"Gvantsa Giorgadze"
 		],
-		"countryCode": null,
+		"countryCode": "GE",
 		"yearStarted": "2020",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90380,7 +90576,9 @@
 		"sister": false,
 		"activeFor": 5,
 		"id": "metal:3540483316",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Atmospheric Black Metal/Ambient",
+		"country": "Georgia"
 	},
 	{
 		"myFavorites": false,
@@ -90396,7 +90594,7 @@
 		"currentVocalists": [
 			"Bláinn"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "2017",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90404,7 +90602,9 @@
 		"sister": false,
 		"activeFor": 8,
 		"id": "metal:3540540455",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Black Metal",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -90420,7 +90620,7 @@
 		"currentVocalists": [
 			"Hanten Kurosu"
 		],
-		"countryCode": null,
+		"countryCode": "ES",
 		"yearStarted": "2014",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90428,7 +90628,9 @@
 		"sister": false,
 		"activeFor": 11,
 		"id": "metal:3540507166",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Depressive Black/Doom Metal, Dark Ambient/Industrial",
+		"country": "Spain"
 	},
 	{
 		"myFavorites": false,
@@ -90444,7 +90646,7 @@
 		"currentVocalists": [
 			"Belial"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "2008",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90452,7 +90654,9 @@
 		"sister": false,
 		"activeFor": 17,
 		"id": "metal:3540298960",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -90468,7 +90672,7 @@
 		"currentVocalists": [
 			"Emma Hellström"
 		],
-		"countryCode": null,
+		"countryCode": "SE",
 		"yearStarted": "1995",
 		"yearEnded": "2007",
 		"newName": "TheProvenance",
@@ -90477,7 +90681,9 @@
 		"sister": false,
 		"activeFor": 12,
 		"id": "metal:3540312816",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Gothic/Doom Metal",
+		"country": "Sweden"
 	},
 	{
 		"myFavorites": false,
@@ -90493,7 +90699,7 @@
 		"currentVocalists": [
 			"Angela Gossow"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "1990",
 		"yearEnded": "1998",
 		"recommendation": "",
@@ -90501,7 +90707,9 @@
 		"sister": false,
 		"activeFor": 8,
 		"id": "metal:56117",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Death Metal",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -90517,7 +90725,7 @@
 		"currentVocalists": [
 			"Sofia"
 		],
-		"countryCode": null,
+		"countryCode": "GR",
 		"yearStarted": "1992",
 		"yearEnded": "2002",
 		"recommendation": "",
@@ -90525,7 +90733,9 @@
 		"sister": false,
 		"activeFor": 10,
 		"id": "metal:85209",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Doom/Death Metal (early); Doom Metal/Rock (later)",
+		"country": "Greece"
 	},
 	{
 		"myFavorites": false,
@@ -90541,7 +90751,7 @@
 		"currentVocalists": [
 			"Samuela Fuiani"
 		],
-		"countryCode": null,
+		"countryCode": "IT",
 		"yearStarted": "2016",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90549,7 +90759,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:3540436216",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Metal",
+		"country": "Italy"
 	},
 	{
 		"myFavorites": false,
@@ -90565,7 +90777,7 @@
 		"currentVocalists": [
 			"Ligeia"
 		],
-		"countryCode": null,
+		"countryCode": "AT",
 		"yearStarted": "2000",
 		"yearEnded": "2006",
 		"recommendation": "",
@@ -90573,7 +90785,9 @@
 		"sister": false,
 		"activeFor": 6,
 		"id": "metal:10289",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal (early); Melodic Death Metal (later)",
+		"country": "Austria"
 	},
 	{
 		"myFavorites": false,
@@ -90589,7 +90803,7 @@
 		"currentVocalists": [
 			"Paola Guardado"
 		],
-		"countryCode": null,
+		"countryCode": "SV",
 		"yearStarted": "2016",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90597,7 +90811,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:3540470052",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive/Symphonic Metal/Djent",
+		"country": "El Salvador"
 	},
 	{
 		"myFavorites": false,
@@ -90613,7 +90829,7 @@
 		"currentVocalists": [
 			"Jet'n-D.Ron.Jyo"
 		],
-		"countryCode": null,
+		"countryCode": "JP",
 		"yearStarted": "2006",
 		"yearEnded": "0",
 		"newName": "AnotherShrine",
@@ -90622,7 +90838,9 @@
 		"sister": false,
 		"activeFor": 19,
 		"id": "metal:99045",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Power Metal",
+		"country": "Japan"
 	},
 	{
 		"myFavorites": false,
@@ -90638,7 +90856,7 @@
 		"currentVocalists": [
 			"Darya Dronova"
 		],
-		"countryCode": null,
+		"countryCode": "RU",
 		"yearStarted": "2018",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90646,7 +90864,9 @@
 		"sister": false,
 		"activeFor": 7,
 		"id": "metal:3540491124",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic/Melodic Death Metal",
+		"country": "Russia"
 	},
 	{
 		"myFavorites": false,
@@ -90662,7 +90882,7 @@
 		"currentVocalists": [
 			"Ines Turrowski-Seher"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "1994",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90670,7 +90890,9 @@
 		"sister": false,
 		"activeFor": 31,
 		"id": "metal:3838",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Death/Thrash Metal (early); Progressive Power Metal (later)",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -90686,7 +90908,7 @@
 		"currentVocalists": [
 			"Tarja Turunen"
 		],
-		"countryCode": null,
+		"countryCode": "AR",
 		"yearStarted": "2000",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90694,7 +90916,9 @@
 		"sister": false,
 		"activeFor": 25,
 		"id": "metal:81555",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Groove Metal",
+		"country": "Argentina"
 	},
 	{
 		"myFavorites": false,
@@ -90710,7 +90934,7 @@
 		"currentVocalists": [
 			"Dana Dubal"
 		],
-		"countryCode": null,
+		"countryCode": "VE",
 		"yearStarted": "2005",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90718,7 +90942,9 @@
 		"sister": false,
 		"activeFor": 20,
 		"id": "metal:3540528081",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic/Progressive Metal",
+		"country": "Venezuela"
 	},
 	{
 		"myFavorites": false,
@@ -90734,7 +90960,7 @@
 		"currentVocalists": [
 			"Yaya"
 		],
-		"countryCode": null,
+		"countryCode": "MY",
 		"yearStarted": "2007",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90742,7 +90968,9 @@
 		"sister": false,
 		"activeFor": 18,
 		"id": "metal:3540400793",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Death/Gothic Metal",
+		"country": "Malaysia"
 	},
 	{
 		"myFavorites": false,
@@ -90758,7 +90986,7 @@
 		"currentVocalists": [
 			"Liliane Bos"
 		],
-		"countryCode": null,
+		"countryCode": "FR",
 		"yearStarted": "2003",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90766,7 +90994,9 @@
 		"sister": false,
 		"activeFor": 22,
 		"id": "metal:45614",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal",
+		"country": "France"
 	},
 	{
 		"myFavorites": false,
@@ -90782,7 +91012,7 @@
 		"currentVocalists": [
 			"RVK"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "1991",
 		"yearEnded": "1995",
 		"recommendation": "",
@@ -90790,7 +91020,9 @@
 		"sister": false,
 		"activeFor": 4,
 		"id": "metal:21260",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Death Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -90806,7 +91038,7 @@
 		"currentVocalists": [
 			"Tristessa"
 		],
-		"countryCode": null,
+		"countryCode": "GR",
 		"yearStarted": "1997",
 		"yearEnded": "0",
 		"newName": "Lloth",
@@ -90815,7 +91047,9 @@
 		"sister": false,
 		"activeFor": 28,
 		"id": "metal:2233",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal (early); Blackened Melodic Death Metal (later)",
+		"country": "Greece"
 	},
 	{
 		"myFavorites": false,
@@ -90831,7 +91065,7 @@
 		"currentVocalists": [
 			"Hal-Ca"
 		],
-		"countryCode": null,
+		"countryCode": "JP",
 		"yearStarted": "2014",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90839,7 +91073,9 @@
 		"sister": false,
 		"activeFor": 11,
 		"id": "metal:3540434943",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive Heavy Metal",
+		"country": "Japan"
 	},
 	{
 		"myFavorites": false,
@@ -90855,7 +91091,7 @@
 		"currentVocalists": [
 			"Maila-Kaarina Riippa"
 		],
-		"countryCode": null,
+		"countryCode": "BR",
 		"yearStarted": "1993",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90863,7 +91099,9 @@
 		"sister": false,
 		"activeFor": 32,
 		"id": "metal:7961",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Death Metal",
+		"country": "Brazil"
 	},
 	{
 		"myFavorites": false,
@@ -90879,7 +91117,7 @@
 		"currentVocalists": [
 			"Lisa Wallenberg"
 		],
-		"countryCode": null,
+		"countryCode": "SE",
 		"yearStarted": "2011",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90887,7 +91125,9 @@
 		"sister": false,
 		"activeFor": 14,
 		"id": "metal:3540359195",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive/Symphonic Doom Metal",
+		"country": "Sweden"
 	},
 	{
 		"myFavorites": false,
@@ -90903,7 +91143,7 @@
 		"currentVocalists": [
 			"Mika Muro"
 		],
-		"countryCode": null,
+		"countryCode": "JP",
 		"yearStarted": "2009",
 		"yearEnded": "2010",
 		"recommendation": "",
@@ -90911,7 +91151,9 @@
 		"sister": false,
 		"activeFor": 1,
 		"id": "metal:3540472834",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death/Thrash Metal",
+		"country": "Japan"
 	},
 	{
 		"myFavorites": false,
@@ -90927,7 +91169,7 @@
 		"currentVocalists": [
 			"Giulia Pasqualini"
 		],
-		"countryCode": null,
+		"countryCode": "IT",
 		"yearStarted": "2015",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90935,7 +91177,9 @@
 		"sister": false,
 		"activeFor": 10,
 		"id": "metal:3540532872",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Progressive Metal",
+		"country": "Italy"
 	},
 	{
 		"myFavorites": false,
@@ -90951,7 +91195,7 @@
 		"currentVocalists": [
 			"Chiara Manese"
 		],
-		"countryCode": null,
+		"countryCode": "IT",
 		"yearStarted": "2006",
 		"yearEnded": "2015",
 		"recommendation": "",
@@ -90959,7 +91203,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:3540283207",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Power Metal",
+		"country": "Italy"
 	},
 	{
 		"myFavorites": false,
@@ -90975,7 +91221,7 @@
 		"currentVocalists": [
 			"Beyza"
 		],
-		"countryCode": null,
+		"countryCode": "FR",
 		"yearStarted": "2009",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -90983,7 +91229,9 @@
 		"sister": false,
 		"activeFor": 16,
 		"id": "metal:3540350359",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive Metal",
+		"country": "France"
 	},
 	{
 		"myFavorites": false,
@@ -90999,7 +91247,7 @@
 		"currentVocalists": [
 			"Roberta Pappalardo"
 		],
-		"countryCode": null,
+		"countryCode": "IT",
 		"yearStarted": "2014",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91007,7 +91255,9 @@
 		"sister": false,
 		"activeFor": 11,
 		"id": "metal:3540457318",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic/Power Metal",
+		"country": "Italy"
 	},
 	{
 		"myFavorites": false,
@@ -91023,7 +91273,7 @@
 		"currentVocalists": [
 			"Clau Violette"
 		],
-		"countryCode": null,
+		"countryCode": "ES",
 		"yearStarted": "2014",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91031,7 +91281,9 @@
 		"sister": false,
 		"activeFor": 11,
 		"id": "metal:3540443320",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Metalcore",
+		"country": "Spain"
 	},
 	{
 		"myFavorites": false,
@@ -91047,7 +91299,7 @@
 		"currentVocalists": [
 			"Jenocide"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2000",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91055,7 +91307,9 @@
 		"sister": false,
 		"activeFor": 25,
 		"id": "metal:60615",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black/Thrash Metal/Punk",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -91071,7 +91325,7 @@
 		"currentVocalists": [
 			"Pap Lídia"
 		],
-		"countryCode": null,
+		"countryCode": "HU",
 		"yearStarted": "2008",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91079,7 +91333,9 @@
 		"sister": false,
 		"activeFor": 17,
 		"id": "metal:3540345806",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Folk Metal, Acoustic",
+		"country": "Hungary"
 	},
 	{
 		"myFavorites": false,
@@ -91095,7 +91351,7 @@
 		"currentVocalists": [
 			"Akina"
 		],
-		"countryCode": null,
+		"countryCode": "JP",
 		"yearStarted": "2014",
 		"yearEnded": "2021",
 		"recommendation": "",
@@ -91103,7 +91359,9 @@
 		"sister": false,
 		"activeFor": 7,
 		"id": "metal:3540449518",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Dance Pop/Hard Rock (early); Power Metal (later)",
+		"country": "Japan"
 	},
 	{
 		"myFavorites": false,
@@ -91119,7 +91377,7 @@
 		"currentVocalists": [
 			"Jessika Kenney"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2003",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91127,7 +91385,9 @@
 		"sister": false,
 		"activeFor": 22,
 		"id": "metal:25042",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Drone/Doom Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -91143,7 +91403,7 @@
 		"currentVocalists": [
 			"Oxy Hart"
 		],
-		"countryCode": null,
+		"countryCode": "FR",
 		"yearStarted": "2003",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91151,7 +91411,9 @@
 		"sister": false,
 		"activeFor": 22,
 		"id": "metal:115762",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive/Power Metal",
+		"country": "France"
 	},
 	{
 		"myFavorites": false,
@@ -91167,7 +91429,7 @@
 		"currentVocalists": [
 			"Dolores Bueno"
 		],
-		"countryCode": null,
+		"countryCode": "ES",
 		"yearStarted": "2009",
 		"yearEnded": "0",
 		"newName": "Thora",
@@ -91176,7 +91438,9 @@
 		"sister": false,
 		"activeFor": 16,
 		"id": "metal:3540424619",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Spain"
 	},
 	{
 		"myFavorites": false,
@@ -91192,7 +91456,7 @@
 		"currentVocalists": [
 			"Shaina Smartt"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2012",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91200,7 +91464,9 @@
 		"sister": false,
 		"activeFor": 13,
 		"id": "metal:3540369835",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Death/Groove Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -91216,7 +91482,7 @@
 		"currentVocalists": [
 			"Yaryt Mazo"
 		],
-		"countryCode": null,
+		"countryCode": "CO",
 		"yearStarted": "2005",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91224,7 +91490,9 @@
 		"sister": false,
 		"activeFor": 20,
 		"id": "metal:3540262440",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic/Gothic Metal",
+		"country": "Colombia"
 	},
 	{
 		"myFavorites": false,
@@ -91240,7 +91508,7 @@
 		"currentVocalists": [
 			"Firequeen"
 		],
-		"countryCode": null,
+		"countryCode": "MX",
 		"yearStarted": "2006",
 		"yearEnded": "2015",
 		"recommendation": "",
@@ -91248,7 +91516,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:3540371412",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Mexico"
 	},
 	{
 		"myFavorites": false,
@@ -91264,7 +91534,7 @@
 		"currentVocalists": [
 			"Everette"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2004",
 		"yearEnded": "2016",
 		"recommendation": "",
@@ -91272,7 +91542,9 @@
 		"sister": false,
 		"activeFor": 12,
 		"id": "metal:78414",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death/Black Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -91288,7 +91560,7 @@
 		"currentVocalists": [
 			"Milena Kunert"
 		],
-		"countryCode": null,
+		"countryCode": "PL",
 		"yearStarted": "2005",
 		"yearEnded": "2014",
 		"recommendation": "",
@@ -91296,7 +91568,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:56148",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Folk Metal",
+		"country": "Poland"
 	},
 	{
 		"myFavorites": false,
@@ -91312,7 +91586,7 @@
 		"currentVocalists": [
 			"Chloe Puke"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2006",
 		"yearEnded": "2009",
 		"recommendation": "",
@@ -91320,7 +91594,9 @@
 		"sister": false,
 		"activeFor": 3,
 		"id": "metal:121437",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Thrash Metal/Crossover",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -91336,7 +91612,7 @@
 		"currentVocalists": [
 			"Sanatanab"
 		],
-		"countryCode": null,
+		"countryCode": "CO",
 		"yearStarted": "1993",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91344,7 +91620,9 @@
 		"sister": false,
 		"activeFor": 32,
 		"id": "metal:3691",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death/Gothic/Black Metal (early); Black Metal (later)",
+		"country": "Colombia"
 	},
 	{
 		"myFavorites": false,
@@ -91360,7 +91638,7 @@
 		"currentVocalists": [
 			"Stephanie Luzie"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "1997",
 		"yearEnded": "2010",
 		"recommendation": "",
@@ -91368,7 +91646,9 @@
 		"sister": false,
 		"activeFor": 13,
 		"id": "metal:5387",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Gothic/Doom/Death Metal (early); Symphonic Metal (later)",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -91384,7 +91664,7 @@
 		"currentVocalists": [
 			"Josune"
 		],
-		"countryCode": null,
+		"countryCode": "ES",
 		"yearStarted": "2001",
 		"yearEnded": "2011",
 		"recommendation": "",
@@ -91392,7 +91672,9 @@
 		"sister": false,
 		"activeFor": 10,
 		"id": "metal:77423",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy/Thrash Metal",
+		"country": "Spain"
 	},
 	{
 		"myFavorites": false,
@@ -91408,7 +91690,7 @@
 		"currentVocalists": [
 			"Zuzanna"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "2023",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91416,7 +91698,9 @@
 		"sister": false,
 		"activeFor": 2,
 		"id": "metal:3540549630",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Doom/Stoner Metal/Rock",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -91432,7 +91716,7 @@
 		"currentVocalists": [
 			"Andrea Puerta"
 		],
-		"countryCode": null,
+		"countryCode": "CO",
 		"yearStarted": "2009",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91440,7 +91724,9 @@
 		"sister": false,
 		"activeFor": 16,
 		"id": "metal:3540382640",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Metal",
+		"country": "Colombia"
 	},
 	{
 		"myFavorites": false,
@@ -91456,7 +91742,7 @@
 		"currentVocalists": [
 			"Any"
 		],
-		"countryCode": null,
+		"countryCode": "JP",
 		"yearStarted": "2014",
 		"yearEnded": "2017",
 		"recommendation": "",
@@ -91464,7 +91750,9 @@
 		"sister": false,
 		"activeFor": 3,
 		"id": "metal:3540406414",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death/Heavy Metal",
+		"country": "Japan"
 	},
 	{
 		"myFavorites": false,
@@ -91480,7 +91768,7 @@
 		"currentVocalists": [
 			"Andy Schaf"
 		],
-		"countryCode": null,
+		"countryCode": "AT",
 		"yearStarted": "2011",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91488,7 +91776,9 @@
 		"sister": false,
 		"activeFor": 14,
 		"id": "metal:3540376873",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Death Metal",
+		"country": "Austria"
 	},
 	{
 		"myFavorites": false,
@@ -91504,7 +91794,7 @@
 		"currentVocalists": [
 			"Christina Katsamatsa"
 		],
-		"countryCode": null,
+		"countryCode": "GR",
 		"yearStarted": "2007",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91512,7 +91802,9 @@
 		"sister": false,
 		"activeFor": 18,
 		"id": "metal:3540296272",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Epic/Heavy/Folk Metal",
+		"country": "Greece"
 	},
 	{
 		"myFavorites": false,
@@ -91536,7 +91828,9 @@
 		"sister": false,
 		"activeFor": 26,
 		"id": "metal:3540378331",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Folk/Gothic Metal",
+		"country": "Türkiye"
 	},
 	{
 		"myFavorites": false,
@@ -91552,7 +91846,7 @@
 		"currentVocalists": [
 			"Cristina Martínez"
 		],
-		"countryCode": null,
+		"countryCode": "ES",
 		"yearStarted": "2002",
 		"yearEnded": "2008",
 		"recommendation": "",
@@ -91560,7 +91854,9 @@
 		"sister": false,
 		"activeFor": 6,
 		"id": "metal:101329",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Spain"
 	},
 	{
 		"myFavorites": false,
@@ -91576,7 +91872,7 @@
 		"currentVocalists": [
 			"Reina Bojorque"
 		],
-		"countryCode": null,
+		"countryCode": "HN",
 		"yearStarted": "2009",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91584,7 +91880,9 @@
 		"sister": false,
 		"activeFor": 16,
 		"id": "metal:3540501251",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive Power Metal",
+		"country": "Honduras"
 	},
 	{
 		"myFavorites": false,
@@ -91600,7 +91898,7 @@
 		"currentVocalists": [
 			"Raquel"
 		],
-		"countryCode": null,
+		"countryCode": "ES",
 		"yearStarted": "1999",
 		"yearEnded": "0",
 		"newName": "Arenia",
@@ -91609,7 +91907,9 @@
 		"sister": false,
 		"activeFor": 26,
 		"id": "metal:74361",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Spain"
 	},
 	{
 		"myFavorites": false,
@@ -91625,7 +91925,7 @@
 		"currentVocalists": [
 			"Chloé Eigenmann"
 		],
-		"countryCode": null,
+		"countryCode": "CH",
 		"yearStarted": "2022",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91633,7 +91933,9 @@
 		"sister": false,
 		"activeFor": 3,
 		"id": "metal:3540539374",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death Metal",
+		"country": "Switzerland"
 	},
 	{
 		"myFavorites": false,
@@ -91649,7 +91951,7 @@
 		"currentVocalists": [
 			"Bailey Soulliere"
 		],
-		"countryCode": null,
+		"countryCode": "CA",
 		"yearStarted": "2014",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91657,7 +91959,9 @@
 		"sister": false,
 		"activeFor": 11,
 		"id": "metal:3540426249",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy/Power Metal",
+		"country": "Canada"
 	},
 	{
 		"myFavorites": false,
@@ -91673,7 +91977,7 @@
 		"currentVocalists": [
 			"Vanessa"
 		],
-		"countryCode": null,
+		"countryCode": "FR",
 		"yearStarted": "2005",
 		"yearEnded": "2010",
 		"recommendation": "",
@@ -91681,7 +91985,9 @@
 		"sister": false,
 		"activeFor": 5,
 		"id": "metal:3540283457",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic/Gothic Metal",
+		"country": "France"
 	},
 	{
 		"myFavorites": false,
@@ -91697,7 +92003,7 @@
 		"currentVocalists": [
 			"Karla Rodríguez"
 		],
-		"countryCode": null,
+		"countryCode": "PA",
 		"yearStarted": "1999",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91705,7 +92011,9 @@
 		"sister": false,
 		"activeFor": 26,
 		"id": "metal:3540405204",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black/Gothic Metal",
+		"country": "Panama"
 	},
 	{
 		"myFavorites": false,
@@ -91721,7 +92029,7 @@
 		"currentVocalists": [
 			"Bri Elzebub"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2016",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91729,7 +92037,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:3540464524",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Hardcore Punk (early); Black/Thrash Metal (later)",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -91745,7 +92055,7 @@
 		"currentVocalists": [
 			"Jasmin Baggenstos"
 		],
-		"countryCode": null,
+		"countryCode": "CH",
 		"yearStarted": "2009",
 		"yearEnded": "2023",
 		"recommendation": "",
@@ -91753,7 +92063,9 @@
 		"sister": false,
 		"activeFor": 14,
 		"id": "metal:3540401046",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive Metal",
+		"country": "Switzerland"
 	},
 	{
 		"myFavorites": false,
@@ -91769,7 +92081,7 @@
 		"currentVocalists": [
 			"Natalia Vasilyeva"
 		],
-		"countryCode": null,
+		"countryCode": "RU",
 		"yearStarted": "2002",
 		"yearEnded": "2008",
 		"recommendation": "",
@@ -91777,7 +92089,9 @@
 		"sister": false,
 		"activeFor": 6,
 		"id": "metal:42087",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive/Gothic Metal",
+		"country": "Russia"
 	},
 	{
 		"myFavorites": false,
@@ -91793,7 +92107,7 @@
 		"currentVocalists": [
 			"Boudikath"
 		],
-		"countryCode": null,
+		"countryCode": "GB",
 		"yearStarted": "2012",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91801,7 +92115,9 @@
 		"sister": false,
 		"activeFor": 13,
 		"id": "metal:3540400093",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Folk Metal",
+		"country": "United Kingdom"
 	},
 	{
 		"myFavorites": false,
@@ -91817,7 +92133,7 @@
 		"currentVocalists": [
 			"Carla Ávalos"
 		],
-		"countryCode": null,
+		"countryCode": "CL",
 		"yearStarted": "2016",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91825,7 +92141,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:3540447487",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Thrash/Groove/Stoner Metal",
+		"country": "Chile"
 	},
 	{
 		"myFavorites": false,
@@ -91841,7 +92159,7 @@
 		"currentVocalists": [
 			"Tatiana Georgiadi"
 		],
-		"countryCode": null,
+		"countryCode": "RU",
 		"yearStarted": "2006",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91849,7 +92167,9 @@
 		"sister": false,
 		"activeFor": 19,
 		"id": "metal:107583",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal (early); Melodic Death/Black Metal (later)",
+		"country": "Russia"
 	},
 	{
 		"myFavorites": false,
@@ -91865,7 +92185,7 @@
 		"currentVocalists": [
 			"Rew"
 		],
-		"countryCode": null,
+		"countryCode": "JP",
 		"yearStarted": "1984",
 		"yearEnded": "1993",
 		"recommendation": "",
@@ -91873,7 +92193,9 @@
 		"sister": false,
 		"activeFor": 9,
 		"id": "metal:3540265834",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Thrash Metal",
+		"country": "Japan"
 	},
 	{
 		"myFavorites": false,
@@ -91889,7 +92211,7 @@
 		"currentVocalists": [
 			"Mila Moon"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "2002",
 		"yearEnded": "2024",
 		"recommendation": "",
@@ -91897,7 +92219,9 @@
 		"sister": false,
 		"activeFor": 22,
 		"id": "metal:37889",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Black Metal",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -91913,7 +92237,7 @@
 		"currentVocalists": [
 			"Liv Kristine"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "1988",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91921,7 +92245,9 @@
 		"sister": false,
 		"activeFor": 37,
 		"id": "metal:646",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Technical Death Metal (early); Various (mid); Symphonic Death Metal (later)",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -91937,7 +92263,7 @@
 		"currentVocalists": [
 			"Marta Skwirowska"
 		],
-		"countryCode": null,
+		"countryCode": "PL",
 		"yearStarted": "1994",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91945,7 +92271,9 @@
 		"sister": false,
 		"activeFor": 31,
 		"id": "metal:12451",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death Metal",
+		"country": "Poland"
 	},
 	{
 		"myFavorites": false,
@@ -91961,7 +92289,7 @@
 		"currentVocalists": [
 			"Monika Edvardsen"
 		],
-		"countryCode": null,
+		"countryCode": "NO",
 		"yearStarted": "1990",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -91969,7 +92297,9 @@
 		"sister": false,
 		"activeFor": 35,
 		"id": "metal:6126",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Doom/Death Metal (early); Avant-garde/Progressive Metal (later)",
+		"country": "Norway"
 	},
 	{
 		"myFavorites": false,
@@ -91985,7 +92315,7 @@
 		"currentVocalists": [
 			"Vanessa"
 		],
-		"countryCode": null,
+		"countryCode": "DE",
 		"yearStarted": "2005",
 		"yearEnded": "2012",
 		"recommendation": "",
@@ -91993,7 +92323,9 @@
 		"sister": false,
 		"activeFor": 7,
 		"id": "metal:126872",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Folk/Pagan Metal",
+		"country": "Germany"
 	},
 	{
 		"myFavorites": false,
@@ -92009,7 +92341,7 @@
 		"currentVocalists": [
 			"Cecilia Ruiz"
 		],
-		"countryCode": null,
+		"countryCode": "MX",
 		"yearStarted": "1999",
 		"yearEnded": "2003",
 		"recommendation": "",
@@ -92017,7 +92349,9 @@
 		"sister": false,
 		"activeFor": 4,
 		"id": "metal:3540258768",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death/Doom Metal",
+		"country": "Mexico"
 	},
 	{
 		"myFavorites": false,
@@ -92033,7 +92367,7 @@
 		"currentVocalists": [
 			"Vindicaré"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2010",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -92041,7 +92375,9 @@
 		"sister": false,
 		"activeFor": 15,
 		"id": "metal:3540334418",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -92057,7 +92393,7 @@
 		"currentVocalists": [
 			"Angie Lavao"
 		],
-		"countryCode": null,
+		"countryCode": "CO",
 		"yearStarted": "2014",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -92065,7 +92401,9 @@
 		"sister": false,
 		"activeFor": 11,
 		"id": "metal:3540422814",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Death/Heavy Metal",
+		"country": "Colombia"
 	},
 	{
 		"myFavorites": false,
@@ -92081,7 +92419,7 @@
 		"currentVocalists": [
 			"Tiaar"
 		],
-		"countryCode": null,
+		"countryCode": "ID",
 		"yearStarted": "2005",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -92089,7 +92427,9 @@
 		"sister": false,
 		"activeFor": 20,
 		"id": "metal:3540366505",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Gothic Metal",
+		"country": "Indonesia"
 	},
 	{
 		"myFavorites": false,
@@ -92105,7 +92445,7 @@
 		"currentVocalists": [
 			"Lorgar"
 		],
-		"countryCode": null,
+		"countryCode": "GB",
 		"yearStarted": "2017",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -92113,7 +92453,9 @@
 		"sister": false,
 		"activeFor": 8,
 		"id": "metal:3540454710",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black Metal",
+		"country": "United Kingdom"
 	},
 	{
 		"myFavorites": false,
@@ -92137,7 +92479,9 @@
 		"sister": false,
 		"activeFor": 23,
 		"id": "metal:3540259766",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy/Power Metal",
+		"country": "Korea, South"
 	},
 	{
 		"myFavorites": false,
@@ -92153,7 +92497,7 @@
 		"currentVocalists": [
 			"Aki"
 		],
-		"countryCode": null,
+		"countryCode": "JP",
 		"yearStarted": "2009",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -92161,7 +92505,9 @@
 		"sister": false,
 		"activeFor": 16,
 		"id": "metal:3540342233",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Power Metal",
+		"country": "Japan"
 	},
 	{
 		"myFavorites": false,
@@ -92177,7 +92523,7 @@
 		"currentVocalists": [
 			"Jesika Christ"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2011",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -92185,7 +92531,9 @@
 		"sister": false,
 		"activeFor": 14,
 		"id": "metal:3540362004",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Black/Sludge Metal/Crust",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
@@ -92201,7 +92549,7 @@
 		"currentVocalists": [
 			"Gabrielle Borgia"
 		],
-		"countryCode": null,
+		"countryCode": "CA",
 		"yearStarted": "2002",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -92209,7 +92557,9 @@
 		"sister": false,
 		"activeFor": 23,
 		"id": "metal:27517",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive Death Metal",
+		"country": "Canada"
 	},
 	{
 		"myFavorites": false,
@@ -92225,7 +92575,7 @@
 		"currentVocalists": [
 			"Maria Masalskaya"
 		],
-		"countryCode": null,
+		"countryCode": "RU",
 		"yearStarted": "2009",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -92233,7 +92583,9 @@
 		"sister": false,
 		"activeFor": 16,
 		"id": "metal:3540364674",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Gothic/Power Metal",
+		"country": "Russia"
 	},
 	{
 		"myFavorites": false,
@@ -92249,7 +92601,7 @@
 		"currentVocalists": [
 			"Dana Capó"
 		],
-		"countryCode": null,
+		"countryCode": "PR",
 		"yearStarted": "2003",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -92257,7 +92609,9 @@
 		"sister": false,
 		"activeFor": 22,
 		"id": "metal:26150",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy Metal",
+		"country": "Puerto Rico"
 	},
 	{
 		"myFavorites": false,
@@ -92273,7 +92627,7 @@
 		"currentVocalists": [
 			"Lady Morwen"
 		],
-		"countryCode": null,
+		"countryCode": "CL",
 		"yearStarted": "2004",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -92281,7 +92635,9 @@
 		"sister": false,
 		"activeFor": 21,
 		"id": "metal:79181",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Funeral Doom/Death Metal",
+		"country": "Chile"
 	},
 	{
 		"myFavorites": false,
@@ -92297,7 +92653,7 @@
 		"currentVocalists": [
 			"Mayra Alejandra Herrera"
 		],
-		"countryCode": null,
+		"countryCode": "CO",
 		"yearStarted": "1999",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -92305,7 +92661,9 @@
 		"sister": false,
 		"activeFor": 26,
 		"id": "metal:3540416933",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Heavy/Power Metal",
+		"country": "Colombia"
 	},
 	{
 		"myFavorites": false,
@@ -92321,7 +92679,7 @@
 		"currentVocalists": [
 			"NINEdiya"
 		],
-		"countryCode": null,
+		"countryCode": "ID",
 		"yearStarted": "2011",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -92329,7 +92687,9 @@
 		"sister": false,
 		"activeFor": 14,
 		"id": "metal:3540348799",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Gothic Metal",
+		"country": "Indonesia"
 	},
 	{
 		"myFavorites": false,
@@ -92345,7 +92705,7 @@
 		"currentVocalists": [
 			"Karina"
 		],
-		"countryCode": null,
+		"countryCode": "CL",
 		"yearStarted": "2006",
 		"yearEnded": "2019",
 		"recommendation": "",
@@ -92353,7 +92713,9 @@
 		"sister": false,
 		"activeFor": 13,
 		"id": "metal:117572",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Melodic Black Metal",
+		"country": "Chile"
 	},
 	{
 		"myFavorites": false,
@@ -92369,7 +92731,7 @@
 		"currentVocalists": [
 			"Dragica Maletić"
 		],
-		"countryCode": null,
+		"countryCode": "RS",
 		"yearStarted": "2012",
 		"yearEnded": "2023",
 		"recommendation": "",
@@ -92377,7 +92739,9 @@
 		"sister": false,
 		"activeFor": 11,
 		"id": "metal:3540483820",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Symphonic Metal/Rock",
+		"country": "Serbia"
 	},
 	{
 		"myFavorites": false,
@@ -92393,7 +92757,7 @@
 		"currentVocalists": [
 			"Nadezhda Rakutova"
 		],
-		"countryCode": null,
+		"countryCode": "RU",
 		"yearStarted": "2007",
 		"yearEnded": "2017",
 		"recommendation": "",
@@ -92401,7 +92765,9 @@
 		"sister": false,
 		"activeFor": 10,
 		"id": "metal:3540391695",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Progressive Heavy Metal",
+		"country": "Russia"
 	},
 	{
 		"myFavorites": false,
@@ -92417,7 +92783,7 @@
 		"currentVocalists": [
 			"Nicole Cobbler"
 		],
-		"countryCode": null,
+		"countryCode": "US",
 		"yearStarted": "2006",
 		"yearEnded": "0",
 		"recommendation": "",
@@ -92425,7 +92791,9 @@
 		"sister": false,
 		"activeFor": 19,
 		"id": "metal:97270",
-		"numberOfVocalists": 1
+		"numberOfVocalists": 1,
+		"genre": "Blackened Death Metal (early); Industrial Black Metal (later)",
+		"country": "United States"
 	},
 	{
 		"myFavorites": false,
