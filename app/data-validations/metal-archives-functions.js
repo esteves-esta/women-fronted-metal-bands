@@ -124,7 +124,22 @@ async function checkAndUpdate() {
   const alrt = JSON.parse(await readFile(ALREADY_PATH))
   await writeFile(ALREADY_PATH, JSON.stringify([...alrt, ...already], null, "\t"))
 }
-checkAndUpdate()
+// checkAndUpdate()
+
+async function checkAndRemove() {
+  const alreadyOnList = JSON.parse(await readFile(ALREADY_PATH))
+  const other = JSON.parse(await readFile(ACTIVE_PATH))
+  const updated = []
+
+  other.forEach(band => {
+    const found = alreadyOnList.find(item => item.band === band.band)
+    if (found) return
+    updated.push(band)
+  })
+  console.log({ other: other.length, updated: updated.length, alreadyOnList: alreadyOnList.length })
+  await writeFile(ACTIVE_PATH, JSON.stringify(updated, null, "\t"))
+}
+checkAndRemove()
 //  ----------------------------
 // SORT
 
