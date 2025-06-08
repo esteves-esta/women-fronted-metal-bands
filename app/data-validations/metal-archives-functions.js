@@ -139,9 +139,8 @@ async function checkAndRemove() {
   console.log({ other: other.length, updated: updated.length, alreadyOnList: alreadyOnList.length })
   await writeFile(ACTIVE_PATH, JSON.stringify(updated, null, "\t"))
 }
-checkAndRemove()
-//  ----------------------------
-// SORT
+// checkAndRemove()
 
-// get heavy / dark  metal genres
-// melodic genre
+
+// https://dexie.org/docs/Collection/Collection.offset()
+// https://dexie.org/docs/Tutorial/React
