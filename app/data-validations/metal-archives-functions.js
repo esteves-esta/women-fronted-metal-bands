@@ -72,7 +72,7 @@ async function active() {
 // SORT
 
 async function sorting() {
-  const bands = JSON.parse(await readFile(ACTIVE_PATH))
+  const bands = JSON.parse(await readFile(DISBANDED_PATH))
 
   function compareFn(a, b) {
     if (a.activeFor < b.activeFor) {
@@ -86,8 +86,13 @@ async function sorting() {
 
   bands.sort(compareFn)
 
-  await writeFile(ACTIVE_PATH, JSON.stringify(bands, null, "\t"))
+  await writeFile(DISBANDED_PATH, JSON.stringify(bands, null, "\t"))
 }
+
+sorting()
+
+//  ----------------------------
+// SORT
 
 // get heavy / dark  metal genres
 // melodic genre
