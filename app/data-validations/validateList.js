@@ -2,8 +2,7 @@ import { readFile, writeFile } from "./file-helper.js"
 import countryCodes from "./codes.js"
 import { v4 as uuidv4 } from "uuid";
 
-const LIST_PATH = '../list-of-metal-bands/metal-archives-bands.json'
-const NOTENDSTART_PATH = '../list-of-metal-bands/notStartEnd.json'
+const LIST_PATH = '../list-of-metal-bands/list.json'
 const ERRORS_PATH = './errors.json'
 
 const formatYearsActive = (data) => {
@@ -54,31 +53,11 @@ async function validateCountryCodes() {
   await writeFile(ERRORS_PATH, JSON.stringify(errors, null, "\t"))
 }
 
-// async function separateEnds() {
-//   const bands = JSON.parse(await readFile(LIST_PATH))
-//   const errors = []
-//   const ok = []
-//   bands.forEach(band => {
-//     if (band.yearStarted === "N/A") errors.push(band)
-//     else {
-//       ok.push(band)
-//     }
-//   })
-//   console.log({ ok: ok.length, errors: errors.length })
-//   await writeFile(NOTENDSTART_PATH, JSON.stringify(errors, null, "\t"))
-//   await writeFile(LIST_PATH, JSON.stringify(ok, null, "\t"))
-// }
 
 
 async function validate() {
   addDinamicCols()
   validateCountryCodes()
 }
+
 validate()
-// separateEnds()
-
-
-// separete active and endeded
-// get heavy / dark  metal genres
-// melodic genre
-// country International needs to check what country the band operates most
