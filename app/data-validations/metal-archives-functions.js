@@ -89,8 +89,42 @@ async function sorting() {
   await writeFile(DISBANDED_PATH, JSON.stringify(bands, null, "\t"))
 }
 
-sorting()
+// sorting()
 
+//  ----------------------------
+// CHECK IF BAND EXIST ON LIST AND UPDATE LIST
+const LIST_FINAL_PATH = "../list-of-metal-bands/list.json"
+const ALREADY_PATH = "../metal-archives-data-to-analyze/already.json"
+
+async function checkAndUpdate() {
+  const bands = JSON.parse(await readFile(LIST_FINAL_PATH))
+  const other = JSON.parse(await readFile(ACTIVE_PATH))
+  const already = []
+  const updated = []
+
+  bands.forEach(band => {
+    const found = other.find(item => item.band === band.band)
+    if (found) {
+      already.push(found);
+      const genre = band.genre ? band.genre : found.genre
+      updated.push({
+        ...band,
+        metalArchivesId: found.metalArchivesId,
+        yearStarted: found.yearStarted,
+        yearEnded: found.yearEnded,
+        activeFor: found.activeFor,
+        genre,
+      })
+      return
+    }
+    updated.push(band)
+  })
+  console.log({ already: already.length })
+  await writeFile(LIST_FINAL_PATH, JSON.stringify(updated, null, "\t"))
+
+  // await writeFile(ALREADY_PATH, JSON.stringify(already, null, "\t"))
+}
+checkAndUpdate()
 //  ----------------------------
 // SORT
 
