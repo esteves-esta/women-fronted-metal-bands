@@ -7676,5 +7676,61 @@
 		"numberOfVocalists": 1,
 		"id": "band:8329714",
 		"activeFor": 6
+	},
+	{
+		"myFavorites": false,
+		"growling": 3,
+		"deezerId": null,
+		"metalArchivesId": "9255",
+		"deezerRecommendationId": null,
+		"band": "Funerus",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Jill Lisson"
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 1990,
+		"yearEnded": 2022,
+		"recommendation": "",
+		"links": "https://metalhit.bandcamp.com/album/festering-earth",
+		"sister": false,
+		"activeFor": 32,
+		"id": "metal:9255",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Death Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 1,
+		"deezerId": 391002,
+		"metalArchivesId": "1662",
+		"deezerRecommendationId": 83052542,
+		"band": "Détente",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Tiina Teal"
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 1984,
+		"yearEnded": 2025,
+		"recommendation": "Losers",
+		"links": "",
+		"sister": false,
+		"activeFor": 41,
+		"id": "band:391002",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Thrash/Speed Metal"
+		]
 	}
 ]
