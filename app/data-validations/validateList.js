@@ -76,3 +76,9 @@ async function validate() {
 }
 validate()
 // separateEnds()
+
+
+// separete active and endeded
+// get heavy / dark  metal genres
+// melodic genre
+// country International needs to check what country the band operates most

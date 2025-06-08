@@ -534,7 +534,8 @@
 		"id": "metal:109763",
 		"numberOfVocalists": 3,
 		"genre": [
-			"Rock (early)", "Heavy Metal (later)"
+			"Rock (early)",
+			"Heavy Metal (later)"
 		]
 	},
 	{
@@ -663,8 +664,8 @@
 		"currentVocalists": [
 			"Umay Çavuş"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2000,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -870,7 +871,8 @@
 		"id": "metal:3540320647",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal/Crust (early)", "Death Metal (later)"
+			"Death Metal/Crust (early)",
+			"Death Metal (later)"
 		]
 	},
 	{
@@ -1384,7 +1386,9 @@
 		"id": "metal:112742",
 		"numberOfVocalists": 3,
 		"genre": [
-			"Death Metal (early)", "Raw Experimental/Industrial Black Metal (mid)", "Funeral Death/Doom Metal (later)"
+			"Death Metal (early)",
+			"Raw Experimental/Industrial Black Metal (mid)",
+			"Funeral Death/Doom Metal (later)"
 		]
 	},
 	{
@@ -1461,7 +1465,7 @@
 			"Stáňa Novotná"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2001,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -1499,7 +1503,8 @@
 		"id": "metal:28750",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Death Metal (early)", "Death Metal (later)"
+			"Symphonic Death Metal (early)",
+			"Death Metal (later)"
 		]
 	},
 	{
@@ -1782,7 +1787,9 @@
 		"id": "metal:68489",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Death/Doom Metal (early)", "Industrial/Gothic Metal (mid)", "Melodic Metalcore (later)"
+			"Melodic Death/Doom Metal (early)",
+			"Industrial/Gothic Metal (mid)",
+			"Melodic Metalcore (later)"
 		]
 	},
 	{
@@ -1951,7 +1958,8 @@
 		"id": "metal:41",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Black/Thrash Metal (later)"
+			"Death Metal (early)",
+			"Black/Thrash Metal (later)"
 		]
 	},
 	{
@@ -2111,7 +2119,7 @@
 			"Bára Horská"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2012,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -2476,8 +2484,8 @@
 		"currentVocalists": [
 			"Lucy Ferra"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2017,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -2978,7 +2986,8 @@
 		"id": "metal:2299",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black/Death Metal (early)", "Grindcore (later)"
+			"Black/Death Metal (early)",
+			"Grindcore (later)"
 		]
 	},
 	{
@@ -4239,7 +4248,8 @@
 		"id": "metal:61520",
 		"numberOfVocalists": 2,
 		"genre": [
-			"Gothic/Doom Metal (early)", "Progressive Metal (later)"
+			"Gothic/Doom Metal (early)",
+			"Progressive Metal (later)"
 		]
 	},
 	{
@@ -4696,7 +4706,8 @@
 		"id": "metal:3540349778",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Dark Ambient (early)", "Doom/Post-Metal (later)"
+			"Dark Ambient (early)",
+			"Doom/Post-Metal (later)"
 		]
 	},
 	{
@@ -4779,7 +4790,8 @@
 		"id": "metal:3184",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Black/Gothic Metal (early/later)", "Electronic/Industrial (mid)"
+			"Symphonic Black/Gothic Metal (early/later)",
+			"Electronic/Industrial (mid)"
 		]
 	},
 	{
@@ -4939,7 +4951,7 @@
 			"Kateřina Hajdinová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2009,
 		"yearEnded": 2023,
 		"recommendation": "",
@@ -4949,7 +4961,8 @@
 		"id": "metal:3540371920",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Doom Metal (early)", "Death/Black/Heavy Metal (later)"
+			"Doom Metal (early)",
+			"Death/Black/Heavy Metal (later)"
 		]
 	},
 	{
@@ -5564,7 +5577,7 @@
 			"Ania Neuwirthová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1999,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -5706,7 +5719,7 @@
 			"Johana Teryngerová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1995,
 		"yearEnded": 2015,
 		"recommendation": "",
@@ -6702,7 +6715,8 @@
 		"id": "metal:128507",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy Metal (early)", "Pop Rock (later)"
+			"Heavy Metal (early)",
+			"Pop Rock (later)"
 		]
 	},
 	{
@@ -6749,7 +6763,7 @@
 			"Nikolette Olšáková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2013,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -6805,7 +6819,7 @@
 			"Andrea Michálková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2010,
 		"yearEnded": 2019,
 		"recommendation": "",
@@ -7535,7 +7549,7 @@
 			"Jan Jeremjáš Šimon"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1993,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -7675,7 +7689,7 @@
 			"Klára Štumarová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1995,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -8208,7 +8222,7 @@
 			"Jan Jeremjáš Šimon"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1993,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -8348,7 +8362,7 @@
 			"Klára Štumarová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1995,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -8695,7 +8709,8 @@
 		"id": "metal:3540354540",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Drone/Doom Metal/Crust (early)", "Black/Death Metal/Crust (later)"
+			"Drone/Doom Metal/Crust (early)",
+			"Black/Death Metal/Crust (later)"
 		]
 	},
 	{
@@ -8723,7 +8738,8 @@
 		"id": "metal:58526",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Power/Thrash Metal (early)", "Progressive/Post-Rock (later)"
+			"Power/Thrash Metal (early)",
+			"Progressive/Post-Rock (later)"
 		]
 	},
 	{
@@ -8863,7 +8879,8 @@
 		"id": "metal:3540301744",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black Metal/Shoegaze (early)", "Post-Rock/Shoegaze/Experimental (later)"
+			"Black Metal/Shoegaze (early)",
+			"Post-Rock/Shoegaze/Experimental (later)"
 		]
 	},
 	{
@@ -10095,7 +10112,8 @@
 		"id": "metal:3540443084",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy Metal (early)", "Heavy Metal/Hard Rock (later)"
+			"Heavy Metal (early)",
+			"Heavy Metal/Hard Rock (later)"
 		]
 	},
 	{
@@ -10795,7 +10813,8 @@
 		"id": "metal:1283",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Metalcore/Melodic Death Metal (early)", "Metalcore/Melodic Hard Rock (later)"
+			"Metalcore/Melodic Death Metal (early)",
+			"Metalcore/Melodic Hard Rock (later)"
 		]
 	},
 	{
@@ -10907,7 +10926,8 @@
 		"id": "metal:3540513525",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Thrash Metal (early)", "Industrial Rock (later)"
+			"Thrash Metal (early)",
+			"Industrial Rock (later)"
 		]
 	},
 	{
@@ -11232,8 +11252,8 @@
 		"currentVocalists": [
 			"Duygu Şahin"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2001,
 		"yearEnded": 2009,
 		"recommendation": "",
@@ -11747,7 +11767,8 @@
 		"id": "metal:67542",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Thrash Metal (early)", "Gothic Rock/Metal (later)"
+			"Thrash Metal (early)",
+			"Gothic Rock/Metal (later)"
 		]
 	},
 	{
@@ -11803,7 +11824,8 @@
 		"id": "metal:98508",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic Metal (early)", "Heavy Metal/Rock (later)"
+			"Gothic Metal (early)",
+			"Heavy Metal/Rock (later)"
 		]
 	},
 	{
@@ -12084,7 +12106,8 @@
 		"id": "metal:15364",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death/Thrash Metal (early)", "Folk/Power Metal (later)"
+			"Death/Thrash Metal (early)",
+			"Folk/Power Metal (later)"
 		]
 	},
 	{
@@ -12476,7 +12499,8 @@
 		"id": "metal:3540468922",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Electronic/Gothic Rock (early)", "Power Metal (later)"
+			"Electronic/Gothic Rock (early)",
+			"Power Metal (later)"
 		]
 	},
 	{
@@ -12700,7 +12724,8 @@
 		"id": "metal:1",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Progressive/Death/Doom Metal (early)", "Melodic Heavy Metal/Rock (later)"
+			"Progressive/Death/Doom Metal (early)",
+			"Melodic Heavy Metal/Rock (later)"
 		]
 	},
 	{
@@ -13279,7 +13304,7 @@
 			"Veronika Zelníčková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2011,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -13569,7 +13594,8 @@
 		"id": "metal:503",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Doom/Death Metal (early)", "Progressive/Atmospheric Rock (later)"
+			"Doom/Death Metal (early)",
+			"Progressive/Atmospheric Rock (later)"
 		]
 	},
 	{
@@ -13878,7 +13904,8 @@
 		"id": "metal:6243",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Black Metal (early)", "Doom/Gothic Metal (later)"
+			"Symphonic Black Metal (early)",
+			"Doom/Gothic Metal (later)"
 		]
 	},
 	{
@@ -14215,7 +14242,8 @@
 		"id": "metal:3540320308",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Gothic Metal (early)", "Industrial/Alternative Rock (later)"
+			"Symphonic Gothic Metal (early)",
+			"Industrial/Alternative Rock (later)"
 		]
 	},
 	{
@@ -14495,7 +14523,8 @@
 		"id": "metal:3540420252",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death/Groove Metal (early)", "D-Beat/Hardcore (later)"
+			"Death/Groove Metal (early)",
+			"D-Beat/Hardcore (later)"
 		]
 	},
 	{
@@ -14551,7 +14580,8 @@
 		"id": "metal:35760",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Folk Metal (early)", "Folk Metal/Hardcore (later)"
+			"Folk Metal (early)",
+			"Folk Metal/Hardcore (later)"
 		]
 	},
 	{
@@ -14803,7 +14833,8 @@
 		"id": "metal:3540370136",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Power Metal (early)", "Progressive/Power Metal (later)"
+			"Symphonic Power Metal (early)",
+			"Progressive/Power Metal (later)"
 		]
 	},
 	{
@@ -15056,7 +15087,8 @@
 		"id": "metal:3540341082",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic Metal (early)", "Alternative/Industrial Rock (later)"
+			"Gothic Metal (early)",
+			"Alternative/Industrial Rock (later)"
 		]
 	},
 	{
@@ -15423,7 +15455,8 @@
 		"id": "metal:3540305771",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Folk/Death Metal (early)", "Folk Metal/Djent (later)"
+			"Folk/Death Metal (early)",
+			"Folk Metal/Djent (later)"
 		]
 	},
 	{
@@ -15536,7 +15569,8 @@
 		"id": "metal:3540359741",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Pagan Black Metal (early)", "Melodic Death/Pagan Metal (later)"
+			"Pagan Black Metal (early)",
+			"Melodic Death/Pagan Metal (later)"
 		]
 	},
 	{
@@ -15564,7 +15598,8 @@
 		"id": "metal:3540556486",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy/Thrash Metal (early)", "Rock/Folk/Neoclassical (later)"
+			"Heavy/Thrash Metal (early)",
+			"Rock/Folk/Neoclassical (later)"
 		]
 	},
 	{
@@ -16209,7 +16244,8 @@
 		"id": "metal:3540390725",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy Metal (early)", "Alternative Rock (later)"
+			"Heavy Metal (early)",
+			"Alternative Rock (later)"
 		]
 	},
 	{
@@ -16293,7 +16329,8 @@
 		"id": "metal:3540335166",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Folk Rock (early)", "Folk Metal (later)"
+			"Folk Rock (early)",
+			"Folk Metal (later)"
 		]
 	},
 	{
@@ -17666,7 +17703,8 @@
 		"id": "metal:3540385484",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic/Power Metal (early)", "Symphonic/Folk Metal (later)"
+			"Symphonic/Power Metal (early)",
+			"Symphonic/Folk Metal (later)"
 		]
 	},
 	{
@@ -17750,7 +17788,8 @@
 		"id": "metal:3540327874",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Black/Folk Metal (early)", "Melodic Death/Folk Metal (later)"
+			"Melodic Black/Folk Metal (early)",
+			"Melodic Death/Folk Metal (later)"
 		]
 	},
 	{
@@ -17778,7 +17817,8 @@
 		"id": "metal:3540369135",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Thrash Metal (early)", "Melodic Death Metal (later)"
+			"Thrash Metal (early)",
+			"Melodic Death Metal (later)"
 		]
 	},
 	{
@@ -18002,7 +18042,8 @@
 		"id": "metal:3540413405",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Rock (early)", "Symphonic Power Metal (later)"
+			"Rock (early)",
+			"Symphonic Power Metal (later)"
 		]
 	},
 	{
@@ -18366,7 +18407,9 @@
 		"id": "metal:62276",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Doom Metal (early)", "Melodic Progressive Metal (mid)", "Progressive Rock with Jazz influences (later)"
+			"Doom Metal (early)",
+			"Melodic Progressive Metal (mid)",
+			"Progressive Rock with Jazz influences (later)"
 		]
 	},
 	{
@@ -18618,7 +18661,8 @@
 		"id": "metal:55263",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Doom/Death Metal (early)", "Darkwave (later)"
+			"Gothic/Doom/Death Metal (early)",
+			"Darkwave (later)"
 		]
 	},
 	{
@@ -19429,7 +19473,8 @@
 		"id": "metal:3540304059",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black/Thrash Metal (early)", "Blackened Heavy/Power Metal (later)"
+			"Black/Thrash Metal (early)",
+			"Blackened Heavy/Power Metal (later)"
 		]
 	},
 	{
@@ -19541,7 +19586,8 @@
 		"id": "metal:3540476115",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black/Doom Metal (early)", "Melodic Black/Folk Metal (later)"
+			"Black/Doom Metal (early)",
+			"Melodic Black/Folk Metal (later)"
 		]
 	},
 	{
@@ -20065,7 +20111,7 @@
 			"Paulee Kayzer"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2010,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -20552,7 +20598,8 @@
 		"id": "metal:5203",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Melodic Death/Folk/Power Metal (later)"
+			"Death Metal (early)",
+			"Melodic Death/Folk/Power Metal (later)"
 		]
 	},
 	{
@@ -21186,7 +21233,7 @@
 			"Eva Markvartová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1999,
 		"yearEnded": 0,
 		"newName": "Oxagon",
@@ -21701,7 +21748,8 @@
 		"id": "metal:8659",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Black/Gothic Metal (later)"
+			"Death Metal (early)",
+			"Black/Gothic Metal (later)"
 		]
 	},
 	{
@@ -21775,7 +21823,7 @@
 			"Veronika \"Véra\" Seidlová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1994,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -22252,8 +22300,8 @@
 		"currentVocalists": [
 			"Özge Özkan"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 1997,
 		"yearEnded": 2011,
 		"recommendation": "",
@@ -22457,7 +22505,8 @@
 		"id": "metal:1660",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Death/Doom Metal (early)", "Neoclassical Power Metal (later)"
+			"Gothic/Death/Doom Metal (early)",
+			"Neoclassical Power Metal (later)"
 		]
 	},
 	{
@@ -23201,8 +23250,8 @@
 		"currentVocalists": [
 			"Şenay Lambaoğlu"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2004,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -24555,7 +24604,8 @@
 		"id": "metal:3540477507",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Thrash Metal (early)", "Heavy Metal (later)"
+			"Thrash Metal (early)",
+			"Heavy Metal (later)"
 		]
 	},
 	{
@@ -26233,7 +26283,8 @@
 		"id": "metal:23673",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Epic Power Metal (early)", "Heavy/Power/Doom Metal (later)"
+			"Epic Power Metal (early)",
+			"Heavy/Power/Doom Metal (later)"
 		]
 	},
 	{
@@ -26765,7 +26816,8 @@
 		"id": "metal:3540345709",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Groove/Nu-Metal (later)"
+			"Death Metal (early)",
+			"Groove/Nu-Metal (later)"
 		]
 	},
 	{
@@ -26878,7 +26930,8 @@
 		"id": "metal:3540459284",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Post-Punk/Deathrock (early)", "Stoner/Doom/Gothic Metal (later)"
+			"Post-Punk/Deathrock (early)",
+			"Stoner/Doom/Gothic Metal (later)"
 		]
 	},
 	{
@@ -26934,7 +26987,8 @@
 		"id": "metal:3540371762",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Death/Black Metal (early)", "Symphonic Rock/Death Metal (later)"
+			"Melodic Death/Black Metal (early)",
+			"Symphonic Rock/Death Metal (later)"
 		]
 	},
 	{
@@ -27064,7 +27118,7 @@
 			"Zuzana Zamazalova Klementova"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2013,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -27746,7 +27800,8 @@
 		"id": "metal:3540410777",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Heavy Metal (early)", "Nu-Metal/Gothic Rock (later)"
+			"Melodic Heavy Metal (early)",
+			"Nu-Metal/Gothic Rock (later)"
 		]
 	},
 	{
@@ -27932,7 +27987,7 @@
 			"Ľuba"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2011,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -27998,7 +28053,8 @@
 		"id": "metal:98990",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Hardcore (early)", "Power Metal (later)"
+			"Hardcore (early)",
+			"Power Metal (later)"
 		]
 	},
 	{
@@ -28026,7 +28082,8 @@
 		"id": "metal:112709",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Power Metal (early)", "Melodic Death Metal (later)"
+			"Power Metal (early)",
+			"Melodic Death Metal (later)"
 		]
 	},
 	{
@@ -28866,7 +28923,9 @@
 		"id": "metal:24",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Symphonic Black Metal (mid)", "Extreme Gothic Metal (later)"
+			"Death Metal (early)",
+			"Symphonic Black Metal (mid)",
+			"Extreme Gothic Metal (later)"
 		]
 	},
 	{
@@ -29421,7 +29480,8 @@
 		"id": "metal:128349",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Black/Symphonic/Gothic Metal (early)", "Folk/Gothic Metal (later)"
+			"Melodic Black/Symphonic/Gothic Metal (early)",
+			"Folk/Gothic Metal (later)"
 		]
 	},
 	{
@@ -30205,7 +30265,8 @@
 		"id": "metal:3540374527",
 		"numberOfVocalists": 1,
 		"genre": [
-			"NWOBHM/Heavy Metal (early)", "Alternative Rock (later)"
+			"NWOBHM/Heavy Metal (early)",
+			"Alternative Rock (later)"
 		]
 	},
 	{
@@ -30233,7 +30294,8 @@
 		"id": "metal:8557",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death/Thrash Metal (early)", "Hardcore/Metalcore (later)"
+			"Death/Thrash Metal (early)",
+			"Hardcore/Metalcore (later)"
 		]
 	},
 	{
@@ -30840,7 +30902,7 @@
 			"Petra Jadrná"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2008,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -30850,7 +30912,8 @@
 		"id": "metal:3540323299",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Folk/Melodic Groove Metal (early)", "Folk Metalcore (later)"
+			"Folk/Melodic Groove Metal (early)",
+			"Folk Metalcore (later)"
 		]
 	},
 	{
@@ -31118,7 +31181,7 @@
 			"Anita Neckárová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1991,
 		"yearEnded": 0,
 		"newName": "Cruel",
@@ -31213,7 +31276,8 @@
 		"id": "metal:41307",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Symphonic Power Metal (later)"
+			"Death Metal (early)",
+			"Symphonic Power Metal (later)"
 		]
 	},
 	{
@@ -31372,8 +31436,8 @@
 		"currentVocalists": [
 			"Binna"
 		],
-		"country": "Korea, South",
-		"countryCode": null,
+		"country": "South Korea",
+		"countryCode": "KR",
 		"yearStarted": 1989,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -31635,7 +31699,8 @@
 		"id": "metal:12672",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Thrash/Death Metal (early)", "Power/Thrash Metal (later)"
+			"Thrash/Death Metal (early)",
+			"Power/Thrash Metal (later)"
 		]
 	},
 	{
@@ -32111,7 +32176,8 @@
 		"id": "metal:14572",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Hard Rock/AOR (early)", "Power Metal (later)"
+			"Melodic Hard Rock/AOR (early)",
+			"Power Metal (later)"
 		]
 	},
 	{
@@ -32785,7 +32851,8 @@
 		"id": "metal:3540409064",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic/Doom Metal (early)", "Progressive Metal (later)"
+			"Symphonic/Doom Metal (early)",
+			"Progressive Metal (later)"
 		]
 	},
 	{
@@ -32953,7 +33020,9 @@
 		"id": "metal:91",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Thrash Metal (early)", "Progressive Death Metal/Fusion (mid)", "Progressive Rock (later)"
+			"Thrash Metal (early)",
+			"Progressive Death Metal/Fusion (mid)",
+			"Progressive Rock (later)"
 		]
 	},
 	{
@@ -33136,8 +33205,8 @@
 		"currentVocalists": [
 			"Ekin Demirci"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2005,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -33175,7 +33244,8 @@
 		"id": "metal:92597",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Power/Speed Metal (early)", "Gothic/Pop Rock (later)"
+			"Power/Speed Metal (early)",
+			"Gothic/Pop Rock (later)"
 		]
 	},
 	{
@@ -33259,7 +33329,8 @@
 		"id": "metal:3540266854",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy Metal/Hard Rock (early)", "Melodic Death Metal (later)"
+			"Heavy Metal/Hard Rock (early)",
+			"Melodic Death Metal (later)"
 		]
 	},
 	{
@@ -33399,7 +33470,8 @@
 		"id": "metal:3540393170",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Industrial/Electronic Metal (early)", "Symphonic Black/Gothic Metal (later)"
+			"Industrial/Electronic Metal (early)",
+			"Symphonic Black/Gothic Metal (later)"
 		]
 	},
 	{
@@ -33455,7 +33527,8 @@
 		"id": "metal:3540293312",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Power Metal (early)", "Symphonic Black/Death Metal (later)"
+			"Symphonic Power Metal (early)",
+			"Symphonic Black/Death Metal (later)"
 		]
 	},
 	{
@@ -33567,7 +33640,8 @@
 		"id": "metal:23500",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Doom Metal (early)", "Gothic Metal/Rock (later)"
+			"Gothic/Doom Metal (early)",
+			"Gothic Metal/Rock (later)"
 		]
 	},
 	{
@@ -34579,7 +34653,8 @@
 		"id": "metal:41780",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy Metal (early)", "Progressive Metal (later)"
+			"Heavy Metal (early)",
+			"Progressive Metal (later)"
 		]
 	},
 	{
@@ -34625,7 +34700,7 @@
 			"Lucie Avramová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2004,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -34804,7 +34879,8 @@
 		"id": "metal:3540488833",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy Metal (early)", "Gothic/Melodic Death Metal/Metalcore (later)"
+			"Heavy Metal (early)",
+			"Gothic/Melodic Death Metal/Metalcore (later)"
 		]
 	},
 	{
@@ -36235,7 +36311,8 @@
 		"id": "metal:31976",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Dark Ambient/Black Metal (early)", "Dark Ambient/Industrial (later)"
+			"Dark Ambient/Black Metal (early)",
+			"Dark Ambient/Industrial (later)"
 		]
 	},
 	{
@@ -36533,7 +36610,7 @@
 			"Dru"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1997,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -36543,7 +36620,8 @@
 		"id": "metal:118035",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black Metal (early)", "Black/Death Metal (later)"
+			"Black Metal (early)",
+			"Black/Death Metal (later)"
 		]
 	},
 	{
@@ -36683,7 +36761,8 @@
 		"id": "metal:3540315189",
 		"numberOfVocalists": 1,
 		"genre": [
-			"EBM/Darkwave/Acoustic (early)", "Black Metal/Ambient (later)"
+			"EBM/Darkwave/Acoustic (early)",
+			"Black Metal/Ambient (later)"
 		]
 	},
 	{
@@ -37765,7 +37844,7 @@
 			"Mirka Rýznarová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2009,
 		"yearEnded": 2022,
 		"recommendation": "",
@@ -37775,7 +37854,8 @@
 		"id": "metal:3540370656",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black/Thrash Metal (early)", "Death/Thrash Metal (later)"
+			"Black/Thrash Metal (early)",
+			"Death/Thrash Metal (later)"
 		]
 	},
 	{
@@ -38248,7 +38328,8 @@
 		"id": "metal:3540444887",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Death/Thrash Metal (early)", "Melodic Black/Death Metal (later)"
+			"Melodic Death/Thrash Metal (early)",
+			"Melodic Black/Death Metal (later)"
 		]
 	},
 	{
@@ -38528,7 +38609,8 @@
 		"id": "metal:3540387595",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Doom Metal (early)", "Stoner Rock/Grunge (later)"
+			"Doom Metal (early)",
+			"Stoner Rock/Grunge (later)"
 		]
 	},
 	{
@@ -38742,7 +38824,7 @@
 			"Lucy Strike"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1993,
 		"yearEnded": 2005,
 		"recommendation": "",
@@ -38780,7 +38862,9 @@
 		"id": "metal:1111",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy/Doom Metal (early)", "Industrial Metal (mid)", "Heavy Metal (later)"
+			"Heavy/Doom Metal (early)",
+			"Industrial Metal (mid)",
+			"Heavy Metal (later)"
 		]
 	},
 	{
@@ -39760,7 +39844,8 @@
 		"id": "metal:45939",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Progressive/Power Metal (early)", "Pop/Rock (later)"
+			"Progressive/Power Metal (early)",
+			"Pop/Rock (later)"
 		]
 	},
 	{
@@ -40012,7 +40097,8 @@
 		"id": "metal:3540321675",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Metalcore/Deathcore (later)"
+			"Death Metal (early)",
+			"Metalcore/Deathcore (later)"
 		]
 	},
 	{
@@ -40208,7 +40294,8 @@
 		"id": "metal:9466",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic Metal (early)", "Alternative Rock/Metal (later)"
+			"Gothic Metal (early)",
+			"Alternative Rock/Metal (later)"
 		]
 	},
 	{
@@ -40535,7 +40622,7 @@
 			"Monika \"Monča\" Kafková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2004,
 		"yearEnded": 2016,
 		"recommendation": "",
@@ -40703,7 +40790,7 @@
 			"Tanyya"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1996,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -40713,7 +40800,8 @@
 		"id": "metal:8716",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Doom/Death Metal (early)", "Avant-garde Metal (later)"
+			"Gothic/Doom/Death Metal (early)",
+			"Avant-garde Metal (later)"
 		]
 	},
 	{
@@ -40853,7 +40941,8 @@
 		"id": "metal:28876",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Black Metal (early)", "Gothic Metal (later)"
+			"Symphonic Black Metal (early)",
+			"Gothic Metal (later)"
 		]
 	},
 	{
@@ -41134,7 +41223,8 @@
 		"id": "metal:8293",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Metal (early)", "Progressive Death/Black Metal (later)"
+			"Symphonic Metal (early)",
+			"Progressive Death/Black Metal (later)"
 		]
 	},
 	{
@@ -41274,7 +41364,8 @@
 		"id": "metal:3540408117",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Heavy Metal (early)", "Symphonic Metal (later)"
+			"Melodic Heavy Metal (early)",
+			"Symphonic Metal (later)"
 		]
 	},
 	{
@@ -41961,8 +42052,8 @@
 		"currentVocalists": [
 			"Hilal Türker"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2005,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -42216,7 +42307,7 @@
 			"Zuzana Janiššová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2003,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -42974,7 +43065,7 @@
 			"Sabina Křováková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1993,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -42984,7 +43075,9 @@
 		"id": "metal:3540417684",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Punk (early)", "Thrash Metal/Crossover (mid)", "Hard Rock/Heavy Metal (later)"
+			"Punk (early)",
+			"Thrash Metal/Crossover (mid)",
+			"Hard Rock/Heavy Metal (later)"
 		]
 	},
 	{
@@ -43069,7 +43162,8 @@
 		"id": "metal:3540431189",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Speed/Thrash Metal (early)", "Heavy Metal (later)"
+			"Speed/Thrash Metal (early)",
+			"Heavy Metal (later)"
 		]
 	},
 	{
@@ -43379,7 +43473,8 @@
 		"id": "metal:3540459242",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic Rock/Experimental (early)", "Doom/Avant-garde Metal (later)"
+			"Gothic Rock/Experimental (early)",
+			"Doom/Avant-garde Metal (later)"
 		]
 	},
 	{
@@ -43435,7 +43530,8 @@
 		"id": "metal:99896",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black Metal/Ambient (early)", "Black/Death Metal (later)"
+			"Black Metal/Ambient (early)",
+			"Black/Death Metal (later)"
 		]
 	},
 	{
@@ -43884,7 +43980,8 @@
 		"id": "metal:3540314953",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Doom Metal (early)", "Stoner Metal (later)"
+			"Gothic/Doom Metal (early)",
+			"Stoner Metal (later)"
 		]
 	},
 	{
@@ -43985,8 +44082,8 @@
 		"currentVocalists": [
 			"Gülden"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 1998,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -43996,7 +44093,8 @@
 		"id": "metal:59211",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black Metal (early)", "Symphonic Black/Extreme Metal (later)"
+			"Black Metal (early)",
+			"Symphonic Black/Extreme Metal (later)"
 		]
 	},
 	{
@@ -44164,7 +44262,8 @@
 		"id": "metal:25187",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Black Metal (early)", "Melodic Death Metal (later)"
+			"Symphonic Black Metal (early)",
+			"Melodic Death Metal (later)"
 		]
 	},
 	{
@@ -44574,7 +44673,7 @@
 			"Dája"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2012,
 		"yearEnded": 2022,
 		"recommendation": "",
@@ -44948,7 +45047,8 @@
 		"id": "metal:7560",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Progressive Death/Doom Metal (early)", "Progressive Metal (later)"
+			"Progressive Death/Doom Metal (early)",
+			"Progressive Metal (later)"
 		]
 	},
 	{
@@ -45452,7 +45552,8 @@
 		"id": "metal:2957",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Black/Doom Metal (early)", "Neoclassical/Gothic Rock (later)"
+			"Gothic/Black/Doom Metal (early)",
+			"Neoclassical/Gothic Rock (later)"
 		]
 	},
 	{
@@ -45536,7 +45637,8 @@
 		"id": "metal:765",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic/Melodic Black Metal (early)", "Melodic Black/Gothic Metal (later)"
+			"Symphonic/Melodic Black Metal (early)",
+			"Melodic Black/Gothic Metal (later)"
 		]
 	},
 	{
@@ -46502,7 +46604,7 @@
 			"Zuzana Martincová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1999,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -47707,7 +47809,7 @@
 			"Kristýna \"Týna\" Pavlačková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2008,
 		"yearEnded": 2014,
 		"recommendation": "",
@@ -48026,7 +48128,8 @@
 		"id": "metal:12367",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Industrial/Melodic Black Metal (early)", "Metalcore (later)"
+			"Industrial/Melodic Black Metal (early)",
+			"Metalcore (later)"
 		]
 	},
 	{
@@ -48528,7 +48631,8 @@
 		"id": "metal:3540341029",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Doom Metal (early)", "Epic Gothic/Death Metal (later)"
+			"Gothic/Doom Metal (early)",
+			"Epic Gothic/Death Metal (later)"
 		]
 	},
 	{
@@ -48612,7 +48716,8 @@
 		"id": "metal:10037",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black/Doom Metal (early)", "Gothic Metal (later)"
+			"Black/Doom Metal (early)",
+			"Gothic Metal (later)"
 		]
 	},
 	{
@@ -48853,8 +48958,8 @@
 		"currentVocalists": [
 			"Başak Ylva"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2009,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -49060,7 +49165,8 @@
 		"id": "metal:3540286392",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Doom Metal (early)", "Progressive Metal (later)"
+			"Gothic/Doom Metal (early)",
+			"Progressive Metal (later)"
 		]
 	},
 	{
@@ -49553,8 +49659,8 @@
 		"currentVocalists": [
 			"Marija Krstevska"
 		],
-		"country": "North Macedonia",
-		"countryCode": null,
+		"country": "Macedonia",
+		"countryCode": "MK",
 		"yearStarted": 2015,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -50180,7 +50286,8 @@
 		"id": "metal:56102",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy Metal with Gothic influences (early)", "Symphonic/Progressive Rock/Metal (later)"
+			"Heavy Metal with Gothic influences (early)",
+			"Symphonic/Progressive Rock/Metal (later)"
 		]
 	},
 	{
@@ -50646,8 +50753,7 @@
 			"Zuzana Jelínková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
-		"yearStarted": 1995,
+		"countryCode": "CZ",
 		"yearEnded": 0,
 		"recommendation": "",
 		"links": "",
@@ -50656,7 +50762,8 @@
 		"id": "metal:3926",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Atmospheric Gothic/Doom Metal (early)", "Alternative Rock (later)"
+			"Atmospheric Gothic/Doom Metal (early)",
+			"Alternative Rock (later)"
 		]
 	},
 	{
@@ -50880,7 +50987,8 @@
 		"id": "metal:4201",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Atmospheric Doom/Death Metal (early)", "Melodic Death Metal (later)"
+			"Atmospheric Doom/Death Metal (early)",
+			"Melodic Death Metal (later)"
 		]
 	},
 	{
@@ -52717,8 +52825,8 @@
 		"currentVocalists": [
 			"Pınar Methson"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2003,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -53458,7 +53566,8 @@
 		"id": "metal:3540499565",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Groove Metal/Crossover (early)", "Nu-Metal (later)"
+			"Groove Metal/Crossover (early)",
+			"Nu-Metal (later)"
 		]
 	},
 	{
@@ -53626,7 +53735,8 @@
 		"id": "metal:3540450102",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Alternative/Hard Rock (early)", "Melodic Heavy Metal/Hard Rock (later)"
+			"Alternative/Hard Rock (early)",
+			"Melodic Heavy Metal/Hard Rock (later)"
 		]
 	},
 	{
@@ -53756,7 +53866,7 @@
 			"Marta"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2011,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -54551,7 +54661,8 @@
 		"id": "metal:3540418214",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Rock, Hard Rock/Heavy Metal (early)", "Pop Rock, Pop (later)"
+			"Rock, Hard Rock/Heavy Metal (early)",
+			"Pop Rock, Pop (later)"
 		]
 	},
 	{
@@ -55308,7 +55419,8 @@
 		"id": "metal:88795",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Death/Doom Metal (early)", "Funeral Doom Metal (later)"
+			"Gothic/Death/Doom Metal (early)",
+			"Funeral Doom Metal (later)"
 		]
 	},
 	{
@@ -55382,7 +55494,7 @@
 			"Aneta Hačková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2012,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -55662,7 +55774,7 @@
 			"Lenka Jašková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2013,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -55924,7 +56036,8 @@
 		"id": "metal:3540357705",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Power Metal (early)", "Progressive Rock (later)"
+			"Symphonic Power Metal (early)",
+			"Progressive Rock (later)"
 		]
 	},
 	{
@@ -56672,7 +56785,7 @@
 			"Hanka Hajdová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1994,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -56682,7 +56795,8 @@
 		"id": "metal:3540497201",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Death/Doom Metal (early)", "Progressive/Alternative Rock/Metal (later)"
+			"Gothic/Death/Doom Metal (early)",
+			"Progressive/Alternative Rock/Metal (later)"
 		]
 	},
 	{
@@ -57205,7 +57319,7 @@
 			"Hanka"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1995,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -57805,7 +57919,8 @@
 		"id": "metal:1320",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Progressive Post-Black Metal (early)", "Avant-garde Jazz/Metal (later)"
+			"Progressive Post-Black Metal (early)",
+			"Avant-garde Jazz/Metal (later)"
 		]
 	},
 	{
@@ -58019,7 +58134,7 @@
 			"Tina Bush"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2007,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -58131,7 +58246,7 @@
 			"Hanka Bílková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1999,
 		"yearEnded": 2015,
 		"recommendation": "",
@@ -58282,7 +58397,8 @@
 		"id": "metal:11613",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Epic Folk Metal (early)", "Epic Folk Metal/Metalcore (later)"
+			"Epic Folk Metal (early)",
+			"Epic Folk Metal/Metalcore (later)"
 		]
 	},
 	{
@@ -58944,7 +59060,7 @@
 			"Ereis Rayann"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2005,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -58999,8 +59115,8 @@
 		"currentVocalists": [
 			"Şeyma Sever"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2004,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -59039,34 +59155,6 @@
 		"numberOfVocalists": 1,
 		"genre": [
 			"Symphonic Black/Gothic Metal"
-		]
-	},
-	{
-		"myFavorites": false,
-		"growling": 0,
-		"deezerId": null,
-		"metalArchivesId": "3540443954",
-		"deezerRecommendationId": null,
-		"band": "Escapade to Serenity",
-		"recommendationIsCover": false,
-		"blackWomen": false,
-		"allWomenBand": false,
-		"pastVocalists": [],
-		"currentVocalists": [
-			"Eel"
-		],
-		"country": "Unknown",
-		"countryCode": null,
-		"yearStarted": 2017,
-		"yearEnded": 0,
-		"recommendation": "",
-		"links": "",
-		"sister": false,
-		"activeFor": 8,
-		"id": "metal:3540443954",
-		"numberOfVocalists": 1,
-		"genre": [
-			"Post-Black Metal/Metalcore (early)", "Blackened Heavy Metal (later)"
 		]
 	},
 	{
@@ -59589,7 +59677,7 @@
 			"Jana Lorberová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1990,
 		"yearEnded": 1994,
 		"recommendation": "",
@@ -59880,7 +59968,8 @@
 		"id": "metal:14721",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death/Doom Metal (early)", "Gothic Metal (later)"
+			"Death/Doom Metal (early)",
+			"Gothic Metal (later)"
 		]
 	},
 	{
@@ -59981,8 +60070,8 @@
 		"currentVocalists": [
 			"Zümrüt"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2004,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -60524,7 +60613,8 @@
 		"id": "metal:50271",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black Metal (early)", "Symphonic Black Metal (later)"
+			"Black Metal (early)",
+			"Symphonic Black Metal (later)"
 		]
 	},
 	{
@@ -60878,7 +60968,7 @@
 			"Markéta Hájková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1994,
 		"yearEnded": 2015,
 		"recommendation": "",
@@ -61140,7 +61230,8 @@
 		"id": "metal:3715",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Black/Gothic Metal (early)", "Gothic Metal (later)"
+			"Symphonic Black/Gothic Metal (early)",
+			"Gothic Metal (later)"
 		]
 	},
 	{
@@ -61522,7 +61613,7 @@
 			"Jana Daňková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1997,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -61616,7 +61707,8 @@
 		"id": "metal:3540387394",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Power Metal (early)", "Progressive Metal/Djent (later)"
+			"Symphonic Power Metal (early)",
+			"Progressive Metal/Djent (later)"
 		]
 	},
 	{
@@ -61984,7 +62076,8 @@
 		"id": "metal:50237",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic Metal (early)", "Thrash Metal (later)"
+			"Gothic Metal (early)",
+			"Thrash Metal (later)"
 		]
 	},
 	{
@@ -62030,7 +62123,7 @@
 			"Katerina"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2014,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -62461,7 +62554,8 @@
 		"id": "metal:3540263399",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Doom/Death Metal (early)", "Stoner/Doom/Death Metal (later)"
+			"Gothic/Doom/Death Metal (early)",
+			"Stoner/Doom/Death Metal (later)"
 		]
 	},
 	{
@@ -62601,7 +62695,8 @@
 		"id": "metal:3540276571",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Doom/Death Metal (early)", "Symphonic/Gothic Metal (later)"
+			"Doom/Death Metal (early)",
+			"Symphonic/Gothic Metal (later)"
 		]
 	},
 	{
@@ -62713,7 +62808,8 @@
 		"id": "metal:108942",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Doom Metal (early)", "Gothic Metal (later)"
+			"Doom Metal (early)",
+			"Gothic Metal (later)"
 		]
 	},
 	{
@@ -63246,7 +63342,8 @@
 		"id": "metal:143",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Goregrind (early)", "Death Metal/Grindcore (later)"
+			"Goregrind (early)",
+			"Death Metal/Grindcore (later)"
 		]
 	},
 	{
@@ -63712,7 +63809,7 @@
 			"Andrea \"Sajadna\" Mrázová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2004,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -64631,8 +64728,8 @@
 		"currentVocalists": [
 			"Ash"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2003,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -65485,7 +65582,8 @@
 		"id": "metal:41983",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Gothic Metal (later)"
+			"Death Metal (early)",
+			"Gothic Metal (later)"
 		]
 	},
 	{
@@ -65597,7 +65695,8 @@
 		"id": "metal:3540464465",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Folk/Post-Rock/Metal (early)", "Drone/Funeral Doom Metal (later)"
+			"Folk/Post-Rock/Metal (early)",
+			"Drone/Funeral Doom Metal (later)"
 		]
 	},
 	{
@@ -65625,7 +65724,8 @@
 		"id": "metal:3540255104",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Deathcore (early)", "Progressive/Technical Death Metal (later)"
+			"Deathcore (early)",
+			"Progressive/Technical Death Metal (later)"
 		]
 	},
 	{
@@ -66438,7 +66538,8 @@
 		"id": "metal:1663",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy Metal with Gothic influences (early)", "Thrash Metal (later)"
+			"Heavy Metal with Gothic influences (early)",
+			"Thrash Metal (later)"
 		]
 	},
 	{
@@ -66764,7 +66865,7 @@
 			"Renhule"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2004,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -67630,7 +67731,7 @@
 			"Lenka Serafínová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2012,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -68246,7 +68347,7 @@
 			"Tereza Havelová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2011,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -68930,7 +69031,8 @@
 		"id": "metal:3540399912",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Hardcore/Crossover/Thrash Metal (early)", "Nu-Metal/Hardcore (later)"
+			"Hardcore/Crossover/Thrash Metal (early)",
+			"Nu-Metal/Hardcore (later)"
 		]
 	},
 	{
@@ -69070,7 +69172,8 @@
 		"id": "metal:3540448954",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Stoner/Sludge Metal (early)", "Black Metal (later)"
+			"Stoner/Sludge Metal (early)",
+			"Black Metal (later)"
 		]
 	},
 	{
@@ -69182,7 +69285,8 @@
 		"id": "metal:4246",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Atmospheric Doom Metal (early)", "Gothic Metal (later)"
+			"Atmospheric Doom Metal (early)",
+			"Gothic Metal (later)"
 		]
 	},
 	{
@@ -69882,7 +69986,8 @@
 		"id": "metal:24090",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Doom Metal/Ambient (early)", "Neofolk (later)"
+			"Doom Metal/Ambient (early)",
+			"Neofolk (later)"
 		]
 	},
 	{
@@ -70162,7 +70267,8 @@
 		"id": "metal:104002",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Folk Metal (early)", "Folk Rock (later)"
+			"Symphonic Folk Metal (early)",
+			"Folk Rock (later)"
 		]
 	},
 	{
@@ -70208,7 +70314,7 @@
 			"Andrea Baslová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1993,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -70246,7 +70352,8 @@
 		"id": "metal:4996",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Atmospheric Doom/Death Metal (early)", "Electronic/Industrial (later)"
+			"Atmospheric Doom/Death Metal (early)",
+			"Electronic/Industrial (later)"
 		]
 	},
 	{
@@ -70403,8 +70510,8 @@
 		"currentVocalists": [
 			"Ugur"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2024,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -70740,7 +70847,7 @@
 			"Petra Krejcarová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2006,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -71143,7 +71250,8 @@
 		"id": "metal:113494",
 		"numberOfVocalists": 1,
 		"genre": [
-			"RAC/Oi! (early)", "Thrash Metal with RAC influences (later)"
+			"RAC/Oi! (early)",
+			"Thrash Metal with RAC influences (later)"
 		]
 	},
 	{
@@ -71451,7 +71559,8 @@
 		"id": "metal:3540266103",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Pagan/Black Metal (early)", "Atmospheric/Post-Black Metal (later)"
+			"Pagan/Black Metal (early)",
+			"Atmospheric/Post-Black Metal (later)"
 		]
 	},
 	{
@@ -71647,7 +71756,8 @@
 		"id": "metal:3540490271",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Blackened Death Metal (later)"
+			"Death Metal (early)",
+			"Blackened Death Metal (later)"
 		]
 	},
 	{
@@ -72096,7 +72206,8 @@
 		"id": "metal:78672",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black/Gothic Metal (early)", "Gothic/Doom Metal (later)"
+			"Black/Gothic Metal (early)",
+			"Gothic/Doom Metal (later)"
 		]
 	},
 	{
@@ -72237,7 +72348,8 @@
 		"id": "metal:3438",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Funeral Doom/Death Metal (early)", "Gothic/Doom Metal (later)"
+			"Funeral Doom/Death Metal (early)",
+			"Gothic/Doom Metal (later)"
 		]
 	},
 	{
@@ -72870,8 +72982,8 @@
 		"currentVocalists": [
 			"Ana"
 		],
-		"country": "North Macedonia",
-		"countryCode": null,
+		"country": "Macedonia",
+		"countryCode": "MK",
 		"yearStarted": 2001,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -73208,7 +73320,7 @@
 			"Syrrah"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2001,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -73610,7 +73722,9 @@
 		"id": "metal:32646",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Funeral Doom Metal (early)", "Stoner/Doom Metal (mid)", "Psychedelic/Stoner Rock (later)"
+			"Funeral Doom Metal (early)",
+			"Stoner/Doom Metal (mid)",
+			"Psychedelic/Stoner Rock (later)"
 		]
 	},
 	{
@@ -73694,7 +73808,8 @@
 		"id": "metal:58236",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Heavy Metal/Hard Rock (early)", "Progressive/Melodic Hard Rock (later)"
+			"Melodic Heavy Metal/Hard Rock (early)",
+			"Progressive/Melodic Hard Rock (later)"
 		]
 	},
 	{
@@ -73740,7 +73855,7 @@
 			"Kateřina Kovářová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1999,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -74282,7 +74397,8 @@
 		"id": "metal:100172",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Experimental/Soft Rock (early)", "Hard Rock (later)"
+			"Experimental/Soft Rock (early)",
+			"Hard Rock (later)"
 		]
 	},
 	{
@@ -74394,7 +74510,8 @@
 		"id": "metal:45591",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Pagan Black Metal (early)", "Neofolk (later)"
+			"Pagan Black Metal (early)",
+			"Neofolk (later)"
 		]
 	},
 	{
@@ -74983,7 +75100,8 @@
 		"id": "metal:3540260925",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy Metal (early)", "Hard Rock (later)"
+			"Heavy Metal (early)",
+			"Hard Rock (later)"
 		]
 	},
 	{
@@ -75514,7 +75632,8 @@
 		"id": "metal:3540360600",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Folk/Doom Metal (early/later)", "Neofolk (mid)"
+			"Folk/Doom Metal (early/later)",
+			"Neofolk (mid)"
 		]
 	},
 	{
@@ -75570,7 +75689,8 @@
 		"id": "metal:14687",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Doom/Death Metal (early)", "Folk Metal (later)"
+			"Gothic/Doom/Death Metal (early)",
+			"Folk Metal (later)"
 		]
 	},
 	{
@@ -76017,7 +76137,8 @@
 		"id": "metal:81922",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Hard Rock/Heavy Metal (early)", "Power Metal (later)"
+			"Hard Rock/Heavy Metal (early)",
+			"Power Metal (later)"
 		]
 	},
 	{
@@ -76325,7 +76446,8 @@
 		"id": "metal:3540334699",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death/Doom Metal (early)", "Electronic/Gothic Rock (later)"
+			"Death/Doom Metal (early)",
+			"Electronic/Gothic Rock (later)"
 		]
 	},
 	{
@@ -76370,8 +76492,8 @@
 		"currentVocalists": [
 			"Gim Ran"
 		],
-		"country": "Korea, South",
-		"countryCode": null,
+		"country": "South Korea",
+		"countryCode": "KR",
 		"yearStarted": 2004,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -76409,7 +76531,8 @@
 		"id": "metal:96905",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Doom/Death Metal (early)", "Gothic Metal (later)"
+			"Doom/Death Metal (early)",
+			"Gothic Metal (later)"
 		]
 	},
 	{
@@ -76437,7 +76560,8 @@
 		"id": "metal:25917",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Doom/Death Metal (early)", "Gothic/Black Metal (later)"
+			"Doom/Death Metal (early)",
+			"Gothic/Black Metal (later)"
 		]
 	},
 	{
@@ -76511,7 +76635,7 @@
 			"Veronika Černá"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2014,
 		"yearEnded": 2018,
 		"recommendation": "",
@@ -77070,7 +77194,7 @@
 			"Andrea"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1994,
 		"yearEnded": 2015,
 		"recommendation": "",
@@ -77322,7 +77446,7 @@
 			"Lucie Čmolíková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2000,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -77332,7 +77456,8 @@
 		"id": "metal:3540407492",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy Metal, Hard Rock (early)", "Symphonic Power Metal (later)"
+			"Heavy Metal, Hard Rock (early)",
+			"Symphonic Power Metal (later)"
 		]
 	},
 	{
@@ -77406,7 +77531,7 @@
 			"Nene"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1996,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -77472,7 +77597,8 @@
 		"id": "metal:3540531576",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Alternative/Gothic Metal/Rock/Hardcore (early/later)", "Brutal Death Metal (mid)"
+			"Alternative/Gothic Metal/Rock/Hardcore (early/later)",
+			"Brutal Death Metal (mid)"
 		]
 	},
 	{
@@ -77864,7 +77990,8 @@
 		"id": "metal:57030",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Death/Doom Metal (early)", "Progressive Metal/Rock (later)"
+			"Gothic/Death/Doom Metal (early)",
+			"Progressive Metal/Rock (later)"
 		]
 	},
 	{
@@ -78367,7 +78494,8 @@
 		"id": "metal:118408",
 		"numberOfVocalists": 1,
 		"genre": [
-			"NWOBHM/Heavy Metal (early)", "Heavy Metal (later)"
+			"NWOBHM/Heavy Metal (early)",
+			"Heavy Metal (later)"
 		]
 	},
 	{
@@ -79063,7 +79191,8 @@
 		"id": "metal:63",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Progressive Death Metal (early)", "Classical/Orchestral/Symphonic Metal (later)"
+			"Progressive Death Metal (early)",
+			"Classical/Orchestral/Symphonic Metal (later)"
 		]
 	},
 	{
@@ -79287,7 +79416,8 @@
 		"id": "metal:117162",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black Metal/Grindcore (early)", "Experimental Black/Doom/Folk Metal (later)"
+			"Black Metal/Grindcore (early)",
+			"Experimental Black/Doom/Folk Metal (later)"
 		]
 	},
 	{
@@ -80086,8 +80216,8 @@
 		"currentVocalists": [
 			"Monika Kasuba"
 		],
-		"country": "North Macedonia",
-		"countryCode": null,
+		"country": "Macedonia",
+		"countryCode": "MK",
 		"yearStarted": 2013,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -80322,7 +80452,8 @@
 		"id": "metal:108914",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Thrash Metal (early)", "Heavy Metal (later)"
+			"Thrash Metal (early)",
+			"Heavy Metal (later)"
 		]
 	},
 	{
@@ -80576,7 +80707,8 @@
 		"id": "metal:3540315566",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death/Thrash Metal (early)", "Metalcore (later)"
+			"Death/Thrash Metal (early)",
+			"Metalcore (later)"
 		]
 	},
 	{
@@ -80858,7 +80990,8 @@
 		"id": "metal:3540407352",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy Metal/Hard Rock (early)", "Symphonic Power Metal (later)"
+			"Heavy Metal/Hard Rock (early)",
+			"Symphonic Power Metal (later)"
 		]
 	},
 	{
@@ -81643,7 +81776,8 @@
 		"id": "metal:19405",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Power Metal (early)", "Symphonic Gothic Metal (later)"
+			"Power Metal (early)",
+			"Symphonic Gothic Metal (later)"
 		]
 	},
 	{
@@ -81840,7 +81974,8 @@
 		"id": "metal:20971",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Doom/Black Metal (early)", "Industrial/Gothic Rock (later)"
+			"Melodic Doom/Black Metal (early)",
+			"Industrial/Gothic Rock (later)"
 		]
 	},
 	{
@@ -82597,7 +82732,9 @@
 		"id": "metal:3382",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Crust Punk/Thrash Metal (early)", "Thrash Metal (mid)", "Groove/Thrash Metal (later)"
+			"Crust Punk/Thrash Metal (early)",
+			"Thrash Metal (mid)",
+			"Groove/Thrash Metal (later)"
 		]
 	},
 	{
@@ -83297,7 +83434,8 @@
 		"id": "metal:43062",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death/Thrash Metal (early)", "Symphonic Death Metal (later)"
+			"Death/Thrash Metal (early)",
+			"Symphonic Death Metal (later)"
 		]
 	},
 	{
@@ -83913,7 +84051,8 @@
 		"id": "metal:107625",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Doom/Gothic/Black Metal (early)", "Death/Doom Metal (later)"
+			"Symphonic Doom/Gothic/Black Metal (early)",
+			"Death/Doom Metal (later)"
 		]
 	},
 	{
@@ -85698,7 +85837,7 @@
 			"Andrea Toušová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2004,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -86044,7 +86183,8 @@
 		"id": "metal:3540325752",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Grindcore/Death/Doom Metal (early)", "Grindcore (later)"
+			"Grindcore/Death/Doom Metal (early)",
+			"Grindcore (later)"
 		]
 	},
 	{
@@ -86212,7 +86352,8 @@
 		"id": "metal:3540386220",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Death/Doom Metal (later)"
+			"Death Metal (early)",
+			"Death/Doom Metal (later)"
 		]
 	},
 	{
@@ -86492,7 +86633,8 @@
 		"id": "metal:9527",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Industrial Death/Doom Metal (early)", "Industrial/Electronic Metal (later)"
+			"Industrial Death/Doom Metal (early)",
+			"Industrial/Electronic Metal (later)"
 		]
 	},
 	{
@@ -87333,7 +87475,8 @@
 		"id": "metal:3540413198",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Sludge/Black Metal/Crust (early)", "Post-Black Metal (later)"
+			"Sludge/Black Metal/Crust (early)",
+			"Post-Black Metal (later)"
 		]
 	},
 	{
@@ -87613,7 +87756,8 @@
 		"id": "metal:3540322030",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Doom/Death Metal (early)", "Symphonic Metal (later)"
+			"Gothic/Doom/Death Metal (early)",
+			"Symphonic Metal (later)"
 		]
 	},
 	{
@@ -88006,7 +88150,8 @@
 		"id": "metal:3540426305",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy/Power Metal (early)", "Symphonic Melodic Death Metal (later)"
+			"Heavy/Power Metal (early)",
+			"Symphonic Melodic Death Metal (later)"
 		]
 	},
 	{
@@ -88146,7 +88291,8 @@
 		"id": "metal:3540416806",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy Metal (early)", "Folk/Thrash Metal (later)"
+			"Heavy Metal (early)",
+			"Folk/Thrash Metal (later)"
 		]
 	},
 	{
@@ -88622,7 +88768,8 @@
 		"id": "metal:10997",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Doom/Death Metal (early)", "Melodic Death Metal (later)"
+			"Doom/Death Metal (early)",
+			"Melodic Death Metal (later)"
 		]
 	},
 	{
@@ -88696,7 +88843,7 @@
 			"Žaneta Balogová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2022,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -88819,7 +88966,8 @@
 		"id": "metal:587",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic/Melodic Black Metal (early)", "Melodic Death Metal (later)"
+			"Symphonic/Melodic Black Metal (early)",
+			"Melodic Death Metal (later)"
 		]
 	},
 	{
@@ -89033,8 +89181,8 @@
 		"currentVocalists": [
 			"Berrin Yahyaoglu"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2011,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -89044,7 +89192,8 @@
 		"id": "metal:3540376060",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Funeral Doom Metal (early)", "Atmospheric Death/Doom Metal (later)"
+			"Symphonic Funeral Doom Metal (early)",
+			"Atmospheric Death/Doom Metal (later)"
 		]
 	},
 	{
@@ -89480,7 +89629,7 @@
 			"Lenka Čechová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2005,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -89630,7 +89779,8 @@
 		"id": "metal:3540403922",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black Metal (early)", "Black/Death Metal (later)"
+			"Black Metal (early)",
+			"Black/Death Metal (later)"
 		]
 	},
 	{
@@ -90471,7 +90621,8 @@
 		"id": "metal:62881",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Doom Metal (early)", "Death Metal (later)"
+			"Doom Metal (early)",
+			"Death Metal (later)"
 		]
 	},
 	{
@@ -90573,7 +90724,7 @@
 			"Saša Čedíková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2000,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -90695,7 +90846,8 @@
 		"id": "metal:7104",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Black Metal (early)", "Folk Rock/Avant-garde Black Metal (later)"
+			"Symphonic Black Metal (early)",
+			"Folk Rock/Avant-garde Black Metal (later)"
 		]
 	},
 	{
@@ -91115,7 +91267,9 @@
 		"id": "metal:22615",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Death/Doom/Gothic Metal (early)", "Thrash/Heavy Metal (mid)", "Death Metal (later)"
+			"Melodic Death/Doom/Gothic Metal (early)",
+			"Thrash/Heavy Metal (mid)",
+			"Death Metal (later)"
 		]
 	},
 	{
@@ -91553,7 +91707,7 @@
 			"Psycho Robin"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1998,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -91759,7 +91913,9 @@
 		"id": "metal:17623",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Thrash Metal (early)", "Gothic/Black Metal (mid)", "Gothic Metal (later)"
+			"Thrash Metal (early)",
+			"Gothic/Black Metal (mid)",
+			"Gothic Metal (later)"
 		]
 	},
 	{
@@ -92591,8 +92747,8 @@
 		"currentVocalists": [
 			"Lucy Ferra"
 		],
-		"country": "Türkiye",
-		"countryCode": null,
+		"country": "Turkey",
+		"countryCode": "TR",
 		"yearStarted": 2013,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -92956,7 +93112,7 @@
 			"Veronika Macurová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2010,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -92984,7 +93140,7 @@
 			"Snovonne \"Sno\" Drake"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1997,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -93292,7 +93448,7 @@
 			"Kateřina Peterková"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2007,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -93582,7 +93738,8 @@
 		"id": "metal:2303",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Black/Death Metal (later)"
+			"Death Metal (early)",
+			"Black/Death Metal (later)"
 		]
 	},
 	{
@@ -93882,7 +94039,7 @@
 			"Maria Ponomareva"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2018,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -93910,7 +94067,7 @@
 			"Anička"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 2017,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -94218,7 +94375,7 @@
 			"Julie Těťálová"
 		],
 		"country": "Czechia",
-		"countryCode": null,
+		"countryCode": "CZ",
 		"yearStarted": 1993,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -94368,7 +94525,8 @@
 		"id": "metal:3540350967",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death/Doom Metal (early)", "Death Metal (later)"
+			"Death/Doom Metal (early)",
+			"Death Metal (later)"
 		]
 	},
 	{
@@ -95515,7 +95673,8 @@
 		"id": "metal:3540352461",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic Metal (early)", "Rock (later)"
+			"Gothic Metal (early)",
+			"Rock (later)"
 		],
 		"country": "Italy"
 	},
@@ -95785,7 +95944,6 @@
 		"currentVocalists": [
 			"Zuzkina"
 		],
-		"countryCode": null,
 		"yearStarted": 2013,
 		"yearEnded": 2018,
 		"recommendation": "",
@@ -95797,7 +95955,8 @@
 		"genre": [
 			"Melodic Black Metal"
 		],
-		"country": "Czechia"
+		"country": "Czechia",
+		"countryCode": "CZ"
 	},
 	{
 		"myFavorites": false,
@@ -96261,7 +96420,6 @@
 		"currentVocalists": [
 			"Neira Lohikäärme"
 		],
-		"countryCode": null,
 		"yearStarted": 2014,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -96273,7 +96431,8 @@
 		"genre": [
 			"Symphonic Gothic/Death Metal"
 		],
-		"country": "Czechia"
+		"country": "Czechia",
+		"countryCode": "CZ"
 	},
 	{
 		"myFavorites": false,
@@ -96317,7 +96476,6 @@
 		"currentVocalists": [
 			"Park Jin-Yeong"
 		],
-		"countryCode": null,
 		"yearStarted": 2013,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -96329,7 +96487,8 @@
 		"genre": [
 			"Power/Thrash Metal"
 		],
-		"country": "Korea, South"
+		"country": "South Korea",
+		"countryCode": "KR"
 	},
 	{
 		"myFavorites": false,
@@ -97335,7 +97494,8 @@
 		"id": "metal:1621",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Doom/Death Metal (early)", "Gothic/Doom Metal (later)"
+			"Doom/Death Metal (early)",
+			"Gothic/Doom Metal (later)"
 		],
 		"country": "Croatia"
 	},
@@ -97700,7 +97860,8 @@
 		"id": "metal:85209",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Doom/Death Metal (early)", "Doom Metal/Rock (later)"
+			"Doom/Death Metal (early)",
+			"Doom Metal/Rock (later)"
 		],
 		"country": "Greece"
 	},
@@ -97756,7 +97917,8 @@
 		"id": "metal:10289",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black Metal (early)", "Melodic Death Metal (later)"
+			"Black Metal (early)",
+			"Melodic Death Metal (later)"
 		],
 		"country": "Austria"
 	},
@@ -97869,7 +98031,8 @@
 		"id": "metal:3838",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death/Thrash Metal (early)", "Progressive Power Metal (later)"
+			"Death/Thrash Metal (early)",
+			"Progressive Power Metal (later)"
 		],
 		"country": "Germany"
 	},
@@ -98038,7 +98201,8 @@
 		"id": "metal:2233",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black Metal (early)", "Blackened Melodic Death Metal (later)"
+			"Black Metal (early)",
+			"Blackened Melodic Death Metal (later)"
 		],
 		"country": "Greece"
 	},
@@ -98374,7 +98538,8 @@
 		"id": "metal:3540449518",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Dance Pop/Hard Rock (early)", "Power Metal (later)"
+			"Dance Pop/Hard Rock (early)",
+			"Power Metal (later)"
 		],
 		"country": "Japan"
 	},
@@ -98655,7 +98820,8 @@
 		"id": "metal:3691",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Death/Gothic/Black Metal (early)", "Black Metal (later)"
+			"Melodic Death/Gothic/Black Metal (early)",
+			"Black Metal (later)"
 		],
 		"country": "Colombia"
 	},
@@ -98683,7 +98849,8 @@
 		"id": "metal:5387",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic/Doom/Death Metal (early)", "Symphonic Metal (later)"
+			"Gothic/Doom/Death Metal (early)",
+			"Symphonic Metal (later)"
 		],
 		"country": "Germany"
 	},
@@ -98869,7 +99036,6 @@
 		"currentVocalists": [
 			"Damla Kayihan"
 		],
-		"countryCode": null,
 		"yearStarted": 1999,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -98881,7 +99047,8 @@
 		"genre": [
 			"Folk/Gothic Metal"
 		],
-		"country": "Türkiye"
+		"country": "Turkey",
+		"countryCode": "TR"
 	},
 	{
 		"myFavorites": false,
@@ -99104,7 +99271,8 @@
 		"id": "metal:3540464524",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Hardcore Punk (early)", "Black/Thrash Metal (later)"
+			"Hardcore Punk (early)",
+			"Black/Thrash Metal (later)"
 		],
 		"country": "United States"
 	},
@@ -99244,7 +99412,8 @@
 		"id": "metal:107583",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black Metal (early)", "Melodic Death/Black Metal (later)"
+			"Black Metal (early)",
+			"Melodic Death/Black Metal (later)"
 		],
 		"country": "Russia"
 	},
@@ -99328,7 +99497,9 @@
 		"id": "metal:646",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Technical Death Metal (early)", "Various (mid)", "Symphonic Death Metal (later)"
+			"Technical Death Metal (early)",
+			"Various (mid)",
+			"Symphonic Death Metal (later)"
 		],
 		"country": "Germany"
 	},
@@ -99384,7 +99555,8 @@
 		"id": "metal:6126",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Doom/Death Metal (early)", "Avant-garde/Progressive Metal (later)"
+			"Melodic Doom/Death Metal (early)",
+			"Avant-garde/Progressive Metal (later)"
 		],
 		"country": "Norway"
 	},
@@ -99570,7 +99742,6 @@
 		"currentVocalists": [
 			"Son Hye-Jin \"Lydia\""
 		],
-		"countryCode": null,
 		"yearStarted": 2002,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -99582,7 +99753,8 @@
 		"genre": [
 			"Heavy/Power Metal"
 		],
-		"country": "Korea, South"
+		"country": "South Korea",
+		"countryCode": "KR"
 	},
 	{
 		"myFavorites": false,
@@ -99916,7 +100088,8 @@
 		"id": "metal:97270",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Blackened Death Metal (early)", "Industrial Black Metal (later)"
+			"Blackened Death Metal (early)",
+			"Industrial Black Metal (later)"
 		],
 		"country": "United States"
 	},
@@ -100130,7 +100303,6 @@
 		"currentVocalists": [
 			"Kateřina Brejlová"
 		],
-		"countryCode": null,
 		"yearStarted": 1983,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -100142,7 +100314,8 @@
 		"genre": [
 			"Heavy/Power Metal"
 		],
-		"country": "Czechia"
+		"country": "Czechia",
+		"countryCode": "CZ"
 	},
 	{
 		"myFavorites": false,
@@ -100196,7 +100369,8 @@
 		"id": "metal:6366",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic Metal (early)", "Atmospheric Rock (later)"
+			"Gothic Metal (early)",
+			"Atmospheric Rock (later)"
 		],
 		"country": "Netherlands"
 	},
@@ -100420,7 +100594,8 @@
 		"id": "metal:31280",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Gothic Metal (early)", "Gothic Rock (later)"
+			"Gothic Metal (early)",
+			"Gothic Rock (later)"
 		],
 		"country": "Hungary"
 	},
@@ -100981,7 +101156,8 @@
 		"id": "metal:3540371965",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Power Metal (early)", "Alternative Rock (later)"
+			"Power Metal (early)",
+			"Alternative Rock (later)"
 		],
 		"country": "Russia"
 	},
@@ -101233,7 +101409,8 @@
 		"id": "metal:80932",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Folk Metal (early)", "Folk/Metalcore (later)"
+			"Folk Metal (early)",
+			"Folk/Metalcore (later)"
 		],
 		"country": "Slovenia"
 	},
@@ -101615,7 +101792,6 @@
 		"currentVocalists": [
 			"Zuzana Fenglová"
 		],
-		"countryCode": null,
 		"yearStarted": 1996,
 		"yearEnded": 2006,
 		"recommendation": "",
@@ -101627,7 +101803,8 @@
 		"genre": [
 			"Heavy Metal"
 		],
-		"country": "Czechia"
+		"country": "Czechia",
+		"countryCode": "CZ"
 	},
 	{
 		"myFavorites": false,
@@ -101681,7 +101858,8 @@
 		"id": "metal:3540518750",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Doom Metal (later)"
+			"Death Metal (early)",
+			"Doom Metal (later)"
 		],
 		"country": "Colombia"
 	},
@@ -102551,7 +102729,8 @@
 		"id": "metal:846",
 		"numberOfVocalists": 1,
 		"genre": [
-			"AOR (early)", "Power/Progressive Metal (later)"
+			"AOR (early)",
+			"Power/Progressive Metal (later)"
 		],
 		"country": "United Kingdom"
 	},
@@ -102803,7 +102982,8 @@
 		"id": "metal:3540366528",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Psychedelic Hard Rock/Heavy Metal (early/later)", "Glam/Pop Rock (mid)"
+			"Psychedelic Hard Rock/Heavy Metal (early/later)",
+			"Glam/Pop Rock (mid)"
 		],
 		"country": "United States"
 	},
@@ -103271,7 +103451,6 @@
 		"currentVocalists": [
 			"Tereza Horčičková"
 		],
-		"countryCode": null,
 		"yearStarted": 2013,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -103283,7 +103462,8 @@
 		"genre": [
 			"Heavy Metal"
 		],
-		"country": "Czechia"
+		"country": "Czechia",
+		"countryCode": "CZ"
 	},
 	{
 		"myFavorites": false,
@@ -103729,7 +103909,8 @@
 		"id": "metal:38523",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Melodic Heavy Metal (later)"
+			"Death Metal (early)",
+			"Melodic Heavy Metal (later)"
 		],
 		"country": "Finland"
 	},
@@ -104027,7 +104208,6 @@
 		"currentVocalists": [
 			"Karolína Poláčková"
 		],
-		"countryCode": null,
 		"yearStarted": 2007,
 		"yearEnded": 2014,
 		"recommendation": "",
@@ -104039,7 +104219,8 @@
 		"genre": [
 			"Thrash Metal/Crust/Grindcore"
 		],
-		"country": "Czechia"
+		"country": "Czechia",
+		"countryCode": "CZ"
 	},
 	{
 		"myFavorites": false,
@@ -104289,7 +104470,8 @@
 		"id": "metal:6347",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy Metal (early)", "Glam/Hard Rock (later)"
+			"Heavy Metal (early)",
+			"Glam/Hard Rock (later)"
 		],
 		"country": "Spain"
 	},
@@ -104419,7 +104601,6 @@
 		"currentVocalists": [
 			"Appia"
 		],
-		"countryCode": null,
 		"yearStarted": 2004,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -104429,9 +104610,11 @@
 		"id": "metal:58271",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Black/Death Metal (early)", "Atmospheric Death Metal (later)"
+			"Melodic Black/Death Metal (early)",
+			"Atmospheric Death Metal (later)"
 		],
-		"country": "Czechia"
+		"country": "Czechia",
+		"countryCode": "CZ"
 	},
 	{
 		"myFavorites": false,
@@ -104485,7 +104668,8 @@
 		"id": "metal:117869",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Heavy/Doom Metal (early)", "Heavy/Thrash Metal (later)"
+			"Heavy/Doom Metal (early)",
+			"Heavy/Thrash Metal (later)"
 		],
 		"country": "Japan"
 	},
@@ -104709,7 +104893,8 @@
 		"id": "metal:3540474737",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Raw Black Metal/Hardcore/D-Beat (early)", "Black Metal (later)"
+			"Raw Black Metal/Hardcore/D-Beat (early)",
+			"Black Metal (later)"
 		],
 		"country": "United States"
 	},
@@ -104849,7 +105034,8 @@
 		"id": "metal:64125",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Black Metal (early)", "Experimental Black/Doom Metal/Rock (later)"
+			"Black Metal (early)",
+			"Experimental Black/Doom Metal/Rock (later)"
 		],
 		"country": "United States"
 	},
@@ -105176,7 +105362,6 @@
 		"currentVocalists": [
 			"Jane Taylor"
 		],
-		"countryCode": null,
 		"yearStarted": 2008,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -105188,7 +105373,8 @@
 		"genre": [
 			"Death Metal"
 		],
-		"country": "Czechia"
+		"country": "Czechia",
+		"countryCode": "CZ"
 	},
 	{
 		"myFavorites": false,
@@ -105232,7 +105418,6 @@
 		"currentVocalists": [
 			"Zuzana Martincová"
 		],
-		"countryCode": null,
 		"yearStarted": 2006,
 		"yearEnded": 2010,
 		"recommendation": "",
@@ -105244,7 +105429,8 @@
 		"genre": [
 			"Heavy/Power Metal"
 		],
-		"country": "Czechia"
+		"country": "Czechia",
+		"countryCode": "CZ"
 	},
 	{
 		"myFavorites": false,
@@ -106887,7 +107073,6 @@
 		"currentVocalists": [
 			"Comtesse Fifi"
 		],
-		"countryCode": null,
 		"yearStarted": 2007,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -106899,7 +107084,8 @@
 		"genre": [
 			"Black Metal"
 		],
-		"country": "Czechia"
+		"country": "Czechia",
+		"countryCode": "CZ"
 	},
 	{
 		"myFavorites": false,
@@ -107513,7 +107699,8 @@
 		"id": "metal:12887",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Death Metal (early)", "Atmospheric Black Metal (later)"
+			"Death Metal (early)",
+			"Atmospheric Black Metal (later)"
 		],
 		"country": "United States"
 	},
@@ -109411,7 +109598,6 @@
 		"currentVocalists": [
 			"Ruhan"
 		],
-		"countryCode": null,
 		"yearStarted": 2014,
 		"yearEnded": 0,
 		"newName": "Chaoscunt",
@@ -109424,7 +109610,8 @@
 		"genre": [
 			"Black Metal/Experimental"
 		],
-		"country": "Türkiye"
+		"country": "Turkey",
+		"countryCode": "TR"
 	},
 	{
 		"myFavorites": false,
@@ -110011,7 +110198,8 @@
 		"id": "metal:9224",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Melodic Death/Power Metal (early)", "Melodic Death Metal/Metalcore/Trance (later)"
+			"Melodic Death/Power Metal (early)",
+			"Melodic Death Metal/Metalcore/Trance (later)"
 		],
 		"country": "Japan"
 	},
@@ -110376,7 +110564,8 @@
 		"id": "metal:80187",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Crust Punk/Hardcore (early)", "Death Metal/Grindcore (later)"
+			"Crust Punk/Hardcore (early)",
+			"Death Metal/Grindcore (later)"
 		],
 		"country": "Italy"
 	},
@@ -110488,7 +110677,8 @@
 		"id": "metal:2370",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic/Melodic Black Metal (early)", "Death Metal (later)"
+			"Symphonic/Melodic Black Metal (early)",
+			"Death Metal (later)"
 		],
 		"country": "Norway"
 	},
@@ -111040,7 +111230,6 @@
 		"currentVocalists": [
 			"Blackwish"
 		],
-		"countryCode": null,
 		"yearStarted": 2017,
 		"yearEnded": 0,
 		"recommendation": "",
@@ -111052,7 +111241,8 @@
 		"genre": [
 			"Heavy Metal"
 		],
-		"country": "Czechia"
+		"country": "Czechia",
+		"countryCode": "CZ"
 	},
 	{
 		"myFavorites": false,
@@ -111180,7 +111370,6 @@
 		"currentVocalists": [
 			"Terka"
 		],
-		"countryCode": null,
 		"yearStarted": 2010,
 		"yearEnded": 2018,
 		"recommendation": "",
@@ -111192,7 +111381,8 @@
 		"genre": [
 			"Grindcore/Crust Punk"
 		],
-		"country": "Czechia"
+		"country": "Czechia",
+		"countryCode": "CZ"
 	},
 	{
 		"myFavorites": false,
@@ -111274,7 +111464,8 @@
 		"id": "metal:3540446684",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Goregrind (early)", "Death Metal (later)"
+			"Goregrind (early)",
+			"Death Metal (later)"
 		],
 		"country": "Australia"
 	},
@@ -112115,7 +112306,8 @@
 		"id": "metal:66003",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Hard Rock (early)", "Heavy Metal (later)"
+			"Hard Rock (early)",
+			"Heavy Metal (later)"
 		],
 		"country": "United States"
 	},
@@ -112255,7 +112447,8 @@
 		"id": "metal:83887",
 		"numberOfVocalists": 1,
 		"genre": [
-			"Symphonic Black Metal (early)", "Black Metal (later)"
+			"Symphonic Black Metal (early)",
+			"Black Metal (later)"
 		],
 		"country": "United States"
 	},
