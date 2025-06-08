@@ -98,7 +98,7 @@ const ALREADY_PATH = "../metal-archives-data-to-analyze/already.json"
 
 async function checkAndUpdate() {
   const bands = JSON.parse(await readFile(LIST_FINAL_PATH))
-  const other = JSON.parse(await readFile(ACTIVE_PATH))
+  const other = JSON.parse(await readFile(DISBANDED_PATH))
   const already = []
   const updated = []
 
@@ -121,8 +121,8 @@ async function checkAndUpdate() {
   })
   console.log({ already: already.length })
   await writeFile(LIST_FINAL_PATH, JSON.stringify(updated, null, "\t"))
-
-  // await writeFile(ALREADY_PATH, JSON.stringify(already, null, "\t"))
+  const alrt = JSON.parse(await readFile(ALREADY_PATH))
+  await writeFile(ALREADY_PATH, JSON.stringify([...alrt, ...already], null, "\t"))
 }
 checkAndUpdate()
 //  ----------------------------
