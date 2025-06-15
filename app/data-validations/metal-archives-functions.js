@@ -83,7 +83,7 @@ async function active() {
   await writeFile(ACTIVE_PATH, JSON.stringify(active, null, "\t"))
   await writeFile(DISBANDED_PATH, JSON.stringify(disbanded, null, "\t"))
 }
-// active()
+active()
 
 
 //  ----------------------------
