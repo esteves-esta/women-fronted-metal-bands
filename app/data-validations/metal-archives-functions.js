@@ -58,12 +58,12 @@ async function international() {
       list.push(band)
     }
   })
-  // console.log({ list: list.length, apart: apart.length })
+  console.log({ list: list.length, apart: apart.length })
   await writeFile(NOTENDSTART_PATH, JSON.stringify(apart, null, "\t"))
   await writeFile(LIST_PATH, JSON.stringify(list, null, "\t"))
 }
 
-international()
+//international()
 
 //  ----------------------------
 const ACTIVE_PATH = "../metal-archives-2/active.json"
@@ -142,7 +142,7 @@ async function checkAndUpdate() {
   const alrt = JSON.parse(await readFile(ALREADY_PATH))
   await writeFile(ALREADY_PATH, JSON.stringify([...alrt, ...already], null, "\t"))
 }
-// checkAndUpdate()
+checkAndUpdate()
 
 async function checkAndRemove() {
   const alreadyOnList = JSON.parse(await readFile(ALREADY_PATH))
