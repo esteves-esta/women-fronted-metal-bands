@@ -90,7 +90,7 @@ active()
 // SORT
 
 async function sorting() {
-  const bands = JSON.parse(await readFile(DISBANDED_PATH))
+  const bands = JSON.parse(await readFile(LIST_PATH))
 
   function compareFn(a, b) {
     if (a.activeFor < b.activeFor) {
@@ -107,7 +107,7 @@ async function sorting() {
   await writeFile(DISBANDED_PATH, JSON.stringify(bands, null, "\t"))
 }
 
-// sorting()
+ // sorting()
 
 //  ----------------------------
 // CHECK IF BAND EXIST ON LIST AND UPDATE LIST
@@ -116,7 +116,7 @@ const ALREADY_PATH = "../metal-archives-2/already.json"
 
 async function checkAndUpdate() {
   const bands = JSON.parse(await readFile(LIST_FINAL_PATH))
-  const other = JSON.parse(await readFile(DISBANDED_PATH))
+  const other = JSON.parse(await readFile(LIST_PATH))
   const already = []
   const updated = []
 
@@ -142,11 +142,11 @@ async function checkAndUpdate() {
   const alrt = JSON.parse(await readFile(ALREADY_PATH))
   await writeFile(ALREADY_PATH, JSON.stringify([...alrt, ...already], null, "\t"))
 }
-checkAndUpdate()
+// checkAndUpdate()
 
 async function checkAndRemove() {
   const alreadyOnList = JSON.parse(await readFile(ALREADY_PATH))
-  const other = JSON.parse(await readFile(ACTIVE_PATH))
+  const other = JSON.parse(await readFile(LIST_PATH))
   const updated = []
 
   other.forEach(band => {
