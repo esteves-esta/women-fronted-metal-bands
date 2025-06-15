@@ -2,8 +2,8 @@ import { readFile, writeFile } from "./file-helper.js"
 import countryCodes from "./codes.js"
 import { v4 as uuidv4 } from "uuid";
 
-const LIST_PATH = "../metal-archives-data-to-analyze/metal-archives-bands.json"
-const NOTENDSTART_PATH = "../metal-archives-data-to-analyze/no-end-start.json"
+const LIST_PATH = "../metal-archives-2/metal-archives-bands.json"
+const NOTENDSTART_PATH = "../metal-archives-2/no-end-start.json"
 
 //  ----------------------------
 async function separateEnds() {
@@ -17,17 +17,17 @@ async function separateEnds() {
     }
   })
   console.log({ ok: ok.length, errors: errors.length })
-  await writeFile(NOTENDSTART_PATH, JSON.stringify(errors, null, "\t"))
-  await writeFile(LIST_PATH, JSON.stringify(ok, null, "\t"))
+  // await writeFile(NOTENDSTART_PATH, JSON.stringify(errors, null, "\t"))
+  // await writeFile(LIST_PATH, JSON.stringify(ok, null, "\t"))
 }
 
 
-// separateEnds()
+separateEnds()
 
 //  ----------------------------
 
 // country International needs to check what country the band operates most
-const INTERNATIONAL_PATH = "../metal-archives-data-to-analyze/international.json";
+const INTERNATIONAL_PATH = "../metal-archives-2/international.json";
 
 async function international() {
   const bands = JSON.parse(await readFile(LIST_PATH))
@@ -48,8 +48,8 @@ async function international() {
 // international()
 
 //  ----------------------------
-const ACTIVE_PATH = "../metal-archives-data-to-analyze/active.json"
-const DISBANDED_PATH = "../metal-archives-data-to-analyze/disbanded.json"
+const ACTIVE_PATH = "../metal-archives-2/active.json"
+const DISBANDED_PATH = "../metal-archives-2/disbanded.json"
 
 async function active() {
   const bands = JSON.parse(await readFile(LIST_PATH))
@@ -94,7 +94,7 @@ async function sorting() {
 //  ----------------------------
 // CHECK IF BAND EXIST ON LIST AND UPDATE LIST
 const LIST_FINAL_PATH = "../list-of-metal-bands/list.json"
-const ALREADY_PATH = "../metal-archives-data-to-analyze/already.json"
+const ALREADY_PATH = "../metal-archives-2/already.json"
 
 async function checkAndUpdate() {
   const bands = JSON.parse(await readFile(LIST_FINAL_PATH))
