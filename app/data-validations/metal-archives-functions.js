@@ -5,29 +5,47 @@ import { v4 as uuidv4 } from "uuid";
 const LIST_PATH = "../metal-archives-2/metal-archives-bands.json"
 const NOTENDSTART_PATH = "../metal-archives-2/no-end-start.json"
 
+const backing = "../metal-archives-2/backing.json"
+//  ----------------------------
+async function backingvocals() {
+  const bands = JSON.parse(await readFile(LIST_PATH))
+  const errors = []
+  const ok = []
+  bands.forEach(band => {
+    if (JSON.stringify(band.members).toLowerCase().includes('backing')) errors.push(band)
+    else {
+      ok.push(band)
+    }
+  })
+  console.log({ ok: ok.length, errors: errors.length })
+  await writeFile(backing, JSON.stringify(errors, null, "\t"))
+  await writeFile(LIST_PATH, JSON.stringify(ok, null, "\t"))
+}
+
+
+// backingvocals()
+
 //  ----------------------------
 async function separateEnds() {
   const bands = JSON.parse(await readFile(LIST_PATH))
   const errors = []
   const ok = []
   bands.forEach(band => {
-    if (band.yearStarted === "N/A") errors.push(band)
+    if (band.yearStarted === "?" || band.yearEnded === "?")  errors.push(band)
     else {
       ok.push(band)
     }
   })
   console.log({ ok: ok.length, errors: errors.length })
-  // await writeFile(NOTENDSTART_PATH, JSON.stringify(errors, null, "\t"))
-  // await writeFile(LIST_PATH, JSON.stringify(ok, null, "\t"))
+  await writeFile(NOTENDSTART_PATH, JSON.stringify(errors, null, "\t"))
+  await writeFile(LIST_PATH, JSON.stringify(ok, null, "\t"))
 }
 
 
-separateEnds()
-
+//separateEnds()
 //  ----------------------------
 
 // country International needs to check what country the band operates most
-const INTERNATIONAL_PATH = "../metal-archives-2/international.json";
 
 async function international() {
   const bands = JSON.parse(await readFile(LIST_PATH))
@@ -41,11 +59,11 @@ async function international() {
     }
   })
   // console.log({ list: list.length, apart: apart.length })
-  await writeFile(INTERNATIONAL_PATH, JSON.stringify(apart, null, "\t"))
+  await writeFile(NOTENDSTART_PATH, JSON.stringify(apart, null, "\t"))
   await writeFile(LIST_PATH, JSON.stringify(list, null, "\t"))
 }
 
-// international()
+international()
 
 //  ----------------------------
 const ACTIVE_PATH = "../metal-archives-2/active.json"
