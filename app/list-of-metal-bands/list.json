@@ -7732,5 +7732,34 @@
 		"genre": [
 			"Thrash/Speed Metal"
 		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540461693",
+		"deezerRecommendationId": null,
+		"band": "МореЖдёт",
+		"genre": [
+			"Symphonic Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Alexandra Shalashova",
+			"Maria Tyukhova"
+		],
+		"country": "Russia",
+		"countryCode": "null",
+		"yearStarted": 2015,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "https://www.youtube.com/channel/UCC1YeMRGgPhLqcb2HvQzJIA",
+		"sister": false,
+		"activeFor": 10,
+		"id": "metal:3540461693",
+		"numberOfVocalists": 2
 	}
 ]
