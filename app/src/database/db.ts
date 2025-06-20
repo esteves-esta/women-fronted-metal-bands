@@ -27,6 +27,7 @@ export interface BandDb {
   emptyPicture?: boolean;
   deezerTrackInfo?: TrackInfo;
   deezerPicture?: string;
+  myFavorites?: boolean;
 }
 
 const db = new Dexie('BandsDatabase') as Dexie & {
