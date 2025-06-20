@@ -8108,5 +8108,61 @@
 		"genre": [
 			"Power Metal"
 		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "49407",
+		"deezerRecommendationId": null,
+		"band": "Benighted Soul",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Géraldine Gadaut"
+		],
+		"countryCode": "FR",
+		"yearStarted": 2003,
+		"yearEnded": 2020,
+		"recommendation": "",
+		"links": "https://www.youtube.com/@Benightedsoulofficial",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:49407",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Symphonic Metal"
+		],
+		"country": "France"
+	},
+		{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": 12020508,
+		"metalArchivesId": "3540417115",
+		"deezerRecommendationId": null,
+		"band": "Arshenic",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Ofilia"
+		],
+		"countryCode": "PL",
+		"yearStarted": 2006,
+		"yearEnded": 2023,
+		"recommendation": "",
+		"links": "https://www.youtube.com/channel/UCQo25f5ObHEQG2e9AjURuig",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:3540417115",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy/Groove Metal/Hard Rock"
+		],
+		"country": "Poland"
 	}
 ]
