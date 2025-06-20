@@ -7761,5 +7761,408 @@
 		"activeFor": 10,
 		"id": "metal:3540461693",
 		"numberOfVocalists": 2
+	},
+	{
+		"myFavorites": false,
+		"growling": 1,
+		"deezerId": null,
+		"metalArchivesId": "8659",
+		"deezerRecommendationId": 5260611,
+		"band": "Carnarium",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [
+			"Andrea Goldberg",
+			"Keila Lorraine Araziel"
+		],
+		"currentVocalists": [
+			"Alicia Del Cerro"
+		],
+		"country": "Argentina",
+		"countryCode": "AR",
+		"yearStarted": 1993,
+		"yearEnded": 2021,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 28,
+		"id": "metal:8659",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Death Metal (early)",
+			"Black/Gothic Metal (later)"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "19399",
+		"deezerRecommendationId": null,
+		"band": "Fairy Mirror",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Juno"
+		],
+		"country": "Japan",
+		"countryCode": "JP",
+		"yearStarted": 1995,
+		"yearEnded": 2022,
+		"recommendation": "",
+		"links": "https://www.youtube.com/@MiracleWhoracle",
+		"sister": false,
+		"activeFor": 27,
+		"id": "metal:19399",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Melodic Power Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "6263",
+		"deezerRecommendationId": null,
+		"band": "Ancient Prophecy",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Jaqueline Kunz"
+		],
+		"country": "Germany",
+		"countryCode": "DE",
+		"yearStarted": 1996,
+		"yearEnded": 2023,
+		"recommendation": "",
+		"links": "https://ancientprophecy.de/",
+		"sister": false,
+		"activeFor": 27,
+		"id": "metal:6263",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Power/Death/Gothic Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "24045",
+		"deezerRecommendationId": null,
+		"band": "Ax'n Sex",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Suzie Lohmar"
+		],
+		"countryCode": "DE",
+		"yearStarted": 1989,
+		"yearEnded": 2014,
+		"recommendation": "",
+		"links": "https://www.reverbnation.com/axnsex",
+		"sister": false,
+		"activeFor": 25,
+		"id": "metal:24045",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Progressive Heavy/Power Metal"
+		],
+		"country": "Germany"
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "80243",
+		"deezerRecommendationId": 1063452662,
+		"band": "Dogma",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Isabel Cristina"
+		],
+		"country": "Portugal",
+		"countryCode": "PT",
+		"yearStarted": 1996,
+		"yearEnded": 2021,
+		"recommendation": "",
+		"links": "https://open.spotify.com/intl-pt/artist/69LxdBqMbqpqJfxe2TRbu8",
+		"sister": false,
+		"activeFor": 25,
+		"id": "metal:80243",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Gothic/Doom Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 3,
+		"deezerId": 328684,
+		"metalArchivesId": "7195",
+		"deezerRecommendationId": null,
+		"band": "Aeternitas",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Miss ScarRed",
+			"Doria Theis",
+			"Alma Mathar",
+			"Julia Marou"
+		],
+		"country": "Germany",
+		"countryCode": "DE",
+		"yearStarted": 1999,
+		"yearEnded": 2022,
+		"recommendation": "",
+		"links": "https://www.youtube.com/user/officialAETERNITAS",
+		"sister": false,
+		"activeFor": 23,
+		"id": "metal:7195",
+		"numberOfVocalists": 4,
+		"genre": [
+			"Symphonic Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "37889",
+		"deezerRecommendationId": null,
+		"band": "Atrium Noctis",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Mila Moon"
+		],
+		"countryCode": "DE",
+		"yearStarted": 2002,
+		"yearEnded": 2024,
+		"recommendation": "",
+		"links": "https://atriumnoctis.bandcamp.com/album/blackwards",
+		"sister": false,
+		"activeFor": 22,
+		"id": "metal:37889",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Melodic Black Metal"
+		],
+		"country": "Germany"
+	},
+	{
+		"myFavorites": false,
+		"growling": 3,
+		"deezerId": null,
+		"metalArchivesId": "50504",
+		"deezerRecommendationId": null,
+		"band": "Caveat",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Amanda Marie Bourdon"
+		],
+		"country": "Canada",
+		"countryCode": "CA",
+		"yearStarted": 2001,
+		"yearEnded": 2023,
+		"recommendation": "",
+		"links": "https://caveatcalgary.bandcamp.com/album/consummation",
+		"sister": false,
+		"activeFor": 22,
+		"id": "metal:50504",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Progressive Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": 1404695,
+		"metalArchivesId": "96853",
+		"deezerRecommendationId": null,
+		"band": "Cycle Sluts from Hell",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Queen Vixen",
+			"She-Fire of Ice",
+			"Venus Penis Crusher",
+			"Honey 1%er"
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 1986,
+		"yearEnded": 2007,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 21,
+		"id": "metal:96853",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "121087",
+		"deezerRecommendationId": null,
+		"band": "Frantic on March",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Moni Dix"
+		],
+		"country": "Germany",
+		"countryCode": "DE",
+		"yearStarted": 2000,
+		"yearEnded": 2020,
+		"recommendation": "",
+		"links": "https://www.youtube.com/watch?v=rt32egxrAw8",
+		"sister": false,
+		"activeFor": 20,
+		"id": "metal:121087",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": 13755,
+		"metalArchivesId": "4246",
+		"deezerRecommendationId": null,
+		"band": "Flowing Tears",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Helen Vogt"
+		],
+		"country": "Germany",
+		"countryCode": "DE",
+		"yearStarted": 1994,
+		"yearEnded": 2013,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 19,
+		"id": "metal:4246",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Atmospheric Doom Metal (early)",
+			"Gothic Metal (later)"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "51351",
+		"deezerRecommendationId": null,
+		"band": "Ethernity",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Julie Colin"
+		],
+		"country": "Belgium",
+		"countryCode": "BE",
+		"yearStarted": 2000,
+		"yearEnded": 2019,
+		"recommendation": "",
+		"links": "https://www.youtube.com/ethernityofficial",
+		"sister": false,
+		"activeFor": 19,
+		"id": "metal:51351",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Power Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "49407",
+		"deezerRecommendationId": null,
+		"band": "Benighted Soul",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Géraldine Gadaut"
+		],
+		"countryCode": "FR",
+		"yearStarted": 2003,
+		"yearEnded": 2020,
+		"recommendation": "",
+		"links": "https://www.youtube.com/@Benightedsoulofficial",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:49407",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Symphonic Metal"
+		],
+		"country": "France"
+	},
+		{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": 12020508,
+		"metalArchivesId": "3540417115",
+		"deezerRecommendationId": null,
+		"band": "Arshenic",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Ofilia"
+		],
+		"countryCode": "PL",
+		"yearStarted": 2006,
+		"yearEnded": 2023,
+		"recommendation": "",
+		"links": "https://www.youtube.com/channel/UCQo25f5ObHEQG2e9AjURuig",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:3540417115",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy/Groove Metal/Hard Rock"
+		],
+		"country": "Poland"
 	}
 ]
