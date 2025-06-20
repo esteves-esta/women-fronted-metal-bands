@@ -13386,34 +13386,7 @@
 		],
 		"country": "Norway"
 	},
-	{
-		"myFavorites": false,
-		"growling": 0,
-		"deezerId": null,
-		"metalArchivesId": "3540447427",
-		"deezerRecommendationId": null,
-		"band": "Accursed Creator",
-		"recommendationIsCover": false,
-		"blackWomen": false,
-		"allWomenBand": false,
-		"pastVocalists": [],
-		"currentVocalists": [
-			"Chelsea Strickland"
-		],
-		"country": "United States",
-		"countryCode": "US",
-		"yearStarted": 2015,
-		"yearEnded": 0,
-		"recommendation": "",
-		"links": "",
-		"sister": false,
-		"activeFor": 10,
-		"id": "metal:3540447427",
-		"numberOfVocalists": 1,
-		"genre": [
-			"Melodic Blackened Death Metal"
-		]
-	},
+
 	{
 		"myFavorites": false,
 		"growling": 0,

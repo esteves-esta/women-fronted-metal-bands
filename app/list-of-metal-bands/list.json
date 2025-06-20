@@ -8452,8 +8452,8 @@
 	},
 	{
 		"myFavorites": false,
-		"growling": 1620868,
-		"deezerId": null,
+		"growling": 0,
+		"deezerId": 1620868,
 		"metalArchivesId": "3540278977",
 		"deezerRecommendationId": null,
 		"band": "Cross Vein",
@@ -8760,7 +8760,7 @@
 		]
 	},
 		{
-		"myFavorites": false,
+		"myFavorites": true,
 		"growling": 3,
 		"deezerId": null,
 		"metalArchivesId": "3540447427",

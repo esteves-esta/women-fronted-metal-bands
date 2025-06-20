@@ -83,7 +83,7 @@ function BandTable({ bands }: GridProps) {
               <td>
                 <CellFixedWidth>
                   <Tag $hue="purple" $intensity={band.growling} $circle={true}>
-                    {growTagList.find((tag) => tag.value === band.growling).text}
+                    {growTagList.find((tag) => tag.value === band.growling)?.text}
                   </Tag>
                 </CellFixedWidth>
               </td>
@@ -128,7 +128,7 @@ function BandTable({ bands }: GridProps) {
 const Wrapper = styled.div`
   /*
    min-width: 800px;
-   max-width: 1400px; 
+   max-width: 1400px;
    */
    /* width: 800px; */
   overflow-x: auto;
@@ -174,8 +174,8 @@ td:first-of-type{
 const CellFixedWidth = styled.div`
 display: flex;
 justify-content: center;
-min-width: 60px !important; 
-max-width: 60px !important; 
+min-width: 60px !important;
+max-width: 60px !important;
 `;
 
 const CellOverflowHidden = styled.td`
@@ -186,7 +186,7 @@ width: 120px;
 max-width: 120px;
 transition: height 350ms ease-in;
 @media (hover: hover) and (pointer: fine) {
-  
+
    ${Row}:hover & {
      white-space: break-spaces;
      text-overflow: ellipsis;
@@ -211,7 +211,7 @@ const OnHoverWrapper = styled.div`
   user-select: none;
   transition: opacity 650ms ease-in;
   @media (hover: hover) and (pointer: fine) {
-    
+
     ${Row}:hover & {
      white-space: break-spaces;
      opacity: 1;
