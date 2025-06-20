@@ -8137,7 +8137,7 @@
 		],
 		"country": "France"
 	},
-		{
+	{
 		"myFavorites": false,
 		"growling": 0,
 		"deezerId": 12020508,
@@ -8164,5 +8164,598 @@
 			"Heavy/Groove Metal/Hard Rock"
 		],
 		"country": "Poland"
+	},
+	{
+		"myFavorites": false,
+		"growling": 3,
+		"deezerId": null,
+		"metalArchivesId": "71683",
+		"deezerRecommendationId": null,
+		"band": "In.verno",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [
+			"Laura Comesaña"
+		],
+		"currentVocalists": [
+			"Elizabeth Amoedo"
+		],
+		"country": "Spain",
+		"countryCode": "ES",
+		"yearStarted": 2001,
+		"yearEnded": 2018,
+		"recommendation": "",
+		"links": "https://inverno.bandcamp.com/album/the-reasonable-choice-of-insanity",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:71683",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Progressive Gothic Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 3,
+		"deezerId": null,
+		"metalArchivesId": "26312",
+		"deezerRecommendationId": null,
+		"band": "Human Debris",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Elena Cor Tauri"
+		],
+		"country": "Germany",
+		"countryCode": "DE",
+		"yearStarted": 2000,
+		"yearEnded": 2017,
+		"recommendation": "",
+		"links": "https://humandebris.bandcamp.com/album/life-off-formation",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:26312",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Melodic Death Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 3,
+		"deezerId": null,
+		"metalArchivesId": "10629",
+		"deezerRecommendationId": null,
+		"band": "Cernunnos",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Adina Blase"
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 1996,
+		"yearEnded": 2013,
+		"recommendation": "",
+		"links": "https://thetruecernunnos.bandcamp.com/album/promo-2006",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:10629",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Symphonic Black Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 1,
+		"deezerId": 254786,
+		"metalArchivesId": "36609",
+		"deezerRecommendationId": null,
+		"band": "Cantata Sangui",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Hanna Sirola"
+		],
+		"country": "Finland",
+		"countryCode": "FI",
+		"yearStarted": 1997,
+		"yearEnded": 2014,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:36609",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Black/Doom/Gothic Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 1,
+		"deezerId": null,
+		"metalArchivesId": "117874",
+		"deezerRecommendationId": null,
+		"band": "Alkaloid",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Angel"
+		],
+		"country": "Japan",
+		"countryCode": "JP",
+		"yearStarted": 1984,
+		"yearEnded": 2001,
+		"recommendation": "",
+		"links": "https://foadrecords.bandcamp.com/album/invisible-world",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:117874",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 3,
+		"deezerId": 5287134,
+		"metalArchivesId": "3540299671",
+		"deezerRecommendationId": null,
+		"band": "Act of Creation",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Jess",
+			"Tina"
+		],
+		"country": "Germany",
+		"countryCode": "DE",
+		"yearStarted": 2007,
+		"yearEnded": 2024,
+		"recommendation": "",
+		"links": "https://actofcreation.bandcamp.com/album/the-uncertain-light",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:3540299671",
+		"numberOfVocalists": 2,
+		"genre": [
+			"Death/Thrash Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "104107",
+		"deezerRecommendationId": null,
+		"band": "Artep",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Artep"
+		],
+		"countryCode": "CA",
+		"yearStarted": 2006,
+		"yearEnded": 2022,
+		"recommendation": "",
+		"links": "https://music.apple.com/us/album/fires-of-mortal-deception/265516026",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:104107",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Symphonic Black Metal"
+		],
+		"country": "Canada"
+	},
+	{
+		"myFavorites": false,
+		"growling": 3,
+		"deezerId": null,
+		"metalArchivesId": "3540318510",
+		"deezerRecommendationId": null,
+		"band": "Hot Blood",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Chiara Fortini"
+		],
+		"country": "Italy",
+		"countryCode": "IT",
+		"yearStarted": 1980,
+		"yearEnded": 1996,
+		"newName": "Maskim",
+		"recommendation": "",
+		"links": "https://insurgentes.bandcamp.com/album/insurgentes-x",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:3540318510",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Thrash Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": 14504,
+		"metalArchivesId": "71471",
+		"deezerRecommendationId": null,
+		"band": "Erben der Schöpfung",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Dina Falk"
+		],
+		"country": "Liechtenstein",
+		"countryCode": "LI",
+		"yearStarted": 2000,
+		"yearEnded": 2016,
+		"recommendation": "",
+		"links": "https://www.youtube.com/watch?v=3-rmRicuk_o",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:71471",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Electronic/Gothic Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": 1687228,
+		"metalArchivesId": "1320",
+		"deezerRecommendationId": null,
+		"band": "Ephel Duath",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Karyn Crisis"
+		],
+		"country": "Italy",
+		"countryCode": "IT",
+		"yearStarted": 1998,
+		"yearEnded": 2014,
+		"recommendation": "",
+		"links": "https://ephelduath.bandcamp.com/album/pain-necessary-to-know",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:1320",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Progressive Post-Black Metal (early)",
+			"Avant-garde Jazz/Metal (later)"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 1620868,
+		"deezerId": null,
+		"metalArchivesId": "3540278977",
+		"deezerRecommendationId": null,
+		"band": "Cross Vein",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Julia"
+		],
+		"country": "Japan",
+		"countryCode": "JP",
+		"yearStarted": 2007,
+		"yearEnded": 2023,
+		"recommendation": "",
+		"links": "https://www.youtube.com/watch?v=Neob1j2WGjk",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:3540278977",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Symphonic/Melodic Power Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 2,
+		"deezerId": 275270,
+		"metalArchivesId": "59509",
+		"deezerRecommendationId": null,
+		"band": "Corrupted Melody",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Sylvia Rybanová"
+		],
+		"country": "Slovakia",
+		"countryCode": "SK",
+		"yearStarted": 1995,
+		"yearEnded": 2011,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:59509",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Atmospheric Black/Doom/Death Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540288070",
+		"deezerRecommendationId": null,
+		"band": "Талион",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Elena Zavalishina"
+		],
+		"country": "Russia",
+		"countryCode": "RU",
+		"yearStarted": 2004,
+		"yearEnded": 2020,
+		"recommendation": "",
+		"links": "https://music.apple.com/us/artist/%D1%82%D0%B0%D0%BB%D0%B8%D0%BE%D0%BD/1521211154",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:3540288070",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Progressive/Power Metal/Rock"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "35843",
+		"deezerRecommendationId": null,
+		"band": "$uicide $olution",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"\"Evil\" Elsa Faith"
+		],
+		"countryCode": "SG",
+		"yearStarted": 1998,
+		"yearEnded": 2014,
+		"recommendation": "",
+		"links": "https://www.reverbnation.com/suicidesolution",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:35843",
+		"numberOfVocalists": 1,
+		"genre": [
+			null
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "34798",
+		"deezerRecommendationId": null,
+		"band": "Heather Leather",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": true,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Ruth Garza-Newcomb"
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 1978,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "https://www.youtube.com/watch?v=_tKuyvCqX3Q",
+		"sister": false,
+		"activeFor": 47,
+		"id": "metal:34798",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 2,
+		"deezerId": null,
+		"metalArchivesId": "3434",
+		"deezerRecommendationId": null,
+		"band": "Fil di Ferro",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Paola Goitre"
+		],
+		"country": "Italy",
+		"countryCode": "IT",
+		"yearStarted": 1979,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "https://www.youtube.com/watch?v=3gfIUJKB2gU",
+		"sister": false,
+		"activeFor": 46,
+		"id": "metal:3434",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "5356",
+		"deezerRecommendationId": null,
+		"band": "Bitch",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Betsy Bitch"
+		],
+		"countryCode": "US",
+		"yearStarted": 1980,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "https://bitchtheband.com/",
+		"sister": false,
+		"activeFor": 45,
+		"id": "metal:5356",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy Metal"
+		],
+		"country": "United States"
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "516",
+		"deezerRecommendationId": null,
+		"band": "Acid",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Kate de Lombaert"
+		],
+		"country": "Belgium",
+		"countryCode": "BE",
+		"yearStarted": 1980,
+		"yearEnded": 0,
+		"newName": "Kate'sAcid",
+		"recommendation": "",
+		"links": "https://music.apple.com/us/artist/acid/990054086",
+		"sister": false,
+		"activeFor": 45,
+		"id": "metal:516",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Speed Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 2,
+		"deezerId": null,
+		"metalArchivesId": "1151",
+		"deezerRecommendationId": null,
+		"band": "Hellion",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Ann Boleyn"
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 1982,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "https://www.youtube.com/watch?v=u6Z12Sg6QAE",
+		"sister": false,
+		"activeFor": 43,
+		"id": "metal:1151",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy/Speed Metal"
+		]
+	},{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "115315",
+		"deezerRecommendationId": null,
+		"band": "Charger",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Jaz Mean"
+		],
+		"country": "Germany",
+		"countryCode": "DE",
+		"yearStarted": 1982,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "https://charger1.bandcamp.com/track/fearful-nights-2",
+		"sister": false,
+		"activeFor": 43,
+		"id": "metal:115315",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy Metal"
+		]
+	},
+		{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540443084",
+		"deezerRecommendationId": null,
+		"band": "Aleister",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Andy"
+		],
+		"country": "Japan",
+		"countryCode": "JP",
+		"yearStarted": 1982,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "https://www.youtube.com/watch?v=0UJW9bQ6SII",
+		"sister": false,
+		"activeFor": 43,
+		"id": "metal:3540443084",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy Metal (early)",
+			"Heavy Metal/Hard Rock (later)"
+		]
 	}
 ]
