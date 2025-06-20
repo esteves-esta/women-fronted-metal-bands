@@ -1,0 +1,2534 @@
+[
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540268953",
+		"deezerRecommendationId": null,
+		"band": "Ironhead",
+		"genre": "Heavy Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Angela Foxx"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "2003",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 22,
+		"id": "metal:3540268953",
+		"members": [
+			{
+				"id": "176963",
+				"name": "Angela Foxx",
+				"role": "Bass, Vocals (backing)",
+				"info": "See also: Zodiac Panthers"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "57826",
+		"deezerRecommendationId": null,
+		"band": "Iscariota",
+		"genre": "Melodic Death Metal (early); Heavy/Thrash Metal (later)",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Justyna Szatny"
+		],
+		"country": "Poland",
+		"countryCode": null,
+		"yearStarted": "1992",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 33,
+		"id": "metal:57826",
+		"members": [
+			{
+				"id": "154383",
+				"name": "Justyna Szatny",
+				"role": "Keyboards, Vocals (backing)",
+				"info": "See also: Ellisiv, Inverne, Styxx, ex-Vanity Fair, ex-Strzyga (live) , ex-Artrosis (live), ex-Heart Attack (live), ex-With (live)"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "6526",
+		"deezerRecommendationId": null,
+		"band": "Izegrim",
+		"genre": "Thrash/Death Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Marloes Voskuil"
+		],
+		"country": "Netherlands",
+		"countryCode": null,
+		"yearStarted": "1996",
+		"yearEnded": "2020",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 24,
+		"id": "metal:6526",
+		"members": [
+			{
+				"id": "51230",
+				"name": "Marloes Voskuil",
+				"role": "Bass (2004-2018), Vocals (backing) (2004-2008), Vocals (2008-?)",
+				"info": "See also: ex-Haliphron, ex-Deluzion"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "4079",
+		"deezerRecommendationId": null,
+		"band": "Jerry Cantrell",
+		"genre": "Doom/Alternative Metal/Rock, Grunge",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Lola Bates"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "1996",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 29,
+		"id": "metal:4079",
+		"members": [
+			{
+				"id": "913101",
+				"name": "Lola Bates",
+				"role": "Keyboards, Vocals (backing) (2022-present)",
+				"info": "Roy Mayorga"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540354213",
+		"deezerRecommendationId": null,
+		"band": "Judicator",
+		"genre": "Power Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Alicia Cordisco"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "2012",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 13,
+		"id": "metal:3540354213",
+		"members": [
+			{
+				"id": "253129",
+				"name": "Alicia Cordisco",
+				"role": "Bass, Drum programming (2012-2013), Guitars (2012-2020), Vocals (backing) (2013-2020)",
+				"info": "See also: Alicia Cordisco, Justicar, Transgressive, Wraithstorm, ex-Apophenia, ex-Atresia, ex-Grimaced, ex-Project: Roenwolfe, ex-Sedulity, ex-Vermiform"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540419260",
+		"deezerRecommendationId": null,
+		"band": "Ka Gaia An",
+		"genre": "Pagan/Folk Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Irina Movileanu"
+		],
+		"country": "Romania",
+		"countryCode": null,
+		"yearStarted": "2008",
+		"yearEnded": "2017",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 9,
+		"id": "metal:3540419260",
+		"members": [
+			{
+				"id": "584339",
+				"name": "Irina Movileanu",
+				"role": "Keyboards, Vocals (backing)",
+				"info": "See also: ex-An Theos, ex-Clouds"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "56728",
+		"deezerRecommendationId": null,
+		"band": "Kandaon",
+		"genre": "Pagan/Black Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Alina Sirghi"
+		],
+		"country": "Romania",
+		"countryCode": null,
+		"yearStarted": "2005",
+		"yearEnded": "?",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:56728",
+		"members": [
+			{
+				"id": "261470",
+				"name": "Alina Sirghi",
+				"role": "Vocals (backing) (2006-2007)",
+				"info": "Şerban"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540431805",
+		"deezerRecommendationId": null,
+		"band": "Kanimega",
+		"genre": "Melodic Death Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Mitsuki"
+		],
+		"country": "Japan",
+		"countryCode": null,
+		"yearStarted": "2005",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 20,
+		"id": "metal:3540431805",
+		"members": [
+			{
+				"id": "727402",
+				"name": "Mitsuki",
+				"role": "Bass, Vocals (backing) (2017-present)",
+				"info": "Past"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "64967",
+		"deezerRecommendationId": null,
+		"band": "Kartikeya",
+		"genre": "Death/Black Metal with Folk influences (early); Groove/Death Metal with Folk influences (later)",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Chela Harper"
+		],
+		"country": "Russia",
+		"countryCode": "null",
+		"yearStarted": "2005",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 20,
+		"id": "metal:64967",
+		"members": [
+			{
+				"id": "483281",
+				"name": "Chela Harper",
+				"role": "Guitars, Vocals (backing) (2013-2015)",
+				"info": "See also: December's Silence, Sarasvati, ex-Adora Vivos, ex-Amiensus, ex-White Empress, ex-Coal Chamber, ex-VII"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540330978",
+		"deezerRecommendationId": null,
+		"band": "Katabasis",
+		"genre": "Atmospheric/Progressive Black Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Catherine Guirguis"
+		],
+		"country": "Australia",
+		"countryCode": null,
+		"yearStarted": "2002",
+		"yearEnded": "2014",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 12,
+		"id": "metal:3540330978",
+		"members": [
+			{
+				"id": "388458",
+				"name": "Catherine Guirguis",
+				"role": "Keyboards, Backing Vocals (2011-?)",
+				"info": "See also: Subterranean Disposition, ex-Rise of Avernus, ex-Black Horizon"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "102515",
+		"deezerRecommendationId": null,
+		"band": "Kauan",
+		"genre": "Folk/Doom Metal (early); Post-Rock (later)",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Alina Belova"
+		],
+		"country": "Russia",
+		"countryCode": "null",
+		"yearStarted": "2005",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 20,
+		"id": "metal:102515",
+		"members": [
+			{
+				"id": "34934",
+				"name": "Alina Belova",
+				"role": "Keyboards, Vocals (backing) (2013-present)",
+				"info": "See also: Helengard, ex-Inferno, ex-Semargl"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540517543",
+		"deezerRecommendationId": null,
+		"band": "Killer Queen",
+		"genre": "Black Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Francesca Paolucci"
+		],
+		"country": "Italy",
+		"countryCode": null,
+		"yearStarted": "1992",
+		"yearEnded": "1996",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 4,
+		"id": "metal:3540517543",
+		"members": [
+			{
+				"id": "1002934",
+				"name": "Francesca Paolucci",
+				"role": "Vocals (backing) (1992-1993)",
+				"info": "See also: ex-Asmoday (live) , ex-Auramoth (live), ex-Dismhal (live), ex-Excrucior (live), ex-Fire Makers (live), ex-In Sorrow (live), ex-Metallo Pe(n)sante"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540441565",
+		"deezerRecommendationId": null,
+		"band": "Kiloton",
+		"genre": "Thrash Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Izzy Burrill"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "2017",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 8,
+		"id": "metal:3540441565",
+		"members": [
+			{
+				"id": "757357",
+				"name": "Izzy Burrill",
+				"role": "Guitars (rhythm), Vocals (backing) (?-2018)",
+				"info": ""
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540521214",
+		"deezerRecommendationId": null,
+		"band": "Knight of the Dawn",
+		"genre": "Melodic Heavy Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Rose Grisolia"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "N/A",
+		"yearEnded": "N/A",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:3540521214",
+		"members": [
+			{
+				"id": "984748",
+				"name": "Rose Grisolia",
+				"role": "Bass, Vocals (backing)",
+				"info": "See also: Mike Guerrero Project/The Tapping Ninja"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "118564",
+		"deezerRecommendationId": null,
+		"band": "Korpus Inc.",
+		"genre": "Thrash/Death Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Joshi Ciritt"
+		],
+		"country": "Venezuela",
+		"countryCode": null,
+		"yearStarted": "2001",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 24,
+		"id": "metal:118564",
+		"members": [
+			{
+				"id": "428309",
+				"name": "Joshi Ciritt",
+				"role": "Bass, Vocals (backing)",
+				"info": "Pablo Perez"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "11108",
+		"deezerRecommendationId": null,
+		"band": "Kurb Saatus",
+		"genre": "Melodic Death Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Erica Buizert"
+		],
+		"country": "Netherlands",
+		"countryCode": null,
+		"yearStarted": "1994",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 31,
+		"id": "metal:11108",
+		"members": [
+			{
+				"id": "290281",
+				"name": "Erica Buizert",
+				"role": "Bass, Vocals (backing) (1994-2015)",
+				"info": "Peter van der Linden"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540309659",
+		"deezerRecommendationId": null,
+		"band": "Lachryma",
+		"genre": "Black Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Scylla Fawkes"
+		],
+		"country": "New Zealand",
+		"countryCode": null,
+		"yearStarted": "2008",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:3540309659",
+		"members": [
+			{
+				"id": "401176",
+				"name": "Scylla Fawkes",
+				"role": "Keyboards, Vocals (backing)",
+				"info": "See also: ex-Caedo Astrum"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540379134",
+		"deezerRecommendationId": null,
+		"band": "Last Bastion",
+		"genre": "Power Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Sybil Grace"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "2012",
+		"yearEnded": "?",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:3540379134",
+		"members": [
+			{
+				"id": "785384",
+				"name": "Sybil Grace",
+				"role": "Guitars (lead), Vocals (backing)",
+				"info": "See also: Higher-Order, Oceaneer, Sybil Grace, The Junimos"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540531547",
+		"deezerRecommendationId": null,
+		"band": "Lebensstille",
+		"genre": "Blackened Death Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Razorwitch"
+		],
+		"country": "Germany",
+		"countryCode": null,
+		"yearStarted": "2021",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 4,
+		"id": "metal:3540531547",
+		"members": [
+			{
+				"id": "1078145",
+				"name": "Razorwitch",
+				"role": "Guitars (lead), Vocals (backing) (2025-present)",
+				"info": "Past"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "124301",
+		"deezerRecommendationId": null,
+		"band": "Leprosy",
+		"genre": "Death/Thrash Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Antigone"
+		],
+		"country": "Greece",
+		"countryCode": null,
+		"yearStarted": "1996",
+		"yearEnded": "?",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:124301",
+		"members": [
+			{
+				"id": "842404",
+				"name": "Antigone",
+				"role": "Vocals (backing), Keyboards (1997-1998)",
+				"info": ""
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540332957",
+		"deezerRecommendationId": null,
+		"band": "Level",
+		"genre": "Groove/Doom Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Lori Price"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "1995",
+		"yearEnded": "2003(as MFrancisFester)",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:3540332957",
+		"members": [
+			{
+				"id": "243753",
+				"name": "Lori Price",
+				"role": "Guitar, Vocals (backing) (1995-?)",
+				"info": "See also: ex-Disciples of Aggression, ex-M Francis Fester, ex-Taz"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540328446",
+		"deezerRecommendationId": null,
+		"band": "Leśne Licho",
+		"genre": "Folk Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Ola Mrozek"
+		],
+		"country": "Poland",
+		"countryCode": null,
+		"yearStarted": "2007",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 18,
+		"id": "metal:3540328446",
+		"members": [
+			{
+				"id": "138187",
+				"name": "Ola \"Shonhor\" Mrozek",
+				"role": "Keyboards (2007-present), Vocals (2012-2014), Percussions, Vocals (backing) (2016-present)",
+				"info": "See also: ex-Runika"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "54385",
+		"deezerRecommendationId": null,
+		"band": "Life Stealing",
+		"genre": "Power Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Lud Reis"
+		],
+		"country": "Brazil",
+		"countryCode": null,
+		"yearStarted": "1998",
+		"yearEnded": "?",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:54385",
+		"members": [
+			{
+				"id": "272961",
+				"name": "Lud Reis",
+				"role": "Keyboards, Vocals (backing) (2004-2005)",
+				"info": "See also: Dooren, ex-Angelique, ex-Fake Heroes"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "24869",
+		"deezerRecommendationId": null,
+		"band": "Liturgy of Decay",
+		"genre": "Symphonic/Industrial Gothic Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Kawthar Daouda"
+		],
+		"country": "France",
+		"countryCode": null,
+		"yearStarted": "1995",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 30,
+		"id": "metal:24869",
+		"members": [
+			{
+				"id": "175197",
+				"name": "Kawthar Daouda",
+				"role": "Bass, Vocals (backing)",
+				"info": "Xavier Bernard"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540514608",
+		"deezerRecommendationId": null,
+		"band": "Lividus",
+		"genre": "Progressive Melodic Death/Thrash Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"iconartistry"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "2017",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 8,
+		"id": "metal:3540514608",
+		"members": [
+			{
+				"id": "848371",
+				"name": "Connie Wang",
+				"role": "Bass, Vocals (backing)",
+				"info": "Pierce Williams"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540257811",
+		"deezerRecommendationId": null,
+		"band": "Lizard",
+		"genre": "Melodic Heavy Metal/Hard Rock",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Natalie Lubke"
+		],
+		"country": "Germany",
+		"countryCode": null,
+		"yearStarted": "1986",
+		"yearEnded": " 2013",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 27,
+		"id": "metal:3540257811",
+		"members": [
+			{
+				"id": "781322",
+				"name": "Natalie Lubke",
+				"role": "Keyboards, Vocals (backing)",
+				"info": "Past"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540347007",
+		"deezerRecommendationId": null,
+		"band": "Lords of the Drunken Pirate Crew",
+		"genre": "Folk Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Sophia"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "2011",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 14,
+		"id": "metal:3540347007",
+		"members": [
+			{
+				"id": "259957",
+				"name": "The Red Lady Sophia",
+				"role": "Keyboards, Piccolo, Flute, Vocals (backing) (2013-present)",
+				"info": "See also: League of Misery, ex-Earthen, ex-Urn"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "84131",
+		"deezerRecommendationId": null,
+		"band": "Lucifer",
+		"genre": "Blackened Heavy Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Julia Card"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "1989",
+		"yearEnded": "?",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:84131",
+		"members": [
+			{
+				"id": "232586",
+				"name": "Julia Card",
+				"role": "Vocals (backing)",
+				"info": "Past"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540434058",
+		"deezerRecommendationId": null,
+		"band": "Lunatic Man's Dream",
+		"genre": "Thrash Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Bettina Brüchert"
+		],
+		"country": "Germany",
+		"countryCode": null,
+		"yearStarted": "2011",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 14,
+		"id": "metal:3540434058",
+		"members": [
+			{
+				"id": "732740",
+				"name": "Bettina Brüchert",
+				"role": "Bass, Vocals (backing) (2016-present)",
+				"info": "Past"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540396447",
+		"deezerRecommendationId": null,
+		"band": "Lux Purus",
+		"genre": "Symphonic Power Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Ana Marija Dundović"
+		],
+		"country": "Croatia",
+		"countryCode": null,
+		"yearStarted": "2011",
+		"yearEnded": "?",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:3540396447",
+		"members": [
+			{
+				"id": "614409",
+				"name": "Ana Marija Dundović",
+				"role": "Vocals (lead & backing) (2011-?)",
+				"info": "See also: Piano Black"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "18572",
+		"deezerRecommendationId": null,
+		"band": "Luxúria de Lillith",
+		"genre": "Melodic Black Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Larakna"
+		],
+		"country": "Brazil",
+		"countryCode": null,
+		"yearStarted": "1998",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 27,
+		"id": "metal:18572",
+		"members": [
+			{
+				"id": "22495",
+				"name": "Larakna",
+				"role": "Guitars, Vocals (backing) (2007-2017, 2019-present)",
+				"info": "Past"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "59031",
+		"deezerRecommendationId": null,
+		"band": "Lyriel",
+		"genre": "Symphonic Folk Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Linda Laukamp"
+		],
+		"country": "Germany",
+		"countryCode": null,
+		"yearStarted": "2003",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 22,
+		"id": "metal:59031",
+		"members": [
+			{
+				"id": "257534",
+				"name": "Linda Laukamp",
+				"role": "Cello, Vocals (backing) (2003-present)",
+				"info": "See also: Eklipse, Roads&Shoes"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540332953",
+		"deezerRecommendationId": null,
+		"band": "M Francis Fester",
+		"genre": "Industrial/Groove Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Lori Price"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "1999",
+		"yearEnded": "2003",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 4,
+		"id": "metal:3540332953",
+		"members": [
+			{
+				"id": "243753",
+				"name": "Minnie Mean",
+				"role": "Guitar, Vocals (backing) (1999-2003)",
+				"info": "See also: ex-Disciples of Aggression, ex-Level, ex-Taz"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "49847",
+		"deezerRecommendationId": null,
+		"band": "Maelstrom",
+		"genre": "Thrash Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Lorgar"
+		],
+		"country": "United Kingdom",
+		"countryCode": null,
+		"yearStarted": "2004",
+		"yearEnded": "2006",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 2,
+		"id": "metal:49847",
+		"members": [
+			{
+				"id": "209135",
+				"name": "Andy Wears",
+				"role": "Bass, Vocals (backing)",
+				"info": "See also: Aubzagl, Forneus, Petrichor, Utilitarian, Bile Salt Malabsorption, Operation Overlord, ex-Blood Countess"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "57573",
+		"deezerRecommendationId": null,
+		"band": "Maestro",
+		"genre": "Heavy Metal, Neoclassical",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Jessica Grave"
+		],
+		"country": "Canada",
+		"countryCode": null,
+		"yearStarted": "2005",
+		"yearEnded": "?",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:57573",
+		"members": [
+			{
+				"id": "313884",
+				"name": "Jessica Grave",
+				"role": "Vocals (lead and backing)",
+				"info": "See also: ex-Slaves of Sins"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540418801",
+		"deezerRecommendationId": null,
+		"band": "Magma",
+		"genre": "Heavy Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Liseth Mendoza"
+		],
+		"country": "Mexico",
+		"countryCode": null,
+		"yearStarted": "N/A",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:3540418801",
+		"members": [
+			{
+				"id": "686064",
+				"name": "Liseth Mendoza",
+				"role": "Vocals (backing)",
+				"info": ""
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540503284",
+		"deezerRecommendationId": null,
+		"band": "Magmount",
+		"genre": "Black/Thrash Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Abrahel"
+		],
+		"country": "Colombia",
+		"countryCode": null,
+		"yearStarted": "2019",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 6,
+		"id": "metal:3540503284",
+		"members": [
+			{
+				"id": "648389",
+				"name": "Abrahel",
+				"role": "Bass, Vocals (Backing) (2019-2020)",
+				"info": "See also: Tumulario, ex-Orgullo Nativo"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540346344",
+		"deezerRecommendationId": null,
+		"band": "Majesty of Revival",
+		"genre": "Progressive/Neoclassical Power Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Nelly Hanael"
+		],
+		"country": "Ukraine",
+		"countryCode": null,
+		"yearStarted": "2009",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:3540346344",
+		"members": [
+			{
+				"id": "517706",
+				"name": "Nelly Hanael",
+				"role": "Vocals (backing) (2012-2015)",
+				"info": "See also: ex-Dimitriy Pavlovskiy's PowerSquad, ex-Cruachan (live)"
+			},
+			{
+				"id": "517706",
+				"name": "Nelly Hanael",
+				"role": "Vocals (backing) (2012-present)",
+				"info": "See also: ex-Dimitriy Pavlovskiy's PowerSquad, ex-Cruachan (live)"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540328594",
+		"deezerRecommendationId": null,
+		"band": "Make Them Suffer",
+		"genre": "Symphonic Deathcore (early); Deathcore/Metalcore (later)",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Alex Reade"
+		],
+		"country": "Australia",
+		"countryCode": null,
+		"yearStarted": "2008",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:3540328594",
+		"members": [
+			{
+				"id": "953275",
+				"name": "Alex Reade",
+				"role": "Keyboards, Vocals (backing) (2022-present)",
+				"info": "See also: ex-Drown This City, ex-Fæble"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540349058",
+		"deezerRecommendationId": null,
+		"band": "Maladie",
+		"genre": "Progressive/Avant-garde Black Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Wiebke EB"
+		],
+		"country": "Germany",
+		"countryCode": null,
+		"yearStarted": "2009",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:3540349058",
+		"members": [
+			{
+				"id": "1066494",
+				"name": "Wiebke EB",
+				"role": "Vocals (backing) (2024-present)",
+				"info": "Past"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540381269",
+		"deezerRecommendationId": null,
+		"band": "Malicious Culebra",
+		"genre": "Thrash/Groove Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Agus"
+		],
+		"country": "Argentina",
+		"countryCode": null,
+		"yearStarted": "2007",
+		"yearEnded": "2023",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:3540381269",
+		"members": [
+			{
+				"id": "565497",
+				"name": "Agustina Hidalgo",
+				"role": "Drums, Vocals (backing), Percussion",
+				"info": "Damian Nuss"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540421146",
+		"deezerRecommendationId": null,
+		"band": "Mandrake",
+		"genre": "Brutal Death Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Micky"
+		],
+		"country": "Japan",
+		"countryCode": null,
+		"yearStarted": "2008",
+		"yearEnded": "2013",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 5,
+		"id": "metal:3540421146",
+		"members": [
+			{
+				"id": "988872",
+				"name": "Miyuki Seki",
+				"role": "Guitars, Vocals (backing) (2008-2013)",
+				"info": "See also: ex-Skull Fuck, ex-GuzlaMozla, ex-MishMash"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "83579",
+		"deezerRecommendationId": null,
+		"band": "Mega Grave",
+		"genre": "Thrash Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Diana Hofmann"
+		],
+		"country": "Germany",
+		"countryCode": null,
+		"yearStarted": "N/A",
+		"yearEnded": "N/A",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:83579",
+		"members": [
+			{
+				"id": "386592",
+				"name": "Diana Hofmann",
+				"role": "Bass, Vocals (backing)",
+				"info": "Andy Konstandaras"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "34666",
+		"deezerRecommendationId": null,
+		"band": "Melancholy",
+		"genre": "Doom/Gothic Metal, Progressive Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Victoria Ugly"
+		],
+		"country": "Russia",
+		"countryCode": "null",
+		"yearStarted": "1998",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 27,
+		"id": "metal:34666",
+		"members": [
+			{
+				"id": "193976",
+				"name": "Victoria Ugly",
+				"role": "Keyboards, Vocals (backing)",
+				"info": "Mac Leod"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540387200",
+		"deezerRecommendationId": null,
+		"band": "Melyra",
+		"genre": "Heavy Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Helena Accioly"
+		],
+		"country": "Brazil",
+		"countryCode": null,
+		"yearStarted": "2012",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 13,
+		"id": "metal:3540387200",
+		"members": [
+			{
+				"id": "584504",
+				"name": "Helena Accioly",
+				"role": "Bass, Vocals (backing) (2012-present)",
+				"info": "Fernanda Schenker"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540325878",
+		"deezerRecommendationId": null,
+		"band": "Members of God",
+		"genre": "Progressive Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Bruna Squilla"
+		],
+		"country": "Italy",
+		"countryCode": null,
+		"yearStarted": "2009",
+		"yearEnded": "?",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:3540325878",
+		"members": [
+			{
+				"id": "439755",
+				"name": "Myriamor",
+				"role": "Vocals (lead & backing) (2009-?)",
+				"info": "Jesus of Nazareth"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "8166",
+		"deezerRecommendationId": null,
+		"band": "Memorized Dreams",
+		"genre": "Power Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Maria Garli"
+		],
+		"country": "Norway",
+		"countryCode": null,
+		"yearStarted": "1999",
+		"yearEnded": "?",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:8166",
+		"members": [
+			{
+				"id": "134418",
+				"name": "Maria Garli",
+				"role": "Vocals (female) (2000-2002), Keyboards, Piano, Backing Vocals (2002-?)",
+				"info": "Geir Roso"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540516223",
+		"deezerRecommendationId": null,
+		"band": "Metal Charm",
+		"genre": "Death/Thrash/Groove Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Senem Semiz"
+		],
+		"country": "Türkiye",
+		"countryCode": null,
+		"yearStarted": "2022",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 3,
+		"id": "metal:3540516223",
+		"members": [
+			{
+				"id": "1040136",
+				"name": "Senem Semiz",
+				"role": "Bass, Vocals (backing) (2023-2024), Vocals (2024-present)",
+				"info": "See also: The Choir of Agony"
+			},
+			{
+				"id": "1040136",
+				"name": "Senem Semiz",
+				"role": "Bass, Vocals (2023-present)",
+				"info": "See also: The Choir of Agony"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540310773",
+		"deezerRecommendationId": null,
+		"band": "MetalThrashFactory",
+		"genre": "Thrash/Groove Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Daniela Vieceli"
+		],
+		"country": "Italy",
+		"countryCode": null,
+		"yearStarted": "2005",
+		"yearEnded": "?",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:3540310773",
+		"members": [
+			{
+				"id": "363077",
+				"name": "Daniela Vieceli",
+				"role": "Bass, Vocals (backing) (2005-?)",
+				"info": "\"Heavy\" Devis Groppo"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "45560",
+		"deezerRecommendationId": null,
+		"band": "Mind Blast",
+		"genre": "Doom/Gothic Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Larissa \"Vandena\""
+		],
+		"country": "Russia",
+		"countryCode": "null",
+		"yearStarted": "2005",
+		"yearEnded": "?",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:45560",
+		"members": [
+			{
+				"id": "409506",
+				"name": "Larissa \"Vandena\"",
+				"role": "Vocals (backing), Keyboards, Songwriting",
+				"info": "Dying in Winter"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "69038",
+		"deezerRecommendationId": null,
+		"band": "Mind Factory",
+		"genre": "Melodic Death Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Essi Tesarzyk"
+		],
+		"country": "Finland",
+		"countryCode": null,
+		"yearStarted": "2001",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 24,
+		"id": "metal:69038",
+		"members": [
+			{
+				"id": "168807",
+				"name": "Essi Tesarzyk",
+				"role": "Violin, Vocals (backing) (2005-present)",
+				"info": "Mirva Peltola"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540532956",
+		"deezerRecommendationId": null,
+		"band": "Mind Illusion",
+		"genre": "Power Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Marie-Ève Dubois"
+		],
+		"country": "Canada",
+		"countryCode": null,
+		"yearStarted": "N/A",
+		"yearEnded": "N/A",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:3540532956",
+		"members": [
+			{
+				"id": "1013519",
+				"name": "Marie-Ève Dubois",
+				"role": "Vocals (female, backing)",
+				"info": "Marilyn Dubé"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540375447",
+		"deezerRecommendationId": null,
+		"band": "Mind Imperium",
+		"genre": "Melodic Groove/Thrash Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Carol Demessieux"
+		],
+		"country": "France",
+		"countryCode": null,
+		"yearStarted": "2012",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 13,
+		"id": "metal:3540375447",
+		"members": [
+			{
+				"id": "219867",
+				"name": "Carol Demessieux",
+				"role": "Bass, Vocals (backing)",
+				"info": "See also: Death of a Dryad, ex-Necroblaspheme, ex-Ur Macht"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "58724",
+		"deezerRecommendationId": null,
+		"band": "Mindstorm",
+		"genre": "Heavy Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Tunde Szekely"
+		],
+		"country": "Romania",
+		"countryCode": null,
+		"yearStarted": "1993",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 32,
+		"id": "metal:58724",
+		"members": [
+			{
+				"id": "131162",
+				"name": "Tunde \"Dude\" Szekely",
+				"role": "Vocals (backing)",
+				"info": ""
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "24973",
+		"deezerRecommendationId": null,
+		"band": "Mirage",
+		"genre": "Heavy Metal/Hard Rock",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Stine Annesen"
+		],
+		"country": "Denmark",
+		"countryCode": null,
+		"yearStarted": "1982",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 43,
+		"id": "metal:24973",
+		"members": [
+			{
+				"id": "956922",
+				"name": "Stine Annesen",
+				"role": "Vocals (backing)",
+				"info": "Past"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "96247",
+		"deezerRecommendationId": null,
+		"band": "Miriam",
+		"genre": "Melodic Heavy Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Henna-Maria Harju"
+		],
+		"country": "Finland",
+		"countryCode": null,
+		"yearStarted": "2005",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 20,
+		"id": "metal:96247",
+		"members": [
+			{
+				"id": "945922",
+				"name": "Henna-Maria Harju",
+				"role": "Violin, Vocals (backing), Mandolin (2012-present)",
+				"info": "Juho Kotiaho"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540534133",
+		"deezerRecommendationId": null,
+		"band": "Misery Tomb",
+		"genre": "Crossover/Thrash Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Trin Dafoe"
+		],
+		"country": "Canada",
+		"countryCode": null,
+		"yearStarted": "N/A",
+		"yearEnded": "N/A",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:3540534133",
+		"members": [
+			{
+				"id": "1016464",
+				"name": "Trin Dafoe",
+				"role": "Drums, Vocals (backing)",
+				"info": "Josh Kovatch"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540372883",
+		"deezerRecommendationId": null,
+		"band": "Mist",
+		"genre": "Doom Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Ema Babošek"
+		],
+		"country": "Slovenia",
+		"countryCode": null,
+		"yearStarted": "2012",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 13,
+		"id": "metal:3540372883",
+		"members": [
+			{
+				"id": "534337",
+				"name": "Ema Babošek",
+				"role": "Guitars (rhythm), Vocals (backing) (2012-present)",
+				"info": "Nina Spruk"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540546603",
+		"deezerRecommendationId": null,
+		"band": "Misyrion",
+		"genre": "Black/Death Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Sunshine Schneider"
+		],
+		"country": "Canada",
+		"countryCode": null,
+		"yearStarted": "2023",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 2,
+		"id": "metal:3540546603",
+		"members": [
+			{
+				"id": "805643",
+				"name": "Sunshine Schneider",
+				"role": "Bass, Vocals (backing)",
+				"info": "See also: Arboreal, Crown of Madness, ex-Severed Tusk"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "87192",
+		"deezerRecommendationId": null,
+		"band": "Moloch",
+		"genre": "Black Metal, Ambient",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Unholy Tatiana"
+		],
+		"country": "Ukraine",
+		"countryCode": null,
+		"yearStarted": "2002",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 23,
+		"id": "metal:87192",
+		"members": [
+			{
+				"id": "1312",
+				"name": "Unholy Tatiana",
+				"role": "Vocals (backing) (2004)",
+				"info": "Kenneth Svartalv"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540320113",
+		"deezerRecommendationId": null,
+		"band": "Monvment",
+		"genre": "Black Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Nicole McClean"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "2008",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:3540320113",
+		"members": [
+			{
+				"id": "205064",
+				"name": "Nicole McClean",
+				"role": "Vocals (backing)",
+				"info": ""
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "50831",
+		"deezerRecommendationId": null,
+		"band": "Morlock",
+		"genre": "Black Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Daniela"
+		],
+		"country": "Germany",
+		"countryCode": null,
+		"yearStarted": "N/A",
+		"yearEnded": "present(as Asen)",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:50831",
+		"members": [
+			{
+				"id": "368260",
+				"name": "Daniela",
+				"role": "Vocals (backing)",
+				"info": ""
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540358863",
+		"deezerRecommendationId": null,
+		"band": "Mourning Divine",
+		"genre": "Power/Progressive Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Natalie Roeder"
+		],
+		"country": "Germany",
+		"countryCode": null,
+		"yearStarted": "2009",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:3540358863",
+		"members": [
+			{
+				"id": "480074",
+				"name": "Natalie Roeder",
+				"role": "Keyboards, Vocals (backing) (2009-present)",
+				"info": "Olivier Tonnelier"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "125493",
+		"deezerRecommendationId": null,
+		"band": "Munarheim",
+		"genre": "Symphonic Folk Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Theresa Trebes"
+		],
+		"country": "Germany",
+		"countryCode": null,
+		"yearStarted": "2007",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 18,
+		"id": "metal:125493",
+		"members": [
+			{
+				"id": "509402",
+				"name": "Theresa Trebes",
+				"role": "Guitars (acoustic), Vocals (backing)",
+				"info": "Sebastian Braun"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540491756",
+		"deezerRecommendationId": null,
+		"band": "Murderess",
+		"genre": "Black Metal/Crust Punk",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Casey Lynch"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "2008",
+		"yearEnded": "?",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:3540491756",
+		"members": [
+			{
+				"id": "496930",
+				"name": "Casey Lynch",
+				"role": "Bass, Vocals (backing) (?-2013)",
+				"info": "See also: Witch Vomit, Apraxic (live) , Aldebaran, ex-Trepanation, ex-Hulder (live), ex-Sempiternal Dusk (live)"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "10745",
+		"deezerRecommendationId": null,
+		"band": "Myon",
+		"genre": "Melodic Power Metal/Rock",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Päivi Karjala"
+		],
+		"country": "Finland",
+		"countryCode": null,
+		"yearStarted": "1995",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 30,
+		"id": "metal:10745",
+		"members": [
+			{
+				"id": "418294",
+				"name": "Päivi Karjala",
+				"role": "Vocals (backing) (?-2011)",
+				"info": ""
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "63035",
+		"deezerRecommendationId": null,
+		"band": "Myrkvar",
+		"genre": "Folk/Viking Metal with Black Metal influences",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Klaartje van Zwoll"
+		],
+		"country": "Netherlands",
+		"countryCode": null,
+		"yearStarted": "2003",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 22,
+		"id": "metal:63035",
+		"members": [
+			{
+				"id": "155337",
+				"name": "Klaartje van Zwoll",
+				"role": "Violin, Vocals (backing) (2006-present)",
+				"info": "See also: Sowulo"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "1025",
+		"deezerRecommendationId": null,
+		"band": "Mötley Crüe",
+		"genre": "Heavy/Glam Metal, Hard Rock",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Pearl Aday"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "1981",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 44,
+		"id": "metal:1025",
+		"members": [
+			{
+				"id": "605797",
+				"name": "Pearl Aday",
+				"role": "Vocals (backing) (2000)",
+				"info": "See also: Motor Sister, Pearl"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "109419",
+		"deezerRecommendationId": null,
+		"band": "Nachtgeschrei",
+		"genre": "Folk Metal/Rock",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Lauren \"Laui\" Weser"
+		],
+		"country": "Germany",
+		"countryCode": null,
+		"yearStarted": "2006",
+		"yearEnded": "2017",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 11,
+		"id": "metal:109419",
+		"members": [
+			{
+				"id": "625816",
+				"name": "Lauren \"Laui\" Weser",
+				"role": "Flutes, Hurdy gurdy, Vocals (backing) (2015-2017)",
+				"info": "See also: Fiolka"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540302150",
+		"deezerRecommendationId": null,
+		"band": "Nemesyz",
+		"genre": "Progressive Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Moniek Roeloffs"
+		],
+		"country": "Netherlands",
+		"countryCode": null,
+		"yearStarted": "2000",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 25,
+		"id": "metal:3540302150",
+		"members": [
+			{
+				"id": "295413",
+				"name": "Moniek Roeloffs",
+				"role": "Bass, Backing Vocals (2009)",
+				"info": "See also: Novaria"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "20515",
+		"deezerRecommendationId": null,
+		"band": "Nott",
+		"genre": "Black Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Noctuaria"
+		],
+		"country": "Italy",
+		"countryCode": null,
+		"yearStarted": "2002",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 23,
+		"id": "metal:20515",
+		"members": [
+			{
+				"id": "354170",
+				"name": "Noctuaria",
+				"role": "Vocals (backing) (2013-?)",
+				"info": "See also: Nebrus, ex-Urticant, Flusso Delirante Persecutorio, Ignis Absconditus, ex-I Sentieri di Staglieno"
+			},
+			{
+				"id": "354170",
+				"name": "Noctuaria",
+				"role": "Vocals (2018-present)",
+				"info": "See also: Nebrus, ex-Urticant, Flusso Delirante Persecutorio, Ignis Absconditus, ex-I Sentieri di Staglieno"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540517827",
+		"deezerRecommendationId": null,
+		"band": "Observer",
+		"genre": "Death Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Emma Joann Lytle"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "2019",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 6,
+		"id": "metal:3540517827",
+		"members": [
+			{
+				"id": "607379",
+				"name": "Emma Joann Lytle",
+				"role": "Bass, Backing Vocals",
+				"info": "See also: ex-Vault Dweller, ex-Vaginal Bear Trap (live) , ex-CreatorDestroyer, ex-Imperial Slaughter"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "53121",
+		"deezerRecommendationId": null,
+		"band": "Plastilinovy Jinn",
+		"genre": "Heavy Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Anzura"
+		],
+		"country": "Kazakhstan",
+		"countryCode": null,
+		"yearStarted": "1997",
+		"yearEnded": "?",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:53121",
+		"members": [
+			{
+				"id": "136458",
+				"name": "Anzura",
+				"role": "Vocals, Backing Vocals",
+				"info": "Alexander Zaplagin"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540257479",
+		"deezerRecommendationId": null,
+		"band": "R.U.S.T.X",
+		"genre": "Heavy Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Katerina Xanthou"
+		],
+		"country": "Cyprus",
+		"countryCode": null,
+		"yearStarted": "2004",
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 21,
+		"id": "metal:3540257479",
+		"members": [
+			{
+				"id": "640281",
+				"name": "Katerina Xanthou",
+				"role": "Keyboards, Vocals (2015-present)",
+				"info": "Past"
+			},
+			{
+				"id": "640281",
+				"name": "Katerina Xanthou",
+				"role": "Keyboards (2015), Vocals (backing) (2015), Vocals (lead) (2015)",
+				"info": ""
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "72679",
+		"deezerRecommendationId": null,
+		"band": "Slamcat",
+		"genre": "Thrash/Power/Groove Metal",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Janna Fischback"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": "1993",
+		"yearEnded": "1997",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 4,
+		"id": "metal:72679",
+		"members": [
+			{
+				"id": "280688",
+				"name": "Janna Fischback",
+				"role": "Guitars, Backing Vocals",
+				"info": "See also: ex-Triggerfuse"
+			}
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "60518",
+		"deezerRecommendationId": null,
+		"band": "The Kolony",
+		"genre": "Thrash Metal/Grindcore",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Erica Barrow"
+		],
+		"country": "Sweden",
+		"countryCode": null,
+		"yearStarted": "N/A",
+		"yearEnded": "N/A",
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:60518",
+		"members": [
+			{
+				"id": "339695",
+				"name": "Erica Barrow",
+				"role": "Guitars, Backing Vocals",
+				"info": "Jaunice Tomboy"
+			}
+		]
+	}
+]

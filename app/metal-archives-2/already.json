@@ -1,0 +1,1244 @@
+[
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540358276",
+		"deezerRecommendationId": null,
+		"band": "Junkyard Lipstick",
+		"genre": [
+			"Punk, Hard Rock (early); Death/Thrash Metal (later)"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Jo Smit"
+		],
+		"country": "South Africa",
+		"countryCode": null,
+		"yearStarted": 2011,
+		"yearEnded": 2016,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 5,
+		"id": "metal:3540358276",
+		"members": [
+			{
+				"id": "600231",
+				"name": "Jo Smit",
+				"role": "Vocals (2015-2016)",
+				"info": "See also: Testosteruins, Bloodbarf, ex-TerroRaze"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540520557",
+		"deezerRecommendationId": null,
+		"band": "Predatory Void",
+		"genre": [
+			"Black/Sludge/Death Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Lina"
+		],
+		"country": "Belgium",
+		"countryCode": null,
+		"yearStarted": 2022,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 3,
+		"id": "metal:3540520557",
+		"members": [
+			{
+				"id": "878796",
+				"name": "Lina R",
+				"role": "Vocals (2022-present)",
+				"info": "See also: Cross Bringer, ex-The Homeless Is Dead"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540482439",
+		"deezerRecommendationId": null,
+		"band": "Tessia",
+		"genre": [
+			"Progressive Power/Death Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Julie Dyrdal"
+		],
+		"country": "Norway",
+		"countryCode": null,
+		"yearStarted": 2016,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 9,
+		"id": "metal:3540482439",
+		"members": [
+			{
+				"id": "887992",
+				"name": "Julie Berthelsen",
+				"role": "Vocals (2016-present)",
+				"info": "Sindre Haugen"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540424647",
+		"deezerRecommendationId": null,
+		"band": "Konvent",
+		"genre": [
+			"Death/Doom Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Rikke Emilie List"
+		],
+		"country": "Denmark",
+		"countryCode": null,
+		"yearStarted": 2015,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 10,
+		"id": "metal:3540424647",
+		"members": [
+			{
+				"id": "704946",
+				"name": "Rikke Emilie List",
+				"role": "Vocals (2015-present)",
+				"info": "Julie Simonsen"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540398958",
+		"deezerRecommendationId": null,
+		"band": "Venom Prison",
+		"genre": [
+			"Death Metal/Hardcore (early); Melodic Death Metal/Metalcore (later)"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Larissa Stupar"
+		],
+		"country": "United Kingdom",
+		"countryCode": null,
+		"yearStarted": 2014,
+		"yearEnded": 2022,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 8,
+		"id": "metal:3540398958",
+		"members": [
+			{
+				"id": "622859",
+				"name": "Larissa Stupar",
+				"role": "Vocals (2014-present)",
+				"info": "See also: ex-Clandestine aD, ex-Wolf Down"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540476669",
+		"deezerRecommendationId": null,
+		"band": "The Damnnation",
+		"genre": [
+			"Thrash/Death Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Renata Petrelli"
+		],
+		"country": "Brazil",
+		"countryCode": null,
+		"yearStarted": 2019,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 6,
+		"id": "metal:3540476669",
+		"members": [
+			{
+				"id": "85406",
+				"name": "Renata Petrelli",
+				"role": "Guitars, Vocals (2019-present)",
+				"info": "See also: Foofas - Female Foo Fighters Cover, ex-Helgardh, ex-HellArise, ex-Sinaya, ex-Naurú"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "102219",
+		"deezerRecommendationId": null,
+		"band": "The Agonist",
+		"genre": [
+			"Melodic Death Metal/Metalcore"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Vicky Psarakis"
+		],
+		"country": "Canada",
+		"countryCode": null,
+		"yearStarted": 2004,
+		"yearEnded": 2023,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 19,
+		"id": "metal:102219",
+		"members": [
+			{
+				"id": "518638",
+				"name": "Vicky Psarakis",
+				"role": "Vocals (lead) (2014-2023)",
+				"info": "See also: E.V.E., Sicksense"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "63903",
+		"deezerRecommendationId": null,
+		"band": "Spoil Engine",
+		"genre": [
+			"Melodic Death Metal/Metalcore"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Iris Goessens"
+		],
+		"country": "Belgium",
+		"countryCode": null,
+		"yearStarted": 2004,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 21,
+		"id": "metal:63903",
+		"members": [
+			{
+				"id": "641271",
+				"name": "Iris Goessens",
+				"role": "Vocals (2015-2022)",
+				"info": "See also: Three Times Royal, ex-Drunken Dreams"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540399747",
+		"deezerRecommendationId": null,
+		"band": "Once Human",
+		"genre": [
+			"Groove Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Lauren Hart"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": 2014,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 11,
+		"id": "metal:3540399747",
+		"members": [
+			{
+				"id": "628722",
+				"name": "Lauren Hart",
+				"role": "Guitars (rhythm), Piano (2014-2015), Vocals (2014-present)",
+				"info": "See also: ex-Divine Heresy, ex-Kamelot (live)"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540417707",
+		"deezerRecommendationId": null,
+		"band": "Oathbreaker",
+		"genre": [
+			"Hardcore Punk (early); Post-Black Metal/Post-Hardcore (later)"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Caro Tanghe"
+		],
+		"country": "Belgium",
+		"countryCode": null,
+		"yearStarted": 2008,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:3540417707",
+		"members": [
+			{
+				"id": "682650",
+				"name": "Caro Tanghe",
+				"role": "Vocals (2008-present)",
+				"info": "See also: ex-Amenra (live) , ex-No Recess"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "78863",
+		"deezerRecommendationId": null,
+		"band": "Nocturna",
+		"genre": [
+			"Melodic Black Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Natalia Prieto"
+		],
+		"country": "Colombia",
+		"countryCode": null,
+		"yearStarted": 2001,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 24,
+		"id": "metal:78863",
+		"members": [
+			{
+				"id": "303327",
+				"name": "Natalia Prieto",
+				"role": "Vocals (female)",
+				"info": "Elizabeth"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540479550",
+		"deezerRecommendationId": null,
+		"band": "Nemophila",
+		"genre": [
+			"Metalcore/Hard Rock"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Sindy"
+		],
+		"country": "Japan",
+		"countryCode": null,
+		"yearStarted": 2019,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 6,
+		"id": "metal:3540479550",
+		"members": [
+			{
+				"id": "816082",
+				"name": "Mayu",
+				"role": "Vocals (2019-present)",
+				"info": "See also: ex-Lipstick"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "18976",
+		"deezerRecommendationId": null,
+		"band": "Light This City",
+		"genre": [
+			"Melodic Death Metal/Metalcore"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Laura Nichol"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": 2002,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 23,
+		"id": "metal:18976",
+		"members": [
+			{
+				"id": "90037",
+				"name": "Laura Nichol",
+				"role": "Vocals (2002-2008, 2010, 2015, 2017-present)",
+				"info": "See also: Heartsounds"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "101157",
+		"deezerRecommendationId": null,
+		"band": "Landmine Marathon",
+		"genre": [
+			"Death Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Krysta Curry"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": 2004,
+		"yearEnded": 2015,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 11,
+		"id": "metal:101157",
+		"members": [
+			{
+				"id": "137526",
+				"name": "Krysta Curry",
+				"role": "Vocals (2012-?)",
+				"info": "See also: Transient, Ugly, ex-Landlord"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "124",
+		"deezerRecommendationId": null,
+		"band": "Lacuna Coil",
+		"genre": [
+			"Gothic Metal/Rock (early); Alternative Rock/Metal (later)"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Cristina Scabbia"
+		],
+		"country": "Italy",
+		"countryCode": null,
+		"yearStarted": 1997,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 28,
+		"id": "metal:124",
+		"members": [
+			{
+				"id": "810",
+				"name": "Cristina Scabbia",
+				"role": "Vocals (1997-present)",
+				"info": "See also: ex-Ethereal"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540326459",
+		"deezerRecommendationId": null,
+		"band": "Obscure Sphinx",
+		"genre": [
+			"Sludge/Doom Metal/Post-Rock"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Zofia Fraś"
+		],
+		"country": "Poland",
+		"countryCode": null,
+		"yearStarted": 2008,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:3540326459",
+		"members": [
+			{
+				"id": "44742",
+				"name": "Zofia \"Wielebna\" Fraś",
+				"role": "Vocals, Samples (2009-present)",
+				"info": "See also: ex-ROSK (live) , ex-P.O.S., ex-Sons of Roots"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540350698",
+		"deezerRecommendationId": null,
+		"band": "Nervosa",
+		"genre": [
+			"Thrash/Death Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Prika Amaral"
+		],
+		"country": "Brazil",
+		"countryCode": null,
+		"yearStarted": 2010,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 15,
+		"id": "metal:3540350698",
+		"members": [
+			{
+				"id": "446131",
+				"name": "Prika Amaral",
+				"role": "Guitars (2010-present), Vocals (2023-present)",
+				"info": "See also: ex-Metal Against Coronavirus, Revolta, ex-Sakrah (live)"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "10934",
+		"deezerRecommendationId": null,
+		"band": "Witch Mountain",
+		"genre": [
+			"Doom Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Kayla Dixon"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": 1997,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 28,
+		"id": "metal:10934",
+		"members": [
+			{
+				"id": "600045",
+				"name": "Kayla Dixon",
+				"role": "Vocals (2015-present)",
+				"info": "See also: Vintersea, Dress the Dead, ex-Helion Prime, ex-Clouds (live) , ex-Demons Within"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "686",
+		"deezerRecommendationId": null,
+		"band": "Warlock",
+		"genre": [
+			"Heavy Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Doro Pesch"
+		],
+		"country": "Germany",
+		"countryCode": null,
+		"yearStarted": 1983,
+		"yearEnded": 1989,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 6,
+		"id": "metal:686",
+		"members": [
+			{
+				"id": "5999",
+				"name": "Doro Pesch",
+				"role": "Vocals (1983-1989)",
+				"info": "See also: Doro, ex-Beast, ex-Attack, ex-Rockers United, ex-Snakebite, ex-The European Team, ex-Dio Disciples (live)"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "101781",
+		"deezerRecommendationId": null,
+		"band": "Straight Line Stitch",
+		"genre": [
+			"Nu-Metal (early); Metalcore (later)"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Alexis Brown"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": 1999,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 26,
+		"id": "metal:101781",
+		"members": [
+			{
+				"id": "40295",
+				"name": "Alexis Brown",
+				"role": "Vocals (2003-present)",
+				"info": "Jason White"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "35130",
+		"deezerRecommendationId": null,
+		"band": "Loretta",
+		"genre": [
+			"Heavy Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Daria Hrubá"
+		],
+		"country": "Czechia",
+		"countryCode": null,
+		"yearStarted": 1989,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 36,
+		"id": "metal:35130",
+		"members": [
+			{
+				"id": "333080",
+				"name": "Daria Hrubá",
+				"role": "Vocals. Guitars (1989-1992, 2015-present)",
+				"info": "Jana Staňková"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540435052",
+		"deezerRecommendationId": null,
+		"band": "The Heard",
+		"genre": [
+			"Heavy/Doom/Stoner Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Pepper Potemkin"
+		],
+		"country": "Sweden",
+		"countryCode": null,
+		"yearStarted": 2016,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 9,
+		"id": "metal:3540435052",
+		"members": [
+			{
+				"id": "735865",
+				"name": "Pepper",
+				"role": "Vocals (2016-present)",
+				"info": "See also: The Crypt"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "1006",
+		"deezerRecommendationId": null,
+		"band": "Within Temptation",
+		"genre": [
+			"Symphonic Metal (early); Symphonic/Alternative Rock (later)"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Sharon den Adel"
+		],
+		"country": "Netherlands",
+		"countryCode": null,
+		"yearStarted": 1996,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 29,
+		"id": "metal:1006",
+		"members": [
+			{
+				"id": "7500",
+				"name": "Sharon den Adel",
+				"role": "Vocals (1996-present)",
+				"info": "See also: My Indigo, ex-Kashiro, ex-The Portal"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540423615",
+		"deezerRecommendationId": null,
+		"band": "King Woman",
+		"genre": [
+			"Doom/Post-Metal/Shoegaze"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Kristina Esfandiari"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": 2009,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:3540423615",
+		"members": [
+			{
+				"id": "699923",
+				"name": "Kristina Esfandiari",
+				"role": "Vocals (2009-present)",
+				"info": "See also: Dalmatian, Kris, Miserable, NGHTCRWLR, Sugar High, ex-Whirr"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540427378",
+		"deezerRecommendationId": null,
+		"band": "Wicked Asylum",
+		"genre": [
+			"Heavy Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Banshee"
+		],
+		"country": "Italy",
+		"countryCode": null,
+		"yearStarted": 2009,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:3540427378",
+		"members": [
+			{
+				"id": "711536",
+				"name": "Banshee",
+				"role": "Vocals",
+				"info": "Chiara"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540365687",
+		"deezerRecommendationId": null,
+		"band": "The Oath",
+		"genre": [
+			"Heavy/Doom Metal/Rock"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Johanna Platow"
+		],
+		"country": "Germany",
+		"countryCode": null,
+		"yearStarted": 2012,
+		"yearEnded": 2014,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 2,
+		"id": "metal:3540365687",
+		"members": [
+			{
+				"id": "9590",
+				"name": "Johanna Sadonis",
+				"role": "Vocals (2012-2014)",
+				"info": "See also: Lucifer, ex-Vinterkrig, ex-Cryogenic, ex-Dies Ater, ex-Ferox, ex-Informer"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "108082",
+		"deezerRecommendationId": null,
+		"band": "Seven Kingdoms",
+		"genre": [
+			"Power/Thrash Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Sabrina Valentine"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": 2007,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 18,
+		"id": "metal:108082",
+		"members": [
+			{
+				"id": "75534",
+				"name": "Sabrina Valentine",
+				"role": "Vocals (2009-present)",
+				"info": "Past"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3718",
+		"deezerRecommendationId": null,
+		"band": "Xandria",
+		"genre": [
+			"Symphonic Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Ambre Vourvahis"
+		],
+		"country": "Germany",
+		"countryCode": null,
+		"yearStarted": 1994,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 31,
+		"id": "metal:3718",
+		"members": [
+			{
+				"id": "949060",
+				"name": "Ambre Vourvahis",
+				"role": "Vocals (2022-present)",
+				"info": "See also: Genus Ordinis Dei (live) , ex-Fragment Soul (live)"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "7394",
+		"deezerRecommendationId": null,
+		"band": "Vixen",
+		"genre": [
+			"Heavy/Power/Speed Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Kim La Chance"
+		],
+		"country": "United States",
+		"countryCode": null,
+		"yearStarted": 1981,
+		"yearEnded": null,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": null,
+		"id": "metal:7394",
+		"members": [
+			{
+				"id": "10993",
+				"name": "Kim La Chance",
+				"role": "Vocals (1981-1982)",
+				"info": "See also: ex-Malisha, ex-Driven Steel, ex-Krystalwerk, ex-Spacedrums"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540377979",
+		"deezerRecommendationId": null,
+		"band": "Temperance",
+		"genre": [
+			"Melodic Heavy/Power Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Kristin Starkey"
+		],
+		"country": "Italy",
+		"countryCode": null,
+		"yearStarted": 2013,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 12,
+		"id": "metal:3540377979",
+		"members": [
+			{
+				"id": "808809",
+				"name": "Kristin Starkey",
+				"role": "Vocals (female) (2023-present)",
+				"info": "See also: Twilight Force"
+			},
+			{
+				"id": "808809",
+				"name": "Kristin Starkey",
+				"role": "Vocals (female) (2023)",
+				"info": "See also: Twilight Force"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540372233",
+		"deezerRecommendationId": null,
+		"band": "Sleeping Romance",
+		"genre": [
+			"Symphonic Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Lina Victoria"
+		],
+		"country": "Italy",
+		"countryCode": null,
+		"yearStarted": 2013,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 12,
+		"id": "metal:3540372233",
+		"members": [
+			{
+				"id": "868504",
+				"name": "Lina Victoria",
+				"role": "Vocals (female) (2020-present)",
+				"info": "See also: Abhcan, Parallyx, ex-Temperance (live)"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "1393",
+		"deezerRecommendationId": null,
+		"band": "Sirenia",
+		"genre": [
+			"Symphonic/Gothic Metal (early); Symphonic Metal (later)"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Emmanuelle Zoldan"
+		],
+		"country": "Norway",
+		"countryCode": null,
+		"yearStarted": 2001,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 24,
+		"id": "metal:1393",
+		"members": [
+			{
+				"id": "6856",
+				"name": "Emmanuelle Zoldan",
+				"role": "Vocals (female) (2016-present)",
+				"info": "Nils Courbaron"
+			},
+			{
+				"id": "6856",
+				"name": "Emmanuelle Zoldan",
+				"role": "Vocals (female) (2016)",
+				"info": "Jon \"The Charn\" Rice"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "39",
+		"deezerRecommendationId": null,
+		"band": "Nightwish",
+		"genre": [
+			"Symphonic Power Metal (early); Symphonic Metal (later)"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Floor Jansen"
+		],
+		"country": "Finland",
+		"countryCode": null,
+		"yearStarted": 1996,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 29,
+		"id": "metal:39",
+		"members": [
+			{
+				"id": "3767",
+				"name": "Floor Jansen",
+				"role": "Vocals (2013-present)",
+				"info": "See also: Raskasta Joulua, ex-ReVamp, Floor Jansen, Northward, ex-After Forever, ex-Kamelot (live) , ex-Mayan (live), ex-Apocalypse, ex-Countermove"
+			},
+			{
+				"id": "3767",
+				"name": "Floor Jansen",
+				"role": "Vocals (2012-2013)",
+				"info": "See also: Raskasta Joulua, ex-ReVamp, Floor Jansen, Northward, ex-After Forever, ex-Kamelot (live) , ex-Mayan (live), ex-Apocalypse, ex-Countermove"
+			}
+		],
+		"numberOfVocalists": 1
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540400670",
+		"deezerRecommendationId": null,
+		"band": "Manixive",
+		"genre": [
+			"Melodic Groove/Death Metal"
+		],
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Silver"
+		],
+		"country": "South Korea",
+		"countryCode": null,
+		"yearStarted": 2013,
+		"yearEnded": 2016,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 3,
+		"id": "metal:3540400670",
+		"members": [
+			{
+				"id": "628750",
+				"name": "Silver",
+				"role": "Vocals (2013-2016)",
+				"info": "See also: ex-Clownus, ex-Traitor"
+			}
+		],
+		"numberOfVocalists": 1
+	}
+]

@@ -1,0 +1,983 @@
+[
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540326749",
+		"deezerRecommendationId": null,
+		"band": "Frantic Amber",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Elizabeth Andrews"
+		],
+		"country": "Sweden",
+		"countryCode": "SE",
+		"yearStarted": 2008,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:3540326749",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Melodic Death Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540420779",
+		"deezerRecommendationId": null,
+		"band": "Burning Witches",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Laura Guldemond"
+		],
+		"country": "Switzerland",
+		"countryCode": "CH",
+		"yearStarted": 2015,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 10,
+		"id": "metal:3540420779",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy/Power Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540521376",
+		"deezerRecommendationId": null,
+		"band": "Entheos",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Chaney Crabb"
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 2015,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 10,
+		"id": "metal:3540521376",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Technical/Progressive Deathcore"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540495601",
+		"deezerRecommendationId": null,
+		"band": "Dying Wish",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Emma Boster"
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 2016,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 9,
+		"id": "metal:3540495601",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Metalcore"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540510979",
+		"deezerRecommendationId": null,
+		"band": "Defacing God",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Sandie the Lillith"
+		],
+		"country": "Denmark",
+		"countryCode": "DK",
+		"yearStarted": 2015,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 10,
+		"id": "metal:3540510979",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Symphonic Black/Gothic Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540486250",
+		"deezerRecommendationId": null,
+		"band": "Crypta",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Fernanda Lira"
+		],
+		"country": "Brazil",
+		"countryCode": "BR",
+		"yearStarted": 2019,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 6,
+		"id": "metal:3540486250",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Death Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540385525",
+		"deezerRecommendationId": null,
+		"band": "Castrator",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"S"
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 2013,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 12,
+		"id": "metal:3540385525",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Death Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "86452",
+		"deezerRecommendationId": null,
+		"band": "Bloodlined Calligraphy",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Nina Cislaghi"
+		],
+		"countryCode": "US",
+		"yearStarted": 2001,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 24,
+		"id": "metal:86452",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Metalcore"
+		],
+		"country": "United States"
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540362880",
+		"deezerRecommendationId": null,
+		"band": "Bloodhunter",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Diva Satanica"
+		],
+		"countryCode": "ES",
+		"yearStarted": 2008,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:3540362880",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Melodic Death Metal"
+		],
+		"country": "Spain"
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "124842",
+		"deezerRecommendationId": null,
+		"band": "Agrimonia",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Christina"
+		],
+		"country": "Sweden",
+		"countryCode": "SE",
+		"yearStarted": 2005,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 20,
+		"id": "metal:124842",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Sludge/Post-Metal/Crust"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540325827",
+		"deezerRecommendationId": null,
+		"band": "Battle Beast",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Noora Louhimo"
+		],
+		"countryCode": "FI",
+		"yearStarted": 2005,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 20,
+		"id": "metal:3540325827",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy/Power Metal, Hard Rock"
+		],
+		"country": "Finland"
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "38611",
+		"deezerRecommendationId": null,
+		"band": "Crucified Barbara",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Nicki Wicked"
+		],
+		"country": "Sweden",
+		"countryCode": "SE",
+		"yearStarted": 1998,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 27,
+		"id": "metal:38611",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy Metal/Hard Rock"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540375286",
+		"deezerRecommendationId": null,
+		"band": "Aephanemer",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Marion Bascoul"
+		],
+		"country": "France",
+		"countryCode": "FR",
+		"yearStarted": 2013,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 12,
+		"id": "metal:3540375286",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Symphonic/Melodic Death Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540328238",
+		"deezerRecommendationId": null,
+		"band": "Castle",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Elizabeth Blackwell"
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 2009,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 16,
+		"id": "metal:3540328238",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy/Doom Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540369803",
+		"deezerRecommendationId": null,
+		"band": "Avatarium",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Jennie-Ann Smith"
+		],
+		"countryCode": "SE",
+		"yearStarted": 2012,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 13,
+		"id": "metal:3540369803",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Doom Metal/Rock"
+		],
+		"country": "Sweden"
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540465744",
+		"deezerRecommendationId": null,
+		"band": "Ad Infinitum",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Melissa Bonny"
+		],
+		"country": "Switzerland",
+		"countryCode": "CH",
+		"yearStarted": 2018,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 7,
+		"id": "metal:3540465744",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Symphonic Metal/Rock"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "519",
+		"deezerRecommendationId": null,
+		"band": "Acid King",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Lori S."
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 1993,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 32,
+		"id": "metal:519",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Doom/Stoner Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "6716",
+		"deezerRecommendationId": null,
+		"band": "Epica",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Simone Simons"
+		],
+		"country": "Netherlands",
+		"countryCode": "NL",
+		"yearStarted": 2003,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 22,
+		"id": "metal:6716",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Symphonic Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540436490",
+		"deezerRecommendationId": null,
+		"band": "Frozen Crown",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Giada Etro"
+		],
+		"country": "Italy",
+		"countryCode": "IT",
+		"yearStarted": 2017,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 8,
+		"id": "metal:3540436490",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Power Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540473071",
+		"deezerRecommendationId": null,
+		"band": "Cobra Spell",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Kris Vega"
+		],
+		"country": "Netherlands",
+		"countryCode": "NL",
+		"yearStarted": 2019,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 6,
+		"id": "metal:3540473071",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy Metal/Hard Rock"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540368187",
+		"deezerRecommendationId": null,
+		"band": "Bridear",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Kimi"
+		],
+		"country": "Japan",
+		"countryCode": "JP",
+		"yearStarted": 2012,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 13,
+		"id": "metal:3540368187",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Power Metal, Metalcore"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "102093",
+		"deezerRecommendationId": null,
+		"band": "Amberian Dawn",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Capri"
+		],
+		"country": "Finland",
+		"countryCode": "FI",
+		"yearStarted": 2006,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 19,
+		"id": "metal:102093",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Symphonic/Melodic Power Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540296084",
+		"deezerRecommendationId": null,
+		"band": "Aldious",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Rami"
+		],
+		"country": "Japan",
+		"countryCode": "JP",
+		"yearStarted": 2008,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 17,
+		"id": "metal:3540296084",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Power Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540423318",
+		"deezerRecommendationId": null,
+		"band": "Ignea",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Helle Bogdanova"
+		],
+		"country": "Ukraine",
+		"countryCode": "UA",
+		"yearStarted": 2015,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 10,
+		"id": "metal:3540423318",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Symphonic/Progressive Metal with Middle-Eastern Folk influences"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540391659",
+		"deezerRecommendationId": null,
+		"band": "Elvellon",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Nele Messerschmidt"
+		],
+		"country": "Germany",
+		"countryCode": "DE",
+		"yearStarted": 2010,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 15,
+		"id": "metal:3540391659",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Symphonic Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "10897",
+		"deezerRecommendationId": null,
+		"band": "Delain",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Diana Leah"
+		],
+		"country": "Netherlands",
+		"countryCode": "NL",
+		"yearStarted": 2002,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 23,
+		"id": "metal:10897",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Symphonic Metal/Rock"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540374794",
+		"deezerRecommendationId": null,
+		"band": "Deathless Legacy",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Steva"
+		],
+		"country": "Italy",
+		"countryCode": "IT",
+		"yearStarted": 2006,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 19,
+		"id": "metal:3540374794",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "1541",
+		"deezerRecommendationId": null,
+		"band": "Holy Moses",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Sabina Classen"
+		],
+		"country": "Germany",
+		"countryCode": "DE",
+		"yearStarted": 1980,
+		"yearEnded": 2023,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 43,
+		"id": "metal:1541",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Speed/Thrash Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "58774",
+		"deezerRecommendationId": null,
+		"band": "Cripper",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Britta Görtz"
+		],
+		"country": "Germany",
+		"countryCode": "DE",
+		"yearStarted": 2005,
+		"yearEnded": 2018,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 13,
+		"id": "metal:58774",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Death/Thrash Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "83767",
+		"deezerRecommendationId": null,
+		"band": "Cerebral Bore",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Simone Pluijmers"
+		],
+		"country": "United Kingdom",
+		"countryCode": "GB",
+		"yearStarted": 2006,
+		"yearEnded": 2014,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 8,
+		"id": "metal:83767",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Brutal Death Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "88970",
+		"deezerRecommendationId": null,
+		"band": "Black September",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Jen Pickett"
+		],
+		"countryCode": "US",
+		"yearStarted": 2006,
+		"yearEnded": 2013,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 7,
+		"id": "metal:88970",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Black/Death Metal"
+		],
+		"country": "United States"
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "101081",
+		"deezerRecommendationId": null,
+		"band": "Abnormality",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Mallika Sundaramurthy",
+			"Dája"
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 2005,
+		"yearEnded": 2020,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 15,
+		"id": "metal:101081",
+		"numberOfVocalists": 2,
+		"genre": [
+			"Technical/Brutal Death Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "114837",
+		"deezerRecommendationId": null,
+		"band": "Huntress",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Jill Janus"
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 2007,
+		"yearEnded": 2018,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 11,
+		"id": "metal:114837",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "104752",
+		"deezerRecommendationId": null,
+		"band": "Destrose",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Eye"
+		],
+		"country": "Japan",
+		"countryCode": "JP",
+		"yearStarted": 2007,
+		"yearEnded": 2015,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 8,
+		"id": "metal:104752",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Heavy Metal"
+		]
+	},
+	{
+		"myFavorites": false,
+		"growling": 0,
+		"deezerId": null,
+		"metalArchivesId": "3540344935",
+		"deezerRecommendationId": null,
+		"band": "Cyntia",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": false,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Yui"
+		],
+		"country": "Japan",
+		"countryCode": "JP",
+		"yearStarted": 2011,
+		"yearEnded": 2017,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 6,
+		"id": "metal:3540344935",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Power Metal"
+		]
+	}
+]

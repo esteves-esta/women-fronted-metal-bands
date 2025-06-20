@@ -7,9 +7,7 @@ const ERRORS_PATH = './errors.json'
 
 const formatYearsActive = (data) => {
   const { yearStarted, yearEnded } = data;
-
   const thisYear = new Date().getFullYear();
-
   let activeYears = 0;
   if (yearStarted !== null) {
     if (yearEnded !== 0) activeYears = yearEnded - yearStarted;
@@ -28,6 +26,11 @@ async function addDinamicCols() {
       else key = `band:${uuidv4()}`;
     }
 
+    if (band.yearEnded) band.yearEnded = Number(band.yearEnded)
+    if (band.yearStarted) band.yearStarted = Number(band.yearStarted)
+
+    if (!Array.isArray(band.genre)) band.genre = [band.genre]
+
     const activeFor = formatYearsActive(band);
     return {
       ...band,
@@ -36,6 +39,7 @@ async function addDinamicCols() {
       numberOfVocalists: band.currentVocalists.length
     }
   })
+
   await writeFile(LIST_PATH, JSON.stringify(updated, null, "\t"))
 }
 
@@ -48,6 +52,7 @@ async function validateCountryCodes() {
   })
   await writeFile(ERRORS_PATH, JSON.stringify(errors, null, "\t"))
 }
+
 
 
 async function validate() {
