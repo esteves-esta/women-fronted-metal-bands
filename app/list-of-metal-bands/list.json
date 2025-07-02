@@ -8702,7 +8702,8 @@
 		"genre": [
 			"Heavy/Speed Metal"
 		]
-	},{
+	},
+	{
 		"myFavorites": false,
 		"growling": 0,
 		"deezerId": null,
@@ -8730,7 +8731,7 @@
 			"Heavy Metal"
 		]
 	},
-		{
+	{
 		"myFavorites": false,
 		"growling": 0,
 		"deezerId": null,
@@ -8759,7 +8760,7 @@
 			"Heavy Metal/Hard Rock (later)"
 		]
 	},
-		{
+	{
 		"myFavorites": true,
 		"growling": 3,
 		"deezerId": null,
@@ -8785,6 +8786,34 @@
 		"numberOfVocalists": 1,
 		"genre": [
 			"Melodic Blackened Death Metal"
+		]
+	},
+	{
+		"myFavorites": true,
+		"growling": 3,
+		"deezerId": 14223235,
+		"metalArchivesId": "3540447815",
+		"deezerRecommendationId": null,
+		"band": "Feminazgûl",
+		"recommendationIsCover": false,
+		"blackWomen": false,
+		"allWomenBand": true,
+		"pastVocalists": [],
+		"currentVocalists": [
+			"Laura Beach"
+		],
+		"country": "United States",
+		"countryCode": "US",
+		"yearStarted": 2018,
+		"yearEnded": 0,
+		"recommendation": "",
+		"links": "",
+		"sister": false,
+		"activeFor": 7,
+		"id": "metal:3540447815",
+		"numberOfVocalists": 1,
+		"genre": [
+			"Atmospheric Black Metal"
 		]
 	}
 ]
