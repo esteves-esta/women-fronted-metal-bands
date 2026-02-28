@@ -104,11 +104,10 @@ function BandGrid({ bands }: GridProps) {
 function CardImage({ band }: { band: Band }) {
   try {
     if (band.deezerPicture) {
-      const id = band.id.replace('band:', '')
+      const id = band.id.includes('band') ? band.id.replace('band:', '') : null;
 
-      return <img src={`/imgs/${id}.jpg`} alt="Picture of the band" />;
-      // if(img.props) return img;
-      // return <img src={band.deezerPicture} alt="Picture of the band" />;
+      return <img src={id ? `/imgs/${id}.jpg` : band.deezerPicture} alt="Picture of the band" />;
+
     }
     if (!!band.deezerTrackInfo && band.emptyPicture) {
       return (
@@ -122,6 +121,7 @@ function CardImage({ band }: { band: Band }) {
     return (
       <ImgPlaceholder>
         <div>{band.band}</div>
+        {band?.deezerPicture}
       </ImgPlaceholder>
     );
   }
