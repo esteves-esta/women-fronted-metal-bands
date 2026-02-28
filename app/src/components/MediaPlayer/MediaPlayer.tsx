@@ -184,7 +184,9 @@ const PlayerWrapper = styled.div`
   background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
-  @media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
+    @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
     max-height: 42px;
   }
 `;
@@ -196,7 +198,9 @@ const ApiInfo = styled.div`
     color: var(--color-primary);
     text-underline-offset: 4px;
   }
-  @media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
+    @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
     gap: 5px;
     align-items: center;
     display: flex;
@@ -219,7 +223,9 @@ const Btn = styled.button`
   span {
     display: none;
   }
-  @media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
+    @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
     span {
       display: revert;
     }
@@ -243,7 +249,9 @@ const TrackInfo = styled.div`
   span {
     font-weight: normal;
   }
-  @media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
+    @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
     flex: 1 0 auto;
     flex-wrap: nowrap;
   }
@@ -262,7 +270,9 @@ const PlayerBody = styled.div`
     color: white;
     border: none;
   }
-  @media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
+    @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
     justify-content: space-between;
     flex: 1 0 auto;
     gap: 15px;

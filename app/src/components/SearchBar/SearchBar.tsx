@@ -353,7 +353,9 @@ const ResponsiveRow = styled(BaseRow)`
   display: flex;
   flex-direction: column;
   gap: 5px;
-  @media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
+    @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
     flex-direction: row;
     align-items:center;
     gap: 10px;
@@ -368,7 +370,9 @@ const Row = styled(BaseRow)`
   flex-wrap: wrap;
   background-color: var(--color-dark-alpha-3);
   border-bottom: 1px solid var(--color-dark-alpha-5);
-  @media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
+    @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
     /* flex-wrap: nowrap; */
     flex-direction: row;
     align-items:center;
@@ -388,7 +392,9 @@ const Wrapper = styled.div`
   font-size: 1.2rem;
   border-top: 2px solid hsl(291deg 96% 10%);
   top: 100px;
-  @media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
+    @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
     top: 40px;
   }
 `;

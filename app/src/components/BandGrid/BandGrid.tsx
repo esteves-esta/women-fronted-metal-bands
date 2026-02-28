@@ -135,13 +135,16 @@ function CardImage({ band }: { band: Band }) {
 }
 
 const GridWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  @media (hover: hover) and (pointer: fine) {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+@media (hover: hover) and (pointer: fine) {
   }
-
-  @media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
+  
+  
+  @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
     grid-template-columns: repeat(6, 1fr);
     /* grid-template-rows: 300px; */
     grid-gap: 20px;
@@ -199,8 +202,6 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  @media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
-  }
 
   img,
   ${ImgPlaceholder} {
@@ -240,7 +241,9 @@ gap: 5px;
   font-size: calc(10rem / 16);
   letter-spacing: .05rem;
 }
-@media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
+  @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
   flex: 1 0 auto;
 }
 `;

@@ -176,8 +176,6 @@ const PieChartCustom = ({ data, /* startAngle, endAngle, */ colors, /* style */ 
 export default BandDetailsChart;
 
 const Wrapper = styled.div`
-/* @media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} { */
-
  .borderRight{
    border-right: 1px solid var(--border-color);
  }
@@ -206,7 +204,9 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 margin-top: 5px;
-@media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
+  @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
   flex-direction: row;
 }
 `;
