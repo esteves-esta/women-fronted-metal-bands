@@ -141,7 +141,7 @@ const GridWrapper = styled.div`
   @media (hover: hover) and (pointer: fine) {
   }
 
-  @media ${(p) => p.theme.queries.tabletAndUp} {
+  @media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
     grid-template-columns: repeat(6, 1fr);
     /* grid-template-rows: 300px; */
     grid-gap: 20px;
@@ -199,7 +199,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  @media ${(p) => p.theme.queries.tabletAndUp} {
+  @media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
   }
 
   img,
@@ -240,7 +240,7 @@ gap: 5px;
   font-size: calc(10rem / 16);
   letter-spacing: .05rem;
 }
-@media ${(p) => p.theme.queries.tabletAndUp} {
+@media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
   flex: 1 0 auto;
 }
 `;

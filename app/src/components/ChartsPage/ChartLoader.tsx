@@ -20,7 +20,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 gap: 4px;
-@media ${(p) => p.theme.queries.tabletAndUp} {
+@media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
 flex-direction: row;
 }
 `;

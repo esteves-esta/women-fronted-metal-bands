@@ -145,7 +145,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-@media ${(p) => p.theme.queries.tabletAndUp} {
+@media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
   flex-direction: row;
 }
 `;
@@ -157,7 +157,7 @@ align-items: center;
 justify-content: center;
 width: 350px;
  height: 350px;
-@media ${(p) => p.theme.queries.tabletAndUp} {
+@media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
 flex-direction: row;
 }
 `;

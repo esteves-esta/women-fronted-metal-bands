@@ -47,7 +47,7 @@ const Wrapper = styled.article`
     margin-bottom: 2.2rem;
   }
 
-  @media ${(p) => p.theme.queries.tabletAndUp} {
+  @media ${p => p.theme.queries.tabletAndUp} {
     padding: 30px 10%;
     margin: 0px auto;
     font-size: calc(20rem / 16);

@@ -132,7 +132,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 gap: 5px;
-@media ${(p) => p.theme.queries.tabletAndUp} {
+@media ${( p: { theme: { queries: { tabletAndUp: any } } }) => p.theme.queries.tabletAndUp} {
 flex-direction: row;
 }
 p {
