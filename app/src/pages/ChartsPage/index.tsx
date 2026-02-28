@@ -143,7 +143,9 @@ display: flex;
 flex-direction: column;
 gap: 4px;
 margin: 10px 0px;
-@media ${(p) => p.theme.queries.tabletAndUp} {
+  @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
   flex-direction: row;
   justify-content: center;
   gap: 3px;
@@ -163,7 +165,9 @@ margin: 20px auto;
 display: flex;
 flex-direction: column;
 gap: 20px;
-@media ${(p) => p.theme.queries.tabletAndUp} {
+  @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
   padding: 30px 10%;
   gap: 40px;
   margin: 0px auto;

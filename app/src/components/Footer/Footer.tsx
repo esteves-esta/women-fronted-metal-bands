@@ -47,7 +47,9 @@ const Wrapper = styled.footer`
     }
   }
 
-  @media ${(p) => p.theme.queries.tabletAndUp} {
+    @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
     padding: 0px 10%;
     gap: 40px;
     margin: 0px auto;

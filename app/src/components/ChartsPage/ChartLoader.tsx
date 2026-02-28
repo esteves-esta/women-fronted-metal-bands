@@ -20,7 +20,9 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 gap: 4px;
-@media ${(p) => p.theme.queries.tabletAndUp} {
+  @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
 flex-direction: row;
 }
 `;

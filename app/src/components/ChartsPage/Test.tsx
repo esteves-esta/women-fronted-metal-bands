@@ -125,7 +125,9 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 gap: 5px;
-@media ${(p) => p.theme.queries.tabletAndUp} {
+  @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
 flex-direction: row;
 }
 p {

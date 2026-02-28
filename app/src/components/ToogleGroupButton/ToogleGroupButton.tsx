@@ -74,8 +74,6 @@ display: flex;
 background: var(--color-secondary-dark);
 border-radius: 9px;
 border: 1px solid var(--color-grey-500);
-@media ${(p) => p.theme.queries.tabletAndUp} {
-}
 &.wrap {
   flex-wrap: wrap;
   justify-content: center;

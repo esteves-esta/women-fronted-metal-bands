@@ -104,11 +104,10 @@ function BandGrid({ bands }: GridProps) {
 function CardImage({ band }: { band: Band }) {
   try {
     if (band.deezerPicture) {
-      const id = band.id.replace('band:', '')
+      const id = band.id.includes('band') ? band.id.replace('band:', '') : null;
 
-      return <img src={`/imgs/${id}.jpg`} alt="Picture of the band" />;
-      // if(img.props) return img;
-      // return <img src={band.deezerPicture} alt="Picture of the band" />;
+      return <img src={id ? `/imgs/${id}.jpg` : band.deezerPicture} alt="Picture of the band" />;
+
     }
     if (!!band.deezerTrackInfo && band.emptyPicture) {
       return (
@@ -122,6 +121,7 @@ function CardImage({ band }: { band: Band }) {
     return (
       <ImgPlaceholder>
         <div>{band.band}</div>
+        {band?.deezerPicture}
       </ImgPlaceholder>
     );
   }
@@ -135,13 +135,16 @@ function CardImage({ band }: { band: Band }) {
 }
 
 const GridWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  @media (hover: hover) and (pointer: fine) {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+@media (hover: hover) and (pointer: fine) {
   }
-
-  @media ${(p) => p.theme.queries.tabletAndUp} {
+  
+  
+  @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
     grid-template-columns: repeat(6, 1fr);
     /* grid-template-rows: 300px; */
     grid-gap: 20px;
@@ -199,8 +202,6 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  @media ${(p) => p.theme.queries.tabletAndUp} {
-  }
 
   img,
   ${ImgPlaceholder} {
@@ -240,7 +241,9 @@ gap: 5px;
   font-size: calc(10rem / 16);
   letter-spacing: .05rem;
 }
-@media ${(p) => p.theme.queries.tabletAndUp} {
+  @media ${p => 
+    // @ts-ignore
+    p.theme.queries.tabletAndUp} {
   flex: 1 0 auto;
 }
 `;
