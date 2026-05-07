@@ -21,7 +21,6 @@
     "@typescript-eslint/parser": "^8.57.1",
     "@vitejs/plugin-react": "^4.2.0",
     "autoprefixer": "^10.4.16",
-    "babel-plugin-styled-components": "^2.1.4",
     "eslint": "^10.0.0",
     "eslint-plugin-react-refresh": "^0.5.2",
     "postcss": "^8.5.14",
@@ -62,8 +61,5 @@
     "swr": "^2.2.4",
     "uuid": "^11.1.1"
   },
-  "packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be",
-  "overrides": {
-    "lodash": "4.18.0"
-  }
+  "packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be"
 }
